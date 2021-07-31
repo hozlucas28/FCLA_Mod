@@ -1,4 +1,0 @@
-
-_Falta agregar estos requiredAddons: "FCLA_Development", "FCLA_Effects", "FCLA_Immersions", "FCLA_Interactions", "FCLA_Video_Settings"
-_Cambiar classnames de cascos de radios, archivo en "\FCLA_Core\PreInit\Addon_Options\includes\Headgears_and_Headsets.hpp"...
-Lo mismo con los chalecos, archivo en "\FCLA_Core\PreInit\Addon_Options\includes\Vests_with_Radios.hpp".
