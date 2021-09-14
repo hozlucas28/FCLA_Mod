@@ -1,5 +1,3 @@
-# FCLA_Mod
-- Readme: https://github.com/hozlucas28/FCLA_Mod/wiki
 **¡FCLA Mod es un mod de uso privado para la comunidad de Arma 3 FCLA!**
 * Pagina de la comunidad: https://arma3clanfcla.wixsite.com/fcla
 * Youtube: https://www.youtube.com/channel/UCliHyp1bvd0MbcRSkZcPhhw
@@ -22,6 +20,3 @@
 | _FCLA_Headgears_ | ✔ | _FCLA_Units_ | ⌛ |
 | _FCLA_Immersions_ | ✔ | _FCLA_Vests_ | ⌛ |
 | _FCLA_Interactions_ | ⛏ | _FCLA_Video_Settings_ | ⌛ |
-
-
-
