@@ -4,8 +4,6 @@
 * Instagram: https://www.instagram.com/clan__fcla/
 * Facebook: https://www.facebook.com/ArmA3FCLA/
 
-**- Template de misión:** https://drive.google.com/drive/folders/1DTatkzhKeQBYv0Y711xeZnRWMz1a5CN2
-
 **- Reportar (error/bug/fallo):** https://forms.gle/CpgECcqcvPZpEh7x7
 
 | Addon | Estado | Addon | Estado |
