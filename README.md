@@ -1,4 +1,4 @@
-**¡FCLA Mod es un mod de uso privado para la comunidad de Arma 3 FCLA!**
+**FCLA Mod is a private mod for the Arma 3 FCLA community!**
 * Pagina de la comunidad: https://arma3clanfcla.wixsite.com/fcla
 * Youtube: https://www.youtube.com/channel/UCliHyp1bvd0MbcRSkZcPhhw
 * Instagram: https://www.instagram.com/clan__fcla/
