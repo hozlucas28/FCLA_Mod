@@ -1,0 +1,7 @@
+Authority:  Armour_Fox_CUTE
+Creation:   11/1/2019 4:09:34 PM (by COOPERSLAPTOP\Cooper)
+
+== PUBLIC KEY ==
+File: G:\ARMA 3 MODS\Fox's Expanded Textures\@CUTE KEYS\Armour_Fox_CUTE.bikey
+MD5: 8CAF94E820C688B866BB065F0705AC32
+
