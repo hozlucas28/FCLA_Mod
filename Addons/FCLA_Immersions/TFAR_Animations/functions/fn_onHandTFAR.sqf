@@ -1,0 +1,113 @@
+
+/* ----------------------------------------------------------------------------
+Function: FCLA_Immersions_fnc_onHandTFAR
+
+Description:
+    Obliga a la unidad a realizar la animación 'Radio en mano'.
+
+Public: [NO]
+
+Author:
+    hozlucas28
+---------------------------------------------------------------------------- */
+
+//Variables de referencia.
+params ["_unit", ["_currentRadio", "FCLA_Radio_h189"]];
+
+
+
+//Listado de las radios.
+_fadak = ["tf_fadak", "tf_fadak_1"];
+_anprc148jem = ["tf_anprc148jem", "tf_anprc148jem_1"];
+_anprc152 = ["tf_anprc152", "tf_anprc152_1"];
+_anprc154 = ["tf_anprc154", "tf_anprc154_1"];
+_pnr1000a = ["tf_pnr1000a", "tf_pnr1000a_1"];
+_rf7800str = ["tf_rf7800str", "tf_rf7800str_1"];
+
+
+_currentWeapon = currentWeapon _unit;
+switch (true) do {
+  case (_currentRadio in _fadak): {
+    _attachPos = if (_currentWeapon == "") then {[-0.03, -0.09, 0.01];} else {[-0.04, -0.04, 0.05];};
+    _vectorDirAndUp = if (_currentWeapon == "") then {[[0.956, -0.776, 0.331], [-0.188, -0.165, 0.936]];} else {[[0.956, -0.776, 0.331], [-0.188, -0.165, 0.936]];};
+    _radioSimpleObj = createSimpleObject ["task_force_radio_items\models\tfr_fadak.p3d", [0, 0, 0], false];
+    _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
+    _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
+    [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
+    [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
+  };
+
+  case (_currentRadio in _anprc148jem): {
+    _attachPos = if (_currentWeapon == "") then {[-0.1, -0.09, 0.06];} else {[-0.03, -0.01, 0.12];};
+    _vectorDirAndUp = if (_currentWeapon == "") then {[[-0.9, 0.9, 0], [0.6, 0.1, 0.4]];} else {[[0.956, -0.976, 0.231], [-0.288, -0.465, 0.136]];};
+    _radioSimpleObj = createSimpleObject ["task_force_radio_items\models\tfr_anprc148.p3d", [0, 0, 0], false];
+    _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
+    _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
+    [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
+    [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
+  };
+
+  case (_currentRadio in _anprc152): {
+    _attachPos = if (_currentWeapon == "") then {[0.02, -0.04, 0];} else {[-0.01, -0.05, 0];};
+    _vectorDirAndUp = if (_currentWeapon == "") then {[[0.956, -0.176, 0.231], [-0.288, -0.465, 0.836]];} else {[[0.656, -0.876, 0.231], [-0.288, -0.465, 1.236]];};
+    _radioSimpleObj = createSimpleObject ["task_force_radio_items\models\tfr_anprc152.p3d", [0, 0, 0], false];
+    _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
+    _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
+    [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
+    [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
+
+  };
+
+  case (_currentRadio in _anprc154): {
+    _attachPos = if (_currentWeapon == "") then {[0, -0.04, 0];} else {[-0.02, -0.04, 0];};
+    _vectorDirAndUp = if (_currentWeapon == "") then {[[0.956, -0.176, 0.231], [-0.288, -0.465, 0.836]];} else {[[0.656, -0.876, 0.231], [-0.288, -0.465, 1.236]];};
+    _radioSimpleObj = createSimpleObject ["task_force_radio_items\models\tfr_anprc154.p3d", [0, 0, 0], false];
+    _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
+    _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
+    [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
+    [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
+  };
+
+  case (_currentRadio in _pnr1000a): {
+    _attachPos = if (_currentWeapon == "") then {[0, -0.07, -0.05];} else {[-0.02, -0.04, -0.05];};
+    _vectorDirAndUp = if (_currentWeapon == "") then {[[0.956, -0.776, 0.331], [-0.188, -0.165, 0.936]]} else {[[0.956, -0.776, 0.331], [-0.188, -0.165, 0.936]];};
+    _radioSimpleObj = createSimpleObject ["task_force_radio_items\models\tfr_PNR1000a.p3d", [0, 0, 0], false];
+    _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
+    _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
+    [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
+    [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
+  };
+
+  case (_currentRadio in _rf7800str): {
+    _attachPos = if (_currentWeapon == "") then {[0, -0.04, -0.05];} else {[-0.01, 0, 0.01]};
+    _vectorDirAndUp = if (_currentWeapon == "") then {[[0.956, -0.776, 0.331], [-0.188, -0.165, 0.936]];} else {[[0.956, -0.776, 0.331], [-0.188, -0.165, 0.936]];};
+    _radioSimpleObj = createSimpleObject ["task_force_radio_items\models\tfr_RF7800.p3d", [0, 0, 0], false];
+    _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
+    _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
+    [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
+    [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
+  };
+
+  default {
+    _attachPos = if (_currentWeapon == "") then {[0, -0.04, -0.01];} else {[-0.01, -0.04, 0];};
+    _vectorDirAndUp = if (_currentWeapon == "") then {[[0.334, 0.788, -0.516], [0.917, -0.398, -0.014]];} else {[[1.434, 0.588, -1.916], [0.917, -0.298, -0.024]];};
+    _radioSimpleObj = createSimpleObject ["FCLA_Immersions\TFAR_Animations\data\FCLA_Radio_h189.p3d", [0, 0, 0], false];
+    _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
+    _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
+    [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
+  };
+};

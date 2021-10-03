@@ -1,0 +1,50 @@
+
+/* ----------------------------------------------------------------------------
+Function: FCLA_Interactions_fnc_showDetectorCBRN
+
+Description:
+    Muestra/Oculta el detector químico según sea el caso.
+
+Public: [NO]
+
+Author:
+    hozlucas28
+---------------------------------------------------------------------------- */
+
+//Variables de referencia.
+(_this select 0) params ["_lastIteration"];
+_max = 0;
+_currentUnit = call CBA_fnc_currentUnit;
+_contaminatedAreas = missionNamespace getVariable ["FCLA_CBRN_Contaminated_Areas", []];
+_isCBRNDesactivated = isNil "FCLA_CBRN_Activated";
+if (((isGamePaused) && !(isMultiplayer)) || (_isCBRNDesactivated)) exitWith {};
+
+
+
+if ((alive _currentUnit) && !(_contaminatedAreas isEqualTo [])) then {
+  _dist = 0;
+  _size = 0;
+  _threatLevel = 0;
+  _falloffArea = 0;
+
+  {
+    _threatLevel = _x getVariable ["FCLA_CBRN_Threat_Level", 0];
+    if (_max < _threatLevel) then {
+      _size = _x getVariable ["FCLA_CBRN_Threat_Size", 0];
+      _dist = _currentUnit distance2D _x;
+
+      _threatLevel = if (_dist > _size) then {linearConversion [_size + _falloffArea, _size, _dist, 0, _threatLevel];} else {_threatLevel};
+      _max = _max max _threatLevel;
+    };
+  } forEach _contaminatedAreas;
+};
+
+
+//Modificar variable "_lastIteration".
+_time = CBA_missionTime;
+_delta = _time - _lastIteration;
+(_this select 0) set [0, _time];
+
+
+//Dañar unidad.
+[_currentUnit, _max, _delta] call FCLA_Modules_fnc_handleDamage_CBRN;

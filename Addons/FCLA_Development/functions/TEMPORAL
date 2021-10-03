@@ -1,0 +1,6 @@
+player setVariable ["ACE_Name", "Bobis", true];
+player setVariable ["ACE_NameRaw", "Bobis", true];
+https://github.com/acemod/ACE3/blob/master/addons/common/functions/fnc_setName.sqf
+
+
+CAMBIAR PARANETROS POR LOS ARGUMENTOS COLO LO DESCRIBE EL ACE 

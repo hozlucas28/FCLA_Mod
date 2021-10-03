@@ -1,0 +1,29 @@
+
+# Agregar/Modificar/Cambiar...
+_Modificar los módulos que no se deben ejecutar más de una vez para que eviten esto, informar esta propiedad al editor.
+_Si la unidad afectada por el PEM tiene una radio larga, eliminarla.
+_Tratar de colocar un Hammer en la zona del PEM.
+_Crear módulo 3EDEN para modificar la placa de un vehiculo.
+_Crear módulo Zeus para recargar el agua de las duchas.
+_Condicional para que el CBRN no afecte a la IA.
+_Crear módulo 3EDEN y Zeus CBRN para agregar zonas contaminadas.
+_Crear módulo 3EDEN y Zeus CBRN para activarlo/desactivarlo, agregar las máscaras, mochilas y detectores químicos compatibles.
+_Al desactivar el CBRN eliminar las variables almacenadas en las unidades.
+_Crear módulo 3EDEN y Zeus para enviar subtítulos.
+_Crear módulo 3EDEN y Zeus para perdonar a los jugadores que cometan fuego amigo.
+_Crear módulo 3EDEN y Zeus para modificar la tarjeta de Identificación (ID) de una unidad.
+_Asignar variable al jugador una vez inicia el video introductorio y quitarsela cuando este termine.
+_Crear módulo Zeus para colocar animales marinos.
+_Crear módulo 3EDEN y Zeus para cambiar el bando de la radio que tiene el vehículo.
+_Crear módulo 3EDEN y Zeus para dañar de forma especifica a una unidad con el sistema médico del ACE.
+_Crear módulo Zeus para mostrar/ocultar zonas en el mapa de entrenamiento.
+_Crear imagenes para cada módulo.
+_Crear módulo 3EDEN y Zeus para interactuar con la persona que llama a un Zeus, y para activarla/desactivarla.
+
+
+# Revisar:
+_¿Termina siendo necesario esta linea de codigo? (presente en FCLA Interacciones)...
+'_chemicalMaximumDamage = if (!isNil "FCLA_CBRN_Maximum_Chemical_Damage") then {FCLA_CBRN_Maximum_Chemical_Damage} else {100};'
+
+
+# Recordar:

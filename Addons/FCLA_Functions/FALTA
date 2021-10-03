@@ -1,0 +1,20 @@
+
+# Agregar/Modificar/Cambiar...
+_Mover funciones publicas de development a este lugar
+_Crear una función para realizar una introducción animada.
+_Crear funciones para ayudar a los editores.
+_Guardar el ultimo subtítulo mostrado dentro de una variable de tipo objeto.
+_Crear función para mostrar los subtítulos en forma global.
+_Crear función para mostrar los subtítulos a aquellas personas que posean una radio corta/larga.
+_Modificar la función de los subtítulos para que tenga la posibilidad de mostrarse unicamente a los bandos aliados.
+https://steamcommunity.com/sharedfiles/filedetails/?id=2552401753&searchtext=
+_Colocar retornos correctos en caso de falla a las funciones.
+_Crear funcion para facilitar el scripteado de loadouts.
+_Crear funcion para el espacio aereo restringido.
+_En la funcion de animacion colocar condicional para que no se ejecute si se esta realizando una animacion enviada previamente
+
+# Revisar:
+_¿Estan todas las funciones listadas?
+
+
+# Recordar:

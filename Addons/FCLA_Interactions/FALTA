@@ -1,0 +1,35 @@
+
+# Agregar/Modificar/Cambiar...
+_El consumo de la bateria de las NVG no debe afectar a la IA.
+_Colocar parche Zeus, si el jugador puede acceder a este.
+_¿Remplazar eventhandler "Take" por el CBA_fnc_addPlayerEventHandler "Loadout"?
+_Al cambiar de parche remplazar el casco, mochila, chaleco y uniforme. Si existe una variante del mismo con ese parche.
+_Crear condicional para poder desactivar las acciones ACE 3D para elegir parche, lo mismo con sus aplicaciones iterativas.
+_Modificar la función de la señal de humo para que la IA pueda usarla tambien.
+_Modificar la función de las baterías de los NVGs para asi hacerla compatible con los NVGs de cualquier mod.
+_Modificar la función de las baterías de los NVGs para que se vea afectada de manera inmediata al modificarse un addon option, relacionada con esta.
+_Buscar Interacciones en otros addons que deben ser trasladados a este.
+_Mover aquellos items a "FCLA_Items", solo los necesarios.
+_Crear AddAction para repetir el ultimo mensaje de radio, dada por "FCLA_Scripts_fnc_initCustomSubtitle".
+_Github... crear página de addon, agregar nuevos classnames de sonidos, texturas, variables locales/objeto y objetos que trae/modifica este addon.
+https://steamcommunity.com/sharedfiles/filedetails/?id=873999690&searchtext=TFAR
+_Cambiar dirección de la función: "FCLA_Scripts_fnc_initCustomSubtitle" por la correcta, una vez terminado FCLA Functions.
+_Enviar mensaje de tipo subtitulo cuando se realize una animación de los palillos de luz (cuando se termine el FCLA Functions)
+_Crear acciones en mapa para cambiar el entorno del dibujo.
+
+
+# Revisar:
+_¿Cambiar las acciones al metodo Cfg?
+_¿Las acciones ACE 3D desaparecen al destruirse el objeto?
+_¿Porque puedo ejecutar/abrir el menú ACE 3D y el médico cuando tengo una barra de progreso de otra acción?
+_¿Agregar los condicionales "_isNotDragging" y "_isNotCarrying" son necesarios?
+_¿Puedo vendar a una unidad que se esta rindiendo?
+_¿Tengo el efecto de venda al respawnear? ¿y la venda tambien?
+_¿Al morir me aparece el overlay de la venda y/o del detector químico?
+_¿Que pasa si la ducha esta inclinada? y ¿a "X" altura? (el trigger seguira pegado correctamente).
+_¿Puedo hacer uso de atajos de teclado o barras de progreso mientras tengo una ID en pantalla?
+_Texturas y sonidos (nombre y prueba de volumen).
+
+
+# Recordar:
+_Agregar en github variables de objetos que puedan ser de utilidad, por ejemplo: el suply de agua en la ducha.
