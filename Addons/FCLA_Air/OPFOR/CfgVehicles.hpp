@@ -57,7 +57,7 @@ class O_Heli_Attack_02_dynamicLoadout_F: Heli_Attack_02_dynamicLoadout_base_F {
 
 class O_CSAT_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamicLoadout_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_CSAT_VTOL_02_infantry_dynamicLoadout_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_CSAT_VTOL_02_infantry_dynamicLoadout_F.jpg";
   side = 0;
   faction = "OPF_F";
   crew = "O_T_Pilot_F";
@@ -129,7 +129,7 @@ class O_T_VTOL_02_vehicle_dynamicLoadout_F: VTOL_02_vehicle_dynamicLoadout_base_
 
 class O_CSAT_VTOL_02_vehicle_dynamicLoadout_F: O_T_VTOL_02_vehicle_dynamicLoadout_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_CSAT_VTOL_02_vehicle_dynamicLoadout_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_CSAT_VTOL_02_vehicle_dynamicLoadout_F.jpg";
   side = 0;
   faction = "OPF_F";
   crew = "O_T_Pilot_F";
@@ -186,7 +186,7 @@ class O_Spetsnaz_Heli_Light_02_unarmed_F: O_Heli_Light_02_unarmed_F {
 
 class O_Spetsnaz_Heli_Light_02_dynamicLoadout_F: O_Heli_Light_02_dynamicLoadout_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_Heli_Light_02_dynamicLoadout_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_Heli_Light_02_dynamicLoadout_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_helipilot_F";
@@ -213,7 +213,7 @@ class O_Spetsnaz_Heli_Light_02_dynamicLoadout_F: O_Heli_Light_02_dynamicLoadout_
 
 class O_Spetsnaz_Heli_Attack_02_dynamicLoadout_F: O_Heli_Attack_02_dynamicLoadout_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_Heli_Attack_02_dynamicLoadout_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_Heli_Attack_02_dynamicLoadout_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_helipilot_F";
@@ -240,7 +240,7 @@ class O_Spetsnaz_Heli_Attack_02_dynamicLoadout_F: O_Heli_Attack_02_dynamicLoadou
 
 class O_Spetsnaz_Heli_Transport_04_F: O_Heli_Transport_04_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_Heli_Transport_04_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_Heli_Transport_04_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_helipilot_F";
@@ -269,7 +269,7 @@ class O_Spetsnaz_Heli_Transport_04_F: O_Heli_Transport_04_F {
 
 class O_Spetsnaz_Heli_Transport_04_bench_F: O_Heli_Transport_04_bench_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_Heli_Transport_04_bench_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_Heli_Transport_04_bench_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_helipilot_F";
@@ -306,7 +306,7 @@ class O_Spetsnaz_Heli_Transport_04_bench_F: O_Heli_Transport_04_bench_F {
 
 class O_Spetsnaz_Heli_Transport_04_covered_F: O_Heli_Transport_04_covered_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_Heli_Transport_04_covered_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_Heli_Transport_04_covered_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_helipilot_F";
@@ -337,7 +337,7 @@ class O_Spetsnaz_Heli_Transport_04_covered_F: O_Heli_Transport_04_covered_F {
 
 class O_Spetsnaz_Heli_Transport_04_medevac_F: O_Heli_Transport_04_medevac_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_Heli_Transport_04_medevac_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_Heli_Transport_04_medevac_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_helipilot_F";
@@ -366,7 +366,7 @@ class O_Spetsnaz_Heli_Transport_04_medevac_F: O_Heli_Transport_04_medevac_F {
 
 class O_Spetsnaz_Heli_Transport_04_repair_F: O_Heli_Transport_04_repair_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_Heli_Transport_04_repair_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_Heli_Transport_04_repair_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_helipilot_F";
@@ -395,7 +395,7 @@ class O_Spetsnaz_Heli_Transport_04_repair_F: O_Heli_Transport_04_repair_F {
 
 class O_Spetsnaz_Heli_Transport_04_fuel_F: O_Heli_Transport_04_fuel_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_Heli_Transport_04_fuel_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_Heli_Transport_04_fuel_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_helipilot_F";
@@ -424,7 +424,7 @@ class O_Spetsnaz_Heli_Transport_04_fuel_F: O_Heli_Transport_04_fuel_F {
 
 class O_Spetsnaz_Heli_Transport_04_ammo_F: O_Heli_Transport_04_ammo_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_Heli_Transport_04_ammo_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_Heli_Transport_04_ammo_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_helipilot_F";
@@ -453,7 +453,7 @@ class O_Spetsnaz_Heli_Transport_04_ammo_F: O_Heli_Transport_04_ammo_F {
 
 class O_Spetsnaz_Heli_Transport_04_box_F: O_Heli_Transport_04_box_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_Heli_Transport_04_box_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_Heli_Transport_04_box_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_helipilot_F";
@@ -485,7 +485,7 @@ class O_Spetsnaz_Heli_Transport_04_box_F: O_Heli_Transport_04_box_F {
 
 class O_Spetsnaz_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamicLoadout_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_VTOL_02_infantry_dynamicLoadout_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_VTOL_02_infantry_dynamicLoadout_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_Pilot_F";
@@ -509,7 +509,7 @@ class O_Spetsnaz_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamic
 
 class O_Spetsnaz_VTOL_02_vehicle_dynamicLoadout_F: O_T_VTOL_02_vehicle_dynamicLoadout_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_VTOL_02_vehicle_dynamicLoadout_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_VTOL_02_vehicle_dynamicLoadout_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_Pilot_F";
@@ -536,7 +536,7 @@ class O_Spetsnaz_VTOL_02_vehicle_dynamicLoadout_F: O_T_VTOL_02_vehicle_dynamicLo
 
 class O_Spetsnaz_Plane_Fighter_02_Stealth_F: O_Plane_Fighter_02_Stealth_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_Plane_Fighter_02_Stealth_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_Plane_Fighter_02_Stealth_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_Pilot_F";
@@ -567,7 +567,7 @@ class O_Spetsnaz_Plane_Fighter_02_Stealth_F: O_Plane_Fighter_02_Stealth_F {
 
 class O_Spetsnaz_Plane_Fighter_02_F: O_Plane_Fighter_02_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\OPFOR\data\previews\O_Spetsnaz_Plane_Fighter_02_F.jpg";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_Plane_Fighter_02_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_Pilot_F";

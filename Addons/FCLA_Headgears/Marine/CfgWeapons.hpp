@@ -12,7 +12,7 @@ class H_MilCap_Marine: H_MilCap_mcamo {
   displayName = "Gorra militar (marina)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Marine\data\H_MilCap_Marine.paa"};
-  picture = "\FCLA_Headgears\Marine\data\previews\H_MilCap_Marine.paa";
+  picture = "\FCLA_Headgears\Marine\data\pictures\H_MilCap_Marine.paa";
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
@@ -23,7 +23,7 @@ class H_Booniehat_Marine: H_Booniehat_mcamo {
   displayName = "Gorro militar (marina)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Marine\data\H_Booniehat_Marine.paa"};
-  picture = "\FCLA_Headgears\Marine\data\previews\H_Booniehat_Marine.paa";
+  picture = "\FCLA_Headgears\Marine\data\pictures\H_Booniehat_Marine.paa";
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
@@ -38,7 +38,7 @@ class H_HelmetIA_Marine: H_HelmetIA {
   displayName = "Casco modular (marina)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Marine\data\H_HelmetIA_Marine.paa"};
-  picture = "\FCLA_Headgears\Marine\data\previews\H_HelmetIA_Marine.paa";
+  picture = "\FCLA_Headgears\Marine\data\pictures\H_HelmetIA_Marine.paa";
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;

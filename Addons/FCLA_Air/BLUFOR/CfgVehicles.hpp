@@ -75,7 +75,7 @@ class B_Heli_Transport_01_F: Heli_Transport_01_base_F {
 class B_Heli_Transport_Medvac_01_F: B_Heli_Transport_01_F {
   author = "hozlucas28";
   displayName = "UH-80 Ghost Hawk (médico)";
-  editorPreview = "\FCLA_Air\BLUFOR\data\previews\B_Heli_Transport_Medvac_01_F.jpg";
+  editorPreview = "\FCLA_Air\BLUFOR\data\pictures\B_Heli_Transport_Medvac_01_F.jpg";
   hiddenSelections[] = {"camo1","camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Air\BLUFOR\data\B_Heli_Transport_Medvac_01_F.paa","\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_CO.paa"};
   scope = 2;
@@ -402,7 +402,7 @@ class B_T_VTOL_01_vehicle_F: VTOL_01_vehicle_base_F {
 
 class B_T_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamicLoadout_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\BLUFOR\data\previews\B_T_VTOL_02_infantry_dynamicLoadout_F.jpg";
+  editorPreview = "\FCLA_Air\BLUFOR\data\pictures\B_T_VTOL_02_infantry_dynamicLoadout_F.jpg";
   side = 1;
   faction = "BLU_T_F";
   crew = "B_T_Pilot_F";
@@ -426,7 +426,7 @@ class B_T_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamicLoadout
 
 class B_T_VTOL_02_vehicle_dynamicLoadout_F: O_T_VTOL_02_vehicle_dynamicLoadout_F {
   author = "hozlucas28";
-  editorPreview = "\FCLA_Air\BLUFOR\data\previews\B_T_VTOL_02_vehicle_dynamicLoadout_F.jpg";
+  editorPreview = "\FCLA_Air\BLUFOR\data\pictures\B_T_VTOL_02_vehicle_dynamicLoadout_F.jpg";
   side = 1;
   faction = "BLU_T_F";
   crew = "B_T_Pilot_F";
