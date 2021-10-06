@@ -1,9 +1,0 @@
-name="Military Service Vans";
-picture="mod_icon.paa";
-logo="mod_logo.paa";
-action="https://www.reddit.com/r/ArmourMods/";
-tooltip="Military Service Vans - A Comprehensive Unit Texture Expansion";
-overview="Military Service Vans is a mod that expands the existing Arma 3 vans for use by the main 3 factions";
-hidePicture=0;
-hideName=0;
-author = "Armour_Fox";
