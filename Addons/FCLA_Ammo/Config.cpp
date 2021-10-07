@@ -50,5 +50,5 @@ class CfgMagazines {
 |********************************************************************************/
 
 class CfgMagazineWells {
-	#include "\FCLA_Ammo\Launcher\cfgMagazineWells.hpp"
+	#include "\FCLA_Ammo\Launcher\CfgMagazineWells.hpp"
 };

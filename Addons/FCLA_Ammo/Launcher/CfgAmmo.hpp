@@ -15,7 +15,7 @@ class FCLA_R_MRAAWS_White_Flare_545_F: R_MRAAWS_HE_F {
 	caliber = 1;
 	explosive = 0;
 	brightness = 120;
-	triggerTime = 0.7;
+	triggerTime = 1.5;
 	indirectHit = 0;
 	triggerOnImpact = 1;
 	triggerDistance = 5;
@@ -34,7 +34,7 @@ class FCLA_R_MRAAWS_Green_Flare_545_F: R_MRAAWS_HE_F {
 	caliber = 1;
 	explosive = 0;
 	brightness = 120;
-	triggerTime = 0.7;
+	triggerTime = 1.5;
 	indirectHit = 0;
 	triggerOnImpact = 1;
 	triggerDistance = 5;
@@ -53,7 +53,7 @@ class FCLA_R_MRAAWS_Red_Flare_545_F: R_MRAAWS_HE_F {
 	caliber = 1;
 	explosive = 0;
 	brightness = 120;
-	triggerTime = 0.7;
+	triggerTime = 1.5;
 	indirectHit = 0;
 	triggerOnImpact = 1;
 	triggerDistance = 5;
@@ -72,7 +72,7 @@ class FCLA_R_MRAAWS_Yellow_Flare_545_F: R_MRAAWS_HE_F {
 	caliber = 1;
 	explosive = 0;
 	brightness = 120;
-	triggerTime = 0.7;
+	triggerTime = 1.5;
 	indirectHit = 0;
 	triggerOnImpact = 1;
 	triggerDistance = 5;
@@ -101,7 +101,7 @@ class FCLA_R_MRAAWS_Smoke_White_469_F: R_MRAAWS_HE_F {
 	submunitionConeAngle = 20;
 	deleteParentWhenTriggered = 1;
 	submunitionConeAngleHorizontal = 50;
-	submunitionConeType[] = {"poissondisccenter", 3};
+	submunitionConeType[] = {"poissondisccenter", 1};
 };
 
 
@@ -120,7 +120,7 @@ class FCLA_R_MRAAWS_Smoke_Blue_469_F: R_MRAAWS_HE_F {
 	submunitionConeAngle = 20;
 	deleteParentWhenTriggered = 1;
 	submunitionConeAngleHorizontal = 50;
-	submunitionConeType[] = {"poissondisccenter", 3};
+	submunitionConeType[] = {"poissondisccenter", 1};
 };
 
 
@@ -139,7 +139,7 @@ class FCLA_R_MRAAWS_Smoke_Green_469_F: R_MRAAWS_HE_F {
 	submunitionConeAngle = 20;
 	deleteParentWhenTriggered = 1;
 	submunitionConeAngleHorizontal = 50;
-	submunitionConeType[] = {"poissondisccenter", 3};
+	submunitionConeType[] = {"poissondisccenter", 1};
 };
 
 
@@ -158,7 +158,7 @@ class FCLA_R_MRAAWS_Smoke_Orange_469_F: R_MRAAWS_HE_F {
 	submunitionConeAngle = 20;
 	deleteParentWhenTriggered = 1;
 	submunitionConeAngleHorizontal = 50;
-	submunitionConeType[] = {"poissondisccenter", 3};
+	submunitionConeType[] = {"poissondisccenter", 1};
 };
 
 
@@ -177,7 +177,7 @@ class FCLA_R_MRAAWS_Smoke_Purple_469_F: R_MRAAWS_HE_F {
 	submunitionConeAngle = 20;
 	deleteParentWhenTriggered = 1;
 	submunitionConeAngleHorizontal = 50;
-	submunitionConeType[] = {"poissondisccenter", 3};
+	submunitionConeType[] = {"poissondisccenter", 1};
 };
 
 
@@ -196,7 +196,7 @@ class FCLA_R_MRAAWS_Smoke_Red_469_F: R_MRAAWS_HE_F {
 	submunitionConeAngle = 20;
 	deleteParentWhenTriggered = 1;
 	submunitionConeAngleHorizontal = 50;
-	submunitionConeType[] = {"poissondisccenter", 3};
+	submunitionConeType[] = {"poissondisccenter", 1};
 };
 
 
@@ -215,5 +215,5 @@ class FCLA_R_MRAAWS_Smoke_Yellow_469_F: R_MRAAWS_HE_F {
 	submunitionConeAngle = 20;
 	deleteParentWhenTriggered = 1;
 	submunitionConeAngleHorizontal = 50;
-	submunitionConeType[] = {"poissondisccenter", 3};
+	submunitionConeType[] = {"poissondisccenter", 1};
 };
