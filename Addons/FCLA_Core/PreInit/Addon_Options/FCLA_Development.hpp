@@ -66,29 +66,6 @@
 
 
 [
-	"FCLA_Presentation_Video", "CHECKBOX",
-	["¿Video de presentación?", "Si se activa al entrar al escenario se vera un video de presentación de la comunidad. ¡ESTA OPCIÓN FUNCIONA DE MANERA LOCAL!"],
-	["FCLA Desarrollo", "• General"],
-	true,
-	LOCAL,
-	{
-		if ((!FCLA_Presentation_Video) || !(isNil "FCLA_Skip_Presentation_Video_addonOption")) exitWith {};
-		_unit = call CBA_fnc_currentUnit;
-		cutText ["", "BLACK OUT"];
-		_unit enableSimulationGlobal false;
-		_unit setVariable ["FCLA_Playing_Video", true, true];
-		"\FCLA_Data\Videos\Community_Presentation_1.ogv" call BIS_fnc_EXP_camp_playTimelineVideo;
-		[{
-			cutText ["", "BLACK IN", 5];
-			[{_this enableSimulationGlobal true;}, _this, 1.5] call CBA_fnc_waitAndExecute;
-			[{_this setVariable ["FCLA_Playing_Video", nil, true];}, _this, 5] call CBA_fnc_waitAndExecute;
-		}, _unit, 40.5] call CBA_fnc_waitAndExecute;
-	},
-	true
-] call CBA_fnc_addSetting;
-
-
-[
 	"FCLA_Donations_Message", "CHECKBOX",
 	["¿Mensaje de donaciones?", "Al activar se generara un mensaje en forma de recordatorio sobre las donaciones al servidor, el cual se repetira según el tiempo indicado debajo."],
 	["FCLA Desarrollo", "• General"],
@@ -206,6 +183,17 @@
 	["Ghostkiller", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
 	"76561198304995327",
+	GLOBAL,
+	{},
+	false
+] call CBA_fnc_addSetting;
+
+
+[
+	"FCLA_customVest_UID_Mario", "EDITBOX",
+	["Mario", "Si no sabes que es esto, no lo modifiques."],
+	["FCLA Desarrollo", "UIDs"],
+	"76561198260536786",
 	GLOBAL,
 	{},
 	false
