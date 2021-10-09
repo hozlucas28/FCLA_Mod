@@ -44,17 +44,6 @@
 
 
 [
-	"FCLA_Create_Diary", "CHECKBOX",
-	["¿Crear instrucción?", "Al activar se creara una instrucción llamada 'Comunidad FCLA', disponible al abrir el mapa (sección superior izquierda), donde se podrán encontrar links e información útil sobre FCLA."],
-	["FCLA Desarrollo", "• General"],
-	true,
-	GLOBAL,
-	{[player] spawn FCLA_Development_fnc_initDiaries;},
-	false
-] call CBA_fnc_addSetting;
-
-
-[
 	"FCLA_isPromotionDay", "CHECKBOX",
 	["¿Día de ascensos?", "Al activar los jugadores se equiparan con un traje formal, a su vez las cajas de loadouts solo dispondran de una acción para equiparse con el traje.\n ¡ESTA OPCIÓN FUNCIONA SI EL TIPO DE MISIÓN ES DE ENTRENAMIENTO!"],
 	["FCLA Desarrollo","• General"],

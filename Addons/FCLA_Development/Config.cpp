@@ -16,23 +16,12 @@ class CfgPatches {
 
 
 /********************************************************************************|
-|                                  INCLUSIONES                                   |
-|********************************************************************************/
-
-#include "\FCLA_Development\Camera_Mode\display\Definitions.hpp"
-#include "\FCLA_Development\Camera_Mode\display\Main.hpp"
-
-
-
-/********************************************************************************|
 |                                    FUNCIONES                                   |
 |********************************************************************************/
 
 class CfgFunctions {
 	class FCLA_Development {
 		#include "\FCLA_Development\CfgFunctions.hpp"
-		#include "\FCLA_Development\Camera_Mode\CfgFunctions.hpp"
-		#include "\FCLA_Development\Diaries\CfgFunction.hpp"
 		#include "\FCLA_Development\Donations\CfgFunction.hpp"
 		#include "\FCLA_Development\Save_Position\CfgFunction.hpp"
 	};
