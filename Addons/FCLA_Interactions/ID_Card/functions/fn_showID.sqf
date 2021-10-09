@@ -51,7 +51,7 @@ switch (_infoChecked) do {
   _inStairs = _this getVariable ["FCLA_inStairs", false];
 	_isNotAlive = !(alive _this);
   _isSwimming = [_this] call ACE_Common_fnc_isSwimming;
-  _inCameraMode = _this getVariable ["FCLA_Camera_Mode_On", false];
+  _inCameraMode = _this in (call ACE_Spectator_fnc_players);
 	_isNotShowingIDCard = isNull findDisplay 10001;
   (FCLA_ID_Card_Allowed) || (_isOnMap) || (_inStairs) || (_isNotAlive) || (_isSwimming) || (_inCameraMode) || (_isNotShowingIDCard);
 }, {

@@ -28,7 +28,7 @@ _Condition = {
   _notInStairs = !(_caller getVariable ["FCLA_inStairs", false]);
   _isCloseEnough = _caller distance _target <= 2;
   _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
-  _notInCameraMode = !(_caller getVariable ["FCLA_Camera_Mode_On", false]);
+  _notInCameraMode = !(_caller in (call ACE_Spectator_fnc_players));
   _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
   _isNotHandcuffed = !(_caller getVariable ["ACE_Captives_isHandcuffed", false]);
   _isNotUnconscious = !(_caller getVariable ["ACE_isUnconscious", false]);

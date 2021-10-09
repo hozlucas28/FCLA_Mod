@@ -23,7 +23,7 @@ _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
 _isNotDragging = !(_caller getVariable ["ACE_Dragging_isDragging", false]);
 _isNotCarrying = !(_caller getVariable ["ACE_Dragging_isCarrying", false]);
 _hasLightSticks = (hmd _caller == "FCLA_Light_Sticks");
-_notInCameraMode = !(_caller getVariable ["FCLA_Camera_Mode_On", false]);
+_notInCameraMode = !(_caller in (call ACE_Spectator_fnc_players));
 _isNotSurrendering = !(_caller getVariable ["ACE_Captives_isSurrendering", false]);
 _hasNotWeaponOnHand = (_currentWeapon == "");
 (_isNotOnMap) && (_notInStairs) && (_notInVehicle) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_hasLightSticks) && (_notInCameraMode) && (_isNotSurrendering) && (_hasNotWeaponOnHand)

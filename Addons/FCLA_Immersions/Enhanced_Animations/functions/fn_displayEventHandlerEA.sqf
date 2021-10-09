@@ -19,7 +19,7 @@ Author:
     params ["_displayOrControl", "_button", "_xPos", "_yPos", "_shift", "_ctrl", "_alt"];
     _unit = call CBA_fnc_currentUnit;
     _inUAV = !(isNull (getConnectedUAV _unit)) && (cameraOn == (getConnectedUAV _unit));
-    _inCameraMode = _unit getVariable ["FCLA_Camera_Mode_On", false];
+    _inCameraMode = _unit in (call ACE_Spectator_fnc_players);
     _isShowingIDCard = !isNull findDisplay 10001;
     _noInTacticalAnimation = !(_unit getVariable ["FCLA_inTactical_Position", false]);
     if ((visibleMap) || (_inUAV) || (_inCameraMode) || (_isShowingIDCard) || (_noInTacticalAnimation)) exitWith {};

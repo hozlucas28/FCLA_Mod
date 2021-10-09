@@ -33,7 +33,7 @@ if (_isNotPlayingAnimation) then {[_caller, "FCLA_Animation_Night_Vision_Switch"
 
   _isAlive = alive _caller;
   _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
-  _notInCameraMode = !(_caller getVariable ["FCLA_Camera_Mode_On", false]);
+  _notInCameraMode = !(_caller in (call ACE_Spectator_fnc_players));
   _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
   _haveBackpackEnoughtOxygen = (_currentBackpackContainer getVariable ["FCLA_Backpack_Oxygen", 100]) > 0;
   _isBackpackOxygenActivated = _currentBackpackContainer getVariable ["FCLA_Backpack_Oxygen_Activated", false];

@@ -26,7 +26,7 @@ _Condition = {
   _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
   _isNotDragging = !(_caller getVariable ["ACE_Dragging_isDragging", false]);
   _isNotCarrying = !(_caller getVariable ["ACE_Dragging_isCarrying", false]);
-  _notInCameraMode = !(_caller getVariable ["FCLA_Camera_Mode_On", false]);
+  _notInCameraMode = !(_caller in (call ACE_Spectator_fnc_players));
   _hasBatteryForNVG = [_caller, "FCLA_NVG_Battery"] call BIS_fnc_hasItem;
   _isNotSurrendering = !(_caller getVariable ["ACE_Captives_isSurrendering", false]);
   (FCLA_NVG_Require_Battery) && (_isNotOnMap) && (_notInStairs) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_notInCameraMode) && (_hasBatteryForNVG) && (_isNotSurrendering);

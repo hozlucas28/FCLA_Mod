@@ -18,7 +18,7 @@ Author:
   _inZeus = !isNull findDisplay 312;
   _inStairs = _unit getVariable ["FCLA_inStairs", false];
   _hasNotNVG = (hmd _unit) == "";
-  _inCameraMode = _unit getVariable ["FCLA_Camera_Mode_On", false];
+  _inCameraMode = _unit in (call ACE_Spectator_fnc_players);
   _isHandcuffed = _unit getVariable ["ACE_Captives_isHandcuffed", false];
   _isPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];
   if ((_oldVisionMode < 0) || (_inUAV) || (_inZeus) || (_inStairs) || (_hasNotNVG) || (_inCameraMode) || (_isHandcuffed) || (_isPlayingAnimation)) exitWith {};

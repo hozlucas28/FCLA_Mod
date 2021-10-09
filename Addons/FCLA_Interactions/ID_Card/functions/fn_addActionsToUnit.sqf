@@ -26,7 +26,7 @@ _Condition = {
   _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
   _isNotDragging = !(_caller getVariable ["ACE_Dragging_isDragging", false]);
   _isNotCarrying = !(_caller getVariable ["ACE_Dragging_isCarrying", false]);
-  _notInCameraMode = !(_caller getVariable ["FCLA_Camera_Mode_On", false]);
+  _notInCameraMode = !(_caller in (call ACE_Spectator_fnc_players));
   _isNotSurrendering = !(_caller getVariable ["ACE_Captives_isSurrendering", false]);
   (FCLA_ID_Card_Allowed) && (_isNotOnMap) && (_notInStairs) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_notInCameraMode) && (_isNotSurrendering);
 };
@@ -63,7 +63,7 @@ _Condition = {
   _areNotSwimming = !([_target] call ACE_Common_fnc_isSwimming) && !([_caller] call ACE_Common_fnc_isSwimming);
   _isSurrendering = _target getVariable ["ACE_Captives_isSurrendering", false];
   _isSideFriendly = (_sideOfTarget == sideFriendly);
-  _notInCameraMode = !(_caller getVariable ["FCLA_Camera_Mode_On", false]);
+  _notInCameraMode = !(_caller in (call ACE_Spectator_fnc_players));
   _isNotCallerSurrendering = !(_caller getVariable ["ACE_Captives_isSurrendering", false]);
   (FCLA_ID_Card_Allowed) && (_isNotOnMap) && (_notInStairs) && (_isHandcuffed) && (_isUnconscious) && (_isNotDragging) && (_isNotCarrying) && (_areNotSwimming) && (_isSurrendering) && (_isSideFriendly) && (_notInCameraMode) && (_isNotCallerSurrendering);
 };

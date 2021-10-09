@@ -19,7 +19,7 @@ Author:
   _isNotAlive = !alive _unit;
   _isSwimming = [_unit] call ACE_Common_fnc_isSwimming;
   _isDragging = _unit getVariable ["ACE_Dragging_isDragging", false];
-  _inCameraMode = _unit getVariable ["FCLA_Camera_Mode_On", false];
+  _inCameraMode = _unit in (call ACE_Spectator_fnc_players);
   _isHandcuffed = _unit getVariable ["ACE_Captives_isHandcuffed", false];
   _inWeaponAnimation = !isNil "FCLA_inWeapon_Animation";
   _isPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];

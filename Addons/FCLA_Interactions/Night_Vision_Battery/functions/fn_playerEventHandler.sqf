@@ -16,7 +16,7 @@ Author:
   params ["_unit", "_newVisionMode", "_oldVisionMode"];
   _inUAV = !(isNull (getConnectedUAV _unit)) && (cameraOn == (getConnectedUAV _unit));
   _inZeus = !isNull findDisplay 312;
-  _inCameraMode = _unit getVariable ["FCLA_Camera_Mode_On", false];
+  _inCameraMode = _unit in (call ACE_Spectator_fnc_players);
   if ((!FCLA_visionMode_Sounds) || (_inUAV) || (_inZeus) || (_inCameraMode)) exitWith {};
 
   switch (_newVisionMode) do {
