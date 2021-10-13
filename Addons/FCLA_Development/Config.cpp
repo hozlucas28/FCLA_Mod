@@ -45,6 +45,6 @@ class CfgSounds {
 
 class Extended_InitPost_EventHandlers {
 	class CAManBase {
-		init = "_unit = _this select 0; if (([_unit, true] call ACE_Common_fnc_isPlayer) || (_unit in playableUnits)) then {_unit disableAI 'PATH'; _unit disableAI 'RADIOPROTOCOL';};";
+		init = "if ([_this select 0, true] call ACE_Common_fnc_isPlayer) then {(_this select 0) disableAI 'RADIOPROTOCOL';};";
 	};
 };
