@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_teleportUnitBS
-
-Description:
-    Teletransporta a la unidad a la azotea/techo ó planta baja del edificio,
-    según sea el caso.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Teletransporta a la unidad a la azotea/techo ó planta baja del edificio,
+ * según sea el caso.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 _this spawn {

@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_playAnimationLS
-
-Description:
-    Fuerza a la unidad a realizar la animación enviada de los palillos de luz.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Fuerza a la unidad a realizar la animación enviada de los palillos de luz.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Effects_fnc_enginePlanesEH
-
-Description:
-    Agrega/Elimina un eventhandler del tipo "PerFrameHandler", que ejecuta una
-    serie de funciones si le cumplen las condiciones.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Agrega/Elimina un eventhandler del tipo "PerFrameHandler", que ejecuta una
+ * serie de funciones si le cumplen las condiciones.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

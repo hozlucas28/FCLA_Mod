@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_canCheckChemicalExposureCBRN
-
-Description:
-    Verifica si se puede comprobar la exposición química del paciente.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Verifica si se puede comprobar la exposición química del paciente.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

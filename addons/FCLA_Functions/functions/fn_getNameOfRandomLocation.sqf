@@ -5,17 +5,17 @@ Function: FCLA_Development_fnc_getNameOfRandomLocation
 Description:
     Devuelve un poblado, ciudad ó capital al azar del mapa actual.
 
-Returns:
+Return Value:
     String.
 
-Examples:
+Example:
     call FCLA_Development_fnc_getNameOfRandomLocation;
 
-Public: [SI]
+Public: [Yes]
 
 Author:
     hozlucas28
 ---------------------------------------------------------------------------- */
 
-_arrayOfLocations = call FCLA_Development_fnc_getNamesOfLocations;;
-selectRandom _arrayOfLocations;
+_locations = call FCLA_Development_fnc_getNamesOfLocations;;
+selectRandom _locations;

@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_showExposureCBRN
-
-Description:
-		Muestra la exposición química del paciente.
-
-Public: [No]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Muestra la exposición química del paciente.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_logicTurbulences
-
-Description:
-    Genera turbulencias en el avión/helicóptero.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Genera turbulencias en el avión/helicóptero.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

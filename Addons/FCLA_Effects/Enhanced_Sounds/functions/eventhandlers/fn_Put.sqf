@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Effects_fnc_putSoundsEH
-
-Description:
-    Reproduce un sonido cuando se coloca un item en un contenedor.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Reproduce un sonido cuando se coloca un item en un contenedor.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

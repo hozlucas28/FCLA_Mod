@@ -8,10 +8,10 @@ Description:
     de abrirla. Requiere el item "ACE_HuntIR_monitor" para funcionar.
     Solo funciona para los jugadores.
 
-Parameters:
+Arguments:
     _unit - unidad a la que se le agregara esta acción.
 
-Examples:
+Example:
 		  player addItem "ACE_HuntIR_monitor";
 		  [player] spawn FCLA_Interactions_fnc_initCamera;
 

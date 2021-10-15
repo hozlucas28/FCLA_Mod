@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_addActionsToBackpackCBRN
-
-Description:
-    Crea tres acciones ACE 3D (internas) para activar/desactivar/comprobar el
-    suministro de oxígeno.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Crea tres acciones ACE 3D (internas) para activar/desactivar/comprobar el
+ * suministro de oxígeno.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.
@@ -21,7 +18,7 @@ if (!([_unit, true] call ACE_Common_fnc_isPlayer) && !(_unit in playableUnits)) 
 /* -------------------------------- ACTIVAR -------------------------------- */
 
 _condition = {
-  params ["_target", "_caller", "_arrayOfCompatibleAssets"];
+  params ["_target", "_caller", "_compatibleAssets"];
   _currentGoggles = goggles _caller;
   _currentBackpack = backpack _caller;
   _currentBackpackContainer = backpackContainer _caller;
@@ -43,8 +40,8 @@ _condition = {
 };
 
 _statement = {
-  params ["_target", "_caller", "_arrayOfCompatibleAssets"];
-  [_caller, _arrayOfCompatibleAssets] spawn FCLA_Interactions_fnc_activateOxygenCBRN;
+  params ["_target", "_caller", "_compatibleAssets"];
+  [_caller, _compatibleAssets] spawn FCLA_Interactions_fnc_activateOxygenCBRN;
 };
 
  _activateOxygen = ["FCLA_Activar_Oxigeno", "Activar oxígeno", "\FCLA_Data\ACE_Actions\Backpack_Oxygen_On.paa", _statement, _condition] call Ace_Interact_Menu_fnc_createAction;

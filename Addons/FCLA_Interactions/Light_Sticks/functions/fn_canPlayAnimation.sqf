@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_canPlayAnimationLS
-
-Description:
-    Verifica si se puede reproducir la animación de los palillos de luz.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Verifica si se puede reproducir la animación de los palillos de luz.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

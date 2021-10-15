@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Development_fnc_initDonations
-
-Description:
-    Genera un mensaje en forma de recordatorio sobre las donaciones al servidor,
-    solo si esta opción esta activada en el 'addon options'.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Genera un mensaje en forma de recordatorio sobre las donaciones al servidor,
+ * solo si esta opción esta activada en el 'addon options'.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 [{

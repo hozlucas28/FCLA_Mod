@@ -7,21 +7,21 @@ Description:
 		como parámetros.
 
 
-Parameters:
+Arguments:
     _pos - Posición.
     _rad - Radio en donde todos los objetos, puestos por el editor,
            seran ocultados.
     _excludeUnits - ¿Excluir unidades IA?
 		                Valor booleano (true/false). Opcional.
 
-Examples:
+Example:
     [getPos player, 150] spawn FCLA_Development_fnc_hideEDENObjects;
 
 Tips:
     - Si se quiere que una unidad ó objeto sea ignorado por la función asignele
       esta variable: this setVariable ["FCLA_Ignore_fnc_hideEDENObjects", true, true];
 
-Public: [SI]
+Public: [Yes]
 
 Author:
     hozlucas28

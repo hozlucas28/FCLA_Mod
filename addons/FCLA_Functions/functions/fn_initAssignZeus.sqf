@@ -6,16 +6,16 @@ Description:
     Genera una acción de tipo 'holdAction' en el objeto enviado como parámetro
     para que el jugador que la active obtenga Zeus.
 
-Parameters:
+Arguments:
     _object - Objeto al cual se le agregara la acción.
 
-Examples:
+Example:
     (begin example)
     _stand = createVehicle ["Land_InfoStand_V1_F", (player modelToWorld [0, 5, 0]), [], 0, "NONE"];
     [_stand] spawn FCLA_Development_fnc_initAssignZeus;
     (end)
 
-Public: [SI]
+Public: [Yes]
 
 Author:
     hozlucas28

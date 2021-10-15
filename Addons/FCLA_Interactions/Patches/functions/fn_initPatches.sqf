@@ -6,10 +6,10 @@ Description:
     Genera siete acciones (internas) del menú ACE 3D, que permitira al usuario colocarse
 		el parche que desee de las escuadras ó el parche médico. Solo funciona para los jugadores.
 
-Parameters:
+Arguments:
     _unit - unidad a la que se le agregara estas acciones.
 
-Examples:
+Example:
 		  [player] spawn FCLA_Interactions_fnc_initPatches;
 
 Author:

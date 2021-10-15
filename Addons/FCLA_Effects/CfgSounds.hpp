@@ -729,15 +729,15 @@ class FCLA_Explosion_Wave_2 {
 	titles[] = {0, ""};
 };
 
-class FCLA_shellShock_1 {
+class FCLA_Shellshock_1 {
 	name = "FCLA - Conmoción (1)";
-	sound[] = {"\FCLA_Effects\sounds\pains\shellShock_1.ogg", db+8, 1};
+	sound[] = {"\FCLA_Effects\sounds\pains\Shellshock_1.ogg", db+8, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_shellShock_2 {
+class FCLA_Shellshock_2 {
 	name = "FCLA - Conmoción (2)";
-	sound[] = {"\FCLA_Effects\sounds\pains\shellShock_2.ogg", db+8, 1};
+	sound[] = {"\FCLA_Effects\sounds\pains\Shellshock_2.ogg", db+8, 1};
 	titles[] = {0, ""};
 };
 

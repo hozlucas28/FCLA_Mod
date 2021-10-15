@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_initPOD
-
-Description:
-    Abre/Cierra progresivamente la puerta que este mirando la unidad, si esta
-		se encuentra a una distancia razonable.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Abre/Cierra progresivamente la puerta que este mirando la unidad, si esta
+ * se encuentra a una distancia razonable.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

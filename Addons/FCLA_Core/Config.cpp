@@ -144,9 +144,9 @@ class CfgWeapons {
 |********************************************************************************/
 
 class Extended_PreInit_EventHandlers {
-	init = "[] call compile preprocessFileLineNumbers '\FCLA_Core\PreInit\XEH_preInit.sqf';";
+	init = "[] spawn compile preprocessFileLineNumbers '\FCLA_Core\PreInit\XEH_preInit.sqf';";
 };
 
 class Extended_PostInit_EventHandlers {
-	init = "[] call compile preprocessFileLineNumbers '\FCLA_Core\PostInit\XEH_postInit.sqf';";
+	init = "[] spawn compile preprocessFileLineNumbers '\FCLA_Core\PostInit\XEH_postInit.sqf';";
 };

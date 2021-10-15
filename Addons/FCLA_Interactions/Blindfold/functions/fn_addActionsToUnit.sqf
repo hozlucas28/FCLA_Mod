@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_addActionsToUnitBandage
-
-Description:
-    Crea dos acciones ACE 3D (externas) para vendar a una unidad, si se cumplen
-    las condiciones.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Crea dos acciones ACE 3D (externas) para vendar a una unidad, si se cumplen
+ * las condiciones.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.

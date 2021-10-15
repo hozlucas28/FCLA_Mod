@@ -1,16 +1,13 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Effects_fnc_playerEventHandlerES
-
-Description:
-    Asigna dos eventhandlers del tipo 'addPlayerEventHandler', donde uno
-    reproduce un sonido cuando se apunta con el arma y el otro cuando se cambia
-    el modo de visión (nocturna/térmica).
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Asigna dos eventhandlers del tipo 'addPlayerEventHandler', donde uno
+ * reproduce un sonido cuando se apunta con el arma y el otro cuando se cambia
+ * el modo de visión (nocturna/térmica).
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Al cambiar vista de cámara.
@@ -18,8 +15,9 @@ Author:
   params ["_unit", "_newCameraMode", "_oldCameraMode"];
   _noWeaponOnHand = currentWeapon _unit == "";
   _isWeaponLowered = weaponLowered _unit;
-  _generalConditionToStop = [_unit] call FCLA_Development_fnc_generalCondition;
-  if ((!FCLA_Aim_Sounds) || (_noWeaponOnHand) || (_isWeaponLowered) || (_generalConditionToStop)) exitWith {};
+  _generalCheck = [_unit] call FCLA_Functions_fnc_generalCheck;
+  _isNotTouchingGround = !isTouchingGround _unit;
+  if ((!FCLA_Aim_Sounds) || (_noWeaponOnHand) || (_isWeaponLowered) || (_generalCheck) || (_isNotTouchingGround)) exitWith {};
 
   switch (_newCameraMode) do {
     case "Internal": {

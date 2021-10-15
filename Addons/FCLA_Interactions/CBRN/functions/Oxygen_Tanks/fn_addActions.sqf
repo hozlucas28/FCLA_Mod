@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_addActionsToOxygenTankCBRN
-
-Description:
-    Crea una acción ACE 3D (externa) para recargar el oxígeno de la mochila.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Crea una acción ACE 3D (externa) para recargar el oxígeno de la mochila.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.

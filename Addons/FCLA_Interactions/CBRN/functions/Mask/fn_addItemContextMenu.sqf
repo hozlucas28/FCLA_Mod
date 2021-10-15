@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_addItemContextMenuToMaskCBRN
-
-Description:
-    Crea una acción del tipo "addItemContextMenuOption" para poder equiparse la
-    máscara sin tener el DLC Contact.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Crea una acción del tipo "addItemContextMenuOption" para poder equiparse la
+ * máscara sin tener el DLC Contact.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 _ownedDLC = ["Contact"] call FCLA_Development_fnc_isDLCOwned;

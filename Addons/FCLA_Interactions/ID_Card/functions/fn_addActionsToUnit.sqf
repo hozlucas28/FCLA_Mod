@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_addActionsToUnitIDCard
-
-Description:
-    Genera dos acciones ACE 3D (interna e externa), que permiten ver la
-    identificación propia o de otra unidad.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Genera dos acciones ACE 3D (interna e externa), que permiten ver la
+ * identificación propia o de otra unidad.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.

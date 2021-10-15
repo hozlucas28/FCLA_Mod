@@ -6,18 +6,18 @@ Description:
     Retorna un número al azar comprendido entre el mínimo y máximo enviados
     como parámetros.
 
-Parameters:
+Arguments:
     _minimum - Número mínimo.
     _maximum - Número máximo.
     _returnAsString - ¿Retornar el número en formato string? Opcional.
 
-Returns:
+Return Value:
     Número.
 
-Examples:
+Example:
     [19, 65] call FCLA_Development_fnc_getRandomNumber;
 
-Public: [SI]
+Public: [Yes]
 
 Author:
     hozlucas28
@@ -30,7 +30,7 @@ if ((_minimum > _maximum) || (_maximum < _minimum)) exitWith {
 };
 
 
-_arrayOfNumbers = [];
-for "_i" from _minimum to _maximum do {_arrayOfNumbers pushBack _i;};format ["%1", _i];
-_return = (_arrayOfNumbers select (floor (random (count _arrayOfNumbers))));
+_Numbers = [];
+for "_i" from _minimum to _maximum do {_Numbers pushBack _i;};format ["%1", _i];
+_return = (_Numbers select (floor (random (count _Numbers))));
 if (_returnAsString) then {[_return] call ACE_Common_fnc_numberToString} else {_return};

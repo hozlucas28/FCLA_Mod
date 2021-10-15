@@ -1,16 +1,13 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_addItemContextMenuToChemicalDetectorCBRN
-
-Description:
-    Crea cinco acciones del tipo "addItemContextMenuOption" para poder equiparse
-    el detector químico sin tener el DLC Contact y encender/apagar ó subir/bajar
-    el volúmen del detector.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Crea cinco acciones del tipo "addItemContextMenuOption" para poder equiparse
+ * el detector químico sin tener el DLC Contact y encender/apagar ó subir/bajar
+ * el volúmen del detector.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 

@@ -7,10 +7,10 @@ Description:
     el sibato, uno corto y otro largo, se necesita del item "FCLA_Whistle".
     Solo funciona para los jugadores.
 
-Parameters:
+Arguments:
     _unit - unidad a la que se le agregara estas acciones.
 
-Examples:
+Example:
 		  player addItem "FCLA_Whistle";
 		  [player] spawn FCLA_Interactions_fnc_initWhistle;
 

@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_waitUntilAndExecuteTFAR
-
-Description:
-    Genera un "waitUntilAndExecute" para detener la animación de transmisión
-    por radio, si se cumplen las condiciones planteadas.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Genera un "waitUntilAndExecute" para detener la animación de transmisión
+ * por radio, si se cumplen las condiciones planteadas.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 [{

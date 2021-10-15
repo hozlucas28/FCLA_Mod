@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_showWaterSupplyCBRN
-
-Description:
-    Muestra el suministro de agua restante.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Muestra el suministro de agua restante.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

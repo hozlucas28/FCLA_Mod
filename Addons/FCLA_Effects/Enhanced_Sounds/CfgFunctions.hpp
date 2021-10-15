@@ -6,7 +6,7 @@
 class Enhanced_Sounds {
 	file = "\FCLA_Effects\Enhanced_Sounds\functions";
 	class playerEventHandlerES {postInit = 1;};
-	class shellShockES {};
+	class ShellshockES {};
 
 	class killedSoundsEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\eventhandlers\fn_Killed.sqf";};
 	class hitPartSoundsEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\eventhandlers\fn_hitPart.sqf";};

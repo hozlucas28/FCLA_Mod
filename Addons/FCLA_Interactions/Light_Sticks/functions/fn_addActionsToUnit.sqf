@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_addActionsToUnitLS
-
-Description:
-    Genera nueve acciones ACE 3D (internas), que permiten realizar animaciones
-    para asi simular el trabajo de un agente de rampa.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Genera nueve acciones ACE 3D (internas), que permiten realizar animaciones
+ * para asi simular el trabajo de un agente de rampa.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.

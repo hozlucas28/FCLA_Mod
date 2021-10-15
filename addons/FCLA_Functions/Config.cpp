@@ -4,9 +4,8 @@
 |********************************************************************************/
 
 class CfgPatches {
-	class FCLA_Scripts {
+	class FCLA_Functions {
 		units[] = {};
-		weapons[] = {};
 		requiredAddons[] = {};
 		version = "2.0";
 		author = "hozlucas28";
@@ -16,14 +15,12 @@ class CfgPatches {
 
 
 
-
-
 /********************************************************************************|
 |                                    FUNCIONES                                   |
 |********************************************************************************/
 
 class CfgFunctions {
-	class FCLA_Scripts {
-		#include "\FCLA_Scripts\Custom_Subtitle\CfgFunctions.hpp"
+	class FCLA_Functions {
+		#include "\FCLA_Functions\CfgFunctions.hpp"
 	};
 };

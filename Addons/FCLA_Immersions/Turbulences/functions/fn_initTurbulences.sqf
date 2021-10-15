@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_initTurbulences
-
-Description:
-    Realiza los preparativos para llamar a la función que aplica turbulencias
-		en el avión/helicóptero.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Realiza los preparativos para llamar a la función que aplica turbulencias
+ * en el avión/helicóptero.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.

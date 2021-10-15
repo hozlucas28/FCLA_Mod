@@ -3,13 +3,13 @@
 Function: FCLA_Interactions_fnc_doorState
 
 Description:
-    Comprueba si el objeto enviado como parametro es una puerta ó no.
+    Comprueba si el objeto enviado como argumento es una puerta ó no.
 
-Parameters:
+Arguments:
     _object - objeto que se obtuvo a partir del "cursorTarget" en la llamada a la
 		          función.
 
-Returns:
+Return Value:
     Devuelve el classname de la puerta, su animación, cuanto esta abierta
 		y si esta cerrada.
 

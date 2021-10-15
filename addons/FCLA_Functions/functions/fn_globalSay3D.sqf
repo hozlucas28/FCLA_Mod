@@ -6,21 +6,21 @@ Description:
     Reproduce el sonido enviado como parámetro de manera global, sin importar el
     entorno de ejecución.
 
-Parameters:
+Arguments:
     _source - Unidad/Objeto de donde se origina el sonido.
     _soundClass - Classname del sonido a reproducir.
     _soundTime - Tiempo en segundos que dura el sonido a reproducir.
     _deleteSource - ¿Borrar fuente del sonido cuando se termina de reproducir?
                     Valor booleano (true/false). Opcional.
 
-Examples:
+Example:
     [player, "FCLA_Notification", 1] spawn FCLA_Development_fnc_globalSay3D;
 
 Note:
     Asigna una variable de tipo objeto a la unidad/objeto desde donde proviene
     el sonido, para asi evitar un bucle de reproducción.
 
-Public: [SI]
+Public: [Yes]
 
 Author:
     hozlucas28

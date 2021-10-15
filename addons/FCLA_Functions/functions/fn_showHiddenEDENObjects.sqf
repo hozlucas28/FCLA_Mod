@@ -6,16 +6,16 @@ Description:
     Muestra los objetos que fueron ocultados por la
     función 'FCLA_Development_fnc_hideEDENObjects'.
 
-Parameters:
+Arguments:
     _pos - Posición.
     _rad - Radio en donde todos los objetos, que fueron ocultados por la
            función 'FCLA_Development_fnc_hideEDENObjects' volveran a
            ser visibles.
 
-Examples:
+Example:
     [getPos player, 150] spawn FCLA_Development_fnc_showHiddenEDENObjects;
 
-Public: [SI]
+Public: [Yes]
 
 Author:
     hozlucas28

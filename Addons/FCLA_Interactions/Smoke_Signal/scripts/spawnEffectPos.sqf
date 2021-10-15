@@ -6,11 +6,11 @@ Description:
     Genera el efecto de la detonación del proyectil de humo en la posición enviada
     y con el color enviado.
 
-Parameters:
+Arguments:
     _pos - posición donde se generara el efecto.
     _color - color del efecto entre comillas, el cual puede ser: White, Red, Blue, Green, Orange, Yellow ó Purple.
 
-Examples:
+Example:
     		[getPos player, "Red"] execVM "\FCLA_Interactions\Smoke_Signal\scripts\spawnEffectPos.sqf";
 
 Author:

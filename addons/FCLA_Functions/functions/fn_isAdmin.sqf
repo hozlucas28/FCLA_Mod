@@ -5,16 +5,16 @@ Function: FCLA_Development_fnc_isAdmin
 Description:
     Verifica si la unidad es un administrador.
 
-Parameters:
+Arguments:
     _isVotedAdmin  - ¿Verificar si es un administrador votado? Opcional.
 
 Return:
     Boolean (true/false).
 
-Examples:
+Example:
     [] call FCLA_Development_fnc_isAdmin;
 
-Public: [SI]
+Public: [Yes]
 
 Author:
     hozlucas28

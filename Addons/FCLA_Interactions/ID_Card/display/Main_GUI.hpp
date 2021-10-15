@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Direction: "\FCLA_Interactions\ID_Card\display\Main_GUI.hpp"
-
-Description:
-    Define los classnames principales para la visualización de la identificación.
-
-Public: [NO]
-
-Author:
-hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Define los classnames principales para la visualización de la identificación.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 class FCLA_ID_Card_Text {

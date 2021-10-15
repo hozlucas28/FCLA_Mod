@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Direction: "\FCLA_Interactions\ID_Card\display\Dialog_GUI.hpp"
-
-Description:
-    Define los classnames para colocar la información en la identificación.
-
-Public: [NO]
-
-Author:
-hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Define los classnames para colocar la información en la identificación.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 class FCLA_ID_Card_Dialog {

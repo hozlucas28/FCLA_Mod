@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_initTFAR
-
-Description:
-    Asigna un eventhandler del tipo 'TFAR_fnc_addEventHandler', que se ejecutara
-    cuando se transmita por radio.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Asigna un eventhandler del tipo 'TFAR_fnc_addEventHandler', que se ejecutara
+ * cuando se transmita por radio.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 ["FCLA_TFAR_Animations_OnTangentEH", "OnTangent", {

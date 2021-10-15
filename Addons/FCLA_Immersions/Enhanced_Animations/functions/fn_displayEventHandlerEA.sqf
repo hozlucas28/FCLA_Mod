@@ -1,16 +1,13 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_displayEventHandlerEA
-
-Description:
-    Asigna un eventhandler del tipo 'displayAddEventHandler' para que
-    se cancele la animación 'posición táctica (arriba/abajo)' cuando se
-    preciona el click derecho/izquierdo del mouse.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Asigna un eventhandler del tipo 'displayAddEventHandler' para que
+ * se cancele la animación 'posición táctica (arriba/abajo)' cuando se
+ * preciona el click derecho/izquierdo del mouse.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Al precionar una tecla del mouse.

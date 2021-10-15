@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Direction: "\FCLA_Core\PreInit\Global_Variables.hpp"
-
-Description:
-    Define variables globales utilizadas por los addons del mod.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Define variables globales utilizadas por los addons del mod.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 

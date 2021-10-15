@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Effects_fnc_takeSoundsEH
-
-Description:
-    Reproduce un sonido cuando se agarra un item de un contenedor.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Reproduce un sonido cuando se agarra un item de un contenedor.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

@@ -6,7 +6,7 @@ Description:
     Le cambia el parche de la mochila a la unidad, si es que existe una
     variante de la misma con el parche que se envio.
 
-Parameters:
+Arguments:
     _unit - unidad a la que se le colocara la nueva mochila con parche.
     _backpack - classname de la mochila de la unidad enviada.
     _patche - classname del parche.

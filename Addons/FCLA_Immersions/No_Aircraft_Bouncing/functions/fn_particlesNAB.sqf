@@ -1,17 +1,14 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_particlesNAB
-
-Description:
-    Genera un efecto de partículas extra dependiendo si la aeronave es
-		un helicoptero ó avión. Estos efectos surgirán si los addon options
-		'¿Partículas extra para helicópteros?' y '¿Partículas extra para aviones?'
-		son activados.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Genera un efecto de partículas extra dependiendo si la aeronave es
+ * un helicoptero ó avión. Estos efectos surgirán si los addon options
+ * '¿Partículas extra para helicópteros?' y '¿Partículas extra para aviones?'
+ * son activados.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.

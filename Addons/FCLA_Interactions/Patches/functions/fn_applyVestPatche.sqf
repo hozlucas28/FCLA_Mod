@@ -7,7 +7,7 @@ Description:
     variante del mismo con el parche que se envio. Ademas reconoce si existe
     una variante del chaleco con el nombre de la unidad enviada.
 
-Parameters:
+Arguments:
     _unit - unidad a la que se le colocara el nuevo chaleco con parche.
     _vest - classname del chaleco de la unidad enviada.
     _patche - classname del parche.

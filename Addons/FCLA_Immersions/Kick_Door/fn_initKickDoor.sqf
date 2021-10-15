@@ -1,16 +1,13 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_initKickDoor
-
-Description:
-    Permite abrir una puerta cerrada a patadas, si el addon
-    option '¿Permitir patadas?' es activado, y el porcentaje de
-    éxito de la misma es definida en 'Probabilidad de éxito (patadas)'.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Permite abrir una puerta cerrada a patadas, si el addon
+ * option '¿Permitir patadas?' es activado, y el porcentaje de
+ * éxito de la misma es definida en 'Probabilidad de éxito (patadas)'.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 _this spawn {

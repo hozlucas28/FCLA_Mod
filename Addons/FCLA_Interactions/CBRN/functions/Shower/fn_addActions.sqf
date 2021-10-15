@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_addActionsToShowerCBRN
-
-Description:
-		Crea dos acciones ACE 3D (externas) que permiten activar/desactivar
-    las duchas descontaminantes.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Crea dos acciones ACE 3D (externas) que permiten activar/desactivar
+ * las duchas descontaminantes.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.

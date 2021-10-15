@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_respawnCBRNEH
-
-Description:
-    Restaura variables cuando la unidad respawnea.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Restaura variables cuando la unidad respawnea.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

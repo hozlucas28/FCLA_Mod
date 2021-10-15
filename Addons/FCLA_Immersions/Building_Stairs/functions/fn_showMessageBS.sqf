@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_showMessageBS
-
-Description:
-    Muestra un mensaje informando si se encuentra subiendo/bajando las
-    escaleras del edificio.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Muestra un mensaje informando si se encuentra subiendo/bajando las
+ * escaleras del edificio.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.

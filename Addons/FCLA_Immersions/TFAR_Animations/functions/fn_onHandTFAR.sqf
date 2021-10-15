@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_onHandTFAR
-
-Description:
-    Obliga a la unidad a realizar la animación 'Radio en mano'.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Obliga a la unidad a realizar la animación 'Radio en mano'.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

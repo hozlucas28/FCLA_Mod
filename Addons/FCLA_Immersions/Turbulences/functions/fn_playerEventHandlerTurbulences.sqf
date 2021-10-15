@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Direction: FCLA_Immersions_fnc_playerEventHandlerTurbulences
+ * Author: hozlucas28
+ *
+ * Description:
+ * Asigna un eventhandler del tipo 'addPlayerEventHandler' para aplicar
+ * turbulencias en el avión/helicóptero cuando entre/salga de un vehículo.
 
-Description:
-    Asigna un eventhandler del tipo 'addPlayerEventHandler' para aplicar
-    turbulencias en el avión/helicóptero cuando entre/salga de un vehículo.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 ["vehicle", {

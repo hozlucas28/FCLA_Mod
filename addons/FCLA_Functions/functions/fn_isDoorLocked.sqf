@@ -6,13 +6,13 @@ Description:
     Verifica si la puerta que se esta mirando esta con cerradura. Si no se
     encuentra frente a una puerta se devolvera un falso.
 
-Returns:
+Return Value:
     Boolean (true/false).
 
-Examples:
+Example:
     [player] call FCLA_Development_fnc_isDoorLocked;
 
-Public: [SI]
+Public: [Yes]
 
 Author:
     hozlucas28

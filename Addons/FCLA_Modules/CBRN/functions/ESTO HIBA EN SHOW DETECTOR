@@ -5,7 +5,7 @@ Function: FCLA_Interactions_fnc_showDetectorCBRN
 Description:
     Muestra/Oculta el detector químico según sea el caso.
 
-Public: [NO]
+Public: [No]
 
 Author:
     hozlucas28

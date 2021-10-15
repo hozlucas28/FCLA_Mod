@@ -1,16 +1,13 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_playerEventHandlerHCN
-
-Description:
-    Asigna un eventhandler del tipo 'addPlayerEventHandler' para eliminar la
-    variable de tipo objeto que almacena el casco remplazado por su homogéneo
-    con camuflaje.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Asigna un eventhandler del tipo 'addPlayerEventHandler' para eliminar la
+ * variable de tipo objeto que almacena el casco remplazado por su homogéneo
+ * con camuflaje.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 ["loadout", {

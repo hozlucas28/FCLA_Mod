@@ -1,16 +1,13 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_playerEventHandlerBandage
-
-Description:
-    Asigna un eventhandler del tipo 'addPlayerEventHandler' que remplaza un
-    item si este cumpla con la condición. Esta condición se revisara cada vez
-    que algo cambie en su inventario.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Asigna un eventhandler del tipo 'addPlayerEventHandler' que remplaza un
+ * item si este cumpla con la condición. Esta condición se revisara cada vez
+ * que algo cambie en su inventario.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 ["loadout", {

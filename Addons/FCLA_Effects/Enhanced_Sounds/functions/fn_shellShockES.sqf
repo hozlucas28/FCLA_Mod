@@ -1,21 +1,18 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Effects_fnc_shellShockES
-
-Description:
-    Genera un efecto simulando una conmoción cuando un jugador/unidad controlada
-    recibe un impacto de un proyectil explosivo en la cabeza.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Genera un efecto simulando una conmoción cuando un jugador/unidad controlada
+ * recibe un impacto de un proyectil explosivo en la cabeza.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 _this spawn {
   params ["_unit"];
-  if (!([_unit, false] call ACE_Common_fnc_isPlayer) || !(_unit getVariable ["FCLA_shellShock_Finished", true])) exitWith {};
-  _unit setVariable ["FCLA_shellShock_Finished", false, true];
+  if (!([_unit, false] call ACE_Common_fnc_isPlayer) || !(_unit getVariable ["FCLA_Shellshock_Finished", true])) exitWith {};
+  _unit setVariable ["FCLA_Shellshock_Finished", false, true];
 
 
 
@@ -23,10 +20,10 @@ _this spawn {
   _randomWaveSound = selectRandom ["FCLA_Explosion_Wave_1", "FCLA_Explosion_Wave_2"];
   playSound _randomWaveSound;
 
-  _randomShellShockSound = selectRandom ["FCLA_shellShock_1", "FCLA_shellShock_2"];
+  _randomShellShockSound = selectRandom ["FCLA_Shellshock_1", "FCLA_Shellshock_2"];
   playSound _randomShellShockSound;
 
-  if (_randomShellShockSound == "FCLA_shellShock_2") then {playSound "Combat_Deafness";};
+  if (_randomShellShockSound == "FCLA_Shellshock_2") then {playSound "Combat_Deafness";};
   _randomScreamSound = selectRandom ["FCLA_Pain_1", "FCLA_Pain_2", "FCLA_Pain_3", "FCLA_Pain_4", "FCLA_Pain_5", "FCLA_Pain_6", "FCLA_Pain_7"];
   playSound _randomScreamSound;
 
@@ -62,5 +59,5 @@ _this spawn {
   _blur ppEffectEnable false;
   ppEffectDestroy _blur;
   3 fadeSound 1;
-  _unit setVariable ["FCLA_shellShock_Finished", nil, true];
+  _unit setVariable ["FCLA_Shellshock_Finished", nil, true];
 };

@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Effects_fnc_groundSmokePlanes
-
-Description:
-    Genera un efecto que simula el polvo que levantan las aeronaves al volar
-		cerca del suelo.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Genera un efecto que simula el polvo que levantan las aeronaves al volar
+ * cerca del suelo.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

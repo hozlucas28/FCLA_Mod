@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_killedNABEH
-
-Description:
-    Evita que la aeronave rebote contra el suelo, si esta fue destruida
-    por completo.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Evita que la aeronave rebote contra el suelo, si esta fue destruida
+ * por completo.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.

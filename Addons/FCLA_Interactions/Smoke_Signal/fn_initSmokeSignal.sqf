@@ -8,10 +8,10 @@ Description:
     lanzagranadas, y el mismo cargado con un proyectil de humo. Solo funciona para
     los jugadores.
 
-Parameters:
+Arguments:
     _unit - unidad a la que se le agregara estas acciones.
 
-Examples:
+Example:
     [player] spawn FCLA_Interactions_fnc_initSmokeSignal;
 
 Author:

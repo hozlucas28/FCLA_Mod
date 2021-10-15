@@ -5,16 +5,16 @@ Function: FCLA_Development_fnc_isCurator
 Description:
     Verifica si la unidad tiene Zeus.
 
-Parameters:
+Arguments:
     _unit  - Unidad a verificar.
 
 Return:
     Boolean (true/false).
 
-Examples:
+Example:
     [player] call FCLA_Development_fnc_isCurator;
 
-Public: [SI]
+Public: [Yes]
 
 Author:
     hozlucas28

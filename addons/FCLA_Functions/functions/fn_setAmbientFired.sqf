@@ -6,7 +6,7 @@ Description:
     Obliga al vehículo enviado a disparar de manera random simulando
 		por ejemplo: Artilleria, Disparos antiaereos, etc. Dependiendo del vehículo.
 
-Parameters:
+Arguments:
     _vehicle - variable del vehículo.
 		_min1 y _max1 - cantidad minima y maxima de disparos.
 		_min2 y _max2 - tiempo minimo y maximo en segundos para repetir disparos.
@@ -21,7 +21,7 @@ Tips:
 		# Para obtener el '_weaponType' puedes usar el siguiente codigo, una vez estes dentro del mismo: weapons vehicle player;
 		# Para obtener el '_ammoType' puedes usar el siguiente codigo, una vez estes dentro del mismo: magazines vehicle player;
 
-Public: [Si]
+Public: [Yes]
 
 Author:
     hozlucas28

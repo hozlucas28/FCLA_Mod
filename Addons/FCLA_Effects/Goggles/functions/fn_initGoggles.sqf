@@ -1,17 +1,14 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Effects_fnc_initGoggles
-
-Description:
-    Asigna tres eventhandlers del tipo 'addPlayerEventHandler' para colocar
-    overlays según el item que se tenga equipado en el slot de los anteojos.
-    Estos eventhandlers se activaran cuando: se modifique el inventario,
-    cambie la cámara y cuando se cambie la vista de cámara.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Asigna tres eventhandlers del tipo 'addPlayerEventHandler' para colocar
+ * overlays según el item que se tenga equipado en el slot de los anteojos.
+ * Estos eventhandlers se activaran cuando: se modifique el inventario,
+ * cambie la cámara y cuando se cambie la vista de cámara.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Al modificarse el inventario.

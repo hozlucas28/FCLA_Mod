@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_playerEventHandlerEA
-
-Description:
-    Asigna un eventhandler del tipo 'addPlayerEventHandler' para que se
-    reproduzca una animación al activar/desactivar la visión nocturna/térmica.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Asigna un eventhandler del tipo 'addPlayerEventHandler' para que se
+ * reproduzca una animación al activar/desactivar la visión nocturna/térmica.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 ["visionMode", {

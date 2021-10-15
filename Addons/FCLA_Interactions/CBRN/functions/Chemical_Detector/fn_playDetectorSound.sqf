@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_playDetectorSoundCBRN
-
-Description:
-    Reproduce un sonido de alerta indicando el nivel de amenaza biológica
-    registrada por el detector químico.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Reproduce un sonido de alerta indicando el nivel de amenaza biológica
+ * registrada por el detector químico.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

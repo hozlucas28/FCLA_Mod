@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Immersions_fnc_addExclusionsNAB
-
-Description:
-    Incluye a las aeronaves con la propiedad 'FCLA_NAB_isExcluded' a las
-		aeronaves excluidas del NAB, definidas en el addon option 'Excluir clases'.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Incluye a las aeronaves con la propiedad 'FCLA_NAB_isExcluded' a las
+ * aeronaves excluidas del NAB, definidas en el addon option 'Excluir clases'.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

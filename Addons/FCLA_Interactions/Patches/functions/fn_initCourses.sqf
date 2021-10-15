@@ -7,10 +7,10 @@ Description:
     que permiten colocar parches del curso seleccionado a la unidad con la que se interactúa.
     Solo funciona para los jugadores.
 
-Parameters:
+Arguments:
     _unit - unidad a la que se le agregara estas acciones.
 
-Examples:
+Example:
 		  [player] spawn FCLA_Interactions_fnc_initCourses;
 
 Author:

@@ -6,7 +6,7 @@ Description:
     Le cambia el parche del uniforme a la unidad, si es que existe una
     variante del mismo con el parche que se envio.
 
-Parameters:
+Arguments:
     _unit - unidad a la que se le colocara el nuevo uniforme con parche.
     _uniform - classname del uniforme de la unidad enviada.
     _patche - classname del parche.

@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_addActionsToUnitHCN
-
-Description:
-    Genera tres acciones ACE 3D (internas), que permiten colocar/quitar las
-    distintas redes de camuflaje para el casco.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Genera tres acciones ACE 3D (internas), que permiten colocar/quitar las
+ * distintas redes de camuflaje para el casco.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.
@@ -54,7 +51,7 @@ _PutGreenCamoNet = ["FCLA_Colocar_Red_de_Camuflaje_Tropical", "Colocar camuflaje
 _Condition = {
   params ["_target", "_caller"];
   _currentHelmet = headgear _caller;
-  _arrayOfCompatibleHelmetsWithCamoNet = FCLA_Arid_Helmets_With_Camo_Net + FCLA_Tropical_Helmets_With_Camo_Net;
+  _compatibleHelmetsWithCamoNet = FCLA_Arid_Helmets_With_Camo_Net + FCLA_Tropical_Helmets_With_Camo_Net;
 
   _isNotOnMap = !visibleMap;
   _notInStairs = !(_caller getVariable ["FCLA_inStairs", false]);
@@ -64,7 +61,7 @@ _Condition = {
   _notInCameraMode = !(_caller in (call ACE_Spectator_fnc_players));
   _isTouchingGround = isTouchingGround _caller;
   _isNotSurrendering = !(_caller getVariable ["ACE_Captives_isSurrendering", false]);
-  _haveCompatibleHelmetWithCamoNet = _currentHelmet in _arrayOfCompatibleHelmetsWithCamoNet;
+  _haveCompatibleHelmetWithCamoNet = _currentHelmet in _compatibleHelmetsWithCamoNet;
   (_isNotOnMap) && (_notInStairs) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_notInCameraMode) && (_isTouchingGround) && (_isNotSurrendering) && (_haveCompatibleHelmetWithCamoNet)
 };
 

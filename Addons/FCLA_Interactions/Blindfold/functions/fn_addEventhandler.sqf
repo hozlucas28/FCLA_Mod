@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_addEventhandlerBandage
-
-Description:
-    Crea un eventhandler para el uso de las funciones Bandage.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Crea un eventhandler para el uso de las funciones Bandage.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 ["ACE_captiveStatusChanged", {

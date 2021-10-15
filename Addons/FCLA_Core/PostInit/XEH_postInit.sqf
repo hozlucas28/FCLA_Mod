@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Direction: "\FCLA_Core\PostInit\XEH_postInit.sqf"
-
-Description:
-    Incluye librerías que se ejecutaran al llamar a este archivo.
-    Funciona como archivo padre.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Incluye librerías que se ejecutaran al llamar a este archivo.
+ * Funciona como archivo padre.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Inclusiones.

@@ -6,10 +6,10 @@ Description:
     Genera una acción (externa) del menú ACE 3D, que permitira ver el número
     de placa/patente del vehículo enviado. Solo funciona con vehículos.
 
-Parameters:
+Arguments:
     _vehicle - vehículo al que se le agregara esta acción.
 
-Examples:
+Example:
 		  [vehicle player] spawn FCLA_Interactions_fnc_initPlateNumber;
 
 Author:

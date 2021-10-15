@@ -6,7 +6,7 @@ Description:
     Spawnea la cantidad enviada de luces, del color elegido, en el helipuerto enviado.
     Este debe ser un helipuerto con forma redondeada.
 
-Parameters:
+Arguments:
     _helipad - variable del helipuerto.
 		_numberOfLights - número de luces a colocar, evite exagerar la cantidad.
 		_coloredLights -  color de las luces, valores posibles: "Red", "Green" ó "Yellow". Con las comillas.
@@ -19,7 +19,7 @@ Tips:
 		# Evita exagerar el número de luces a colocar ('_numberOfLights'), recuerda que puedes
       afectar negativamente el rendimiento.
 
-Public: [Si]
+Public: [Yes]
 
 Author:
     hozlucas28

@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Effects_fnc_spawnSmokeEffectPlanes
-
-Description:
-    Genera dos efectos de partículas, los cuales dependeran del tipo de
-    superficie enviado.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Genera dos efectos de partículas, los cuales dependeran del tipo de
+ * superficie enviado.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

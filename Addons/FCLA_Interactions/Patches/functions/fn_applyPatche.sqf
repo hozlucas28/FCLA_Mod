@@ -5,11 +5,11 @@ Function: FCLA_Interactions_fnc_applyPatche
 Description:
     Coloca el parche eviado a la unidad y lo guarda en una variable.
 
-Parameters:
+Arguments:
     _unit - unidad a la que se le colocara el parche.
     _patche - classname del parche a colocar.
 
-Examples:
+Example:
 		  [player, "Patch_Takana"] call FCLA_Interactions_fnc_applyPatche;
 
 Author:

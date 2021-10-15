@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Core_fnc_initArsenalSearch
-
-Description:
-    Muestra un dialogo que permite buscar armas, chalecos, uniformes, etc. según
-		el desplegable de búsqueda (izquierdo/derecho) ha seleccionar del arsenal.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Muestra un dialogo que permite buscar armas, chalecos, uniformes, etc. según
+ * el desplegable de búsqueda (izquierdo/derecho) del arsenal.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 #include "\A3\Ui_f\hpp\defineResinclDesign.inc"
@@ -454,4 +451,4 @@ Author:
 			} ;
 		}] ;
 	} ;
-}] call BIS_fnc_addScriptedEventHandler ;
+}] call BIS_fnc_addScriptedEventHandler;

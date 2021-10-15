@@ -6,7 +6,7 @@ Description:
     Genera una acción ACE 3D (interna) para recargar la batería de las gafas
     de visión nocturna.
 
-Public: [NO]
+Public: [No]
 
 Author:
     hozlucas28

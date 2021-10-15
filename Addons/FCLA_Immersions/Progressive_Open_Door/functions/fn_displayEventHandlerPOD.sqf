@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Direction: FCLA_Immersions_fnc_displayEventHandlerPOD
-
-Description:
-    Asigna un eventhandler del tipo 'displayAddEventHandler' que se activara
-    cada vez que se mueva la rueda del mouse.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Asigna un eventhandler del tipo 'displayAddEventHandler' que se activara
+ * cada vez que se mueva la rueda del mouse.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 [{time > 1}, {

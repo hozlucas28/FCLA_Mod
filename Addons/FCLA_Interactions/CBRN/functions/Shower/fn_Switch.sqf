@@ -1,16 +1,13 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_switchShowerCBRN
-
-Description:
-		Según el estado enviado activa/desactiva la ducha descontaminante. Esta
-    función crea un trigger en la posición de la ducha para que esta sea
-    funcional.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Según el estado enviado activa/desactiva la ducha descontaminante. Esta
+ * función crea un trigger en la posición de la ducha para que esta sea
+ * funcional.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.
@@ -19,7 +16,7 @@ params ["_shower", "_state"];
 
 
 if (_state) then {
-  _arrayOfObjects = [];
+  _attachedObjects = [];
   for "_i" from 1 to 3 do {
     _pos = _shower selectionPosition format ["shower_%1_pos", _i];
     _dir = _shower selectionPosition format ["shower_%1_dir", _i];
@@ -31,7 +28,7 @@ if (_state) then {
     _particleObj setParticleCircle [0, [0, 0, 0]];
     _particleObj setParticleRandom [0, [0, 0, 0], [0, 0, 0], 53, 0.25, [0, 0, 0, 1], 0, 0];
     _particleObj setDropInterval 0.02;
-    _arrayOfObjects pushBack _particleObj;
+    _attachedObjects pushBack _particleObj;
   };
 
 
@@ -49,23 +46,23 @@ if (_state) then {
   _trigger setTriggerTimeout [5, 5, 5, true];
   _trigger setTriggerStatements ["(call CBA_fnc_currentUnit) in thisList;", "_unit = (call CBA_fnc_currentUnit); _unit setVariable ['FCLA_CBRN_Enable_Damage', nil, true]; [['| Descontaminación completada |', 1.25, [0.345, 0.839, 0.553, 1]], true] call CBA_fnc_Notify; [_unit, 'quick_view', '%1 fue descontaminado', [name _unit]] call ACE_Medical_Treatment_fnc_addToLog;", ""];
   _trigger attachTo [_shower];
-  _arrayOfObjects pushBack _trigger;
-  _shower setVariable ["FCLA_Shower_Objects", _arrayOfObjects, true];
+  _attachedObjects pushBack _trigger;
+  _shower setVariable ["FCLA_Shower_Objects", _attachedObjects, true];
 
 
   [{(isNil "FCLA_CBRN_Activated") || (!alive (_this select 0)) || !((_this select 0) getVariable ["FCLA_Shower_Status", false])}, {
-    params ["_shower", "_arrayOfObjects", "_soundObj", "_handle"];
+    params ["_shower", "_attachedObjects", "_soundObj", "_handle"];
     deleteVehicle _soundObj;
     [_handle] call CBA_fnc_removePerFrameHandler;
 
     if ((isNil "FCLA_CBRN_Activated") || (!alive _shower)) then {
-      {deleteVehicle _x;} forEach _arrayOfObjects;
+      {deleteVehicle _x;} forEach _attachedObjects;
       [_shower] spawn FCLA_Interactions_fnc_turnOffShowerCBRN;
     };
-  }, [_shower, _arrayOfObjects, _soundObj, _handle]] call CBA_fnc_waitUntilAndExecute;
+  }, [_shower, _attachedObjects, _soundObj, _handle]] call CBA_fnc_waitUntilAndExecute;
 } else {
-  _arrayOfObjects = _shower getVariable ["FCLA_Shower_Objects", [""]];
+  _attachedObjects = _shower getVariable ["FCLA_Shower_Objects", [""]];
   _shower animateSource ["Hide_Mist_Source", 1, true];
-  if ((count _arrayOfObjects) <= 0) exitWith {};
-  {deleteVehicle _x;} forEach _arrayOfObjects;
+  if ((count _attachedObjects) <= 0) exitWith {};
+  {deleteVehicle _x;} forEach _attachedObjects;
 };

@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Effects_fnc_killedSoundsEH
-
-Description:
-    Reproduce una serie de sonidos cuando una unidad muere.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Reproduce una serie de sonidos cuando una unidad muere.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 _this spawn {
@@ -20,7 +17,7 @@ _this spawn {
 
 
   //Si no hay jugadores/unidades controladas cerca.
-  _areNearPlayers = [_unit, 50, 1, false] call FCLA_Development_fnc_areNearPlayers;
+  _areNearPlayers = [_unit, 50, 1, false] call FCLA_Functions_fnc_nearPlayer;
   if (!_areNearPlayers) exitWith {};
 
 

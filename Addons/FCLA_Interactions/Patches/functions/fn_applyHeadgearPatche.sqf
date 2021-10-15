@@ -6,7 +6,7 @@ Description:
     Le cambia el parche del casco a la unidad, si es que existe una
     variante del mismo con el parche que se envio.
 
-Parameters:
+Arguments:
     _unit - unidad a la que se le colocara la nueva mochila con parche.
     _headgear - classname del casco de la unidad enviada.
     _patche - classname del parche.

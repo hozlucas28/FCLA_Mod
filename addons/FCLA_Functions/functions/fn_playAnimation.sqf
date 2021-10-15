@@ -6,17 +6,17 @@ Description:
     Fuerza a la unidad a realizar la animación enviada, según su
     tipo de reproducción.
 
-Parameters:
+Arguments:
     _unit - Unidad que realizara la animación.
     _animation - Classname de la animación que se busca reproducir.
     _typeOfReproduction - Tipo de reproducción para la animación.
                           Valores aceptados: "playAction", "playActionNow",
                                              "PlayMove", "PlayMoveNow" ó "SwitchMove".
 
-Examples:
+Example:
     [player, "FCLA_Animation_Tactical_Position_Up", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
 
-Public: [SI]
+Public: [Yes]
 
 Author:
     hozlucas28
@@ -24,8 +24,8 @@ Author:
 
 //Variables de referencia.
 params [["_unit", call CBA_fnc_currentUnit], ["_animation", ""], ["_typeOfReproduction", ""]];
-_arrayOfCompatibleReproductions = ["playAction", "playActionNow", "PlayMove", "PlayMoveNow", "SwitchMove"];
-if (!(_typeOfReproduction in _arrayOfCompatibleReproductions)) exitWith {false};
+_compatibleReproductions = ["playAction", "playActionNow", "PlayMove", "PlayMoveNow", "SwitchMove"];
+if (!(_typeOfReproduction in _compatibleReproductions)) exitWith {false};
 
 
 switch (_typeOfReproduction) do {

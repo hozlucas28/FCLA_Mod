@@ -1,15 +1,12 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Effects_fnc_breathGoggles
-
-Description:
-    Reproduce una serie de sonidos relacionados con la respiración,
-    simulando el uso de una máscara.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Reproduce una serie de sonidos relacionados con la respiración,
+ * simulando el uso de una máscara.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 _spawnHandle = [_this select 0] spawn {

@@ -6,17 +6,17 @@ Description:
     Mostrara un panel desplegable con la genealogía del classname, según el
 		tipo de Cfg enviado como parámetro.
 
-Parameters:
+Arguments:
     _classname - Classname del objeto que se quiere buscar.
     _typeOfCfg - Tipo de Cfg en donde se buscara el classname.
 
-Examples:
+Example:
     ["B_Soldier_F", "CfgVehicles"] call FCLA_Development_fnc_printParentTreeOfClassname;
 
 Note:
     Esta función no mostrara nada si el mod "Advanced Dveloper Tools" esta cargado.
 
-Public: [SI]
+Public: [Yes]
 
 Author:
     hozlucas28

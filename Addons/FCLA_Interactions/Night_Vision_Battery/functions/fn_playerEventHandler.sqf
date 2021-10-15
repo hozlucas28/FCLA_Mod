@@ -6,7 +6,7 @@ Description:
     Asigna un eventhandler del tipo 'addPlayerEventHandler' para que se consuma
     la batería de la visión nocturna.
 
-Public: [NO]
+Public: [No]
 
 Author:
     hozlucas28

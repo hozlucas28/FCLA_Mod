@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Effects_fnc_inventoryClosedSoundsEH
-
-Description:
-    Reproduce una serie de sonidos cuando se cierra el inventario.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Reproduce una serie de sonidos cuando se cierra el inventario.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

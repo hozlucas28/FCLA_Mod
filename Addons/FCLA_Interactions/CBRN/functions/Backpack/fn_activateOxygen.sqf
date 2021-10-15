@@ -1,18 +1,15 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_activateOxygenCBRN
-
-Description:
-    Enciende el suministro de oxígeno.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Enciende el suministro de oxígeno.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.
-params ["_caller", "_arrayOfCompatibleAssets"];
+params ["_caller", "_compatibleAssets"];
 _currentBackpackContainer = backpackContainer _caller;
 _currentBackpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
 
@@ -26,7 +23,7 @@ if (_isNotPlayingAnimation) then {[_caller, "FCLA_Animation_Night_Vision_Switch"
 
 //Consumir oxígeno.
 [{
-  (_this select 0) params ["_caller", "_arrayOfCompatibleAssets", "_lastTimeUpdated"];
+  (_this select 0) params ["_caller", "_compatibleAssets", "_lastTimeUpdated"];
   _currentGoggles = goggles _caller;
   _currentBackpack = backpack _caller;
   _currentBackpackContainer = backpackContainer _caller;
@@ -62,5 +59,5 @@ if (_isNotPlayingAnimation) then {[_caller, "FCLA_Animation_Night_Vision_Switch"
     [_caller] spawn FCLA_Interactions_fnc_desactivateOxygenCBRN;
     [_this select 1] call CBA_fnc_removePerFrameHandler;
   };
-}, 1, [_caller, _arrayOfCompatibleAssets, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+}, 1, [_caller, _compatibleAssets, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 [_caller, "quick_view", "%1 activo el suministro de oxígeno", [name _caller]] call ACE_Medical_Treatment_fnc_addToLog;

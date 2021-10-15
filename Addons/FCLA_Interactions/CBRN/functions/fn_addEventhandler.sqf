@@ -1,14 +1,11 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_addEventhandlerCBRN
-
-Description:
-    Crea eventhandlers para el uso de las funciones CBRN.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Crea eventhandlers para el uso de las funciones CBRN.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 ["FCLA_Switch_Shower", {

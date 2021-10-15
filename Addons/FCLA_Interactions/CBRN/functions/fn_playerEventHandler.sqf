@@ -1,16 +1,13 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Interactions_fnc_playerEventHandlerCBRN
-
-Description:
-    Asigna un eventhandler del tipo 'addPlayerEventHandler' para desactivar el
-    detector químico cuando este no se encuentra en el slot del reloj. Se
-    activara cada vez que se modifique el inventario.
-
-Public: [NO]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ * 
+ * Description:
+ * Asigna un eventhandler del tipo 'addPlayerEventHandler' para desactivar el
+ * detector químico cuando este no se encuentra en el slot del reloj. Se
+ * activara cada vez que se modifique el inventario.
+ * 
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 ["loadout", {

@@ -7,10 +7,10 @@ Description:
     compartir el mapa (interna), y ver el mapa que se esta compartiendo (externa).
     Solo funciona para los jugadores.
 
-Parameters:
+Arguments:
     _unit - unidad a la que se le agregara estas acciones.
 
-Examples:
+Example:
 		  [player] spawn FCLA_Interactions_fnc_initShareMap;
 
 Author:

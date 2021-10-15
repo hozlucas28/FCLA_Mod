@@ -7,7 +7,7 @@ Description:
     x_applyVestPatche y x_applyBackpackPatche. Uso esclusivo para los loadouts de
     entrenamiento y addonconfig.
 
-Parameters:
+Arguments:
     _unit - unidad para enviar al resto de las funciones.
     _uniform - classname del uniforme.
     _headgear - classname del casco.

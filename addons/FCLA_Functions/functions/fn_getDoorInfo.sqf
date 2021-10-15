@@ -5,7 +5,7 @@ Function: FCLA_Development_fnc_getDoorInfo
 Description:
     Obtiene la información de la puerta para luego devolverla.
 
-Public: [NO]
+Public: [No]
 
 Author:
     hozlucas28
