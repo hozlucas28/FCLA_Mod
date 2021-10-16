@@ -30,7 +30,6 @@ Author:
 //Variables de referencia.
 params ["_pos", ["_rad", 150], ["_excludeUnits", false]];
 
-
 _allNearObjects = nearestObjects [_pos, [], _rad];
 _allNearTerrainObjects = nearestTerrainObjects [_pos, [], _rad];
 _allNearObjectsToHide = switch (_excludeUnits) do {

@@ -15,7 +15,7 @@
   params ["_unit", "_newCameraMode", "_oldCameraMode"];
   _noWeaponOnHand = currentWeapon _unit == "";
   _isWeaponLowered = weaponLowered _unit;
-  _generalCheck = [_unit] call FCLA_Functions_fnc_generalCheck;
+  _generalCheck = [_unit] call FCLA_Common_fnc_generalCheck;
   _isNotTouchingGround = !isTouchingGround _unit;
   if ((!FCLA_Aim_Sounds) || (_noWeaponOnHand) || (_isWeaponLowered) || (_generalCheck) || (_isNotTouchingGround)) exitWith {};
 
@@ -37,7 +37,7 @@
 //Al cambiar el modo de visión.
 ["visionMode", {
   params ["_unit", "_newVisionMode", "_oldVisionMode"];
-  _inUAV = !(isNull (getConnectedUAV _unit)) && (cameraOn == (getConnectedUAV _unit));
+  _inUAV = ([_unit] call ace_common_fnc_getUavControlPosition) != "";
   _inZeus = !isNull findDisplay 312;
   _inStairs = _unit getVariable ["FCLA_inStairs", false];
   _isNotAlive = !alive _unit;

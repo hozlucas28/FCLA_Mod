@@ -11,9 +11,9 @@
 
 [{
   (_this select 0) params ["_unit"];
-  _isEOD = [_unit, "EOD"] call FCLA_Development_fnc_checkUnitTrait;
-  _isDoctor = [_unit, "Doctor"] call FCLA_Development_fnc_checkUnitTrait;
-  _isAdvancedEnginner = [_unit, "Advanced_Enginner"] call FCLA_Development_fnc_checkUnitTrait;
+  _isEOD = [_unit, "EOD"] call FCLA_Common_fnc_checkUnitTrait;
+  _isDoctor = [_unit, "Doctor"] call FCLA_Common_fnc_checkUnitTrait;
+  _isAdvancedEnginner = [_unit, "Advanced_Enginner"] call FCLA_Common_fnc_checkUnitTrait;
   _EODTextProperties = if (_isEOD) then {["#58D68D", "√"];} else {["#D65858", "X"];};
   _doctorTextProperties = if (_isDoctor) then {["#58D68D", "√"];} else {["#D65858", "X"];};
   _advancedEnginnerTextProperties = if (_isAdvancedEnginner) then {["#58D68D", "√"];} else {["#D65858", "X"];};

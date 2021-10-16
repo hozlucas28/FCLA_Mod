@@ -4,7 +4,7 @@
 |********************************************************************************/
 
 class CfgPatches {
-	class FCLA_Functions {
+	class FCLA_Common {
 		units[] = {};
 		requiredAddons[] = {};
 		version = "2.0";
@@ -20,7 +20,17 @@ class CfgPatches {
 |********************************************************************************/
 
 class CfgFunctions {
-	class FCLA_Functions {
-		#include "\FCLA_Functions\CfgFunctions.hpp"
+	class FCLA_Common {
+		#include "\FCLA_Common\CfgFunctions.hpp"
 	};
+};
+
+
+
+/********************************************************************************|
+|                                    SONIDOS                                     |
+|********************************************************************************/
+
+class CfgSounds {
+	#include "\FCLA_Common\CfgSounds.hpp"
 };

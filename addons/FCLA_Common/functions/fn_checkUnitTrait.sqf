@@ -13,7 +13,7 @@
  * ¿Cumple con la característica? <BOOL>
  *
  * Example:
- * [player, "Doctor"] call FCLA_Development_fnc_checkUnitTrait;
+ * [player, "Doctor"] call FCLA_Common_fnc_checkUnitTrait;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

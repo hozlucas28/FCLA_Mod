@@ -31,8 +31,8 @@ if ((!isServer) || (_isZeusEnhancedModNotLoaded)) exitWith {false};
  "<t color='#58D68D'>Obtener 'Zeus'</t>",
  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_requestleadership_ca.paa",
  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_requestleadership_ca.paa",
- "(_this distance _target < 1.5) && ([_this, true] call ACE_Common_fnc_isPlayer) && !([_this] call FCLA_Development_fnc_isCurator)",
- "(_caller distance _target < 1.5) && ([_caller, true] call ACE_Common_fnc_isPlayer) && !([_caller] call FCLA_Development_fnc_isCurator)",
+ "(([_this, _target] call CBA_fnc_getDistance) < 1.5) && ([_this, true] call ACE_Common_fnc_isPlayer) && !([_this] call FCLA_Development_fnc_isCurator)",
+ "(([_caller, _target] call CBA_fnc_getDistance) < 1.5) && ([_caller, true] call ACE_Common_fnc_isPlayer) && !([_caller] call FCLA_Development_fnc_isCurator)",
  {},
  {},
  {

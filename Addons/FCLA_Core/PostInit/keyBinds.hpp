@@ -33,7 +33,7 @@
 		_isWeaponDeployed = isWeaponDeployed _unit;
 		_isPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];
 		_isNotTouchingGround = !isTouchingGround _unit;
-		_generalCheck = [_unit] call FCLA_Functions_fnc_generalCheck;
+		_generalCheck = [_unit] call FCLA_Common_fnc_generalCheck;
 		if ((!FCLA_Kick_Door_Allowed) || (_isWeaponDeployed) || (_isPlayingAnimation) || (_isNotTouchingGround) || (_generalCheck)) exitWith {};
 
 		[_unit] spawn FCLA_Immersions_fnc_initKickDoor;
@@ -54,7 +54,7 @@
 	["Abrir puerta progresivamente", "Preciona 'Tecla asignada' + Rueda del mouse para abrir progresivamente la puerta que estes mirando."],
 	{
 		_unit = call CBA_fnc_currentUnit;
-		_generalCheck = [_unit] call FCLA_Functions_fnc_generalCheck;
+		_generalCheck = [_unit] call FCLA_Common_fnc_generalCheck;
 		_isNotTouchingGround = !isTouchingGround _unit;
 		if ((_generalCheck) || (_isNotTouchingGround)) exitWith {};
 
@@ -77,7 +77,7 @@
 	{
 		_unit = call CBA_fnc_currentUnit;
 		_randomSound = selectRandom ["FCLA_Hiss_1", "FCLA_Hiss_2"]
-		_generalCheck = [_unit] call FCLA_Functions_fnc_generalCheck;
+		_generalCheck = [_unit] call FCLA_Common_fnc_generalCheck;
 		_isNotTouchingGround = !isTouchingGround _unit;
 		if ((_generalCheck) || (_isNotTouchingGround)) exitWith {};
 
@@ -103,7 +103,7 @@
 		_isWeaponDeployed = isWeaponDeployed _unit;
 		_isPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];
 		_notUsingPrimaryWeapon = currentWeapon _unit != primaryWeapon _unit;
-		_generalCheck = [_unit] call FCLA_Functions_fnc_generalCheck;
+		_generalCheck = [_unit] call FCLA_Common_fnc_generalCheck;
 		_isNotTouchingGround = !isTouchingGround _unit;
 		if ((_isProne) || (_isWeaponDeployed) || (_isPlayingAnimation) || (_notUsingPrimaryWeapon) || (_generalCheck) || (_isNotTouchingGround)) exitWith {};
 
@@ -118,7 +118,7 @@
 				_isWeaponDeployed = isWeaponDeployed _unit;
 				_isPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];
 				_notUsingPrimaryWeapon = currentWeapon _unit != primaryWeapon _unit;
-				_generalCheck = [_unit] call FCLA_Functions_fnc_generalCheck;
+				_generalCheck = [_unit] call FCLA_Common_fnc_generalCheck;
 				_isNotTouchingGround = !isTouchingGround _unit;
 				(isNil {_unit getVariable "FCLA_inTactical_Position"}) || (_isProne) || (_isWeaponDeployed) || (_isPlayingAnimation) || (_notUsingPrimaryWeapon) || (_generalCheck) || (_isNotTouchingGround);
 			}, {
@@ -149,7 +149,7 @@
 		_isWeaponDeployed = isWeaponDeployed _unit;
 		_isPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];
 		_notUsingPrimaryWeapon = currentWeapon _unit != primaryWeapon _unit;
-		_generalCheck = [_unit] call FCLA_Functions_fnc_generalCheck;
+		_generalCheck = [_unit] call FCLA_Common_fnc_generalCheck;
 		_isNotTouchingGround = !isTouchingGround _unit;
 		if ((_isProne) || (_isWeaponDeployed) || (_isPlayingAnimation) || (_notUsingPrimaryWeapon) || (_generalCheck) || (_isNotTouchingGround)) exitWith {};
 
@@ -164,7 +164,7 @@
 				_isWeaponDeployed = isWeaponDeployed _unit;
 				_isPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];
 				_notUsingPrimaryWeapon = currentWeapon _unit != primaryWeapon _unit;
-				_generalCheck = [_unit] call FCLA_Functions_fnc_generalCheck;
+				_generalCheck = [_unit] call FCLA_Common_fnc_generalCheck;
 				_isNotTouchingGround = !isTouchingGround _unit;
 				(isNil {_unit getVariable "FCLA_inTactical_Position"}) || (_isProne) || (_isWeaponDeployed) || (_isPlayingAnimation) || (_notUsingPrimaryWeapon) || (_generalCheck) || (_isNotTouchingGround);
 			}, {

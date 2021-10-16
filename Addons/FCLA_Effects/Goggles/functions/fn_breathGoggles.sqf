@@ -5,7 +5,7 @@
  * Description:
  * Reproduce una serie de sonidos relacionados con la respiración,
  * simulando el uso de una máscara.
- * 
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
@@ -13,7 +13,7 @@ _spawnHandle = [_this select 0] spawn {
   params ["_unit"];
   while {(alive _unit) && (_unit getVariable ["FCLA_Mask_Equipped", false])} do {
     sleep (0.75 + (round (random [2, 3, 4])));
-    _inUAV = !(isNull (getConnectedUAV _unit)) && (cameraOn == (getConnectedUAV _unit));
+    _inUAV = ([_unit] call ace_common_fnc_getUavControlPosition) != "";
     _inZeus = !isNull findDisplay 312;
     _inStairs = _unit getVariable ["FCLA_inStairs", false];
     _isSwimming = [_unit] call ACE_Common_fnc_isSwimming;
@@ -24,7 +24,7 @@ _spawnHandle = [_this select 0] spawn {
     playSound _randomInhaleSound;
 
     sleep (0.75 + (round (random [2, 3, 4])));
-    _inUAV = !(isNull (getConnectedUAV _unit)) && (cameraOn == (getConnectedUAV _unit));
+    _inUAV = ([_unit] call ace_common_fnc_getUavControlPosition) != "";
     _inZeus = !isNull findDisplay 312;
     _inStairs = _unit getVariable ["FCLA_inStairs", false];
     _isSwimming = [_unit] call ACE_Common_fnc_isSwimming;

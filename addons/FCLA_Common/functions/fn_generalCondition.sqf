@@ -32,7 +32,7 @@
  * ¿Cumple con las condiciones? <BOOL>
  *
  * Example:
- * [player] call FCLA_Functions_fnc_generalCheck;
+ * [player] call FCLA_Common_fnc_generalCheck;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -47,7 +47,7 @@ if (isNull _unit) exitWith {false};
 
 
 //Condiciones.
-_inUAV = !(isNull (getConnectedUAV _unit)) && (cameraOn == (getConnectedUAV _unit));
+_inUAV = ([_unit] call ACE_Common_fnc_getUavControlPosition) != "";
 _inZeus = !isNull findDisplay 312;
 _isOnMap = visibleMap;
 _inStairs = _unit getVariable ["FCLA_inStairs", false];

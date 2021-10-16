@@ -15,7 +15,7 @@
  * ID del event handler utilizado en la función. <NUMBER>
  *
  * Example:
- * [vehicle player] spawn FCLA_Functions_fnc_disableVehicleDestruction;
+ * [vehicle player] spawn FCLA_Common_fnc_disableVehicleDestruction;
  *
  * Public: [Yes]
  *
@@ -77,7 +77,7 @@ if ((isNull _vehicle) || !(_vehicle in vehicles)) exitWith {false};
     //Efecto visual y mensaje.
     _isPlayer = [_x, false] call ACE_Common_fnc_isPlayer;
     if ((alive _x) && (_isPlayer)) then {
-      ["FCLA_Disable_Vehicle_Destruction_Shellshock_Effect", "", _x] call CBA_fnc_targetEvent;
+      ["FCLA_Shellshock_Effect", _x, _x] call CBA_fnc_targetEvent;
       _haveDestroyedWeapons = _x getVariable ["FCLA_Weapons_Destroyed", false];
       _haveDestroyedItems = _x getVariable ["FCLA_Items_Destroyed", false];
       if ((!_haveDestroyedWeapons) && (!_haveDestroyedItems)) exitWith {};
@@ -87,7 +87,7 @@ if ((isNull _vehicle) || !(_vehicle in vehicles)) exitWith {false};
         case (!(_haveDestroyedWeapons) && (_haveDestroyedItems)): {"Algunos de tus items se han dañado."};
         default {"Algunas de tus armas e items se han dañado."};
       };
-      [{["FCLA_Disable_Vehicle_Destruction_Message", (_this select 1), (_this select 0)] call CBA_fnc_targetEvent;}, [_x, _textToDisplay], 5] call CBA_fnc_waitAndExecute;
+      [{["FCLA_Show_Message", [_this select 0, 1, [1, 0, 0, 1]], _this select 1] call CBA_fnc_targetEvent;}, [_textToDisplay, _x], 5] call CBA_fnc_waitAndExecute;
     };
 
     //Eliminar variables.

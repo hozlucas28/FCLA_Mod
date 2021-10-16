@@ -36,10 +36,8 @@ if ((isNull _entity) || (_distance <= 0) || (_minimumNumberOfUnits < 1)) exitWit
 
 
 
-//Variables locales.
 _return = false;
 _players = [];
-_entityPosition = [_entity] call CBA_fnc_getPos;
 
 
 //Obtener lista de jugadores.
@@ -51,7 +49,7 @@ _entityPosition = [_entity] call CBA_fnc_getPos;
 
 //Verificar si hay un jugador cerca.
 {
-  _numberOfNearPlayers = {_entityPosition distance _x < _distance} count _players;
-  if ((_entityPosition distance _x < _distance) && (_numberOfNearPlayers >= _minimumNumberOfUnits)) exitWith {_return = true;};
+  _numberOfNearPlayers = {([_entity, _x] call CBA_fnc_getDistance) < _distance} count _players;
+  if ((([_entity, _x] call CBA_fnc_getDistance) < _distance) && (_numberOfNearPlayers >= _minimumNumberOfUnits)) exitWith {_return = true;};
 } forEach _players;
 _return

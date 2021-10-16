@@ -9,7 +9,7 @@
 
 ["Camera", {
   params ["_value"];
-  _inUAV = !(isNull (getConnectedUAV player)) && (cameraOn == (getConnectedUAV player));
+  _inUAV = ([player] call ace_common_fnc_getUavControlPosition) != "";
   _isOnMap = visibleMap;
   _inCurator = !isNull findDisplay 312;
   _isNotAlive = !(alive player);
@@ -48,7 +48,7 @@ _isCuratorEnhancedModLoaded = ["zen_common"] call ACE_Common_fnc_isModLoaded;
 if (_isCuratorEnhancedModLoaded) then {
   ["Zeus", {
     params ["_value"];
-    _inUAV = !(isNull (getConnectedUAV player)) && (cameraOn == (getConnectedUAV player));
+    _inUAV = ([player] call ace_common_fnc_getUavControlPosition) != "";
     _isOnMap = visibleMap;
     _isAdmin = [true] call FCLA_Development_fnc_isAdmin;
     _isNotAlive = !(alive player);

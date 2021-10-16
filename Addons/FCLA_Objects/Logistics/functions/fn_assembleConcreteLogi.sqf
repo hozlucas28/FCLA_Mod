@@ -37,7 +37,7 @@ _Statement = {
     params ["_target"];
     _object = _target select 0;
     _Pos = _object modelToWorld [0, 0, 0];
-    (player distance _object < 2.36) && ((count nearestObjects [_Pos, ["FCLA_Land_ConcreteHedgehog_01_half_F"], 2]) == 2);
+    (([player, _object] call CBA_fnc_getDistance) < 2.36) && ((count nearestObjects [_Pos, ["FCLA_Land_ConcreteHedgehog_01_half_F"], 2]) == 2);
     }] call ace_common_fnc_progressBar;
 };
 

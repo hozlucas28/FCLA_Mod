@@ -71,7 +71,7 @@ while {alive _module} do {
 	_i = 0;
 	while {alive _whirlwindsObj} do	{
 		{
-			if (_x distance _whirlwindsObjNew <= 80) then {
+			if (([_x, _whirlwindsObjNew] call CBA_fnc_getDistance) <= 80) then {
 				[[_whirlwindsObjNew, 80, [1, 15, 25]], "\FCLA_Modules\global\camShake.sqf"] remoteExec ["execVM", 0, true];
 				if (!isNil {_x getVariable "FCLA_Dust_Whirlwinds_Sound"}) exitWith {};
 				_x setVariable ["FCLA_Dust_Whirlwinds_Sound", true];

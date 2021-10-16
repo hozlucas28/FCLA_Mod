@@ -23,7 +23,7 @@ _Condition = {
   (_this select 0) params ["_target", "_caller"];
   _isNotOnMap = !visibleMap;
   _notInStairs = !(_caller getVariable ["FCLA_inStairs", false]);
-  _isCloseEnough = _caller distance _target <= 2;
+  _isCloseEnough = ([_caller, _target] call CBA_fnc_getDistance) <= 2;
   _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
   _notInCameraMode = !(_caller in (call ACE_Spectator_fnc_players));
   _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");

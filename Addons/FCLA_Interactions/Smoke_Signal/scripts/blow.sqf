@@ -33,7 +33,7 @@ drop [["\A3\data_f\ParticleEffects\Universal\Universal_02.p3d",8,0,40,0],"","Bil
 drop [["\A3\data_f\ParticleEffects\Universal\Universal",16,14,5,1],"","Billboard",1,0.5,[_projectilePos#0,_projectilePos#1,(_projectilePos#2)+0.1],[0,0,0],0,11,7,0,[1,10],[[1,1,1,1],[1,1,1,0]],[2],0,0,"","",""];
 drop [["\A3\data_f\ParticleEffects\Universal\Universal",16,12,3,0],"","Billboard",1,0.3,[_projectilePos#0,_projectilePos#1,(_projectilePos#2)+0.5],[0,0,0],0,11,7,0,[1,5],[[1,1,1,1],[1,1,1,0]],[1],0,0,"","",""];
 
-if (player distance _projectilePos < 1000) then {
+if (([player, _projectilePos] call CBA_fnc_getDistance) < 1000) then {
   playsound "FCLA_Smoke_Signal_Explosion";
 };
 sleep 0.2;
@@ -50,8 +50,8 @@ _smoke_core setDropInterval 0.01;
   deleteVehicle _ob
 };
 
-_distance = player distance _projectilePos;
+_distance = [player, _projectilePos] call CBA_fnc_getDistance;
 if ((_distance > 1000) && (_distance < 2000)) then {
-  sleep (0.5+ linearConversion [0,2000,player distance _projectilePos,0.5,2,false]);
+  sleep (0.5+ linearConversion [0,2000,[player, _projectilePos] call CBA_fnc_getDistance,0.5,2,false]);
   playSound "FCLA_Smoke_Signal_Echo"
 };

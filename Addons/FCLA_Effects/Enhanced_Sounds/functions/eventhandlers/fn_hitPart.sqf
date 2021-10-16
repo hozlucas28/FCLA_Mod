@@ -18,7 +18,7 @@ _helmetProtection = (configfile >> "CfgWeapons" >> _currentHeadgear >> "ItemInfo
 if ((_selection select 0 != "head") || (!_areNearPlayers)) exitWith {};
 
 
-if (_isExplosive) then {[_target] spawn FCLA_Effects_fnc_ShellshockES;]};
+if ((_isExplosive) && ([_target, false] call ACE_Common_fnc_isPlayer)) then {["FCLA_Shellshock_Effect", _target, _target] call CBA_fnc_targetEvent;};
 if ((FCLA_Helmet_Hit_Sounds) && (_helmetProtection >= 2)) then {
   _randomSound = selectRandom ["FCLA_Impact_Helmet_1", "FCLA_Impact_Helmet_2", "FCLA_Impact_Helmet_3"];
   [_target, _randomSound, 1, false] spawn FCLA_Development_fnc_globalSay3D;

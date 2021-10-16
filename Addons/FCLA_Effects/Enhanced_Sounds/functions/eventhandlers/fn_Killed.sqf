@@ -10,9 +10,8 @@
 
 _this spawn {
   params ["_unit", "_killer", "_instigator", "_useEffects"];
-  _UAVsUnits = ["B_UAV_AI", "B_UAV_AI_F", "O_UAV_AI", "I_UAV_AI", "I_UAV_AI_F", "C_UAV_AI_F", "C_IDAP_UAV_AI_F"];
-  _isUAVUnit = {_unit isKindOf _x} count _UAVsUnits;
-  if ((!FCLA_Killed_Sounds) || (_isUAVUnit >= 1)) exitWith {};
+  _isUAVUnit = (getText (configOf _unit >> "simulation")) == "UAVPilot";
+  if ((!FCLA_Killed_Sounds) || (_isUAVUnit)) exitWith {};
 
 
 

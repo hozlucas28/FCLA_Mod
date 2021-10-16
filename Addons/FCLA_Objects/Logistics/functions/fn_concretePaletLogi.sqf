@@ -41,7 +41,7 @@ _Statement = {
   }, {[player, "", 2] call ace_common_fnc_doAnimation;}, "Liberando carga...", {
     params ["_target"];
     _object = _target select 0;
-    (player distance _object < 2.36);
+    ([player, _object] call CBA_fnc_getDistance) < 2.36;
     }] call ace_common_fnc_progressBar;
 };
 

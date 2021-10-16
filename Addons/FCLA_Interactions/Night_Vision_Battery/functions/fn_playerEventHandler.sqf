@@ -14,7 +14,7 @@ Author:
 
 ["visionMode", {
   params ["_unit", "_newVisionMode", "_oldVisionMode"];
-  _inUAV = !(isNull (getConnectedUAV _unit)) && (cameraOn == (getConnectedUAV _unit));
+  _inUAV = ([_unit] call ace_common_fnc_getUavControlPosition) != "";
   _inZeus = !isNull findDisplay 312;
   _inCameraMode = _unit in (call ACE_Spectator_fnc_players);
   if ((!FCLA_visionMode_Sounds) || (_inUAV) || (_inZeus) || (_inCameraMode)) exitWith {};

@@ -14,7 +14,7 @@ Author:
 params ["_object","_range","_customValues"];
 
 
-if (player distance _object <= _range) then {
+if (([player, _object] call CBA_fnc_getDistance) <= _range) then {
   enableCamShake true;
   addCamShake _customValues;
 };

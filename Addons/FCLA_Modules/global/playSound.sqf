@@ -15,4 +15,4 @@ Author:
 params ["_object","_range","_sound"];
 
 
-if (player distance _object <= _range) then {playSound _sound;};
+if (([player, _object] call CBA_fnc_getDistance) <= _range) then {playSound _sound;};

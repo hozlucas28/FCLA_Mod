@@ -1,14 +1,21 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Development_fnc_getDoorInfo
-
-Description:
-    Obtiene la información de la puerta para luego devolverla.
-
-Public: [No]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Obtiene la puerta de la selección enviada.
+ *
+ * Arguments:
+ *            0: Selección del objeto. <ARRAY>
+ *
+ * Return Value:
+ * Nombre de la puerta y variable de tipo objeto asociado a la puerta que indica
+ * su apertura (0 al 1). <ARRAY>
+ *
+ * Example:
+ * Observa la función "FCLA_Common_fnc_isDoorLocked" para guiarte.
+ *
+ * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.

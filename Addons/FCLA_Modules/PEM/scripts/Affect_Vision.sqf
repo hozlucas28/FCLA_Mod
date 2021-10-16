@@ -15,7 +15,7 @@ Author:
 params ["_object","_range"];
 
 
-if (player distance _object <= _range) then {
+if (([player, _object] call CBA_fnc_getDistance) <= _range) then {
   sleep 1;
   hint parseText "<t color='#FF0000'>Te has visto afectado por un pulso PEM.<br/>Tus accesorios electrónicos se han destruido.</t>";
   cutText ["", "WHITE OUT", 1];

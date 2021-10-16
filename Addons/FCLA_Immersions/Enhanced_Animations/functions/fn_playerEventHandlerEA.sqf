@@ -5,13 +5,13 @@
  * Description:
  * Asigna un eventhandler del tipo 'addPlayerEventHandler' para que se
  * reproduzca una animación al activar/desactivar la visión nocturna/térmica.
- * 
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
 ["visionMode", {
   params ["_unit", "_newVisionMode", "_oldVisionMode"];
-  _inUAV = !(isNull (getConnectedUAV _unit)) && (cameraOn == (getConnectedUAV _unit));
+  _inUAV = ([_unit] call ace_common_fnc_getUavControlPosition) != "";
   _inZeus = !isNull findDisplay 312;
   _inStairs = _unit getVariable ["FCLA_inStairs", false];
   _hasNotNVG = (hmd _unit) == "";
