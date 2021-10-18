@@ -54,19 +54,19 @@ class B_Heli_Transport_01_F: Heli_Transport_01_base_F {
     class Black {
       author = "Bohemia Interactive";
       displayName = "Negro";
-      textures[] = {"\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext01_CO.paa","\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_CO.paa"};
+      textures[] = {"\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext01_CO.paa", "\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_CO.paa"};
     };
 
     class Grey {
       author = "hozlucas28";
       displayName = "Gris";
-      textures[] = {"\FCLA_Air\BLUFOR\data\B_Heli_Transport_01_F_Grey_1.paa","\FCLA_Air\BLUFOR\data\B_Heli_Transport_01_F_Grey_2.paa"};
+      textures[] = {"\FCLA_Air\BLUFOR\data\B_Heli_Transport_01_F_Grey_1.paa", "\FCLA_Air\BLUFOR\data\B_Heli_Transport_01_F_Grey_2.paa"};
     };
 
     class Green {
       author = "Bohemia Interactive";
       displayName = "Verde";
-      textures[] = {"\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext01_BLUFOR_CO.paa","\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_BLUFOR_CO.paa"};
+      textures[] = {"\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext01_BLUFOR_CO.paa", "\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_BLUFOR_CO.paa"};
     };
   };
 };
@@ -77,7 +77,7 @@ class B_Heli_Transport_Medvac_01_F: B_Heli_Transport_01_F {
   displayName = "UH-80 Ghost Hawk (médico)";
   editorPreview = "\FCLA_Air\BLUFOR\data\pictures\B_Heli_Transport_Medvac_01_F.jpg";
   hiddenSelections[] = {"camo1","camo2"};
-  hiddenSelectionsTextures[] = {"\FCLA_Air\BLUFOR\data\B_Heli_Transport_Medvac_01_F.paa","\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_CO.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\BLUFOR\data\B_Heli_Transport_Medvac_01_F.paa", "\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_CO.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -85,7 +85,7 @@ class B_Heli_Transport_Medvac_01_F: B_Heli_Transport_01_F {
     class Black_Medvac {
       author = "hozlucas28";
       displayName = "Negro (médico)";
-      textures[] = {"\FCLA_Air\BLUFOR\data\B_Heli_Transport_Medvac_01_F.paa","\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_CO.paa"};
+      textures[] = {"\FCLA_Air\BLUFOR\data\B_Heli_Transport_Medvac_01_F.paa", "\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_CO.paa"};
     };
   };
 };
@@ -250,21 +250,21 @@ class B_Heli_Transport_03_F: Heli_Transport_03_base_F {
       author = "Bohemia Interactive";
       displayName = "Negro";
       factions[] = {};
-      textures[] = {"\A3\Air_F_Heli\Heli_Transport_03\Data\Heli_Transport_03_ext01_black_CO.paa","\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_black_co.paa"};
+      textures[] = {"\A3\Air_F_Heli\Heli_Transport_03\Data\Heli_Transport_03_ext01_black_CO.paa", "\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_black_co.paa"};
     };
 
     class Grey {
       author = "hozlucas28";
       displayName = "Gris";
       factions[] = {};
-      textures[] = {"\FCLA_Air\BLUFOR\data\B_Heli_Transport_03_F_Grey_1.paa","\FCLA_Air\BLUFOR\data\B_Heli_Transport_03_F_Grey_2.paa"};
+      textures[] = {"\FCLA_Air\BLUFOR\data\B_Heli_Transport_03_F_Grey_1.paa", "\FCLA_Air\BLUFOR\data\B_Heli_Transport_03_F_Grey_2.paa"};
     };
 
     class Green {
       author = "Bohemia Interactive";
       displayName = "Verde";
       factions[] = {};
-      textures[] = {"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext01_co.paa","\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_co.paa"};
+      textures[] = {"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext01_co.paa", "\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_co.paa"};
     };
   };
 };
@@ -333,21 +333,21 @@ class B_Heli_Transport_03_unarmed_F: Heli_Transport_03_unarmed_base_F {
       author = "Bohemia Interactive";
       displayName = "Negro";
       factions[] = {};
-      textures[] = {"\A3\Air_F_Heli\Heli_Transport_03\Data\Heli_Transport_03_ext01_black_CO.paa","\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_black_co.paa"};
+      textures[] = {"\A3\Air_F_Heli\Heli_Transport_03\Data\Heli_Transport_03_ext01_black_CO.paa", "\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_black_co.paa"};
     };
 
     class Grey {
       author = "hozlucas28";
       displayName = "Gris";
       factions[] = {};
-      textures[] = {"\FCLA_Air\BLUFOR\data\B_Heli_Transport_03_F_Grey_1.paa","\FCLA_Air\BLUFOR\data\B_Heli_Transport_03_F_Grey_2.paa"};
+      textures[] = {"\FCLA_Air\BLUFOR\data\B_Heli_Transport_03_F_Grey_1.paa", "\FCLA_Air\BLUFOR\data\B_Heli_Transport_03_F_Grey_2.paa"};
     };
 
     class Green {
       author = "Bohemia Interactive";
       displayName = "Verde";
       factions[] = {};
-      textures[] = {"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext01_co.paa","\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_co.paa"};
+      textures[] = {"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext01_co.paa", "\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_co.paa"};
     };
   };
 };
@@ -408,8 +408,8 @@ class B_T_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamicLoadout
   crew = "B_T_Pilot_F";
   typicalCargo[] = {"B_T_Soldier_F"};
   editorSubcategory = "EdSubcat_Planes";
-  hiddenSelections[] = {"Camo_1","Camo_2","Camo_3","Camo_4"};
-  hiddenSelectionsTextures[] = {"\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_1.paa","\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_2.paa","\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_3.paa","\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_4.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3", "Camo_4"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_1.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_2.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_3.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_4.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -418,7 +418,7 @@ class B_T_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamicLoadout
       author = "hozlucas28";
       displayName = "Verde";
       factions[] = {};
-      textures[] = {"\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_1.paa","\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_2.paa","\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_3.paa","\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_4.paa"};
+      textures[] = {"\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_1.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_2.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_3.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_4.paa"};
     };
   };
 };
@@ -432,8 +432,8 @@ class B_T_VTOL_02_vehicle_dynamicLoadout_F: O_T_VTOL_02_vehicle_dynamicLoadout_F
   crew = "B_T_Pilot_F";
   typicalCargo[] = {"B_T_Soldier_F"};
   editorSubcategory = "EdSubcat_Planes";
-  hiddenSelections[] = {"Camo_1","Camo_2","Camo_3","Camo_4"};
-  hiddenSelectionsTextures[] = {"\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_1.paa","\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_2.paa","\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_3.paa","\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_4.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3", "Camo_4"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_1.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_2.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_3.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_4.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -442,7 +442,7 @@ class B_T_VTOL_02_vehicle_dynamicLoadout_F: O_T_VTOL_02_vehicle_dynamicLoadout_F
       author = "hozlucas28";
       displayName = "Verde";
       factions[] = {};
-      textures[] = {"\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_1.paa","\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_2.paa","\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_3.paa","\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_4.paa"};
+      textures[] = {"\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_1.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_2.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_3.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_4.paa"};
     };
   };
 };

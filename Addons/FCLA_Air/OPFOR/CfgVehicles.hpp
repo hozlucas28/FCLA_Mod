@@ -63,8 +63,8 @@ class O_CSAT_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamicLoad
   crew = "O_T_Pilot_F";
   typicalCargo[] = {"O_Soldier_F"};
   editorSubcategory = "EdSubcat_Planes";
-  hiddenSelections[] = {"Camo_1","Camo_2","Camo_3","Camo_4"};
-  hiddenSelectionsTextures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_bhex_CO.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3", "Camo_4"};
+  hiddenSelectionsTextures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_bhex_CO.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -73,14 +73,14 @@ class O_CSAT_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamicLoad
       author = "hozlucas28";
       displayName = "Gris";
       factions[] = {};
-      textures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_CO.paa"};
+      textures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_CO.paa"};
     };
 
     class Hex {
       author = "hozlucas28";
       displayName = "Hex";
       factions[] = {};
-      textures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_bhex_CO.paa"};
+      textures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_bhex_CO.paa"};
     };
   };
 };
@@ -135,8 +135,8 @@ class O_CSAT_VTOL_02_vehicle_dynamicLoadout_F: O_T_VTOL_02_vehicle_dynamicLoadou
   crew = "O_T_Pilot_F";
   typicalCargo[] = {"O_Soldier_F"};
   editorSubcategory = "EdSubcat_Planes";
-  hiddenSelections[] = {"Camo_1","Camo_2","Camo_3","Camo_4"};
-  hiddenSelectionsTextures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_bhex_CO.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3", "Camo_4"};
+  hiddenSelectionsTextures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_bhex_CO.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -145,14 +145,14 @@ class O_CSAT_VTOL_02_vehicle_dynamicLoadout_F: O_T_VTOL_02_vehicle_dynamicLoadou
       author = "hozlucas28";
       displayName = "Gris";
       factions[] = {};
-      textures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_CO.paa"};
+      textures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_CO.paa"};
     };
 
     class Hex {
       author = "hozlucas28";
       displayName = "Hex";
       factions[] = {};
-      textures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_bhex_CO.paa"};
+      textures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_bhex_CO.paa"};
     };
   };
 };
@@ -163,13 +163,14 @@ class O_CSAT_VTOL_02_vehicle_dynamicLoadout_F: O_T_VTOL_02_vehicle_dynamicLoadou
 
 class O_Spetsnaz_Heli_Light_02_unarmed_F: O_Heli_Light_02_unarmed_F {
   author = "hozlucas28";
+  editorPreview = "\FCLA_Air\OPFOR\data\pictures\O_Spetsnaz_Heli_Light_02_unarmed_F.jpg";
   side = 0;
   faction = "OPF_R_F";
   crew = "O_R_helipilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Helicopters";
   hiddenSelections[] = {"camo1"};
-  hiddenSelectionsTextures[] = {"\A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_CO.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Light_02_Green.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -179,6 +180,13 @@ class O_Spetsnaz_Heli_Light_02_unarmed_F: O_Heli_Light_02_unarmed_F {
       displayName = "Negro";
       factions[] = {};
       textures[] = {"\A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_CO.paa"};
+    };
+
+    class Green {
+      author = "hozlucas28";
+      displayName = "Verde";
+      factions[] = {};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Light_02_Green.paa"};
     };
   };
 };
@@ -193,7 +201,7 @@ class O_Spetsnaz_Heli_Light_02_dynamicLoadout_F: O_Heli_Light_02_dynamicLoadout_
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Helicopters";
   hiddenSelections[] = {"camo1"};
-  hiddenSelectionsTextures[] = {"\A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_CO.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Light_02_Green.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -203,6 +211,13 @@ class O_Spetsnaz_Heli_Light_02_dynamicLoadout_F: O_Heli_Light_02_dynamicLoadout_
       displayName = "Negro";
       factions[] = {};
       textures[] = {"\A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_CO.paa"};
+    };
+
+    class Green {
+      author = "hozlucas28";
+      displayName = "Verde";
+      factions[] = {};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Light_02_Green.paa"};
     };
   };
 };
@@ -219,8 +234,8 @@ class O_Spetsnaz_Heli_Attack_02_dynamicLoadout_F: O_Heli_Attack_02_dynamicLoadou
   crew = "O_R_helipilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Helicopters";
-  hiddenSelections[] = {"camo1","camo2"};
-  hiddenSelectionsTextures[] = {"A3\Air_F_Beta\Heli_Attack_02\Data\Heli_Attack_02_body1_black_CO.paa","A3\Air_F_Beta\Heli_Attack_02\Data\Heli_Attack_02_body2_black_CO.paa"};
+  hiddenSelections[] = {"camo1", "camo2"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Attack_02_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Attack_02_Green_2.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -229,7 +244,14 @@ class O_Spetsnaz_Heli_Attack_02_dynamicLoadout_F: O_Heli_Attack_02_dynamicLoadou
       author = "hozlucas28";
       displayName = "Negro";
       factions[] = {};
-      textures[] = {"A3\Air_F_Beta\Heli_Attack_02\Data\Heli_Attack_02_body1_black_CO.paa","A3\Air_F_Beta\Heli_Attack_02\Data\Heli_Attack_02_body2_black_CO.paa"};
+      textures[] = {"A3\Air_F_Beta\Heli_Attack_02\Data\Heli_Attack_02_body1_black_CO.paa", "A3\Air_F_Beta\Heli_Attack_02\Data\Heli_Attack_02_body2_black_CO.paa"};
+    };
+
+    class Green {
+      author = "hozlucas28";
+      displayName = "Verde";
+      factions[] = {};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Attack_02_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Attack_02_Green_2.paa"};
     };
   };
 };
@@ -246,8 +268,8 @@ class O_Spetsnaz_Heli_Transport_04_F: O_Heli_Transport_04_F {
   crew = "O_R_helipilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Helicopters";
-  hiddenSelections[] = {"Camo_1","Camo_2"};
-  hiddenSelectionsTextures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -261,7 +283,14 @@ class O_Spetsnaz_Heli_Transport_04_F: O_Heli_Transport_04_F {
       author = "hozlucas28";
       displayName = "Negro";
       factions[] = {};
-      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa"};
+      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa"};
+    };
+
+    class Green {
+      author = "hozlucas28";
+      displayName = "Verde";
+      factions[] = {};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa"};
     };
   };
 };
@@ -275,8 +304,8 @@ class O_Spetsnaz_Heli_Transport_04_bench_F: O_Heli_Transport_04_bench_F {
   crew = "O_R_helipilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Helicopters";
-  hiddenSelections[] = {"Camo_1","Camo_2","Camo_3"};
-  hiddenSelectionsTextures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_bench_Black_CO.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_bench_black_co.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -298,7 +327,14 @@ class O_Spetsnaz_Heli_Transport_04_bench_F: O_Heli_Transport_04_bench_F {
       author = "hozlucas28";
       displayName = "Negro";
       factions[] = {};
-      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_bench_Black_CO.paa"};
+      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_bench_Black_CO.paa"};
+    };
+
+    class Green {
+      author = "hozlucas28";
+      displayName = "Verde";
+      factions[] = {};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_bench_black_co.paa"};
     };
   };
 };
@@ -312,8 +348,8 @@ class O_Spetsnaz_Heli_Transport_04_covered_F: O_Heli_Transport_04_covered_F {
   crew = "O_R_helipilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Helicopters";
-  hiddenSelections[] = {"Camo_1","Camo_2","Camo_3","Camo_4"};
-  hiddenSelectionsTextures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3", "Camo_4"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_2.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -329,7 +365,14 @@ class O_Spetsnaz_Heli_Transport_04_covered_F: O_Heli_Transport_04_covered_F {
       author = "hozlucas28";
       displayName = "Negro";
       factions[] = {};
-      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+    };
+
+    class Green {
+      author = "hozlucas28";
+      displayName = "Verde";
+      factions[] = {};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_2.paa"};
     };
   };
 };
@@ -343,8 +386,8 @@ class O_Spetsnaz_Heli_Transport_04_medevac_F: O_Heli_Transport_04_medevac_F {
   crew = "O_R_helipilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Helicopters";
-  hiddenSelections[] = {"Camo_1","Camo_2","Camo_3","Camo_4"};
-  hiddenSelectionsTextures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3", "Camo_4"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_2.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -358,7 +401,14 @@ class O_Spetsnaz_Heli_Transport_04_medevac_F: O_Heli_Transport_04_medevac_F {
       author = "hozlucas28";
       displayName = "Negro";
       factions[] = {};
-      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+    };
+
+    class Green {
+      author = "hozlucas28";
+      displayName = "Verde";
+      factions[] = {};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_2.paa"};
     };
   };
 };
@@ -372,8 +422,8 @@ class O_Spetsnaz_Heli_Transport_04_repair_F: O_Heli_Transport_04_repair_F {
   crew = "O_R_helipilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Helicopters";
-  hiddenSelections[] = {"Camo_1","Camo_2","Camo_3","Camo_4"};
-  hiddenSelectionsTextures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3", "Camo_4"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_2.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -387,7 +437,14 @@ class O_Spetsnaz_Heli_Transport_04_repair_F: O_Heli_Transport_04_repair_F {
       author = "hozlucas28";
       displayName = "Negro";
       factions[] = {};
-      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+    };
+
+    class Green {
+      author = "hozlucas28";
+      displayName = "Verde";
+      factions[] = {};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_2.paa"};
     };
   };
 };
@@ -401,8 +458,8 @@ class O_Spetsnaz_Heli_Transport_04_fuel_F: O_Heli_Transport_04_fuel_F {
   crew = "O_R_helipilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Helicopters";
-  hiddenSelections[] = {"Camo_1","Camo_2","Camo_3"};
-  hiddenSelectionsTextures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_fuel_black_CO.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_fuel_black_co.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -416,7 +473,14 @@ class O_Spetsnaz_Heli_Transport_04_fuel_F: O_Heli_Transport_04_fuel_F {
       author = "hozlucas28";
       displayName = "Negro";
       factions[] = {};
-      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_fuel_black_CO.paa"};
+      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_fuel_black_CO.paa"};
+    };
+
+    class Green {
+      author = "hozlucas28";
+      displayName = "Verde";
+      factions[] = {};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_fuel_black_co.paa"};
     };
   };
 };
@@ -430,8 +494,8 @@ class O_Spetsnaz_Heli_Transport_04_ammo_F: O_Heli_Transport_04_ammo_F {
   crew = "O_R_helipilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Helicopters";
-  hiddenSelections[] = {"Camo_1","Camo_2","Camo_3","Camo_4"};
-  hiddenSelectionsTextures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3", "Camo_4"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_2.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -445,7 +509,14 @@ class O_Spetsnaz_Heli_Transport_04_ammo_F: O_Heli_Transport_04_ammo_F {
       author = "hozlucas28";
       displayName = "Negro";
       factions[] = {};
-      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+    };
+
+    class Green {
+      author = "hozlucas28";
+      displayName = "Verde";
+      factions[] = {};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_2.paa"};
     };
   };
 };
@@ -459,8 +530,8 @@ class O_Spetsnaz_Heli_Transport_04_box_F: O_Heli_Transport_04_box_F {
   crew = "O_R_helipilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Helicopters";
-  hiddenSelections[] = {"Camo_1","Camo_2","Camo_3","Camo_4"};
-  hiddenSelectionsTextures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3", "Camo_4"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_2.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -474,7 +545,14 @@ class O_Spetsnaz_Heli_Transport_04_box_F: O_Heli_Transport_04_box_F {
       author = "hozlucas28";
       displayName = "Negro";
       factions[] = {};
-      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+      textures[] = {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_Black_co.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_Black_CO.paa", "A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_Black_CO.paa"};
+    };
+
+    class Green {
+      author = "hozlucas28";
+      displayName = "Verde";
+      factions[] = {};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Heli_Transport_04_Green_Box_2.paa"};
     };
   };
 };
@@ -491,8 +569,8 @@ class O_Spetsnaz_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamic
   crew = "O_R_Pilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Planes";
-  hiddenSelections[] = {"Camo_1","Camo_2","Camo_3","Camo_4"};
-  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_1.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_2.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_3.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_4.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3", "Camo_4"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_3.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_4.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -501,7 +579,14 @@ class O_Spetsnaz_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamic
       author = "hozlucas28";
       displayName = "Negro";
       factions[] = {};
-      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_1.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_2.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_3.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_4.paa"};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_3.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_4.paa"};
+    };
+
+    class Green {
+      author = "hozlucas28";
+      displayName = "Verde";
+      factions[] = {};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_3.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_4.paa"};
     };
   };
 };
@@ -515,8 +600,8 @@ class O_Spetsnaz_VTOL_02_vehicle_dynamicLoadout_F: O_T_VTOL_02_vehicle_dynamicLo
   crew = "O_R_Pilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Planes";
-  hiddenSelections[] = {"Camo_1","Camo_2","Camo_3","Camo_4"};
-  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_1.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_2.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_3.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_4.paa"};
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3", "Camo_4"};
+  hiddenSelectionsTextures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_3.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_4.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -525,7 +610,14 @@ class O_Spetsnaz_VTOL_02_vehicle_dynamicLoadout_F: O_T_VTOL_02_vehicle_dynamicLo
       author = "hozlucas28";
       displayName = "Negro";
       factions[] = {};
-      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_1.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_2.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_3.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_4.paa"};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_3.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Black_4.paa"};
+    };
+
+    class Green {
+      author = "hozlucas28";
+      displayName = "Verde";
+      factions[] = {};
+      textures[] = {"\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_1.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_2.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_3.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_VTOL_02_dynamicLoadout_F_Green_4.paa"};
     };
   };
 };
@@ -542,8 +634,8 @@ class O_Spetsnaz_Plane_Fighter_02_Stealth_F: O_Plane_Fighter_02_Stealth_F {
   crew = "O_R_Pilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Planes";
-  hiddenSelections[] = {"Camo_01","Camo_02","","number_01","number_02","number_03"};
-  hiddenSelectionsTextures[] = {"a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_Plane_Fighter_02_F_Grey_2.paa","a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_02_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_00_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_01_co.paa","a3\data_f\clear_empty.paa"};
+  hiddenSelections[] = {"Camo_01", "Camo_02", "", "number_01", "number_02", "number_03"};
+  hiddenSelectionsTextures[] = {"a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Plane_Fighter_02_F_Grey_2.paa", "a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_02_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_00_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_01_co.paa", "a3\data_f\clear_empty.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -552,14 +644,14 @@ class O_Spetsnaz_Plane_Fighter_02_Stealth_F: O_Plane_Fighter_02_Stealth_F {
       author = "hozlucas28";
       displayName = "Azul";
       factions[] = {};
-      textures[] = {"a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Blue_co.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_Plane_Fighter_02_F_Blue_2.paa","a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Blue_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_02_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_00_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_01_co.paa","a3\data_f\clear_empty.paa"};
+      textures[] = {"a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Blue_co.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Plane_Fighter_02_F_Blue_2.paa", "a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Blue_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_02_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_00_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_01_co.paa", "a3\data_f\clear_empty.paa"};
     };
 
     class Grey {
       author = "hozlucas28";
       displayName = "Gris";
       factions[] = {};
-      textures[] = {"a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_Plane_Fighter_02_F_Grey_2.paa","a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_02_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_00_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_01_co.paa","a3\data_f\clear_empty.paa"};
+      textures[] = {"a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Plane_Fighter_02_F_Grey_2.paa", "a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_02_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_00_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_01_co.paa", "a3\data_f\clear_empty.paa"};
     };
   };
 };
@@ -573,8 +665,8 @@ class O_Spetsnaz_Plane_Fighter_02_F: O_Plane_Fighter_02_F {
   crew = "O_R_Pilot_F";
   typicalCargo[] = {"O_R_JTAC_F"};
   editorSubcategory = "EdSubcat_Planes";
-  hiddenSelections[] = {"Camo_01","Camo_02","","number_01","number_02","number_03"};
-  hiddenSelectionsTextures[] = {"a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_Plane_Fighter_02_F_Grey_2.paa","a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_02_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_00_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_01_co.paa","a3\data_f\clear_empty.paa"};
+  hiddenSelections[] = {"Camo_01", "Camo_02", "", "number_01", "number_02", "number_03"};
+  hiddenSelectionsTextures[] = {"a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Plane_Fighter_02_F_Grey_2.paa", "a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_02_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_00_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_01_co.paa", "a3\data_f\clear_empty.paa"};
   scope = 2;
   scopeCurator = 2;
 
@@ -583,14 +675,14 @@ class O_Spetsnaz_Plane_Fighter_02_F: O_Plane_Fighter_02_F {
       author = "hozlucas28";
       displayName = "Azul";
       factions[] = {};
-      textures[] = {"a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Blue_co.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_Plane_Fighter_02_F_Blue_2.paa","a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Blue_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_02_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_00_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_01_co.paa","a3\data_f\clear_empty.paa"};
+      textures[] = {"a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Blue_co.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Plane_Fighter_02_F_Blue_2.paa", "a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Blue_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_02_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_00_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_01_co.paa", "a3\data_f\clear_empty.paa"};
     };
 
     class Grey {
       author = "hozlucas28";
       displayName = "Gris";
       factions[] = {};
-      textures[] = {"a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa","\FCLA_Air\OPFOR\data\O_Spetsnaz_Plane_Fighter_02_F_Grey_2.paa","a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_02_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_00_co.paa","a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_01_co.paa","a3\data_f\clear_empty.paa"};
+      textures[] = {"a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa", "\FCLA_Air\OPFOR\data\O_Spetsnaz_Plane_Fighter_02_F_Grey_2.paa", "a3\air_f_jets\plane_fighter_02\data\Fighter_02_fuselage_01_Grey_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_02_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_00_co.paa", "a3\air_f_jets\plane_fighter_02\data\Numbers\Fighter_02_number_01_co.paa", "a3\data_f\clear_empty.paa"};
     };
   };
 };
