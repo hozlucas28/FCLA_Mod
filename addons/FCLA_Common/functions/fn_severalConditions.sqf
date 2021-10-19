@@ -31,8 +31,9 @@
  * Return Value:
  * ¿Cumple con las condiciones? <BOOL>
  *
- * Example:
- * [player] call FCLA_Common_fnc_generalCheck;
+ * Examples:
+ * [player] call FCLA_Common_fnc_severalConditions; //Sin condiciones excluidas.
+ * [player, [0, 9]] call FCLA_Common_fnc_severalConditions; //Condiciones 1 y 2 excluidas.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

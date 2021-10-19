@@ -15,7 +15,7 @@
   params ["_unit", "_newCameraMode", "_oldCameraMode"];
   _noWeaponOnHand = currentWeapon _unit == "";
   _isWeaponLowered = weaponLowered _unit;
-  _generalCheck = [_unit] call FCLA_Common_fnc_generalCheck;
+  _generalCheck = [_unit] call FCLA_Common_fnc_severalConditions;
   _isNotTouchingGround = !isTouchingGround _unit;
   if ((!FCLA_Aim_Sounds) || (_noWeaponOnHand) || (_isWeaponLowered) || (_generalCheck) || (_isNotTouchingGround)) exitWith {};
 

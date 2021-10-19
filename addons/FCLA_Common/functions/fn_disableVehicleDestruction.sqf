@@ -12,10 +12,11 @@
  *            2: ¿Destruir los items de la tripulación?, opcional. <BOOL> (default: false)
  *
  * Return Value:
- * ID del event handler utilizado en la función. <NUMBER>
+ * ¿Se ha ejecutado con exito la función? <BOOL>
  *
- * Example:
- * [vehicle player] spawn FCLA_Common_fnc_disableVehicleDestruction;
+ * Examples:
+ * [vehicle player] call FCLA_Common_fnc_disableVehicleDestruction; //Las armas e items no se destruirán.
+ * [vehicle player, true, true] call FCLA_Common_fnc_disableVehicleDestruction; //Las armas e items se destruirán.
  *
  * Public: [Yes]
  *
@@ -95,3 +96,4 @@ if ((isNull _vehicle) || !(_vehicle in vehicles)) exitWith {false};
     if (!isNil {_x getVariable "FCLA_Items_Destroyed"}) then {_x setVariable ["FCLA_Items_Destroyed", nil, true];};
   } forEach _vehicleCrew;
 }, [_dammageWeapons, _dammageItems]] call CBA_fnc_addBISEventHandler;
+true
