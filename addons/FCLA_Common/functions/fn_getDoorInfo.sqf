@@ -3,37 +3,45 @@
  * Author: hozlucas28
  *
  * Description:
- * Obtiene la puerta de la selección enviada.
+ * Retorna información variada de la puerta enviada como argumento.
  *
  * Arguments:
- *            0: Selección del objeto. <ARRAY>
+ *            0: Classname de la puerta. <ARRAY>
  *
  * Return Value:
- * Nombre de la puerta y variable de tipo objeto asociado a la puerta que indica
- * su apertura (0 al 1). <ARRAY>
+ *               0: Classname de la animación de la puerta. <STRING>
+ *
+ *               1: Variable de tipo objeto que indica si la puerta esta
+ *                  cerrada ó no. <STRING>
+ *
+ *               2: XXX. <XXX>
+ *
+ * Note:
+ * Los valores retornados se devuelven dentro de un <ARRAY>.
  *
  * Example:
- * Observa la función "FCLA_Common_fnc_isDoorLocked" para guiarte.
+ * Utiliza la función "FCLA_Common_fnc_isDoorLocked" para guiarte.
  *
- * Public: [No]
+ * Public: [Yes]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.
-params [["_selectionName", "", [""]]];
+params [["_selectionName", "", [""], 0]];
 if (_selectionName == "") exitWith {["", "", ""]};
 
 
-//Listado de puertas con sus animaciones/estados.
+
+//Listado de puertas.
 _selectionInfo = [
-    ["door_1", ["Door_1_rot", "BIS_Disabled_Door_1" , "Door_Locked_1_rot"]],
-    ["door_2", ["Door_2_rot", "BIS_Disabled_Door_2" , "Door_Locked_2_rot"]],
-    ["door_3", ["Door_3_rot", "BIS_Disabled_Door_3" , "Door_Locked_3_rot"]],
-    ["door_4", ["Door_4_rot", "BIS_Disabled_Door_4" , "Door_Locked_4_rot"]],
-    ["door_5", ["Door_5_rot", "BIS_Disabled_Door_5" , "Door_Locked_5_rot"]],
-    ["door_6", ["Door_6_rot", "BIS_Disabled_Door_6" , "Door_Locked_6_rot"]],
-    ["door_7", ["Door_7_rot", "BIS_Disabled_Door_7" , "Door_Locked_7_rot"]],
-    ["door_8", ["Door_8_rot", "BIS_Disabled_Door_8" , "Door_Locked_8_rot"]],
-    ["door_9", ["Door_9_rot", "BIS_Disabled_Door_9" , "Door_Locked_9_rot"]],
+    ["door_1", ["Door_1_rot", "BIS_Disabled_Door_1", "Door_Locked_1_rot"]],
+    ["door_2", ["Door_2_rot", "BIS_Disabled_Door_2", "Door_Locked_2_rot"]],
+    ["door_3", ["Door_3_rot", "BIS_Disabled_Door_3", "Door_Locked_3_rot"]],
+    ["door_4", ["Door_4_rot", "BIS_Disabled_Door_4", "Door_Locked_4_rot"]],
+    ["door_5", ["Door_5_rot", "BIS_Disabled_Door_5", "Door_Locked_5_rot"]],
+    ["door_6", ["Door_6_rot", "BIS_Disabled_Door_6", "Door_Locked_6_rot"]],
+    ["door_7", ["Door_7_rot", "BIS_Disabled_Door_7", "Door_Locked_7_rot"]],
+    ["door_8", ["Door_8_rot", "BIS_Disabled_Door_8", "Door_Locked_8_rot"]],
+    ["door_9", ["Door_9_rot", "BIS_Disabled_Door_9", "Door_Locked_9_rot"]],
     ["door_10", ["Door_10_rot", "BIS_Disabled_Door_10", "Door_Locked_10_rot"]],
     ["door_11", ["Door_11_rot", "BIS_Disabled_Door_11", "Door_Locked_11_rot"]],
     ["door_12", ["Door_12_rot", "BIS_Disabled_Door_12", "Door_Locked_12_rot"]],

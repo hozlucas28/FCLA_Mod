@@ -35,5 +35,6 @@ _selections = [_object, "GEOM"] intersect [ASLtoAGL (_intersectPoints select 0),
 if (count _selections <= 0) exitWith {false};
 
 _selection = _selections select 0;
-_doorInfo = [_selection select 0] call FCLA_Development_fnc_getDoorInfo;
+_doorInfo = [_selection select 0] call FCLA_Common_fnc_getDoorInfo;
+if (_doorInfo select 0) exitWith {false};
 isNil {cursorObject getVariable [(_doorInfo select 1), false];};

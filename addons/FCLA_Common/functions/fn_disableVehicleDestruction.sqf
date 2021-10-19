@@ -4,7 +4,7 @@
  *
  * Description:
  * Evita que el vehículo reciba un daño fatal que provoque su destrucción,
- * dejandolo con un daño total sin provocar su destruicción.
+ * dejandolo con un daño total sin provocar su destrucción.
  *
  * Arguments:
  *            0: Vehículo. <VEHICLE>

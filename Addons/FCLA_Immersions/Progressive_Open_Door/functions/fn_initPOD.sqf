@@ -1,11 +1,11 @@
 
 /* ----------------------------------------------------------------------------
  * Author: hozlucas28
- * 
+ *
  * Description:
  * Abre/Cierra progresivamente la puerta que este mirando la unidad, si esta
  * se encuentra a una distancia razonable.
- * 
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
@@ -28,7 +28,7 @@ if ((count _objects) > 0) then {
 
 	if (count _selections > 0) then {
 		_selection = _selections select 0;
-		_doorInfo = [_selection select 0] call FCLA_Development_fnc_getDoorInfo;
+		_doorInfo = [_selection select 0] call FCLA_Common_fnc_getDoorInfo;
 
 		if (_doorInfo select 0 == "") exitWith {};
 		if ((_doorInfo select 1 != "") && ((_object getVariable [_doorInfo select 1, 0]) == 1)) exitWith {};
