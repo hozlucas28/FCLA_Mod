@@ -25,7 +25,7 @@
 params [
         ["_unit", objNull, [objNull, teamMemberNull], 0],
         ["_item", "", [""], 0],
-        ["_excludedContainers", [""], [[]], [0, 1, 2, 3]]
+        ["_excludedContainers", [], [[]], [0, 1, 2, 3]]
        ];
 if ((isNull _unit) || (_item == "")) exitWith {""};
 
@@ -39,9 +39,9 @@ _itemsInBackpack = backpackItems _unit;
 
 //Verificar existencia del item.
 _array = [];
-if ((_item in _itemsInVest) && !("Vest" in _excludedContainers)) then {_arr pushBack "Vest";};
-if ((_item in _itemsInUniform) && !("Uniform" in _excludedContainers)) then {_arr pushBack "Uniform";};
-if ((_item in _itemsInBackpack) && !("Backpack" in _excludedContainers)) then {_arr pushBack "Backpack";};
+if ((_item in _itemsInVest) && !("Vest" in _excludedContainers)) then {_array pushBack "Vest";};
+if ((_item in _itemsInUniform) && !("Uniform" in _excludedContainers)) then {_array pushBack "Uniform";};
+if ((_item in _itemsInBackpack) && !("Backpack" in _excludedContainers)) then {_array pushBack "Backpack";};
 
 
 //Retornar contenedor/es.

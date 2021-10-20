@@ -3,18 +3,18 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea eventhandlers de uso público.
+ * Crea eventhandlers públicos.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
 
 
-/* ---------------------------- MOSTRAR MENSAJE ---------------------------- */
+/* ------------------------- MOSTRAR NOTIFICACIÓN -------------------------- */
 
-["FCLA_Show_Message", {
+["FCLA_Notify", {
   params [
-          "_text",
+          ["_text", "", ["", []], []],
           ["_size", 1, [0], 0],
           ["_colorRGBA", [1, 1, 1, 1], [[]], [0, 1, 2, 3, 4, 5]]
          ];
@@ -26,11 +26,10 @@
 
 /* ---------------------- GENERAR EFECTO DE CONMOCIÓN ---------------------- */
 
-["FCLA_Shellshock_Effect", {
+["FCLA_Shellshock", {
   _this spawn {
-    if (!(_this getVariable ["FCLA_Shellshock_Finished", true])) exitWith {};
-    _this setVariable ["FCLA_Shellshock_Finished", false, true];
-
+    if (_this getVariable ["FCLA_Shellshock_Initialized", false]) exitWith {};
+    _this setVariable ["FCLA_Shellshock_Initialized", true, true];
 
     0 fadeSound 0.05;
     _randomWaveSound = selectRandom ["FCLA_Explosion_Wave_1", "FCLA_Explosion_Wave_2"];
@@ -43,7 +42,6 @@
     _randomScreamSound = selectRandom ["FCLA_Pain_1", "FCLA_Pain_2", "FCLA_Pain_3", "FCLA_Pain_4", "FCLA_Pain_5", "FCLA_Pain_6", "FCLA_Pain_7"];
     playSound _randomScreamSound;
 
-
     if (isNull objectParent _this) then {
       if (stance _this == "STAND") then {
         _randomAnimation = selectRandom ["AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft", "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright", "AmovPercMsprSlowWrflDf_AmovPpneMstpSrasWrflDnon"];
@@ -55,7 +53,6 @@
         [_this, _randomAnimation, "SwitchMove"] spawn FCLA_Development_fnc_playAnimation;
       };
     };
-
 
     addCamShake [2, 5, 20];
     _blur = ppEffectCreate ["DynamicBlur", 474];
@@ -75,6 +72,6 @@
     _blur ppEffectEnable false;
     ppEffectDestroy _blur;
     3 fadeSound 1;
-    _this setVariable ["FCLA_Shellshock_Finished", nil, true];
+    _this setVariable ["FCLA_Shellshock_Initialized", nil, true];
   };
 }] call CBA_fnc_addEventHandler;

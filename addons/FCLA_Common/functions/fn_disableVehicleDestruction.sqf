@@ -34,10 +34,11 @@ if ((isNull _vehicle) || !(_vehicle in vehicles)) exitWith {false};
 
 
 
-[_vehicle, "Dammaged", {
+_EventHandlerID = [_vehicle, "Dammaged", {
   _this params ["_vehicle", "_selection", "_damage", "_hitIndex", "_hitPoint", "_shooter", "_projectile"];
   _thisArgs params ["_dammageWeapons", "_dammageItems"];
   if (_damage < 0.9) exitWith {};
+
 
   //Desactivar daño.
   _vehicle allowDamage false;
@@ -78,7 +79,7 @@ if ((isNull _vehicle) || !(_vehicle in vehicles)) exitWith {false};
     //Efecto visual y mensaje.
     _isPlayer = [_x, false] call ACE_Common_fnc_isPlayer;
     if ((alive _x) && (_isPlayer)) then {
-      ["FCLA_Shellshock_Effect", _x, _x] call CBA_fnc_targetEvent;
+      ["FCLA_Shellshock", _x, _x] call CBA_fnc_targetEvent;
       _haveDestroyedWeapons = _x getVariable ["FCLA_Weapons_Destroyed", false];
       _haveDestroyedItems = _x getVariable ["FCLA_Items_Destroyed", false];
       if ((!_haveDestroyedWeapons) && (!_haveDestroyedItems)) exitWith {};
@@ -88,7 +89,7 @@ if ((isNull _vehicle) || !(_vehicle in vehicles)) exitWith {false};
         case (!(_haveDestroyedWeapons) && (_haveDestroyedItems)): {"Algunos de tus items se han dañado."};
         default {"Algunas de tus armas e items se han dañado."};
       };
-      [{["FCLA_Show_Message", [_this select 0, 1, [1, 0, 0, 1]], _this select 1] call CBA_fnc_targetEvent;}, [_textToDisplay, _x], 5] call CBA_fnc_waitAndExecute;
+      [{["FCLA_Notify", [_this select 0, 1, [1, 0, 0, 1]], _this select 1] call CBA_fnc_targetEvent;}, [_textToDisplay, _x], 5] call CBA_fnc_waitAndExecute;
     };
 
     //Eliminar variables.
@@ -96,4 +97,8 @@ if ((isNull _vehicle) || !(_vehicle in vehicles)) exitWith {false};
     if (!isNil {_x getVariable "FCLA_Items_Destroyed"}) then {_x setVariable ["FCLA_Items_Destroyed", nil, true];};
   } forEach _vehicleCrew;
 }, [_dammageWeapons, _dammageItems]] call CBA_fnc_addBISEventHandler;
+
+
+//Almacenar ID en una variable de tipo objeto.
+_vehicle setVariable ["FCLA_Disable_Vehicle_Destruction_ID", _EventHandlerID, true];
 true

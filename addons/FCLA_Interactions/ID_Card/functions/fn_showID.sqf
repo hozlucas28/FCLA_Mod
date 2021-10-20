@@ -32,8 +32,8 @@ switch (_infoChecked) do {
 	};
 
 	case false: {
-		_randomAge = [19, 65, true] call FCLA_Development_fnc_getRandomNumber;
-		_randomPlaceOfBirth = call FCLA_Development_fnc_getNameOfRandomLocation;
+		_randomAge = [19, 65, true] call FCLA_Common_fnc_getRandomNumber;
+		_randomPlaceOfBirth = call FCLA_Common_fnc_getRandomLocation;
 		ctrlSetText [1007, name _unit];
 		ctrlSetText [1008, _randomAge];
 		ctrlSetText [1009, if (_randomPlaceOfBirth != "") then {_randomPlaceOfBirth} else {"(Sin completar)"}];

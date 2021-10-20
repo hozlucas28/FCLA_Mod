@@ -13,7 +13,7 @@
  *               1: Variable de tipo objeto asignada a la puerta. Indica si la puerta esta cerrada ó no. <STRING>
  *
  * Note:
- * Los valores retornados se devuelven dentro de un <ARRAY>.
+ * Los valores retornados se devuelven dentro de un "ARRAY".
  *
  * Example:
  * ["door_1"] call FCLA_Common_fnc_getDoorInfo;
