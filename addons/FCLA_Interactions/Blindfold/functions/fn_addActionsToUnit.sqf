@@ -39,13 +39,13 @@ _Statement = {
     if (_currentGoggles != "") then {removeGoggles _target; _target setVariable ["FCLA_Saved_Goggles", _currentGoggles, true];};
     _target addGoggles (FCLA_Goggles_Bandages select 0);
     [_caller, "putDown", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
-    [_target, "FCLA_Gagged_Man", 3, false] spawn FCLA_Development_fnc_globalSay3D;
+    [_target, "FCLA_Gagged_Man", 3, false] spawn FCLA_Common_fnc_globalSay3D;
     [_caller, "FCLA_G_Blindfold_01_Black_F"] call ACE_Common_fnc_useItem;
   } else {
     if (_currentGoggles != "") then {removeGoggles _target; _target setVariable ["FCLA_Saved_Goggles", _currentGoggles, true];};
     _target addGoggles (FCLA_Goggles_Bandages select 1);
     [_caller, "putDown", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
-    [_target, "FCLA_Gagged_Man", 3, false] spawn FCLA_Development_fnc_globalSay3D;
+    [_target, "FCLA_Gagged_Man", 3, false] spawn FCLA_Common_fnc_globalSay3D;
     [_caller, "FCLA_G_Blindfold_01_White_F"] call ACE_Common_fnc_useItem;
   };
 };

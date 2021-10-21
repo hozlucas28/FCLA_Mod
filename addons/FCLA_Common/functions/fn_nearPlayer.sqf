@@ -7,7 +7,7 @@
  *
  * Arguments:
  *            0: Entidad desde donde se verificara la existencia de
-                 un jugador. <ARRAY|UNIT|OBJECT|GROUP|MARKER|LOCATION>
+                 un jugador. <POSITION|UNIT|OBJECT|GROUP|MARKER|LOCATION>
  *
  *            1: Distancia en la que se verificara. <NUMBER>
  *
@@ -32,7 +32,7 @@ params [
         ["_minimumNumberOfUnits", 1, [0], 0],
         ["_excludeRemoteControlled", false, [true], 0]
        ];
-if ((isNull _entity) || (_distance <= 0) || (_minimumNumberOfUnits < 1)) exitWith {false};
+if (((_distance <= 0) || (_minimumNumberOfUnits < 1)) exitWith {false};
 
 
 

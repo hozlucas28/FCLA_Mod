@@ -4,12 +4,12 @@ Function: FCLA_Development_fnc_showHiddenEDENObjects
 
 Description:
     Muestra los objetos que fueron ocultados por la
-    función 'FCLA_Development_fnc_hideEDENObjects'.
+    función 'FCLA_Common_fnc_hideEdenEntities'.
 
 Arguments:
     _pos - Posición.
     _rad - Radio en donde todos los objetos, que fueron ocultados por la
-           función 'FCLA_Development_fnc_hideEDENObjects' volveran a
+           función 'FCLA_Common_fnc_hideEdenEntities' volveran a
            ser visibles.
 
 Example:

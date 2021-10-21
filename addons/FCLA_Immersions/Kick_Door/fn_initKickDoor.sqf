@@ -53,12 +53,12 @@ _this spawn {
       enableCamShake true;
       addCamShake [5, 1.5, 100];
       _building animate [_selectDoor, 1, 8];
-      [_soundSource, "FCLA_Smash_Door", 1, false] spawn FCLA_Development_fnc_globalSay3D;
+      [_soundSource, "FCLA_Smash_Door", 1, false] spawn FCLA_Common_fnc_globalSay3D;
     } else {
       _soundSource = _building modelToWorld (_building selectionPosition ((_intersects select 0) select 0));
       enableCamShake true;
       addCamShake [2.5, 1, 100];
-      [_soundSource, "FCLA_Kick_Door", 1, false] spawn FCLA_Development_fnc_globalSay3D;
+      [_soundSource, "FCLA_Kick_Door", 1, false] spawn FCLA_Common_fnc_globalSay3D;
     };
   };
 

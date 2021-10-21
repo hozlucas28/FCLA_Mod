@@ -81,7 +81,7 @@
 		_isNotTouchingGround = !isTouchingGround _unit;
 		if ((_generalCheck) || (_isNotTouchingGround)) exitWith {};
 
-		[_unit, _randomSound, 1, false] spawn FCLA_Development_fnc_globalSay3D;
+		[_unit, _randomSound, 1, false] spawn FCLA_Common_fnc_globalSay3D;
 	},
 	{},
   [DIK_T, [true, false, false]],
