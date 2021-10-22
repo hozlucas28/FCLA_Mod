@@ -36,7 +36,7 @@ if (_state) then {
   _soundObj = createVehicle ["VirtualAISquad", [0, 0, 0], [], 0, "CAN_COLLIDE"];
   _handle = [{
     if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
-    [(_this select 0) select 0, "FCLA_Shower", 8, false] spawn FCLA_Common_fnc_globalSay3D;
+    [(_this select 0) select 0, "FCLA_Shower", 8, false] call FCLA_Common_fnc_globalSay3D;
   }, 8, _soundObj] call CBA_fnc_addPerFrameHandler;
 
 

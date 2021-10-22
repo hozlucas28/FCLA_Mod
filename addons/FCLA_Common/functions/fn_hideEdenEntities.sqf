@@ -18,9 +18,9 @@
  * Si se quiere excluir una entidad específica asignale la variable de tipo
  * objeto "FCLA_Exclude_Concealment" con un valor verdadero.
  *
- * Example:
- * [getPos player, 150] spawn FCLA_Common_fnc_hideEdenEntities; //IA no excluida.
- * [getPos player, 150, true] spawn FCLA_Common_fnc_hideEdenEntities; //IA excluida.
+ * Examples:
+ * [getPos player, 150] call FCLA_Common_fnc_hideEdenEntities; //IA no excluida.
+ * [getPos player, 150, true] call FCLA_Common_fnc_hideEdenEntities; //IA excluida.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

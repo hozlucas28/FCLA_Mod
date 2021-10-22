@@ -5,7 +5,7 @@
  * Description:
  * Verifica si el cliente, del entorno de ejecución, es un administrador.
  *
- * Return:
+ * Return Value:
  * ¿Es un administrador? <BOOL>
  *
  * Example:

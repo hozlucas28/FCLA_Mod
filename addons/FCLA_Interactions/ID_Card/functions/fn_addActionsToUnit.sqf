@@ -1,11 +1,11 @@
 
 /* ----------------------------------------------------------------------------
  * Author: hozlucas28
- * 
+ *
  * Description:
  * Genera dos acciones ACE 3D (interna e externa), que permiten ver la
  * identificación propia o de otra unidad.
- * 
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
@@ -30,15 +30,10 @@ _Condition = {
 
 _Statement = {
   params ["_target", "_caller"];
-  _notInVehicle = isNull objectParent _caller;
-  _isNotPlayingAnimation = !(_caller getVariable ["FCLA_Playing_Animation", false]);
-
   [_caller] spawn FCLA_Interactions_fnc_showIDCard;
   [_caller] spawn FCLA_Interactions_fnc_showAttributesIDCard;
-  if ((_notInVehicle) && (_isNotPlayingAnimation)) then {
-    [_caller, "Gear", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
-    [{isNull findDisplay 10001}, {[_this, "", "SwitchMove"] spawn FCLA_Development_fnc_playAnimation;}, _caller] call CBA_fnc_waitUntilAndExecute;
-  };
+  [_caller, "Gear", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+  [{isNull findDisplay 10001}, {[_this, "", "SwitchMove"] call FCLA_Common_fnc_playAnimation;}, _caller] call CBA_fnc_waitUntilAndExecute;
 };
 
 _ShowSelfID = ["FCLA_Ver_Identificación_Interna", "Ver identificación", "\FCLA_Data\ACE_Actions\ID_Card.paa", _Statement, _Condition] call ACE_Interact_menu_fnc_createAction;
@@ -69,7 +64,7 @@ _Statement = {
   params ["_target", "_caller"];
   [_target] spawn FCLA_Interactions_fnc_showIDCard;
   [_target] spawn FCLA_Interactions_fnc_showAttributesIDCard;
-  [_caller, "putDown", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+  [_caller, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 };
 
 _ShowExternalID = ["FCLA_Ver_Identificación_Externa", "Ver identificación", "\FCLA_Data\ACE_Actions\ID_Card.paa", _Statement, _Condition] call ACE_Interact_menu_fnc_createAction;

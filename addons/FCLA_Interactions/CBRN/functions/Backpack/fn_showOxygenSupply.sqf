@@ -1,10 +1,10 @@
 
 /* ----------------------------------------------------------------------------
  * Author: hozlucas28
- * 
+ *
  * Description:
  * Muestra el suministro de oxígeno restante.
- * 
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
@@ -15,8 +15,7 @@ params ["_caller"];
 
 //Reproducir animación.
 _notInVehicle = isNull objectParent _caller;
-_isNotPlayingAnimation = !(_caller getVariable ["FCLA_Playing_Animation", false]);
-if ((_notInVehicle) && (_isNotPlayingAnimation)) then {[_caller, "ainvpknlmstpslaywrfldnon_medic", "SwitchMove"] spawn FCLA_Development_fnc_playAnimation;};
+if (_notInVehicle) then {[_caller, "ainvpknlmstpslaywrfldnon_medic", "SwitchMove"] call FCLA_Common_fnc_playAnimation;};
 
 
 _Condition = {
@@ -60,12 +59,12 @@ _statementOnFinish = {
   [_caller, "quick_view", "%1 comprobo el suministro de oxígeno: %2%3", [name _caller, _remainingOxygen, "%"]] call ACE_Medical_Treatment_fnc_addToLog;
 
   if ((animationState _caller) != "ainvpknlmstpslaywrfldnon_medic") exitWith {};
-  [_caller, "", "SwitchMove"] spawn FCLA_Development_fnc_playAnimation;
+  [_caller, "", "SwitchMove"] call FCLA_Common_fnc_playAnimation;
 };
 
 _statementOnFailure = {
   (_this select 0) params ["_caller"];
-  if ((animationState _caller) == "ainvpknlmstpslaywrfldnon_medic") then {[_caller, "", "SwitchMove"] spawn FCLA_Development_fnc_playAnimation;};
+  if ((animationState _caller) == "ainvpknlmstpslaywrfldnon_medic") then {[_caller, "", "SwitchMove"] call FCLA_Common_fnc_playAnimation;};
 };
 
 [5, [_caller], _statementOnFinish, _statementOnFailure, "Comprobando suministro de oxígeno...", _Condition] call ACE_Common_fnc_progressBar;

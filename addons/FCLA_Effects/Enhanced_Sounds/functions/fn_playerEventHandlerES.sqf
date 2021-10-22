@@ -47,5 +47,5 @@
   _isDayVisionMode = _newVisionMode == 0;
   if ((!FCLA_visionMode_Sounds) || (_inUAV) || (_inZeus) || (_inStairs) || (_isNotAlive) || (_isSwimming) || (_inCameraMode) || (_isHandcuffed) || (_isDayVisionMode)) exitWith {};
 
-  [_unit, "FCLA_Vision_Mode_Changed", 2, false] spawn FCLA_Common_fnc_globalSay3D;
+  [_unit, "FCLA_Vision_Mode_Changed", 2, false] call FCLA_Common_fnc_globalSay3D;
 }, false] call CBA_fnc_addPlayerEventHandler;

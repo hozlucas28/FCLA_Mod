@@ -14,7 +14,7 @@
  *                                     "S.O.G. Prairie Fire", "CSLA Iron Curtain",
  *                                     "Tac - Ops Mission Pack" y "Global Mobilization".
  *
- * Return:
+ * Return Value:
  * ¿Es propietario? <BOOL>
  *
  * Example:
@@ -25,7 +25,13 @@
 
 //Variable de referencia.
 params [["_DLC", "", [""], 0]];
-if (_DLC == "") exitWith {false};
+_acceptedDLCs = [
+                 "Zeus", "Jets", "Apex", "Karts", "Tanks", "Malden", "Contact",
+								 "Marksmen", "Art of War", "Laws of War", "Helicopters",
+								 "S.O.G. Prairie Fire", "CSLA Iron Curtain", "Tac - Ops Mission Pack",
+								 "Global Mobilization"
+								];
+if (!(_DLC in _acceptedDLCs)) exitWith {false};
 
 
 
@@ -50,5 +56,4 @@ switch (_DLC) do {
   case "GlobalMobilization": {(1.04222e+006) in _ownedDLCs};
   case "S.O.G. Prairie Fire": {(1.2277e+006) in _ownedDLCs};
   case "Tac - Ops Mission Pack": {(744950) in _ownedDLCs};
-	default {false};
 };

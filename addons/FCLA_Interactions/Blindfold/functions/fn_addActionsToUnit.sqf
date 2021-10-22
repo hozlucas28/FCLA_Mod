@@ -38,14 +38,14 @@ _Statement = {
   if ([_caller, "FCLA_G_Blindfold_01_Black_F"] call BIS_fnc_hasItem) then {
     if (_currentGoggles != "") then {removeGoggles _target; _target setVariable ["FCLA_Saved_Goggles", _currentGoggles, true];};
     _target addGoggles (FCLA_Goggles_Bandages select 0);
-    [_caller, "putDown", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
-    [_target, "FCLA_Gagged_Man", 3, false] spawn FCLA_Common_fnc_globalSay3D;
+    [_caller, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+    [_target, "FCLA_Gagged_Man", 3, false] call FCLA_Common_fnc_globalSay3D;
     [_caller, "FCLA_G_Blindfold_01_Black_F"] call ACE_Common_fnc_useItem;
   } else {
     if (_currentGoggles != "") then {removeGoggles _target; _target setVariable ["FCLA_Saved_Goggles", _currentGoggles, true];};
     _target addGoggles (FCLA_Goggles_Bandages select 1);
-    [_caller, "putDown", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
-    [_target, "FCLA_Gagged_Man", 3, false] spawn FCLA_Common_fnc_globalSay3D;
+    [_caller, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+    [_target, "FCLA_Gagged_Man", 3, false] call FCLA_Common_fnc_globalSay3D;
     [_caller, "FCLA_G_Blindfold_01_White_F"] call ACE_Common_fnc_useItem;
   };
 };
@@ -72,7 +72,7 @@ _Statement = {
   _originalGoggles = _target getVariable ["FCLA_Saved_Goggles", ""];
 
   removeGoggles _target;
-  [_caller, "putDown", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+  [_caller, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
   if (_originalGoggles != "") then {_target addGoggles _originalGoggles; _target setVariable ["FCLA_Saved_Goggles", nil, true];};
   if (_currentGoggles == (FCLA_Goggles_Bandages select 0)) exitWith {[_caller, "FCLA_G_Blindfold_01_Black_F", "", -1] call ACE_Common_fnc_addToInventory;};
   if (_currentGoggles == (FCLA_Goggles_Bandages select 1)) exitWith {[_caller, "FCLA_G_Blindfold_01_White_F", "", -1] call ACE_Common_fnc_addToInventory;};

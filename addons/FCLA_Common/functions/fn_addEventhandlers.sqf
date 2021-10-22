@@ -45,12 +45,12 @@
     if (isNull objectParent _this) then {
       if (stance _this == "STAND") then {
         _randomAnimation = selectRandom ["AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft", "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright", "AmovPercMsprSlowWrflDf_AmovPpneMstpSrasWrflDnon"];
-        [_this, _randomAnimation, "SwitchMove"] spawn FCLA_Development_fnc_playAnimation;
+        [_this, _randomAnimation, "SwitchMove"] call FCLA_Common_fnc_playAnimation;
       };
 
       if (stance _this == "CROUCH") then {
         _randomAnimation = selectRandom ["AmovPknlMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft", "AmovPknlMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright", "AmovPercMsprSlowWrflDf_AmovPpneMstpSrasWrflDnon"];
-        [_this, _randomAnimation, "SwitchMove"] spawn FCLA_Development_fnc_playAnimation;
+        [_this, _randomAnimation, "SwitchMove"] call FCLA_Common_fnc_playAnimation;
       };
     };
 

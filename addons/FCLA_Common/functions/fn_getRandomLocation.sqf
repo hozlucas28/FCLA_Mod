@@ -13,7 +13,7 @@
  * Return Value:
  * Nombre del poblado/ciudad/capital seleccionado al azar. <STRING>
  *
- * Example:
+ * Examples:
  * call FCLA_Common_fnc_getRandomLocation; //Sin exclusiones.
  * [true, true] call FCLA_Common_fnc_getRandomLocation; //Pueblos y ciudades excluidas.
  *

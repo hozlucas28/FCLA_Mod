@@ -14,9 +14,7 @@ params ["_caller", "_typeOfCamoNet", "_helmetsWithoutCamoNet", "_helmetsWithCamo
 
 
 //Reproducir animación.
-_notInVehicle = isNull objectParent _caller;
-_isNotPlayingAnimation = !(_caller getVariable ["FCLA_Playing_Animation", false]);
-if ((_notInVehicle) && (_isNotPlayingAnimation)) then {[_caller, "ainvpknlmstpslaywrfldnon_medic", "SwitchMove"] spawn FCLA_Development_fnc_playAnimation;};
+[_caller, "ainvpknlmstpslaywrfldnon_medic", "SwitchMove"] call FCLA_Common_fnc_playAnimation;
 
 
 _Condition = {
@@ -53,12 +51,12 @@ _statementOnFinish = {
   };
 
   if ((animationState _caller) != "ainvpknlmstpslaywrfldnon_medic") exitWith {};
-  [_caller, "", "SwitchMove"] spawn FCLA_Development_fnc_playAnimation;
+  [_caller, "", "SwitchMove"] call FCLA_Common_fnc_playAnimation;
 };
 
 _statementOnFailure = {
   (_this select 0) params ["_caller", "_typeOfCamoNet", "_helmetsWithoutCamoNet", "_helmetsWithCamoNet"];
-  if ((animationState _caller) == "ainvpknlmstpslaywrfldnon_medic") then {[_caller, "", "SwitchMove"] spawn FCLA_Development_fnc_playAnimation;};
+  if ((animationState _caller) == "ainvpknlmstpslaywrfldnon_medic") then {[_caller, "", "SwitchMove"] call FCLA_Common_fnc_playAnimation;};
 };
 
 [5, [_caller, _typeOfCamoNet, _helmetsWithoutCamoNet, _helmetsWithCamoNet], _statementOnFinish, _statementOnFailure, "Colocando red de camuflaje al casco...", _Condition] call ACE_Common_fnc_progressBar;

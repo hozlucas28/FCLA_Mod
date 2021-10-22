@@ -35,11 +35,11 @@ _tablet = "Land_Tablet_02_F" createVehicle [0, 0, 0];
 _tablet attachto [player, [-0.1,0.4,-0.2], "neck"];
 _tablet setVectorDirAndUp [[0,-1,-1], [0,-1,0]];
 _tablet setObjectTexture [0, "#(argb,512,512,1)r2t(uavrtt,1)"];
-[player, "AmovPknlMstpSrasWrflDnon_AmovPknlMstpSlowWrflDnon", "PlayMove"] spawn FCLA_Development_fnc_playAnimation;
+[player, "AmovPknlMstpSrasWrflDnon_AmovPknlMstpSlowWrflDnon", "PlayMove"] call FCLA_Common_fnc_playAnimation;
 sleep 0.5;
-[player, "acts_CrouchingIdleRifle01", "SwitchMove"] spawn FCLA_Development_fnc_playAnimation;
+[player, "acts_CrouchingIdleRifle01", "SwitchMove"] call FCLA_Common_fnc_playAnimation;
 _addIndex = player addAction ["", {}, "", 0, false, true, "NightVision"];
-_eh = player addeventhandler ["animChanged",{[player, "acts_CrouchingIdleRifle01", "SwitchMove"] spawn FCLA_Development_fnc_playAnimation;}];
+_eh = player addeventhandler ["animChanged",{[player, "acts_CrouchingIdleRifle01", "SwitchMove"] call FCLA_Common_fnc_playAnimation;}];
 playSound "FCLA_Switch_Camera";
 
 
@@ -71,7 +71,7 @@ while {!(player getVariable ["Spy_Camera_DesactivateCamera", false]) && (alive p
 deleteVehicle _tablet;
 player removeeventhandler ["animChanged", _eh];
 player removeaction _addIndex;
-[player, "AmovPknlMstpSrasWrflDnon_AmovPknlMstpSlowWrflDnon", "PlayMove"] spawn FCLA_Development_fnc_playAnimation;
+[player, "AmovPknlMstpSrasWrflDnon_AmovPknlMstpSlowWrflDnon", "PlayMove"] call FCLA_Common_fnc_playAnimation;
 (findDisplay 46) displayRemoveEventHandler ["KeyDown", _keyDown];
 playSound "FCLA_Switch_Camera";
 

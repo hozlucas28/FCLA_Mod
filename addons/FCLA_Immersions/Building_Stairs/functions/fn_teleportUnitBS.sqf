@@ -18,7 +18,7 @@ _this spawn {
   //Reproducir animación y mostrar mensaje.
   playSound "FCLA_Open_Door";
   [_stairs] spawn FCLA_Immersions_fnc_showMessageBS;
-  [_unit, "putDown", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+  [_unit, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 
 
   /* ------------------------ OCULTAR UNIDAD ------------------------ */

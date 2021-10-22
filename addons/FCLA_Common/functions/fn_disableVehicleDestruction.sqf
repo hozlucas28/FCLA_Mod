@@ -26,7 +26,7 @@
 
 //Variables de referencia.
 params [
-        ["_vehicle", objNull, [objNull, teamMemberNull], 0],
+        ["_vehicle", objNull, [objNull], 0],
         ["_dammageWeapons", false, [true], 0],
         ["_dammageItems", false, [true], 0]
        ];

@@ -1,11 +1,11 @@
 
 /* ----------------------------------------------------------------------------
  * Author: hozlucas28
- * 
+ *
  * Description:
  * Asigna un eventhandler del tipo 'TFAR_fnc_addEventHandler', que se ejecutara
  * cuando se transmita por radio.
- * 
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
@@ -19,10 +19,9 @@
   _inCameraMode = _unit in (call ACE_Spectator_fnc_players);
   _isHandcuffed = _unit getVariable ["ACE_Captives_isHandcuffed", false];
   _inWeaponAnimation = !isNil "FCLA_inWeapon_Animation";
-  _isPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];
   _isNotInCargoVehicle = if ((_getCurrentVehicleRole == "") || (_getCurrentVehicleRole == "cargo")) then {false} else {true};
   _isNotTouchingGround = !isTouchingGround _unit;
-  if ((!FCLA_Radio_Animations) || (_isHidden) || (_isNotAlive) || (_isSwimming) || (_isDragging) || (_inCameraMode) || (_isHandcuffed) || (_inWeaponAnimation) || (_isPlayingAnimation) || (_isNotInCargoVehicle) || (_isNotTouchingGround)) exitWith {};
+  if ((!FCLA_Radio_Animations) || (_isHidden) || (_isNotAlive) || (_isSwimming) || (_isDragging) || (_inCameraMode) || (_isHandcuffed) || (_inWeaponAnimation) || (_isNotInCargoVehicle) || (_isNotTouchingGround)) exitWith {};
 
 
   if (_buttonDown) then {
@@ -37,23 +36,23 @@
     	case (((!_isUsingBackpackRadio) && (_isHeadsetCompatible) && (_isChestCompatible)) || (_inZeus)): {
         [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
         _animation = if (FCLA_Radio_Animation_Preference == "_headset") then {"FCLA_Animation_TFAR_onEar";} else {"FCLA_Animation_TFAR_onVest";};
-        [_unit, _animation, "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+        [_unit, _animation, "playActionNow"] call FCLA_Common_fnc_playAnimation;
       };
 
     	case ((!_isUsingBackpackRadio) && (_isHeadsetCompatible)): {
         [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
-        [_unit, "FCLA_Animation_TFAR_onEar", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+        [_unit, "FCLA_Animation_TFAR_onEar", "playActionNow"] call FCLA_Common_fnc_playAnimation;
       };
 
       case ((!_isUsingBackpackRadio) && (_isChestCompatible)): {
         [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
-        [_unit, "FCLA_Animation_TFAR_onVest", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+        [_unit, "FCLA_Animation_TFAR_onVest", "playActionNow"] call FCLA_Common_fnc_playAnimation;
       };
     	default {[_unit, _currentRadio] spawn FCLA_Immersions_fnc_onHandTFAR;};
     };
   } else {
     _unit setVariable ["FCLA_TFAR_Animations_isTransmitting", nil, true];
-    [_unit, "FCLA_TFAR_End_Animation", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    [_unit, "FCLA_TFAR_End_Animation", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 
     if (!(isNil {_unit getVariable "FCLA_TFAR_Animations_Current_Radio"})) then {
       _radioSimpleObj = _unit getVariable "FCLA_TFAR_Animations_Current_Radio";

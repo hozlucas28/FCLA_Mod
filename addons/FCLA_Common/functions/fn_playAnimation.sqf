@@ -1,38 +1,66 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Development_fnc_playAnimation
-
-Description:
-    Fuerza a la unidad a realizar la animación enviada, según su
-    tipo de reproducción.
-
-Arguments:
-    _unit - Unidad que realizara la animación.
-    _animation - Classname de la animación que se busca reproducir.
-    _typeOfReproduction - Tipo de reproducción para la animación.
-                          Valores aceptados: "playAction", "playActionNow",
-                                             "PlayMove", "PlayMoveNow" ó "SwitchMove".
-
-Example:
-    [player, "FCLA_Animation_Tactical_Position_Up", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
-
-Public: [Yes]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Reproduce una animación en la unidad enviada como argumento.
+ *
+ * Arguments:
+ *            0: Unidad que realizara la animación. <UNIT>
+ *            1: Classname de la animación a reproducir. <STRING>
+ *            2: Tipo de reproducción de la animación.
+ *                # Valores aceptados: "playAction", "playActionNow",
+ *                                     "PlayMove", "PlayMoveNow" y "SwitchMove".
+ *
+ * Return Value:
+ * ¿Se ha ejecutado con exito la función? <BOOL>
+ *
+ * Example:
+ * [player, "FCLA_Animation_Tactical_Position_Up", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+ *
+ * Note:
+ * La función le asigna un valor de verdad a la variable de tipo
+ * objeto "FCLA_Playing_Animation" asociada a la unidad que reproduce
+ * la animación, para asi evitar un bucle de reproducción.
+ *
+ * Public: [Yes]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.
-params [["_unit", call CBA_fnc_currentUnit], ["_animation", ""], ["_typeOfReproduction", ""]];
-_compatibleReproductions = ["playAction", "playActionNow", "PlayMove", "PlayMoveNow", "SwitchMove"];
-if (!(_typeOfReproduction in _compatibleReproductions)) exitWith {false};
+params [
+        ["_unit", objNull, [objNull, teamMemberNull], 0],
+        ["_animation", "", [""], 0],
+        ["_typeOfReproduction", "", [""], 0]
+       ];
 
 
+
+//Verficar argumentos.
+_inVehicle = if (_typeOfReproduction == "SwitchMove") then {!isNull objectParent _caller} else {false};;
+_isUnitPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];
+_acceptedTypesOfReproduction = ["playAction", "playActionNow", "PlayMove", "PlayMoveNow", "SwitchMove"];
+if ((isNull _unit) || !(_typeOfReproduction in _acceptedTypesOfReproduction) || (_inVehicle) || (_isUnitPlayingAnimation)) exitWith {false};
+
+
+//Reproducir animación.
+_unit setVariable ["FCLA_Playing_Animation", true, true];
 switch (_typeOfReproduction) do {
   case "playAction": {[_unit, _animation] call ACE_Common_fnc_doGesture;};
   case "playActionNow": {[_unit, _animation] call ACE_Common_fnc_doGesture;};
   case "PlayMove": {[_unit, _animation, 0] call ACE_Common_fnc_doAnimation;};
   case "PlayMoveNow": {[_unit, _animation, 1] call ACE_Common_fnc_doAnimation;};
   case "SwitchMove": {[_unit, _animation, 2] call ACE_Common_fnc_doAnimation;};
-  default {false};
 };
+
+
+//Eliminar variable al terminar animación.
+if ((_typeOfReproduction == "playAction") || (_typeOfReproduction == "playActionNow")) then {
+  [{(gestureState (_this select 0)) != (_this select 1);}, {
+    (_this select 0) setVariable ["FCLA_Playing_Animation", nil, true];
+  }, [_unit, _animation]] call CBA_fnc_waitUntilAndExecute;
+} else {
+  [{(animationState (_this select 0)) != (_this select 1);}, {
+    (_this select 0) setVariable ["FCLA_Playing_Animation", nil, true];
+  }, [_unit, _animation]] call CBA_fnc_waitUntilAndExecute;
+};
+true

@@ -31,7 +31,7 @@ _condition = {
 _statement = {
   params ["_target", "_caller"];
   [_target] spawn FCLA_Interactions_fnc_turnOnShowerCBRN;
-  [_caller, "putDown", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+  [_caller, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 };
 
 _turnOnShower = ["FCLA_Encender_Ducha", "Encender ducha", "\FCLA_Data\ACE_Actions\Shower_On.paa", _statement, _condition] call ACE_Interact_Menu_fnc_createAction;
@@ -54,7 +54,7 @@ _condition = {
 _statement = {
   params ["_target", "_caller"];
   [_target] spawn FCLA_Interactions_fnc_turnOffShowerCBRN;
-  [_caller, "putDown", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+  [_caller, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 };
 
 _turnOffShower = ["FCLA_Apagar_Ducha", "Apagar ducha", "\FCLA_Data\ACE_Actions\Shower_Off.paa", _statement, _condition] call ACE_Interact_Menu_fnc_createAction;

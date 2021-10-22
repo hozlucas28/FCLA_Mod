@@ -8,7 +8,7 @@
  * Arguments:
  *            0: Unidad a verificar. <UNIT>
  *
- * Return:
+ * Return Value:
  * ¿Es/Tiene Zeus? <BOOL>
  *
  * Example:

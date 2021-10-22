@@ -13,7 +13,7 @@
  * Return Value:
  * Nombres de los poblados, ciudades y capitales. <ARRAY>
  *
- * Example:
+ * Examples:
  * call FCLA_Common_fnc_getLocations; //Sin exclusiones.
  * [true, true] call FCLA_Common_fnc_getLocations; //Pueblos y ciudades excluidas.
  *

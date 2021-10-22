@@ -3,7 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si se encuentra un jugador cerca del primer argumento enviado.
+ * Verifica si hay un jugador cerca de la entidad enviada como
+ * primer argumento.
  *
  * Arguments:
  *            0: Entidad desde donde se verificara la existencia de
@@ -14,13 +15,14 @@
  *            2: Minimo de jugadores/unidades contraladas dentro de
  *               la distancia, opcional. <NUMBER> (default: 1)
  *
- *            3: ¿Excluir unidades controladas?, opcional. <BOOL> (default: true)
+ *            3: ¿Excluir unidades controladas?, opcional. <BOOL> (default: false)
  *
  * Return Value:
- * ¿Hay un jugador cerca? <BOOL>
+ * ¿Hay un jugador/unidad controlada cerca? <BOOL>
  *
- * Example:
- * [player, 50] call FCLA_Functions_fnc_nearPlayer;
+ * Examples:
+ * [player, 50] call FCLA_Functions_fnc_nearPlayer; //Unidades controladas no excluidas.
+ * [player, 50, true] call FCLA_Functions_fnc_nearPlayer; //Unidades controladas excluidas.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -36,20 +38,20 @@ if (((_distance <= 0) || (_minimumNumberOfUnits < 1)) exitWith {false};
 
 
 
-_return = false;
+//Obtener jugadores/unidades controladas.
 _players = [];
-
-
-//Obtener lista de jugadores.
 {
   _isPlayer = [_x, _excludeRemoteControlled] call ACE_Common_fnc_isPlayer;
   if (_isPlayer) then {_players pushBack _x};
 } forEach allUnits;
 
 
-//Verificar si hay un jugador cerca.
+//Verificar si hay un jugador/unidad controlada dentro del rango.
+_return = false;
 {
   _numberOfNearPlayers = {([_entity, _x] call CBA_fnc_getDistance) < _distance} count _players;
-  if ((([_entity, _x] call CBA_fnc_getDistance) < _distance) && (_numberOfNearPlayers >= _minimumNumberOfUnits)) exitWith {_return = true;};
+  if ((([_entity, _x] call CBA_fnc_getDistance) < _distance) && (_numberOfNearPlayers >= _minimumNumberOfUnits)) exitWith {
+    _return = true;
+  };
 } forEach _players;
 _return

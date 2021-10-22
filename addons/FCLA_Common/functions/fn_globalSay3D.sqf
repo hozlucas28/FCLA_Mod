@@ -16,13 +16,14 @@
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
- * Example:
- * [player, "FCLA_Hiss_1", 1] spawn FCLA_Common_fnc_globalSay3D; //No se borrara el origen del sonido.
- * [player, "FCLA_Hiss_1", 1, true] spawn FCLA_Common_fnc_globalSay3D; //Se borrara el origen del sonido.
+ * Examples:
+ * [player, "FCLA_Hiss_1", 1] call FCLA_Common_fnc_globalSay3D; //No se borrara el origen del sonido.
+ * [player, "FCLA_Hiss_1", 1, true] call FCLA_Common_fnc_globalSay3D; //Se borrara el origen del sonido.
  *
  * Note:
- * Asigna una variable de tipo objeto a la unidad/objeto desde donde proviene
- * el sonido, para asi evitar un bucle de reproducción.
+ * La función le asigna un valor de verdad a la variable de tipo
+ * objeto "FCLA_Playing_Sound" asociada a la unidad/objeto origen
+ * del sonido, para asi evitar un bucle de reproducción.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

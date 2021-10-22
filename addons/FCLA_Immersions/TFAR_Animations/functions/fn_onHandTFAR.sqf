@@ -31,7 +31,7 @@ switch (true) do {
     _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
     _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
-    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
     [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
   };
@@ -43,7 +43,7 @@ switch (true) do {
     _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
     _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
-    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
     [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
   };
@@ -55,7 +55,7 @@ switch (true) do {
     _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
     _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
-    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
     [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
 
@@ -68,7 +68,7 @@ switch (true) do {
     _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
     _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
-    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
     [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
   };
@@ -80,7 +80,7 @@ switch (true) do {
     _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
     _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
-    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
     [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
   };
@@ -92,7 +92,7 @@ switch (true) do {
     _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
     _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
-    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
     [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
   };
@@ -104,7 +104,7 @@ switch (true) do {
     _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
     _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
-    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
   };
 };

@@ -20,7 +20,7 @@
   ((_inVehicle) || (_isNotAlive) || (_isSwimming) || (_isDragging) || (_isHandcuffed) || (_isNotTouchingGround)) && (_isNotTransmiting);
 }, {
   _isTransmiting = _this getVariable ["FCLA_TFAR_Animations_isTransmitting", false];
-  if (_isTransmiting) then {[_this, "FCLA_TFAR_End_Animation", "playActionNow"] spawn FCLA_Development_fnc_playAnimation;};
+  if (_isTransmiting) then {[_this, "FCLA_TFAR_End_Animation", "playActionNow"] call FCLA_Common_fnc_playAnimation;};
   if (!(isNil {_this getVariable "FCLA_TFAR_Animations_Current_Radio"})) then {
     _radioSimpleObj = _this getVariable "FCLA_TFAR_Animations_Current_Radio";
     _this setVariable ["FCLA_TFAR_Animations_Current_Radio", nil, true];
