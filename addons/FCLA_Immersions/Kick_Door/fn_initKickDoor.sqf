@@ -1,12 +1,12 @@
 
 /* ----------------------------------------------------------------------------
  * Author: hozlucas28
- * 
+ *
  * Description:
  * Permite abrir una puerta cerrada a patadas, si el addon
  * option '¿Permitir patadas?' es activado, y el porcentaje de
  * éxito de la misma es definida en 'Probabilidad de éxito (patadas)'.
- * 
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
@@ -47,7 +47,7 @@ _this spawn {
     };
 
     sleep 0.5;
-    if (!([_unit] call FCLA_Development_fnc_isDoorLocked) || (_successRate <= FCLA_Kick_Door_Success_Rate)) then {
+    if (!(call FCLA_Common_fnc_isDoorLocked) || (_successRate <= FCLA_Kick_Door_Success_Rate)) then {
       _selectDoor = format ["%1_rot", ((_intersects select 0) select 0)];
       _soundSource = _building modelToWorld (_building selectionPosition ((_intersects select 0) select 0));
       enableCamShake true;

@@ -13,7 +13,7 @@
 
 /* -------------------------------- EQUIPAR -------------------------------- */
 
-_notOwnedDLC = !(["Contact"] call FCLA_Development_fnc_isDLCOwned);
+_notOwnedDLC = !(["Contact"] call FCLA_Common_fnc_isDLCOwned);
 if (_notOwnedDLC) then {
   _conditionToEnable = {
     params ["_caller", "_container", "_item", "_slot", "_params"];

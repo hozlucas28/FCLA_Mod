@@ -1,27 +1,23 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Development_fnc_isCurator
-
-Description:
-    Verifica si la unidad tiene Zeus.
-
-Arguments:
-    _unit  - Unidad a verificar.
-
-Return:
-    Boolean (true/false).
-
-Example:
-    [player] call FCLA_Development_fnc_isCurator;
-
-Public: [Yes]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Verifica si la unidad enviada como argumento es/tiene Zeus.
+ *
+ * Arguments:
+ *            0: Unidad a verificar. <UNIT>
+ *
+ * Return:
+ * ¿Es/Tiene Zeus? <BOOL>
+ *
+ * Example:
+ * [player] call FCLA_Common_fnc_isCurator;
+ *
+ * Public: [Yes]
 ---------------------------------------------------------------------------- */
 
 //Variable de referencia.
-params [["_unit", call CBA_fnc_currentUnit]];
-
-
+params [["_unit", objNull, [objNull, teamMemberNull], 0]];
+if (isNull _unit) exitWith {false};
 !(isNull (getAssignedCuratorLogic _unit));

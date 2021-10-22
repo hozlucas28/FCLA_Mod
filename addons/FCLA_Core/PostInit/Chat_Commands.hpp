@@ -50,15 +50,17 @@ if (_isCuratorEnhancedModLoaded) then {
     params ["_value"];
     _inUAV = ([player] call ace_common_fnc_getUavControlPosition) != "";
     _isOnMap = visibleMap;
-    _isAdmin = [true] call FCLA_Development_fnc_isAdmin;
+    _isAdmin = [true] call FCLA_Common_fnc_isAdmin;
+    _isCurator = [player] call FCLA_Common_fnc_isCurator;
     _isNotAlive = !(alive player);
     _isNotAnEditor = !((getPlayerUID player) in FCLA_Editors);
     _currentControledUnit = call CBA_fnc_currentUnit;
     if (_inUAV) exitWith {[{systemChat "No puedes utilizar este comando si estas utilizando un dron.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
     if (_isOnMap) exitWith {[{systemChat "No puedes utilizar este comando si el mapa esta abierto.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
     if (_isAdmin) exitWith {[{systemChat "Por razones de seguridad al ser un administrador, no puedes utilizar este comando.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
+    if (_isCurator) exitWith {[{systemChat "Ya posees Zeus.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
     if (_isNotAlive) exitWith {[{systemChat "Debes estar vivo para utilizar este comando.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
-    if ((FCLA_Mission_Type != "Training") && (_isNotAnEditor)) exitWith {[{systemChat "El mapa no es de entrenamiento! No puedes utilizar este comando, salvo que seas editor oficial.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
+    if (_isNotAnEditor) exitWith {[{systemChat "No puedes utilizar este comando, salvo que seas parte de 'Mando' o seas editor oficial.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
     if (_currentControledUnit != player) exitWith {[{systemChat "No puedes utilizar este comando si estas controlando a una unidad.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
 
     switch (_value) do {

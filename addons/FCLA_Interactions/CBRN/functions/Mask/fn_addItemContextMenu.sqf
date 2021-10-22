@@ -9,7 +9,7 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-_ownedDLC = ["Contact"] call FCLA_Development_fnc_isDLCOwned;
+_ownedDLC = ["Contact"] call FCLA_Common_fnc_isDLCOwned;
 if (_ownedDLC) exitWith {};
 
 

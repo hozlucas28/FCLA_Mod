@@ -1,32 +1,20 @@
 
 /* ----------------------------------------------------------------------------
-Function: FCLA_Development_fnc_isAdmin
-
-Description:
-    Verifica si la unidad es un administrador.
-
-Arguments:
-    _isVotedAdmin  - ¿Verificar si es un administrador votado? Opcional.
-
-Return:
-    Boolean (true/false).
-
-Example:
-    [] call FCLA_Development_fnc_isAdmin;
-
-Public: [Yes]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Verifica si el cliente, del entorno de ejecución, es un administrador.
+ *
+ * Return:
+ * ¿Es un administrador? <BOOL>
+ *
+ * Example:
+ * call FCLA_Common_fnc_isAdmin;
+ *
+ * Public: [Yes]
 ---------------------------------------------------------------------------- */
 
-//Variable de referencia.
-params [["_isVotedAdmin", false]];
-_currentAdminState = admin clientOwner;
-
-
-switch (true) do {
-	case ((_currentAdminState == 1) && (_isVotedAdmin)): {true};
-	case (_currentAdminState == 2): {true};
+switch (admin clientOwner) do {
+	case 2: {true};
 	default {false};
 };
