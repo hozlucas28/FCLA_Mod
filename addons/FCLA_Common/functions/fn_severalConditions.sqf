@@ -21,8 +21,9 @@
  *             11: ¿Esta inconsiente?
  *             12: ¿Se esta riendiendo?
  *             13: ¿Esta viendo un ID (identificación)?
- *             14: ¿Tiene el inventario abierto?
- *             15: ¿Esta recargando ó manipulando un arma?
+ *             14: ¿Esta apoyando el arma?
+ *             15: ¿Tiene el inventario abierto?
+ *             16: ¿Esta recargando ó manipulando un arma?
  *
  * Arguments:
  *            0: Unidad a verificar. <UNIT>
@@ -41,7 +42,7 @@
 //Variables de referencia.
 params [
         ["_unit", objNull, [objNull, teamMemberNull], 0],
-        ["_excludedConditions", [], [[]], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]]
+        ["_excludedConditions", [], [[]], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]]
        ];
 if (isNull _unit) exitWith {false};
 
@@ -62,10 +63,11 @@ _isHandcuffed = _unit getVariable ["ACE_Captives_isHandcuffed", false];
 _isUnconscious = _unit getVariable ["ACE_isUnconscious", false];
 _isSurrendering = _unit getVariable ["ACE_Captives_isSurrendering", false];
 _isShowingIDCard = !isNull findDisplay 10001;
+_isWeaponDeployed = isWeaponDeployed _unit;
 _isInventoryOpened = !isnull (findDisplay 602);
 _inWeaponAnimation = !isNil "FCLA_inWeapon_Animation";
 
 //Excluir condiciones.
-_conditions = [_inUAV, _inZeus, _isOnMap, _inStairs, _inVehicle, _isNotAlive, _isDragging, _isCarrying, _isSwimming, _inCameraMode, _isHandcuffed, _isUnconscious, _isSurrendering, _isShowingIDCard, _isInventoryOpened, _inWeaponAnimation];
+_conditions = [_inUAV, _inZeus, _isOnMap, _inStairs, _inVehicle, _isNotAlive, _isDragging, _isCarrying, _isSwimming, _inCameraMode, _isHandcuffed, _isUnconscious, _isSurrendering, _isShowingIDCard, _isWeaponDeployed, _isInventoryOpened, _inWeaponAnimation];
 {_conditions set [_x, nil]} forEach _excludedConditions;
 true in _conditions

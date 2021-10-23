@@ -5,7 +5,7 @@
  * Description:
  * Teletransporta a la unidad a la azotea/techo ó planta baja del edificio,
  * según sea el caso.
- * 
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
@@ -25,7 +25,7 @@ _this spawn {
 
   _unit allowDamage false;
   _unit setCaptive true;
-  [_unit, "inStairs"] call ACE_Common_fnc_hideUnit;
+  [_unit, []] call ACE_Common_fnc_hideUnit;
   _unit setDir _dir;
   _unit setPosATL _pos;
   _unit attachTo [_building];

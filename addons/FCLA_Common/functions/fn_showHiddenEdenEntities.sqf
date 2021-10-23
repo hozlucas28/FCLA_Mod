@@ -3,8 +3,9 @@
  * Author: hozlucas28
  *
  * Description:
- * Oculta todas las entidades que fueron colocadas con el Eden editor, menos a
- * los jugadores, que se encuentran dentro del radio enviado como argumento.
+ * Muestra las entidades del Eden editor, que fueron ocultadas por
+ * la función 'FCLA_Common_fnc_hideEdenEntities', dentro del radio
+ * enviado como argumento.
  *
  * Arguments:
  *            0: Centro del radio de búsqueda. <POSITION|UNIT|OBJECT|GROUP|MARKER|LOCATION>
@@ -14,13 +15,9 @@
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
- * Note:
- * Si se quiere excluir una entidad específica asignale la variable de tipo
- * objeto "FCLA_Exclude_Concealment" con un valor verdadero.
- *
- * Examples:
- * [getPos player, 150] call FCLA_Common_fnc_hideEdenEntities; //IA no excluida.
- * [getPos player, 150, true] call FCLA_Common_fnc_hideEdenEntities; //IA excluida.
+ * Example:
+ * [getPos player, 150] call FCLA_Common_fnc_showHiddenEdenEntities; //IA no excluida.
+ * [getPos player, 150, true] call FCLA_Common_fnc_showHiddenEdenEntities; //IA excluida.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -35,23 +32,23 @@ if (_rad <= 0) exitWith {false};
 
 
 
-//Determina las entidades a ocultar.
+//Determina las entidades a mostrar.
 _centerPos = [_center] call CBA_fnc_getPos;
 _nearEntities = ((nearestObjects [_centerPos, [], _rad, true]) + (nearestTerrainObjects [_centerPos, [], _rad, true, true])) - allPlayers;
-_entitiesToHide = switch (_excludeAI) do {
+_entitiesToShow = switch (_excludeAI) do {
 	case true: {_nearEntities - allUnits;};
 	case false: {_nearEntities;};
 };
 
 
-//Oculta las entidades.
+//Muestra las entidades.
 {
-  _hideUnit = !(_excludeAI) || ((count (fullCrew _x)) <= 0);
-  _isNotExcluded = !(_x getVariable ["FCLA_Exclude_Concealment", false]);
+  _ShowUnit = !(_excludeAI) || ((count (fullCrew _x)) <= 0);
+  _isHiddenEntity = _x getVariable ["FCLA_Hidden", false];
 
-	if ((_hideUnit) && (_isNotExcluded)) then {
-    [_x, []] call ACE_Common_fnc_hideUnit;
-  	_x setVariable ["FCLA_Hidden", true, true];
+	if ((_ShowUnit) || (_isHiddenEntity)) then {
+    [_x, []] call ace_common_fnc_unhideUnit;
+  	_x setVariable ["FCLA_Hidden", nil, true];
   };
-} forEach _entitiesToHide;
+} forEach _entitiesToShow;
 true

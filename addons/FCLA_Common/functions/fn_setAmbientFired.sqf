@@ -14,7 +14,7 @@
  *
  * Examples:
  * [AA_1] spawn FCLA_Common_fnc_setAmbientFired; //Opcionales no definidos.
- * [AA_1, (weapons AA_1) select 0, (magazines AA_1) select 0, [10, 20], [4, 8]] spawn FCLA_Common_fnc_setAmbientFired; //Opcionales definidos.
+ * [AA_2, (weapons AA_2) select 0, (magazines AA_2) select 0, [10, 20], [4, 8]] spawn FCLA_Common_fnc_setAmbientFired; //Opcionales definidos.
  *
  * Note:
  * Script para obtener las torretas del vehículo: <weapons VEHICLE;>
@@ -35,7 +35,7 @@ _this spawn {
 	_maximumShots = ceil (_arrayNumberOfShots select 1);
 	_minimumDelay = _arrayDelayOfShots select 0;
 	_maximumDelay = _arrayDelayOfShots select 1;
-	if ((isNull _vehicle) || (_turretType == "") || (_ammoType == "") || (_minimumShots < 0) || (_maximumShots < 0) || (_minimumDelay < 0) || (_maximumDelay < 0)) exitWith {};
+	if ((isNull _vehicle) || (_turretType == "") || (_ammoType == "") || (_minimumShots <= 0) || (_maximumShots <= 0) || (_minimumDelay <= 0) || (_maximumDelay <= 0)) exitWith {};
 
 
 

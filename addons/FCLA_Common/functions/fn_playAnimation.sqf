@@ -35,7 +35,7 @@ params [
 
 
 
-//Verficar argumentos.
+//Verificar argumentos.
 _inVehicle = if (_typeOfReproduction == "SwitchMove") then {!isNull objectParent _caller} else {false};;
 _isUnitPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];
 _acceptedTypesOfReproduction = ["playAction", "playActionNow", "PlayMove", "PlayMoveNow", "SwitchMove"];

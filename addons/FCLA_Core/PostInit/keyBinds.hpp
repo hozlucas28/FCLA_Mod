@@ -31,12 +31,10 @@
 	{
 		_unit = call CBA_fnc_currentUnit;
 		_stance = stance _unit;
-		_isWeaponDeployed = isWeaponDeployed _unit;
+		_severalConditions = [_unit] call FCLA_Common_fnc_severalConditions;
 		_isPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];
 		_isNotTouchingGround = !isTouchingGround _unit;
-		_generalCheck = [_unit] call FCLA_Common_fnc_severalConditions;
-		if ((!FCLA_Kick_Door_Allowed) || ((_stance != "STAND")) || (_isWeaponDeployed) || (_isPlayingAnimation) || (_isNotTouchingGround) || (_generalCheck)) exitWith {};
-
+		if ((!FCLA_Kick_Door_Allowed) || (_stance != "STAND") || (_severalConditions) || (_isPlayingAnimation) || (_isNotTouchingGround)) exitWith {};
 		[_unit] spawn FCLA_Immersions_fnc_initKickDoor;
 	},
 	{},
@@ -55,10 +53,9 @@
 	["Abrir puerta progresivamente", "Preciona 'Tecla asignada' + Rueda del mouse para abrir progresivamente la puerta que estes mirando."],
 	{
 		_unit = call CBA_fnc_currentUnit;
-		_generalCheck = [_unit] call FCLA_Common_fnc_severalConditions;
+		_severalConditions = [_unit, [14, 16]] call FCLA_Common_fnc_severalConditions;
 		_isNotTouchingGround = !isTouchingGround _unit;
-		if ((_generalCheck) || (_isNotTouchingGround)) exitWith {};
-
+		if ((_severalConditions) || (_isNotTouchingGround)) exitWith {};
 		missionNamespace setVariable ["FCLA_POD_Activated", true];
 	},
 	{missionNamespace setVariable ["FCLA_POD_Activated", false];},
@@ -77,11 +74,10 @@
 	["Silbar","Preciona 'Tecla asignada' para que tu personaje silbe."],
 	{
 		_unit = call CBA_fnc_currentUnit;
-		_randomSound = selectRandom ["FCLA_Hiss_1", "FCLA_Hiss_2"]
-		_generalCheck = [_unit] call FCLA_Common_fnc_severalConditions;
+		_severalConditions = [_unit, [6, 7, 12, 14, 16]] call FCLA_Common_fnc_severalConditions;
 		_isNotTouchingGround = !isTouchingGround _unit;
-		if ((_generalCheck) || (_isNotTouchingGround)) exitWith {};
-
+		if ((_severalConditions) || (_isNotTouchingGround)) exitWith {};
+		_randomSound = selectRandom ["FCLA_Hiss_1", "FCLA_Hiss_2"];
 		[_unit, _randomSound, 1, false] call FCLA_Common_fnc_globalSay3D;
 	},
 	{},
@@ -101,11 +97,10 @@
 	{
 		_unit = call CBA_fnc_currentUnit;
 		_isProne = stance _unit == "PRONE";
-		_isWeaponDeployed = isWeaponDeployed _unit;
-		_notUsingPrimaryWeapon = currentWeapon _unit != primaryWeapon _unit;
-		_generalCheck = [_unit] call FCLA_Common_fnc_severalConditions;
+		_severalConditions = [_unit] call FCLA_Common_fnc_severalConditions;
 		_isNotTouchingGround = !isTouchingGround _unit;
-		if ((_isProne) || (_isWeaponDeployed) || (_notUsingPrimaryWeapon) || (_generalCheck) || (_isNotTouchingGround)) exitWith {};
+		_notUsingPrimaryWeapon = currentWeapon _unit != primaryWeapon _unit;
+		if ((_isProne) || (_severalConditions) || (_isNotTouchingGround) || (_notUsingPrimaryWeapon)) exitWith {};
 
 		_inTacticalPosition = _unit getVariable ["FCLA_inTactical_Position", false];
 		if (!_inTacticalPosition) then {
@@ -113,19 +108,16 @@
 			[_unit, "FCLA_Animation_Tactical_Position_Up", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 
 			[{
-				(_this select 0) params [["_unit", call CBA_fnc_currentUnit]];
-				_isProne = stance _unit == "PRONE";
-				_isWeaponDeployed = isWeaponDeployed _unit;
-				_notUsingPrimaryWeapon = currentWeapon _unit != primaryWeapon _unit;
-				_generalCheck = [_unit] call FCLA_Common_fnc_severalConditions;
-				_isNotTouchingGround = !isTouchingGround _unit;
-				(isNil {_unit getVariable "FCLA_inTactical_Position"}) || (_isProne) || (_isWeaponDeployed) || (_notUsingPrimaryWeapon) || (_generalCheck) || (_isNotTouchingGround);
+				_isProne = stance _this == "PRONE";
+				_severalConditions = [_this] call FCLA_Common_fnc_severalConditions;
+				_isNotTouchingGround = !isTouchingGround _this;
+				_notUsingPrimaryWeapon = currentWeapon _this != primaryWeapon _this;
+				(isNil {_this getVariable "FCLA_inTactical_Position"}) || (_isProne) || (_severalConditions) || (_isNotTouchingGround) || (_notUsingPrimaryWeapon);
 			}, {
-				(_this select 0) params [["_unit", call CBA_fnc_currentUnit]];
-				if (isNil {_unit getVariable "FCLA_inTactical_Position"}) exitWith {};
-				if (alive _unit) then {[_unit, "FCLA_Animation_tacticalPosition_End", "playActionNow"] call FCLA_Common_fnc_playAnimation;};
-				_unit setVariable ["FCLA_inTactical_Position", nil, true];
-			}, [_unit]] call CBA_fnc_waitUntilAndExecute;
+				if (isNil {_this getVariable "FCLA_inTactical_Position"}) exitWith {};
+				if (alive _this) then {[_this, "FCLA_Animation_tacticalPosition_End", "playActionNow"] call FCLA_Common_fnc_playAnimation;};
+				_this setVariable ["FCLA_inTactical_Position", nil, true];
+			}, _unit] call CBA_fnc_waitUntilAndExecute;
 		} else {
 			_unit setVariable ["FCLA_inTactical_Position", nil, true];
 			[_unit, "FCLA_Animation_tacticalPosition_End", "playActionNow"] call FCLA_Common_fnc_playAnimation;
@@ -145,11 +137,10 @@
 	{
 		_unit = call CBA_fnc_currentUnit;
 		_isProne = stance _unit == "PRONE";
-		_isWeaponDeployed = isWeaponDeployed _unit;
+		_severalConditions = [_unit] call FCLA_Common_fnc_severalConditions;
 		_notUsingPrimaryWeapon = currentWeapon _unit != primaryWeapon _unit;
-		_generalCheck = [_unit] call FCLA_Common_fnc_severalConditions;
 		_isNotTouchingGround = !isTouchingGround _unit;
-		if ((_isProne) || (_isWeaponDeployed) || (_notUsingPrimaryWeapon) || (_generalCheck) || (_isNotTouchingGround)) exitWith {};
+		if ((_isProne) || (_severalConditions) || (_notUsingPrimaryWeapon) || (_isNotTouchingGround)) exitWith {};
 
 		_inTacticalPosition = _unit getVariable ["FCLA_inTactical_Position", false];
 		if (!_inTacticalPosition) then {
@@ -157,19 +148,16 @@
 			[_unit, "FCLA_Animation_Tactical_Position_Down", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 
 			[{
-				(_this select 0) params [["_unit", call CBA_fnc_currentUnit]];
-				_isProne = stance _unit == "PRONE";
-				_isWeaponDeployed = isWeaponDeployed _unit;
-				_notUsingPrimaryWeapon = currentWeapon _unit != primaryWeapon _unit;
-				_generalCheck = [_unit] call FCLA_Common_fnc_severalConditions;
-				_isNotTouchingGround = !isTouchingGround _unit;
-				(isNil {_unit getVariable "FCLA_inTactical_Position"}) || (_isProne) || (_isWeaponDeployed) || (_notUsingPrimaryWeapon) || (_generalCheck) || (_isNotTouchingGround);
+				_isProne = stance _this == "PRONE";
+				_severalConditions = [_this] call FCLA_Common_fnc_severalConditions;
+				_isNotTouchingGround = !isTouchingGround _this;
+				_notUsingPrimaryWeapon = currentWeapon _this != primaryWeapon _this;
+				(isNil {_this getVariable "FCLA_inTactical_Position"}) || (_isProne) || (_severalConditions) || (_isNotTouchingGround) || (_notUsingPrimaryWeapon);
 			}, {
-				(_this select 0) params [["_unit", call CBA_fnc_currentUnit]];
-				if (isNil {_unit getVariable "FCLA_inTactical_Position"}) exitWith {};
-				if (alive _unit) then {[_unit, "FCLA_Animation_tacticalPosition_End", "playActionNow"] call FCLA_Common_fnc_playAnimation;};
-				_unit setVariable ["FCLA_inTactical_Position", nil, true];
-			}, [_unit]] call CBA_fnc_waitUntilAndExecute;
+				if (isNil {_this getVariable "FCLA_inTactical_Position"}) exitWith {};
+				if (alive _this) then {[_this, "FCLA_Animation_tacticalPosition_End", "playActionNow"] call FCLA_Common_fnc_playAnimation;};
+				_this setVariable ["FCLA_inTactical_Position", nil, true];
+			}, _unit] call CBA_fnc_waitUntilAndExecute;
 		} else {
 			_unit setVariable ["FCLA_inTactical_Position", nil, true];
 			[_unit, "FCLA_Animation_tacticalPosition_End", "playActionNow"] call FCLA_Common_fnc_playAnimation;

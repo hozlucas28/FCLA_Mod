@@ -82,14 +82,15 @@ _EventHandlerID = [_vehicle, "Dammaged", {
       ["FCLA_Shellshock", _x, _x] call CBA_fnc_targetEvent;
       _haveDestroyedWeapons = _x getVariable ["FCLA_Weapons_Destroyed", false];
       _haveDestroyedItems = _x getVariable ["FCLA_Items_Destroyed", false];
-      if ((!_haveDestroyedWeapons) && (!_haveDestroyedItems)) exitWith {};
-
-      _textToDisplay = switch (true) do {
-        case ((_haveDestroyedWeapons) && !(_haveDestroyedItems)): {"Algunas de tus armas se han dañado."};
-        case (!(_haveDestroyedWeapons) && (_haveDestroyedItems)): {"Algunos de tus items se han dañado."};
-        default {"Algunas de tus armas e items se han dañado."};
+      
+      if ((_haveDestroyedWeapons) || (_haveDestroyedItems)) then {
+        _textToDisplay = switch (true) do {
+          case ((_haveDestroyedWeapons) && !(_haveDestroyedItems)): {"Algunas de tus armas se han dañado."};
+          case (!(_haveDestroyedWeapons) && (_haveDestroyedItems)): {"Algunos de tus items se han dañado."};
+          default {"Algunas de tus armas e items se han dañado."};
+        };
+        [{["FCLA_Notify", [_this select 0, 1, [1, 0, 0, 1]], _this select 1] call CBA_fnc_targetEvent;}, [_textToDisplay, _x], 5] call CBA_fnc_waitAndExecute;
       };
-      [{["FCLA_Notify", [_this select 0, 1, [1, 0, 0, 1]], _this select 1] call CBA_fnc_targetEvent;}, [_textToDisplay, _x], 5] call CBA_fnc_waitAndExecute;
     };
 
     //Eliminar variables.

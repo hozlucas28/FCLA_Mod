@@ -1,52 +1,57 @@
 
 /* ----------------------------------------------------------------------------
-Direction: "\FCLA_Scripts\Others\Helipad_Lights.sqf"
-
-Description:
-    Spawnea la cantidad enviada de luces, del color elegido, en el helipuerto enviado.
-    Este debe ser un helipuerto con forma redondeada.
-
-Arguments:
-    _helipad - variable del helipuerto.
-		_numberOfLights - número de luces a colocar, evite exagerar la cantidad.
-		_coloredLights -  color de las luces, valores posibles: "Red", "Green" ó "Yellow". Con las comillas.
-
-Example:
-    //Colocar este código en el 'inic.' de un helipuerto redondo.
-    null = [this, 8, "Yellow"] execVM "\FCLA_Scripts\Others\Helipad_Lights.sqf";
-
-Tips:
-		# Evita exagerar el número de luces a colocar ('_numberOfLights'), recuerda que puedes
-      afectar negativamente el rendimiento.
-
-Public: [Yes]
-
-Author:
-    hozlucas28
+ * Author: hozlucas28
+ *
+ * Description:
+ * Coloca luces alrededor del helipuerto, enviado como argumento.
+ *
+ * Arguments:
+ *            0: Helipuerto donde se colocaran las luces. <OBJECT>
+ *            1: Número de luces a colocar, opcional. <NUMBER> (default: 10)
+ *            2: Color de las luces, opcional. <"Yellow"|"Red"|"Green"> (default: "Yellow")
+ *
+ * Return Value:
+ * ¿Se ha ejecutado con exito la función? <BOOL>
+ *
+ * Examples:
+ * [Helipad_1] call FCLA_Common_fnc_setHelipadLights; //Opcionales no definidos.
+ * [Helipad_2, 5, "Red"] call FCLA_Common_fnc_setHelipadLights; //Opcionales definidos.
+ *
+ * Public: [Yes]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.
-params ["_helipad", "_numberOfLights", "_coloredLights"];
-if (!(isServer)) exitWith {};
+params [
+        ["_helipad", objNull, [objNull], 0],
+        ["_numberOfLights", 10, [0], 0],
+        ["_colorOfLights", "Yellow", [""], 0]
+       ];
 
 
 
-//Variables locales.
+//Verificar argumentos.
+_compatiblehelipads = ["Land_HelipadCircle_F", "Land_HelipadCivil_F", "Land_JumpTarget_F", "HeliH", "Heli_H_civil", "HeliHCivil", "PARACHUTE_TARGET"];
+_compatibleColorOfLights = ["Yellow", "Red", "Green"];
+if ((isNull _helipad) || !((typeOf _helipad) in _compatiblehelipads) || (_numberOfLights <= 0) || !(_colorOfLights in _compatibleColorOfLights)) exitWith {false};
+
+
+//Definir variables locales.
 _helipadPos = getPos _helipad;
 _spaceBetweenLights	= 360/_numberOfLights;
-_typeOfLight = switch (_coloredLights) do {
-    case "Red": {"Land_Flush_Light_red_F"};
-    case "Green": {"Land_Flush_Light_green_F"};
-    case "Yellow": {"Land_Flush_Light_yellow_F"};
-    default {"Land_Flush_Light_yellow_F"};
+_classnameOfLight = switch (_colorOfLights) do {
+  case "Yellow": {"Land_Flush_Light_yellow_F"};
+  case "Red": {"Land_Flush_Light_red_F"};
+  case "Green": {"Land_Flush_Light_green_F"};
 };
 
-_helipad enableSimulationGlobal false;
-for "_helipadCircle" from 1 to 360 step _spaceBetweenLights do {
-  _helipadX = (_helipadPos select 0) + (sin (_helipadCircle)*5.75);
-  _helipadY = (_helipadPos select 1) + (cos (_helipadCircle)*5.75);
+
+//Colocar luces.
+for "_i" from 1 to 360 step _spaceBetweenLights do {
+  _helipadX = (_helipadPos select 0) + (sin (_i) * 5.75);
+  _helipadY = (_helipadPos select 1) + (cos (_i) * 5.75);
   _helipadLightPos = [_helipadX, _helipadY, _helipadPos select 2];
-  _light = createVehicle [_typeOfLight, _helipadLightPos, [], 0, "CAN_COLLIDE"];
-  _light modelToWorld _helipadLightPos;
-  _light enableSimulationGlobal false;
+  _lightObj = createVehicle [_classnameOfLight, _helipadLightPos, [], 0, "CAN_COLLIDE"];
+  _lightObj modelToWorld _helipadLightPos;
+  _lightObj attachTo [_helipad];
 };
+true

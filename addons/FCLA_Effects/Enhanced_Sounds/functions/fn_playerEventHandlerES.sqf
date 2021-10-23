@@ -15,9 +15,9 @@
   params ["_unit", "_newCameraMode", "_oldCameraMode"];
   _noWeaponOnHand = currentWeapon _unit == "";
   _isWeaponLowered = weaponLowered _unit;
-  _generalCheck = [_unit] call FCLA_Common_fnc_severalConditions;
+  _severalConditions = [_unit, [8, 14]] call FCLA_Common_fnc_severalConditions;
   _isNotTouchingGround = !isTouchingGround _unit;
-  if ((!FCLA_Aim_Sounds) || (_noWeaponOnHand) || (_isWeaponLowered) || (_generalCheck) || (_isNotTouchingGround)) exitWith {};
+  if ((!FCLA_Aim_Sounds) || (_noWeaponOnHand) || (_isWeaponLowered) || (_severalConditions) || (_isNotTouchingGround)) exitWith {};
 
   switch (_newCameraMode) do {
     case "Internal": {

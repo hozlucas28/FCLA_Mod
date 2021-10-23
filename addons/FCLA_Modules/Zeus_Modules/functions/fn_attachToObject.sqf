@@ -26,7 +26,7 @@ _actionAttachTo = [
  {
    params ["_position", "_objects", "_groups", "_waypoints", "_markers", "_hoveredEntity", "_args"];
    player attachTo [(_objects select 0), [0, 0, 0]];
-   player hideObjectGlobal true;
+   [player, []] call ACE_Common_fnc_hideUnit;
    player setCaptive true;
    ["Pegado con éxito."] call zen_common_fnc_showMessage;
  },
