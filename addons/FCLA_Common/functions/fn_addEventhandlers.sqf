@@ -24,6 +24,19 @@
 
 
 
+/* -------------------------- MOSTRAR SUBTÍTULOS --------------------------- */
+
+["FCLA_Subtitles", {
+  params [
+          ["_lines", [[]], [[]], []],
+          ["_emitterColor", "", [""], 0],
+          ["_timeToHideEachLine", 0, [0], 0]
+         ];
+  [_lines, _emitterColor, _timeToHideEachLine] spawn FCLA_Common_fnc_showSubtitles;
+}] call CBA_fnc_addEventHandler;
+
+
+
 /* ---------------------- GENERAR EFECTO DE CONMOCIÓN ---------------------- */
 
 ["FCLA_Shellshock", {

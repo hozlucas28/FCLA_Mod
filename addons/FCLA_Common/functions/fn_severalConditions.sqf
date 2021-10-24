@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si la unidad enviada como primer parámetro cumple con las condiciones
- * listadas.
+ * Verifica si la unidad enviada, como primer argumento, cumple con las
+ * condiciones listadas.
  *
  * Conditions:
  *             0: ¿Esta controlando un UAV?
@@ -28,6 +28,7 @@
  * Arguments:
  *            0: Unidad a verificar. <UNIT>
  *            1: Condiciones a excluir, opcional. <ARRAY OF NUMBER/S> (default: [])
+ *                # Numeros aceptados: 0 al 16 incluídos (guiarse con el comentario "Conditions").
  *
  * Return Value:
  * ¿Cumple con las condiciones? <BOOL>

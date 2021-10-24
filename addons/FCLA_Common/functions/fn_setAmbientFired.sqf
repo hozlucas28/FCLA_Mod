@@ -17,6 +17,7 @@
  * [AA_2, (weapons AA_2) select 0, (magazines AA_2) select 0, [10, 20], [4, 8]] spawn FCLA_Common_fnc_setAmbientFired; //Opcionales definidos.
  *
  * Note:
+ * Si los argumentos no son válidos la función no se ejecutara.
  * Script para obtener las torretas del vehículo: <weapons VEHICLE;>
  * Script para obtener las municiones del vehículo: <magazines VEHICLE;>
  *
@@ -31,6 +32,10 @@ _this spawn {
 					["_arrayNumberOfShots", [15, 30], [[]], [0, 1, 2]],
 					["_arrayDelayOfShots", [5, 10], [[]], [0, 1, 2]]
 	       ];
+
+
+
+	//Verificar argumentos.
 	_minimumShots = ceil (_arrayNumberOfShots select 0);
 	_maximumShots = ceil (_arrayNumberOfShots select 1);
 	_minimumDelay = _arrayDelayOfShots select 0;
@@ -38,7 +43,7 @@ _this spawn {
 	if ((isNull _vehicle) || (_turretType == "") || (_ammoType == "") || (_minimumShots <= 0) || (_maximumShots <= 0) || (_minimumDelay <= 0) || (_maximumDelay <= 0)) exitWith {};
 
 
-
+	//Definir condiciones.
 	_conditions = {
 		_isAlive = alive _this;
 		_areCrewAlive = ({alive _x} count (crew _this)) != 0;
@@ -47,10 +52,11 @@ _this spawn {
 	};
 
 
+	//Forzar disparos.
 	while {_vehicle call _conditions} do {
-		_rounds = random [_minimumShots, _maximumShots/2, _maximumShots];
+		_rounds = random [_minimumShots, _maximumShots / 2, _maximumShots];
 		_target = (_vehicle modelToWorld [-900 + random 1800, random 500 + 800, random 400 + 500]);
-		_randomDelay = random [_minimumDelay, _maximumDelay/2, _maximumDelay];
+		_randomDelay = random [_minimumDelay, _maximumDelay / 2, _maximumDelay];
 		_vehicle setVehicleAmmo 1;
 		_vehicle doWatch _target;
 

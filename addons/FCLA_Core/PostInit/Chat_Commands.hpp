@@ -63,14 +63,14 @@ if (_isCuratorEnhancedModLoaded) then {
     if (_isNotAnEditor) exitWith {[{systemChat "No puedes utilizar este comando, salvo que seas parte de 'Mando' o seas editor oficial.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
     if (_currentControledUnit != player) exitWith {[{systemChat "No puedes utilizar este comando si estas controlando a una unidad.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
 
-    switch (_value) do {
-      case "true": {
+    switch (Upper _value) do {
+      case "TRUE": {
         [player] call ZEN_Common_fnc_createZeus;
         if (!ACE_Zeus_zeusAscension) then {[format ["%1 obtuvo Zeus a travez del comando de chat.", name player]] remoteExec ["systemChat", 0];};
         [format ["Mod FCLA - %1 obtuvo Zeus a travez del comando de chat.", name player]] call ACE_Common_fnc_serverLog;
       };
 
-      case "false": {
+      case "FALSE": {
         deleteVehicle (getAssignedCuratorLogic player);
         [format ["%1 solto el Zeus a travez del comando de chat.", name player]] remoteExec ["systemChat", 0];
         [format ["Mod FCLA - %1 solto el Zeus a travez del comando de chat.", name player]] call ACE_Common_fnc_serverLog;

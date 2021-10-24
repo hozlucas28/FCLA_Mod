@@ -9,8 +9,8 @@
  *            0: Unidad que realizara la animación. <UNIT>
  *            1: Classname de la animación a reproducir. <STRING>
  *            2: Tipo de reproducción de la animación.
- *                # Valores aceptados: "playAction", "playActionNow",
- *                                     "PlayMove", "PlayMoveNow" y "SwitchMove".
+ *                # Reproducciones aceptadas: "playAction", "playActionNow",
+ *                                            "PlayMove", "PlayMoveNow" y "SwitchMove".
  *
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
@@ -45,11 +45,11 @@ if ((isNull _unit) || !(_typeOfReproduction in _acceptedTypesOfReproduction) || 
 //Reproducir animación.
 _unit setVariable ["FCLA_Playing_Animation", true, true];
 switch (_typeOfReproduction) do {
-  case "playAction": {[_unit, _animation] call ACE_Common_fnc_doGesture;};
-  case "playActionNow": {[_unit, _animation] call ACE_Common_fnc_doGesture;};
-  case "PlayMove": {[_unit, _animation, 0] call ACE_Common_fnc_doAnimation;};
-  case "PlayMoveNow": {[_unit, _animation, 1] call ACE_Common_fnc_doAnimation;};
-  case "SwitchMove": {[_unit, _animation, 2] call ACE_Common_fnc_doAnimation;};
+  case "PLAYACTION": {[_unit, _animation] call ACE_Common_fnc_doGesture;};
+  case "PLAYACTIONNOW": {[_unit, _animation] call ACE_Common_fnc_doGesture;};
+  case "PLAYMOVE": {[_unit, _animation, 0] call ACE_Common_fnc_doAnimation;};
+  case "PLAYMOVENOW": {[_unit, _animation, 1] call ACE_Common_fnc_doAnimation;};
+  case "SWITCHMOVE": {[_unit, _animation, 2] call ACE_Common_fnc_doAnimation;};
 };
 
 

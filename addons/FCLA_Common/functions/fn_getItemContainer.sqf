@@ -10,6 +10,7 @@
  *            0: Unidad a verificar. <UNIT>
  *            1: Classname del item. <STRING>
  *            2: Contenedores excluidos, opcional. <ARRAY OF STRINGS> (default: [])
+ *                # Contenedores aceptadas: "Uniform", "Vest" y "Backpack".
  *
  * Return Value:
  * Contenedor/es en el que se encuentra el item. <STRING|ARRAY>

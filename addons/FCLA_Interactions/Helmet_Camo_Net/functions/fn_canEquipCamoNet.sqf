@@ -22,9 +22,9 @@ _notInCameraMode = !(_caller in (call ACE_Spectator_fnc_players));
 _isTouchingGround = isTouchingGround _caller;
 _isNotSurrendering = !(_caller getVariable ["ACE_Captives_isSurrendering", false]);
 _haveCompatibleHelmet = _currentHeadgear in _compatibleHelmets;
-_haveCamoNetItem = switch (_typeOfCamoNet) do {
-	case "Arid": {[_caller, "FCLA_Camo_Net_Arid"] call BIS_fnc_hasItem;};
-	case "Tropical": {[_caller, "FCLA_Camo_Net_Tropical"] call BIS_fnc_hasItem;};
+_haveCamoNetItem = switch (Upper _typeOfCamoNet) do {
+	case "ARID": {[_caller, "FCLA_Camo_Net_Arid"] call BIS_fnc_hasItem;};
+	case "TROPICAL": {[_caller, "FCLA_Camo_Net_Tropical"] call BIS_fnc_hasItem;};
   default {false};
 };
 (_isNotOnMap) && (_notInStairs) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_notInCameraMode) && (_isTouchingGround) && (_isNotSurrendering) && (_haveCompatibleHelmet) && (_haveCamoNetItem)

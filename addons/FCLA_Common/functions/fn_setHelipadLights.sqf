@@ -8,7 +8,8 @@
  * Arguments:
  *            0: Helipuerto donde se colocaran las luces. <OBJECT>
  *            1: Número de luces a colocar, opcional. <NUMBER> (default: 10)
- *            2: Color de las luces, opcional. <"Yellow"|"Red"|"Green"> (default: "Yellow")
+ *            2: Color de las luces, opcional. <STRING> (default: "Yellow")
+ *                # Colores aceptados: "Yellow", "Red" y "Green".
  *
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
@@ -38,10 +39,10 @@ if ((isNull _helipad) || !((typeOf _helipad) in _compatiblehelipads) || (_number
 //Definir variables locales.
 _helipadPos = getPos _helipad;
 _spaceBetweenLights	= 360/_numberOfLights;
-_classnameOfLight = switch (_colorOfLights) do {
-  case "Yellow": {"Land_Flush_Light_yellow_F"};
-  case "Red": {"Land_Flush_Light_red_F"};
-  case "Green": {"Land_Flush_Light_green_F"};
+_classnameOfLight = switch (Upper _colorOfLights) do {
+  case "YELLOW": {"Land_Flush_Light_yellow_F"};
+  case "RED": {"Land_Flush_Light_red_F"};
+  case "GREEN": {"Land_Flush_Light_green_F"};
 };
 
 

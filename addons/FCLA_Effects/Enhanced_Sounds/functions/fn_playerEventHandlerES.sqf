@@ -19,13 +19,13 @@
   _isNotTouchingGround = !isTouchingGround _unit;
   if ((!FCLA_Aim_Sounds) || (_noWeaponOnHand) || (_isWeaponLowered) || (_severalConditions) || (_isNotTouchingGround)) exitWith {};
 
-  switch (_newCameraMode) do {
-    case "Internal": {
+  switch (Upper _newCameraMode) do {
+    case "INTERNAL": {
       _randomSound = selectRandom ["FCLA_Holster_Weapon_5", "FCLA_Holster_Weapon_1", "FCLA_Holster_Weapon_2", "FCLA_Holster_Weapon_3", "FCLA_Holster_Weapon_4"];
       playSound _randomSound;
     };
 
-    case "Gunner": {
+    case "GUNNER": {
       _randomSound = selectRandom ["FCLA_Weapon_Aim_4", "FCLA_Weapon_Aim_5", "FCLA_Weapon_Aim_1", "FCLA_Weapon_Aim_2", "FCLA_Weapon_Aim_3"];
       playSound _randomSound;
     };

@@ -40,20 +40,20 @@ _ownedDLCs = getDLCs 1;
 
 
 //Verificar si es propietario.
-switch (_DLC) do {
-	case "Zeus": {(275700) in _ownedDLCs};
-	case "Jets": {(601670) in _ownedDLCs};
-  case "Apex": {(395180) in _ownedDLCs};
-  case "Karts": {(288520) in _ownedDLCs};
-  case "Tanks": {(798390) in _ownedDLCs};
-  case "Malden": {(639600) in _ownedDLCs};
-  case "Contact": {(1.02179e+006) in _ownedDLCs};
-  case "Marksmen": {(332350) in _ownedDLCs};
-  case "Art of War": {(1.3255e+006) in _ownedDLCs};
-  case "Laws of War": {(571710) in _ownedDLCs};
-  case "Helicopters": {(304380) in _ownedDLCs};
-  case "CSLA Iron Curtain": {(1.29444e+006) in _ownedDLCs};
-  case "GlobalMobilization": {(1.04222e+006) in _ownedDLCs};
-  case "S.O.G. Prairie Fire": {(1.2277e+006) in _ownedDLCs};
-  case "Tac - Ops Mission Pack": {(744950) in _ownedDLCs};
+switch (toUpper _DLC) do {
+	case "ZEUS": {(275700) in _ownedDLCs};
+	case "JETS": {(601670) in _ownedDLCs};
+  case "APEX": {(395180) in _ownedDLCs};
+  case "KARTS": {(288520) in _ownedDLCs};
+  case "TANKS": {(798390) in _ownedDLCs};
+  case "MALDEN": {(639600) in _ownedDLCs};
+  case "CONTACT": {(1.02179e+006) in _ownedDLCs};
+  case "MARKSMEN": {(332350) in _ownedDLCs};
+  case "ART OF WAR": {(1.3255e+006) in _ownedDLCs};
+  case "LAWS OF WAR": {(571710) in _ownedDLCs};
+  case "HELICOPTERS": {(304380) in _ownedDLCs};
+  case "CSLA IRON CURTAIN": {(1.29444e+006) in _ownedDLCs};
+  case "GLOBALMOBILIZATION": {(1.04222e+006) in _ownedDLCs};
+  case "S.O.G. PRAIRIE FIRE": {(1.2277e+006) in _ownedDLCs};
+  case "TAC - OPS MISSION PACK": {(744950) in _ownedDLCs};
 };
