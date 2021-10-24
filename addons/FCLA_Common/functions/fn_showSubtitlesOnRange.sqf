@@ -73,3 +73,13 @@ _onDesactivation = "(attachedTo thisTrigger) setRandomLip false; [false] spawn F
 _trigger setTriggerStatements [_condition, _onActivation, _onDesactivation];
 _trigger attachTo [_entity];
 true
+
+
+
+
+
+
+/*
+SOLUCIONAR QUE AL USAR LA FUNCION PARA DEJAR DE MOSTRAR LOS SUBTITULOS SI SON MAS DE UNO SE BUGUEA
+ELIMINAR TRIGGER SI LA ENTIDAD ES ELIMINADA
+*/

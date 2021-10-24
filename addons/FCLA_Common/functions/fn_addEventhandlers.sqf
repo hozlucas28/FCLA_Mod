@@ -28,7 +28,7 @@
 
 ["FCLA_Subtitles", {
   params [
-          ["_lines", [[]], [[]], []],
+          ["_lines", [[]], [[], true], []],
           ["_emitterColor", "", [""], 0],
           ["_timeToHideEachLine", 0, [0], 0],
           ["_saveSubtitles", false, [true], 0]

@@ -27,5 +27,5 @@ class FCLA_Common_Functions {
   class showHiddenEdenEntities {};
   class showParentTree {};
   class showSubtitles {};
-  class showSubtitleOnRange {};
+  class showSubtitlesOnRange {};
 };
