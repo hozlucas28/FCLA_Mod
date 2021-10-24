@@ -33,7 +33,7 @@ _this spawn {
   //Ocultar unidad al Zeus.
   _editableObjects = {curatorEditableObjects _x;} forEach allCurators;
   if (_unit in _editableObjects) then {
-    _unit setVariable ["FCLA_Hide_Zeus_iconUnit", true, true];
+    _unit setVariable ["FCLA_Hide_Curator_Icon", true, true];
     {_x removeCuratorEditableObjects [[_unit], true];} forEach allCurators;
   };
 
@@ -48,8 +48,8 @@ _this spawn {
   detach _unit;
 
   //Mostrar unidad al Zeus.
-  if (_unit getVariable ["FCLA_Hide_Zeus_iconUnit", false]) then {
-    _unit setVariable ["FCLA_Hide_Zeus_iconUnit", nil, true];
+  if (_unit getVariable ["FCLA_Hide_Curator_Icon", false]) then {
+    _unit setVariable ["FCLA_Hide_Curator_Icon", nil, true];
     {_x addCuratorEditableObjects [[_unit], true];} forEach allCurators;
   };
 

@@ -8,9 +8,9 @@
  *
  * Conditions:
  *             0: ¿Esta controlando un UAV?
- *             1: ¿Esta utilizando el Zeus?
- *             2: ¿Tiene el mapa abierto?
- *             3: ¿Esta subiendo las escaleras de un edificio?
+ *             1: ¿Tiene el mapa abierto?
+ *             2: ¿Esta subiendo las escaleras de un edificio?
+ *             3: ¿Esta utilizando el Zeus?
  *             4: ¿Esta en un vehículo?
  *             5: ¿Esta vivo?
  *             6: ¿Esta arrastrando un objeto?
@@ -35,7 +35,7 @@
  *
  * Examples:
  * [player] call FCLA_Common_fnc_severalConditions; //Sin condiciones excluidas.
- * [player, [0, 9]] call FCLA_Common_fnc_severalConditions; //Condiciones 1 y 2 excluidas.
+ * [player, [3, 4]] call FCLA_Common_fnc_severalConditions; //Condiciones 3 y 4 excluidas.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -51,9 +51,9 @@ if (isNull _unit) exitWith {false};
 
 //Condiciones.
 _inUAV = ([_unit] call ACE_Common_fnc_getUavControlPosition) != "";
-_inZeus = !isNull findDisplay 312;
 _isOnMap = visibleMap;
 _inStairs = _unit getVariable ["FCLA_inStairs", false];
+_inCurator = !isNull findDisplay 312;
 _inVehicle = !isNull objectParent _unit;
 _isNotAlive = !alive _unit;
 _isDragging = _unit getVariable ["ACE_Dragging_isDragging", false];
@@ -69,6 +69,6 @@ _isInventoryOpened = !isnull (findDisplay 602);
 _inWeaponAnimation = !isNil "FCLA_inWeapon_Animation";
 
 //Excluir condiciones.
-_conditions = [_inUAV, _inZeus, _isOnMap, _inStairs, _inVehicle, _isNotAlive, _isDragging, _isCarrying, _isSwimming, _inCameraMode, _isHandcuffed, _isUnconscious, _isSurrendering, _isShowingIDCard, _isWeaponDeployed, _isInventoryOpened, _inWeaponAnimation];
+_conditions = [_inUAV, _isOnMap, _inStairs, _inCurator, _inVehicle, _isNotAlive, _isDragging, _isCarrying, _isSwimming, _inCameraMode, _isHandcuffed, _isUnconscious, _isSurrendering, _isShowingIDCard, _isWeaponDeployed, _isInventoryOpened, _inWeaponAnimation];
 {_conditions set [_x, nil]} forEach _excludedConditions;
 true in _conditions

@@ -42,7 +42,7 @@ if (_state) then {
 
   _trigger = createTrigger ["EmptyDetector", getpos _shower, false];
   _trigger setTriggerArea [0.75, 0.75, (getDir _shower), true, 2.3];
-  _trigger setTriggerActivation ["ANYPLAYER", "PRESENT", true];
+  _trigger setTriggerActivation ["ANY", "PRESENT", true];
   _trigger setTriggerTimeout [5, 5, 5, true];
   _trigger setTriggerStatements ["(call CBA_fnc_currentUnit) in thisList;", "_unit = (call CBA_fnc_currentUnit); _unit setVariable ['FCLA_CBRN_Enable_Damage', nil, true]; [['| Descontaminación completada |', 1.25, [0.345, 0.839, 0.553, 1]], true] call CBA_fnc_Notify; [_unit, 'quick_view', '%1 fue descontaminado', [name _unit]] call ACE_Medical_Treatment_fnc_addToLog;", ""];
   _trigger attachTo [_shower];

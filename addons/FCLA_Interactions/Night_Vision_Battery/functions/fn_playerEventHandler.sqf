@@ -15,9 +15,9 @@ Author:
 ["visionMode", {
   params ["_unit", "_newVisionMode", "_oldVisionMode"];
   _inUAV = ([_unit] call ace_common_fnc_getUavControlPosition) != "";
-  _inZeus = !isNull findDisplay 312;
+  _inCurator = !isNull findDisplay 312;
   _inCameraMode = _unit in (call ACE_Spectator_fnc_players);
-  if ((!FCLA_visionMode_Sounds) || (_inUAV) || (_inZeus) || (_inCameraMode)) exitWith {};
+  if ((!FCLA_visionMode_Sounds) || (_inUAV) || (_inCurator) || (_inCameraMode)) exitWith {};
 
   switch (_newVisionMode) do {
     case 1: {[_unit, true] spawn FCLA_Interactions_fnc_switchBatteryNVB;};

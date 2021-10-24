@@ -38,14 +38,14 @@
 ["visionMode", {
   params ["_unit", "_newVisionMode", "_oldVisionMode"];
   _inUAV = ([_unit] call ace_common_fnc_getUavControlPosition) != "";
-  _inZeus = !isNull findDisplay 312;
+  _inCurator = !isNull findDisplay 312;
   _inStairs = _unit getVariable ["FCLA_inStairs", false];
   _isNotAlive = !alive _unit;
   _isSwimming = [_unit] call ACE_Common_fnc_isSwimming;
   _inCameraMode = _unit in (call ACE_Spectator_fnc_players);
   _isHandcuffed = _unit getVariable ["ACE_Captives_isHandcuffed", false];
   _isDayVisionMode = _newVisionMode == 0;
-  if ((!FCLA_visionMode_Sounds) || (_inUAV) || (_inZeus) || (_inStairs) || (_isNotAlive) || (_isSwimming) || (_inCameraMode) || (_isHandcuffed) || (_isDayVisionMode)) exitWith {};
+  if ((!FCLA_visionMode_Sounds) || (_inUAV) || (_inCurator) || (_inStairs) || (_isNotAlive) || (_isSwimming) || (_inCameraMode) || (_isHandcuffed) || (_isDayVisionMode)) exitWith {};
 
   [_unit, "FCLA_Vision_Mode_Changed", 2, false] call FCLA_Common_fnc_globalSay3D;
 }, false] call CBA_fnc_addPlayerEventHandler;

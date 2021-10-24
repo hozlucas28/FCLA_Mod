@@ -6,7 +6,7 @@
  * Muestra el texto en pantalla a modo de subtítulos.
  *
  * Arguments:
- *            0: Líneas (textos) que se quieren mostrar. <ARRAY OF LINES>
+ *            0: Líneas (textos) que se quieren mostrar ó ¿Ocultar subtítulos?. <ARRAY OF LINES | BOOL>
  *                - Primera línea con el nombre del emisor y texto a mostrar. <ARRAY OF STRINGS>
  *                - Segunda línea con el nombre del emisor y texto a mostrar. <ARRAY OF STRINGS>
  *                ...
@@ -14,30 +14,36 @@
  *                # Colores aceptados: "SIDE", "VEHICLE", "COMMAND", "GROUP",
  *                                     "DIRECT", "CUSTOM", "SYSTEM", "BLUFOR",
  *                                     "OPFOR", "GUER" y "CIV".
- *            2: Tiempo (en segundos) para ocultar cada línea, una
- *               vez mostrada. <NUMBER>
+ *            2: Tiempo (en segundos) para ocultar cada línea, una vez mostrada. <NUMBER>
+ *            3: ¿Guardar subtítulos?, opcional. <BOOL> (default: false)
  *
  * Examples:
- *            //Ejemplo de una línea.
+ *            //Subtítulo de una línea, no se guardaran.
  *            _line = ["[Sdo] Usted", "Hola mundo!, esto es un ejemplo de una linea!"];
  *            [[_line], "SIDE", 5] spawn FCLA_Common_fnc_showSubtitles;
  *
- *            //Ejemplo de dos líneas.
+ *            //Subtítulos de dos líneas, se guardaran.
  *            _line1 = ["[Cbo] Enemigo", "Hola mundo!, primer linea!"];
  *            _line2 = ["[Cbo] Enemigo", "Adios mundo!, segunda linea!"];
- *            [[_line1, _line2], "OPFOR", 5] spawn FCLA_Common_fnc_showSubtitles;
+ *            [[_line1, _line2], "OPFOR", 5, true] spawn FCLA_Common_fnc_showSubtitles;
+ *
+ *            //Ocultar subtítulos que se estan mostrando.
+ *            [false] spawn FCLA_Common_fnc_showSubtitles;
  *
  * Note:
  * Si los argumentos no son válidos la función no se ejecutara.
+ * Si ha decidido guardar los subtítulos estos se almacenaran en la variable de
+ * tipo objeto "FCLA_Saved_Subtitles".
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
 
 _this spawn {
   params [
-          ["_lines", [[]], [[]], []],
-          ["_emitterColor", "", [""], 0],
-          ["_timeToHideEachLine", 0, [0], 0]
+          ["_lines", [[]], [[], true], []],
+          ["_emitterColor", "SIDE", [""], 0],
+          ["_timeToHideEachLine", 1, [0], 0],
+          ["_saveSubtitles", false, [true], 0]
          ];
 
 
@@ -63,15 +69,14 @@ _this spawn {
   };
 
 
-  //Mostrar líneas.
-  for "_i" from 0 to (count _lines) - 1 do {
-    _currentLine = _lines select _i;
-    _emitterName = _currentLine select 0;
-    _emitterText = _currentLine select 1;
-    if ("" in _currentLine) exitWith {};
-
-    _handle = [_emitterName, _emitterText, _emitterColor, _timeToHideEachLine] spawn {
-      params ["_emitterName", "_emitterText", "_emitterColor", "_timeToHideEachLine"];
+  //Mostrar/Ocultar subtítulos.
+  _loopRepeats = if ((typeName _lines) == "ARRAY") then {count _lines} else {1};
+  for "_i" from 0 to _loopRepeats - 1 do {
+    _handle = [_lines, _emitterColor, _timeToHideEachLine, _i] spawn {
+      params ["_lines", "_emitterColor", "_timeToHideEachLine", "_i"];
+      _currentLine = if ((typeName _lines) == "ARRAY") then {_lines select _i;};
+      _emitterName = if ((typeName _lines) == "ARRAY") then {_currentLine select 0;};
+      _emitterText = if ((typeName _lines) == "ARRAY") then {_currentLine select 1;};
       disableSerialization;
 
       private "_display";
@@ -88,8 +93,14 @@ _this spawn {
       _ctrl ctrlSetFade 1;
       _ctrl ctrlCommit 0;
 
-      _emitterText = parseText format ["<t align = 'center' shadow = '2' size = '0.52'><t color = '%1'>" + _emitterName + ":</t> <t color = '#d0d0d0'>" + _emitterText + "</t></t>", _emitterColor];
-      _ctrl ctrlSetStructuredText _emitterText;
+      if ((typeName _lines) == "BOOL") then {
+        _ctrl ctrlSetStructuredText parseText "";
+        _saveSubtitles = false;
+      } else {
+        _emitterText = parseText format ["<t align='center' shadow='2' size='0.52'><t color='%3'>%1: </t><t color='#d0d0d0'>%2</t></t>", _emitterName, _emitterText, _emitterColor];
+        _ctrl ctrlSetStructuredText _emitterText;
+      };
+
       _ctrl ctrlSetFade 0;
       _ctrl ctrlCommit 0.5;
 
@@ -98,8 +109,12 @@ _this spawn {
       _ctrl ctrlCommit 0.5;
       true
     };
-
     waitUntil {scriptDone _handle};
     sleep 0.5;
   };
+
+
+  //Guardar subtítulos.
+  if (!_saveSubtitles) exitWith {};
+  missionNamespace setVariable ["FCLA_Saved_Subtitles", [_this select 0, _this select 1, _this select 2], true];
 };

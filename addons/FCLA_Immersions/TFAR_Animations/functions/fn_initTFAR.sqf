@@ -25,7 +25,7 @@
 
 
   if (_buttonDown) then {
-    _inZeus = !isNull findDisplay 312;
+    _inCurator = !isNull findDisplay 312;
     _isUsingBackpackRadio = _transceiver == 1;
     _isHeadsetCompatible = ((goggles _unit in FCLA_Radio_Animations_Headgears_Headsets) || (headgear _unit in FCLA_Radio_Animations_Headgears_Headsets));
     _isChestCompatible = vest _unit in FCLA_Radio_Animations_Vests;
@@ -33,7 +33,7 @@
     if (!(weaponLowered _unit)) then {_unit action ["WeaponOnBack", _unit];};
 
     switch (true) do {
-    	case (((!_isUsingBackpackRadio) && (_isHeadsetCompatible) && (_isChestCompatible)) || (_inZeus)): {
+    	case (((!_isUsingBackpackRadio) && (_isHeadsetCompatible) && (_isChestCompatible)) || (_inCurator)): {
         [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
         _animation = if (FCLA_Radio_Animation_Preference == "_headset") then {"FCLA_Animation_TFAR_onEar";} else {"FCLA_Animation_TFAR_onVest";};
         [_unit, _animation, "playActionNow"] call FCLA_Common_fnc_playAnimation;

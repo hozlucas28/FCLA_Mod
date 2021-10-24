@@ -30,9 +30,10 @@
   params [
           ["_lines", [[]], [[]], []],
           ["_emitterColor", "", [""], 0],
-          ["_timeToHideEachLine", 0, [0], 0]
+          ["_timeToHideEachLine", 0, [0], 0],
+          ["_saveSubtitles", false, [true], 0]
          ];
-  [_lines, _emitterColor, _timeToHideEachLine] spawn FCLA_Common_fnc_showSubtitles;
+  [_lines, _emitterColor, _timeToHideEachLine, _saveSubtitles] spawn FCLA_Common_fnc_showSubtitles;
 }] call CBA_fnc_addEventHandler;
 
 
