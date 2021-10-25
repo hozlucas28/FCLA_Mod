@@ -4,7 +4,7 @@
 |********************************************************************************/
 
 class CBRN {
-  class addEventhandlerCBRN {
+  class eventHandlerCBRN {
     file = "\FCLA_Interactions\CBRN\functions\fn_addEventhandlers.sqf";
     postInit = 1;
   };

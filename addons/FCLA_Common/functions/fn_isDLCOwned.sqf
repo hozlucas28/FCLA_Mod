@@ -6,7 +6,7 @@
  * Verifica si el cliente, del entorno de ejecución, es propietario
  * del dlc enviado como argumento.
  *
- * Arguments:
+ * Argument:
  *            0: Nombre del DLC a verificar. <STRING>
  *                # Nombres aceptados: "Zeus", "Jets", "Apex", "Karts",
  *                                     "Tanks", "Malden", "Contact", "Marksmen",

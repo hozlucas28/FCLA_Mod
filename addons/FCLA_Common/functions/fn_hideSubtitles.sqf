@@ -6,7 +6,7 @@
  * Oculta los subtítulos del emisor, mostrados a travez de la función
  * "FCLA_Common_fnc_showSubtitles".
  *
- * Arguments:
+ * Argument:
  *            0: Emisor de los subtítulos. <UNIT|OBJECT>
  *
  * Return Value:
@@ -29,7 +29,7 @@ params [["_emitter", objNull, [objNull, teamMemberNull], 0]];
 
 //Verificar argumento.
 _ctrl = _emitter getVariable "FCLA_Subtitles_ctrl";
-if ((isNull _emitter) || (isNil {_ctrl})) exitWith {false};
+if ((isNull _emitter) || (isNil "_ctrl")) exitWith {false};
 
 
 //Ocultar subtítulos.

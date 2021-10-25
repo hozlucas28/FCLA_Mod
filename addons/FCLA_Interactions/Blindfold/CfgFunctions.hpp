@@ -4,7 +4,7 @@
 |********************************************************************************/
 
 class Blindfold {
-  class addEventhandlerBandage {
+  class eventHandlerBandage {
     file = "\FCLA_Interactions\Blindfold\functions\fn_addEventhandler.sqf";
     postInit = 1;
   };

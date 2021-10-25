@@ -5,7 +5,7 @@
  * Description:
  * Verifica si la unidad enviada como argumento es/tiene Zeus.
  *
- * Arguments:
+ * Argument:
  *            0: Unidad a verificar. <UNIT>
  *
  * Return Value:

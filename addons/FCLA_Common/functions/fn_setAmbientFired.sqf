@@ -12,36 +12,42 @@
  *            3: Cantidad mínima y máxima de disparos, opcional. <ARRAY OF NUMBERS> (default: [15, 30])
  *            4: Tiempo mínimo y máximo (en segundos) para repetir disparos, opcional. <ARRAY OF NUMBERS> (default: [5, 10])
  *
+ * Return Value:
+ * ¿Se ha ejecutado con exito la función? <BOOL>
+ *
  * Examples:
  * [AA_1] spawn FCLA_Common_fnc_setAmbientFired; //Opcionales no definidos.
  * [AA_2, (weapons AA_2) select 0, (magazines AA_2) select 0, [10, 20], [4, 8]] spawn FCLA_Common_fnc_setAmbientFired; //Opcionales definidos.
  *
  * Notes:
- * Si los argumentos no son válidos la función no se ejecutara.
  * Script para obtener las torretas del vehículo: <weapons VEHICLE;>
  * Script para obtener las municiones del vehículo: <magazines VEHICLE;>
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
 
+//Variables de referencia.
+params [
+				["_vehicle", objNull, [objNull], 0],
+				["_turretType", (weapons (_this select 0)) select 0, [""], 0],
+				["_ammoType", (magazines (_this select 0)) select 0, [""], 0],
+				["_arrayNumberOfShots", [15, 30], [[]], [0, 1, 2]],
+				["_arrayDelayOfShots", [5, 10], [[]], [0, 1, 2]]
+			 ];
+
+
+
+//Verificar argumentos.
+_minimumShots = ceil (_arrayNumberOfShots select 0);
+_maximumShots = ceil (_arrayNumberOfShots select 1);
+_minimumDelay = _arrayDelayOfShots select 0;
+_maximumDelay = _arrayDelayOfShots select 1;
+if ((isNull _vehicle) || (_turretType == "") || (_ammoType == "") || (_minimumShots <= 0) || (_maximumShots <= 0) || (_minimumDelay <= 0) || (_maximumDelay <= 0)) exitWith {false};
+
+
+
 _this spawn {
-	params [
-	        ["_vehicle", objNull, [objNull], 0],
-	        ["_turretType", (weapons (_this select 0)) select 0, [""], 0],
-	        ["_ammoType", (magazines (_this select 0)) select 0, [""], 0],
-					["_arrayNumberOfShots", [15, 30], [[]], [0, 1, 2]],
-					["_arrayDelayOfShots", [5, 10], [[]], [0, 1, 2]]
-	       ];
-
-
-
-	//Verificar argumentos.
-	_minimumShots = ceil (_arrayNumberOfShots select 0);
-	_maximumShots = ceil (_arrayNumberOfShots select 1);
-	_minimumDelay = _arrayDelayOfShots select 0;
-	_maximumDelay = _arrayDelayOfShots select 1;
-	if ((isNull _vehicle) || (_turretType == "") || (_ammoType == "") || (_minimumShots <= 0) || (_maximumShots <= 0) || (_minimumDelay <= 0) || (_maximumDelay <= 0)) exitWith {};
-
+	params ["_vehicle", "_turretType", "_ammoType", "_minimumShots", "_maximumShots", "_minimumDelay", "_maximumDelay"];
 
 	//Definir condiciones.
 	_conditions = {
@@ -72,3 +78,4 @@ _this spawn {
 		};
 	};
 };
+true

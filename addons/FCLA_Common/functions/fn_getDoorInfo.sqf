@@ -5,7 +5,7 @@
  * Description:
  * Retorna información variada de la puerta enviada como argumento.
  *
- * Arguments:
+ * Argument:
  *            0: Classname de la puerta. <ARRAY>
  *
  * Return Value:
