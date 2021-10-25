@@ -15,7 +15,7 @@
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
- * Example:
+ * Examples:
  * [getPos player, 150] call FCLA_Common_fnc_showHiddenEdenEntities; //IA no excluida.
  * [getPos player, 150, true] call FCLA_Common_fnc_showHiddenEdenEntities; //IA excluida.
  *

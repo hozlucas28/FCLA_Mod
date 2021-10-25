@@ -14,6 +14,7 @@ class FCLA_Common_Functions {
   class getRandomNumber {};
   class globalSay3D {};
   class hideEdenEntities {};
+  class hideSubtitles {};
   class isAdmin {};
   class isCurator {};
   class isDLCOwned {};
@@ -27,5 +28,4 @@ class FCLA_Common_Functions {
   class showHiddenEdenEntities {};
   class showParentTree {};
   class showSubtitles {};
-  class showSubtitlesOnRange {};
 };

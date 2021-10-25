@@ -16,7 +16,7 @@
  * [AA_1] spawn FCLA_Common_fnc_setAmbientFired; //Opcionales no definidos.
  * [AA_2, (weapons AA_2) select 0, (magazines AA_2) select 0, [10, 20], [4, 8]] spawn FCLA_Common_fnc_setAmbientFired; //Opcionales definidos.
  *
- * Note:
+ * Notes:
  * Si los argumentos no son válidos la función no se ejecutara.
  * Script para obtener las torretas del vehículo: <weapons VEHICLE;>
  * Script para obtener las municiones del vehículo: <magazines VEHICLE;>

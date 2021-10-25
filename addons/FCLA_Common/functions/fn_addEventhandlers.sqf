@@ -10,6 +10,12 @@
 
 
 
+/* -------------------------- MOSTRAR SUBTÍTULOS --------------------------- */
+
+["FCLA_Subtitles", {_this spawn FCLA_Common_fnc_showSubtitles;}] call CBA_fnc_addEventHandler;
+
+
+
 /* ------------------------- MOSTRAR NOTIFICACIÓN -------------------------- */
 
 ["FCLA_Notify", {
@@ -20,20 +26,6 @@
          ];
 
   [[_text, _size, _colorRGBA], true] call CBA_fnc_Notify;
-}] call CBA_fnc_addEventHandler;
-
-
-
-/* -------------------------- MOSTRAR SUBTÍTULOS --------------------------- */
-
-["FCLA_Subtitles", {
-  params [
-          ["_lines", [[]], [[], true], []],
-          ["_emitterColor", "", [""], 0],
-          ["_timeToHideEachLine", 0, [0], 0],
-          ["_saveSubtitles", false, [true], 0]
-         ];
-  [_lines, _emitterColor, _timeToHideEachLine, _saveSubtitles] spawn FCLA_Common_fnc_showSubtitles;
 }] call CBA_fnc_addEventHandler;
 
 
