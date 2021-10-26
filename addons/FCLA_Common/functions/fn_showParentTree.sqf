@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Muestra el arbol genealógico de la entidad, enviada como argumento.
+ * Muestra el arbol genealógico de la entidad, enviada como argumento 0.
  *
  * Arguments:
  *            0: Classname de la entidad. <STRING>

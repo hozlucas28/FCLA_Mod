@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Coloca luces alrededor del helipuerto, enviado como argumento.
+ * Coloca luces alrededor del helipuerto, enviado como argumento 0.
  *
  * Arguments:
  *            0: Helipuerto donde se colocaran las luces. <OBJECT>

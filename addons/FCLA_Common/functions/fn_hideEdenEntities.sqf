@@ -4,10 +4,10 @@
  *
  * Description:
  * Oculta todas las entidades que fueron colocadas con el Eden editor, menos a
- * los jugadores, que se encuentran dentro del radio enviado como argumento.
+ * los jugadores, que se encuentran dentro del radio enviado como argumento 1.
  *
  * Arguments:
- *            0: Centro del radio de búsqueda. <POSITION|UNIT|OBJECT|GROUP|MARKER|LOCATION>
+ *            0: Centro del radio de búsqueda. <POSITION|UNIT|OBJECT|VEHICLE|GROUP|MARKER|LOCATION>
  *            1: Radio de búsqueda. <NUMBER>
  *            2: ¿Excluir IA?, opcional. <BOOL> (default: false)
  *

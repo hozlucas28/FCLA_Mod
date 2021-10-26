@@ -4,7 +4,7 @@
  *
  * Description:
  * Verifica en que contenedor (uniforme, chaleco ó mochila) se encuentra el
- * item enviado como segundo argumento.
+ * item, enviado como argumento 1.
  *
  * Arguments:
  *            0: Unidad a verificar. <UNIT>

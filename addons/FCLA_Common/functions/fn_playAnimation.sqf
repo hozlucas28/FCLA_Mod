@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Reproduce una animación en la unidad enviada como argumento.
+ * Reproduce una animación en la unidad, enviada como argumento 0.
  *
  * Arguments:
  *            0: Unidad que realizara la animación. <UNIT>

@@ -3,12 +3,11 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si hay un jugador cerca de la entidad enviada como
- * primer argumento.
+ * Verifica si hay un jugador cerca de la entidad, enviada como argumento 0.
  *
  * Arguments:
  *            0: Entidad desde donde se verificara la existencia de
-                 un jugador. <POSITION|UNIT|OBJECT|GROUP|MARKER|LOCATION>
+                 un jugador. <POSITION|UNIT|OBJECT|VEHICLE|GROUP|MARKER|LOCATION>
  *
  *            1: Distancia en la que se verificara. <NUMBER>
  *

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si la unidad enviada, como primer argumento, cumple con las
+ * Verifica si la unidad enviada, como argumento 0, cumple con las
  * condiciones listadas.
  *
  * Conditions:

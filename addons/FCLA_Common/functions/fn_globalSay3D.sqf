@@ -7,7 +7,7 @@
  * manera tridimencional (3D).
  *
  * Arguments:
- *            0: Origen del sonido. <OBJECT|UNIT>
+ *            0: Origen del sonido. <UNIT|OBJECT|VEHICLE>
  *            1: Classname del sonido que se quiere reproducir. <STRING>
  *            2: Tiempo en segundos que dura el sonido a reproducir. <NUMBER>
  *            3: Máxima distancia entre el cliente y el origen para reproducir el sonido, opcional. <NUMBER> (default: 100)

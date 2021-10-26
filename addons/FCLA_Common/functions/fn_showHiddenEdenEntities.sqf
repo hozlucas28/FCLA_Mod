@@ -5,10 +5,10 @@
  * Description:
  * Muestra las entidades del Eden editor, que fueron ocultadas por
  * la función 'FCLA_Common_fnc_hideEdenEntities', dentro del radio
- * enviado como argumento.
+ * enviado como argumento 1.
  *
  * Arguments:
- *            0: Centro del radio de búsqueda. <POSITION|UNIT|OBJECT|GROUP|MARKER|LOCATION>
+ *            0: Centro del radio de búsqueda. <POSITION|UNIT|OBJECT|VEHICLE|GROUP|MARKER|LOCATION>
  *            1: Radio de búsqueda. <NUMBER>
  *            2: ¿Excluir IA?, opcional. <BOOL> (default: false)
  *

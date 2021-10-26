@@ -6,6 +6,7 @@
 class FCLA_Common_Functions {
   file = "\FCLA_Common\functions";
   class checkUnitTrait {};
+  class createLoadout {};
   class eventHandlers {postInit = 1;};
   class getDoorInfo {};
   class getItemContainer {};
@@ -24,6 +25,7 @@ class FCLA_Common_Functions {
   class setAdvancedVehicleDamage {};
   class setAmbientFired {};
   class setHelipadLights {};
+  class setRadioFrequencies {};
   class severalConditions {};
   class Shellshock {};
   class showHiddenEdenEntities {};
