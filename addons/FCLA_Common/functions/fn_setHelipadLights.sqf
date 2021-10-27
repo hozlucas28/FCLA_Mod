@@ -31,15 +31,16 @@ params [
 
 
 //Verificar argumentos.
+_colorOfLights = toUpper _colorOfLights;
 _compatiblehelipads = ["Land_HelipadCircle_F", "Land_HelipadCivil_F", "Land_JumpTarget_F", "HeliH", "Heli_H_civil", "HeliHCivil", "PARACHUTE_TARGET"];
-_compatibleColorOfLights = ["Yellow", "Red", "Green"];
+_compatibleColorOfLights = ["YELLOW", "RED", "GREEN"];
 if ((isNull _helipad) || !((typeOf _helipad) in _compatiblehelipads) || (_numberOfLights <= 0) || !(_colorOfLights in _compatibleColorOfLights)) exitWith {false};
 
 
 //Definir variables locales.
 _helipadPos = getPos _helipad;
 _spaceBetweenLights	= 360/_numberOfLights;
-_classnameOfLight = switch (Upper _colorOfLights) do {
+_classnameOfLight = switch (_colorOfLights) do {
   case "YELLOW": {"Land_Flush_Light_yellow_F"};
   case "RED": {"Land_Flush_Light_red_F"};
   case "GREEN": {"Land_Flush_Light_green_F"};

@@ -25,21 +25,17 @@
 
 //Variable de referencia.
 params [["_DLC", "", [""], 0]];
-_acceptedDLCs = [
-                 "Zeus", "Jets", "Apex", "Karts", "Tanks", "Malden", "Contact",
-								 "Marksmen", "Art of War", "Laws of War", "Helicopters",
-								 "S.O.G. Prairie Fire", "CSLA Iron Curtain", "Tac - Ops Mission Pack",
-								 "Global Mobilization"
-								];
+
+
+
+//Verificar argumento.
+_DLC = toUpper _DLC;
+_acceptedDLCs = ["ZEUS", "JETS", "APEX", "KARTS", "TANKS", "MALDEN", "CONTACT", "MARKSMEN", "ART OF WAR", "LAWS OF WAR", "HELICOPTERS", "S.O.G. PRAIRIE FIRE", "CSLA IRON CURTAIN", "TAC - OPS MISSION PACK", "GLOBAL MOBILIZATION"];
 if (!(_DLC in _acceptedDLCs)) exitWith {false};
 
 
-
-//Obtener DLCs comprados.
-_ownedDLCs = getDLCs 1;
-
-
 //Verificar si es propietario.
+_ownedDLCs = getDLCs 1;
 switch (toUpper _DLC) do {
 	case "ZEUS": {(275700) in _ownedDLCs};
 	case "JETS": {(601670) in _ownedDLCs};

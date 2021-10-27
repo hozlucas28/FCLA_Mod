@@ -25,13 +25,17 @@ params [
         ["_unit", objNull, [objNull, teamMemberNull], 0],
         ["_trait", "", [""], 0]
        ];
-_acceptedTraits = ["Medic", "Doctor", "Enginner", "Advanced Enginner", "EOD"];
+
+
+
+//Verificar argumentos.
+_trait = toUpper _trait;
+_acceptedTraits = ["MEDIC", "DOCTOR", "ENGINNER", "ADVANCED ENGINNER", "EOD"];
 if ((isNull _unit) || !(_trait in _acceptedTraits)) exitWith {false};
 
 
-
 //Verficar si cumple con la característica.
-switch (toUpper _trait) do {
+switch (_trait) do {
   case "MEDIC": {(_unit getVariable ["ACE_Medical_medicClass", 0]) == 1};
   case "DOCTOR": {(_unit getVariable ["ACE_Medical_medicClass", 0]) == 2};
   case "ENGINNER": {(_unit getVariable ["ACE_isEngineer", 0]) == 1};

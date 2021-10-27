@@ -46,7 +46,7 @@ if ((isNull _vehicle) || (_turretType == "") || (_ammoType == "") || (_minimumSh
 
 
 
-_this spawn {
+[_vehicle, _turretType, _ammoType, _minimumShots, _maximumShots, _minimumDelay, _maximumDelay] spawn {
 	params ["_vehicle", "_turretType", "_ammoType", "_minimumShots", "_maximumShots", "_minimumDelay", "_maximumDelay"];
 
 	//Definir condiciones.

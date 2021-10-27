@@ -14,9 +14,9 @@
  *                ...
  *
  *            2: Color para el nombre del emisor. <STRING>
- *                # Colores aceptados: "SIDE", "VEHICLE", "COMMAND", "GROUP",
- *                                     "DIRECT", "CUSTOM", "SYSTEM", "BLUFOR",
- *                                     "OPFOR", "GUER" y "CIV".
+ *                # Colores aceptados: "Side", "Vehicle", "Command", "Group",
+ *                                     "Direct", "System", "Blufor",
+ *                                     "Opfor", "Independant" y "Civilian".
  *
  *            3: Tiempo (en segundos) para ocultar cada línea, una vez mostrada. <NUMBER>
  *            4: ¿Guardar subtítulos?, opcional. <BOOL> (default: false)
@@ -24,7 +24,7 @@
  *            5: Condiciones para mostrar los subtítulos, opcional. <ARRAY>
  *                - ¿Necesita tener una radio corta? <BOOL> (default: false)
  *                - ¿Necesita tener una radio larga? <BOOL> (default: false)
- *                - Mostrar unicamente para el bando... <"ALL"|"BLUFOR"|"OPFOR"|"INDEPENDANT"|"CIVILIAN"> (default: "All")
+ *                - Mostrar unicamente para el bando... <"All"|"Blufor"|"Opfor"|"Independant"|"Civilian"> (default: "All")
  *
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
@@ -32,13 +32,13 @@
  * Examples:
  *            //Subtítulo de una línea sin emisor definido, no se guardara y tampoco impondrá condiciones.
  *            _line = ["[Sdo] Usted", "Hola mundo!, esto es un ejemplo de una linea!"];
- *            [objNull, [_line], "SIDE", 5] call FCLA_Common_fnc_showSubtitles;
+ *            [objNull, [_line], "Side", 5] call FCLA_Common_fnc_showSubtitles;
  *
  *            //Subtítulos de tres líneas con emisor definido, se guardaran e impondrá condiciones.
  *            _line1 = ["[Cbo] Enemigo", "Hola mundo!, primer linea!"];
  *            _line2 = ["[Cbo] Enemigo", "¿Todo bien?, segunda linea!"];
  *            _line3 = ["[Cbo] Enemigo", "Adios mundo!, tercera linea!"];
- *            [Civil_1, [_line1, _line2, _line3], "CIV", 5, true, [false, true, "ALL"]] call FCLA_Common_fnc_showSubtitles;
+ *            [Civil_1, [_line1, _line2, _line3], "Civilian", 5, true, [false, true, "All"]] call FCLA_Common_fnc_showSubtitles;
  *
  * Notes:
  * Se recomienda utilizar esta función a travez del evento
@@ -63,23 +63,24 @@ params [
         ["_emitterColor", "", [""], 0],
         ["_timeToHideEachLine", 0, [0], 0],
         ["_saveSubtitles", false, [true], 0],
-        ["_conditions", [false, false, false], [[]], []]
+        ["_conditions", [false, false, "All"], [[]], []]
        ];
 
 
 
 //Verificar argumentos.
+_emitterColor = toUpper _emitterColor;
 _needShortRadio = _conditions select 0;
 _needLongRadio = _conditions select 1;
-_selectedSide = _conditions select 2;
+_selectedSide = toUpper (_conditions select 2);
 _compatibleConditionsForRadios = [true, false];
-_compatibleConditionsForSide = ["ALL", "BLUFOR", "OPFOR", "INDEPENDANT", "CIVILIAN"];
-_compatibleEmitterColors = ["SIDE", "VEHICLE", "COMMAND", "GROUP", "DIRECT", "CUSTOM", "SYSTEM", "BLUFOR", "OPFOR", "GUER", "CIV"];
+_compatibleConditionsForSide = ["All", "BLUFOR", "OPFOR", "INDEPENDANT", "CIVILIAN"];
+_compatibleEmitterColors = ["SIDE", "VEHICLE", "COMMAND", "GROUP", "DIRECT", "SYSTEM", "BLUFOR", "OPFOR", "INDEPENDANT", "CIVILIAN"];
 if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (_timeToHideEachLine <= 0) || !(_needShortRadio in _compatibleConditionsForRadios) || !(_needLongRadio in _compatibleConditionsForRadios) || !(_selectedSide in _compatibleConditionsForSide)) exitWith {false};
 
 
 
-_this spawn {
+[_emitter, _lines, _emitterColor, _timeToHideEachLine, _saveSubtitles, _needShortRadio, _needLongRadio, _selectedSide] spawn {
   params ["_emitter", "_lines", "_emitterColor", "_timeToHideEachLine", "_saveSubtitles", "_needShortRadio", "_needLongRadio", "_selectedSide"];
 
   //Mover labios del emisor.
@@ -90,28 +91,27 @@ _this spawn {
 
 
   //Convertir color al formato HTML.
-  _emitterColor = switch (toUpper _emitterColor) do {
+  _emitterColor = switch (_emitterColor) do {
     case "SIDE": {"#00ccff"};
     case "VEHICLE": {"#fbd40b"};
     case "COMMAND": {"#e5e760"};
     case "GROUP": {"#beee7e"};
     case "DIRECT": {"#fffffb"};
-    case "CUSTOM": {"#ec5a29"};
     case "SYSTEM": {"#8a8a88"};
     case "BLUFOR": {([West, false] call BIS_fnc_sideColor) call BIS_fnc_colorRGBtoHTML;};
     case "OPFOR": {([East, false] call BIS_fnc_sideColor) call BIS_fnc_colorRGBtoHTML;};
-    case "GUER": {([Independent, false] call BIS_fnc_sideColor) call BIS_fnc_colorRGBtoHTML;};
-    case "CIV": {([Civilian, false] call BIS_fnc_sideColor) call BIS_fnc_colorRGBtoHTML;};
+    case "INDEPENDANT": {([Independent, false] call BIS_fnc_sideColor) call BIS_fnc_colorRGBtoHTML;};
+    case "CIVILIAN": {([Civilian, false] call BIS_fnc_sideColor) call BIS_fnc_colorRGBtoHTML;};
   };
 
 
   //Convertir bando seleccionado al formato correcto.
-  _selectedSide = switch (toUpper _selectedSide) do {
+  _selectedSide = switch (_selectedSide) do {
     case "BLUFOR": {WEST};
     case "OPFOR": {EAST};
     case "INDEPENDANT": {GUER};
     case "CIVILIAN": {CIV};
-    default {"ALL"};
+    default {"All"};
   };
 
 
@@ -127,14 +127,16 @@ _this spawn {
       _emitterText = _currentLine select 1;
       _hasShortRadio = if ((!isNull _emitter) && (_needShortRadio)) then {call TFAR_fnc_haveSWRadio} else {true};
       _hasLongRadio = if ((!isNull _emitter) && (_needLongRadio)) then {call TFAR_fnc_haveLRRadio} else {true};
-      _isSelectedSide = if ((!isNull _emitter) && (_selectedSide) isNotEqualTo "ALL") then {(side _caller) == _selectedSide} else {true};
+      _isSelectedSide = if ((!isNull _emitter) && ((_selectedSide) isNotEqualTo "All")) then {(side _caller) == _selectedSide} else {true};
+      _notShowingSubtitles = !(uiNamespace getVariable ["FCLA_Showing_Subtitles", false]);
 
-      if ((_hasShortRadio) && (_hasLongRadio) && (_isSelectedSide)) then {
+      if ((_hasShortRadio) && (_hasLongRadio) && (_isSelectedSide) && (_notShowingSubtitles)) then {
         private "_display";
         titleRsc ["RscDynamicText", "PLAIN"];
         waitUntil {_display = uiNamespace getVariable "BIS_dynamicText"; !(isNull _display)};
         _ctrl = _display displayCtrl 9999;
         _emitter setVariable ["FCLA_Subtitles_ctrl", _ctrl, true];
+        uiNamespace setVariable ["FCLA_Showing_Subtitles", true, true];
         uiNamespace setVariable ["BIS_dynamicText", displayNull];
 
         _ctrlBackground = _display ctrlCreate ["RscText", 99999];
@@ -154,6 +156,7 @@ _this spawn {
         sleep (ceil _timeToHideEachLine);
         _ctrl ctrlSetFade 1;
         _ctrl ctrlCommit 0.5;
+        uiNamespace setVariable ["FCLA_Showing_Subtitles", nil, true];
       } else {
         _ctrl = _emitter getVariable "FCLA_Subtitles_ctrl";
         if (isNil "_ctrl") exitWith {};
@@ -162,12 +165,18 @@ _this spawn {
         sleep (ceil _timeToHideEachLine);
         _ctrl ctrlSetFade 1;
         _ctrl ctrlCommit 0.5;
+        uiNamespace setVariable ["FCLA_Showing_Subtitles", nil, true];
       };
     };
     waitUntil {scriptDone _handle};
     sleep 0.5;
   };
+
+
+  //Eliminar variables de tipo objeto.
   _emitter setVariable ["FCLA_Hide_Subtitles", nil, true];
+  _emitter setVariable ["FCLA_Subtitles_ctrl", nil, true];
+  uiNamespace setVariable ["FCLA_Showing_Subtitles", nil, true];
 
 
   //Detener labios del emisor.

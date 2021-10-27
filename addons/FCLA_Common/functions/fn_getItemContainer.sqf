@@ -40,9 +40,15 @@ _itemsInBackpack = backpackItems _unit;
 
 //Verificar existencia del item.
 _array = [];
-if ((_item in _itemsInVest) && !("Vest" in _excludedContainers)) then {_array pushBack "Vest";};
-if ((_item in _itemsInUniform) && !("Uniform" in _excludedContainers)) then {_array pushBack "Uniform";};
-if ((_item in _itemsInBackpack) && !("Backpack" in _excludedContainers)) then {_array pushBack "Backpack";};
+_upperExcludedContainers = [];
+{
+  _upperSelect = toUpper _x;
+  _upperExcludedContainers pushBack _test;
+} forEach _excludedContainers;
+
+if ((_item in _itemsInVest) && !("Vest" in _upperExcludedContainers)) then {_array pushBack "Vest";};
+if ((_item in _itemsInUniform) && !("Uniform" in _upperExcludedContainers)) then {_array pushBack "Uniform";};
+if ((_item in _itemsInBackpack) && !("Backpack" in _upperExcludedContainers)) then {_array pushBack "Backpack";};
 
 
 //Retornar contenedor/es.

@@ -7,7 +7,7 @@
  *
  * Arguments:
  *            0: Entidad desde donde se verificara la existencia de
-                 un jugador. <POSITION|UNIT|OBJECT|VEHICLE|GROUP|MARKER|LOCATION>
+ *               un jugador. <POSITION|UNIT|OBJECT|VEHICLE|GROUP|MARKER|LOCATION>
  *
  *            1: Distancia en la que se verificara. <NUMBER>
  *

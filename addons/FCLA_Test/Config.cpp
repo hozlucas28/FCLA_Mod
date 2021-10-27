@@ -16,29 +16,9 @@ class CfgPatches {
 
 
 /********************************************************************************|
-|                                   VEHÍCULOS                                    |
+|                              SUB - CATEGORÍAS 3EDEN                            |
 |********************************************************************************/
 
-class ACE_Medical_Treatment_Actions {
-	class Diagnose;
-
-	class Check_Chemical_Exposure: Diagnose {
-		displayName = "Comprobar exposición química";
-		displayNameProgress = "Comprobando exposición química...";
-		category = "examine";
-		condition = "true";
-		callbackSuccess = "hint str _this; true";
-		callbackFailure = "hint 'Failure';";
-		callbackProgress = "";
-		animationMedic = "AinvPknlMstpSlayWrflDnon_medicOther";
-		animationMedicProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
-		animationMedicSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
-		animationMedicSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
-		allowedSelections[] = {"All"};
-		//litter[] = {};
-		//items[] = {};
-		//itemConsumed = 0;
-		//allowSelfTreatment = 1;
-		treatmentTime = 5;
-	};
+class CfgEditorSubcategories {
+	class FCLA_subCategory_Compositions {displayName = "FCLA Composiciones";};
 };

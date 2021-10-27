@@ -36,9 +36,10 @@ params [
 
 
 //Verificar argumentos.
-_inVehicle = if (_typeOfReproduction == "SwitchMove") then {!isNull objectParent _unit} else {false};
+_typeOfReproduction = toUpper _typeOfReproduction;
+_inVehicle = if (_typeOfReproduction == "SWITCHMOVE") then {!isNull objectParent _unit} else {false};
 _isUnitPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];
-_acceptedTypesOfReproduction = ["playAction", "playActionNow", "PlayMove", "PlayMoveNow", "SwitchMove"];
+_acceptedTypesOfReproduction = ["PLAYACTION", "PLAYACTIONNOW", "PLAYMOVE", "PLAYMOVENOW", "SWITCHMOVE"];
 if ((isNull _unit) || !(_typeOfReproduction in _acceptedTypesOfReproduction) || (_inVehicle) || (_isUnitPlayingAnimation)) exitWith {false};
 
 

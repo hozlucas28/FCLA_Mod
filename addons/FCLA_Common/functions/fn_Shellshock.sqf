@@ -26,14 +26,14 @@ params [["_unit", objNull, [objNull, teamMemberNull], 0]];
 
 
 
-//Verificar argumentos.
+//Verificar argumento.
 _isShellshockInitialized = _unit getVariable ["FCLA_Shellshock_Initialized", false];
 if ((isNull _unit) || (_isShellshockInitialized)) exitWith {false};
 
 
 
 _this spawn {
-  (_this select 0) setVariable ["FCLA_Shellshock_Initialized", true, true];
+  _this setVariable ["FCLA_Shellshock_Initialized", true, true];
 
   0 fadeSound 0.05;
   _randomWaveSound = selectRandom ["FCLA_Explosion_Wave_1", "FCLA_Explosion_Wave_2"];
@@ -46,12 +46,12 @@ _this spawn {
   _randomScreamSound = selectRandom ["FCLA_Pain_1", "FCLA_Pain_2", "FCLA_Pain_3", "FCLA_Pain_4", "FCLA_Pain_5", "FCLA_Pain_6", "FCLA_Pain_7"];
   playSound _randomScreamSound;
 
-  if ((stance (_this select 0)) == "STAND") then {
+  if ((stance _this) == "STAND") then {
     _randomAnimation = selectRandom ["AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft", "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright", "AmovPercMsprSlowWrflDf_AmovPpneMstpSrasWrflDnon"];
     [_this select 0, _randomAnimation, "SwitchMove"] call FCLA_Common_fnc_playAnimation;
   };
 
-  if ((stance (_this select 0)) == "CROUCH") then {
+  if ((stance _this) == "CROUCH") then {
     _randomAnimation = selectRandom ["AmovPknlMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft", "AmovPknlMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright", "AmovPercMsprSlowWrflDf_AmovPpneMstpSrasWrflDnon"];
     [_this select 0, _randomAnimation, "SwitchMove"] call FCLA_Common_fnc_playAnimation;
   };
@@ -74,6 +74,6 @@ _this spawn {
   _blur ppEffectEnable false;
   ppEffectDestroy _blur;
   3 fadeSound 1;
-  (_this select 0) setVariable ["FCLA_Shellshock_Initialized", nil, true];
+  _this setVariable ["FCLA_Shellshock_Initialized", nil, true];
 };
 true
