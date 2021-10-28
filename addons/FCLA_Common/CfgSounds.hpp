@@ -15,6 +15,12 @@ class FCLA_Explosion_Wave_2 {
 	titles[] = {0, ""};
 };
 
+class FCLA_Hacking_Initialized {
+  name = "FCLA - Hackeo iniciado";
+  sound[] = {"\FCLA_Common\sounds\Hacking_Initialized.ogg", db+5, 1};
+  titles[] = {};
+};
+
 class FCLA_Pain_1 {
 	name = "FCLA - Dolor (1)";
 	sound[] = {"\FCLA_Common\sounds\Pain_1.wav", db+5, 1};

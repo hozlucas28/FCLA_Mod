@@ -32,4 +32,6 @@ class FCLA_Common_Functions {
   class showParentTree {};
   class showSubtitles {};
   class switchLights {};
+
+  class hackDevice {file = "\FCLA_Common\functions\Hack_Device\fn_hackDevice.sqf";};
 };

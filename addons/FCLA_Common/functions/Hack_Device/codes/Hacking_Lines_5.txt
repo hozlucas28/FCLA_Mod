@@ -1,0 +1,15 @@
+ > login5: admin@
+> password : ******************@
+> conected!@
+> sudo ipconfig -p -s -v@
+> remote 199.155.21.1:2300 -l admin admin@
+> ssh root 192.160.01@
+> conecting...@
+> reconect@
+> reconecting..@
+> faild!@
+> while {true}: reconect -m -r timeout = 0@
+> reconecting..@
+> access granted@
+> coping files...@
+> COPIED FILES.@

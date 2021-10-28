@@ -40,7 +40,7 @@ params [
 
 
 //Verficar argumentos.
-_soundNotExist = (getArray (configFile >> "CfgSounds" >> _soundClass >> "sound")) isEqualTo [];
+_soundNotExist = !(isClass (configFile >> "CfgSounds" >> _soundClass));
 _isSourceHidden = isObjectHidden _source;
 _isSourcePlayingSound = _source getVariable ["FCLA_Playing_Sound", false];
 if ((isNull _source) || (_maxDistance <= 0) || (_soundTime <= 0) || (_soundNotExist) || (_isSourceHidden) || (_isSourcePlayingSound)) exitWith {false};

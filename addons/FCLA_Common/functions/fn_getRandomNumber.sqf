@@ -35,7 +35,7 @@ for "_i" from (round _minimum) to (round _maximum) do {_array pushBack _i;};
 
 
 //Seleccionar número al azar.
-_return = (_array select (round (random (count _array))));
+_return = selectRandom _array;
 switch (_returnAsString) do {
 	case true: {[_return] call ACE_Common_fnc_numberToString};
 	case false: {_return};
