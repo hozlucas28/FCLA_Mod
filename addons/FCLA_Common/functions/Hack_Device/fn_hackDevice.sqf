@@ -8,6 +8,7 @@
  * Arguments:
  *            0: Dispositivo al que se le asociara la acción. <OBJECT|VEHICLE>
  *            1: Título de la acción, opcional. <STRING> (default: "Hackear dispositivo")
+ *            2: ¿Se necesita un dispositivo de hackeo?, opcional. <BOOL> (default: true)
  *
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
@@ -16,8 +17,8 @@
  * XXX.
  *
  * Examples:
- * [Laptop_1] call FCLA_Common_fnc_hackDevice; //Sin título personalizado.
- * [Laptop_1, "Hackeao personalizado"] call FCLA_Common_fnc_hackDevice; //Con título personalizado.
+ * [Laptop_1] call FCLA_Common_fnc_hackDevice; //Opcionales no definidos.
+ * [Laptop_1, "Título personalizado", false] call FCLA_Common_fnc_hackDevice; //Opcionales definidos.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -25,7 +26,8 @@
 //Variables de referencia.
 params [
         ["_device", objNull, [objNull], 0],
-        ["_title", "Hackear dispositivo", [""], 0]
+        ["_title", "Hackear dispositivo", [""], 0],
+        ["_needHackingDevice", true, [true], 0]
        ];
 if ((isNull _device) || (_title == "")) exitWith {false};
 
@@ -38,10 +40,15 @@ if ((isNull _device) || (_title == "")) exitWith {false};
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
 	"(alive _target) && (_this distance _target < 2.5) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_this, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
-	"(alive _target) && (_caller distance _target < 2.5) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_caller, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
+	"(alive _target) && (_caller distance _target < 2.5) && ((!(_arguments select 0)) || ([_caller, 'ACE_WaterBottle'] call BIS_fnc_hasItem)) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_caller, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
+	{ //Sentencias al iniciar.
+    params ["_target", "_caller", "_actionId", "_arguments"];
+    if ((!(_arguments select 0)) || ([_caller, "ACE_WaterBottle"] call BIS_fnc_hasItem)) exitWith {};
+    _line = ["[Sistema]", "Se necesita un dispositivo de hackeo."];
+    [objNull, [_line], "System", 3] call FCLA_Common_fnc_showSubtitles;
+  },
 	{},
-	{},
-	{
+	{ //Sentencias al completar.
 		params ["_target", "_caller", "_actionId", "_arguments"];
     _target setVariable ["FCLA_Hacking", true, true];
     disableSerialization;
@@ -51,26 +58,33 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     _display = findDisplay 46 createDisplay "RscDisplayEmpty";
     _ctrlBackground = _display ctrlCreate ["RscPicture", -1];
     _ctrlHackingLines = _display ctrlCreate ["RscStructuredText", -1];
-    _ctrlWritingBox = _display ctrlCreate["RscText", -1];
+    _ctrlWritingBox = _display ctrlCreate ["RscText", -1];
+    _ctrlFakeBox = _display ctrlCreate ["RscEdit", -1];
     _ctrlBoxToWrite = _display ctrlCreate ["RscEdit", -1];
-    _ctrlVideo = _display ctrlCreate ["RscVideo", -1];
+    _ctrlIntroductoryVideo = _display ctrlCreate ["RscVideo", -1];
+    _ctrlEndingVideo = _display ctrlCreate ["RscVideo", -1];
 
 
     //Posición de los controles.
     _ctrlWritingBox ctrlSetPosition [0.29375 * safezoneW + safezoneX, 0.753 * safezoneH + safezoneY, 0.4125 * safezoneW, 0.022 * safezoneH];
+    _ctrlFakeBox ctrlSetPosition [0.29375 * safezoneW + safezoneX, 0.753 * safezoneH + safezoneY, 0.4125 * safezoneW, 0.022 * safezoneH];
     _ctrlBoxToWrite ctrlSetPosition [0.29375 * safezoneW + safezoneX, 0.753 * safezoneH + safezoneY, 0.4125 * safezoneW, 0.022 * safezoneH];
     _ctrlBackground ctrlSetPosition [0.0565625 * safezoneW + safezoneX, -0.53 * safezoneH + safezoneY, 0.892031 * safezoneW, 2.26 * safezoneH];
     _ctrlHackingLines ctrlSetPosition [0.29375 * safezoneW + safezoneX, 0.225 * safezoneH + safezoneY, 0.4125 * safezoneW, 0.528 * safezoneH];
-    _ctrlVideo ctrlSetPosition [0.29375 * safezoneW + safezoneX, 0.225 * safezoneH + safezoneY, 0.4125 * safezoneW, 0.528 * safezoneH];
+    _ctrlIntroductoryVideo ctrlSetPosition [0.29375 * safezoneW + safezoneX, 0.225 * safezoneH + safezoneY, 0.4125 * safezoneW, 0.528 * safezoneH];
+    _ctrlEndingVideo ctrlSetPosition [0.29375 * safezoneW + safezoneX, 0.225 * safezoneH + safezoneY, 0.4125 * safezoneW, 0.528 * safezoneH];
     _ctrlWritingBox ctrlCommit 0;
+    _ctrlFakeBox ctrlCommit 0;
     _ctrlBoxToWrite ctrlCommit 0;
     _ctrlBackground ctrlCommit 0;
     _ctrlHackingLines ctrlCommit 0;
-    _ctrlVideo ctrlCommit 0;
+    _ctrlIntroductoryVideo ctrlCommit 0;
+    _ctrlEndingVideo ctrlCommit 0;
 
 
     //Color de los controles.
     _ctrlWritingBox ctrlSetTextColor [0, 1, 0, 1];
+    _ctrlFakeBox ctrlSetTextColor [0, 0, 0, 0];
     _ctrlBoxToWrite ctrlSetTextColor [0, 1, 0, 1];
     _ctrlHackingLines ctrlSetTextColor [0, 1, 0, 1];
 
@@ -88,7 +102,6 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     _ctrlBoxToWrite ctrlSetText "> Press any key to write...";
     _ctrlBackground ctrlSetText _hackingLaptopPatch;
     _ctrlHackingLines ctrlSetFontHeight 0.035;
-    ctrlSetFocus _ctrlBackground;
 
 
     //Evenhanthandler para detectar el teclado.
@@ -102,14 +115,15 @@ if ((isNull _device) || (_title == "")) exitWith {false};
 
 
     //Reproducir video introductorio.
+    ctrlSetFocus _ctrlFakeBox;
     _ctrlBoxToWrite ctrlShow false;
-    _ctrlVideo ctrlsettext "\FCLA_Data\Videos\Hacking_Initialized_Without_Sound.ogv";
+    _ctrlIntroductoryVideo ctrlSetText "\FCLA_Data\Videos\Hacking_Initialized_Without_Sound.ogv";
     [{
       (_this select 0) ctrlSetFade 1;
       (_this select 0) ctrlCommit 1;
       [{_this ctrlShow true; ctrlSetFocus _this;}, _this select 1, 1] call CBA_fnc_waitAndExecute;
-    }, [_ctrlVideo, _ctrlBoxToWrite], 10] call CBA_fnc_waitAndExecute;
-    [_target, "FCLA_Hacking_Initialized", 12, 10] call FCLA_Common_fnc_globalSay3D;
+    }, [_ctrlIntroductoryVideo, _ctrlBoxToWrite], 10] call CBA_fnc_waitAndExecute;
+    [_caller, "FCLA_Hacking_Initialized", 12, 25] call FCLA_Common_fnc_globalSay3D;
 
 
     //Bloquear movilidad y posicionar laptop.
@@ -124,7 +138,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
       _laptop allowDamage false;
       _laptop enableSimulationGlobal false;
       _laptop setVectorDirAndUp [[-0.25, 0.989465, 0], [0, 0, 1]];
-      _caller setVariable ["FCLA_Hacking_Laptop", _laptop, true];
+      _caller setVariable ["FCLA_Current_Hacking_Laptop", _laptop, true];
       [_caller, "ACE_HandcuffedFFV", "switchMove"] call FCLA_Common_fnc_playAnimation;
     }, [_caller, _display]] call CBA_fnc_waitUntilAndExecute;
 
@@ -132,11 +146,10 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     //Colocar código a medida que se teclea.
     _linesOnDisplay = [];
     _numberOfLinesDisplayed = 0;
-    _randomCodeLine = format ["\FCLA_Common\functions\Hack_Device\codes\Hacking_Lines_%1.txt", selectRandom [1, 2, 3, 4, 5]];
-    _linesOfCode = (loadFile _randomCodeLine) splitString "@";
+    _linesOfCode = (loadFile "\FCLA_Common\functions\Hack_Device\codes\Hacking_Lines.txt") splitString "@";
     _numberOfLines = count _linesOfCode;
 
-    while {(alive _target) && (_caller distance _target < 2.5) && (!isNull _display) && (_numberOfLinesDisplayed < _numberOfLines) && !([_caller] call FCLA_Common_fnc_severalConditions)} do {
+    while {(alive _target) && (!isNull _display) && (_numberOfLinesDisplayed < _numberOfLines) && (_caller distance _target < 2.5) && ((!(_arguments select 0)) || ([_caller, "ACE_WaterBottle"] call BIS_fnc_hasItem)) && !([_caller] call FCLA_Common_fnc_severalConditions)} do {
     	_lineToWrite = _linesOfCode select _numberOfLinesDisplayed;
       _lastLetterNumber = _caller getVariable ['FCLA_Letter_Number', 0];
     	_lastWritten = _lineToWrite select [0, _lastLetterNumber];
@@ -156,29 +169,46 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     };
 
 
-    //Eliminar variables de tipo objeto.
-    _target setVariable ["FCLA_Hacking", nil, true];
-    _caller setVariable ["FCLA_Letter_Number", nil, true];
-    _caller setVariable ["FCLA_Letter_Number", nil, true];
+    //Reproducir video de finalización si el hackeo se completo.
+    if (_numberOfLinesDisplayed >= _numberOfLines) then {
+      _ctrlBoxToWrite ctrlShow false;
+      _ctrlHackingLines ctrlShow false;
+      _target setVariable ["FCLA_Hacked", true, true];
+      _ctrlEndingVideo ctrlSetText "\FCLA_Data\Videos\Hacking_Initialized_Without_Sound.ogv";
+      [_caller, "FCLA_Hacking_Initialized", 12, 25] call FCLA_Common_fnc_globalSay3D;
+      [_target, _actionId] remoteExec ["BIS_fnc_holdActionRemove", 0, true];
+
+      [{
+        (_this select 4) ctrlSetFade 1;
+        (_this select 4) ctrlCommit 0.5;
+        [{
+          params ["_target", "_caller", "_actionId", "_ctrlHackingLines"];
+          _ctrlHackingLines ctrlShow true;
+          _ctrlHackingLines ctrlSetStructuredText parseText format [loadFile "\FCLA_Common\functions\Hack_Device\codes\Hack_Completed.txt", name _caller, "%"];
+        }, _this, 1] call CBA_fnc_waitAndExecute;
+      }, [_target, _caller, _actionId, _ctrlHackingLines, _ctrlEndingVideo], 10] call CBA_fnc_waitAndExecute;
+    };
 
 
     //Devolver movilidad y eliminar laptop.
-    deleteVehicle (_caller getVariable ["FCLA_Hacking_Laptop", objNull]);
-    _caller setVariable ["FCLA_Hacking_Laptop", nil, true];
-    _caller setVariable ["FCLA_Playing_Animation", nil, true];
-    [_caller, "amovpsitmstpslowwrfldnon_amovpercmstpslowwrfldnon", "switchMove"] call FCLA_Common_fnc_playAnimation;
+    [{isNull (_this select 1)}, {
+      deleteVehicle ((_this select 0) getVariable ["FCLA_Current_Hacking_Laptop", objNull]);
+      (_this select 0) setVariable ["FCLA_Current_Hacking_Laptop", nil, true];
+      (_this select 0) switchMove "amovpsitmstpslowwrfldnon_amovpercmstpslowwrfldnon";
+    }, [_caller, _display]] call CBA_fnc_waitUntilAndExecute;
 
 
-    //Verificar si el hackeo se completo.
-    if (_numberOfLinesDisplayed >= _numberOfLines) then {
-      _target setVariable ["FCLA_Hacked", true, true];
-      _ctrlHackingLines ctrlSetStructuredText parseText format [loadFile "\FCLA_Common\functions\Hack_Device\codes\Hack_Completed.txt", name _caller, "%"];
-    } else {
-      _display closeDisplay 1;
-    };
+    //Eliminar variables de tipo objeto.
+    _target setVariable ["FCLA_Hacking", nil, true];
+    _caller setVariable ["FCLA_Letter_Number", nil, true];
 	},
-	{},
-	[],
+	{ //Sentencias al interrumpirse.
+    params ["_target", "_caller", "_actionId", "_arguments"];
+    if ((!(_arguments select 0)) || ([_caller, "ACE_WaterBottle"] call BIS_fnc_hasItem)) exitWith {};
+    _line = ["[Sistema]", "Se necesita un dispositivo de hackeo."];
+    [objNull, [_line], "System", 3] call FCLA_Common_fnc_showSubtitles;
+  },
+	[_needHackingDevice],
 	1,
 	1.5,
 	false,
@@ -186,9 +216,3 @@ if ((isNull _device) || (_title == "")) exitWith {false};
 	true
 ] remoteExec ["BIS_fnc_holdActionAdd", 0, _device];
 true
-
-
-//CREAR LINEAS DE CODIGO
-//HAY VECES QUE ESCRIBO Y NO PONE NADA, Y COLOCA LAS LINEAS DESORDENAS
-//Condicional necesita item
-//La barra del texto donde comienzo a escribir estaria que se mantenga visible

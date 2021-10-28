@@ -91,7 +91,7 @@
 /* --------------------------------- UIDS ---------------------------------- */
 
 [
-	"FCLA_customVest_UID_Lorflord", "EDITBOX",
+	"FCLA_Lorflord_UID", "EDITBOX",
 	["Lorflord", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
 	"76561198153898683",
@@ -102,7 +102,7 @@
 
 
 [
-	"FCLA_customVest_UID_Kovalsky", "EDITBOX",
+	"FCLA_Kovalsky_UID", "EDITBOX",
 	["Kovalsky", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
 	"76561198010584812",
@@ -113,7 +113,7 @@
 
 
 [
-	"FCLA_customVest_UID_Byron", "EDITBOX",
+	"FCLA_Byron_UID", "EDITBOX",
 	["Byron", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
 	"76561198178496662",
@@ -124,7 +124,7 @@
 
 
 [
-	"FCLA_customVest_UID_Legion", "EDITBOX",
+	"FCLA_Legion_UID", "EDITBOX",
 	["Legion", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
 	"76561197982853635",
@@ -135,7 +135,7 @@
 
 
 [
-	"FCLA_customVest_UID_hozLucas", "EDITBOX",
+	"FCLA_hozlucas28_UID", "EDITBOX",
 	["Lucas28", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
 	"76561198137876583",
@@ -146,7 +146,7 @@
 
 
 [
-	"FCLA_customVest_UID_Naretick", "EDITBOX",
+	"FCLA_Naretick_UID", "EDITBOX",
 	["Naretick", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
 	"76561198059595506",
@@ -157,7 +157,7 @@
 
 
 [
-	"FCLA_customVest_UID_Sagara", "EDITBOX",
+	"FCLA_Sagara_UID", "EDITBOX",
 	["Sagara", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
 	"76561198173170422",
@@ -168,7 +168,7 @@
 
 
 [
-	"FCLA_customVest_UID_Ghostkiller", "EDITBOX",
+	"FCLA_Ghostkiller_UID", "EDITBOX",
 	["Ghostkiller", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
 	"76561198304995327",
@@ -179,7 +179,7 @@
 
 
 [
-	"FCLA_customVest_UID_Mario", "EDITBOX",
+	"FCLA_Mario_UID", "EDITBOX",
 	["Mario", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
 	"76561198260536786",

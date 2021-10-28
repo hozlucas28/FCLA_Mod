@@ -53,15 +53,13 @@ if (_isCuratorEnhancedModLoaded) then {
     _isAdmin = [true] call FCLA_Common_fnc_isAdmin;
     _isCurator = [player] call FCLA_Common_fnc_isCurator;
     _isNotAlive = !(alive player);
-    _isNotAnEditor = !((getPlayerUID player) in FCLA_Editors);
-    _currentControledUnit = call CBA_fnc_currentUnit;
+    _isNotAuthorized = !((getPlayerUID player) in FCLA_Editors) && !((getPlayerUID player) in FCLA_Commanders) && !((getPlayerUID player) in FCLA_Instructors);
     if (_inUAV) exitWith {[{systemChat "No puedes utilizar este comando si estas utilizando un dron.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
     if (_isOnMap) exitWith {[{systemChat "No puedes utilizar este comando si el mapa esta abierto.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
     if (_isAdmin) exitWith {[{systemChat "Por razones de seguridad al ser un administrador, no puedes utilizar este comando.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
     if (_isCurator) exitWith {[{systemChat "Ya posees Zeus.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
     if (_isNotAlive) exitWith {[{systemChat "Debes estar vivo para utilizar este comando.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
-    if (_isNotAnEditor) exitWith {[{systemChat "No puedes utilizar este comando, salvo que seas parte de 'Mando' o seas editor oficial.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
-    if (_currentControledUnit != player) exitWith {[{systemChat "No puedes utilizar este comando si estas controlando a una unidad.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
+    if (_isNotAuthorized) exitWith {[{systemChat "No puedes utilizar este comando, salvo que seas editor oficial, parte de 'Mando' o instructor.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
 
     switch (Upper _value) do {
       case "TRUE": {

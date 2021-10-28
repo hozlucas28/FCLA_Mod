@@ -10,7 +10,7 @@
  *            0: Origen del sonido. <UNIT|OBJECT|VEHICLE>
  *            1: Classname del sonido que se quiere reproducir. <STRING>
  *            2: Tiempo en segundos que dura el sonido a reproducir. <NUMBER>
- *            3: Máxima distancia entre el cliente y el origen para reproducir el sonido, opcional. <NUMBER> (default: 100)
+ *            3: Máxima distancia en la que se escuchara el sonido, opcional. <NUMBER> (default: 100)
  *            4: ¿Borrar origen del sonido cuando se termina de reproducir?, opcional. <BOOL> (default: false)
  *
  * Return Value:
