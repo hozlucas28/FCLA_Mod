@@ -4,7 +4,7 @@
  *
  * Description:
  * Reproduce un sonido proveniente de un objeto/unidad en todos los clientes de
- * manera tridimencional (3D).
+ * manera tridimencional (3D). Evita conflictos con el mod.
  *
  * Arguments:
  *            0: Origen del sonido. <UNIT|OBJECT|VEHICLE>

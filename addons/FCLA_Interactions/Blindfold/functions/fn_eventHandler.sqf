@@ -4,7 +4,7 @@
  *
  * Description:
  * Crea un eventhandler para el uso de las funciones Bandage.
- * 
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
@@ -12,7 +12,6 @@
 	params ["_unit", "_state"];
   _currentGoggles = goggles _unit;
 	_originalGoggles = _unit getVariable ["FCLA_Saved_Goggles", ""];
-	_unit setVariable ["TF_Unable_To_Use_Radio", _state];
   if ((_state) || !(_currentGoggles in FCLA_Goggles_Bandages) || (_originalGoggles == "")) exitWith {};
 
   if (_currentGoggles == (FCLA_Goggles_Bandages select 0)) then {

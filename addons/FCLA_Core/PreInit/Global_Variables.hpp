@@ -26,7 +26,14 @@ FCLA_Commanders = [
                    "76561197982853635" //Legion.
                   ];
 
-FCLA_Instructors = [];
+FCLA_Instructors = [
+                    "76561198312056354", //Skaner.
+                    "76561198031480126", //Vespa.
+                    "76561197996897589", //Nicorrosivo.
+                    "76561198825814903", //Alekmosq.
+                    "76561198144014728", //Kreimsito.
+                    "76561198126066362", //AntarcticScythe.
+];
 
 
 

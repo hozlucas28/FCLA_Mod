@@ -82,7 +82,7 @@ _EventHandlerID = [_vehicle, "Dammaged", {
       ["FCLA_Shellshock", _x, _x] call CBA_fnc_targetEvent;
       _haveDestroyedWeapons = _x getVariable ["FCLA_Weapons_Destroyed", false];
       _haveDestroyedItems = _x getVariable ["FCLA_Items_Destroyed", false];
-      
+
       if ((_haveDestroyedWeapons) || (_haveDestroyedItems)) then {
         _textToDisplay = switch (true) do {
           case ((_haveDestroyedWeapons) && !(_haveDestroyedItems)): {"Algunas de tus armas se han dañado."};
@@ -100,6 +100,6 @@ _EventHandlerID = [_vehicle, "Dammaged", {
 }, [_dammageWeapons, _dammageItems]] call CBA_fnc_addBISEventHandler;
 
 
-//Almacenar ID en una variable de tipo objeto.
+//Guardar ID en una variable de tipo objeto.
 _vehicle setVariable ["FCLA_Disable_Vehicle_Destruction_ID", _EventHandlerID, true];
 true

@@ -4,6 +4,7 @@
  *
  * Description:
  * Reproduce una animación en la unidad, enviada como argumento 0.
+ * Evita conflictos con el mod.
  *
  * Arguments:
  *            0: Unidad que realizara la animación. <UNIT>

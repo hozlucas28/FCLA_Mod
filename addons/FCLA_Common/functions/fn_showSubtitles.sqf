@@ -168,7 +168,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
   };
 
 
-  //Eliminar variables de tipo objeto.
+  //Eliminar variables de tipo objeto/interfaz.
   _emitter setVariable ["FCLA_Hide_Subtitles", nil, true];
   _emitter setVariable ["FCLA_Subtitles_ctrl", nil, true];
   uiNamespace setVariable ["FCLA_Showing_Subtitles", nil];

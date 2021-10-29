@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * XXX.
+ * Agrega una acción al dispositivo, enviado como argumento 0, para hacekearlo.
  *
  * Arguments:
  *            0: Dispositivo al que se le asociara la acción. <OBJECT|VEHICLE>
@@ -14,7 +14,8 @@
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Note:
- * XXX.
+ * Una vez el dispositivo sea hackeado se le asociara la variable de
+ * tipo objeto "FCLA_Hacked" con un valor de verdad.
  *
  * Examples:
  * [Laptop_1] call FCLA_Common_fnc_hackDevice; //Opcionales no definidos.

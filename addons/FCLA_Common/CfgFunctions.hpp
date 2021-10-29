@@ -25,6 +25,7 @@ class FCLA_Common_Functions {
   class setAdvancedVehicleDamage {};
   class setAmbientFired {};
   class setHelipadLights {};
+  class setIntroduction {};
   class setRadioFrequencies {};
   class severalConditions {};
   class Shellshock {};
