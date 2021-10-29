@@ -20,7 +20,7 @@
  * [player, "FCLA_Animation_Tactical_Position_Up", "playActionNow"] call FCLA_Common_fnc_playAnimation;
  *
  * Note:
- * La función le asigna un valor de verdad a la variable de tipo
+ * La función le asigna el valor <true> a la variable de tipo
  * objeto "FCLA_Playing_Animation" asociada a la unidad que reproduce
  * la animación, para asi evitar un bucle de reproducción.
  *

@@ -34,7 +34,7 @@ if (_rad <= 0) exitWith {false};
 
 //Determina las entidades a mostrar.
 _centerPos = [_center] call CBA_fnc_getPos;
-_nearEntities = ((nearestObjects [_centerPos, [], _rad, true]) + (nearestTerrainObjects [_centerPos, [], _rad, true, true])) - allPlayers;
+_nearEntities = ((nearestObjects [_centerPos, [], _rad, true]) - (nearestTerrainObjects [_centerPos, [], _rad, true, true])) - allPlayers;
 _entitiesToShow = switch (_excludeAI) do {
 	case true: {_nearEntities - allUnits;};
 	case false: {_nearEntities;};
@@ -43,10 +43,10 @@ _entitiesToShow = switch (_excludeAI) do {
 
 //Muestra las entidades.
 {
-  _ShowUnit = !(_excludeAI) || ((count (fullCrew _x)) <= 0);
+  _ShowUnit = (!_excludeAI) || ((count (fullCrew _x)) <= 0);
   _isHiddenEntity = _x getVariable ["FCLA_Hidden", false];
 
-	if ((_ShowUnit) || (_isHiddenEntity)) then {
+	if ((_ShowUnit) && (_isHiddenEntity)) then {
     [_x, []] call ace_common_fnc_unhideUnit;
   	_x setVariable ["FCLA_Hidden", nil, true];
   };

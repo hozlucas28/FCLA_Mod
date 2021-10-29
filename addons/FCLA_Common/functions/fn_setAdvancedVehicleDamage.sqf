@@ -18,6 +18,10 @@
  * [vehicle player] call FCLA_Common_fnc_setAdvancedVehicleDamage; //Las armas e items no se destruirán.
  * [vehicle player, true, true] call FCLA_Common_fnc_setAdvancedVehicleDamage; //Las armas e items se destruirán.
  *
+ * Note:
+ * Si el addon option "Daño avanzado de vehículo" (mod ACE) esta activado,
+ * esta función no se ejecutara.
+ *
  * Public: [Yes]
  *
  * Author:
@@ -30,7 +34,7 @@ params [
         ["_dammageWeapons", false, [true], 0],
         ["_dammageItems", false, [true], 0]
        ];
-if ((isNull _vehicle) || !(_vehicle in vehicles)) exitWith {false};
+if ((isNull _vehicle) || !(_vehicle in vehicles) || (ACE_Vehicle_Damage_Enabled)) exitWith {false};
 
 
 
@@ -79,17 +83,12 @@ _EventHandlerID = [_vehicle, "Dammaged", {
     //Efecto visual y mensaje.
     _isPlayer = [_x, false] call ACE_Common_fnc_isPlayer;
     if ((alive _x) && (_isPlayer)) then {
-      ["FCLA_Shellshock", _x, _x] call CBA_fnc_targetEvent;
+      ["FCLA_Shellshock", _x] call CBA_fnc_localEvent;
       _haveDestroyedWeapons = _x getVariable ["FCLA_Weapons_Destroyed", false];
       _haveDestroyedItems = _x getVariable ["FCLA_Items_Destroyed", false];
 
       if ((_haveDestroyedWeapons) || (_haveDestroyedItems)) then {
-        _textToDisplay = switch (true) do {
-          case ((_haveDestroyedWeapons) && !(_haveDestroyedItems)): {"Algunas de tus armas se han dañado."};
-          case (!(_haveDestroyedWeapons) && (_haveDestroyedItems)): {"Algunos de tus items se han dañado."};
-          default {"Algunas de tus armas e items se han dañado."};
-        };
-        [{["FCLA_Notify", [_this select 0, 1, [1, 0, 0, 1]], _this select 1] call CBA_fnc_targetEvent;}, [_textToDisplay, _x], 5] call CBA_fnc_waitAndExecute;
+        [{["FCLA_Notify", ["Tu equipamiento fue comprometido.", 1, [1, 0, 0, 1]]] call CBA_fnc_localEvent;}, [], 5] call CBA_fnc_waitAndExecute;
       };
     };
 

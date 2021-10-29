@@ -20,8 +20,8 @@
  * ¿Hay un jugador/unidad controlada cerca? <BOOL>
  *
  * Examples:
- * [player, 50] call FCLA_Functions_fnc_nearPlayer; //Unidades controladas no excluidas.
- * [player, 50, true] call FCLA_Functions_fnc_nearPlayer; //Unidades controladas excluidas.
+ * [player, 50] call FCLA_Common_fnc_nearPlayer; //Opcionales no definidos.
+ * [player, 50, 2, false] call FCLA_Common_fnc_nearPlayer; //Opcionales definidos.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -33,7 +33,7 @@ params [
         ["_minimumNumberOfUnits", 1, [0], 0],
         ["_excludeRemoteControlled", false, [true], 0]
        ];
-if (((_distance <= 0) || (_minimumNumberOfUnits < 1)) exitWith {false};
+if ((_distance <= 0) || (_minimumNumberOfUnits < 1)) exitWith {false};
 
 
 

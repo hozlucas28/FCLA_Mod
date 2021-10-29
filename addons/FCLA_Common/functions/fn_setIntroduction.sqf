@@ -48,9 +48,9 @@ uiNamespace setVariable ["FCLA_Introduction_Subtitle", _subtitle];
 
   [{!(uiNamespace getVariable ["FCLA_Introduction_Video", false])}, {
     _this Spawn {
-      playsound "FCLA_Introduction";
       player action ["WeaponOnBack", player];
       cutText ["", "BLACK FADED", 3600, true, false];
+			if (isGameFocused) then {playsound "FCLA_Introduction";};
       [{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
 
       Sleep 3;

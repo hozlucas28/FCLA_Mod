@@ -15,7 +15,8 @@
  *
  * Note:
  * Una vez el dispositivo sea hackeado se le asociara la variable de
- * tipo objeto "FCLA_Hacked" con un valor de verdad.
+ * tipo objeto "FCLA_Hacked" con el valor <true>. Por defecto la variable de
+ * tipo objeto mencionada no tendra valor, es decir, nulo.
  *
  * Examples:
  * [Laptop_1] call FCLA_Common_fnc_hackDevice; //Opcionales no definidos.

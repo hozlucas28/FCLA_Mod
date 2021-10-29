@@ -22,7 +22,6 @@
 if (!(call TFAR_fnc_haveSWRadio) && !(call TFAR_fnc_haveLRRadio)) exitWith {false};
 
 
-
 [{
   if (call TFAR_fnc_haveSWRadio) then {
     [call TFAR_fnc_activeSwRadio, 1, "50"] call TFAR_fnc_SetChannelFrequency;

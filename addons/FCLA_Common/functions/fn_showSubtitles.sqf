@@ -58,7 +58,7 @@ params [
         ["_lines", [[]], [[]], []],
         ["_emitterColor", "", [""], 0],
         ["_timeToHideEachLine", 0, [0], 0],
-        ["_conditions", [false, false, "All"], [[]], []]
+        ["_conditions", [false, false, "All"], [[]], [0, 1, 2, 3]]
        ];
 
 

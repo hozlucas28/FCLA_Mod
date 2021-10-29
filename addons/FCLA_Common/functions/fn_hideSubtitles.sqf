@@ -13,7 +13,7 @@
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Example:
- *            [Civil_1] call FCLA_Common_fnc_hideSubtitles;
+ * [Civil_1] call FCLA_Common_fnc_hideSubtitles;
  *
  * Note:
  * Si no definiste al emisor en la función "FCLA_Common_fnc_showSubtitles",

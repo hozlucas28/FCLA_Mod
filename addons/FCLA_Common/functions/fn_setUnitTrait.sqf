@@ -3,20 +3,19 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si la unidad cumple con la característica del ACE, enviada
- * como argumento 1.
+ * Asigna la característica del ACE, enviada como argumento 1.
  *
  * Arguments:
- *            0: Unidad a verificar. <UNIT>
- *            1: Característica del ACE. <STRING>
+ *            0: Unidad a la que se le asiganara la característica. <UNIT>
+ *            1: Característica a asignar. <STRING>
  *                # Características aceptadas: "Medic", "Doctor", "Enginner",
  *                                             "Advanced Enginner" y "EOD".
  *
  * Return Value:
- * ¿Cumple con la característica? <BOOL>
+ * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Example:
- * [player, "Doctor"] call FCLA_Common_fnc_checkUnitTrait;
+ * [player, "Doctor"] call FCLA_Common_fnc_setUnitTrait;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -35,11 +34,12 @@ _acceptedTraits = ["MEDIC", "DOCTOR", "ENGINNER", "ADVANCED ENGINNER", "EOD"];
 if ((isNull _unit) || !(_trait in _acceptedTraits)) exitWith {false};
 
 
-//Verificar si cumple con la característica.
+//Asignar característica.
 switch (_trait) do {
-  case "MEDIC": {(_unit getVariable ["ACE_Medical_medicClass", 0]) == 1};
-  case "DOCTOR": {(_unit getVariable ["ACE_Medical_medicClass", 0]) == 2};
-  case "ENGINNER": {(_unit getVariable ["ACE_isEngineer", 0]) == 1};
-  case "ADVANCED ENGINNER": {(_unit getVariable ["ACE_isEngineer", 0]) == 2};
-  case "EOD": {_unit getVariable ["ACE_isEOD", false];};
+  case "MEDIC": {_unit setVariable ["ACE_Medical_medicClass", 1, true];};
+  case "DOCTOR": {_unit setVariable ["ACE_Medical_medicClass", 2, true];};
+  case "ENGINNER": {_unit setVariable ["ACE_isEngineer", 1, true];};
+  case "ADVANCED ENGINNER": {_unit setVariable ["ACE_isEngineer", 2, true];};
+  case "EOD": {_unit setVariable ["ACE_isEOD", true, true];};
 };
+true

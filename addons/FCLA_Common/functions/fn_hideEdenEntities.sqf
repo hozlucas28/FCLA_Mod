@@ -16,7 +16,7 @@
  *
  * Note:
  * Si se quiere excluir una entidad específica asignale la variable de tipo
- * objeto "FCLA_Exclude_Concealment" con un valor verdadero.
+ * objeto "FCLA_Exclude_Concealment" con el valor <true>.
  *
  * Examples:
  * [getPos player, 150] call FCLA_Common_fnc_hideEdenEntities; //IA no excluida.
@@ -37,7 +37,7 @@ if (_rad <= 0) exitWith {false};
 
 //Determina las entidades a ocultar.
 _centerPos = [_center] call CBA_fnc_getPos;
-_nearEntities = ((nearestObjects [_centerPos, [], _rad, true]) + (nearestTerrainObjects [_centerPos, [], _rad, true, true])) - allPlayers;
+_nearEntities = ((nearestObjects [_centerPos, [], _rad, true]) - (nearestTerrainObjects [_centerPos, [], _rad, true, true])) - allPlayers;
 _entitiesToHide = switch (_excludeAI) do {
 	case true: {_nearEntities - allUnits;};
 	case false: {_nearEntities;};
@@ -46,7 +46,7 @@ _entitiesToHide = switch (_excludeAI) do {
 
 //Oculta las entidades.
 {
-  _hideUnit = !(_excludeAI) || ((count (fullCrew _x)) <= 0);
+  _hideUnit = (!_excludeAI) || ((count (fullCrew _x)) <= 0);
   _isNotExcluded = !(_x getVariable ["FCLA_Exclude_Concealment", false]);
 
 	if ((_hideUnit) && (_isNotExcluded)) then {

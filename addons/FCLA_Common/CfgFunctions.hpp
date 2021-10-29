@@ -27,6 +27,7 @@ class FCLA_Common_Functions {
   class setHelipadLights {};
   class setIntroduction {};
   class setRadioFrequencies {};
+  class setUnitTrait {};
   class severalConditions {};
   class Shellshock {};
   class showHiddenEdenEntities {};

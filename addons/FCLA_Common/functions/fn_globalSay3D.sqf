@@ -17,11 +17,11 @@
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Examples:
- * [player, "FCLA_Hiss_1", 1] call FCLA_Common_fnc_globalSay3D; //No se borrara el origen del sonido.
- * [player, "FCLA_Hiss_1", 1, true] call FCLA_Common_fnc_globalSay3D; //Se borrara el origen del sonido.
+ * [player, "FCLA_Hiss_1", 1] call FCLA_Common_fnc_globalSay3D; //Opcionales no definidos.
+ * [Unidad_1, "FCLA_Hiss_2", 1, 50, true] call FCLA_Common_fnc_globalSay3D; //Opcionales definidos.
  *
  * Note:
- * La función le asigna un valor de verdad a la variable de tipo
+ * La función le asigna el valor <true> a la variable de tipo
  * objeto "FCLA_Playing_Sound" asociada a la unidad/objeto origen
  * del sonido, para asi evitar un bucle de reproducción.
  *
@@ -53,7 +53,7 @@ _source setVariable ["FCLA_Playing_Sound", true, true];
 
 //Eliminar origen.
 [{
-  if (_this select 0) then {deleteVehicle _source};
-  (_this select 1) setVariable ["FCLA_Playing_Sound", nil, true];
-}, [_deleteSource, _source], round _soundTime] call CBA_fnc_waitAndExecute;
+  (_this select 0) setVariable ["FCLA_Playing_Sound", nil, true];
+  if (_this select 1) then {deleteVehicle (_this select 0)};
+}, [_source, _deleteSource], round _soundTime] call CBA_fnc_waitAndExecute;
 true

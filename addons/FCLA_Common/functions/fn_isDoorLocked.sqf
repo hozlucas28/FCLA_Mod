@@ -41,4 +41,4 @@ if (count _selections <= 0) exitWith {false};
 //Obtener puerta y verificar estado.
 _selection = _selections select 0;
 _doorInfo = [_selection select 0] call FCLA_Common_fnc_getDoorInfo;
-isNil {cursorObject getVariable [(_doorInfo select 1), false];};
+!isNil {cursorObject getVariable (_doorInfo select 1)};

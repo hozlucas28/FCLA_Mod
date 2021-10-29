@@ -11,6 +11,9 @@
  * Example:
  * call FCLA_Common_fnc_isAdmin;
  *
+ * Note:
+ * Si no encuentras en un servidor dedicado se retornara un false.
+ *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
 
