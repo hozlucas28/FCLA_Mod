@@ -55,7 +55,7 @@ uiNamespace setVariable ["FCLA_Introduction_Subtitle", _subtitle];
 
       Sleep 3;
       [
-       "<img size='10' image='\FCLA_Data\Others\FCLA_Squads.jpg'/>",
+       "<img size='10' image='\FCLA_Common\data\FCLA_Squads.jpg'/>",
        safeZoneX + 0.71, safeZoneY + safeZoneH - 1.5, 4, 4, 0, 789
       ] spawn bis_fnc_dynamicText;
 

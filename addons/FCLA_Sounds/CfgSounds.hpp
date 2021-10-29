@@ -3,12 +3,6 @@
 |                                    SONIDOS                                     |
 |********************************************************************************/
 
-class FCLA_Introduction {
-  name = "FCLA - Introducción";
-  sound[] = {"\FCLA_Sounds\sounds\Introduction.ogg", db+5, 1};
-  titles[] = {};
-};
-
 class FCLA_Shooting_Range {
   name = "FCLA - Campo de tiro";
   sound[] = {"\FCLA_Sounds\sounds\Shooting_Range.ogg", db+5, 1};

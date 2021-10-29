@@ -3,6 +3,18 @@
 |                                    SONIDOS                                     |
 |********************************************************************************/
 
+class FCLA_Introduction {
+  name = "FCLA - Introducción";
+  sound[] = {"\FCLA_Common\sounds\Introduction.ogg", db+5, 1};
+  titles[] = {};
+};
+
+class FCLA_Hacking_Initialized {
+  name = "FCLA - Hackeo iniciado";
+  sound[] = {"\FCLA_Common\sounds\Hacking_Initialized.ogg", db+5, 1};
+  titles[] = {};
+};
+
 class FCLA_Explosion_Wave_1 {
 	name = "FCLA - Onda de choque (1)";
 	sound[] = {"\FCLA_Common\sounds\Explosion_Wave_1.wav", db+5, 1};
@@ -13,12 +25,6 @@ class FCLA_Explosion_Wave_2 {
 	name = "FCLA - Onda de choque (2)";
 	sound[] = {"\FCLA_Common\sounds\Explosion_Wave_2.wav", db+5, 1};
 	titles[] = {0, ""};
-};
-
-class FCLA_Hacking_Initialized {
-  name = "FCLA - Hackeo iniciado";
-  sound[] = {"\FCLA_Common\sounds\Hacking_Initialized.ogg", db+5, 1};
-  titles[] = {};
 };
 
 class FCLA_Pain_1 {
