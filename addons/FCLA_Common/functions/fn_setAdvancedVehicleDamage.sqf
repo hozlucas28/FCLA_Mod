@@ -23,9 +23,6 @@
  * esta función no se ejecutara.
  *
  * Public: [Yes]
- *
- * Author:
- * hozlucas28
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.

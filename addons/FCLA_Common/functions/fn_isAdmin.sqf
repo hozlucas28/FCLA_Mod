@@ -11,7 +11,7 @@
  * Return Value:
  * ¿Es un administrador? <BOOL>
  *
- * Example:
+ * Examples:
  * [] call FCLA_Common_fnc_isAdmin; //Administrador votado excluido.
  * [false] call FCLA_Common_fnc_isAdmin; //Administrador votado no excluido.
  *

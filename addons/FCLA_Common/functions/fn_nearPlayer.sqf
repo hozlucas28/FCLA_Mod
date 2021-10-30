@@ -21,7 +21,7 @@
  *
  * Examples:
  * [player, 50] call FCLA_Common_fnc_nearPlayer; //Opcionales no definidos.
- * [player, 50, 2, false] call FCLA_Common_fnc_nearPlayer; //Opcionales definidos.
+ * [getPos player, 50, 2, false] call FCLA_Common_fnc_nearPlayer; //Opcionales definidos.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

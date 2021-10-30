@@ -3,10 +3,10 @@
  * Author: hozlucas28
  *
  * Description:
- * Muestra un/los texto/s en pantalla a modo de subtítulo/s.
+ * Genera una serie de mensajes a modo de subtítulos, según los argumentos enviados.
  *
  * Arguments:
- *            0: Emisor de los subtítulos. <UNIT|OBJECT>
+ *            0: Emisor de los mensajes/subtítulos. <UNIT|OBJECT>
  *
  *            1: Línea/s (subtítulo/s) que se quiere/n mostrar. <ARRAY OF LINE/S>
  *                - Primera línea con el nombre del emisor y subtítulo a mostrar. <ARRAY OF STRINGS>
@@ -29,11 +29,11 @@
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Examples:
- *            //Subtítulo de una línea sin emisor definido, no se impondrán condiciones.
+ *            //Genera un mensaje, sin emisor definido y no impone condiciones.
  *            _line = ["[Sdo] Usted", "Hola mundo!, esto es un ejemplo de una linea!"];
  *            [objNull, [_line], "Side", 5] call FCLA_Common_fnc_showSubtitles;
  *
- *            //Subtítulos de tres líneas con emisor definido, se impondrán condiciones.
+ *            //Genera tres mensajes, con emisor definido e impone condiciones.
  *            _line1 = ["[Cbo] Enemigo", "Hola mundo!, primer linea!"];
  *            _line2 = ["[Cbo] Enemigo", "¿Todo bien?, segunda linea!"];
  *            _line3 = ["[Cbo] Enemigo", "Adios mundo!, tercera linea!"];
@@ -43,7 +43,7 @@
  * Se recomienda utilizar esta función a travez del evento
  * personalizado "FCLA_Subtitles".
  *
- * Si no sea desea definir un emisor asignele le valor: objNull, como se
+ * Si no sea desea definir un emisor asignele le valor <objNull>, como se
  * observa en el primer ejemplo.
  *
  * Para que se verifiquen las condiciones el emisor debera estar definido, sino

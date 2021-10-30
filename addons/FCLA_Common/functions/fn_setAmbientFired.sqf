@@ -17,7 +17,7 @@
  *
  * Examples:
  * [AA_1] call FCLA_Common_fnc_setAmbientFired; //Opcionales no definidos.
- * [AA_2, (weapons AA_2) select 0, (magazines AA_2) select 0, [10, 20], [4, 8]] call FCLA_Common_fnc_setAmbientFired; //Opcionales definidos.
+ * [AA_2, (weapons AA_2) select 1, (magazines AA_2) select 1, [10, 20], [4, 8]] call FCLA_Common_fnc_setAmbientFired; //Opcionales definidos.
  *
  * Notes:
  * Script para obtener las torretas del vehículo: <weapons VEHICLE;>

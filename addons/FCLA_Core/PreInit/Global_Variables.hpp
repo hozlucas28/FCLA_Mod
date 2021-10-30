@@ -10,33 +10,6 @@
 
 
 
-/* -------------------------------- GENERAL -------------------------------- */
-
-FCLA_Editors = [
-                "76561198137876583", //hozlucas28.
-                "76561198059595506", //Naretick.
-                "76561198173170422", //Sagara.
-                "76561198304995327", //Ghostkiller.
-                "76561198260536786" //Mario.
-               ];
-
-FCLA_Commanders = [
-                   "76561198010584812", //Kovalsky.
-                   "76561198178496662", //Byron.
-                   "76561197982853635" //Legion.
-                  ];
-
-FCLA_Instructors = [
-                    "76561198312056354", //Skaner.
-                    "76561198031480126", //Vespa.
-                    "76561197996897589", //Nicorrosivo.
-                    "76561198825814903", //Alekmosq.
-                    "76561198144014728", //Kreimsito.
-                    "76561198126066362", //AntarcticScythe.
-];
-
-
-
 /* -------------------------- ZOMBIES AND DEMONS --------------------------- */
 
 ACE_Medical_Selections = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];

@@ -91,6 +91,39 @@
 /* --------------------------------- UIDS ---------------------------------- */
 
 [
+	"FCLA_Commanders_UIDs", "EDITBOX",
+	["Mandos", "Si no sabes que es esto, no lo modifiques."],
+	["FCLA Desarrollo", "UIDs"],
+	#include "\FCLA_Core\PreInit\Addon_Options\includes\Commanders.hpp",
+	GLOBAL,
+	{},
+	false
+] call CBA_fnc_addSetting;
+
+
+[
+	"FCLA_Editors_UIDs", "EDITBOX",
+	["Editores", "Si no sabes que es esto, no lo modifiques."],
+	["FCLA Desarrollo", "UIDs"],
+	#include "\FCLA_Core\PreInit\Addon_Options\includes\Editors.hpp",
+	GLOBAL,
+	{},
+	false
+] call CBA_fnc_addSetting;
+
+
+[
+	"FCLA_Instructors_UIDs", "EDITBOX",
+	["Instructores", "Si no sabes que es esto, no lo modifiques."],
+	["FCLA Desarrollo", "UIDs"],
+	#include "\FCLA_Core\PreInit\Addon_Options\includes\Instructors.hpp",
+	GLOBAL,
+	{},
+	false
+] call CBA_fnc_addSetting;
+
+
+[
 	"FCLA_Lorflord_UID", "EDITBOX",
 	["Lorflord", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
