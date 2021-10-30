@@ -50,7 +50,7 @@ if (_isCuratorEnhancedModLoaded) then {
     params ["_value"];
     _inUAV = ([player] call ace_common_fnc_getUavControlPosition) != "";
     _isOnMap = visibleMap;
-    _isAdmin = [true] call FCLA_Common_fnc_isAdmin;
+    _isAdmin = [] call FCLA_Common_fnc_isAdmin;
     _isCurator = [player] call FCLA_Common_fnc_isCurator;
     _isNotAlive = !(alive player);
     _isNotAuthorized = !((getPlayerUID player) in FCLA_Editors) && !((getPlayerUID player) in FCLA_Commanders) && !((getPlayerUID player) in FCLA_Instructors);
