@@ -12,9 +12,10 @@
 	params ["_unit", "_state"];
   _currentGoggles = goggles _unit;
 	_originalGoggles = _unit getVariable ["FCLA_Saved_Goggles", ""];
-  if ((_state) || !(_currentGoggles in FCLA_Goggles_Bandages) || (_originalGoggles == "")) exitWith {};
+	_compatibleBandages = ["G_Blindfold_01_black_F", "G_Blindfold_01_white_F"];
+  if ((_state) || !(_currentGoggles in _compatibleBandages) || (_originalGoggles == "")) exitWith {};
 
-  if (_currentGoggles == (FCLA_Goggles_Bandages select 0)) then {
+  if (_currentGoggles == (_compatibleBandages select 0)) then {
 		removeGoggles _unit;
     _unit addGoggles _originalGoggles;
 		_unit setVariable ["FCLA_Saved_Goggles", nil, true];
