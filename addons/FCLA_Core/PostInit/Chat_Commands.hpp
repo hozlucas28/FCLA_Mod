@@ -15,14 +15,14 @@
   _isNotAlive = !(alive player);
   _inCameraMode = player in (call ACE_Spectator_fnc_players);
   _currentControledUnit = call CBA_fnc_currentUnit;
-  _cameraModeNotAllowedByCurator = !(player getVariable ["FCLA_Camera_Mode_Allowed_byCurator", false]);
+  _cameraModeNotAllowed = !(player getVariable ["FCLA_Camera_Mode_Allowed", false]);
   if (_inUAV) exitWith {[{systemChat "No puedes utilizar este comando si estas utilizando un dron.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_isOnMap) exitWith {[{systemChat "No puedes utilizar este comando si el mapa esta abierto.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_inCurator) exitWith {[{systemChat "No puedes utilizar este comando si la interfaz del Zeus esta abierta.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_isNotAlive) exitWith {[{systemChat "Debes estar vivo para utilizar este comando.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_inCameraMode) exitWith {[{systemChat "No puedes utilizar este comando si ya estas utilizando el modo cámara.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_currentControledUnit != player) exitWith {[{systemChat "No puedes utilizar este comando si estas controlando a una unidad.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
-  if ((FCLA_Mission_Type != "Training") && (_cameraModeNotAllowedByCurator)) exitWith {[{systemChat "El mapa no es de entrenamiento! No puedes utilizar este comando, salvo que te lo permita un Zeus.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
+  if ((FCLA_Mission_Type != "Training") && (_cameraModeNotAllowed)) exitWith {[{systemChat "El mapa no es de entrenamiento! No puedes utilizar este comando, salvo que te lo permita un Zeus.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
 
   _cameraVision = if (sunOrMoon == 1) then {-2} else {-1};
   [true, false, true] call ACE_Spectator_fnc_setSpectator;

@@ -13,8 +13,8 @@
 params ["_plane", "_engineOne", "_engineTwo", "_pos", "_speed", "_posASL", "_posATL", "_posASLW", "_velocity"];
 if (!FCLA_Planes_Ground_Smoke) exitWith {};
 _seaHeight = _posASLW select 2;
-_groundHeight = _posATL select 2;
 _surfacePos = [((_pos select 0) + (_engineOne select 0)), ((_pos select 1) + (_engineOne select 1)), 0];
+_groundHeight = _posATL select 2;
 
 
 

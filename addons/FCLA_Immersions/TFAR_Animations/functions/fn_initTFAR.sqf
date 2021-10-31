@@ -17,7 +17,7 @@
   _isDragging = _unit getVariable ["ACE_Dragging_isDragging", false];
   _inCameraMode = _unit in (call ACE_Spectator_fnc_players);
   _isHandcuffed = _unit getVariable ["ACE_Captives_isHandcuffed", false];
-  _inWeaponAnimation = !isNil "FCLA_inWeapon_Animation";
+  _inWeaponAnimation = !isNil "FCLA_Weapon_Animation";
   _isNotInCargoVehicle = if ((_getCurrentVehicleRole == "") || (_getCurrentVehicleRole == "cargo")) then {false} else {true};
   _isNotTouchingGround = !isTouchingGround _unit;
   if ((!FCLA_Radio_Animations) || (_isNotAlive) || (_isSwimming) || (_isDragging) || (_inCameraMode) || (_isHandcuffed) || (_inWeaponAnimation) || (_isNotInCargoVehicle) || (_isNotTouchingGround)) exitWith {};

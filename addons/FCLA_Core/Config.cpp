@@ -98,41 +98,41 @@ class CfgWeapons {
 
 	class Rifle: RifleCore {
 		class EventHandlers {
-			fired = "FCLA_inWeapon_Animation = nil;";
-			reload = "FCLA_inWeapon_Animation = true;";
-			reloaded = "FCLA_inWeapon_Animation = nil;";
+			fired = "FCLA_Weapon_Animation = nil;";
+			reload = "FCLA_Weapon_Animation = true;";
+			reloaded = "FCLA_Weapon_Animation = nil;";
 		};
 	};
 
 	class UGL_F: GrenadeLauncher {
 		class EventHandlers {
-			fired = "FCLA_inWeapon_Animation = nil;";
-			reload = "FCLA_inWeapon_Animation = true;";
-			reloaded = "FCLA_inWeapon_Animation = nil;";
+			fired = "FCLA_Weapon_Animation = nil;";
+			reload = "FCLA_Weapon_Animation = true;";
+			reloaded = "FCLA_Weapon_Animation = nil;";
 		};
 	};
 
 	class MGun: MGunCore {
 		class EventHandlers {
-			fired = "FCLA_inWeapon_Animation = nil;";
-			reload = "FCLA_inWeapon_Animation = true;";
-			reloaded = "FCLA_inWeapon_Animation = nil;";
+			fired = "FCLA_Weapon_Animation = nil;";
+			reload = "FCLA_Weapon_Animation = true;";
+			reloaded = "FCLA_Weapon_Animation = nil;";
 		};
 	};
 
 	class Pistol: PistolCore {
 		class EventHandlers {
-			fired = "FCLA_inWeapon_Animation = nil;";
-			reload = "FCLA_inWeapon_Animation = true;";
-			reloaded = "FCLA_inWeapon_Animation = nil;";
+			fired = "FCLA_Weapon_Animation = nil;";
+			reload = "FCLA_Weapon_Animation = true;";
+			reloaded = "FCLA_Weapon_Animation = nil;";
 		};
 	};
 
 	class Launcher: LauncherCore {
 		class EventHandlers {
-			fired = "FCLA_inWeapon_Animation = nil;";
-			reload = "FCLA_inWeapon_Animation = true;";
-			reloaded = "FCLA_inWeapon_Animation = nil;";
+			fired = "FCLA_Weapon_Animation = nil;";
+			reload = "FCLA_Weapon_Animation = true;";
+			reloaded = "FCLA_Weapon_Animation = nil;";
 		};
 	};
 };

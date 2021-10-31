@@ -37,7 +37,7 @@ _Condition = {
 
 _statementOnFinish = {
   params ["_caller"];
-  playSound "FCLA_Magazine_On";
+  playSound "FCLA_Magazine_Equipped";
   [_caller, "FCLA_NVG_Battery"] call ACE_Common_fnc_useItem;
   _caller setVariable ["FCLA_Current_Battery_NVG", 100, true];
   [_caller, "FCLA_Animation_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;

@@ -8,11 +8,12 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-//Variables de referencia.
-params ["_unit", "_container"];
+//Variable de referencia.
+params ["_unit"];
 if (!FCLA_Inventory_Sounds) exitWith {};
 
 
-if (backpack _unit != "") exitWith {playsound "FCLA_Open_Bag";};
-_randomSound = selectRandom ["FCLA_Inventory_In_1", "FCLA_Inventory_In_2", "FCLA_Inventory_In_3", "FCLA_Inventory_In_4"];
+_currentBackpack = backpack _unit;
+if (_currentBackpack != "") exitWith {playsound "FCLA_Open_Bag";};
+_randomSound = selectRandom ["FCLA_Open_Inventory_1", "FCLA_Open_Inventory_2", "FCLA_Open_Inventory_3", "FCLA_Open_Inventory_4"];
 playsound _randomSound;

@@ -17,7 +17,7 @@
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Example:
- * [player, "FCLA_Animation_Tactical_Position_Up", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+ * [player, "FCLA_Tactical_Position_Up", "playActionNow"] call FCLA_Common_fnc_playAnimation;
  *
  * Note:
  * La función le asigna el valor <true> a la variable de tipo

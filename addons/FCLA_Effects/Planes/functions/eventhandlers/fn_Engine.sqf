@@ -28,17 +28,17 @@ if (_engineState) then {
     _enginePower = round ((airplaneThrottle _plane) * 100);
     if ((((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) || !(alive _plane)) exitWith {
       if (alive _plane) exitWith {};
-      _plane setVariable ["FCLA_Planes_PerFrameHandler_ID", nil, true];
+      _plane setVariable ["FCLA_Planes_perFrameHandler_ID", nil, true];
       [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    if (!isTouchingGround _plane) then {[[_plane, _speed], FCLA_Effects_fnc_camShakePlanes] remoteExec ["spawn", 0];};
+    if (!isTouchingGround _plane) then {["FCLA_Plane_Shake", [_plane, _speed]] call CBA_fnc_globalEvent;};
     if ((_speed >= 150) && ((_enginePower) >= 25)) then {[_plane, _engineOne, _engineTwo, _pos, _speed, _posASL, _posATL, _posASLW, _velocity] Spawn FCLA_Effects_fnc_groundSmokePlanes;};
   }, 0, [_plane, _engineOne, _engineTwo]] call CBA_fnc_addPerFrameHandler;
-  _plane setVariable ["FCLA_Planes_PerFrameHandler_ID", _handle, true];
+  _plane setVariable ["FCLA_Planes_perFrameHandler_ID", _handle, true];
 } else {
-  _perFrameHandlerID = _plane getVariable ["FCLA_Planes_PerFrameHandler_ID", -1000];
+  _perFrameHandlerID = _plane getVariable ["FCLA_Planes_perFrameHandler_ID", -1000];
   if (_perFrameHandlerID == -1000) exitWith {};
   [_perFrameHandlerID] call CBA_fnc_removePerFrameHandler;
-  _plane setVariable ["FCLA_Planes_PerFrameHandler_ID", nil, true];
+  _plane setVariable ["FCLA_Planes_perFrameHandler_ID", nil, true];
 };

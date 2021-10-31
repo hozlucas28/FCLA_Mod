@@ -45,12 +45,12 @@ _currentBackpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, t
     _currentBackpackContainer setVariable ["FCLA_Backpack_Oxygen", _backpackOxygenRemaining];
 
     if ((_backpackFirstAlertPlayed == "objNull") && (_backpackOxygenRemaining <= 50)) then {
-      [_currentBackpackContainer, "FCLA_Low_Oxygen_Alert", 1, false] call FCLA_Common_fnc_globalSay3D;
+      [_currentBackpackContainer, "FCLA_Low_Oxygen_Alert", 1, 15, false] call FCLA_Common_fnc_globalSay3D;
       [{_this setVariable ["FCLA_Backpack_Current_Alert_Played", "Half_Capacity", true];}, _currentBackpackContainer, 1] call CBA_fnc_waitAndExecute;
     };
 
     if ((_backpackFirstAlertPlayed == "Half_Capacity") && (_backpackOxygenRemaining <= 25)) then {
-      [_currentBackpackContainer, "FCLA_Low_Oxygen_Alert", 1, false] call FCLA_Common_fnc_globalSay3D;
+      [_currentBackpackContainer, "FCLA_Low_Oxygen_Alert", 1, 15, false] call FCLA_Common_fnc_globalSay3D;
       [{_this setVariable ["FCLA_Backpack_Current_Alert_Played", "Quarter_Capacity", true];}, _currentBackpackContainer, 1] call CBA_fnc_waitAndExecute;
     };
     (_this select 0) set [1, CBA_missionTime];

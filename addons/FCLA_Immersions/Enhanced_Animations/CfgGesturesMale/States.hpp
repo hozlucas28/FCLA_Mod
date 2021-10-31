@@ -3,7 +3,7 @@
 |                       ESTADOS - "ANIMACIONES MEJORADAS"                        |
 |********************************************************************************/
 
-class FCLA_Animation_Tactical_Position_Up: default {
+class FCLA_Tactical_Position_Up: default {
   file = "\FCLA_Immersions\Enhanced_Animations\animations\Tactical_Position_Up.rtm";
   mask = "handsWeapon";
   looped = 1;
@@ -28,7 +28,7 @@ class FCLA_Animation_Tactical_Position_Up: default {
 };
 
 
-class FCLA_Animation_Tactical_Position_Down: default {
+class FCLA_Tactical_Position_Down: default {
   file = "\FCLA_Immersions\Enhanced_Animations\animations\Tactical_Position_Down.rtm";
   mask = "handsWeapon";
   looped = 1;
@@ -49,7 +49,7 @@ class FCLA_Animation_Tactical_Position_Down: default {
 };
 
 
-class FCLA_Animation_tacticalPosition_End: default {
+class FCLA_Tactical_Position_Stop: default {
   file = "";
   mask = "handsWeapon";
   looped = 0;

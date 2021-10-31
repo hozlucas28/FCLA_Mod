@@ -42,18 +42,8 @@
 ] call CBA_fnc_addSetting;
 
 [
-	"FCLA_putTake_Sounds", "CHECKBOX",
-	["¿Al mover/agarrar items?", "Si se activa se reproducira un sonido cuando se mueva/agarre un item dentro de un contenedor."],
-	["FCLA Efectos", "Sonidos personalizados"],
-	true,
-	GLOBAL,
-	{},
-	false
-] call CBA_fnc_addSetting;
-
-[
 	"FCLA_Inventory_Sounds", "CHECKBOX",
-	["¿Al abrir/cerrar inventario?", "Si se activa se reproducira un sonido cuando ser abra/cierre el inventario."],
+	["¿Al abrir/cerrar inventario?", "Si se activa se reproducira un sonido cuando ser abra/cierre el inventario y cuando mueva/agarre un item."],
 	["FCLA Efectos", "Sonidos personalizados"],
 	true,
 	GLOBAL,

@@ -26,7 +26,7 @@ if (_ownedDLC) exitWith {};
 
   _statement = {
     params ["_unit", "_container", "_item", "_slot", "_params"];
-    playSound "FCLA_Goggles_On";
+    playSound "FCLA_Goggles_Equipped";
     [_unit, goggles _unit, true] call CBA_fnc_addItem;
     _unit addGoggles _item;
   };

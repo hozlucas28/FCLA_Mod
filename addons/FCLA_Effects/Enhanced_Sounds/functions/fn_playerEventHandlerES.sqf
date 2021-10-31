@@ -13,7 +13,7 @@
 //Al cambiar vista de cámara.
 ["cameraView", {
   params ["_unit", "_newCameraMode", "_oldCameraMode"];
-  _noWeaponOnHand = currentWeapon _unit == "";
+  _noWeaponOnHand = (currentWeapon _unit) == "";
   _isWeaponLowered = weaponLowered _unit;
   _severalConditions = [_unit, [8, 14]] call FCLA_Common_fnc_severalConditions;
   _isNotTouchingGround = !isTouchingGround _unit;
@@ -33,19 +33,11 @@
 }, false] call CBA_fnc_addPlayerEventHandler;
 
 
-
 //Al cambiar el modo de visión.
 ["visionMode", {
   params ["_unit", "_newVisionMode", "_oldVisionMode"];
-  _inUAV = ([_unit] call ace_common_fnc_getUavControlPosition) != "";
-  _inCurator = !isNull findDisplay 312;
-  _inStairs = _unit getVariable ["FCLA_inStairs", false];
-  _isNotAlive = !alive _unit;
-  _isSwimming = [_unit] call ACE_Common_fnc_isSwimming;
-  _inCameraMode = _unit in (call ACE_Spectator_fnc_players);
-  _isHandcuffed = _unit getVariable ["ACE_Captives_isHandcuffed", false];
-  _isDayVisionMode = _newVisionMode == 0;
-  if ((!FCLA_visionMode_Sounds) || (_inUAV) || (_inCurator) || (_inStairs) || (_isNotAlive) || (_isSwimming) || (_inCameraMode) || (_isHandcuffed) || (_isDayVisionMode)) exitWith {};
-
-  [_unit, "FCLA_Vision_Mode_Changed", 2, false] call FCLA_Common_fnc_globalSay3D;
+  _severalConditions = [_unit, [4, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16]] call FCLA_Common_fnc_severalConditions;
+  _visionModeDesactivated = _newVisionMode == 0;
+  if ((!FCLA_visionMode_Sounds) || (_severalConditions) || (_visionModeDesactivated)) exitWith {};
+  if (isNull objectParent player) then {[_unit, "FCLA_Vision_Mode_Changed", 2, 20, false] call FCLA_Common_fnc_globalSay3D;} else {playSound "FCLA_Vision_Mode_Changed";};
 }, false] call CBA_fnc_addPlayerEventHandler;

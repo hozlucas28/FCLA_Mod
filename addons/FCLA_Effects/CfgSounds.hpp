@@ -63,51 +63,51 @@ class FCLA_Holster_Weapon_5 {
 	titles[] = {0, ""};
 };
 
-class FCLA_Inventory_In_1 {
+class FCLA_Open_Inventory_1 {
 	name = "FCLA - Abrir inventario (1)";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Inventory_In_1.wav", db+6, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Open_Inventory_1.wav", db+6, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Inventory_In_2 {
+class FCLA_Open_Inventory_2 {
 	name = "FCLA - Abrir inventario (2)";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Inventory_In_2.wav", db+6, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Open_Inventory_2.wav", db+6, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Inventory_In_3 {
+class FCLA_Open_Inventory_3 {
 	name = "FCLA - Abrir inventario (3)";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Inventory_In_3.ogg", db+6, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Open_Inventory_3.ogg", db+6, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Inventory_In_4 {
+class FCLA_Open_Inventory_4 {
 	name = "FCLA - Abrir inventario (4)";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Inventory_In_4.ogg", db+6, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Open_Inventory_4.ogg", db+6, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Inventory_Out_1 {
+class FCLA_Close_Inventory_1 {
 	name = "FCLA - Cerrar inventario (1)";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Inventory_Out_1.wav", db+6, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Close_Inventory_1.wav", db+6, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Inventory_Out_2 {
+class FCLA_Close_Inventory_2 {
 	name = "FCLA - Cerrar inventario (2)";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Inventory_Out_2.ogg", db+6, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Close_Inventory_2.ogg", db+6, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Inventory_Out_3 {
+class FCLA_Close_Inventory_3 {
 	name = "FCLA - Cerrar inventario (3)";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Inventory_Out_3.wav", db+6, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Close_Inventory_3.wav", db+6, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Inventory_Out_4 {
+class FCLA_Close_Inventory_4 {
 	name = "FCLA - Cerrar inventario (4)";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Inventory_Out_4.ogg", db+6, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Close_Inventory_4.ogg", db+6, 1};
 	titles[] = {0, ""};
 };
 
@@ -123,111 +123,111 @@ class FCLA_Close_Bag {
 	titles[] = {0, ""};
 };
 
-class FCLA_Weapon_Pickup {
+class FCLA_Weapon_Equipped {
 	name = "FCLA - Agarrar rifle";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Weapon_Pickup.wav", db+10, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Weapon_Equipped.wav", db+10, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Weapon_Drop {
+class FCLA_Weapon_Unequipped {
 	name = "FCLA - Soltar rifle";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Weapon_Drop.wav", db+10, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Weapon_Unequipped.wav", db+10, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Pistol_Pickup {
+class FCLA_Pistol_Equipped {
 	name = "FCLA - Agarrar pistola";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Pistol_Pickup.wav", db+10, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Pistol_Equipped.wav", db+10, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Pistol_Drop {
+class FCLA_Pistol_Unequipped {
 	name = "FCLA - Soltar pistola";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Pistol_Drop.wav", db+10, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Pistol_Unequipped.wav", db+10, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Magazine_On {
+class FCLA_Magazine_Equipped {
 	name = "FCLA - Agarrar cargador";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Magazine_On.wav", db+2, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Magazine_Equipped.wav", db+2, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Magazine_Off {
+class FCLA_Magazine_Unequipped {
 	name = "FCLA - Soltar cargador";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Magazine_Off.wav", db+2, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Magazine_Unequipped.wav", db+2, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Helmet_On {
+class FCLA_Helmet_Equipped {
 	name = "FCLA - Equiparse casco";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Helmet_On.wav", db+10, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Helmet_Equipped.wav", db+10, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Helmet_Off {
+class FCLA_Helmet_Unequipped {
 	name = "FCLA - Desequiparse casco";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Helmet_Off.wav", db+10, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Helmet_Unequipped.wav", db+10, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Goggles_On {
+class FCLA_Goggles_Equipped {
 	name = "FCLA - Equiparse anteojos";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Goggles_On.wav", db+10, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Goggles_Equipped.wav", db+10, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Goggles_Off {
+class FCLA_Goggles_Unequipped {
 	name = "FCLA - Desequiparse anteojos";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Goggles_Off.wav", db+10, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Goggles_Unequipped.wav", db+10, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Armor_On {
+class FCLA_Armor_Equipped {
 	name = "FCLA - Equiparse chaleco";
 	sound[] = {"\FCLA_Effects\sounds\inventory\Armor_On.wav", db+10, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Armor_Off {
+class FCLA_Armor_Unequipped {
 	name = "FCLA - Desequiparse chaleco";
 	sound[] = {"\FCLA_Effects\sounds\inventory\Armor_Off.wav", db+10, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Backpack_On {
+class FCLA_Backpack_Equipped {
 	name = "FCLA - Equiparse mochila";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Backpack_On.wav", db+10, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Backpack_Equipped.wav", db+10, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Backpack_Off {
+class FCLA_Backpack_Unequipped {
 	name = "FCLA - Desequiparse mochila";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Backpack_Off.wav", db+10, 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Backpack_Unequipped.wav", db+10, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Generic_Take_1 {
-	name = "FCLA - Agarrar item (1)";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Generic_Take_1.ogg", db+2, 1};
+class FCLA_Generic_Use_1 {
+	name = "FCLA - Agarrar/Mover item (1)";
+	sound[] = {"\FCLA_Effects\sounds\inventory\Generic_Use_1.ogg", db+2, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Generic_Take_2 {
-	name = "FCLA - Agarrar item (2)";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Generic_Take_2.ogg", db+2, 1};
+class FCLA_Generic_Use_2 {
+	name = "FCLA - Agarrar/Mover item (2)";
+	sound[] = {"\FCLA_Effects\sounds\inventory\Generic_Use_2.ogg", db+2, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Generic_Take_3 {
-	name = "FCLA - Agarrar item (3)";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Generic_Take_3.ogg", db+2, 1};
+class FCLA_Generic_Use_3 {
+	name = "FCLA - Agarrar/Mover item (3)";
+	sound[] = {"\FCLA_Effects\sounds\inventory\Generic_Use_3.ogg", db+2, 1};
 	titles[] = {0, ""};
 };
 
-class FCLA_Generic_Take_4 {
-	name = "FCLA - Agarrar item (4)";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Generic_Take_4.ogg", db+2, 1};
+class FCLA_Generic_Use_4 {
+	name = "FCLA - Agarrar/Mover item (4)";
+	sound[] = {"\FCLA_Effects\sounds\inventory\Generic_Use_4.ogg", db+2, 1};
 	titles[] = {0, ""};
 };
 

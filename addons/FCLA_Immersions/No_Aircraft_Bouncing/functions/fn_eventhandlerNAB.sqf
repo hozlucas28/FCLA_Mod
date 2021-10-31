@@ -1,10 +1,10 @@
 
 /* ----------------------------------------------------------------------------
  * Author: hozlucas28
- * 
+ *
  * Description:
- * Crea un eventhandler para el uso de las funciones NAB.
- * 
+ * Crea un eventhandler para el uso de las funciones "NAB".
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 

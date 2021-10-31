@@ -12,7 +12,7 @@
  *             2: ¿Esta subiendo las escaleras de un edificio?
  *             3: ¿Esta utilizando el Zeus?
  *             4: ¿Esta en un vehículo?
- *             5: ¿Esta vivo?
+ *             5: ¿Esta muerto?
  *             6: ¿Esta arrastrando un objeto?
  *             7: ¿Esta moviendo un objeto?
  *             8: ¿Esta nadando?
@@ -66,7 +66,7 @@ _isSurrendering = _unit getVariable ["ACE_Captives_isSurrendering", false];
 _isShowingIDCard = !isNull findDisplay 10001;
 _isWeaponDeployed = isWeaponDeployed _unit;
 _isInventoryOpened = !isnull (findDisplay 602);
-_inWeaponAnimation = !isNil "FCLA_inWeapon_Animation";
+_inWeaponAnimation = !isNil "FCLA_Weapon_Animation";
 
 //Excluir condiciones.
 _conditions = [_inUAV, _isOnMap, _inStairs, _inCurator, _inVehicle, _isNotAlive, _isDragging, _isCarrying, _isSwimming, _inCameraMode, _isHandcuffed, _isUnconscious, _isSurrendering, _isShowingIDCard, _isWeaponDeployed, _isInventoryOpened, _inWeaponAnimation];

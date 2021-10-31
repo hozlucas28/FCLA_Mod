@@ -22,6 +22,6 @@
     if ((visibleMap) || (_inUAV) || (_inCameraMode) || (_isShowingIDCard) || (_noInTacticalAnimation)) exitWith {};
 
     _unit setVariable ["FCLA_inTactical_Position", nil, true];
-    [_unit, "FCLA_Animation_tacticalPosition_End", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+    [_unit, "FCLA_Tactical_Position_Stop", "playActionNow"] call FCLA_Common_fnc_playAnimation;
   }];
 }] call CBA_fnc_waitUntilAndExecute;

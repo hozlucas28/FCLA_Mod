@@ -24,46 +24,46 @@
 
   switch (true) do {
     case ((goggles _unit) in _APROTAN): {
-      "FCLA_Goggles_firstOverlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
-      "FCLA_Goggles_secondOverlay" cutRsc ["RscCBRN_APR", "PLAIN", -1, false];
+      "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
+      "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_APR", "PLAIN", -1, false];
       _unit setVariable ["FCLA_Mask_Equipped", nil, true];
       [{
         if (_this getVariable ["FCLA_Mask_Equipped", false]) exitWith {};
         _this setVariable ["FCLA_Mask_Equipped", true, true];
-        [_this] spawn FCLA_Effects_fnc_breathGoggles;
+        _this spawn FCLA_Effects_fnc_breathGoggles;
       }, _unit, 0.1] call CBA_fnc_waitAndExecute;
     };
 
     case ((goggles _unit) in _APRCSAT): {
-      "FCLA_Goggles_firstOverlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
-      "FCLA_Goggles_secondOverlay" cutRsc ["RscCBRN_APR_02", "PLAIN", -1, false];
+      "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
+      "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_APR_02", "PLAIN", -1, false];
       _unit setVariable ["FCLA_Mask_Equipped", nil, true];
       [{
         if (_this getVariable ["FCLA_Mask_Equipped", false]) exitWith {};
         _this setVariable ["FCLA_Mask_Equipped", true, true];
-        [_this] spawn FCLA_Effects_fnc_breathGoggles;
+        _this spawn FCLA_Effects_fnc_breathGoggles;
       }, _unit, 0.1] call CBA_fnc_waitAndExecute;
     };
 
     case ((goggles _unit) == "G_RegulatorMask_F"): {
-      "FCLA_Goggles_firstOverlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
-      "FCLA_Goggles_secondOverlay" cutRsc ["RscCBRN_Regulator", "PLAIN", -1, true];
+      "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
+      "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_Regulator", "PLAIN", -1, true];
       _unit setVariable ["FCLA_Mask_Equipped", nil, true];
       [{
         if (_this getVariable ["FCLA_Mask_Equipped", false]) exitWith {};
         _this setVariable ["FCLA_Mask_Equipped", true, true];
-        [_this] spawn FCLA_Effects_fnc_breathGoggles;
+        _this spawn FCLA_Effects_fnc_breathGoggles;
       }, _unit, 0.1] call CBA_fnc_waitAndExecute;
     };
 
     case ((goggles _unit) in _blindfolds): {
-      "FCLA_Goggles_secondOverlay" cutRsc ["RscBlindfold", "PLAIN", -1, true];
+      "FCLA_Goggles_Second_Overlay" cutRsc ["RscBlindfold", "PLAIN", -1, true];
       _unit setVariable ["FCLA_Mask_Equipped", nil, true];
     };
 
     default {
-      "FCLA_Goggles_firstOverlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
-      "FCLA_Goggles_secondOverlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
+      "FCLA_Goggles_First_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
+      "FCLA_Goggles_Second_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
       _unit setVariable ["FCLA_Mask_Equipped", nil, true];
     };
  };
@@ -71,7 +71,7 @@
 
 
 
-//Al cambiar cámara (Zeus, arsenal, etc.)
+//Al cambiar cámara (Zeus, arsenal, etc.).
 ["featureCamera", {
   params ["_unit", "_newCamera"];
   _APROTAN = ["G_AirPurifyingRespirator_01_F", "G_AirPurifyingRespirator_01_nofilter_F"];
@@ -81,45 +81,49 @@
 
 
   if (_newCamera == "curator") then {
-    "FCLA_Goggles_firstOverlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
-    "FCLA_Goggles_secondOverlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
+    "FCLA_Goggles_First_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
+    "FCLA_Goggles_Second_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
   } else {
     switch (true) do {
       case ((goggles _unit) in _APROTAN): {
-        "FCLA_Goggles_firstOverlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
-        "FCLA_Goggles_secondOverlay" cutRsc ["RscCBRN_APR", "PLAIN", -1, false];
+        "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
+        "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_APR", "PLAIN", -1, false];
         _unit setVariable ["FCLA_Mask_Equipped", nil, true];
         [{
           if (_this getVariable ["FCLA_Mask_Equipped", false]) exitWith {};
           _this setVariable ["FCLA_Mask_Equipped", true, true];
-          [_this] spawn FCLA_Effects_fnc_breathGoggles;
+          _this spawn FCLA_Effects_fnc_breathGoggles;
         }, _unit, 0.1] call CBA_fnc_waitAndExecute;
       };
 
       case ((goggles _unit) in _APRCSAT): {
-        "FCLA_Goggles_firstOverlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
-        "FCLA_Goggles_secondOverlay" cutRsc ["RscCBRN_APR_02", "PLAIN", -1, false];
+        "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
+        "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_APR_02", "PLAIN", -1, false];
         _unit setVariable ["FCLA_Mask_Equipped", nil, true];
         [{
           if (_this getVariable ["FCLA_Mask_Equipped", false]) exitWith {};
           _this setVariable ["FCLA_Mask_Equipped", true, true];
-          [_this] spawn FCLA_Effects_fnc_breathGoggles;
+          _this spawn FCLA_Effects_fnc_breathGoggles;
         }, _unit, 0.1] call CBA_fnc_waitAndExecute;
       };
 
       case ((goggles _unit) == "G_RegulatorMask_F"): {
-        "FCLA_Goggles_firstOverlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
-        "FCLA_Goggles_secondOverlay" cutRsc ["RscCBRN_Regulator", "PLAIN", -1, true];
+        "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
+        "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_Regulator", "PLAIN", -1, true];
         _unit setVariable ["FCLA_Mask_Equipped", nil, true];
         [{
           if (_this getVariable ["FCLA_Mask_Equipped", false]) exitWith {};
           _this setVariable ["FCLA_Mask_Equipped", true, true];
-          [_this] spawn FCLA_Effects_fnc_breathGoggles;
+          _this spawn FCLA_Effects_fnc_breathGoggles;
         }, _unit, 0.1] call CBA_fnc_waitAndExecute;
       };
 
-      case ((goggles _unit) in _blindfolds): {
-        "FCLA_Goggles_secondOverlay" cutRsc ["RscBlindfold", "PLAIN", -1, true];
+      case ((goggles _unit) in _blindfolds): {"FCLA_Goggles_Second_Overlay" cutRsc ["RscBlindfold", "PLAIN", -1, true];};
+
+      default {
+        "FCLA_Goggles_First_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
+        "FCLA_Goggles_Second_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
+        _unit setVariable ["FCLA_Mask_Equipped", nil, true];
       };
    };
   };
@@ -134,8 +138,8 @@
   if (_notUsingMask) exitWith {};
 
   if ((_newCamera == "External") && (!_notUsingMask)) exitWith {
-    "FCLA_Goggles_firstOverlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
-    "FCLA_Goggles_secondOverlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
+    "FCLA_Goggles_First_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
+    "FCLA_Goggles_Second_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
   };
 
 
@@ -147,8 +151,8 @@
     _notInImportantSeat = ((driver _currentVehicle) != _unit) && ((commander _currentVehicle) != _unit) && ((gunner _currentVehicle) != _unit);
     if (_notInImportantSeat) exitWith {};
 
-    "FCLA_Goggles_firstOverlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
-    "FCLA_Goggles_secondOverlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
+    "FCLA_Goggles_First_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
+    "FCLA_Goggles_Second_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
   } else {
     _APROTAN = ["G_AirPurifyingRespirator_01_F", "G_AirPurifyingRespirator_01_nofilter_F"];
     _APRCSAT = ["G_AirPurifyingRespirator_02_black_F", "G_AirPurifyingRespirator_02_olive_F", "G_AirPurifyingRespirator_02_sand_F"];
@@ -156,40 +160,44 @@
 
     switch (true) do {
       case ((goggles _unit) in _APROTAN): {
-        "FCLA_Goggles_firstOverlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
-        "FCLA_Goggles_secondOverlay" cutRsc ["RscCBRN_APR", "PLAIN", -1, false];
+        "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
+        "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_APR", "PLAIN", -1, false];
         _unit setVariable ["FCLA_Mask_Equipped", nil, true];
         [{
           if (_this getVariable ["FCLA_Mask_Equipped", false]) exitWith {};
           _this setVariable ["FCLA_Mask_Equipped", true, true];
-          [_this] spawn FCLA_Effects_fnc_breathGoggles;
+          _this spawn FCLA_Effects_fnc_breathGoggles;
         }, _unit, 0.1] call CBA_fnc_waitAndExecute;
       };
 
       case ((goggles _unit) in _APRCSAT): {
-        "FCLA_Goggles_firstOverlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
-        "FCLA_Goggles_secondOverlay" cutRsc ["RscCBRN_APR_02", "PLAIN", -1, false];
+        "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
+        "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_APR_02", "PLAIN", -1, false];
         _unit setVariable ["FCLA_Mask_Equipped", nil, true];
         [{
           if (_this getVariable ["FCLA_Mask_Equipped", false]) exitWith {};
           _this setVariable ["FCLA_Mask_Equipped", true, true];
-          [_this] spawn FCLA_Effects_fnc_breathGoggles;
+          _this spawn FCLA_Effects_fnc_breathGoggles;
         }, _unit, 0.1] call CBA_fnc_waitAndExecute;
       };
 
       case ((goggles _unit) == "G_RegulatorMask_F"): {
-        "FCLA_Goggles_firstOverlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
-        "FCLA_Goggles_secondOverlay" cutRsc ["RscCBRN_Regulator", "PLAIN", -1, true];
+        "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
+        "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_Regulator", "PLAIN", -1, true];
         _unit setVariable ["FCLA_Mask_Equipped", nil, true];
         [{
           if (_this getVariable ["FCLA_Mask_Equipped", false]) exitWith {};
           _this setVariable ["FCLA_Mask_Equipped", true, true];
-          [_this] spawn FCLA_Effects_fnc_breathGoggles;
+          _this spawn FCLA_Effects_fnc_breathGoggles;
         }, _unit, 0.1] call CBA_fnc_waitAndExecute;
       };
 
-      case ((goggles _unit) in _blindfolds): {
-        "FCLA_Goggles_secondOverlay" cutRsc ["RscBlindfold", "PLAIN", -1, true];
+      case ((goggles _unit) in _blindfolds): {"FCLA_Goggles_Second_Overlay" cutRsc ["RscBlindfold", "PLAIN", -1, true];};
+
+      default {
+        "FCLA_Goggles_First_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
+        "FCLA_Goggles_Second_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
+        _unit setVariable ["FCLA_Mask_Equipped", nil, true];
       };
    };
   };

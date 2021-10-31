@@ -5,7 +5,7 @@
 
 class Planes {
 	file = "\FCLA_Effects\Planes\functions";
-	class camShakePlanes {};
+	class eventHandlerPlanes {postInit = 1;};
 	class groundSmokePlanes {};
 	class spawnSmokeEffectPlanes {};
 

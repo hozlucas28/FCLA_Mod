@@ -1,10 +1,10 @@
 
 /* ----------------------------------------------------------------------------
  * Author: hozlucas28
- * 
+ *
  * Description:
- * Crea eventhandlers para el uso de las funciones CBRN.
- * 
+ * Crea eventhandlers para el uso de las funciones "CBRN".
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
