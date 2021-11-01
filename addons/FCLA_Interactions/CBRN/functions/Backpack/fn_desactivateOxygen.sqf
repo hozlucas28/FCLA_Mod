@@ -19,7 +19,7 @@ _masksWithFirehose = ["G_AirPurifyingRespirator_01_F", "G_AirPurifyingRespirator
 
 
 //Ocultar manguera.
-[_caller, "FCLA_Animation_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+[_caller, "FCLA_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 if ((_currentGoggles in _masksWithFirehose) && (_currentBackpack in _backpacksWithFirehose)) then {
   switch (true) do {
     case (_currentBackpack == (_backpacksWithFirehose select 0)): {

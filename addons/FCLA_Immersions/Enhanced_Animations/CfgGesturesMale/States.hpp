@@ -74,7 +74,7 @@ class FCLA_Tactical_Position_Stop: default {
 };
 
 
-class FCLA_Animation_Night_Vision_Switch: default {
+class FCLA_Night_Vision_Switch: default {
   file = "\FCLA_Immersions\Enhanced_Animations\animations\Night_Vision_Switch.rtm";
   mask = "FCLA_Night_Vision_Mask";
   looped = 0;

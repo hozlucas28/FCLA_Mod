@@ -40,7 +40,7 @@ _statementOnFinish = {
   playSound "FCLA_Magazine_Equipped";
   [_caller, "FCLA_NVG_Battery"] call ACE_Common_fnc_useItem;
   _caller setVariable ["FCLA_Current_Battery_NVG", 100, true];
-  [_caller, "FCLA_Animation_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+  [_caller, "FCLA_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 
   if ((animationState _caller) != "ainvpknlmstpslaywrfldnon_medic") exitWith {};
   [_caller, "", "SwitchMove"] call FCLA_Common_fnc_playAnimation;

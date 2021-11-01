@@ -16,7 +16,7 @@ _currentBackpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, t
 
 
 //Mostrar manguera.
-[_caller, "FCLA_Animation_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+[_caller, "FCLA_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 [_caller] call BIN_fnc_CBRNHoseInit;
 
 

@@ -9,7 +9,7 @@
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.
-params ["_unit", "_currentRadio"];
+params ["_unit", ["_currentRadio", objNull]];
 
 
 
@@ -28,7 +28,7 @@ switch (true) do {
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
     [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
-    [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
+    [{!((_this select 0) getVariable ["FCLA_Transmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
   };
 
   case (_currentRadio == "anprc148jem"): {
@@ -40,7 +40,7 @@ switch (true) do {
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
     [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
-    [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
+    [{!((_this select 0) getVariable ["FCLA_Transmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
   };
 
   case (_currentRadio == "anprc152"): {
@@ -52,7 +52,7 @@ switch (true) do {
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
     [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
-    [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
+    [{!((_this select 0) getVariable ["FCLA_Transmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
 
   };
 
@@ -65,7 +65,7 @@ switch (true) do {
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
     [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
-    [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
+    [{!((_this select 0) getVariable ["FCLA_Transmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
   };
 
   case (_currentRadio == "pnr1000a"): {
@@ -77,7 +77,7 @@ switch (true) do {
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
     [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
-    [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
+    [{!((_this select 0) getVariable ["FCLA_Transmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
   };
 
   case (_currentRadio == "rf7800str"): {
@@ -89,7 +89,7 @@ switch (true) do {
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
     [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
-    [{!((_this select 0) getVariable ["FCLA_TFAR_Animations_isTransmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
+    [{!((_this select 0) getVariable ["FCLA_Transmitting", false])}, {deleteVehicle (_this select 1);}, [_unit, _radioSimpleObj]] call CBA_fnc_waitUntilAndExecute;
   };
 
   default {
@@ -99,7 +99,7 @@ switch (true) do {
     _radioSimpleObj attachto [_unit, _attachPos, "lefthand"];
     _radioSimpleObj setVectorDirAndUp _vectorDirAndUp;
     [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
-    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", _radioSimpleObj, true];
+    [_unit, "FCLA_Animation_TFAR_onHand", "playActionNow"] call FCLA_Common_fnc_playAnimation;
   };
 };

@@ -11,29 +11,23 @@
 
 ["FCLA_TFAR_Animations_OnTangentEH", "OnTangent", {
   params ["_unit", "_currentRadio", "_transceiver", "_hasAdditionalChannel", "_buttonDown"];
-  _getCurrentVehicleRole = [_unit] call CBA_fnc_vehicleRole;
-  _isNotAlive = !alive _unit;
-  _isSwimming = [_unit] call ACE_Common_fnc_isSwimming;
-  _isDragging = _unit getVariable ["ACE_Dragging_isDragging", false];
-  _inCameraMode = _unit in (call ACE_Spectator_fnc_players);
-  _isHandcuffed = _unit getVariable ["ACE_Captives_isHandcuffed", false];
-  _inWeaponAnimation = !isNil "FCLA_Weapon_Animation";
-  _isNotInCargoVehicle = if ((_getCurrentVehicleRole == "") || (_getCurrentVehicleRole == "cargo")) then {false} else {true};
+  _currentVehicleRole = [_unit] call CBA_fnc_vehicleRole;
+  _severalConditions = [_unit, [0, 1, 3, 4, 7, 12, 13, 14, 15]] call FCLA_Common_fnc_severalConditions;
+  _isNotInCargoVehicle = (_getCurrentVehicleRole != "") && (_getCurrentVehicleRole != "cargo");
   _isNotTouchingGround = !isTouchingGround _unit;
-  if ((!FCLA_Radio_Animations) || (_isNotAlive) || (_isSwimming) || (_isDragging) || (_inCameraMode) || (_isHandcuffed) || (_inWeaponAnimation) || (_isNotInCargoVehicle) || (_isNotTouchingGround)) exitWith {};
+  if ((!FCLA_Radio_Animations) || (_severalConditions) || (_isNotInCargoVehicle) || (_isNotTouchingGround)) exitWith {};
 
 
   if (_buttonDown) then {
     _isHidden = isObjectHidden _unit;
-    _inCurator = !isNull findDisplay 312;
     _isChestCompatible = (vest _unit) in FCLA_Radio_Animations_Vests;
     _usingBackpackRadio = _transceiver == 1;
     _isHeadsetCompatible = (((goggles _unit) in FCLA_Radio_Animations_Headgears_Headsets) || ((headgear _unit) in FCLA_Radio_Animations_Headgears_Headsets));
-    _unit setVariable ["FCLA_TFAR_Animations_isTransmitting", true, true];
+    _unit setVariable ["FCLA_Transmitting", true, true];
     if (!(weaponLowered _unit)) then {_unit action ["WeaponOnBack", _unit];};
 
     switch (true) do {
-    	case (((!_usingBackpackRadio) && (_isHeadsetCompatible) && (_isChestCompatible)) || (_inCurator)): {
+    	case ((!_usingBackpackRadio) && (_isHeadsetCompatible) && (_isChestCompatible)): {
         [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
         _animation = if (FCLA_Radio_Animation_Preference == "_headset") then {"FCLA_Animation_TFAR_onEar";} else {"FCLA_Animation_TFAR_onVest";};
         [_unit, _animation, "playActionNow"] call FCLA_Common_fnc_playAnimation;
@@ -55,10 +49,9 @@
       };
     };
   } else {
-    _radioSimpleObj = _unit getVariable "FCLA_TFAR_Animations_Current_Radio";
-    deleteVehicle _radioSimpleObj;
+    deleteVehicle (_unit getVariable ["FCLA_TFAR_Animations_Current_Radio", objNull]);
+    _unit setVariable ["FCLA_Transmitting", nil, true];
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", nil, true];
-    _unit setVariable ["FCLA_TFAR_Animations_isTransmitting", nil, true];
     [_unit, "FCLA_TFAR_End_Animation", "playActionNow"] call FCLA_Common_fnc_playAnimation;
   };
 }, ObjNull] call TFAR_fnc_addEventHandler;

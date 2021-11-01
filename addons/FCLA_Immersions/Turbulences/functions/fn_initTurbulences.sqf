@@ -1,11 +1,11 @@
 
 /* ----------------------------------------------------------------------------
  * Author: hozlucas28
- * 
+ *
  * Description:
  * Realiza los preparativos para llamar a la función que aplica turbulencias
  * en el avión/helicóptero.
- * 
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
@@ -34,7 +34,7 @@ _surfaceArea = (2 * pi * (_maxHeight / 2) * _maxLength + 2 * pi * (_maxHeight / 
 	_currentUnit = call CBA_fnc_currentUnit;
 	if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
-	if ((alive _vehicle) && (vehicle _currentUnit == _vehicle)) then {
+	if ((alive _vehicle) && ((vehicle _currentUnit) == _vehicle)) then {
 		_disableByEditor = _vehicle getVariable ["FCLA_Disable_Aircraft_Turbulences", false];
 		_isTurbulenceReady = _vehicle getVariable ["FCLA_Turbulence_Ready", true];
 		if ((!FCLA_Aircraft_Turbulence) || (driver _vehicle != _currentUnit) || !(_isTurbulenceReady) || (_disableByEditor)) exitWith {};

@@ -10,18 +10,15 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-//Al precionar una tecla del mouse.
+//Al hacer click con el mouse.
 [{time > 1}, {
   (findDisplay 46) displayAddEventHandler ["MouseButtonDown", {
     params ["_displayOrControl", "_button", "_xPos", "_yPos", "_shift", "_ctrl", "_alt"];
     _unit = call CBA_fnc_currentUnit;
-    _inUAV = ([_unit] call ace_common_fnc_getUavControlPosition) != "";
-    _inCameraMode = _unit in (call ACE_Spectator_fnc_players);
-    _isShowingIDCard = !isNull findDisplay 10001;
-    _noInTacticalAnimation = !(_unit getVariable ["FCLA_inTactical_Position", false]);
-    if ((visibleMap) || (_inUAV) || (_inCameraMode) || (_isShowingIDCard) || (_noInTacticalAnimation)) exitWith {};
-
-    _unit setVariable ["FCLA_inTactical_Position", nil, true];
+    _severalConditions = [_unit, [4, 6, 7, 8, 10, 11, 12, 14, 16]] call FCLA_Common_fnc_severalConditions;
+    _noInTacticalAnimation = !(_unit getVariable ["FCLA_Tactical_Position", false]);
+    if ((visibleMap) || (_severalConditions) || (_noInTacticalAnimation)) exitWith {};
+    _unit setVariable ["FCLA_Tactical_Position", nil, true];
     [_unit, "FCLA_Tactical_Position_Stop", "playActionNow"] call FCLA_Common_fnc_playAnimation;
   }];
 }] call CBA_fnc_waitUntilAndExecute;

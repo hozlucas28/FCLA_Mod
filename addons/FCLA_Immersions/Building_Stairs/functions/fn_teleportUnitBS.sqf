@@ -20,39 +20,21 @@ _this spawn {
   [_stairs] spawn FCLA_Immersions_fnc_showMessageBS;
   [_unit, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 
-
-  /* ------------------------ OCULTAR UNIDAD ------------------------ */
-
-  _unit allowDamage false;
-  _unit setCaptive true;
-  [_unit, []] call ACE_Common_fnc_hideUnit;
+  //Ocultar unidad.
   _unit setDir _dir;
   _unit setPosATL _pos;
+  _unit setCaptive true;
+  _unit allowDamage false;
   _unit attachTo [_building];
+  [_unit, []] call ACE_Common_fnc_hideUnit;
 
-  //Ocultar unidad al Zeus.
-  _editableObjects = {curatorEditableObjects _x;} forEach allCurators;
-  if (_unit in _editableObjects) then {
-    _unit setVariable ["FCLA_Hide_Curator_Icon", true, true];
-    {_x removeCuratorEditableObjects [[_unit], true];} forEach allCurators;
-  };
-
-
-  /* ------------------------ MOSTRAR UNIDAD ------------------------ */
-
-  sleep 12; //Tiempo para llegar.
-  playSound "FCLA_Close_Door";
+  //Mostrar unidad.
+  sleep 12;
+  detach _unit;
   _unit allowDamage true;
   _unit setCaptive false;
-  [_unit, "inStairs"] call ACE_Common_fnc_unhideUnit;
-  detach _unit;
-
-  //Mostrar unidad al Zeus.
-  if (_unit getVariable ["FCLA_Hide_Curator_Icon", false]) then {
-    _unit setVariable ["FCLA_Hide_Curator_Icon", nil, true];
-    {_x addCuratorEditableObjects [[_unit], true];} forEach allCurators;
-  };
-
-  _unit setVariable ["FCLA_inStairs", nil, true];
   cutText ["", "BLACK IN"];
+  playSound "FCLA_Close_Door";
+  _unit setVariable ["FCLA_inStairs", nil, true];
+  [_unit, "inStairs"] call ACE_Common_fnc_unhideUnit;
 };

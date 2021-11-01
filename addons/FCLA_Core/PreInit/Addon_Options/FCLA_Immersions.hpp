@@ -30,45 +30,6 @@
 
 
 
-/* -------------------- AERONAVES DERRIBADAS NO REBOTAN -------------------- */
-
-[
-	"FCLA_NAB_Class_Exclusions", "EDITBOX",
-	["Excluir clases", "Determina los classnames de las aeronaves que no deben ser afectadas por este efecto, VANTs (pequeños) vanilla ya incluidos.\n¡LOS CLASSNAMES DEBEN ESTAR SEPARADAS POR COMAS!"],
-	["FCLA Inmersiones", "Aeronaves derribadas no rebotan"],
-	#include "\FCLA_Core\PreInit\Addon_Options\includes\VANTs.hpp",
-	GLOBAL,
-	{
-		_classnamesToExclude = (_this splitString ", ") apply {toLower _x};
-		[_classnamesToExclude] spawn FCLA_Immersions_fnc_addExclusionsNAB;
-	},
-	true
-] call CBA_fnc_addSetting;
-
-
-[
-	"FCLA_NAB_Fx_Helicopters", "CHECKBOX",
-	["¿Partículas extra para helicópteros?", "Al activar se generaran partículas extras cuando un helicóptero destruido impacte contra el suelo."],
-	["FCLA Inmersiones", "Aeronaves derribadas no rebotan"],
-	true,
-	GLOBAL,
-	{},
-	false
-] call CBA_fnc_addSetting;
-
-
-[
-	"FCLA_NAB_Fx_Planes", "CHECKBOX",
-	["¿Partículas extra para aviones?", "Al activar se generaran partículas extras cuando un avión destruido impacte contra el suelo."],
-	["FCLA Inmersiones", "Aeronaves derribadas no rebotan"],
-	true,
-	GLOBAL,
-	{},
-	false
-] call CBA_fnc_addSetting;
-
-
-
 /* -------------------------------- RADIOS --------------------------------- */
 
 [

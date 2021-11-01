@@ -39,15 +39,14 @@ _this spawn {
     };
 
     sleep 0.5;
+    _soundSource = _building modelToWorld (_building selectionPosition ((_intersects select 0) select 0));
     if (!(call FCLA_Common_fnc_isDoorLocked) || (_successRate <= FCLA_Kick_Door_Success_Rate)) then {
       _selectDoor = format ["%1_rot", ((_intersects select 0) select 0)];
-      _soundSource = _building modelToWorld (_building selectionPosition ((_intersects select 0) select 0));
       enableCamShake true;
       addCamShake [5, 1.5, 100];
       _building animate [_selectDoor, 1, 8];
       [_soundSource, "FCLA_Smash_Door", 1, 50, false] call FCLA_Common_fnc_globalSay3D;
     } else {
-      _soundSource = _building modelToWorld (_building selectionPosition ((_intersects select 0) select 0));
       enableCamShake true;
       addCamShake [2.5, 1, 100];
       [_soundSource, "FCLA_Kick_Door", 1, 50, false] call FCLA_Common_fnc_globalSay3D;
