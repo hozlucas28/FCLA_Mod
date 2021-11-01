@@ -43,7 +43,7 @@
  * Se recomienda utilizar esta función a travez del evento
  * personalizado "FCLA_Subtitles".
  *
- * Si no sea desea definir un emisor asignele le valor <objNull>, como se
+ * Si no sea desea definir un emisor asignele el valor <objNull>, como se
  * observa en el primer ejemplo.
  *
  * Para que se verifiquen las condiciones el emisor debera estar definido, sino

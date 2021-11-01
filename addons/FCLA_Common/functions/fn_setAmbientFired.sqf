@@ -23,6 +23,9 @@
  * Script para obtener las torretas del vehículo: <weapons VEHICLE;>
  * Script para obtener las municiones del vehículo: <magazines VEHICLE;>
  *
+ * Si desea detener el bucle de disparos asignele la variable de tipo
+ * objeto "FCLA_Ambient_Fire" al vehículo, con el valor <false> ó <objNull>.
+ *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
 
@@ -48,13 +51,15 @@ if ((isNull _vehicle) || (_turretType == "") || (_ammoType == "") || (_minimumSh
 
 [_vehicle, _turretType, _ammoType, _minimumShots, _maximumShots, _minimumDelay, _maximumDelay] spawn {
 	params ["_vehicle", "_turretType", "_ammoType", "_minimumShots", "_maximumShots", "_minimumDelay", "_maximumDelay"];
+	_vehicle setVariable ["FCLA_Ambient_Fire", true, true];
 
 	//Definir condiciones.
 	_conditions = {
 		_isAlive = alive _this;
 		_areCrewAlive = ({alive _x} count (crew _this)) != 0;
+		_AmbientFireStatus = _this getVariable ["FCLA_Ambient_Fire", false];
 		_areNotPlayersInCrew = ({[_x, false] call ACE_Common_fnc_isPlayer} count (crew _this)) == 0;
-		(_isAlive) && (_areCrewAlive) && (_areNotPlayersInCrew)
+		(_isAlive) && (_areCrewAlive) && (_AmbientFireStatus) && (_areNotPlayersInCrew)
 	};
 
 
