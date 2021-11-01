@@ -4,15 +4,18 @@
 |********************************************************************************/
 
 class Blindfold {
-  class eventHandlerBandage {
-    file = "\FCLA_Interactions\Blindfold\functions\fn_addEventhandler.sqf";
+  class eventHandlerBlindfold {
+    file = "\FCLA_Interactions\Blindfold\functions\CBA_Eventhandlers\fn_eventHandler.sqf";
     postInit = 1;
   };
 
-  class playerEventHandlerBandage {
-    file = "\FCLA_Interactions\Blindfold\functions\fn_playerEventHandler.sqf";
+  class playerEventHandlerBlindfold {
+    file = "\FCLA_Interactions\Blindfold\functions\CBA_Eventhandlers\fn_playerEventHandler.sqf";
     postInit = 1;
   };
 
-  class addActionsToUnitBandage {file = "\FCLA_Interactions\Blindfold\functions\fn_addActionsToUnit.sqf";};
+  class conditionOnBlindfold {file = "\FCLA_Interactions\Blindfold\functions\conditionOn.sqf";};
+  class conditionOffBlindfold {file = "\FCLA_Interactions\Blindfold\functions\conditionOff.sqf";};
+  class statementOnBlindfold {file = "\FCLA_Interactions\Blindfold\functions\statementOn.sqf";};
+  class statementOffBlindfold {file = "\FCLA_Interactions\Blindfold\functions\statementOff.sqf";};
 };

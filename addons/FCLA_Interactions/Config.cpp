@@ -20,7 +20,7 @@ class CfgPatches {
 |                                  INCLUSIONES                                   |
 |********************************************************************************/
 
-#include "\FCLA_Interactions\ACE_Medical_Treatment_Actions.hpp"
+#include "\FCLA_Interactions\ACE_Medical_Menu.hpp"
 #include "\FCLA_Interactions\ID_Card\display\Main_GUI.hpp"
 #include "\FCLA_Interactions\ID_Card\display\Dialog_GUI.hpp"
 
@@ -92,6 +92,7 @@ class CfgVehicles {
 	class CAManBase: Man {
 		class ACE_Actions {
 			class ACE_MainActions {
+				#include "\FCLA_Interactions\Blindfold\ACE_MainActions.hpp"
 				#include "\FCLA_Interactions\Patches\CfgMainVehicle.hpp"
 			};
 		};
@@ -99,6 +100,7 @@ class CfgVehicles {
 	  class ACE_SelfActions {
 			#include "\FCLA_Interactions\Light_Sticks\CfgVehicles\ACE_SelfActions.hpp"
 	    class ACE_Equipment {
+				#include "\FCLA_Interactions\CBRN\ACE_Equipment.hpp"
 				#include "\FCLA_Interactions\Spy_Camera\CfgVehicle.hpp"
 	      #include "\FCLA_Interactions\Whistle\CfgVehicle.hpp"
 	    };
@@ -153,8 +155,6 @@ class CfgGlasses {
 
 class Extended_InitPost_EventHandlers {
 	class CAManBase {
-		Blindfold = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsToUnitBandage;";
-		CBRN = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsToBackpackCBRN;";
 		Helmet_Camo_Net = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsToUnitHCN;";
 		ID_Card = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsToUnitIDCard;";
 		Light_Sticks = "[_this select 0] spawn FCLA_Interactions_fnc_initLightSticks;";

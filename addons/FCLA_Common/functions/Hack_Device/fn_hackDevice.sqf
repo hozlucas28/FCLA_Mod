@@ -196,7 +196,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     [{isNull (_this select 1)}, {
       deleteVehicle ((_this select 0) getVariable ["FCLA_Current_Hacking_Laptop", objNull]);
       (_this select 0) setVariable ["FCLA_Current_Hacking_Laptop", nil, true];
-      (_this select 0) switchMove "amovpsitmstpslowwrfldnon_amovpercmstpslowwrfldnon";
+      [_this select 0, "amovpsitmstpslowwrfldnon_amovpercmstpslowwrfldnon", 2] call ACE_Common_fnc_doAnimation;
     }, [_caller, _display]] call CBA_fnc_waitUntilAndExecute;
 
 

@@ -20,7 +20,7 @@
   if (_isOnMap) exitWith {[{systemChat "No puedes utilizar este comando si el mapa esta abierto.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_inCurator) exitWith {[{systemChat "No puedes utilizar este comando si la interfaz del Zeus esta abierta.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_isNotAlive) exitWith {[{systemChat "Debes estar vivo para utilizar este comando.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
-  if (_inCameraMode) exitWith {[{systemChat "No puedes utilizar este comando si ya estas utilizando el modo cámara.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
+  if (_inCameraMode) exitWith {[{systemChat "Ya te encuentas utilizando el modo cámara.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_currentControledUnit != player) exitWith {[{systemChat "No puedes utilizar este comando si estas controlando a una unidad.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if ((FCLA_Mission_Type != "Training") && (_cameraModeNotAllowed)) exitWith {[{systemChat "El mapa no es de entrenamiento! No puedes utilizar este comando, salvo que te lo permita un Zeus.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
 

@@ -1,10 +1,10 @@
 
 /* ----------------------------------------------------------------------------
  * Author: hozlucas28
- * 
+ *
  * Description:
  * Muestra la exposición química del paciente.
- * 
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
@@ -16,6 +16,7 @@ params ["_caller", "_patient"];
 _getChemicalDamage = _patient getVariable ["FCLA_CBRN_Current_Chemical_Damage", 0];
 _chemicalMaximumDamage = if (!isNil "FCLA_CBRN_Maximum_Chemical_Damage") then {FCLA_CBRN_Maximum_Chemical_Damage} else {100};
 _coefficientOfDamage = _getChemicalDamage / _chemicalMaximumDamage;
+[_patient, "quick_view", "%1 verificando la exposición química", [name _caller]] call ACE_Medical_Treatment_fnc_addToLog;
 
 
 switch (true) do {
