@@ -35,7 +35,7 @@
 		_isPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];
 		_isNotTouchingGround = !isTouchingGround _unit;
 		if ((!FCLA_Kick_Door_Allowed) || (_isNotStand) || (_severalConditions) || (_isPlayingAnimation) || (_isNotTouchingGround)) exitWith {};
-		[_unit] spawn FCLA_Immersions_fnc_initKickDoor;
+		_unit spawn FCLA_Immersions_fnc_initKickDoor;
 	},
 	{},
   [DIK_F, [true, false, false]],

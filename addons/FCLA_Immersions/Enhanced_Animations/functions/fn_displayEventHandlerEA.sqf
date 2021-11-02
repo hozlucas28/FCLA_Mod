@@ -13,7 +13,6 @@
 //Al hacer click con el mouse.
 [{time > 1}, {
   (findDisplay 46) displayAddEventHandler ["MouseButtonDown", {
-    params ["_displayOrControl", "_button", "_xPos", "_yPos", "_shift", "_ctrl", "_alt"];
     _unit = call CBA_fnc_currentUnit;
     _severalConditions = [_unit, [4, 6, 7, 8, 10, 11, 12, 14, 16]] call FCLA_Common_fnc_severalConditions;
     _noInTacticalAnimation = !(_unit getVariable ["FCLA_Tactical_Position", false]);

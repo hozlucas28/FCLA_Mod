@@ -12,7 +12,7 @@
 
 //Al cambiar vista de cámara.
 ["cameraView", {
-  params ["_unit", "_newCameraMode", "_oldCameraMode"];
+  params ["_unit", "_newCameraMode"];
   _noWeaponOnHand = (currentWeapon _unit) == "";
   _isWeaponLowered = weaponLowered _unit;
   _severalConditions = [_unit, [8, 14]] call FCLA_Common_fnc_severalConditions;
@@ -35,7 +35,7 @@
 
 //Al cambiar el modo de visión.
 ["visionMode", {
-  params ["_unit", "_newVisionMode", "_oldVisionMode"];
+  params ["_unit", "_newVisionMode"];
   _severalConditions = [_unit, [4, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16]] call FCLA_Common_fnc_severalConditions;
   _visionModeDesactivated = _newVisionMode == 0;
   if ((!FCLA_visionMode_Sounds) || (_severalConditions) || (_visionModeDesactivated)) exitWith {};

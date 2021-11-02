@@ -20,7 +20,6 @@ class CfgPatches {
 |                                  INCLUSIONES                                   |
 |********************************************************************************/
 
-#include "\FCLA_Interactions\ACE_Medical_Menu.hpp"
 #include "\FCLA_Interactions\ID_Card\display\Main_GUI.hpp"
 #include "\FCLA_Interactions\ID_Card\display\Dialog_GUI.hpp"
 
@@ -145,6 +144,17 @@ class CfgGlasses {
 	class G_Blindfold_01_base_F: None {};
 	#include "\FCLA_Interactions\Blindfold\CfgGlasses.hpp"
 	#include "\FCLA_Interactions\CBRN\CfgGlasses.hpp"
+};
+
+
+
+/********************************************************************************|
+|                   ACCIONES PARA TRATAMIENTOS DEL MENÚ MEDICO                   |
+|********************************************************************************/
+
+class ACE_Medical_Treatment_Actions {
+	class Diagnose;
+	#include "\FCLA_Interactions\CBRN\ACE_Medical_Treatment_Actions.hpp"
 };
 
 

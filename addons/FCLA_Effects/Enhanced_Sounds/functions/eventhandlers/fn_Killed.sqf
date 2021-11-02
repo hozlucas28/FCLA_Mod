@@ -11,7 +11,7 @@
 _this spawn {
   params ["_unit", "_killer", "_instigator", "_useEffects"];
   _isUAVUnit = (getText (configOf _unit >> "simulation")) == "UAVPilot";
-  if ((!FCLA_Killed_Sounds) || (_isUAVUnit)) exitWith {};
+  if ((!FCLA_Killed_Sounds) || (!_useEffects) || (_isUAVUnit)) exitWith {};
 
 
 

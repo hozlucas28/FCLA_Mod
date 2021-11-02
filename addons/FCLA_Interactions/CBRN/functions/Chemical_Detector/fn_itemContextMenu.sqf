@@ -1,166 +1,122 @@
 
 /* ----------------------------------------------------------------------------
  * Author: hozlucas28
- * 
+ *
  * Description:
- * Crea cinco acciones del tipo "addItemContextMenuOption" para poder equiparse
- * el detector químico sin tener el DLC Contact y encender/apagar ó subir/bajar
- * el volúmen del detector.
- * 
+ * Crea acciones contextuales para encender/apagar, subir/bajar el volumen y
+ * equiparse el detector químico sin tener el DLC Contact.
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-
-/* -------------------------------- EQUIPAR -------------------------------- */
-
-_notOwnedDLC = !(["Contact"] call FCLA_Common_fnc_isDLCOwned);
-if (_notOwnedDLC) then {
-  _conditionToEnable = {
-    params ["_caller", "_container", "_item", "_slot", "_params"];
-    !(isNil "FCLA_CBRN_Activated");
-  };
-
-  _conditionToShow = {
-    params ["_caller", "_container", "_item", "_slot", "_params"];
-    !(isNil "FCLA_CBRN_Activated");
-  };
-
-  _statement = {
-    params ["_caller", "_container", "_item", "_slot", "_params"];
-    _itemInWatchSlot = ((getUnitLoadout _caller) select 9) select 4;
-    _randomSound = selectRandom ["FCLA_Generic_Take_1", "FCLA_Generic_Take_2", "FCLA_Generic_Take_3", "FCLA_Generic_Take_4"];
-    playSound _randomSound;
-    [_caller, _itemInWatchSlot, true] call CBA_fnc_addItem;
-    _caller linkItem _item;
-  };
-  ["ChemicalDetector_01_watch_F", "CONTAINER", "Equipar", [], "", [_conditionToEnable, _conditionToShow], _statement, true] call CBA_fnc_addItemContextMenuOption;
-};
 
 
 /* ------------------------------- ENCENDER -------------------------------- */
 
 _conditionToEnable = {
-  params ["_caller", "_container", "_item", "_slot"];
-
-  _isCompatible = _item in FCLA_Chemical_Detectors;
-  _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
-  _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
-  _isChemicalDetectorDesactivated = !(_caller getVariable ["FCLA_Chemical_Detector_Activated", false]);
-  (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated) && !(_isChemicalDetectorDesactivated);
+  params ["_unit", "_container", "_item"];
+  [_unit, _item] call FCLA_Interactions_fnc_conditionTurnOnChemicalDetectorCBRN;
 };
 
 _conditionToShow = {
-  params ["_caller", "_container", "_item", "_slot"];
-
-  _isCompatible = _item in FCLA_Chemical_Detectors;
-  _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
-  _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
-  _isChemicalDetectorDesactivated = !(_caller getVariable ["FCLA_Chemical_Detector_Activated", false]);
-  (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated) && !(_isChemicalDetectorDesactivated);
+  params ["_unit", "_container", "_item"];
+  [_unit, _item] call FCLA_Interactions_fnc_conditionTurnOnChemicalDetectorCBRN;
 };
 
-_statement = {
-  params ["_caller", "_container", "_item", "_slot"];
-  _handlerOne = [FCLA_Interactions_fnc_showDetectorCBRN, 0.5, [CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
-  _handlerTwo = [FCLA_Interactions_fnc_playDetectorSoundCBRN, 0.5, [CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
-  _caller setVariable ["FCLA_Chemical_Detector_Activated", true, true];
-  _caller setVariable ["FCLA_Chemical_Detector_perFrameHandlers_IDs", [_handlerOne, _handlerTwo], true];
+_Statement = {
+  params ["_unit", "_container", "_item"];
+  [_unit, _item] spawn FCLA_Interactions_fnc_statementTurnOnChemicalDetectorCBRN;
 };
 
-["#All", ["CONTAINER", "ASSIGNED_ITEM"], "Activar sonido", [], "", [_conditionToEnable, _conditionToShow], _statement, false] call CBA_fnc_addItemContextMenuOption;
+["Watch", "ASSIGNED_ITEM", "Activar sonido", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
 
 
 /* -------------------------------- APAGAR --------------------------------- */
 
 _conditionToEnable = {
-  params ["_caller", "_container", "_item", "_slot"];
-
-  _isCompatible = _item in FCLA_Chemical_Detectors;
-  _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
-  _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
-  _isChemicalDetectorActivated = _caller getVariable ["FCLA_Chemical_Detector_Activated", false];
-  (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated) && (_isChemicalDetectorActivated);
+  params ["_unit", "_container", "_item"];
+  [_unit, _item] call FCLA_Interactions_fnc_conditionTurnOffChemicalDetectorCBRN;
 };
 
 _conditionToShow = {
-  params ["_caller", "_container", "_item", "_slot"];
-
-  _isCompatible = _item in FCLA_Chemical_Detectors;
-  _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
-  _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
-  _isChemicalDetectorActivated = _caller getVariable ["FCLA_Chemical_Detector_Activated", false];
-  (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated) && (_isChemicalDetectorActivated);
+  params ["_unit", "_container", "_item"];
+  [_unit, _item] call FCLA_Interactions_fnc_conditionTurnOffChemicalDetectorCBRN;
 };
 
-_statement = {
-  params ["_caller", "_container", "_item", "_slot"];
-  [_caller] spawn FCLA_Interactions_fnc_turnOffDetectorCBRN;
+_Statement = {
+  params ["_unit", "_container"];
+  [_unit] spawn FCLA_Interactions_fnc_statementTurnOffChemicalDetectorCBRN;
 };
 
-["#All", ["CONTAINER", "ASSIGNED_ITEM"], "Desactivar sonido", [], "", [_conditionToEnable, _conditionToShow], _statement, false] call CBA_fnc_addItemContextMenuOption;
+["Watch", "ASSIGNED_ITEM", "Desactivar sonido", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
 
 
 /* ----------------------------- SUBIR VOLUMEN ----------------------------- */
 
 _conditionToEnable = {
-  params ["_caller", "_container", "_item", "_slot"];
-
-  _isCompatible = _item in FCLA_Chemical_Detectors;
-  _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
-  _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
-  _currentDetectorVolume = _caller getVariable ["FCLA_Chemical_Detector_Current_Volume", 2];
-  _isDetectorSoundActivated = _caller getVariable ["FCLA_Chemical_Detector_Activated", false];
-  (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated) && (_currentDetectorVolume < 5) && (_isDetectorSoundActivated);
+  params ["_unit", "_container", "_item"];
+  [_unit, _item] call FCLA_Interactions_fnc_conditionTurnUpVolumeChemicalDetectorCBRN;
 };
 
 _conditionToShow = {
-  params ["_caller", "_container", "_item", "_slot"];
-
-  _isCompatible = _item in FCLA_Chemical_Detectors;
-  _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
-  _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
-  _currentDetectorVolume = _caller getVariable ["FCLA_Chemical_Detector_Current_Volume", 2];
-  _isDetectorSoundActivated = _caller getVariable ["FCLA_Chemical_Detector_Activated", false];
-  (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated) && (_currentDetectorVolume < 5) && (_isDetectorSoundActivated);
+  params ["_unit", "_container", "_item"];
+  [_unit, _item] call FCLA_Interactions_fnc_conditionTurnUpVolumeChemicalDetectorCBRN;
 };
 
-_statement = {
-  params ["_caller", "_container", "_item", "_slot"];
-  _currentDetectorVolume = _caller getVariable ["FCLA_Chemical_Detector_Current_Volume", 0];
-  _caller setVariable ["FCLA_Chemical_Detector_Current_Volume", (_currentDetectorVolume + 1), true];
+_Statement = {
+  params ["_unit", "_container", "_item"];
+  _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 0];
+  _unit setVariable ["FCLA_Chemical_Detector_Volume", (_currentVolume + 1), true];
 };
 
-["#All", ["CONTAINER", "ASSIGNED_ITEM"], "Volumen (+)", [], "", [_conditionToEnable, _conditionToShow], _statement, false] call CBA_fnc_addItemContextMenuOption;
+["Watch", "ASSIGNED_ITEM", "Volumen (+)", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
 
 
 /* ----------------------------- BAJAR VOLUMEN ----------------------------- */
 
 _conditionToEnable = {
-  params ["_caller", "_container", "_item", "_slot"];
-
-  _isCompatible = _item in FCLA_Chemical_Detectors;
-  _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
-  _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
-  _currentDetectorVolume = _caller getVariable ["FCLA_Chemical_Detector_Current_Volume", 2];
-  _isDetectorSoundActivated = _caller getVariable ["FCLA_Chemical_Detector_Activated", false];
-  (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated) && (_currentDetectorVolume > 0) && (_isDetectorSoundActivated);
+  params ["_unit", "_container", "_item"];
+  [_unit, _item] call FCLA_Interactions_fnc_conditionTurnDownVolumeChemicalDetectorCBRN;
 };
 
 _conditionToShow = {
-  params ["_caller", "_container", "_item", "_slot"];
+  params ["_unit", "_container", "_item"];
+  [_unit, _item] call FCLA_Interactions_fnc_conditionTurnDownVolumeChemicalDetectorCBRN;
+};
 
-  _isCompatible = _item in FCLA_Chemical_Detectors;
-  _isNotSwimming = !([_caller] call ACE_Common_fnc_isSwimming);
+_Statement = {
+  params ["_unit", "_container", "_item"];
+  _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 0];
+  _unit setVariable ["FCLA_Chemical_Detector_Volume", (_currentVolume - 1), true];
+};
+
+["Watch", "ASSIGNED_ITEM", "Volumen (-)", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
+
+
+
+/* -------------------------------- EQUIPAR -------------------------------- */
+
+if (["Contact"] call FCLA_Common_fnc_isDLCOwned) exitWith {};
+
+_conditionToEnable = {
+  params ["_unit", "_container", "_item"];
   _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
-  _currentDetectorVolume = _caller getVariable ["FCLA_Chemical_Detector_Current_Volume", 2];
-  _isDetectorSoundActivated = _caller getVariable ["FCLA_Chemical_Detector_Activated", false];
-  (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated) && (_currentDetectorVolume > 0) && (_isDetectorSoundActivated);
+  _itemInWatchSlot = ((getUnitLoadout _unit) select 9) select 4;
+  (_isCBRNActivated) && (_itemInWatchSlot != _item);
 };
 
-_statement = {
-  params ["_caller", "_container", "_item", "_slot"];
-  _currentDetectorVolume = _caller getVariable ["FCLA_Chemical_Detector_Current_Volume", 0];
-  _caller setVariable ["FCLA_Chemical_Detector_Current_Volume", (_currentDetectorVolume - 1), true];
+_conditionToShow = {
+  params ["_unit", "_container", "_item"];
+  _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
+  _itemInWatchSlot = ((getUnitLoadout _unit) select 9) select 4;
+  (_isCBRNActivated) && (_itemInWatchSlot != _item);
 };
 
-["#All", ["CONTAINER", "ASSIGNED_ITEM"], "Volumen (-)", [], "", [_conditionToEnable, _conditionToShow], _statement, false] call CBA_fnc_addItemContextMenuOption;
+_Statement = {
+  params ["_unit", "_container", "_item"];
+  _unit linkItem _item;
+  [_unit, ((getUnitLoadout _unit) select 9) select 4, true] call CBA_fnc_addItem;
+  playSound (selectRandom ["FCLA_Generic_Use_1", "FCLA_Generic_Use_2", "FCLA_Generic_Use_3", "FCLA_Generic_Use_4"]);
+};
+
+["ChemicalDetector_01_watch_F", "CONTAINER", "Equipar", [], "", [_conditionToEnable, _conditionToShow], _Statement, true, []] call CBA_fnc_addItemContextMenuOption;

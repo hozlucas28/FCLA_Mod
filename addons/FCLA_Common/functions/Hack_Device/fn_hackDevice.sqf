@@ -57,7 +57,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
 
 
     //Crear display.
-    _display = findDisplay 46 createDisplay "RscDisplayEmpty";
+    _display = (findDisplay 46) createDisplay "RscDisplayEmpty";
     _ctrlBackground = _display ctrlCreate ["RscPicture", -1];
     _ctrlHackingLines = _display ctrlCreate ["RscStructuredText", -1];
     _ctrlWritingBox = _display ctrlCreate ["RscText", -1];

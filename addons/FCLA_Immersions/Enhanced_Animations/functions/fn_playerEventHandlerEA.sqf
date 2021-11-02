@@ -10,9 +10,9 @@
 ---------------------------------------------------------------------------- */
 
 ["visionMode", {
-  params ["_unit", "_newVisionMode", "_oldVisionMode"];
+  params ["_unit"];
   _hasNotNVG = (hmd _unit) == "";
   _severalConditions = [_unit, [1, 4, 6, 7, 8, 12, 13, 14, 15, 16]] call FCLA_Common_fnc_severalConditions;
-  if ((_oldVisionMode < 0) || (_hasNotNVG) || (_severalConditions)) exitWith {};
+  if ((_hasNotNVG) || (_severalConditions)) exitWith {};
   [_unit, "FCLA_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 }, false] call CBA_fnc_addPlayerEventHandler;

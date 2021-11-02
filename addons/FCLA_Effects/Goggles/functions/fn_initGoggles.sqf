@@ -23,7 +23,7 @@
 
 
   switch (true) do {
-    case ((goggles _unit) in _APROTAN): {
+    case (_newGoggles in _APROTAN): {
       "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
       "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_APR", "PLAIN", -1, false];
       _unit setVariable ["FCLA_Mask_Equipped", nil, true];
@@ -34,7 +34,7 @@
       }, _unit, 0.1] call CBA_fnc_waitAndExecute;
     };
 
-    case ((goggles _unit) in _APRCSAT): {
+    case (_newGoggles in _APRCSAT): {
       "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
       "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_APR_02", "PLAIN", -1, false];
       _unit setVariable ["FCLA_Mask_Equipped", nil, true];
@@ -45,7 +45,7 @@
       }, _unit, 0.1] call CBA_fnc_waitAndExecute;
     };
 
-    case ((goggles _unit) == "G_RegulatorMask_F"): {
+    case (_newGoggles == "G_RegulatorMask_F"): {
       "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
       "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_Regulator", "PLAIN", -1, true];
       _unit setVariable ["FCLA_Mask_Equipped", nil, true];
@@ -56,7 +56,7 @@
       }, _unit, 0.1] call CBA_fnc_waitAndExecute;
     };
 
-    case ((goggles _unit) in _blindfolds): {
+    case (_newGoggles in _blindfolds): {
       "FCLA_Goggles_Second_Overlay" cutRsc ["RscBlindfold", "PLAIN", -1, true];
       _unit setVariable ["FCLA_Mask_Equipped", nil, true];
     };
@@ -84,8 +84,9 @@
     "FCLA_Goggles_First_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
     "FCLA_Goggles_Second_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
   } else {
+    _currentGoggles = goggles _unit;
     switch (true) do {
-      case ((goggles _unit) in _APROTAN): {
+      case (_currentGoggles in _APROTAN): {
         "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
         "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_APR", "PLAIN", -1, false];
         _unit setVariable ["FCLA_Mask_Equipped", nil, true];
@@ -96,7 +97,7 @@
         }, _unit, 0.1] call CBA_fnc_waitAndExecute;
       };
 
-      case ((goggles _unit) in _APRCSAT): {
+      case (_currentGoggles in _APRCSAT): {
         "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
         "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_APR_02", "PLAIN", -1, false];
         _unit setVariable ["FCLA_Mask_Equipped", nil, true];
@@ -107,7 +108,7 @@
         }, _unit, 0.1] call CBA_fnc_waitAndExecute;
       };
 
-      case ((goggles _unit) == "G_RegulatorMask_F"): {
+      case (_currentGoggles == "G_RegulatorMask_F"): {
         "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
         "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_Regulator", "PLAIN", -1, true];
         _unit setVariable ["FCLA_Mask_Equipped", nil, true];
@@ -118,7 +119,7 @@
         }, _unit, 0.1] call CBA_fnc_waitAndExecute;
       };
 
-      case ((goggles _unit) in _blindfolds): {"FCLA_Goggles_Second_Overlay" cutRsc ["RscBlindfold", "PLAIN", -1, true];};
+      case (_currentGoggles in _blindfolds): {"FCLA_Goggles_Second_Overlay" cutRsc ["RscBlindfold", "PLAIN", -1, true];};
 
       default {
         "FCLA_Goggles_First_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];
@@ -159,7 +160,8 @@
     _blindfolds = ["G_Blindfold_01_black_F", "G_Blindfold_01_white_F"];
 
     switch (true) do {
-      case ((goggles _unit) in _APROTAN): {
+      _currentGoggles = goggles _unit;
+      case (_currentGoggles in _APROTAN): {
         "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
         "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_APR", "PLAIN", -1, false];
         _unit setVariable ["FCLA_Mask_Equipped", nil, true];
@@ -170,7 +172,7 @@
         }, _unit, 0.1] call CBA_fnc_waitAndExecute;
       };
 
-      case ((goggles _unit) in _APRCSAT): {
+      case (_currentGoggles in _APRCSAT): {
         "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
         "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_APR_02", "PLAIN", -1, false];
         _unit setVariable ["FCLA_Mask_Equipped", nil, true];
@@ -181,7 +183,7 @@
         }, _unit, 0.1] call CBA_fnc_waitAndExecute;
       };
 
-      case ((goggles _unit) == "G_RegulatorMask_F"): {
+      case (_currentGoggles == "G_RegulatorMask_F"): {
         "FCLA_Goggles_First_Overlay" cutRsc ["FCLA_CBRN_APR", "PLAIN", 1, true];
         "FCLA_Goggles_Second_Overlay" cutRsc ["RscCBRN_Regulator", "PLAIN", -1, true];
         _unit setVariable ["FCLA_Mask_Equipped", nil, true];
@@ -192,7 +194,7 @@
         }, _unit, 0.1] call CBA_fnc_waitAndExecute;
       };
 
-      case ((goggles _unit) in _blindfolds): {"FCLA_Goggles_Second_Overlay" cutRsc ["RscBlindfold", "PLAIN", -1, true];};
+      case (_currentGoggles in _blindfolds): {"FCLA_Goggles_Second_Overlay" cutRsc ["RscBlindfold", "PLAIN", -1, true];};
 
       default {
         "FCLA_Goggles_First_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, true];

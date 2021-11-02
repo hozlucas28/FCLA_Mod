@@ -11,17 +11,16 @@
 ---------------------------------------------------------------------------- */
 
 _this spawn {
-  params ["_unit"];
-  _pos = getPos _unit;
+  _pos = getPos _this;
   _building = cursorObject;
   _successRate = [0, 100] call BIS_fnc_randomInt;
-  _currentWeapon = currentWeapon _unit;
-  _primaryWeapon = primaryWeapon _unit;
-  _handgunWeapon = handgunWeapon _unit;
-  _secondaryWeapon = secondaryWeapon _unit;
+  _currentWeapon = currentWeapon _this;
+  _primaryWeapon = primaryWeapon _this;
+  _handgunWeapon = handgunWeapon _this;
+  _secondaryWeapon = secondaryWeapon _this;
   _disableByEditor = _building getVariable ["FCLA_Disable_Kick_Door", false];
-  _beginPos = ASLtoATL eyepos _unit;
-  _endPos = _beginPos vectorAdd (eyeDirection _unit vectorMultiply 1.5);
+  _beginPos = ASLtoATL eyepos _this;
+  _endPos = _beginPos vectorAdd (eyeDirection _this vectorMultiply 1.5);
   if ((_currentWeapon == "") || (_currentWeapon == _secondaryWeapon) || (_disableByEditor)) exitWith {};
 
 
@@ -34,8 +33,8 @@ _this spawn {
 
   if (count (_intersects select 0) > 0) then {
     switch (_currentWeapon) do {
-    	case _primaryWeapon: {[_unit, "FCLA_Animation_Kick_Door_Rifle", "SwitchMove"] call FCLA_Common_fnc_playAnimation;};
-    	case _handgunWeapon: {[_unit, "FCLA_Animation_Kick_Door_Pistol", "SwitchMove"] call FCLA_Common_fnc_playAnimation;};
+    	case _primaryWeapon: {[_this, "FCLA_Animation_Kick_Door_Rifle", "SwitchMove"] call FCLA_Common_fnc_playAnimation;};
+    	case _handgunWeapon: {[_this, "FCLA_Animation_Kick_Door_Pistol", "SwitchMove"] call FCLA_Common_fnc_playAnimation;};
     };
 
     sleep 0.5;

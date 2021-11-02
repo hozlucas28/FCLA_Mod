@@ -1,34 +1,37 @@
 
 /* ----------------------------------------------------------------------------
  * Author: hozlucas28
- * 
+ *
  * Description:
- * Crea una acción del tipo "addItemContextMenuOption" para poder equiparse la
- * máscara sin tener el DLC Contact.
- * 
+ * Crea una acción contextual para poder equiparse la máscara (respirador)
+ * sin tener el DLC Contact.
+ *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-_ownedDLC = ["Contact"] call FCLA_Common_fnc_isDLCOwned;
-if (_ownedDLC) exitWith {};
-
+if (["Contact"] call FCLA_Common_fnc_isDLCOwned) exitWith {};
 
 {
   _conditionToEnable = {
-    params ["_unit", "_container", "_item", "_slot", "_params"];
-    !(isNil "FCLA_CBRN_Activated");
+    params ["_unit", "_container", "_item"];
+    _currentGoggles = goggles _unit;
+    _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
+    (_isCBRNActivated) && (_currentGoggles != _item);
   };
 
   _conditionToShow = {
-    params ["_unit", "_container", "_item", "_slot", "_params"];
-    !(isNil "FCLA_CBRN_Activated");
+    params ["_unit", "_container", "_item"];
+    _currentGoggles = goggles _unit;
+    _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
+    (_isCBRNActivated) && (_currentGoggles != _item);
   };
 
-  _statement = {
-    params ["_unit", "_container", "_item", "_slot", "_params"];
+  _Statement = {
+    params ["_unit", "_container", "_item"];
+    _unit addGoggles _item;
     playSound "FCLA_Goggles_Equipped";
     [_unit, goggles _unit, true] call CBA_fnc_addItem;
-    _unit addGoggles _item;
   };
-  [_x, "CONTAINER", "Equipar", [], "", [_conditionToEnable, _conditionToShow], _statement, true] call CBA_fnc_addItemContextMenuOption;
+
+  [_x, "CONTAINER", "Equipar", [], "", [_conditionToEnable, _conditionToShow], _Statement, true, []] call CBA_fnc_addItemContextMenuOption;
 } forEach ["G_AirPurifyingRespirator_01_F", "G_AirPurifyingRespirator_01_nofilter_F", "G_AirPurifyingRespirator_02_sand_F", "G_AirPurifyingRespirator_02_black_F", "G_AirPurifyingRespirator_02_olive_F", "G_RegulatorMask_F"];
