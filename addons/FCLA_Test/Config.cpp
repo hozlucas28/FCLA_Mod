@@ -16,28 +16,21 @@ class CfgPatches {
 
 
 /********************************************************************************|
-|                              SUB - CATEGORÍAS 3EDEN                            |
+|                                    VEHÍCULOS                                   |
 |********************************************************************************/
 
-class CfgEditorSubcategories {
-	class FCLA_subCategory_Compositions {displayName = "FCLA Composiciones";};
-};
-
-class ACE_Medical_Treatment_Actions {
-	class Diagnose;
-  class FCLA_Chemical_Exposure: Diagnose {
-	displayName = "Comprobar exposición química";
-	displayNameProgress = "Comprobando exposición química...";
-	category = "examine";
-	condition = "true";
-	callbackSuccess = "systemchat str _player; hint str _patient;";
-	callbackFailure = "";
-	callbackProgress = "";
-	animationMedic = "AinvPknlMstpSlayWrflDnon_medicOther";
-	animationMedicProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
-	animationMedicSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
-	animationMedicSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
-	allowedSelections[] = {"All"};
-	treatmentTime = 5;
-};
+class CfgVehicles {
+	class All;
+	class Thing: All {};
+	class ThingX: Thing {};
+	class Items_base_F: ThingX {};
+	class DecontaminationSimulated_base_F: Items_base_F {};
+	class DeconShower_01_base_F: DecontaminationSimulated_base_F {};
+	class DeconShower_01_F: DeconShower_01_base_F {
+		class ACE_Actions {
+			class ACE_MainActions {
+				#include "\FCLA_Test\temporal.hpp"
+			};
+		};
+	};
 };
