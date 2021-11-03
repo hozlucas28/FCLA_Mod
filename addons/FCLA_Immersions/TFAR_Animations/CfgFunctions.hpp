@@ -4,8 +4,11 @@
 |********************************************************************************/
 
 class TFAR_Animations {
-  file = "\FCLA_Immersions\TFAR_Animations\functions";
-  class initTFAR {postInit = 1;};
-  class onHandTFAR {};
-  class waitUntilAndExecuteTFAR {};
+  class eventHandlerTFAR {
+    file = "\FCLA_Immersions\TFAR_Animations\functions\TFAR_Eventhandlers\fn_eventhandler.sqf";
+    postInit = 1;
+  };
+
+  class radioOnHandTFAR {file = "\FCLA_Immersions\TFAR_Animations\functions\fn_radioOnHand.sqf";};
+  class waitUntilTFAR {file = "\FCLA_Immersions\TFAR_Animations\functions\fn_waitUntil.sqf";};
 };

@@ -4,6 +4,8 @@
 |********************************************************************************/
 
 class Donations {
-  file = "\FCLA_Development\Donations";
-  class initDonations {postInit = 1;};
+  class initDonations {
+    file = "\FCLA_Development\Donations\fn_initDonations.sqf";
+    postInit = 1;
+  };
 };

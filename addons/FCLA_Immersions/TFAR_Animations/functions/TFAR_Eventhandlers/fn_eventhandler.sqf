@@ -28,24 +28,24 @@
 
     switch (true) do {
     	case ((!_usingBackpackRadio) && (_isHeadsetCompatible) && (_isChestCompatible)): {
-        [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
+        [_unit] spawn FCLA_Immersions_fnc_waitUntilTFAR;
         _animation = if (FCLA_Radio_Animation_Preference == "_headset") then {"FCLA_Animation_TFAR_onEar";} else {"FCLA_Animation_TFAR_onVest";};
         [_unit, _animation, "playActionNow"] call FCLA_Common_fnc_playAnimation;
       };
 
     	case ((!_usingBackpackRadio) && (_isHeadsetCompatible)): {
-        [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
+        [_unit] spawn FCLA_Immersions_fnc_waitUntilTFAR;
         [_unit, "FCLA_Animation_TFAR_onEar", "playActionNow"] call FCLA_Common_fnc_playAnimation;
       };
 
       case ((!_usingBackpackRadio) && (_isChestCompatible)): {
-        [_unit] spawn FCLA_Immersions_fnc_waitUntilAndExecuteTFAR;
+        [_unit] spawn FCLA_Immersions_fnc_waitUntilTFAR;
         [_unit, "FCLA_Animation_TFAR_onVest", "playActionNow"] call FCLA_Common_fnc_playAnimation;
       };
 
     	default {
         if (_isHidden) exitWith {};
-        [_unit, _currentRadio] spawn FCLA_Immersions_fnc_onHandTFAR;
+        [_unit, _currentRadio] spawn FCLA_Immersions_fnc_radioOnHandTFAR;
       };
     };
   } else {

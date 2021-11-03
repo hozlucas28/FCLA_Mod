@@ -4,10 +4,13 @@
 |********************************************************************************/
 
 class Planes {
-	file = "\FCLA_Effects\Planes\functions";
-	class eventHandlerPlanes {postInit = 1;};
-	class groundSmokePlanes {};
-	class spawnSmokeEffectPlanes {};
+	class eventHandlerPlanes {
+		file = "\FCLA_Effects\Planes\functions\CBA_Eventhandlers\fn_eventHandler.sqf";
+		postInit = 1;
+	};
 
-	class enginePlanesEH {file = "\FCLA_Effects\Planes\functions\eventhandlers\fn_Engine.sqf";};
+	class enginePlanes {file = "\FCLA_Effects\Planes\functions\BIS_Eventhandlers\fn_Engine.sqf";};
+
+	class groundSmokePlanes {file = "\FCLA_Effects\Planes\functions\fn_groundSmoke.sqf";};
+	class spawnSmokeEffectPlanes {file = "\FCLA_Effects\Planes\functions\fn_spawnSmokeEffect.sqf";};
 };

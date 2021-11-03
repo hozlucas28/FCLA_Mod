@@ -13,8 +13,6 @@ params ["_object"];
 
 
 
-/* --------------------------- RECARGAR OXÍGENO ---------------------------- */
-
 _Condition = {
   params ["_target", "_player"];
   [_target, _player] call FCLA_Interactions_fnc_conditionRechargeOxygenCBRN;
@@ -25,5 +23,5 @@ _Statement = {
   [_target, _player] spawn FCLA_Interactions_fnc_statementRechargeOxygenCBRN;
 };
 
-_Action = ["FCLA_Recargar_Oxigeno", "Recargar oxígeno", "\FCLA_Data\ACE_Actions\Oxygen_Tank.paa", _Statement, _Condition] call Ace_Interact_Menu_fnc_createAction;
-[_object, 0, [], _Action] call Ace_Interact_Menu_fnc_addActionToObject;
+_Action = ["FCLA_Recharge_Oxygen", "Recargar oxígeno", "\FCLA_Data\ACE_Actions\Oxygen_Tank.paa", _Statement, _Condition] call ACE_Interact_Menu_fnc_createAction;
+[_object, 0, [], _Action] call ACE_Interact_Menu_fnc_addActionToObject;

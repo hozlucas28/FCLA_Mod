@@ -4,6 +4,5 @@
 |********************************************************************************/
 
 class Kick_Door {
-	file = "\FCLA_Immersions\Kick_Door";
-  class initKickDoor {};
+  class initKickDoor {file = "\FCLA_Immersions\Kick_Door\fn_init.sqf";};
 };

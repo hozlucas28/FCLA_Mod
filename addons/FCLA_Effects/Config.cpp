@@ -132,42 +132,42 @@ class CfgAmmo {
 
 class Extended_Engine_EventHandlers {
 	class Plane {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_enginePlanesEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_enginePlanes;};";
 	};
 };
 
 class Extended_HitPart_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_hitPartSoundsEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_hitPartSoundsES;};";
 	};
 };
 
 class Extended_InventoryClosed_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryClosedSoundsEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryClosedSoundsES;};";
 	};
 };
 
 class Extended_InventoryOpened_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryOpenedSoundsEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryOpenedSoundsES;};";
 	};
 };
 
 class Extended_Killed_Eventhandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_killedSoundsEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_killedSoundsES;};";
 	};
 };
 
 class Extended_Put_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_putSoundsEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_putSoundsES;};";
 	};
 };
 
 class Extended_Take_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_takeSoundsEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_takeSoundsES;};";
 	};
 };

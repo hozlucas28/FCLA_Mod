@@ -18,7 +18,7 @@ addMissionEventHandler ["PlayerConnected", {
   _uidIndex = _clientData find _uid;
   if ((!_jip) || (_uidIndex <= -1) || (!FCLA_Save_Position_onDisconnect)) exitWith {};
   _loadoutIndex = _uidIndex + 1;
-  [_clientData select _loadoutIndex] remoteExec ["FCLA_Development_fnc_loadClientDataSavePos", _owner];
+  [_clientData select _loadoutIndex] remoteExec ["FCLA_Development_fnc_loadClientDataSP", _owner];
 }];
 
 

@@ -5,6 +5,21 @@
 
 
 
+/* --------------------------- CASCOS DE COMBATE --------------------------- */
+
+class H_HelmetB_Digital: H_HelmetB {
+  author = "hozlucas28";
+  displayName = "Casco de combate (digital)";
+  hiddenSelections[] = {"camo"};
+  hiddenSelectionsTextures[] = {"\FCLA_Headgears\Digital\data\H_HelmetB_Digital.paa"};
+  picture = "\FCLA_Headgears\Digital\data\pictures\H_HelmetB_Digital.paa";
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+};
+
+
+
 /* ---------------------- CASCOS DE COMBATE MEJORADOS ---------------------- */
 
 class H_HelmetSpecB_Digital: H_HelmetSpecB {

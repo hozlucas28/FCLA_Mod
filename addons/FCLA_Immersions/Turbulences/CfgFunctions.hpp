@@ -4,8 +4,11 @@
 |********************************************************************************/
 
 class Turbulences {
-  file = "\FCLA_Immersions\Turbulences\functions";
-  class initTurbulences {};
-  class logicTurbulences {};
-  class playerEventHandlerTurbulences {postInit = 1;};
+  class playerEventHandlerTurbulences {
+    file = "\FCLA_Immersions\Turbulences\functions\CBA_Eventhandlers\fn_playerEventHandler.sqf";
+    postInit = 1;
+  };
+
+  class initTurbulences {file = "\FCLA_Immersions\Turbulences\functions\fn_Init.sqf";};
+  class logicTurbulences {file = "\FCLA_Immersions\Turbulences\functions\fn_Logic.sqf";};
 };

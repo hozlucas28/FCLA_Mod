@@ -10,20 +10,13 @@
 
 //Variables de referencia.
 params ["_player"];
-_backpackContainer = backpackContainer _unit;
+_backpackContainer = backpackContainer _player;
 
 
 
 //Verificar si tiene oxígeno.
 if ((_backpackContainer getVariable ["FCLA_Backpack_Oxygen", 100]) <= 0) exitWith {
-  _string = "";
-  for "_i" from 1 to 0 do {_string = _string + "|";};
-  _text = [_string, [1, 0, 0]] call ACE_Common_fnc_stringToColoredText;
-
-  _string = "";
-  for "_i" from 1 to 10 do {_string = _string + "|";};
-  _text = composeText [_text, [_string, "#808080"] call ACE_Common_fnc_stringToColoredText];
-
+  _text = ["||||||||||", "#808080"] call ACE_Common_fnc_stringToColoredText;
   _picture = getText (configFile >> "CfgVehicles" >> (backpack _player) >> "picture");
   [_text, _picture] call ACE_Common_fnc_displayTextPicture;
 };
@@ -57,11 +50,11 @@ _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
 
   _delta = CBA_missionTime - _lastTimeUpdated;
   _backpackOxygenRemaining = (_backpackOxygenRemaining - _delta) max 0;
-  _backpackFirstAlertPlayed = _backpackContainer getVariable ["FCLA_Backpack_Last_Alert", "NONE"];
+  _backpackFirstAlertPlayed = _backpackContainer getVariable ["FCLA_Backpack_Last_Alert", ""];
   _backpackContainer setVariable ["FCLA_Backpack_Oxygen", _backpackOxygenRemaining];
 
   switch (true) do {
-    case ((_backpackFirstAlertPlayed == "NONE") && (_backpackOxygenRemaining <= 50)): {
+    case ((_backpackFirstAlertPlayed == "") && (_backpackOxygenRemaining <= 50)): {
       _this setVariable ["FCLA_Backpack_Last_Alert", "Half_Capacity", true];
       [_backpackContainer, "FCLA_Low_Oxygen_Alert", 1, 15, false] call FCLA_Common_fnc_globalSay3D;
     };

@@ -5,7 +5,7 @@
 
 class CfgPatches {
 	class FCLA_Interactions {
-		#include "\FCLA_Interactions\units.hpp"
+		units[] = {};
 		#include "\FCLA_Interactions\weapons.hpp"
 		requiredAddons[] = {};
 		version = "2.0";
@@ -100,6 +100,7 @@ class CfgVehicles {
 			#include "\FCLA_Interactions\Light_Sticks\CfgVehicles\ACE_SelfActions.hpp"
 	    class ACE_Equipment {
 				#include "\FCLA_Interactions\CBRN\ACE_Equipment.hpp"
+				#include "\FCLA_Interactions\Helmet_Camo_Net\ACE_Equipment.hpp"
 				#include "\FCLA_Interactions\Spy_Camera\CfgVehicle.hpp"
 	      #include "\FCLA_Interactions\Whistle\CfgVehicle.hpp"
 	    };
@@ -165,7 +166,6 @@ class ACE_Medical_Treatment_Actions {
 
 class Extended_InitPost_EventHandlers {
 	class CAManBase {
-		Helmet_Camo_Net = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsToUnitHCN;";
 		ID_Card = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsToUnitIDCard;";
 		Light_Sticks = "[_this select 0] spawn FCLA_Interactions_fnc_initLightSticks;";
 		Night_Vision_Battery = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsToUnitNVB;";
@@ -179,8 +179,8 @@ class Extended_InitPost_EventHandlers {
 
 	class Car {init = "[_this select 0] spawn FCLA_Interactions_fnc_initPlateNumber;";};
 	class UGV_02_Base_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_initPlateNumber;";};
-	class DeconShower_01_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsToShowerCBRN;";};
-	class Land_GasTank_02_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsToOxygenTankCBRN";};
+	class DeconShower_01_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsShowerCBRN;";};
+	class Land_GasTank_02_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsRechargeOxygenCBRN";};
 };
 
 class Extended_Killed_Eventhandlers {

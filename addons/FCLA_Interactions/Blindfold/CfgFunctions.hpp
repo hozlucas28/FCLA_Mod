@@ -16,6 +16,7 @@ class Blindfold {
 
   class conditionOnBlindfold {file = "\FCLA_Interactions\Blindfold\functions\conditionOn.sqf";};
   class conditionOffBlindfold {file = "\FCLA_Interactions\Blindfold\functions\conditionOff.sqf";};
+  
   class statementOnBlindfold {file = "\FCLA_Interactions\Blindfold\functions\statementOn.sqf";};
   class statementOffBlindfold {file = "\FCLA_Interactions\Blindfold\functions\statementOff.sqf";};
 };

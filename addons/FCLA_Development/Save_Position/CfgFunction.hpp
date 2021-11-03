@@ -4,7 +4,10 @@
 |********************************************************************************/
 
 class Save_Position {
-  file = "\FCLA_Development\Save_Position\functions";
-  class initSavePos {postInit = 1;};
-  class loadClientDataSavePos {};
+  class missionEventhandlersSP {
+    file = "\FCLA_Development\Save_Position\functions\fn_missionEventhandlers.sqf";
+    postInit = 1;
+  };
+
+  class loadClientDataSP {file = "\FCLA_Development\Save_Position\functions\fn_loadClientData.sqf";};
 };

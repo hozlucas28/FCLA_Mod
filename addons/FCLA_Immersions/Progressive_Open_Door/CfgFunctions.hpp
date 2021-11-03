@@ -4,7 +4,10 @@
 |********************************************************************************/
 
 class Progressive_Open_Door {
-  file = "\FCLA_Immersions\Progressive_Open_Door\functions";
-  class displayEventHandlerPOD {postInit = 1;};
-  class initPOD {};
+  class displayEventHandlerPOD {
+    file = "\FCLA_Immersions\Progressive_Open_Door\functions\BIS_Eventhandlers\fn_displayEventHandler.sqf";
+    postInit = 1;
+  };
+
+  class initPOD {file = "\FCLA_Immersions\Progressive_Open_Door\functions\fn_init.sqf";};
 };

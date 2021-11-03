@@ -4,14 +4,16 @@
 |********************************************************************************/
 
 class Helmet_Camo_Net {
-  class playerEventHandlerHelmetCamoNet {
-    file = "\FCLA_Interactions\Helmet_Camo_Net\functions\fn_playerEventHandler.sqf";
+  class playerEventHandlerHCN {
+    file = "\FCLA_Interactions\Helmet_Camo_Net\functions\CBA_Eventhandlers\fn_playerEventHandler.sqf";
     postInit = 1;
   };
 
-  class addActionsToUnitHCN {file = "\FCLA_Interactions\Helmet_Camo_Net\functions\fn_addActionsToUnit.sqf";};
-  class canEquipHCN {file = "\FCLA_Interactions\Helmet_Camo_Net\functions\fn_canEquipCamoNet.sqf";};
-  class canRemoveHCN {file = "\FCLA_Interactions\Helmet_Camo_Net\functions\fn_canRemoveCamoNet.sqf";};
-  class equipHCN {file = "\FCLA_Interactions\Helmet_Camo_Net\functions\fn_equipCamoNet.sqf";};
-  class removeHCN {file = "\FCLA_Interactions\Helmet_Camo_Net\functions\fn_removeCamoNet.sqf";};
+  class conditionPutAridHCN {file = "\FCLA_Interactions\Helmet_Camo_Net\functions\fn_conditionPutArid.sqf";};
+  class conditionPutTropicalHCN {file = "\FCLA_Interactions\Helmet_Camo_Net\functions\fn_conditionPutTropical.sqf";};
+  class conditionRemoveHCN {file = "\FCLA_Interactions\Helmet_Camo_Net\functions\fn_conditionRemove.sqf";};
+
+  class statementPutAridHCN {file = "\FCLA_Interactions\Helmet_Camo_Net\functions\fn_statementPutArid.sqf";};
+  class statementPutTropicalHCN {file = "\FCLA_Interactions\Helmet_Camo_Net\functions\fn_statementPutTropical.sqf";};
+  class statementRemoveHCN {file = "\FCLA_Interactions\Helmet_Camo_Net\functions\fn_statementRemove.sqf";};
 };
