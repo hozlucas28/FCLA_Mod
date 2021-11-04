@@ -19,8 +19,11 @@
  * tipo objeto mencionada no tendra valor, es decir, nulo.
  *
  * Examples:
- * [Laptop_1] call FCLA_Common_fnc_hackDevice; //Opcionales no definidos.
- * [Laptop_1, "Título personalizado", false] call FCLA_Common_fnc_hackDevice; //Opcionales definidos.
+ *             //Opcionales no definidos.
+ *            [Laptop_1] call FCLA_Common_fnc_hackDevice;
+ *
+ *             //Opcionales definidos.
+ *            [Laptop_1, "Título personalizado", false] call FCLA_Common_fnc_hackDevice;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

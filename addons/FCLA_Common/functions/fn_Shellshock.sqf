@@ -11,7 +11,7 @@
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
- * Examples:
+ * Example:
  * [player] call FCLA_Common_fnc_Shellshock;
  *
  * Note:

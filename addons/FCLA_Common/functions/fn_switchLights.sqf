@@ -15,8 +15,11 @@
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Example:
- *            [player, 500, "Off"] call FCLA_Common_fnc_switchLights; //Apagar luces.
- *            [getPos player, 500, "On"] call FCLA_Common_fnc_switchLights; //Encender luces.
+ *            //Apagar luces.
+ *            [player, 500, "Off"] call FCLA_Common_fnc_switchLights;
+ *
+ *            //Encender luces.
+ *            [getPos player, 500, "On"] call FCLA_Common_fnc_switchLights;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

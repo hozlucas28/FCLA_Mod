@@ -16,8 +16,11 @@
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Examples:
- * [player, 150] call FCLA_Common_fnc_showHiddenEdenEntities; //IA no excluida.
- * [getPos player, 150, true] call FCLA_Common_fnc_showHiddenEdenEntities; //IA excluida.
+ *             //IA no excluida.
+ *             [player, 150] call FCLA_Common_fnc_showHiddenEdenEntities;
+ *
+ *             //IA excluida.
+ *             [getPos player, 150, true] call FCLA_Common_fnc_showHiddenEdenEntities;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

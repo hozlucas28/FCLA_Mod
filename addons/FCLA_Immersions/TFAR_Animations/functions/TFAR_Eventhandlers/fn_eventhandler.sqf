@@ -11,9 +11,9 @@
 
 ["FCLA_TFAR_Animations_OnTangentEH", "OnTangent", {
   params ["_unit", "_currentRadio", "_transceiver", "_hasAdditionalChannel", "_buttonDown"];
-  _currentVehicleRole = [_unit] call CBA_fnc_vehicleRole;
+  _vehicleRole = [_unit] call CBA_fnc_vehicleRole;
   _severalConditions = [_unit, [0, 1, 3, 4, 7, 12, 13, 14, 15]] call FCLA_Common_fnc_severalConditions;
-  _isNotInCargoVehicle = (_getCurrentVehicleRole != "") && (_getCurrentVehicleRole != "cargo");
+  _isNotInCargoVehicle = (_vehicleRole != "") && (_vehicleRole != "cargo");
   _isNotTouchingGround = !isTouchingGround _unit;
   if ((!FCLA_Radio_Animations) || (_severalConditions) || (_isNotInCargoVehicle) || (_isNotTouchingGround)) exitWith {};
 

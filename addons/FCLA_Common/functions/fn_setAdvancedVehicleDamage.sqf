@@ -15,8 +15,11 @@
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Examples:
- * [vehicle player] call FCLA_Common_fnc_setAdvancedVehicleDamage; //Las armas e items no se destruirán.
- * [vehicle player, true, true] call FCLA_Common_fnc_setAdvancedVehicleDamage; //Las armas e items se destruirán.
+ *             //Las armas e items no se destruirán.
+ *             [vehicle player] call FCLA_Common_fnc_setAdvancedVehicleDamage;
+ *
+ *             //Las armas e items se destruirán.
+ *             [vehicle player, true, true] call FCLA_Common_fnc_setAdvancedVehicleDamage;
  *
  * Note:
  * Si el addon option "Daño avanzado de vehículo" (mod ACE) esta activado,

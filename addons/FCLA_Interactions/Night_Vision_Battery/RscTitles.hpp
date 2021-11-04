@@ -3,7 +3,7 @@
 |                  TÍTULOS - "BATERÍA PARA LA VISIÓN NOCTURNA"                   |
 |********************************************************************************/
 
-class FCLA_NVG_Picture_Base {
+class FCLA_NVG_Battery_Base {
   idc = -1;
   type = 0;
   style = 48;
@@ -28,7 +28,7 @@ class FCLA_NVG_Battery_0 {
   movingEnable = 0;
 	controls[] = {"Picture"};
 
-	class Picture: FCLA_NVG_Picture_Base {
+	class Picture: FCLA_NVG_Battery_Base {
 		x = 0.4;
 		y = 0;
 		w = 0.20;
@@ -48,7 +48,7 @@ class FCLA_NVG_Battery_20 {
   movingEnable = 0;
 	controls[] = {"Picture"};
 
-	class Picture: FCLA_NVG_Picture_Base {
+	class Picture: FCLA_NVG_Battery_Base {
 		x = safeZoneX + safeZoneW * 0.9;
 		y = safeZoneY + safeZoneH * 0.08;
 		w = safeZoneH * 0.1;
@@ -68,7 +68,7 @@ class FCLA_NVG_Battery_40 {
   movingEnable = 0;
 	controls[] = {"Picture"};
 
-	class Picture: FCLA_NVG_Picture_Base {
+	class Picture: FCLA_NVG_Battery_Base {
 		x = safeZoneX + safeZoneW * 0.9;
 		y = safeZoneY + safeZoneH * 0.08;
 		w = safeZoneH * 0.1;
@@ -88,7 +88,7 @@ class FCLA_NVG_Battery_60 {
   movingEnable = 0;
 	controls[] = {"Picture"};
 
-	class Picture: FCLA_NVG_Picture_Base {
+	class Picture: FCLA_NVG_Battery_Base {
 		x = safeZoneX + safeZoneW * 0.9;
 		y = safeZoneY + safeZoneH * 0.08;
 		w = safeZoneH * 0.1;
@@ -108,7 +108,7 @@ class FCLA_NVG_Battery_80 {
   movingEnable = 0;
 	controls[] = {"Picture"};
 
-	class Picture: FCLA_NVG_Picture_Base {
+	class Picture: FCLA_NVG_Battery_Base {
 		x = safeZoneX + safeZoneW * 0.9;
 		y = safeZoneY + safeZoneH * 0.08;
 		w = safeZoneH * 0.1;
@@ -128,7 +128,7 @@ class FCLA_NVG_Battery_100 {
   movingEnable = 0;
 	controls[] = {"Picture"};
 
-	class Picture: FCLA_NVG_Picture_Base {
+	class Picture: FCLA_NVG_Battery_Base {
 		x = safeZoneX + safeZoneW * 0.9;
 		y = safeZoneY + safeZoneH * 0.08;
 		w = safeZoneH * 0.1;

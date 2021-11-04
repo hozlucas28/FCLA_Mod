@@ -34,8 +34,11 @@
  * ¿Cumple con las condiciones? <BOOL>
  *
  * Examples:
- * [player] call FCLA_Common_fnc_severalConditions; //Sin condiciones excluidas.
- * [player, [3, 4]] call FCLA_Common_fnc_severalConditions; //Condiciones 3 y 4 excluidas.
+ *             //Sin condiciones excluidas.
+ *             [player] call FCLA_Common_fnc_severalConditions;
+ *
+ *             //Condiciones 3 y 4 excluidas.
+ *             [player, [3, 4]] call FCLA_Common_fnc_severalConditions;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

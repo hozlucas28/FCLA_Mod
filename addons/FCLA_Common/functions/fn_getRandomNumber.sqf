@@ -14,8 +14,11 @@
  * Número al azar comprendido entre el mínimo y el máximo. <NUMBER|STRING>
  *
  * Examples:
- * [0, 10] call FCLA_Common_fnc_getRandomNumber; //Retornar número como <NUMBER>.
- * [0, 10, true] call FCLA_Common_fnc_getRandomNumber; //Retornar número como <STRING>.
+ *             //Retornar número como <NUMBER>.
+ *             [0, 10] call FCLA_Common_fnc_getRandomNumber;
+ *
+ *             //Retornar número como <STRING>.
+ *             [0, 10, true] call FCLA_Common_fnc_getRandomNumber;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

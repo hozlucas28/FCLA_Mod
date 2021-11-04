@@ -12,8 +12,11 @@
  * ¿Es un administrador? <BOOL>
  *
  * Examples:
- * [] call FCLA_Common_fnc_isAdmin; //Administrador votado excluido.
- * [false] call FCLA_Common_fnc_isAdmin; //Administrador votado no excluido.
+ *             //Administrador votado excluido.
+ *             [] call FCLA_Common_fnc_isAdmin;
+ *
+ *             //Administrador votado no excluido.
+ *             [false] call FCLA_Common_fnc_isAdmin; 
  *
  * Note:
  * Si no te encuentras en un servidor dedicado se retornara un false.

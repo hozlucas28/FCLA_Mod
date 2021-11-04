@@ -19,8 +19,11 @@
  * objeto "FCLA_Exclude_Concealment" con el valor <true>.
  *
  * Examples:
- * [player, 150] call FCLA_Common_fnc_hideEdenEntities; //IA no excluida.
- * [getPos player, 150, true] call FCLA_Common_fnc_hideEdenEntities; //IA excluida.
+ *             //IA no excluida.
+ *             [player, 150] call FCLA_Common_fnc_hideEdenEntities;
+ *
+ *             //IA excluida.
+ *             [getPos player, 150, true] call FCLA_Common_fnc_hideEdenEntities; 
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

@@ -21,16 +21,13 @@ class CfgPatches {
 
 class CfgVehicles {
 	class All;
-	class Thing: All {};
-	class ThingX: Thing {};
-	class Items_base_F: ThingX {};
-	class DecontaminationSimulated_base_F: Items_base_F {};
-	class DeconShower_01_base_F: DecontaminationSimulated_base_F {};
-	class DeconShower_01_F: DeconShower_01_base_F {
-		class ACE_Actions {
-			class ACE_MainActions {
-				#include "\FCLA_Test\temporal.hpp"
-			};
-		};
+	class AllVehicles: All {};
+	class Land: AllVehicles {};
+	class Man: Land {};
+
+	class CAManBase: Man {
+	  class ACE_SelfActions {
+			#include "\FCLA_Test\ACE_SelfActions.hpp"
+	  };
 	};
 };

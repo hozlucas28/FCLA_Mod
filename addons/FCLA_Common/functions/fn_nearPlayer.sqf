@@ -20,8 +20,11 @@
  * ¿Hay un jugador/unidad controlada cerca? <BOOL>
  *
  * Examples:
- * [player, 50] call FCLA_Common_fnc_nearPlayer; //Opcionales no definidos.
- * [getPos player, 50, 2, false] call FCLA_Common_fnc_nearPlayer; //Opcionales definidos.
+ *             //Opcionales no definidos.
+ *             [player, 50] call FCLA_Common_fnc_nearPlayer;
+ *
+ *             //Opcionales definidos.
+ *             [getPos player, 50, 2, false] call FCLA_Common_fnc_nearPlayer;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

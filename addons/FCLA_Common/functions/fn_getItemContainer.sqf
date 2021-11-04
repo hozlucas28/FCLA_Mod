@@ -16,8 +16,11 @@
  * Contenedor/es en el que se encuentra el item. <STRING|ARRAY>
  *
  * Examples:
- * [player, "ACE_CableTie"] call FCLA_Common_fnc_getItemContainer; //Sin contenedores excluidos.
- * [player, "ACE_tourniquet", ["Vest", "Backpack"]] call FCLA_Common_fnc_getItemContainer; //Contenedores chaleco y mochila excluidos.
+ *             //Sin contenedores excluidos.
+ *             [player, "ACE_CableTie"] call FCLA_Common_fnc_getItemContainer;
+ *
+ *             //Contenedores chaleco y mochila excluidos.
+ *             [player, "ACE_tourniquet", ["Vest", "Backpack"]] call FCLA_Common_fnc_getItemContainer;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

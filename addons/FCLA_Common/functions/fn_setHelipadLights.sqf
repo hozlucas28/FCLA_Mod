@@ -15,8 +15,11 @@
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Examples:
- * [Helipad_1] call FCLA_Common_fnc_setHelipadLights; //Opcionales no definidos.
- * [Helipad_2, 5, "Red"] call FCLA_Common_fnc_setHelipadLights; //Opcionales definidos.
+ *             //Opcionales no definidos.
+ *             [Helipad_1] call FCLA_Common_fnc_setHelipadLights;
+ *
+ *             //Opcionales definidos.
+ *             [Helipad_2, 5, "Red"] call FCLA_Common_fnc_setHelipadLights;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

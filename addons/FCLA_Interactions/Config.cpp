@@ -33,10 +33,10 @@ class CfgFunctions {
 	class FCLA_Interactions {
 		#include "\FCLA_Interactions\Blindfold\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\CBRN\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\Helmet_Camo_Net\CfgFunction.hpp"
+		#include "\FCLA_Interactions\Helmet_Camo_Net\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\ID_Card\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\Light_Sticks\CfgFunction.hpp"
-		#include "\FCLA_Interactions\Night_Vision_Battery\CfgFunction.hpp"
+		#include "\FCLA_Interactions\Light_Sticks\CfgFunctions.hpp"
+		#include "\FCLA_Interactions\Night_Vision_Battery\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Patches\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Plate_Number\CfgFunction.hpp"
 		#include "\FCLA_Interactions\Share_Map\CfgFunction.hpp"
@@ -99,10 +99,11 @@ class CfgVehicles {
 
 	  class ACE_SelfActions {
 			#include "\FCLA_Interactions\ID_Card\ACE_SelfActions.hpp"
-			#include "\FCLA_Interactions\Light_Sticks\CfgVehicles\ACE_SelfActions.hpp"
+			#include "\FCLA_Interactions\Light_Sticks\ACE_SelfActions.hpp"
 	    class ACE_Equipment {
 				#include "\FCLA_Interactions\CBRN\ACE_Equipment.hpp"
 				#include "\FCLA_Interactions\Helmet_Camo_Net\ACE_Equipment.hpp"
+				#include "\FCLA_Interactions\Night_Vision_Battery\ACE_Equipment.hpp"
 				#include "\FCLA_Interactions\Spy_Camera\CfgVehicle.hpp"
 	      #include "\FCLA_Interactions\Whistle\CfgVehicle.hpp"
 	    };
@@ -168,8 +169,6 @@ class ACE_Medical_Treatment_Actions {
 
 class Extended_InitPost_EventHandlers {
 	class CAManBase {
-		Light_Sticks = "[_this select 0] spawn FCLA_Interactions_fnc_initLightSticks;";
-		Night_Vision_Battery = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsToUnitNVB;";
 		Courses = "[_this select 0] spawn FCLA_Interactions_fnc_initCourses;";
 		Patches = "[_this select 0] spawn FCLA_Interactions_fnc_initPatches;";
 		Share_Map = "[_this select 0] spawn FCLA_Interactions_fnc_initShareMap;";

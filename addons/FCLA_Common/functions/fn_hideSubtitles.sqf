@@ -16,6 +16,9 @@
  * [Civil_1] call FCLA_Common_fnc_hideSubtitles;
  *
  * Note:
+ * Se recomienda utilizar esta función a travez del evento
+ * personalizado "FCLA_Hide_Subtitles".
+ *
  * Si no definiste al emisor en la función "FCLA_Common_fnc_showSubtitles",
  * no se podran ocultar los subtítulos, retornando un false.
  *
@@ -33,7 +36,6 @@ if ((isNull _emitter) || (isNil "_ctrl")) exitWith {false};
 
 
 //Ocultar subtítulos.
-_caller = call CBA_fnc_currentUnit;
 _ctrl ctrlSetStructuredText parseText "";
 _emitter setVariable ["FCLA_Hide_Subtitles", true, true];
 true

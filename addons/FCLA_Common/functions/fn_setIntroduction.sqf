@@ -15,7 +15,7 @@
  * Note:
  * Se recomienda utilizar esta función en el "initPlayerLocal".
  *
- * Examples:
+ * Example:
  * ["Mi título", "subtítulo"] call FCLA_Common_fnc_setIntroduction;
  *
  * Public: [Yes]

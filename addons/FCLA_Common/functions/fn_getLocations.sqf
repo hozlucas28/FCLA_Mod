@@ -14,8 +14,11 @@
  * Nombres de los poblados, ciudades y capitales. <ARRAY>
  *
  * Examples:
- * call FCLA_Common_fnc_getLocations; //Sin exclusiones.
- * [true, true] call FCLA_Common_fnc_getLocations; //Pueblos y ciudades excluidas.
+ *             //Sin exclusiones.
+ *             call FCLA_Common_fnc_getLocations;
+ *
+ *             //Pueblos y ciudades excluidas.
+ *             [true, true] call FCLA_Common_fnc_getLocations;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

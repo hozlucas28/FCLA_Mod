@@ -17,8 +17,11 @@
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Examples:
- * [player, "FCLA_Hiss_1", 1] call FCLA_Common_fnc_globalSay3D; //Opcionales no definidos.
- * [Unidad_1, "FCLA_Hiss_2", 1, 50, true] call FCLA_Common_fnc_globalSay3D; //Opcionales definidos.
+ *             //Opcionales no definidos.
+ *             [player, "FCLA_Hiss_1", 1] call FCLA_Common_fnc_globalSay3D;
+ *
+ *             //Opcionales definidos.
+ *             [Unidad_1, "FCLA_Hiss_2", 1, 50, true] call FCLA_Common_fnc_globalSay3D;
  *
  * Note:
  * La función le asigna el valor <true> a la variable de tipo

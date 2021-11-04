@@ -3,7 +3,7 @@
 Function: FCLA_Interactions_fnc_switchBatteryNVB
 
 Description:
-    Enciende/Apaga la batería de las gafas de visión nocturna.
+    Enciende/Apaga el consumo de la batería de las gafas de visión nocturna.
 
 Public: [No]
 

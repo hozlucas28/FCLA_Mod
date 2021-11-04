@@ -13,16 +13,23 @@
  *                # Reproducciones aceptadas: "playAction", "playActionNow",
  *                                            "PlayMove", "PlayMoveNow" y "SwitchMove".
  *
+ *            3: ¿Ignorar llamados anteriores?, opcional. <BOOL> (default: false)
+ *
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Example:
- * [player, "FCLA_Tactical_Position_Up", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+ *             //Opcional sin definir.
+ *             [player, "FCLA_Tactical_Position_Up", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+ *
+ *             //Opcional definido.
+ *             [player, "FCLA_Tactical_Position_Down", "playActionNow", true] call FCLA_Common_fnc_playAnimation;
  *
  * Note:
  * La función le asigna el valor <true> a la variable de tipo
- * objeto "FCLA_Playing_Animation" asociada a la unidad que reproduce
- * la animación, para asi evitar un bucle de reproducción.
+ * objeto "FCLA_Playing_Animation" asociada a la unidad que reproduce la
+ * animación, para asi evitar que un llamado a la función interrumpa al anterior.
+ * Si se le asigna el valor <true> al argumento 3 esto sera ignorado.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -31,7 +38,8 @@
 params [
         ["_unit", objNull, [objNull, teamMemberNull], 0],
         ["_animation", "", [""], 0],
-        ["_typeOfReproduction", "", [""], 0]
+        ["_typeOfReproduction", "", [""], 0],
+        ["_forceReproduction", false, [true], 0]
        ];
 
 
@@ -41,7 +49,7 @@ _typeOfReproduction = toUpper _typeOfReproduction;
 _inVehicle = if (_typeOfReproduction == "SWITCHMOVE") then {!isNull objectParent _unit} else {false};
 _isUnitPlayingAnimation = _unit getVariable ["FCLA_Playing_Animation", false];
 _acceptedTypesOfReproduction = ["PLAYACTION", "PLAYACTIONNOW", "PLAYMOVE", "PLAYMOVENOW", "SWITCHMOVE"];
-if ((isNull _unit) || !(_typeOfReproduction in _acceptedTypesOfReproduction) || (_inVehicle) || (_isUnitPlayingAnimation)) exitWith {false};
+if ((isNull _unit) || !(_typeOfReproduction in _acceptedTypesOfReproduction) || (_inVehicle) || ((!_forceReproduction) && (_isUnitPlayingAnimation))) exitWith {false};
 
 
 //Reproducir animación.
