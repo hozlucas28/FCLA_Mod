@@ -33,7 +33,7 @@ _Condition = {
 
 _Statement = {
   params ["_target", "_player"];
-  ["FCLA_Switch_Shower", [_target, true]] call CBA_fnc_serverEvent;
+  ["FCLA_Switch_Shower", [_target, true]] call CBA_fnc_localEvent; 
   [_player, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 };
 
@@ -60,7 +60,7 @@ _Condition = {
 
 _Statement = {
   params ["_target", "_player"];
-  ["FCLA_Switch_Shower", [_target, false]] call CBA_fnc_serverEvent;
+  ["FCLA_Switch_Shower", [_target, false]] call CBA_fnc_localEvent;
   [_player, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 };
 

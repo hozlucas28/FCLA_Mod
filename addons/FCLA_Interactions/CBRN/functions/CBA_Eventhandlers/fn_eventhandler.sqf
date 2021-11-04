@@ -66,7 +66,7 @@
     [_player, 'quick_view', '%1 fue descontaminado', [name _player]] call ACE_Medical_Treatment_fnc_addToLog;
   };
 
-  _trigger = createTrigger ["EmptyDetector", getpos _shower, false];
+  _trigger = createTrigger ["EmptyDetector", getpos _shower, true];
   _trigger attachTo [_shower, [0, 0, 0]];
   _trigger setTriggerTimeout [5, 5, 5, true];
   _trigger setTriggerActivation ["ANY", "PRESENT", true];
