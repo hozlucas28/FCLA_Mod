@@ -26,7 +26,9 @@ _Condition = {
   _isDesactivated = _target getVariable ["FCLA_Shower_Status", false];
   _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
   _isTouchingGround = isTouchingGround _player;
-  (_isAlive) && (_notInStairs) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isDesactivated) && (_isCBRNActivated) && (_isTouchingGround);
+  _isNotSurrendering = !(_player getVariable ["ACE_Captives_isSurrendering", false]);
+  _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
+  (_isAlive) && (_notInStairs) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isDesactivated) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation)
 };
 
 _Statement = {
@@ -51,7 +53,9 @@ _Condition = {
   _isNotCarrying = !(_player getVariable ["ACE_Dragging_isCarrying", false]);
   _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
   _isTouchingGround = isTouchingGround _player;
-  (_isAlive) && (_isActivated) && (_notInStairs) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isCBRNActivated) && (_isTouchingGround);
+  _isNotSurrendering = !(_player getVariable ["ACE_Captives_isSurrendering", false]);
+  _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
+  (_isAlive) && (_isActivated) && (_notInStairs) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation)
 };
 
 _Statement = {

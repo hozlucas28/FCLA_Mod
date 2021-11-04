@@ -92,11 +92,13 @@ class CfgVehicles {
 		class ACE_Actions {
 			class ACE_MainActions {
 				#include "\FCLA_Interactions\Blindfold\ACE_MainActions.hpp"
+				#include "\FCLA_Interactions\ID_Card\ACE_MainActions.hpp"
 				#include "\FCLA_Interactions\Patches\CfgMainVehicle.hpp"
 			};
 		};
 
 	  class ACE_SelfActions {
+			#include "\FCLA_Interactions\ID_Card\ACE_SelfActions.hpp"
 			#include "\FCLA_Interactions\Light_Sticks\CfgVehicles\ACE_SelfActions.hpp"
 	    class ACE_Equipment {
 				#include "\FCLA_Interactions\CBRN\ACE_Equipment.hpp"
@@ -166,7 +168,6 @@ class ACE_Medical_Treatment_Actions {
 
 class Extended_InitPost_EventHandlers {
 	class CAManBase {
-		ID_Card = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsToUnitIDCard;";
 		Light_Sticks = "[_this select 0] spawn FCLA_Interactions_fnc_initLightSticks;";
 		Night_Vision_Battery = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsToUnitNVB;";
 		Courses = "[_this select 0] spawn FCLA_Interactions_fnc_initCourses;";

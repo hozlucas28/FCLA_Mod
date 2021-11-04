@@ -31,8 +31,11 @@ _statementOnFinish = {
   (_this select 0) params ["_player", "_aridCommonHelmetsWithoutCamoNet", "_aridSnakeskinHelmetsWithoutCamoNet"];
   _headgear = headgear _player;
   _itemCamoNet = "FCLA_Camo_Net_Arid";
+  _camouflageCoef = _player getUnitTrait "camouflageCoef";
   [_player, _itemCamoNet] call ACE_Common_fnc_useItem;
-  _player setVariable ["FCLA_Saved_Headgear", [_headgear, _itemCamoNet], true];
+  _player setUnitTrait ["camouflageCoef", _camouflageCoef - 0.2];
+  _player setVariable ["FCLA_Saved_Headgear", [_headgear, _itemCamoNet, _camouflageCoef], true];
+
 
   switch (true) do {
     case (_headgear == "rhsusf_ach_helmet_ocp"): {_player addHeadgear "rhsusf_ach_helmet_camo_ocp";};

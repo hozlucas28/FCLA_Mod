@@ -3,24 +3,21 @@
  * Author: hozlucas28
  *
  * Description:
- * Muestra los atributos (doctor, ingeniero y EOD) de la unidad en un mensaje,
- * ubicado en la esquina superior derecha de la pantalla.
+ * Muestra las características de la unidad.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
 [{
-  (_this select 0) params ["_unit"];
-  _isEOD = [_unit, "EOD"] call FCLA_Common_fnc_checkUnitTrait;
-  _isDoctor = [_unit, "Doctor"] call FCLA_Common_fnc_checkUnitTrait;
-  _isAdvancedEnginner = [_unit, "Advanced_Enginner"] call FCLA_Common_fnc_checkUnitTrait;
+  if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
+  _isEOD = [_this select 0, "EOD"] call FCLA_Common_fnc_checkUnitTrait;
+  _isDoctor = [_this select 0, "Doctor"] call FCLA_Common_fnc_checkUnitTrait;
+  _isAdvancedEnginner = [_this select 0, "Advanced Enginner"] call FCLA_Common_fnc_checkUnitTrait;
   _EODTextProperties = if (_isEOD) then {["#58D68D", "√"];} else {["#D65858", "X"];};
   _doctorTextProperties = if (_isDoctor) then {["#58D68D", "√"];} else {["#D65858", "X"];};
   _advancedEnginnerTextProperties = if (_isAdvancedEnginner) then {["#58D68D", "√"];} else {["#D65858", "X"];};
-  if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
-  _isShowingIDCard = !isNull findDisplay 10001;
-  if (_isShowingIDCard) then {
+  if (!isNull findDisplay 10001) then {
     hintSilent parseText format ["
     <t font='PuristaBold' size='1.5' underline='1'>ESPECIALIDADES</t><br/><br/>
     <t font='PuristaBold' size='1.25'>Medico...        |<t color='%1'> %2 </t>|</t><br/>
@@ -31,4 +28,4 @@
     hintSilent "";
     [_handle] call CBA_fnc_removePerFrameHandler;
   };
-}, 0.1, _this] call CBA_fnc_addPerFrameHandler;
+}, 0.5, _this] call CBA_fnc_addPerFrameHandler;

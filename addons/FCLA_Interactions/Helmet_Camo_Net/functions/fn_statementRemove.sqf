@@ -20,7 +20,7 @@ params ["_player"];
 _statementOnFinish = {
   (_this select 0) params ["_player"];
   _headgear = headgear _player;
-  _savedHeadgear = _player getVariable ["FCLA_Saved_Headgear", ["", ""]];
+  _savedHeadgear = _player getVariable ["FCLA_Saved_Headgear", ["", "", -1]];
 
   if ("" in _savedHeadgear) then {
     switch (_headgear) do {
@@ -56,6 +56,7 @@ _statementOnFinish = {
     };
   } else {
     _player addHeadgear (_savedHeadgear select 0);
+    _player setUnitTrait ["camouflageCoef", _savedHeadgear select 2];
     [_player, _savedHeadgear select 1, "", -1] call ACE_Common_fnc_addToInventory;
   };
 };

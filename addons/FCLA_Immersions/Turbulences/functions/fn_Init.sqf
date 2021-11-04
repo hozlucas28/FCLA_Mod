@@ -30,7 +30,7 @@ _surfaceArea = (2 * pi * (_maxHeight / 2) * _maxLength + 2 * pi * (_maxHeight / 
 
 
 [{
-	(_this select 0) params ["_vehicle", "_dimensions", "_surfaceArea", "_maxSpeed"];
+	_args params ["_vehicle", "_dimensions", "_surfaceArea", "_maxSpeed"];
 	_currentUnit = call CBA_fnc_currentUnit;
 	if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
@@ -43,6 +43,6 @@ _surfaceArea = (2 * pi * (_maxHeight / 2) * _maxLength + 2 * pi * (_maxHeight / 
 		_vehicle setVariable ["FCLA_Turbulence_Ready", nil, true];
 		_vehicle setVariable ["FCLA_Turbulence_Old_Force", nil, true];
 		_vehicle setVariable ["FCLA_Turbulence_Old_Centre", nil, true];
-		[_this select 1] call CBA_fnc_removePerFrameHandler;
+		[_handle] call CBA_fnc_removePerFrameHandler;
 	};
 }, 0, [_vehicle, _dimensions, _surfaceArea, _maxSpeed]] call CBA_fnc_addPerFrameHandler;

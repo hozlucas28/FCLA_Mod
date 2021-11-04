@@ -43,11 +43,11 @@
   _soundObj attachTo [_shower, [0, 0, 0]];
   _objects pushBack _soundObj;
   [{
-    (_this select 0) params ["_shower", "_soundObj"];
+    _args params ["_shower", "_soundObj"];
     _isCBRNDesactivated = isNil "FCLA_CBRN_Activated";
     _isShowerDesactivated = !(_shower getVariable ["FCLA_Shower_Status", false]);
     if (_isCBRNDesactivated) exitWith {["FCLA_Switch_Shower", [_shower, false]] call CBA_fnc_serverEvent;};
-    if (_isShowerDesactivated) exitWith {[_this select 1] call CBA_fnc_removePerFrameHandler;};
+    if (_isShowerDesactivated) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
     if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
     [_this select 0, "FCLA_Shower", 8, 20, false] call FCLA_Common_fnc_globalSay3D;
   }, 8, [_shower, _soundObj]] call CBA_fnc_addPerFrameHandler;

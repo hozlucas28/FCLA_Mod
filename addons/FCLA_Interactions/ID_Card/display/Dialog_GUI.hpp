@@ -77,7 +77,7 @@ class FCLA_ID_Card_Dialog {
 	class Controls {
 		class name: FCLA_ID_Card_Text {
 			idc = 1007;
-			text = "ERROR";
+			text = "X-X-X-X-X-X";
 			x = 0.48 * safezoneW + safezoneX;
 			y = 0.357056 * safezoneH + safezoneY;
 			w = 0.25 * safezoneW;
@@ -86,7 +86,7 @@ class FCLA_ID_Card_Dialog {
 
 		class date_of_birth: FCLA_ID_Card_Text {
 			idc = 1008;
-			text = "ERROR";
+			text = "X-X-X-X-X-X";
 			x = 0.48 * safezoneW + safezoneX;
 			y = 0.412034 * safezoneH + safezoneY;
 			w = 0.2992083 * safezoneW;
@@ -95,7 +95,7 @@ class FCLA_ID_Card_Dialog {
 
 		class place_of_birth: FCLA_ID_Card_Text {
 			idc = 1009;
-			text = "ERROR";
+			text = "X-X-X-X-X-X";
 			x = 0.48 * safezoneW + safezoneX;
 			y = 0.467013 * safezoneH + safezoneY;
 			w = 0.2992083 * safezoneW;

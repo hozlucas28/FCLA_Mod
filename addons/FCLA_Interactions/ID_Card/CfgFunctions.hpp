@@ -4,7 +4,11 @@
 |********************************************************************************/
 
 class ID_Card {
-	class addActionsToUnitIDCard {file = "\FCLA_Interactions\ID_Card\functions\fn_addActionsToUnit.sqf";};
-	class attributesIDCard {file = "\FCLA_Interactions\ID_Card\functions\fn_showAttributes.sqf";};
-	class showIDCard {file = "\FCLA_Interactions\ID_Card\functions\fn_showID.sqf";};
+  class showTraitsID {file = "\FCLA_Interactions\ID_Card\functions\fn_showTraits.sqf";};
+
+  class conditionExternalID {file = "\FCLA_Interactions\ID_Card\functions\fn_conditionExternal.sqf";};
+  class conditionSelfID {file = "\FCLA_Interactions\ID_Card\functions\fn_conditionSelf.sqf";};
+
+  class statementExternalID {file = "\FCLA_Interactions\ID_Card\functions\fn_statementExternal.sqf";};
+  class statementSelfID {file = "\FCLA_Interactions\ID_Card\functions\fn_statementSelf.sqf";};
 };

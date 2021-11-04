@@ -32,7 +32,7 @@ _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
 
 //Comenzar consumo oxígeno.
 [{
-  (_this select 0) params ["_player", "_lastTimeUpdated"];
+  _args params ["_player", "_lastTimeUpdated"];
   _currentGoggles = goggles _player;
   _currentBackpack = backpack _player;
   _backpackContainer = backpackContainer _player;
@@ -44,7 +44,7 @@ _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
   _isBackpackOxygenDesactivated = !(_backpackContainer getVariable ["FCLA_Backpack_Oxygen_Activated", false]);
   if ((_isSwimming) || (_isCBRNDesactivated) || (_hasNotCompatibleMask) || (_hasNotCompatibleBackpack) || (_isBackpackOxygenDesactivated)) exitWith {
     [_player] spawn FCLA_Interactions_fnc_statementDesactivateOxygenCBRN;
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
+    [_handle] call CBA_fnc_removePerFrameHandler;
   };
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 

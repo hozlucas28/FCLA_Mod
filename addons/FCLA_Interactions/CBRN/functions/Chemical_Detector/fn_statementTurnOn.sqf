@@ -16,14 +16,14 @@ _unit setVariable ["FCLA_Chemical_Detector_Activated", true, true];
 
 //Mostrar interfaz.
 _perFrameHandlerOne = [{
-  (_this select 0) params ["_unit", "_item", "_lastTimeUpdated"];
+  _args params ["_unit", "_item", "_lastTimeUpdated"];
   _isSwimming = [_unit] call ACE_Common_fnc_isSwimming;
   _isDesactivated = !(_unit getVariable ["FCLA_Chemical_Detector_Activated", false]);
   _isNotCompatible = !(_item in FCLA_Chemical_Detectors);
   _isCBRNDesactivated = isNil "FCLA_CBRN_Activated";
   if ((_isSwimming) || (_isDesactivated) || (_isNotCompatible) || (_isCBRNDesactivated)) exitWith {
     [_unit] spawn FCLA_Interactions_fnc_statementDesactivateOxygenCBRN;
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
+    [_handle] call CBA_fnc_removePerFrameHandler;
   };
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
@@ -98,14 +98,14 @@ _perFrameHandlerOne = [{
 
 //Reproducir sonido.
 _perFrameHandlerTwo = [{
-  (_this select 0) params ["_unit", "_item", "_lastTimeUpdated"];
+  _args params ["_unit", "_item", "_lastTimeUpdated"];
   _isSwimming = [_unit] call ACE_Common_fnc_isSwimming;
   _isDesactivated = !(_unit getVariable ["FCLA_Chemical_Detector_Activated", false]);
   _isNotCompatible = !(_item in FCLA_Chemical_Detectors);
   _isCBRNDesactivated = isNil "FCLA_CBRN_Activated";
   if ((_isSwimming) || (_isDesactivated) || (_isNotCompatible) || (_isCBRNDesactivated)) exitWith {
     [_unit] spawn FCLA_Interactions_fnc_statementDesactivateOxygenCBRN;
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
+    [_handle] call CBA_fnc_removePerFrameHandler;
   };
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 

@@ -18,7 +18,7 @@ _engineTwo = _plane selectionPosition "HitEngine2";
 
 if (_engineState) then {
   _handle = [{
-    (_this select 0) params ["_plane", "_engineOne", "_engineTwo"];
+    _args params ["_plane", "_engineOne", "_engineTwo"];
     _pos = getPos _plane;
     _speed = speed _plane;
     _posASL = getPosASL _plane;
@@ -29,7 +29,7 @@ if (_engineState) then {
     if ((((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) || !(alive _plane)) exitWith {
       if (alive _plane) exitWith {};
       _plane setVariable ["FCLA_Planes_perFrameHandler_ID", nil, true];
-      [_this select 1] call CBA_fnc_removePerFrameHandler;
+      [_handle] call CBA_fnc_removePerFrameHandler;
     };
 
     if (!isTouchingGround _plane) then {["FCLA_Plane_Shake", [_plane, _speed]] call CBA_fnc_globalEvent;};
