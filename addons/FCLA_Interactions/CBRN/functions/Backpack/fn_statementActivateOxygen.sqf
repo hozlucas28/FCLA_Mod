@@ -66,5 +66,5 @@ _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
     };
   };
 
-  (_this select 0) set [1, CBA_missionTime];
+  _args set [1, CBA_missionTime];
 }, 1, [_player, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;

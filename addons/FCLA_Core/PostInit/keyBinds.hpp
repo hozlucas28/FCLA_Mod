@@ -11,7 +11,8 @@
 	["FCLA", "• General"], "FCLA_Open_VD_Dialog_Key",
 	["Abrir configuración de distancia de visión"],
 	{
-		if !(alive player) exitWith {};
+		_unit = call CBA_fnc_currentUnit;
+		if (!alive _unit) exitWith {};
 		[] call FCLA_Video_Settings_fnc_openDialogVD;
 	},
 	{},
