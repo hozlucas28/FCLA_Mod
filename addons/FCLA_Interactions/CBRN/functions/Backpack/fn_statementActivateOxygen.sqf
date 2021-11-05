@@ -49,10 +49,11 @@ _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
   _delta = CBA_missionTime - _lastTimeUpdated;
-  _backpackOxygenRemaining = (_backpackOxygenRemaining - _delta) max 0;
-  _backpackFirstAlertPlayed = _backpackContainer getVariable ["FCLA_Backpack_Last_Alert", ""];
+  _backpackOxygen = _backpackContainer getVariable ["FCLA_Backpack_Oxygen", 100];
+  _backpackOxygenRemaining = (_backpackOxygen - _delta) max 0;
   _backpackContainer setVariable ["FCLA_Backpack_Oxygen", _backpackOxygenRemaining];
 
+  _backpackFirstAlertPlayed = _backpackContainer getVariable ["FCLA_Backpack_Last_Alert", ""];
   switch (true) do {
     case ((_backpackFirstAlertPlayed == "") && (_backpackOxygenRemaining <= 50)): {
       _this setVariable ["FCLA_Backpack_Last_Alert", "Half_Capacity", true];

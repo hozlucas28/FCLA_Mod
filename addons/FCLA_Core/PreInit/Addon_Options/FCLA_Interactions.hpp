@@ -118,7 +118,7 @@
 
 
 [
-	"FCLA_NVG_Battery_Time", "SLIDER",
+	"FCLA_NVG_Battery_Life_Time", "SLIDER",
 	["Duración de la batería", "Determina la duración de la batería en minutos."],
 	["FCLA Interacciones", "Visión nocturna"],
 	[5, 180, 30, 0],
