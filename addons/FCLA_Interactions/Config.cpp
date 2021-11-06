@@ -35,9 +35,9 @@ class CfgFunctions {
 		#include "\FCLA_Interactions\CBRN\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Helmet_Camo_Net\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\ID_Card\CfgFunctions.hpp"
+		#include "\FCLA_Interactions\Insignias\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Light_Sticks\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Night_Vision_Battery\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\Patches\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Plate_Number\CfgFunction.hpp"
 		#include "\FCLA_Interactions\Share_Map\CfgFunction.hpp"
 		#include "\FCLA_Interactions\Smoke_Signal\CfgFunction.hpp"
@@ -69,11 +69,11 @@ class RscTitles {
 
 
 /********************************************************************************|
-|                                     PARCHES                                    |
+|                                    INSIGNIAS                                   |
 |********************************************************************************/
 
 class CfgUnitInsignia {
-	#include "\FCLA_Interactions\Patches\CfgUnitInsignia.hpp"
+	#include "\FCLA_Interactions\Insignias\CfgUnitInsignia.hpp"
 };
 
 
@@ -93,7 +93,7 @@ class CfgVehicles {
 			class ACE_MainActions {
 				#include "\FCLA_Interactions\Blindfold\ACE_MainActions.hpp"
 				#include "\FCLA_Interactions\ID_Card\ACE_MainActions.hpp"
-				#include "\FCLA_Interactions\Patches\CfgMainVehicle.hpp"
+				#include "\FCLA_Interactions\Insignias\ACE_MainActions.hpp"
 			};
 		};
 
@@ -109,7 +109,7 @@ class CfgVehicles {
 	    };
 
 			class ACE_TeamManagement {
-				#include "\FCLA_Interactions\Patches\CfgSelfVehicle.hpp"
+				#include "\FCLA_Interactions\Insignias\ACE_TeamManagement.hpp"
 			};
 	  };
 	};
@@ -170,7 +170,6 @@ class ACE_Medical_Treatment_Actions {
 class Extended_InitPost_EventHandlers {
 	class CAManBase {
 		Courses = "[_this select 0] spawn FCLA_Interactions_fnc_initCourses;";
-		Patches = "[_this select 0] spawn FCLA_Interactions_fnc_initPatches;";
 		Share_Map = "[_this select 0] spawn FCLA_Interactions_fnc_initShareMap;";
 		Smoke_Signal = "[_this select 0] spawn FCLA_Interactions_fnc_initSmokeSignal;";
 		Spy_Camera = "[_this select 0] spawn FCLA_Interactions_fnc_initCamera;";

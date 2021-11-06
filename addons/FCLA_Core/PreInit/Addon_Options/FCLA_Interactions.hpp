@@ -9,14 +9,14 @@
 
 [
 	"FCLA_Default_Patche", "LIST",
-	["Parche (client-side)", "Determina el parche de escuadra que se te colocara al comienzo de la misión. ¡ESTA OPCIÓN FUNCIONA DE MANERA LOCAL!"],
+	["Insignia", "Determina el parche del pelotón que se te colocara al comienzo de la misión. ¡ESTA OPCIÓN FUNCIONA DE MANERA LOCAL!"],
 	["FCLA Interacciones", "• General"],
 	[
-	 ["Patch_Unassigned", "Patch_FCLA", "Patch_Takana", "Patch_Jaguar", "Patch_Condor", "Patch_Salamandra", "Patch_Anaconda", "Patch_Quetzal"],
+	 ["FCLA_Unassigned", "FCLA_Common", "FCLA_Takana", "FCLA_Jaguar", "FCLA_Condor", "FCLA_Salamandra", "FCLA_Anaconda", "FCLA_Quetzal"],
 	 ["Sin asignar", "FCLA", "Takana", "Jaguar", "Condor", "Salamandra", "Anaconda", "Quetzal"], 0
 	],
 	LOCAL,
-	{[player, _this, headgear player, uniform player, vest player, backpack player] spawn FCLA_Interactions_fnc_applyPatchesToLoadout;},
+	{[player, _this] spawn FCLA_Interactions_fnc_statementInsignias;},
 	false
 ] call CBA_fnc_addSetting;
 

@@ -190,12 +190,12 @@ class H_HelmetSpecB_Quetzal_Urban_v2: H_HelmetSpecB {
 
 /* ----------------- CASCOS DE COMBATE MEJORADOS (MÉDICO) ------------------ */
 
-class H_HelmetSpecB_Med_Urban_v2: H_HelmetSpecB {
+class H_HelmetSpecB_Medic_Urban_v2: H_HelmetSpecB {
   author = "hozlucas28";
   displayName = "Casco de combate mejorado - Médico (urbano v2)";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Headgears\Urban\data\H_HelmetSpecB_Med_Urban_v2.paa"};
-  picture = "\FCLA_Headgears\Urban\data\pictures\H_HelmetSpecB_Med_Urban_v2.paa";
+  hiddenSelectionsTextures[] = {"\FCLA_Headgears\Urban\data\H_HelmetSpecB_Medic_Urban_v2.paa"};
+  picture = "\FCLA_Headgears\Urban\data\pictures\H_HelmetSpecB_Medic_Urban_v2.paa";
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;

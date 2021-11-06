@@ -652,36 +652,36 @@ class H_HelmetSpecB_Quetzal_Tropical: H_HelmetSpecB {
 
 /* ------------------ CASCO DE COMBATE MEJORADO (MÉDICO) ------------------- */
 
-class H_HelmetSpecB_Med: H_HelmetSpecB {
+class H_HelmetSpecB_Medic: H_HelmetSpecB {
   author = "hozlucas28";
   displayName = "Casco de combate mejorado - Médico";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Med.paa"};
-  picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Med.paa";
+  hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Medic.paa"};
+  picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Medic.paa";
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
 };
 
 
-class H_HelmetSpecB_Med_Snake: H_HelmetSpecB {
+class H_HelmetSpecB_Medic_Snake: H_HelmetSpecB {
   author = "hozlucas28";
   displayName = "Casco de combate mejorado - Médico (piel de serpiente)";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Med_Snake.paa"};
-  picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Med_Snake.paa";
+  hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Medic_Snake.paa"};
+  picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Medic_Snake.paa";
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
 };
 
 
-class H_HelmetSpecB_Med_Tropical: H_HelmetSpecB {
+class H_HelmetSpecB_Medic_Tropical: H_HelmetSpecB {
   author = "hozlucas28";
   displayName = "Casco de combate mejorado - Médico (tropical)";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Med_Tropical.paa"};
-  picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Med_Tropical.paa";
+  hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Medic_Tropical.paa"};
+  picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Medic_Tropical.paa";
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;

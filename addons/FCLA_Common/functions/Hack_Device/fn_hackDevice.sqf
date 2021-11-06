@@ -95,13 +95,13 @@ if ((isNull _device) || (_title == "")) exitWith {false};
 
 
     //Contenido de los controles.
-    _hackingLaptopPatch = switch (_caller getVariable ["FCLA_Patche", ""]) do {
-      case "Patch_Takana": {"\FCLA_Common\data\Hacking_Laptop_Takana.paa"};
-      case "Patch_Jaguar": {"\FCLA_Common\data\Hacking_Laptop_Jaguar.paa"};
-      case "Patch_Condor": {"\FCLA_Common\data\Hacking_Laptop_Condor.paa"};
-      case "Patch_Salamandra": {"\FCLA_Common\data\Hacking_Laptop_Salamandra.paa"};
-      case "Patch_Anaconda": {"\FCLA_Common\data\Hacking_Laptop_Anaconda.paa"};
-      case "Patch_Quetzal": {"\FCLA_Common\data\Hacking_Laptop_Quetzal.paa"};
+    _hackingLaptopPatch = switch (_caller getVariable ["FCLA_Insignia", FCLA_Default_Patche]) do {
+      case "FCLA_Takana": {"\FCLA_Common\data\Hacking_Laptop_Takana.paa"};
+      case "FCLA_Jaguar": {"\FCLA_Common\data\Hacking_Laptop_Jaguar.paa"};
+      case "FCLA_Condor": {"\FCLA_Common\data\Hacking_Laptop_Condor.paa"};
+      case "FCLA_Salamandra": {"\FCLA_Common\data\Hacking_Laptop_Salamandra.paa"};
+      case "FCLA_Anaconda": {"\FCLA_Common\data\Hacking_Laptop_Anaconda.paa"};
+      case "FCLA_Quetzal": {"\FCLA_Common\data\Hacking_Laptop_Quetzal.paa"};
       default {"\FCLA_Common\data\Hacking_Laptop_FCLA.paa"};
     };
     _ctrlBoxToWrite ctrlSetText "> Press any key to write...";

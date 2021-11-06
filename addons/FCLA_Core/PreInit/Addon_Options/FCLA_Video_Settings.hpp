@@ -16,7 +16,7 @@
 
 [
 	"FCLA_View_Distance_Client_Activated", "CHECKBOX",
-	["Activar (client-side)", "Si se activa tendras acceso a la distancia de visión avanzada, si se quiere desactivar se debera reiniciar el servidor luego de haber efectuado el cambio.\n¡ESTA OPCIÓN FUNCIONA DE MANERA LOCAL!"],
+	["Activar", "Si se activa tendras acceso a la distancia de visión avanzada, si se quiere desactivar se debera reiniciar el servidor luego de haber efectuado el cambio.\n¡ESTA OPCIÓN FUNCIONA DE MANERA LOCAL!"],
 	["FCLA Configuración de video", "Distancia de visión"],
 	false,
 	LOCAL,
