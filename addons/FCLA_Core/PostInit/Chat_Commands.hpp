@@ -64,12 +64,14 @@ if (_isCuratorEnhancedModLoaded) then {
     switch (Upper _value) do {
       case "TRUE": {
         [player] call ZEN_Common_fnc_createZeus;
+        [player] spawn FCLA_Interactions_fnc_statementInsignias;
         if (!ACE_Zeus_zeusAscension) then {[format ["%1 obtuvo Zeus a travez del comando de chat.", name player]] remoteExec ["systemChat", 0];};
         [format ["Mod FCLA - %1 obtuvo Zeus a travez del comando de chat.", name player]] call ACE_Common_fnc_serverLog;
       };
 
       case "FALSE": {
         deleteVehicle (getAssignedCuratorLogic player);
+        [player] spawn FCLA_Interactions_fnc_statementInsignias;
         [format ["%1 solto el Zeus a travez del comando de chat.", name player]] remoteExec ["systemChat", 0];
         [format ["Mod FCLA - %1 solto el Zeus a travez del comando de chat.", name player]] call ACE_Common_fnc_serverLog;
       };
