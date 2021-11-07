@@ -33,21 +33,22 @@ _helicopterCrewHelmets = ["H_CrewHelmetHeli_B", "H_CrewHelmetHeli_B_Quetzal"];
 
 //Obtener boina ó casco con la insignia.
 _headgearWithInsignia = switch (true) do {
-	case (_currentHeadgear in _blackBerets): {"H_Beret_" + _platoon + "_Black"};
-	case (_currentHeadgear in _blueBerets): {"H_Beret_" + _platoon + "_Blue"};
-	case (_currentHeadgear in _redBerets): {"H_Beret_" + _platoon + "_Green"};
-	case (_currentHeadgear in _greenBerets): {"H_Beret_" + _platoon + "_Red"};
-	case (_currentHeadgear in _improvedCommonCombatHelmets): {"H_HelmetSpecB_" + _platoon};
-	case (_currentHeadgear in _improvedSnakeCombatHelmets): {"H_HelmetSpecB_" + _platoon + "_Snake"};
-	case (_currentHeadgear in _improvedTropicalCombatHelmets): {"H_HelmetSpecB_" + _platoon + "_Tropical"};
-	case (_currentHeadgear in _improvedDigitalCombatHelmets): {"H_HelmetSpecB_" + _platoon + "_Digital"};
-	case (_currentHeadgear in _improvedUrbanV2CombatHelmets): {"H_HelmetSpecB_" + _platoon + "_Urban_v2"};
-	case (_currentHeadgear in _improvedWinterV2CombatHelmets): {"H_HelmetSpecB_" + _platoon + "_Winter_v2"};
-	case (_currentHeadgear in _helicopterPilotHelmets): {"H_PilotHelmetHeli_B_" + _platoon};
-	case (_currentHeadgear in _helicopterCrewHelmets): {"H_CrewHelmetHeli_B_" + _platoon};
-	default {""};
+	case (_currentHeadgear in _blackBerets): {"H_Beret_" + _platoon + "_Black";};
+	case (_currentHeadgear in _blueBerets): {"H_Beret_" + _platoon + "_Blue";};
+	case (_currentHeadgear in _redBerets): {"H_Beret_" + _platoon + "_Green";};
+	case (_currentHeadgear in _greenBerets): {"H_Beret_" + _platoon + "_Red";};
+	case (_currentHeadgear in _improvedCommonCombatHelmets): {"H_HelmetSpecB_" + _platoon;};
+	case (_currentHeadgear in _improvedSnakeCombatHelmets): {"H_HelmetSpecB_" + _platoon + "_Snake";};
+	case (_currentHeadgear in _improvedTropicalCombatHelmets): {"H_HelmetSpecB_" + _platoon + "_Tropical";};
+	case (_currentHeadgear in _improvedDigitalCombatHelmets): {"H_HelmetSpecB_" + _platoon + "_Digital";};
+	case (_currentHeadgear in _improvedUrbanV2CombatHelmets): {"H_HelmetSpecB_" + _platoon + "_Urban_v2";};
+	case (_currentHeadgear in _improvedWinterV2CombatHelmets): {"H_HelmetSpecB_" + _platoon + "_Winter_v2";};
+	case (_currentHeadgear in _helicopterPilotHelmets): {"H_PilotHelmetHeli_B_" + _platoon;};
+	case (_currentHeadgear in _helicopterCrewHelmets): {"H_CrewHelmetHeli_B_" + _platoon;};
+	default {"";};
 };
 
 
 //Colocar casco.
+if (!(isClass (configFile >> "CfgWeapons" >> _headgearWithInsignia))) exitWith {};
 _unit addHeadgear _headgearWithInsignia;

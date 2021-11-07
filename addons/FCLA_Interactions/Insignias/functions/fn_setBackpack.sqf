@@ -42,30 +42,31 @@ _marineAssaultPacks = ["B_AssaultPack_Marine", "B_AssaultPack_Medic_Marine"];
 
 //Obtener mochila con la insignia.
 _backpackWithInsignia = switch (true) do {
-	case (_currentBackpack in _commonAssaultPacksWithNameTag): {"B_AssaultPack_" + _platoon + "_Green"};
-	case (_currentBackpack in _MTPAssaultPacks): {"B_AssaultPack_" + _platoon + "_MTP"};
-	case (_currentBackpack in _greenAssaultPacks): {"B_AssaultPack_" + _platoon + "_Green"};
-	case (_currentBackpack in _tropicalAssaultPacks): {"B_AssaultPack_" + _platoon + "_Tropical"};
-	case (_currentBackpack in _coyoteAssaultPacks): {"B_AssaultPack_" + _platoon + "_Coyote"};
-	case (_currentBackpack in _MTPKitbag): {"B_Kitbag_" + _platoon + "_MTP"};
-	case (_currentBackpack in _greenKitbag): {"B_Kitbag_" + _platoon + "_Green"};
-	case (_currentBackpack in _sapKitbag): {"B_Kitbag_" + _platoon + "_Sap"};
-	case (_currentBackpack in _coyoteKitbag): {"B_Kitbag_" + _platoon + "_Coyote"};
-	case (_currentBackpack in _toastedKitbag): {"B_Kitbag_" + _platoon + "_Toasted"};
-	case (_currentBackpack in _digitalKitbag): {"B_Kitbag_" + _platoon + "_Digital"};
-	case (_currentBackpack in _urbanV2AssaultPacks): {"B_AssaultPack_" + _platoon + "_Urban_v2"};
-  case (_currentBackpack in _urbanV3AssaultPacks): {"B_AssaultPack_" + _platoon + "_Urban_v3"};
-  case (_currentBackpack in _urbanV4AssaultPacks): {"B_AssaultPack_" + _platoon + "_Urban_v4"};
-  case (_currentBackpack in _urbanV1Kitbag): {"B_Kitbag_" + _platoon + "_Urban_v1"};
-  case (_currentBackpack in _winterV2AssaultPacks): {"B_AssaultPack_" + _platoon + "_Winter_v2"};
-  case (_currentBackpack in _winterV3AssaultPacks): {"B_AssaultPack_" + _platoon + "_Winter_v3"};
-  case (_currentBackpack in _winterV4AssaultPacks): {"B_AssaultPack_" + _platoon + "_Winter_v4"};
-  case (_currentBackpack in _winterV1Kitbag): {"B_Kitbag_" + _platoon + "_Winter_v1"};
-  case (_currentBackpack in _marineAssaultPacks): {"B_AssaultPack_" + _platoon + "_Marine"};
-	default {""};
+	case (_currentBackpack in _commonAssaultPacksWithNameTag): {"B_AssaultPack_" + _platoon + "_Green";};
+	case (_currentBackpack in _MTPAssaultPacks): {"B_AssaultPack_" + _platoon + "_MTP";};
+	case (_currentBackpack in _greenAssaultPacks): {"B_AssaultPack_" + _platoon + "_Green";};
+	case (_currentBackpack in _tropicalAssaultPacks): {"B_AssaultPack_" + _platoon + "_Tropical";};
+	case (_currentBackpack in _coyoteAssaultPacks): {"B_AssaultPack_" + _platoon + "_Coyote";};
+	case (_currentBackpack in _MTPKitbag): {"B_Kitbag_" + _platoon + "_MTP";};
+	case (_currentBackpack in _greenKitbag): {"B_Kitbag_" + _platoon + "_Green";};
+	case (_currentBackpack in _sapKitbag): {"B_Kitbag_" + _platoon + "_Sap";};
+	case (_currentBackpack in _coyoteKitbag): {"B_Kitbag_" + _platoon + "_Coyote";};
+	case (_currentBackpack in _toastedKitbag): {"B_Kitbag_" + _platoon + "_Toasted";};
+	case (_currentBackpack in _digitalKitbag): {"B_Kitbag_" + _platoon + "_Digital";};
+	case (_currentBackpack in _urbanV2AssaultPacks): {"B_AssaultPack_" + _platoon + "_Urban_v2";};
+  case (_currentBackpack in _urbanV3AssaultPacks): {"B_AssaultPack_" + _platoon + "_Urban_v3";};
+  case (_currentBackpack in _urbanV4AssaultPacks): {"B_AssaultPack_" + _platoon + "_Urban_v4";};
+  case (_currentBackpack in _urbanV1Kitbag): {"B_Kitbag_" + _platoon + "_Urban_v1";};
+  case (_currentBackpack in _winterV2AssaultPacks): {"B_AssaultPack_" + _platoon + "_Winter_v2";};
+  case (_currentBackpack in _winterV3AssaultPacks): {"B_AssaultPack_" + _platoon + "_Winter_v3";};
+  case (_currentBackpack in _winterV4AssaultPacks): {"B_AssaultPack_" + _platoon + "_Winter_v4";};
+  case (_currentBackpack in _winterV1Kitbag): {"B_Kitbag_" + _platoon + "_Winter_v1";};
+  case (_currentBackpack in _marineAssaultPacks): {"B_AssaultPack_" + _platoon + "_Marine";};
+	default {"";};
 };
 
 
 //Colocar mochila.
+if (!(isClass (configFile >> "CfgWeapons" >> _backpackWithInsignia))) exitWith {};
 _unit addBackpack _backpackWithInsignia;
 {_unit addItemToBackpack _x} forEach _itemsInBackpack;
