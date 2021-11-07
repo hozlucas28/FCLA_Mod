@@ -38,7 +38,7 @@ class CfgFunctions {
 		#include "\FCLA_Interactions\Insignias\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Light_Sticks\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Night_Vision_Battery\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\Plate_Number\CfgFunction.hpp"
+		#include "\FCLA_Interactions\Plate_Number\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Share_Map\CfgFunction.hpp"
 		#include "\FCLA_Interactions\Smoke_Signal\CfgFunction.hpp"
 		#include "\FCLA_Interactions\Spy_Camera\CfgFunctions.hpp"
@@ -87,6 +87,9 @@ class CfgVehicles {
 	class AllVehicles: All {};
 	class Land: AllVehicles {};
 	class Man: Land {};
+	class LandVehicle: Land {};
+	class Tank: LandVehicle {};
+	class Tank_F: Tank {};
 
 	class CAManBase: Man {
 		class ACE_Actions {
@@ -112,6 +115,31 @@ class CfgVehicles {
 				#include "\FCLA_Interactions\Insignias\ACE_TeamManagement.hpp"
 			};
 	  };
+	};
+
+	class Car: LandVehicle {
+		class ACE_Actions {
+			class ACE_MainActions {
+				#include "\FCLA_Interactions\Plate_Number\ACE_MainActions.hpp"
+			};
+		};
+	};
+
+	class Car_F: Car {};
+	class UGV_01_Base_F: Car_F {
+		class ACE_Actions {
+			class ACE_MainActions {
+				#include "\FCLA_Interactions\Plate_Number\ACE_MainActions.hpp"
+			};
+		};
+	};
+
+	class UGV_02_Base_F: Tank_F {
+		class ACE_Actions {
+			class ACE_MainActions {
+				#include "\FCLA_Interactions\Plate_Number\ACE_MainActions.hpp"
+			};
+		};
 	};
 };
 
@@ -169,15 +197,12 @@ class ACE_Medical_Treatment_Actions {
 
 class Extended_InitPost_EventHandlers {
 	class CAManBase {
-		Courses = "[_this select 0] spawn FCLA_Interactions_fnc_initCourses;";
 		Share_Map = "[_this select 0] spawn FCLA_Interactions_fnc_initShareMap;";
 		Smoke_Signal = "[_this select 0] spawn FCLA_Interactions_fnc_initSmokeSignal;";
 		Spy_Camera = "[_this select 0] spawn FCLA_Interactions_fnc_initCamera;";
 		Whistle = "[_this select 0] spawn FCLA_Interactions_fnc_initWhistle;";
 	};
 
-	class Car {init = "[_this select 0] spawn FCLA_Interactions_fnc_initPlateNumber;";};
-	class UGV_02_Base_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_initPlateNumber;";};
 	class DeconShower_01_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsShowerCBRN;";};
 	class Land_GasTank_02_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsRechargeOxygenCBRN";};
 };
