@@ -18,8 +18,7 @@ _isAlive = alive _target;
 _notInStairs = !(_player getVariable ["FCLA_inStairs", false]);
 _isNotDragging = !(_player getVariable ["ACE_Dragging_isDragging", false]);
 _isNotCarrying = !(_player getVariable ["ACE_Dragging_isCarrying", false]);
-_isTouchingGround = isTouchingGround _player;
 _isNotSurrendering = !(_player getVariable ["ACE_Captives_isSurrendering", false]);
 _hasBandageEquipped = _currentGoggles in _compatibleBandages;
 _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
-(FCLA_Blindfold_Allowed) && (_isAlive) && (_notInStairs) && (_isNotDragging) && (_isNotCarrying) && (_isTouchingGround) && (_isNotSurrendering) && (_hasBandageEquipped) && (_notInWeaponAnimation)
+(FCLA_Blindfold_Allowed) && (_isAlive) && (_notInStairs) && (_isNotDragging) && (_isNotCarrying) && (_isNotSurrendering) && (_hasBandageEquipped) && (_notInWeaponAnimation)

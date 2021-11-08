@@ -21,9 +21,8 @@ _isHandcuffed = _target getVariable ["ACE_Captives_isHandcuffed", false];
 _isNotDragging = !(_player getVariable ["ACE_Dragging_isDragging", false]);
 _isNotCarrying = !(_player getVariable ["ACE_Dragging_isCarrying", false]);
 _hasBandageItem = ([_player, _compatibleItemsBandages select 0] call BIS_fnc_hasItem) || ([_player, _compatibleItemsBandages select 1] call BIS_fnc_hasItem);
-_isTouchingGround = isTouchingGround _player;
 _isNotSurrendering = !(_player getVariable ["ACE_Captives_isSurrendering", false]);
 _isTargetSurrendering = _target getVariable ["ACE_Captives_isSurrendering", false];
 _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
 _hasNotBandageEquipped = !(_currentGoggles in _compatibleBandages);
-(FCLA_Blindfold_Allowed) && (_isAlive) && (_notInStairs) && ((_isTargetSurrendering) || (_isHandcuffed)) && (_isNotDragging) && (_isNotCarrying) && (_hasBandageItem) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation) && (_hasNotBandageEquipped)
+(FCLA_Blindfold_Allowed) && (_isAlive) && (_notInStairs) && ((_isTargetSurrendering) || (_isHandcuffed)) && (_isNotDragging) && (_isNotCarrying) && (_hasBandageItem) && (_isNotSurrendering) && (_notInWeaponAnimation) && (_hasNotBandageEquipped)

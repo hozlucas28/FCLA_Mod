@@ -39,7 +39,7 @@ class CfgFunctions {
 		#include "\FCLA_Interactions\Light_Sticks\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Night_Vision_Battery\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Plate_Number\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\Share_Map\CfgFunction.hpp"
+		#include "\FCLA_Interactions\Share_Map\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Smoke_Signal\CfgFunction.hpp"
 		#include "\FCLA_Interactions\Spy_Camera\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Whistle\CfgFunction.hpp"
@@ -87,9 +87,6 @@ class CfgVehicles {
 	class AllVehicles: All {};
 	class Land: AllVehicles {};
 	class Man: Land {};
-	class LandVehicle: Land {};
-	class Tank: LandVehicle {};
-	class Tank_F: Tank {};
 
 	class CAManBase: Man {
 		class ACE_Actions {
@@ -117,7 +114,7 @@ class CfgVehicles {
 	  };
 	};
 
-	class Car: LandVehicle {
+	class LandVehicle: Land {
 		class ACE_Actions {
 			class ACE_MainActions {
 				#include "\FCLA_Interactions\Plate_Number\ACE_MainActions.hpp"
@@ -125,16 +122,7 @@ class CfgVehicles {
 		};
 	};
 
-	class Car_F: Car {};
-	class UGV_01_Base_F: Car_F {
-		class ACE_Actions {
-			class ACE_MainActions {
-				#include "\FCLA_Interactions\Plate_Number\ACE_MainActions.hpp"
-			};
-		};
-	};
-
-	class UGV_02_Base_F: Tank_F {
+	class Ship: AllVehicles {
 		class ACE_Actions {
 			class ACE_MainActions {
 				#include "\FCLA_Interactions\Plate_Number\ACE_MainActions.hpp"
