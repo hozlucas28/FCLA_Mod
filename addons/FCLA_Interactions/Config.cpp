@@ -92,14 +92,17 @@ class CfgVehicles {
 		class ACE_Actions {
 			class ACE_MainActions {
 				#include "\FCLA_Interactions\Blindfold\ACE_MainActions.hpp"
-				#include "\FCLA_Interactions\ID_Card\ACE_MainActions.hpp"
+				#include "\FCLA_Interactions\ID_Card\ACE_MainAction.hpp"
 				#include "\FCLA_Interactions\Insignias\ACE_MainActions.hpp"
+				#include "\FCLA_Interactions\Share_Map\ACE_MainAction.hpp"
 			};
 		};
 
 	  class ACE_SelfActions {
-			#include "\FCLA_Interactions\ID_Card\ACE_SelfActions.hpp"
+			#include "\FCLA_Interactions\ID_Card\ACE_SelfAction.hpp"
 			#include "\FCLA_Interactions\Light_Sticks\ACE_SelfActions.hpp"
+			#include "\FCLA_Interactions\Share_Map\ACE_SelfAction.hpp"
+
 	    class ACE_Equipment {
 				#include "\FCLA_Interactions\CBRN\ACE_Equipment.hpp"
 				#include "\FCLA_Interactions\Helmet_Camo_Net\ACE_Equipment.hpp"
@@ -117,7 +120,7 @@ class CfgVehicles {
 	class LandVehicle: Land {
 		class ACE_Actions {
 			class ACE_MainActions {
-				#include "\FCLA_Interactions\Plate_Number\ACE_MainActions.hpp"
+				#include "\FCLA_Interactions\Plate_Number\ACE_MainAction.hpp"
 			};
 		};
 	};
@@ -125,7 +128,7 @@ class CfgVehicles {
 	class Ship: AllVehicles {
 		class ACE_Actions {
 			class ACE_MainActions {
-				#include "\FCLA_Interactions\Plate_Number\ACE_MainActions.hpp"
+				#include "\FCLA_Interactions\Plate_Number\ACE_MainAction.hpp"
 			};
 		};
 	};
@@ -174,7 +177,7 @@ class CfgGlasses {
 
 class ACE_Medical_Treatment_Actions {
 	class Diagnose;
-	#include "\FCLA_Interactions\CBRN\ACE_Medical_Treatment_Actions.hpp"
+	#include "\FCLA_Interactions\CBRN\ACE_Medical_Treatment_Action.hpp"
 };
 
 
@@ -185,7 +188,6 @@ class ACE_Medical_Treatment_Actions {
 
 class Extended_InitPost_EventHandlers {
 	class CAManBase {
-		Share_Map = "[_this select 0] spawn FCLA_Interactions_fnc_initShareMap;";
 		Smoke_Signal = "[_this select 0] spawn FCLA_Interactions_fnc_initSmokeSignal;";
 		Spy_Camera = "[_this select 0] spawn FCLA_Interactions_fnc_initCamera;";
 		Whistle = "[_this select 0] spawn FCLA_Interactions_fnc_initWhistle;";

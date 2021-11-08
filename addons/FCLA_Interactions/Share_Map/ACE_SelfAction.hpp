@@ -3,9 +3,9 @@
 |                      ACCIONES PROPIAS - "IDENTIFICACIÓN"                       |
 |********************************************************************************/
 
-class FCLA_ID {
-  icon = "\FCLA_Data\ACE_Actions\ID_Card.paa";
-  condition = "[_player] call FCLA_Interactions_fnc_conditionSelfID";
-  statement = "[_player] spawn FCLA_Interactions_fnc_statementSelfID;";
-  displayName = "Identificación";
+class FCLA_Share_Map {
+  icon = "\FCLA_Data\ACE_Actions\Map.paa";
+  condition = "[_player] call FCLA_Interactions_fnc_conditionToShareSM";
+  statement = "[_player] spawn FCLA_Interactions_fnc_statementToShareSM;";
+  displayName = "Compartir mapa";
 };
