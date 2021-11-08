@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                  ACCIONES PRINCIPALES - "NÚMERO DE MATRÍCULA"                  |
+|                    ACCIONES PRINCIPALES - "COMPARTIR MAPA"                     |
 |********************************************************************************/
 
 class FCLA_See_Shared_Map {

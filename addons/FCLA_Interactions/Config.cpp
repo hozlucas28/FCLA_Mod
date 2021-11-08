@@ -41,8 +41,6 @@ class CfgFunctions {
 		#include "\FCLA_Interactions\Plate_Number\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Share_Map\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Smoke_Signal\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\Spy_Camera\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\Whistle\CfgFunction.hpp"
 	};
 };
 
@@ -107,8 +105,7 @@ class CfgVehicles {
 				#include "\FCLA_Interactions\CBRN\ACE_Equipment.hpp"
 				#include "\FCLA_Interactions\Helmet_Camo_Net\ACE_Equipment.hpp"
 				#include "\FCLA_Interactions\Night_Vision_Battery\ACE_Equipment.hpp"
-				#include "\FCLA_Interactions\Spy_Camera\CfgVehicle.hpp"
-	      #include "\FCLA_Interactions\Whistle\CfgVehicle.hpp"
+				#include "\FCLA_Interactions\Smoke_Signal\ACE_Equipment.hpp"
 	    };
 
 			class ACE_TeamManagement {
@@ -153,7 +150,6 @@ class CfgWeapons {
 	#include "\FCLA_Interactions\Helmet_Camo_Net\CfgWeapons.hpp"
 	#include "\FCLA_Interactions\Light_Sticks\CfgWeapon.hpp"
 	#include "\FCLA_Interactions\Night_Vision_Battery\CfgWeapon.hpp"
-	#include "\FCLA_Interactions\Whistle\CfgWeapon.hpp"
 };
 
 
@@ -187,13 +183,14 @@ class ACE_Medical_Treatment_Actions {
 |********************************************************************************/
 
 class Extended_InitPost_EventHandlers {
-	class CAManBase {
-		Spy_Camera = "[_this select 0] spawn FCLA_Interactions_fnc_initCamera;";
-		Whistle = "[_this select 0] spawn FCLA_Interactions_fnc_initWhistle;";
-	};
-
 	class DeconShower_01_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsShowerCBRN;";};
 	class Land_GasTank_02_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsRechargeOxygenCBRN";};
+};
+
+class Extended_Fired_Eventhandlers {
+	class CAManBase {
+		init = "if (!is3DEN) then {_this spawn FCLA_Interactions_fnc_firedSSEH;};";
+	};
 };
 
 class Extended_Killed_Eventhandlers {
