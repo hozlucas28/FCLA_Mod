@@ -14,5 +14,9 @@ class Patches {
   class setUniformInsignias {file = "\FCLA_Interactions\Insignias\functions\fn_setUniform.sqf";};
   class setVestInsignias {file = "\FCLA_Interactions\Insignias\functions\fn_setVest.sqf";};
 
-  class statementInsigniass {file = "\FCLA_Interactions\Insignias\functions\fn_statement.sqf";};
+  class conditionSelfInsignias {file = "\FCLA_Interactions\Insignias\functions\fn_conditionSelf.sqf";};
+  class conditionExternalInsignias {file = "\FCLA_Interactions\Insignias\functions\fn_conditionExternal.sqf";};
+
+  class statementSelfInsignias {file = "\FCLA_Interactions\Insignias\functions\fn_statementSelf.sqf";};
+  class statementExternalInsignias {file = "\FCLA_Interactions\Insignias\functions\fn_statementExternal.sqf";};
 };
