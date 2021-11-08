@@ -40,7 +40,7 @@ class CfgFunctions {
 		#include "\FCLA_Interactions\Night_Vision_Battery\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Plate_Number\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Share_Map\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\Smoke_Signal\CfgFunction.hpp"
+		#include "\FCLA_Interactions\Smoke_Signal\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Spy_Camera\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Whistle\CfgFunction.hpp"
 	};
@@ -188,7 +188,6 @@ class ACE_Medical_Treatment_Actions {
 
 class Extended_InitPost_EventHandlers {
 	class CAManBase {
-		Smoke_Signal = "[_this select 0] spawn FCLA_Interactions_fnc_initSmokeSignal;";
 		Spy_Camera = "[_this select 0] spawn FCLA_Interactions_fnc_initCamera;";
 		Whistle = "[_this select 0] spawn FCLA_Interactions_fnc_initWhistle;";
 	};
