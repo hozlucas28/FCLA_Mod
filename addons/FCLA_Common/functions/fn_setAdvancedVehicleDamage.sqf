@@ -64,7 +64,6 @@ _EventHandlerID = [_vehicle, "Dammaged", {
         _isPlayer = [_x, false] call ACE_Common_fnc_isPlayer;
         _selectedWeapon = _Weapons select _i;
         _x removeWeapon _selectedWeapon;
-        if ((_isPlayer) && (isNil {_x getVariable "FCLA_Weapons_Destroyed"})) then {_x setVariable ["FCLA_Weapons_Destroyed", true, true];};
       };
     };
 
@@ -76,25 +75,12 @@ _EventHandlerID = [_vehicle, "Dammaged", {
         _isPlayer = [_x, false] call ACE_Common_fnc_isPlayer;
         _selectedItem = _items select _i;
         _x removeItems _selectedItem;
-        if ((_isPlayer) && (isNil {_x getVariable "FCLA_Items_Destroyed"})) then {_x setVariable ["FCLA_Items_Destroyed", true, true];};
       };
     };
 
-    //Efecto visual y mensaje.
+    //Efecto visual.
     _isPlayer = [_x, false] call ACE_Common_fnc_isPlayer;
-    if ((alive _x) && (_isPlayer)) then {
-      ["FCLA_Shellshock", _x] call CBA_fnc_localEvent;
-      _haveDestroyedWeapons = _x getVariable ["FCLA_Weapons_Destroyed", false];
-      _haveDestroyedItems = _x getVariable ["FCLA_Items_Destroyed", false];
-
-      if ((_haveDestroyedWeapons) || (_haveDestroyedItems)) then {
-        [{["FCLA_Notify", ["Tu equipamiento fue comprometido.", 1, [1, 0, 0, 1]]] call CBA_fnc_localEvent;}, [], 5] call CBA_fnc_waitAndExecute;
-      };
-    };
-
-    //Eliminar variables.
-    if (!isNil {_x getVariable "FCLA_Items_Destroyed"}) then {_x setVariable ["FCLA_Weapons_Destroyed", nil, true];};
-    if (!isNil {_x getVariable "FCLA_Items_Destroyed"}) then {_x setVariable ["FCLA_Items_Destroyed", nil, true];};
+    if ((alive _x) && (_isPlayer)) then {["FCLA_Shellshock", _x] call CBA_fnc_localEvent;};
   } forEach _vehicleCrew;
 }, [_dammageWeapons, _dammageItems]] call CBA_fnc_addBISEventHandler;
 
