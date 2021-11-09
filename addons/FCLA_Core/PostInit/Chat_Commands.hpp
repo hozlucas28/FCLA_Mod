@@ -61,7 +61,7 @@ if (_isCuratorEnhancedModLoaded) then {
     if (_isNotAlive) exitWith {[{systemChat "Debes estar vivo para utilizar este comando.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
     if (_isNotAuthorized) exitWith {[{systemChat "No puedes utilizar este comando, salvo que seas editor oficial, parte de 'Mando' o instructor.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
 
-    switch (Upper _value) do {
+    switch (toUpper _value) do {
       case "TRUE": {
         [player] call ZEN_Common_fnc_createZeus;
         [player] spawn FCLA_Interactions_fnc_statementSelfInsignias;

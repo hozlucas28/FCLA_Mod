@@ -13,7 +13,7 @@
 params ["_stairs"];
 
 
-switch (Upper _stairs) do {
+switch (toUpper _stairs) do {
   case "UP": {
     cutText ["<t size='2.5'>> Subiendo las escaleras.</t><br/><br/><img size='2.5' image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa'/>", "BLACK OUT", -1, true, true];
     [{cutText ["<t size='2.5'>> Subiendo las escaleras..</t><br/><br/><img size='2.5' image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa'/>", "BLACK FADED", -1, true, true];}, [], 1] call CBA_fnc_waitAndExecute;

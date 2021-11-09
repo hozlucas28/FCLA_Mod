@@ -19,7 +19,7 @@ _tropicalWoodlandHelmetsWithoutCamoNet = ["H_HelmetB_plain_wdl", "H_HelmetSpecB_
 _tropicalDigitalHelmetsWithoutCamoNet = [
  "H_HelmetSpecB_Digital", "H_HelmetSpecB_FCLA_Digital", "H_HelmetSpecB_Takana_Digital", "H_HelmetSpecB_Jaguar_Digital",
  "H_HelmetSpecB_Condor_Digital", "H_HelmetSpecB_Salamandra_Digital", "H_HelmetSpecB_Anaconda_Digital",
- "H_HelmetSpecB_Quetzal_Digital", "H_HelmetSpecB_Med_Digital",
+ "H_HelmetSpecB_Quetzal_Digital", "H_HelmetSpecB_Med_Digital"
 ];
 
 

@@ -20,5 +20,5 @@ _unit setVariable ["BIS_fnc_setUnitInsignia_class", nil];
 
 //Guardar insignia.
 _savedInsignia = _unit getVariable ["FCLA_Insignia", FCLA_Default_Patche];
-if (_savedInsignia == _insignia) exitWith {}
+if (_savedInsignia == _insignia) exitWith {};
 _unit setVariable ["FCLA_Insignia", _insignia, true];

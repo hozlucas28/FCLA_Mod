@@ -37,9 +37,9 @@ switch ("" in _IDCard) do {
 	};
 
 	case false: {
-		ctrlSetText [1007, select 0];
-		ctrlSetText [1008, select 1];
-		ctrlSetText [1009, select 2];
+		ctrlSetText [1007, _IDCard select 0];
+		ctrlSetText [1008, _IDCard select 1];
+		ctrlSetText [1009, _IDCard select 2];
 	};
 };
 

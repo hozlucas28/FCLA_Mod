@@ -6,7 +6,7 @@
 class FCLA_Light_Sticks {
   displayName = "Señales<br/>(aeronaves)";
   icon = "\FCLA_Data\ACE_Actions\Aircraft_Marshall.paa";
-  condition = "[_player] call FCLA_Interactions_fnc_conditionToStartLS;";
+  condition = "[_player] call FCLA_Interactions_fnc_conditionToStartLS";
 
   class FCLA_Turn_On_Engines {
     condition = "[_player] call FCLA_Interactions_fnc_conditionToStartLS";
