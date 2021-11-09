@@ -32,7 +32,6 @@ _soundSource attachTo [_player, [0, 0, 0]];
 //Dejar de compartir.
 [{
   params ["_player", "_soundSource"];
-  _inStairs = _player getVariable ["FCLA_inStairs", false];
   _inVehicle = !isNull objectParent _player;
   _isSwimming = [_player] call ACE_Common_fnc_isSwimming;
   _isNotOnMap = !visibleMap;
@@ -40,7 +39,7 @@ _soundSource attachTo [_player, [0, 0, 0]];
   _isHandcuffed = _player getVariable ["ACE_Captives_isHandcuffed", false];
   _isNotSharingMap = !(_player getVariable ["FCLA_Sharing_Map", false]);
   _hasNotCompatibleMap = (((getUnitLoadout _player) select 9) select 0) == "";
-  (FCLA_Share_Map_Allowed) || (_inStairs) || (_inVehicle) || (_isSwimming) || (_isNotOnMap) || (_isNotAlive) || (_isHandcuffed) || (_isNotSharingMap) || (_hasNotCompatibleMap)
+  (!FCLA_Share_Map_Allowed) || (_inVehicle) || (_isSwimming) || (_isNotOnMap) || (_isNotAlive) || (_isHandcuffed) || (_isNotSharingMap) || (_hasNotCompatibleMap)
 }, {
   params ["_player", "_soundSource"];
   deleteVehicle _soundSource;

@@ -15,9 +15,9 @@ class FCLA_Shower {
   titles[] = {0, ""};
 };
 
-class FCLA_Low_Oxygen_Alert {
+class FCLA_Oxygen_Alert {
   name = "FCLA - Alerta (oxígeno bajo)";
-  sound[] = {"\FCLA_Interactions\sounds\Low_Oxygen_Alert.ogg", db+1.5, 1};
+  sound[] = {"\FCLA_Interactions\sounds\Oxygen_Alert.ogg", db+1.5, 1};
   titles[] = {0, ""};
 };
 
@@ -57,9 +57,9 @@ class FCLA_Chemical_Detector_Alert_5 {
 	titles[] = {0, ""};
 };
 
-class FCLA_Show_ID_Card {
+class FCLA_Show_ID {
 	name = "FCLA - Mostrar identificación";
-	sound[] = {"\FCLA_Interactions\sounds\Show_ID_Card.ogg", db+5, 1};
+	sound[] = {"\FCLA_Interactions\sounds\Show_ID.ogg", db+5, 1};
 	titles[] = {0, ""};
 };
 
@@ -69,44 +69,20 @@ class FCLA_Unfold_Map {
   titles[] = {0, ""};
 };
 
-class FCLA_Switch_Smoke_Signal {
-  name = "FCLA - Activar/Desactivar señal de humo";
-  sound[] = {"\FCLA_Interactions\sounds\Switch_Smoke_Signal.ogg", db+1, 1};
+class FCLA_Switch_Smoke {
+  name = "FCLA - Activar/Desactivar (señal de humo)";
+  sound[] = {"\FCLA_Interactions\sounds\Switch_Smoke.ogg", db+1, 1};
   titles[] = {0, ""};
 };
 
-class FCLA_Smoke_Signal_Explosion {
+class FCLA_Smoke_Explosion {
   name = "FCLA - Explosión (señal de humo)";
   sound[] = {"\FCLA_Interactions\sounds\Smoke_Explosion.ogg", db+1, 1};
   titles[] = {0, ""};
 };
 
-class FCLA_Smoke_Signal_Echo {
+class FCLA_Smoke_Explosion_Echo {
   name = "FCLA - Eco de explosión (señal de humo)";
-  sound[] = {"\FCLA_Interactions\sounds\Smoke_Echo.ogg", db+0.5, 1};
+  sound[] = {"\FCLA_Interactions\sounds\Smoke_Explosion_Echo.ogg", db+0.5, 1};
   titles[] = {0, ""};
-};
-
-class FCLA_Switch_Camera {
-	name = "FCLA - Activar/Desactivar camara espía";
-	sound[] = {"\FCLA_Interactions\sounds\Switch_Camera.ogg", db+1, 1};
-	titles[] = {0, ""};
-};
-
-class FCLA_Digital_Zoom {
-	name = "FCLA - Zoom digital";
-	sound[] = {"\FCLA_Interactions\sounds\Tablet_Zoom.ogg", db+1, 1};
-	titles[] = {0, ""};
-};
-
-class FCLA_Whistle_Short {
-	name = "FCLA - Sonido de silbato (corto)";
-	sound[] = {"\FCLA_Interactions\sounds\Whistle_Short.ogg", db+7, 1, 50};
-	titles[] = {0, ""};
-};
-
-class FCLA_Whistle_Long {
-	name = "FCLA - Sonido de silbato (largo)";
-	sound[] = {"\FCLA_Interactions\sounds\Whistle_Long.ogg", db+7, 1, 50};
-	titles[] = {0, ""};
 };

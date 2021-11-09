@@ -10,7 +10,6 @@ class FCLA_Blindfold_On {
   displayName = "Vendar ojos";
 };
 
-
 class FCLA_Blindfold_Off {
   icon = "\FCLA_Data\ACE_Actions\Remove_Bandage.paa";
   condition = "[_target, _player] call FCLA_Interactions_fnc_conditionOffBlindfold";

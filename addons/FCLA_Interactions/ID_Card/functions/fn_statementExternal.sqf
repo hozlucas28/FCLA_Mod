@@ -15,7 +15,7 @@ _IDCard = _target getVariable ["FCLA_ID", ["", -1, ""]];
 
 
 //Mostrar identificación.
-playsound "FCLA_Show_ID_Card";
+playsound "FCLA_Show_ID";
 createDialog "FCLA_ID_Card_Dialog";
 [_player, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 [{[_this, "Gear", "playActionNow"] call FCLA_Common_fnc_playAnimation;}, _player, 2] call CBA_fnc_waitAndExecute;

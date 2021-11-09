@@ -14,7 +14,6 @@ params ["_target", "_player"];
 
 _areNear = _target distance _player <= 2;
 _isAlive = alive _target;
-_notInStairs = !(_player getVariable ["FCLA_inStairs", false]);
 _isSharingMap = _target getVariable ["FCLA_Sharing_Map", false];
 _isNotDragging = !(_player getVariable ["ACE_Dragging_isDragging", false]);
 _isNotCarrying = !(_player getVariable ["ACE_Dragging_isCarrying", false]);
@@ -24,4 +23,4 @@ _isTouchingGround = isTouchingGround _player;
 _areNotSurrendering = !(_target getVariable ["ACE_Captives_isSurrendering", false]) && !(_player getVariable ["ACE_Captives_isSurrendering", false]);
 _hasNotCompatibleMap = (((getUnitLoadout _player) select 9) select 0) == "";
 _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
-(FCLA_Share_Map_Allowed) && (_areNear) && (_isAlive) && (_notInStairs) && (_isSharingMap) && (_isNotDragging) && (_isNotCarrying) && (_areNotSwimming) && (_isNotHandcuffed) && (_isTouchingGround) && (_areNotSurrendering) && (_hasNotCompatibleMap) && (_notInWeaponAnimation)
+(FCLA_Share_Map_Allowed) && (_areNear) && (_isAlive) && (_isSharingMap) && (_isNotDragging) && (_isNotCarrying) && (_areNotSwimming) && (_isNotHandcuffed) && (_isTouchingGround) && (_areNotSurrendering) && (_hasNotCompatibleMap) && (_notInWeaponAnimation)

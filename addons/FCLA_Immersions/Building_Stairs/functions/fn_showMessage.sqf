@@ -14,7 +14,7 @@ params ["_stairs"];
 
 
 switch (Upper _stairs) do {
-  case "GO_UP": {
+  case "UP": {
     cutText ["<t size='2.5'>> Subiendo las escaleras.</t><br/><br/><img size='2.5' image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa'/>", "BLACK OUT", -1, true, true];
     [{cutText ["<t size='2.5'>> Subiendo las escaleras..</t><br/><br/><img size='2.5' image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa'/>", "BLACK FADED", -1, true, true];}, [], 1] call CBA_fnc_waitAndExecute;
     [{cutText ["<t size='2.5'>> Subiendo las escaleras...</t><br/><br/><img size='2.5' image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa'/>", "BLACK FADED", -1, true, true];}, [], 2] call CBA_fnc_waitAndExecute;
@@ -29,7 +29,7 @@ switch (Upper _stairs) do {
     [{cutText ["<t size='2.5'>> Subiendo las escaleras...</t><br/><br/><img size='2.5' image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa'/>", "BLACK FADED", -1, true, true];}, [], 11] call CBA_fnc_waitAndExecute;
   };
 
-  case "GO_DOWN": {
+  case "DOWN": {
     cutText ["<t size='2.5'>> Bajando las escaleras.</t><br/><br/><img size='2.5' image='\FCLA_Immersions\Building_Stairs\data\Go_Down.paa'/>", "BLACK OUT", -1, true, true];
     [{cutText ["<t size='2.5'>> Bajando las escaleras..</t><br/><br/><img size='2.5' image='\FCLA_Immersions\Building_Stairs\data\Go_Down.paa'/>", "BLACK FADED", -1, true, true];}, [], 1] call CBA_fnc_waitAndExecute;
     [{cutText ["<t size='2.5'>> Bajando las escaleras...</t><br/><br/><img size='2.5' image='\FCLA_Immersions\Building_Stairs\data\Go_Down.paa'/>", "BLACK FADED", -1, true, true];}, [], 2] call CBA_fnc_waitAndExecute;

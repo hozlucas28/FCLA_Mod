@@ -4,12 +4,11 @@
 |********************************************************************************/
 
 class FCLA_Whistle: CBA_MiscItem {
-  scope = 2;
-  displayName = "Silbato";
   author = "hozlucas28";
-  picture = "\FCLA_Interactions\Whistle\data\Picture.paa";
-  model = "\A3\weapons_F\ammo\mag_univ.p3d";
-  descriptionShort = "Sibato funcional.";
-  descriptionUse = "Sibato funcional.";
+  displayName = "Silbato";
+  picture = "\FCLA_Interactions\Whistle\Whistle.paa";
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
   class ItemInfo: CBA_MiscItem_ItemInfo {mass = 1;};
 };

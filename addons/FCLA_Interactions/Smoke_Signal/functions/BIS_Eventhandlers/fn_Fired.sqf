@@ -3,42 +3,68 @@
  * Author: hozlucas28
  *
  * Description:
- * XXX.
+ * Genera el efecto de la señal de humo al dispararse un proyectil compatible.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.
 params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
-_compatibleSmokeMagazines = [
-"1Rnd_Smoke_Grenade_shell", "1Rnd_SmokeRed_Grenade_shell", "1Rnd_SmokeGreen_Grenade_shell",
-"1Rnd_SmokeYellow_Grenade_shell", "1Rnd_SmokePurple_Grenade_shell", "1Rnd_SmokeBlue_Grenade_shell",
-"1Rnd_SmokeOrange_Grenade_shell", "3Rnd_Smoke_Grenade_shell", "3Rnd_SmokeRed_Grenade_shell",
-"3Rnd_SmokeGreen_Grenade_shell", "3Rnd_SmokeYellow_Grenade_shell", "3Rnd_SmokePurple_Grenade_shell",
-"3Rnd_SmokeBlue_Grenade_shell", "3Rnd_SmokeOrange_Grenade_shell", "rhs_mag_m713_Red",
-"rhs_mag_m714_White", "rhs_mag_m715_Green", "rhs_mag_m716_yellow",
-"rhs_GRD40_Red", "rhs_GRD40_Green", "rhs_GRD40_White",
-"CUP_1Rnd_Smoke_M203", "CUP_1Rnd_SmokeRed_M203", "CUP_1Rnd_SmokeGreen_M203",
-"CUP_1Rnd_SmokeYellow_M203", "CUP_6Rnd_Smoke_GP25", "CUP_6Rnd_SmokeRed_GP25",
-"CUP_6Rnd_SmokeGreen_GP25", "CUP_6Rnd_SmokeYellow_GP25", "CUP_1Rnd_SMOKE_GP25_M",
-"CUP_1Rnd_SmokeRed_GP25_M", "CUP_1Rnd_SmokeGreen_GP25_M", "CUP_1Rnd_SmokeYellow_GP25_M"
-];
-if (!(_magazine in _compatibleSmokeMagazines) || !(_unit getVariable ["FCLA_Smoke_Signal", false])) exitWith {};
+#include "\FCLA_Interactions\Smoke_Signal\includes\Smoke_Magazines.hpp"
 
 
 
+//Verificar argumentos.
+_isUnderwater = underwater _unit;
+_isDesactivated = !(_unit getVariable ["FCLA_Smoke_Signal", false]);
+_isNotCompatibleSmokeMagazine = !(_magazine in _compatibleSmokeMagazines);
+if ((!FCLA_Smoke_Signal_Allowed) || (_isUnderwater) || (_isDesactivated) || (_isNotCompatibleSmokeMagazine)) exitWith {};
+
+
+
+//Generar efecto.
 [{
-  _projectilePos = getposatl _projectile;
-  switch (typeOf _projectile) do
-  {
-  	case "G_40mm_Smoke": {[[_projectilePos,[1,1,1]],"\FCLA_Interactions\Smoke_Signal\scripts\blow.sqf"] remoteExec ["execVM"]};
-  	case "G_40mm_SmokeRed": {[[_projectilePos,[1,0.253,0]],"\FCLA_Interactions\Smoke_Signal\scripts\blow.sqf"] remoteExec ["execVM"]};
-  	case "G_40mm_SmokeBlue": {[[_projectilePos,[0.266,0.537,1]],"\FCLA_Interactions\Smoke_Signal\scripts\blow.sqf"] remoteExec ["execVM"]};
-  	case "G_40mm_SmokeGreen": {[[_projectilePos,[0.1,0.5,0.05]],"\FCLA_Interactions\Smoke_Signal\scripts\blow.sqf"] remoteExec ["execVM"]};
-  	case "G_40mm_SmokeOrange": {[[_projectilePos,[1,0.54,0.21]],"\FCLA_Interactions\Smoke_Signal\scripts\blow.sqf"] remoteExec ["execVM"]};
-  	case "G_40mm_SmokeYellow": {[[_projectilePos,[0.956,1,0.21]],"\FCLA_Interactions\Smoke_Signal\scripts\blow.sqf"] remoteExec ["execVM"]};
-  	case "G_40mm_SmokePurple": {[[_projectilePos,[0.8,0.432,0.8,1]],"\FCLA_Interactions\Smoke_Signal\scripts\blow.sqf"] remoteExec ["execVM"]};
-  };
-  deletevehicle _projectile;
+  params ["_magazine", "_projectile"];
+  #include "\FCLA_Interactions\Smoke_Signal\includes\Smoke_Magazines.hpp"
 
-}, _projectile, 1] call CBA_fnc_waitAndExecute;
+  _projectilePos = getPos _projectile;
+  deleteVehicle _projectile;
+
+  _color = switch (true) do {
+    case (_magazine in _redSmokeMagazines): {[1, 0.253, 0];};
+    case (_magazine in _blueSmokeMagazines): {[0.266, 0.537, 1];};
+    case (_magazine in _greenSmokeMagazines): {[0.1, 0.5, 0.05];};
+    case (_magazine in _orangeSmokeMagazines): {[1, 0.54, 0.21];};
+    case (_magazine in _yellowSmokeMagazines): {[0.956, 1, 0.21];};
+    case (_magazine in _purpleSmokeMagazines): {[0.8, 0.432, 0.8, 1];};
+    default {[1, 1, 1];};
+  };
+
+  _lightObj = createVehicle ["#lightpoint", _projectilePos, [], 0, "CAN_COLLIDE"];
+  _lightObj setLightBrightness 2;
+  _lightObj setLightDayLight true;
+  _lightObj setLightColor [1, 1, 1];
+  _lightObj setLightAmbient [1, 1, 1];
+  _lightObj setLightFlareMaxDistance 2000;
+  _lightObj setLightAttenuation [1, 0, 0, 0, 0, 50];
+  [{deleteVehicle _this;}, _lightObj, 0.2] call CBA_fnc_waitAndExecute;
+
+  drop [["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 3, 0], "", "Billboard", 1, 0.3, [_projectilePos select 0, _projectilePos select 1, (_projectilePos select 2) + 0.5], [0, 0, 0], 0, 11, 7, 0, [1, 5], [[1, 1, 1, 1], [1, 1, 1, 0]], [1], 0, 0, "", "", ""];
+  drop [["\A3\data_f\ParticleEffects\Universal\Universal", 16, 14, 5, 1], "", "Billboard", 1, 0.5, [_projectilePos select 0, _projectilePos select 1, (_projectilePos select 2) + 0.1], [0, 0, 0], 0, 11, 7, 0, [1, 10], [[1, 1, 1, 1], [1, 1, 1, 0]], [2], 0, 0, "", "", ""];
+  drop [["\A3\data_f\ParticleEffects\Universal\Universal_02.p3d", 8, 0, 40, 0], "", "Billboard", 1, 0.3, [_projectilePos select 0, _projectilePos select 1, (_projectilePos select 2) + 0.3], [0, 0, 0], 3, 10.2, 8, 0.01, [0, 20], [[_color select 0, _color select 1, _color select 2, 1], [_color select 0, _color select 1, _color select 2, 0]], [0.1], 0, 0, "", "", ""];
+
+  _soundSourceOne = createVehicle ["VirtualAISquad", _projectilePos, [], 0, "CAN_COLLIDE"];
+  _soundSourceTwo = createVehicle ["VirtualAISquad", _projectilePos, [], 0, "CAN_COLLIDE"];
+  [_soundSourceOne, "FCLA_Smoke_Explosion", 4, 1000, true] call FCLA_Common_fnc_globalSay3D;
+  [_soundSourceTwo, "FCLA_Smoke_Explosion_Echo", 3, 2000, true] call FCLA_Common_fnc_globalSay3D;
+
+  [{
+    params ["_projectilePos", "_color"];
+    _particleObj = createVehicle ["#particlesource", _projectilePos, [], 0, "CAN_COLLIDE"];
+    _particleObj setDropInterval 0.01;
+    _particleObj setParticleCircle [0, [0, 0, 0]];
+    _particleObj setParticleRandom [1, [1, 1, 1], [0.5, 0.5, 0.5], 1, 0, [0, 0, 0, 0], 0, 0];
+    _particleObj setParticleParams [["\A3\data_f\ParticleEffects\Universal\Universal_02.p3d", 8, 0, 40, 0], "", "Billboard", 1, FCLA_Smoke_Signal_Time, [0, 0, 0], [0, 0, 0], 5, 10.2, 8, 0.05, [5, 20], [[_color select 0, _color select 1, _color select 2, 1], [_color select 0, _color select 1, _color select 2, 0.5], [_color select 0, _color select 1, _color select 2, 0.3], [_color select 0, _color select 1, _color select 2, 0]], [0.3], 0, 0, "", "", _projectilePos];
+    [{deleteVehicle _this;}, _particleObj, 0.1] call CBA_fnc_waitAndExecute;
+  }, [_projectilePos, _color], 0.2] call CBA_fnc_waitAndExecute;
+}, [_magazine, _projectile], 1] call CBA_fnc_waitAndExecute;

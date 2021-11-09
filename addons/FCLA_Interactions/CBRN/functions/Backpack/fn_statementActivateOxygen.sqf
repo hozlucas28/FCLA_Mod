@@ -57,12 +57,12 @@ _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
   switch (true) do {
     case ((_backpackFirstAlertPlayed == "") && (_backpackOxygenRemaining <= 50)): {
       _this setVariable ["FCLA_Backpack_Last_Alert", "Half_Capacity", true];
-      [_backpackContainer, "FCLA_Low_Oxygen_Alert", 1, 15, false] call FCLA_Common_fnc_globalSay3D;
+      [_backpackContainer, "FCLA_Oxygen_Alert", 1, 15, false] call FCLA_Common_fnc_globalSay3D;
     };
 
     case ((_backpackFirstAlertPlayed == "Half_Capacity") && (_backpackOxygenRemaining <= 25)): {
       _this setVariable ["FCLA_Backpack_Last_Alert", "Quarter_Capacity", true];
-      [_backpackContainer, "FCLA_Low_Oxygen_Alert", 1, 15, false] call FCLA_Common_fnc_globalSay3D;
+      [_backpackContainer, "FCLA_Oxygen_Alert", 1, 15, false] call FCLA_Common_fnc_globalSay3D;
     };
   };
 

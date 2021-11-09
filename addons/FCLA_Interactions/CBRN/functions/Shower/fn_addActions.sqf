@@ -19,7 +19,6 @@ _object setVariable ["BIN_deconshower_disableAction", true, true];
 _Condition = {
   params ["_target", "_player"];
   _isAlive = alive _target;
-  _notInStairs = !(_player getVariable ["FCLA_inStairs", false]);
   _isNotSwimming = !([_player] call ACE_Common_fnc_isSwimming);
   _isNotDragging = !(_player getVariable ["ACE_Dragging_isDragging", false]);
   _isNotCarrying = !(_player getVariable ["ACE_Dragging_isCarrying", false]);
@@ -28,12 +27,12 @@ _Condition = {
   _isTouchingGround = isTouchingGround _player;
   _isNotSurrendering = !(_player getVariable ["ACE_Captives_isSurrendering", false]);
   _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
-  (_isAlive) && (_notInStairs) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isDesactivated) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation)
+  (_isAlive) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isDesactivated) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation)
 };
 
 _Statement = {
   params ["_target", "_player"];
-  ["FCLA_Switch_Shower", [_target, true]] call CBA_fnc_localEvent; 
+  ["FCLA_Switch_Shower", [_target, true]] call CBA_fnc_localEvent;
   [_player, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 };
 
@@ -47,7 +46,6 @@ _Condition = {
   params ["_target", "_player"];
   _isAlive = alive _target;
   _isActivated = _target getVariable ["FCLA_Shower_Status", false];
-  _notInStairs = !(_player getVariable ["FCLA_inStairs", false]);
   _isNotSwimming = !([_player] call ACE_Common_fnc_isSwimming);
   _isNotDragging = !(_player getVariable ["ACE_Dragging_isDragging", false]);
   _isNotCarrying = !(_player getVariable ["ACE_Dragging_isCarrying", false]);
@@ -55,7 +53,7 @@ _Condition = {
   _isTouchingGround = isTouchingGround _player;
   _isNotSurrendering = !(_player getVariable ["ACE_Captives_isSurrendering", false]);
   _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
-  (_isAlive) && (_isActivated) && (_notInStairs) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation)
+  (_isAlive) && (_isActivated) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation)
 };
 
 _Statement = {

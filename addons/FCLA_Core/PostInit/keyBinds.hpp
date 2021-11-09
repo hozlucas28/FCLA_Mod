@@ -8,7 +8,7 @@
 /* -------------------------- DISTANCIA DE VISIÓN -------------------------- */
 
 [
-	["FCLA", "• General"], "FCLA_Open_VD_Dialog_Key",
+	["FCLA", "• General"], "FCLA_Open_VD_Key",
 	["Abrir configuración de distancia de visión"],
 	{
 		_unit = call CBA_fnc_currentUnit;
@@ -50,7 +50,7 @@
 /* --------------------- ABRIR PUERTA PROGRESIVAMENTE ---------------------- */
 
 [
-	["FCLA", "• General"], "FCLA_POD_Hold_Key",
+	["FCLA", "• General"], "FCLA_POD_Key",
 	["Abrir puerta progresivamente", "Preciona 'Tecla asignada' + Rueda del mouse para abrir progresivamente la puerta que estes mirando."],
 	{
 		_unit = call CBA_fnc_currentUnit;
@@ -71,15 +71,20 @@
 /* -------------------------------- SILBAR --------------------------------- */
 
 [
-	["FCLA", "• General"], "Hiss_Key",
-	["Silbar","Preciona 'Tecla asignada' para que tu personaje silbe."],
+	["FCLA", "• General"], "FCLA_Hiss_Key",
+	["Silbar", "Preciona 'Tecla asignada' para que tu personaje utilize el silbato. Si no posee uno, silbara."],
 	{
 		_unit = call CBA_fnc_currentUnit;
 		_severalConditions = [_unit, [6, 7, 12, 14, 16]] call FCLA_Common_fnc_severalConditions;
-		_isNotTouchingGround = !isTouchingGround _unit;
-		if ((_severalConditions) || (_isNotTouchingGround)) exitWith {};
-		_randomSound = selectRandom ["FCLA_Hiss_1", "FCLA_Hiss_2"];
-		[_unit, _randomSound, 1, 100, false] call FCLA_Common_fnc_globalSay3D;
+		if (_severalConditions) exitWith {};
+
+		if ([_unit, "FCLA_Whistle"] call BIS_fnc_hasItem) then {
+			_randomSound = selectRandom ["FCLA_Whistle_1", "FCLA_Whistle_2"];
+			[_unit, _randomSound, 1, 150, false] call FCLA_Common_fnc_globalSay3D;
+		} else {
+			_randomSound = selectRandom ["FCLA_Hiss_1", "FCLA_Hiss_2"];
+			[_unit, _randomSound, 1, 100, false] call FCLA_Common_fnc_globalSay3D;
+		};
 	},
 	{},
   [DIK_T, [true, false, false]],

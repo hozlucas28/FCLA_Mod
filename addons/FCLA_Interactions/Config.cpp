@@ -86,6 +86,7 @@ class CfgVehicles {
 	class Land: AllVehicles {};
 	class Man: Land {};
 
+	//Humanos.
 	class CAManBase: Man {
 		class ACE_Actions {
 			class ACE_MainActions {
@@ -114,6 +115,7 @@ class CfgVehicles {
 	  };
 	};
 
+	//Vehículos terrestres.
 	class LandVehicle: Land {
 		class ACE_Actions {
 			class ACE_MainActions {
@@ -122,6 +124,7 @@ class CfgVehicles {
 		};
 	};
 
+	//Vehículos maritimos.
 	class Ship: AllVehicles {
 		class ACE_Actions {
 			class ACE_MainActions {
@@ -141,15 +144,16 @@ class CfgWeapons {
 	class Default;
 	class InventoryItem_Base_F;
 	class ItemCore: Default {};
-	class CBA_MiscItem: ItemCore {};
-	class CBA_MiscItem_ItemInfo: InventoryItem_Base_F {};
 	class Binocular: Default {};
 	class NVGoggles: Binocular {};
+	class CBA_MiscItem: ItemCore {};
+	class CBA_MiscItem_ItemInfo: InventoryItem_Base_F {};
 
 	#include "\FCLA_Interactions\Blindfold\CfgWeapons.hpp"
 	#include "\FCLA_Interactions\Helmet_Camo_Net\CfgWeapons.hpp"
 	#include "\FCLA_Interactions\Light_Sticks\CfgWeapon.hpp"
 	#include "\FCLA_Interactions\Night_Vision_Battery\CfgWeapon.hpp"
+	#include "\FCLA_Interactions\Whistle\CfgWeapon.hpp"
 };
 
 
@@ -184,7 +188,7 @@ class ACE_Medical_Treatment_Actions {
 
 class Extended_InitPost_EventHandlers {
 	class DeconShower_01_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsShowerCBRN;";};
-	class Land_GasTank_02_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsRechargeOxygenCBRN";};
+	class Land_GasTank_02_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_addActionRechargeOxygenCBRN;";};
 };
 
 class Extended_Fired_Eventhandlers {

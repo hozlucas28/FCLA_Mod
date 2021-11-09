@@ -31,7 +31,6 @@ playsound _randomSound;
 //Ocultar mapa.
 [{
   params ["_target", "_player"];
-  _inStairs = !(_player getVariable ["FCLA_inStairs", false]);
   _inVehicle = isNull objectParent _player;
   _isNotOnMap = !visibleMap;
   _areNotNear = _target distance _player > 2;
@@ -39,15 +38,14 @@ playsound _randomSound;
   _areSwimming = ([_target] call ACE_Common_fnc_isSwimming) || ([_player] call ACE_Common_fnc_isSwimming);
   _isHandcuffed = _target getVariable ["ACE_Captives_isHandcuffed", false];
   _isNotSharingMap = !(_target getVariable ["FCLA_Sharing_Map", false]);
-  (FCLA_Share_Map_Allowed) || (_inStairs) || (_inVehicle) || (_isNotOnMap) || (_areNotNear) || (_isNotAlive) || (_areSwimming) || (_isHandcuffed) || (_isNotSharingMap);
+  (!FCLA_Share_Map_Allowed) || (_inVehicle) || (_isNotOnMap) || (_areNotNear) || (_isNotAlive) || (_areSwimming) || (_isHandcuffed) || (_isNotSharingMap);
 }, {
   params ["_target", "_player"];
-  _inStairs = !(_player getVariable ["FCLA_inStairs", false]);
   _areNotNear = _target distance _player > 2;
   _isNotSharingMap = !(_target getVariable ["FCLA_Sharing_Map", false]);
 
   switch (true) do {
-    case ((_inStairs) || (_areNotNear)): {[[(name _target) + ":", 1.25], ["Se ha alejado demasiado.", 1, [0.839, 0.345, 0.345, 1]], true] call CBA_fnc_Notify;};
+    case (_areNotNear): {[[(name _target) + ":", 1.25], ["Se ha alejado demasiado.", 1, [0.839, 0.345, 0.345, 1]], true] call CBA_fnc_Notify;};
     case (_isNotSharingMap): {[[(name _target) + ":", 1.25], ["Dejo de compartir su mapa.", 1, [0.839, 0.345, 0.345, 1]], true] call CBA_fnc_Notify;};
     default {[[""], true] call CBA_fnc_Notify;};
   };

@@ -18,4 +18,5 @@ _visionMode = currentVisionMode _player;
 _inUAV = ([_player] call ACE_Common_fnc_getUavControlPosition) != "";
 _hasNotNVG = _currentNVG == "";
 _isNotAlive = !alive _player;
-(!FCLA_NVG_Require_Battery) || (_inUAV) || (_hasNotNVG) || (_isNotAlive)
+_inFFVPosition = [_player] call CBA_fnc_canUseWeapon;
+(!FCLA_NVG_Require_Battery) || (_inUAV) || (_hasNotNVG) || (_isNotAlive) || (_inFFVPosition)
