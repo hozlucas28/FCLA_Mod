@@ -35,15 +35,3 @@ class CfgFunctions {
 class CfgSounds {
 	#include "\FCLA_Development\CfgSounds.hpp"
 };
-
-
-
-/********************************************************************************|
-|                                 EVENTHANDLERS                                  |
-|********************************************************************************/
-
-class Extended_InitPost_EventHandlers {
-	class CAManBase {
-		init = "if ([_this select 0, true] call ACE_Common_fnc_isPlayer) then {(_this select 0) disableAI 'RADIOPROTOCOL';};";
-	};
-};
