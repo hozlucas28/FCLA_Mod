@@ -39,5 +39,5 @@
   _severalConditions = [_unit, [4, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16]] call FCLA_Common_fnc_severalConditions;
   _visionModeDesactivated = _newVisionMode == 0;
   if ((!FCLA_visionMode_Sounds) || (_severalConditions) || (_visionModeDesactivated)) exitWith {};
-  if (isNull objectParent player) then {[_unit, "FCLA_Vision_Mode_Changed", 2, 20, false] call FCLA_Common_fnc_globalSay3D;} else {playSound "FCLA_Vision_Mode_Changed";};
+  if (isNull objectParent player) then {[_unit, "FCLA_Vision_Mode_Changed", 2, 200, false] call FCLA_Common_fnc_globalSay3D;} else {playSound "FCLA_Vision_Mode_Changed";};
 }, false] call CBA_fnc_addPlayerEventHandler;

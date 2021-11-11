@@ -23,4 +23,4 @@
   params ["_unit", "_newCamera"];
   if ((_newCamera == "") && ([_unit] call FCLA_Interactions_fnc_conditionStartConsumeNVB)) exitWith {[player] spawn FCLA_Interactions_fnc_statementStartConsumeNVB;};
   [player] spawn FCLA_Interactions_fnc_statementStopConsumeNVB;
-}, true] call CBA_fnc_addPlayerEventHandler;
+}, false] call CBA_fnc_addPlayerEventHandler;

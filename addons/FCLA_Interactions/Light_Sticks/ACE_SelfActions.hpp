@@ -3,8 +3,8 @@
 |                      ACCIONES PROPIAS - "PALILLOS DE LUZ"                      |
 |********************************************************************************/
 
-class FCLA_Light_Sticks {
-  displayName = "Señales<br/>(aeronaves)";
+class FCLA_Aircraft_Gestures {
+  displayName = "Gestos<br/>(aeronaves)";
   icon = "\FCLA_Data\ACE_Actions\Aircraft_Marshall.paa";
   condition = "[_player] call FCLA_Interactions_fnc_conditionToStartLS";
 
@@ -54,11 +54,5 @@ class FCLA_Light_Sticks {
     condition = "[_player] call FCLA_Interactions_fnc_conditionToStartLS";
     statement = "[_player, 'Acts_JetsMarshallingEmergencyStop_in'] spawn FCLA_Interactions_fnc_statementToStartLS;";
     displayName = "Alto de emergencia";
-  };
-
-  class FCLA_Cancel {
-    condition = "[_player] call FCLA_Interactions_fnc_conditionToStopLS";
-    statement = "[_player] spawn FCLA_Interactions_fnc_statementToStopLS;";
-    displayName = "Cancelar";
   };
 };
