@@ -15,7 +15,7 @@ _backpackContainer = backpackContainer _player;
 
 
 //Verificar si la mochila tiene el máximo de oxígeno.
-if ((_backpackContainer getVariable ["FCLA_Backpack_Oxygen", 100]) >= 0) exitWith {
+if ((_backpackContainer getVariable ["FCLA_Backpack_Oxygen", 100]) >= 100) exitWith {
   _text = ["||||||||||", [0, 1, 0]] call ACE_Common_fnc_stringToColoredText;
   _picture = getText (configFile >> "CfgVehicles" >> (backpack _player) >> "picture");
   [_text, _picture] call ACE_Common_fnc_displayTextPicture;

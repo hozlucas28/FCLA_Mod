@@ -10,6 +10,8 @@
 
 //Variables de referencia.
 params ["_player"];
+_currentGoggles = goggles _player;
+_currentBackpack = backpack _player;
 _backpackContainer = backpackContainer _player;
 
 

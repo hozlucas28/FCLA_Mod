@@ -25,7 +25,6 @@ class CfgFunctions {
 		#include "\FCLA_Immersions\Building_Stairs\CfgFunctions.hpp"
 		#include "\FCLA_Immersions\Enhanced_Animations\CfgFunctions.hpp"
 		#include "\FCLA_Immersions\Kick_Door\CfgFunction.hpp"
-		#include "\FCLA_Immersions\Progressive_Open_Door\CfgFunctions.hpp"
 		#include "\FCLA_Immersions\TFAR_Animations\CfgFunctions.hpp"
 		#include "\FCLA_Immersions\Turbulences\CfgFunctions.hpp"
 	};

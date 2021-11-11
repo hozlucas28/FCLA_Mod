@@ -12,6 +12,7 @@ class FCLA_Common_Functions {
   class hackDevice {file = "\FCLA_Common\functions\Hack_Device\fn_hackDevice.sqf";};
   class checkUnitTrait {file = "\FCLA_Common\functions\fn_checkUnitTrait.sqf";};
   class createLoadout {file = "\FCLA_Common\functions\fn_createLoadout.sqf";};
+  class getCleanName {file = "\FCLA_Common\functions\fn_getCleanName.sqf";};
   class getDoorInfo {file = "\FCLA_Common\functions\fn_getDoorInfo.sqf";};
   class getItemContainer {file = "\FCLA_Common\functions\fn_getItemContainer.sqf";};
   class getLocations {file = "\FCLA_Common\functions\fn_getLocations.sqf";};

@@ -67,6 +67,7 @@ _backpackWithInsignia = switch (true) do {
 
 
 //Colocar mochila.
-if (!(isClass (configFile >> "CfgWeapons" >> _backpackWithInsignia))) exitWith {};
+if (!(isClass (configFile >> "CfgVehicles" >> _backpackWithInsignia))) exitWith {};
+removeBackpack _unit;
 _unit addBackpack _backpackWithInsignia;
 {_unit addItemToBackpack _x} forEach _itemsInBackpack;

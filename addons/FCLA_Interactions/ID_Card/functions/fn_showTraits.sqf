@@ -28,4 +28,4 @@
     hintSilent "";
     [_handle] call CBA_fnc_removePerFrameHandler;
   };
-}, 0.5, _this] call CBA_fnc_addPerFrameHandler;
+}, 0.1, _this select 0] call CBA_fnc_addPerFrameHandler;

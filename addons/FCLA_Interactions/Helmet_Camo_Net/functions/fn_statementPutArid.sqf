@@ -13,12 +13,12 @@ params ["_player"];
 _aridCommonHelmetsWithoutCamoNet = [
  "H_HelmetB", "H_HelmetSpecB", "H_HelmetSpecB_FCLA", "H_HelmetSpecB_Takana", "H_HelmetSpecB_Jaguar",
  "H_HelmetSpecB_Condor", "H_HelmetSpecB_Salamandra", "H_HelmetSpecB_Anaconda", "H_HelmetSpecB_Quetzal",
- "H_HelmetSpecB_Med"
+ "H_HelmetSpecB_Medic"
 ];
 _aridSnakeskinHelmetsWithoutCamoNet = [
  "H_HelmetB_snakeskin", "H_HelmetSpecB_snakeskin", "H_HelmetSpecB_FCLA_Snake", "H_HelmetSpecB_Takana_Snake",
  "H_HelmetSpecB_Jaguar_Snake", "H_HelmetSpecB_Condor_Snake", "H_HelmetSpecB_Salamandra_Snake", "H_HelmetSpecB_Anaconda_Snake",
- "H_HelmetSpecB_Quetzal_Snake", "H_HelmetSpecB_Med_Snake"
+ "H_HelmetSpecB_Quetzal_Snake", "H_HelmetSpecB_Medic_Snake"
 ];
 
 
@@ -36,7 +36,7 @@ _statementOnFinish = {
   _player setUnitTrait ["camouflageCoef", _camouflageCoef - 0.2];
   _player setVariable ["FCLA_Saved_Headgear", [_headgear, _itemCamoNet, _camouflageCoef], true];
 
-
+  playSound "FCLA_Helmet_Equipped";
   switch (true) do {
     case (_headgear == "rhsusf_ach_helmet_ocp"): {_player addHeadgear "rhsusf_ach_helmet_camo_ocp";};
     case (_headgear in _aridCommonHelmetsWithoutCamoNet): {_player addHeadgear "H_HelmetB_camo";};

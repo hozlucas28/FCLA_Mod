@@ -23,17 +23,14 @@ createDialog "FCLA_ID_Card_Dialog";
 //Asignar información.
 switch ("" in _IDCard) do {
 	case true: {
-		_originalName = name _player;
-		_rank = [_originalName, _originalName find ["[", 0], _originalName find ["]", 0]] call CBA_fnc_substring;
-		_nameWithoutRank = [_originalName, _rank, ""] call CBA_fnc_replace;
-		_cleanName = [_nameWithoutRank] call CBA_fnc_leftTrim;
+		_name = [_player] call FCLA_Common_fnc_getCleanName;
     _randomAge = [19, 65, true] call FCLA_Common_fnc_getRandomNumber;
-    _randomPlaceOfBirth = call FCLA_Common_fnc_getRandomLocation;
+    _randomPlaceOfBirth = [false, false, false] call FCLA_Common_fnc_getRandomLocation;
 
-		ctrlSetText [1007, _cleanName];
+		ctrlSetText [1007, _name];
 		ctrlSetText [1008, _randomAge];
-		ctrlSetText [1009, _randomPlaceOfBirth];
-    _player setVariable ["FCLA_ID", [_cleanName, _randomAge, _randomPlaceOfBirth], true];
+		if (_randomPlaceOfBirth != "") then {ctrlSetText [1009, _randomPlaceOfBirth];};
+    _player setVariable ["FCLA_ID", [_name, _randomAge, _randomPlaceOfBirth], true];
 	};
 
 	case false: {
@@ -49,7 +46,15 @@ switch ("" in _IDCard) do {
 
 
 //Forzar cierre.
-[{(!FCLA_ID_Card_Allowed) || (isNull findDisplay 10001) || ([_this] call FCLA_Interactions_fnc_conditionSelfID)}, {
+[{
+	_isOnMap = visibleMap;
+	_isDragging = _player getVariable ["ACE_Dragging_isDragging", false];
+	_isCarrying = _player getVariable ["ACE_Dragging_isCarrying", false];
+	_isSwimming = [_player] call ACE_Common_fnc_isSwimming;
+	_isSurrendering = _player getVariable ["ACE_Captives_isSurrendering", false];
+	_isNotTouchingGround = !(isTouchingGround _player);
+	(isNull findDisplay 10001) || (!FCLA_ID_Card_Allowed) || (_isOnMap) || (_isDragging) || (_isCarrying) || (_isSwimming) || (_isSurrendering) || (_isNotTouchingGround);
+}, {
 	if (!isNull findDisplay 10001) then {closeDialog 0};
   [_this, "", "SwitchMove"] call FCLA_Common_fnc_playAnimation;
 }, _player] call CBA_fnc_waitUntilAndExecute;

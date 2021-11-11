@@ -23,4 +23,4 @@ _Statement = {
   [_unit, _item] spawn FCLA_Interactions_fnc_statementCheckOxygenCBRN;
 };
 
-["Backpack", "CLOTHES", "Comprobar oxígeno", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
+["##Backpack", "CLOTHES", "Comprobar oxígeno", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;

@@ -43,18 +43,7 @@ class CfgFunctions {
 	class FCLA_Effects {
 		#include "\FCLA_Effects\Planes\CfgFunctions.hpp"
 		#include "\FCLA_Effects\Enhanced_Sounds\CfgFunctions.hpp"
-		#include "\FCLA_Effects\Goggles\CfgFunction.hpp"
 	};
-};
-
-
-
-/********************************************************************************|
-|                                    TÍTULOS                                     |
-|********************************************************************************/
-
-class RscTitles {
-	#include "\FCLA_Effects\Goggles\RscTitle.hpp"
 };
 
 

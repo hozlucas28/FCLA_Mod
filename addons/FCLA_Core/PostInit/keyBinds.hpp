@@ -47,27 +47,6 @@
 
 
 
-/* --------------------- ABRIR PUERTA PROGRESIVAMENTE ---------------------- */
-
-[
-	["FCLA", "• General"], "FCLA_POD_Key",
-	["Abrir puerta progresivamente", "Preciona 'Tecla asignada' + Rueda del mouse para abrir progresivamente la puerta que estes mirando."],
-	{
-		_unit = call CBA_fnc_currentUnit;
-		_severalConditions = [_unit, [14, 16]] call FCLA_Common_fnc_severalConditions;
-		_isNotTouchingGround = !isTouchingGround _unit;
-		if ((_severalConditions) || (_isNotTouchingGround)) exitWith {};
-		missionNamespace setVariable ["FCLA_POD_Activated", true];
-	},
-	{missionNamespace setVariable ["FCLA_POD_Activated", false];},
-  [DIK_TAB, [false, false, false]],
-  false,
-	0,
-	false
-] call CBA_fnc_addKeybind;
-
-
-
 /* -------------------------------- SILBAR --------------------------------- */
 
 [
@@ -79,11 +58,10 @@
 		if (_severalConditions) exitWith {};
 
 		if ([_unit, "FCLA_Whistle"] call BIS_fnc_hasItem) then {
-			_randomSound = selectRandom ["FCLA_Whistle_1", "FCLA_Whistle_2"];
-			[_unit, _randomSound, 1, 150, false] call FCLA_Common_fnc_globalSay3D;
+			[_unit, "FCLA_Whistle", 1, 200, false] call FCLA_Common_fnc_globalSay3D;
 		} else {
 			_randomSound = selectRandom ["FCLA_Hiss_1", "FCLA_Hiss_2"];
-			[_unit, _randomSound, 1, 100, false] call FCLA_Common_fnc_globalSay3D;
+			[_unit, _randomSound, 1, 125, false] call FCLA_Common_fnc_globalSay3D;
 		};
 	},
 	{},

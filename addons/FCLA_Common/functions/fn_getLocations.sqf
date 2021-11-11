@@ -46,4 +46,4 @@ _locations = [];
 		_locations pushBack (text _x);
 	} forEach (nearestLocations [getArray (configFile >> "CfgWorlds" >> worldName >> "centerPosition"), [_x], worldSize]);
 } forEach _notExcludedLocations;
-_locations
+if (_locations isNotEqualTo []) then {_locations} else {[""]};

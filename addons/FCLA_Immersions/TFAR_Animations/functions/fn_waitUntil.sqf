@@ -13,7 +13,7 @@
   _currentVehicleRole = [_this] call CBA_fnc_vehicleRole;
   _isNotTransmiting = !(_this getVariable ["FCLA_Transmitting", false]);
   _severalConditions = [_this, [0, 1, 3, 4, 7, 12, 13, 14, 15]] call FCLA_Common_fnc_severalConditions;
-  _isNotInCargoVehicle = (_getCurrentVehicleRole != "") && (_getCurrentVehicleRole != "cargo");
+  _isNotInCargoVehicle = (_currentVehicleRole != "") && (_currentVehicleRole != "cargo");
   _isNotTouchingGround = !isTouchingGround _this;
   (_isNotTransmiting) || (_severalConditions) || (_isNotInCargoVehicle) || (_isNotTouchingGround);
 }, {

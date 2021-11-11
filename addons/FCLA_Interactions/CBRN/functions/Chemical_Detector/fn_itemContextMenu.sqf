@@ -28,7 +28,7 @@ _Statement = {
   [_unit, _item] spawn FCLA_Interactions_fnc_statementTurnOnChemicalDetectorCBRN;
 };
 
-["Watch", "ASSIGNED_ITEM", "Activar sonido", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
+["##Watch", "ASSIGNED_ITEM", "Encender", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
 
 
 /* -------------------------------- APAGAR --------------------------------- */
@@ -48,19 +48,29 @@ _Statement = {
   [_unit] spawn FCLA_Interactions_fnc_statementTurnOffChemicalDetectorCBRN;
 };
 
-["Watch", "ASSIGNED_ITEM", "Desactivar sonido", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
+["##Watch", "ASSIGNED_ITEM", "Apagar", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
 
 
 /* ----------------------------- SUBIR VOLUMEN ----------------------------- */
 
 _conditionToEnable = {
   params ["_unit", "_container", "_item"];
-  [_unit, _item] call FCLA_Interactions_fnc_conditionTurnUpVolumeChemicalDetectorCBRN;
+  _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 2];
+  _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
+  _isCompatible = _item in FCLA_Chemical_Detectors;
+  _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
+  _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
+  (_currentVolume < 5) && (_isActivated) && (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated)
 };
 
 _conditionToShow = {
   params ["_unit", "_container", "_item"];
-  [_unit, _item] call FCLA_Interactions_fnc_conditionTurnUpVolumeChemicalDetectorCBRN;
+  _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 2];
+  _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
+  _isCompatible = _item in FCLA_Chemical_Detectors;
+  _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
+  _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
+  (_currentVolume <= 5) && (_isActivated) && (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated)
 };
 
 _Statement = {
@@ -69,19 +79,29 @@ _Statement = {
   _unit setVariable ["FCLA_Chemical_Detector_Volume", (_currentVolume + 1), true];
 };
 
-["Watch", "ASSIGNED_ITEM", "Volumen (+)", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
+["##Watch", "ASSIGNED_ITEM", "Volumen ( + )", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
 
 
 /* ----------------------------- BAJAR VOLUMEN ----------------------------- */
 
 _conditionToEnable = {
   params ["_unit", "_container", "_item"];
-  [_unit, _item] call FCLA_Interactions_fnc_conditionTurnDownVolumeChemicalDetectorCBRN;
+  _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 2];
+  _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
+  _isCompatible = _item in FCLA_Chemical_Detectors;
+  _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
+  _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
+  (_currentVolume > 0) && (_isActivated) && (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated);
 };
 
 _conditionToShow = {
   params ["_unit", "_container", "_item"];
-  [_unit, _item] call FCLA_Interactions_fnc_conditionTurnDownVolumeChemicalDetectorCBRN;
+  _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 2];
+  _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
+  _isCompatible = _item in FCLA_Chemical_Detectors;
+  _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
+  _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
+  (_currentVolume >= 0) && (_isActivated) && (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated);
 };
 
 _Statement = {
@@ -90,7 +110,7 @@ _Statement = {
   _unit setVariable ["FCLA_Chemical_Detector_Volume", (_currentVolume - 1), true];
 };
 
-["Watch", "ASSIGNED_ITEM", "Volumen (-)", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
+["##Watch", "ASSIGNED_ITEM", "Volumen ( - )", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
 
 
 

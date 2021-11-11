@@ -10,6 +10,7 @@
 
 //Variables de referencia.
 params ["_unit", "_insignia"];
+if (_unit getVariable ['FCLA_Disable_Insignias', false]) exitWith {};
 
 
 

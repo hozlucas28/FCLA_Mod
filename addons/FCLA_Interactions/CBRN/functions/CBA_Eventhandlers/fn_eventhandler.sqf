@@ -39,18 +39,15 @@
 
 
   //Reproducir sonido.
-  _soundObj = createVehicle ["VirtualAISquad", getPos _shower, [], 0, "CAN_COLLIDE"];
+  _soundObj = createAgent ["VirtualAISquad", getPos _shower, [], 0, "CAN_COLLIDE"];
   _soundObj attachTo [_shower, [0, 0, 0]];
   _objects pushBack _soundObj;
   [{
-    _args params ["_shower", "_soundObj"];
-    _isCBRNDesactivated = isNil "FCLA_CBRN_Activated";
-    _isShowerDesactivated = !(_shower getVariable ["FCLA_Shower_Status", false]);
-    if (_isCBRNDesactivated) exitWith {["FCLA_Switch_Shower", [_shower, false]] call CBA_fnc_serverEvent;};
-    if (_isShowerDesactivated) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
+    _isNotAlive = !alive (_this select 0);
+    if (_isNotAlive) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
     if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
     [_this select 0, "FCLA_Shower", 8, 20, false] call FCLA_Common_fnc_globalSay3D;
-  }, 8, [_shower, _soundObj]] call CBA_fnc_addPerFrameHandler;
+  }, 0.5, _soundObj] call CBA_fnc_addPerFrameHandler;
 
 
   //Crear activador.
@@ -73,5 +70,17 @@
   _trigger setTriggerArea [0.75, 0.75, getDir _shower, true, 2.3];
   _trigger setTriggerStatements [[_Condition] call ACE_Common_fnc_codeToString, [_Statement] call ACE_Common_fnc_codeToString, ""];
   _objects pushBack _trigger;
+
+
+  //Interrupción.
+  [{
+    _isDesactivated = !(_this getVariable ["FCLA_Shower_Status", false]);
+    _isCBRNDesactivated = isNil "FCLA_CBRN_Activated";
+    (_isDesactivated) || (_isCBRNDesactivated);
+  }, {
+    _isDesactivated = !(_this getVariable ["FCLA_Shower_Status", false]);
+    if (_isDesactivated) exitWith {};
+    ["FCLA_Switch_Shower", [_this, false]] call CBA_fnc_localEvent;
+  }, _shower] call CBA_fnc_waitUntilAndExecute;
   _shower setVariable ["FCLA_Shower_Objects", _objects, true];
 }] call CBA_fnc_addEventhandler;

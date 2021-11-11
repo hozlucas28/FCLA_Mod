@@ -14,10 +14,10 @@ _headgear = headgear _player;
 _aridHelmetsWithoutCamoNet = [
  "H_HelmetB", "H_HelmetSpecB", "H_HelmetSpecB_FCLA", "H_HelmetSpecB_Takana", "H_HelmetSpecB_Jaguar",
  "H_HelmetSpecB_Condor", "H_HelmetSpecB_Salamandra", "H_HelmetSpecB_Anaconda", "H_HelmetSpecB_Quetzal",
- "H_HelmetSpecB_Med", "H_HelmetB_snakeskin", "H_HelmetSpecB_snakeskin", "H_HelmetSpecB_FCLA_Snake",
+ "H_HelmetSpecB_Medic", "H_HelmetB_snakeskin", "H_HelmetSpecB_snakeskin", "H_HelmetSpecB_FCLA_Snake",
  "H_HelmetSpecB_Takana_Snake", "H_HelmetSpecB_Jaguar_Snake", "H_HelmetSpecB_Condor_Snake",
  "H_HelmetSpecB_Salamandra_Snake", "H_HelmetSpecB_Anaconda_Snake", "H_HelmetSpecB_Quetzal_Snake",
- "H_HelmetSpecB_Med_Snake", "rhsusf_ach_helmet_ocp"
+ "H_HelmetSpecB_Medic_Snake", "rhsusf_ach_helmet_ocp"
 ];
 
 

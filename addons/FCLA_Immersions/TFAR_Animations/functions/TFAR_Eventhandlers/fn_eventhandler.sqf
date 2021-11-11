@@ -28,18 +28,18 @@
 
     switch (true) do {
     	case ((!_usingBackpackRadio) && (_isHeadsetCompatible) && (_isChestCompatible)): {
-        [_unit] spawn FCLA_Immersions_fnc_waitUntilTFAR;
+        _unit spawn FCLA_Immersions_fnc_waitUntilTFAR;
         _animation = if (FCLA_Radio_Animation_Preference == "_headset") then {"FCLA_Animation_TFAR_onEar";} else {"FCLA_Animation_TFAR_onVest";};
         [_unit, _animation, "playActionNow"] call FCLA_Common_fnc_playAnimation;
       };
 
     	case ((!_usingBackpackRadio) && (_isHeadsetCompatible)): {
-        [_unit] spawn FCLA_Immersions_fnc_waitUntilTFAR;
+        _unit spawn FCLA_Immersions_fnc_waitUntilTFAR;
         [_unit, "FCLA_Animation_TFAR_onEar", "playActionNow"] call FCLA_Common_fnc_playAnimation;
       };
 
       case ((!_usingBackpackRadio) && (_isChestCompatible)): {
-        [_unit] spawn FCLA_Immersions_fnc_waitUntilTFAR;
+        _unit spawn FCLA_Immersions_fnc_waitUntilTFAR;
         [_unit, "FCLA_Animation_TFAR_onVest", "playActionNow"] call FCLA_Common_fnc_playAnimation;
       };
 
@@ -52,6 +52,6 @@
     deleteVehicle (_unit getVariable ["FCLA_TFAR_Animations_Current_Radio", objNull]);
     _unit setVariable ["FCLA_Transmitting", nil, true];
     _unit setVariable ["FCLA_TFAR_Animations_Current_Radio", nil, true];
-    [_unit, "FCLA_TFAR_End_Animation", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+    [_unit, "FCLA_TFAR_End_Animation"] call ACE_Common_fnc_doGesture;
   };
 }, ObjNull] call TFAR_fnc_addEventHandler;

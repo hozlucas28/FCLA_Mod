@@ -13,14 +13,14 @@ params ["_player"];
 _headgear = headgear _player;
 _tropicalHelmetsWithoutCamoNet = [
  "H_HelmetB_plain_wdl", "H_HelmetSpecB_wdl", "H_HelmetSpecB_Digital",
- "H_HelmetSpecB_FCLA_Digital", "H_HelmetSpecB_Takana_Digital", "H_HelmetSpecB_Jaguar_Digital",
+ "H_HelmetSpecB_Digital", "H_HelmetSpecB_Takana_Digital", "H_HelmetSpecB_Jaguar_Digital",
  "H_HelmetSpecB_Condor_Digital", "H_HelmetSpecB_Salamandra_Digital",
- "H_HelmetSpecB_Anaconda_Digital", "H_HelmetSpecB_Quetzal_Digital", "H_HelmetSpecB_Med_Digital",
+ "H_HelmetSpecB_Anaconda_Digital", "H_HelmetSpecB_Quetzal_Digital", "H_HelmetSpecB_Medic_Digital",
  "H_HelmetB_tna_F", "H_HelmetB_Enh_tna_F", "H_HelmetSpecB_FCLA_Tropical",
  "H_HelmetSpecB_Takana_Tropical", "H_HelmetSpecB_Jaguar_Tropical",
  "H_HelmetSpecB_Condor_Tropical", "H_HelmetSpecB_Salamandra_Tropical",
  "H_HelmetSpecB_Anaconda_Tropical", "H_HelmetSpecB_Quetzal_Tropical",
- "H_HelmetSpecB_Med_Tropical"
+ "H_HelmetSpecB_Medic_Tropical"
 ];
 
 

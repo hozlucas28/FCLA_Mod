@@ -48,20 +48,7 @@ _perFrameHandlerOne = [{
   };
 
 
-  _time = CBA_missionTime;
-  _delta = _time - (_this select 0);
-  (_this select 0) set [0, _time];
-  _unit setVariable ["FCLA_CBRN_Threat_Level", _max];
-
-
-  if (isNull (uiNamespace getVariable ["FCLA_CBRN_Chemical_Detector_Ctrls", objNull])) then {
-    _ctrlBackground = (findDisplay 46) ctrlCreate ["RscPicture", 755];
-    _ctrlBackground ctrlCommit 0;
-    _ctrlBackground ctrlSetText "\FCLA_Interactions\CBRN\data\Detector_Background.paa";
-    _ctrlBackground ctrlSetPosition [0.5 - ((256 * pixelW) / 2),safeZoneY,256 * pixelW, 256 * pixelH];
-    _ctrlBackground ctrlSetTextColor [1, 1, 1, 1];
-    _ctrlBackground ctrlSetBackgroundColor [1, 1, 1, 1];
-
+  if (isNil {_unit getVariable "FCLA_CBRN_Chemical_Detector_Ctrls"}) then {
     _ctrlColorPalette = (findDisplay 46) ctrlCreate ["RscPicture", 753];
     _ctrlColorPalette ctrlCommit 0;
     _ctrlColorPalette ctrlSetText "\FCLA_Interactions\CBRN\data\Detector_Color_Palette.paa";
@@ -75,30 +62,43 @@ _perFrameHandlerOne = [{
     _ctrlNeedle ctrlSetPosition [0.5 - ((256 * pixelW) / 2), safeZoneY - ((256 * pixelH) / 2), 256 * pixelW, 256 * pixelH];
     _ctrlNeedle ctrlSetTextColor [1, 1, 1, 1];
     _ctrlNeedle ctrlSetBackgroundColor [1, 1, 1, 1];
-    uiNamespace setVariable ["FCLA_CBRN_Chemical_Detector_Ctrls", [_ctrlBackground, _ctrlColorPalette, _ctrlNeedle]];
+
+    _ctrlBackground = (findDisplay 46) ctrlCreate ["RscPicture", 755];
+    _ctrlBackground ctrlCommit 0;
+    _ctrlBackground ctrlSetText "\FCLA_Interactions\CBRN\data\Detector_Background.paa";
+    _ctrlBackground ctrlSetPosition [0.5 - ((256 * pixelW) / 2),safeZoneY,256 * pixelW, 256 * pixelH];
+    _ctrlBackground ctrlSetTextColor [1, 1, 1, 1];
+    _ctrlBackground ctrlSetBackgroundColor [1, 1, 1, 1];
+    _unit setVariable ["FCLA_CBRN_Chemical_Detector_Ctrls", [_ctrlColorPalette, _ctrlNeedle, _ctrlBackground]];
   };
 
 
-  _ctrls = uiNamespace getVariable ["FCLA_CBRN_Chemical_Detector_Ctrls", [ctrlNull, ctrlNull, ctrlNull]];
-  _ctrlNeedle = _ctrls select 0;
-  _ctrlBackground = _ctrls select 1;
-  _ctrlColorPalette = _ctrls select 2;
+  _ctrls = _unit getVariable ["FCLA_CBRN_Chemical_Detector_Ctrls", [controlNull, controlNull, controlNull]];
+  _ctrlColorPalette = _ctrls select 0;
+  _ctrlNeedle = _ctrls select 1;
+  _ctrlBackground = _ctrls select 2;
+
+  _time = CBA_missionTime;
+  _delta = _time - _lastTimeUpdated;
+  _unit setVariable ["FCLA_CBRN_Threat_Level", _max];
 
   _ambientBrightness = ([] call ACE_common_fnc_ambientBrightness) max 0.25;
+  _ctrlColorPalette ctrlSetTextColor [_ambientBrightness, _ambientBrightness, _ambientBrightness, 1];
   _ctrlNeedle ctrlSetTextColor [_ambientBrightness, _ambientBrightness, _ambientBrightness, 1];
   _ctrlBackground ctrlSetTextColor [_ambientBrightness, _ambientBrightness, _ambientBrightness, 1];
-  _ctrlColorPalette ctrlSetTextColor [_ambientBrightness, _ambientBrightness, _ambientBrightness, 1];
+  _ctrlColorPalette ctrlCommit _delta;
   _ctrlNeedle ctrlCommit _delta;
   _ctrlBackground ctrlCommit _delta;
-  _ctrlColorPalette ctrlCommit _delta;
   _ctrlNeedle ctrlSetAngle [(linearConversion [0, 4, _max - 0.05 + (random 0.1), 90, -90, true]) mod 360, 0.5, 0.5];
+
+  _args set [2, _time];
 }, 0.5, [_unit, _item, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 
 
 
 //Reproducir sonido.
 _perFrameHandlerTwo = [{
-  _args params ["_unit", "_item", "_lastTimeUpdated"];
+  _args params ["_unit", "_item"];
   _isSwimming = [_unit] call ACE_Common_fnc_isSwimming;
   _isDesactivated = !(_unit getVariable ["FCLA_Chemical_Detector_Activated", false]);
   _isNotCompatible = !(_item in FCLA_Chemical_Detectors);
@@ -109,12 +109,10 @@ _perFrameHandlerTwo = [{
   };
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
-  _time = CBA_missionTime;
-  _delta = _time - (_this select 0);
   _currentThreatLevel = _unit getVariable ["FCLA_CBRN_Threat_Level", 0];
-  (_this select 0) set [0, _time];
   if (_currentThreatLevel < 0.25) exitWith {};
 
+  _time = CBA_missionTime;
   _soundDelay = linearConversion [0.75, 3, _currentThreatLevel, 2, 0.05, true];
   _lastSoundTime = _unit getVariable ["FCLA_Chemical_Detector_Last_Sound_Time", -1];
   if ((_lastSoundTime + _soundDelay) <= _time) then {
@@ -122,4 +120,4 @@ _perFrameHandlerTwo = [{
     playSound format ["FCLA_Chemical_Detector_Alert_%1", _currentVolume];
     _unit setVariable ["FCLA_Chemical_Detector_Last_Sound_Time", _time, true];
   };
-}, 0.5, [_unit, _item, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+}, 0.5, [_unit, _item]] call CBA_fnc_addPerFrameHandler;

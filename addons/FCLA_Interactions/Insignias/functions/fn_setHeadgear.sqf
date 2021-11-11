@@ -51,4 +51,5 @@ _headgearWithInsignia = switch (true) do {
 
 //Colocar casco.
 if (!(isClass (configFile >> "CfgWeapons" >> _headgearWithInsignia))) exitWith {};
+removeHeadgear _unit;
 _unit addHeadgear _headgearWithInsignia;

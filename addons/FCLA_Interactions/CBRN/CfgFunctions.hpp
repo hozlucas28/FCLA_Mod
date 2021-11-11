@@ -40,8 +40,6 @@ class CBRN {
   class conditionCheckOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Backpack\fn_conditionCheckOxygen.sqf";};
   class conditionTurnOnChemicalDetectorCBRN {file = "\FCLA_Interactions\CBRN\functions\Chemical_Detector\fn_conditionTurnOn.sqf";};
   class conditionTurnOffChemicalDetectorCBRN {file = "\FCLA_Interactions\CBRN\functions\Chemical_Detector\fn_conditionTurnOff.sqf";};
-  class conditionTurnUpVolumeChemicalDetectorCBRN {file = "\FCLA_Interactions\CBRN\functions\Chemical_Detector\fn_conditionTurnUpVolume.sqf";};
-  class conditionTurnDownVolumeChemicalDetectorCBRN {file = "\FCLA_Interactions\CBRN\functions\Chemical_Detector\fn_conditionTurnDownVolume.sqf";};
   class conditionChemicalExposureCBRN {file = "\FCLA_Interactions\CBRN\functions\Medical_Menu\fn_condition.sqf";};
   class conditionRechargeOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Oxygen_Tanks\fn_condition.sqf";};
 

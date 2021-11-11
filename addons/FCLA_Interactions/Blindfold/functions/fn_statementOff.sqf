@@ -19,10 +19,12 @@ _compatibleItemsBandages = ["FCLA_G_Blindfold_01_Black_F", "FCLA_G_Blindfold_01_
 
 //Quitar venda.
 removeGoggles _target;
-[_player, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+_animation = if (_target != _player) then {"putDown";} else {"FCLA_Night_Vision_Switch";};
 if (_currentGoggles == (_compatibleBandages select 0)) then {
+	[_player, _animation, "playActionNow"] call FCLA_Common_fnc_playAnimation;
 	[_player, _compatibleItemsBandages select 0, "", -1] call ACE_Common_fnc_addToInventory;
 } else {
+	[_player, _animation, "playActionNow"] call FCLA_Common_fnc_playAnimation;
 	[_player, _compatibleItemsBandages select 1, "", -1] call ACE_Common_fnc_addToInventory;
 };
 

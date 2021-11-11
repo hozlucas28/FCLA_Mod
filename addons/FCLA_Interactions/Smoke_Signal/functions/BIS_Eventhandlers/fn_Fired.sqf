@@ -53,8 +53,8 @@ if ((!FCLA_Smoke_Signal_Allowed) || (_isUnderwater) || (_isDesactivated) || (_is
   drop [["\A3\data_f\ParticleEffects\Universal\Universal", 16, 14, 5, 1], "", "Billboard", 1, 0.5, [_projectilePos select 0, _projectilePos select 1, (_projectilePos select 2) + 0.1], [0, 0, 0], 0, 11, 7, 0, [1, 10], [[1, 1, 1, 1], [1, 1, 1, 0]], [2], 0, 0, "", "", ""];
   drop [["\A3\data_f\ParticleEffects\Universal\Universal_02.p3d", 8, 0, 40, 0], "", "Billboard", 1, 0.3, [_projectilePos select 0, _projectilePos select 1, (_projectilePos select 2) + 0.3], [0, 0, 0], 3, 10.2, 8, 0.01, [0, 20], [[_color select 0, _color select 1, _color select 2, 1], [_color select 0, _color select 1, _color select 2, 0]], [0.1], 0, 0, "", "", ""];
 
-  _soundSourceOne = createVehicle ["VirtualAISquad", _projectilePos, [], 0, "CAN_COLLIDE"];
-  _soundSourceTwo = createVehicle ["VirtualAISquad", _projectilePos, [], 0, "CAN_COLLIDE"];
+  _soundSourceOne = createAgent ["VirtualAISquad", _projectilePos, [], 0, "CAN_COLLIDE"];
+  _soundSourceTwo = createAgent ["VirtualAISquad", _projectilePos, [], 0, "CAN_COLLIDE"];
   [_soundSourceOne, "FCLA_Smoke_Explosion", 4, 1000, true] call FCLA_Common_fnc_globalSay3D;
   [_soundSourceTwo, "FCLA_Smoke_Explosion_Echo", 3, 2000, true] call FCLA_Common_fnc_globalSay3D;
 

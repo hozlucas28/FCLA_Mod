@@ -22,12 +22,12 @@ _Condition = {
   _isNotSwimming = !([_player] call ACE_Common_fnc_isSwimming);
   _isNotDragging = !(_player getVariable ["ACE_Dragging_isDragging", false]);
   _isNotCarrying = !(_player getVariable ["ACE_Dragging_isCarrying", false]);
-  _isDesactivated = _target getVariable ["FCLA_Shower_Status", false];
+  _isDesactivated = !(_target getVariable ["FCLA_Shower_Status", false]);
   _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
   _isTouchingGround = isTouchingGround _player;
   _isNotSurrendering = !(_player getVariable ["ACE_Captives_isSurrendering", false]);
   _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
-  (_isAlive) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isDesactivated) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation)
+  (_isAlive) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isDesactivated) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation);
 };
 
 _Statement = {
@@ -36,7 +36,7 @@ _Statement = {
   [_player, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 };
 
-_turnOn = ["FCLA_Turn_On_Shower", "Encender ducha", "\FCLA_Data\ACE_Actions\Shower_On.paa", _Statement, _Condition] call ACE_Interact_Menu_fnc_createAction;
+_turnOn = ["FCLA_Turn_On_Shower", "Encender", "\FCLA_Data\ACE_Actions\Shower_On.paa", _Statement, _Condition] call ACE_Interact_Menu_fnc_createAction;
 [_object, 0, [], _turnOn] call ACE_Interact_Menu_fnc_addActionToObject;
 
 
@@ -53,7 +53,7 @@ _Condition = {
   _isTouchingGround = isTouchingGround _player;
   _isNotSurrendering = !(_player getVariable ["ACE_Captives_isSurrendering", false]);
   _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
-  (_isAlive) && (_isActivated) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation)
+  (_isAlive) && (_isActivated) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation);
 };
 
 _Statement = {
@@ -62,5 +62,5 @@ _Statement = {
   [_player, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 };
 
-_turnOff = ["FCLA_Turn_Off_Shower", "Apagar ducha", "\FCLA_Data\ACE_Actions\Shower_Off.paa", _Statement, _Condition] call ACE_Interact_Menu_fnc_createAction;
+_turnOff = ["FCLA_Turn_Off_Shower", "Apagar", "\FCLA_Data\ACE_Actions\Shower_Off.paa", _Statement, _Condition] call ACE_Interact_Menu_fnc_createAction;
 [_object, 0, [], _turnOff] call ACE_Interact_Menu_fnc_addActionToObject;
