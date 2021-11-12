@@ -5,13 +5,14 @@ addonOption: "FCLA Development - UIDs"
 Content:
     UIDs de los mandos de FCLA.
 
-Mods classnames:
-    - Vanilla.
-    - FCLA Mod.
+Listed people:
+    - Byron.
+    - Kovalsky.
+    - Legion.
 ---------------------------------------------------------------------------- */
 
 "[
-'76561198010584812', //Kovalsky.
-'76561198178496662', //Byron.
-'76561197982853635' //Legion.
+'76561198178496662',
+'76561198010584812',
+'76561197982853635'
 ]"

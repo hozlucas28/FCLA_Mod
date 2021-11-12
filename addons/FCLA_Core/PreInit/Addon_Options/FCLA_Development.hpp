@@ -96,7 +96,7 @@
 	["FCLA Desarrollo", "UIDs"],
 	#include "\FCLA_Core\PreInit\Addon_Options\includes\Commanders.hpp",
 	GLOBAL,
-	{},
+	{FCLA_Commanders_UIDs = parseSimpleArray _this;},
 	false
 ] call CBA_fnc_addSetting;
 
@@ -107,7 +107,7 @@
 	["FCLA Desarrollo", "UIDs"],
 	#include "\FCLA_Core\PreInit\Addon_Options\includes\Editors.hpp",
 	GLOBAL,
-	{},
+	{FCLA_Editors_UIDs = parseSimpleArray _this;},
 	false
 ] call CBA_fnc_addSetting;
 
@@ -118,7 +118,7 @@
 	["FCLA Desarrollo", "UIDs"],
 	#include "\FCLA_Core\PreInit\Addon_Options\includes\Instructors.hpp",
 	GLOBAL,
-	{},
+	{FCLA_Instructors_UIDs = parseSimpleArray _this;},
 	false
 ] call CBA_fnc_addSetting;
 

@@ -5,15 +5,20 @@ addonOption: "FCLA Development - UIDs"
 Content:
     UIDs de los editores de FCLA.
 
-Mods classnames:
-    - Vanilla.
-    - FCLA Mod.
+Listed people:
+    - Ghostkiller.
+    - hozlucas28.
+    - Mario.
+    - Naretick.
+    - Sagara.
+
+
 ---------------------------------------------------------------------------- */
 
 "[
-'76561198137876583', //hozlucas28.
-'76561198059595506', //Naretick.
-'76561198173170422', //Sagara.
-'76561198304995327', //Ghostkiller.
-'76561198260536786' //Mario.
+'76561198304995327',
+'76561198137876583',
+'76561198260536786',
+'76561198059595506',
+'76561198173170422'
 ]"

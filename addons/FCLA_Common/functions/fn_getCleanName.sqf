@@ -29,4 +29,4 @@ _nameWithoutRank = [_originalName, _currentRank, ""] call CBA_fnc_replace;
 
 
 //Retornar nombre en limpio.
-[_nameWithoutRank] call CBA_fnc_leftTrim;
+[_nameWithoutRank] call CBA_fnc_trim;
