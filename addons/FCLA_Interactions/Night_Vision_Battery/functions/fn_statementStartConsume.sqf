@@ -21,7 +21,7 @@ if (_isConsuming) exitWith {};
 //Comenzar consumo.
 _handle = [{
   _args params ["_player", "_lastTimeUpdated"];
-  if ([_player] call FCLA_Interactions_fnc_conditionStopConsumeNVB) exitWith {[_player] spawn FCLA_Interactions_fnc_statementStopConsumeNVB;};
+  if ((!FCLA_NVG_Require_Battery) || (!alive _player)) exitWith {[_player] spawn FCLA_Interactions_fnc_statementStopConsumeNVB;};
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
   _battery = _player getVariable ["FCLA_NVG_Battery", FCLA_NVG_Initial_Battery];

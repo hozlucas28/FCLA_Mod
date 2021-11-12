@@ -16,7 +16,7 @@ _this spawn {
 
 
   //Si no hay jugadores/unidades controladas cerca.
-  _areNearPlayers = [_unit, 50, 1, false] call FCLA_Functions_fnc_nearPlayer;
+  _areNearPlayers = [_unit, 50, 1, false] call FCLA_Common_fnc_nearPlayer;
   if (!_areNearPlayers) exitWith {};
 
 

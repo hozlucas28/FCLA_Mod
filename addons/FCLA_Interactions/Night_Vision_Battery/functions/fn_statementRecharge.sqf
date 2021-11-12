@@ -32,7 +32,7 @@ _statementOnFailure = {
 
 _Condition = {
   (_this select 0) params ["_player"];
-  [_player] call FCLA_Interactions_fnc_conditionNVB;
+  [_player] call FCLA_Interactions_fnc_conditionRechargeNVB;
 };
 
 [5, _player, _statementOnFinish, _statementOnFailure, "Recargando batería...", _Condition] call ACE_Common_fnc_progressBar;

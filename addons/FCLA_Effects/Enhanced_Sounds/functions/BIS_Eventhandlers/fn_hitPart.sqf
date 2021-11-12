@@ -13,7 +13,7 @@
 (_this select 0) params ["_target", "_shooter", "_bullet", "_position", "_velocity", "_selection", "_ammo"];
 _isPlayer = [_target, false] call ACE_Common_fnc_isPlayer;
 _isExplosive = (_ammo select 3) == 1;
-_areNearPlayers = [_target, 20, 1, false] call FCLA_Functions_fnc_nearPlayer;
+_areNearPlayers = [_target, 20, 1, false] call FCLA_Common_fnc_nearPlayer;
 _currentHeadgear = headgear _target;
 _helmetProtection = (configfile >> "CfgWeapons" >> _currentHeadgear >> "ItemInfo" >> "HitpointsProtectionInfo" >> "Head" >> "armor") call BIS_fnc_getCfgData;
 if ((_selection select 0 != "head") || (!_areNearPlayers)) exitWith {};
