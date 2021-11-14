@@ -13,7 +13,8 @@
 params ["_lastLoadout", "_lastVehicle", "_lastPosition", "_lastDirection"];
 
 
+
 player setPos _lastPosition;
 player setDir _lastDirection;
-player moveInCargo _lastVehicle;
 player setUnitLoadout _lastLoadout;
+[[player], _lastVehicle] call ZEN_Common_fnc_teleportIntoVehicle;

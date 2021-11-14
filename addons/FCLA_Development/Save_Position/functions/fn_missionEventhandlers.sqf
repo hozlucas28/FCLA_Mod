@@ -22,6 +22,7 @@ addMissionEventHandler ["PlayerConnected", {
 }];
 
 
+
 //Al desconectarse.
 addMissionEventHandler ["HandleDisconnect", {
  params ["_body", "_id", "_uid", "_name"];
