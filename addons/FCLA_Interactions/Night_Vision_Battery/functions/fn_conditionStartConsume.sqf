@@ -13,7 +13,7 @@ params ["_unit"];
 #include "\FCLA_Interactions\Night_Vision_Battery\includes\Incompatible_Vehicles.hpp"
 _typeOfVehicle = typeOf (vehicle _unit);
 _inCompatibleVehicle = !(_typeOfVehicle in _incompatibleVehicles);
-_notInVehicleTypesExcluded = !(_typeOfVehicle isKindOf "Tank") && !(_typeOfVehicle isKindOf "Air");
+_notInVehicleTypesExcluded = !(_typeOfVehicle isKindOf "Wheeled_APC_F") && !(_typeOfVehicle isKindOf "Tank") && !(_typeOfVehicle isKindOf "Air");
 
 
 //Verificar si es tripulante ó ocupa un asiento importante.
