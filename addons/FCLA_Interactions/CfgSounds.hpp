@@ -63,9 +63,9 @@ class FCLA_Show_ID {
 	titles[] = {0, ""};
 };
 
-class FCLA_Unfold_Map {
+class FCLA_Map_Unfolded {
   name = "FCLA - Desplegar mapa";
-  sound[] = {"\FCLA_Interactions\sounds\Unfold_Map.ogg", db+5, 1};
+  sound[] = {"\FCLA_Interactions\sounds\Map_Unfolded.ogg", db+5, 1};
   titles[] = {0, ""};
 };
 

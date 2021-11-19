@@ -14,19 +14,15 @@ params ["_player"];
 
 
 //Compartir mapa.
-playSound "FCLA_Unfold_Map";
+playSound "FCLA_Map_Unfolded";
 _player setVariable ["FCLA_Sharing_Map", true, true];
-[{
-  if (!((_this select 0) getVariable ["FCLA_Sharing_Map", false])) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
-  if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
-  [["Compartiendo mapa:", 1.25], ["| √ |", 1.25, [0.345, 0.839, 0.553, 1]], true] call CBA_fnc_Notify;
-}, 0.5, _player] call CBA_fnc_addPerFrameHandler;
+[["Compartiendo mapa:", 1.25], ["| √ |", 1.25, [0.345, 0.839, 0.553, 1]], false] call CBA_fnc_Notify;
 
 
 //Reproducir sonido.
 _soundSource = createAgent ["VirtualAISquad", getPos _player, [], 0, "CAN_COLLIDE"];
 _soundSource attachTo [_player, [0, 0, 0]];
-[_soundSource, "FCLA_Unfold_Map", 2, 5, true] call FCLA_Common_fnc_globalSay3D;
+[_soundSource, "FCLA_Map_Unfolded", 2, 5, true] call FCLA_Common_fnc_globalSay3D;
 
 
 //Dejar de compartir.

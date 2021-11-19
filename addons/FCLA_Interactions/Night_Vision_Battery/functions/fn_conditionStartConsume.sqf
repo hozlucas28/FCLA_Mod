@@ -9,6 +9,8 @@
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.
+false
+/*
 params ["_unit"];
 #include "\FCLA_Interactions\Night_Vision_Battery\includes\Incompatible_Vehicles.hpp"
 _typeOfVehicle = typeOf (vehicle _unit);
@@ -32,3 +34,4 @@ _notInCameraMode = !(_unit in (call ACE_Spectator_fnc_players));
 _notInNormalVision = (currentVisionMode _unit) != 0;
 _inCompatibleVehicleRole = (_inCargo) || ((_inCompatibleVehicle) && (_notInVehicleTypesExcluded)) || ((_inImportantSeat) && (cameraView != "GUNNER"));
 (FCLA_NVG_Require_Battery) && (_hasNVG) && (_isAlive) && (_isPlayer) && (_notInUAV) && (_notInCurator) && (_notInCameraMode) && (_notInNormalVision) && (_inCompatibleVehicleRole)
+*/

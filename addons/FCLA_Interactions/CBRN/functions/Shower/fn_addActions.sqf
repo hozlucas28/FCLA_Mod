@@ -8,10 +8,6 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-//Variable de referencia.
-params ["_object"];
-_object setVariable ["BIN_deconshower_disableAction", true, true];
-
 
 
 /* ------------------------------- ENCENDER -------------------------------- */
@@ -37,7 +33,7 @@ _Statement = {
 };
 
 _turnOn = ["FCLA_Turn_On_Shower", "Encender", "\FCLA_Data\ACE_Actions\Shower_On.paa", _Statement, _Condition] call ACE_Interact_Menu_fnc_createAction;
-[_object, 0, [], _turnOn] call ACE_Interact_Menu_fnc_addActionToObject;
+["DeconShower_01_F", 0, [], _turnOn] call ACE_Interact_Menu_fnc_addActionToClass;
 
 
 /* -------------------------------- APAGAR --------------------------------- */
@@ -63,4 +59,4 @@ _Statement = {
 };
 
 _turnOff = ["FCLA_Turn_Off_Shower", "Apagar", "\FCLA_Data\ACE_Actions\Shower_Off.paa", _Statement, _Condition] call ACE_Interact_Menu_fnc_createAction;
-[_object, 0, [], _turnOff] call ACE_Interact_Menu_fnc_addActionToObject;
+["DeconShower_01_F", 0, [], _turnOff] call ACE_Interact_Menu_fnc_addActionToClass;

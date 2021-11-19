@@ -16,11 +16,7 @@ params ["_target", "_player"];
 //Mostrar mapa.
 openMap true;
 _player linkItem (((getUnitLoadout _target) select 9) select 0);
-[{
-  if (!visibleMap) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
-  if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
-  [["Mapa de:", 1.25], [(name (_this select 0)), 1, [0.345, 0.839, 0.553, 1]], true] call CBA_fnc_Notify;
-}, 0.5, _target] call CBA_fnc_addPerFrameHandler;
+[["Mapa de:", 1.25], [name _target, 1, [0.345, 0.839, 0.553, 1]], true] call CBA_fnc_Notify;
 
 
 //Reproducir sonido.

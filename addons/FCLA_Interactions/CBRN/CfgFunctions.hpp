@@ -29,11 +29,18 @@ class CBRN {
     postInit = 1;
   };
 
+  class addActionRechargeOxygenCBRN {
+    file = "\FCLA_Interactions\CBRN\functions\Oxygen_Tanks\fn_addAction.sqf";
+    postInit = 1;
+  };
+
+  class addActionsShowerCBRN {
+    file = "\FCLA_Interactions\CBRN\functions\Shower\fn_addActions.sqf";
+    postInit = 1;
+  };
+
   class killedCBRNEH {file = "\FCLA_Interactions\CBRN\functions\BIS_Eventhandlers\fn_Killed.sqf";};
   class respawnCBRNEH {file = "\FCLA_Interactions\CBRN\functions\BIS_Eventhandlers\fn_Respawn.sqf";};
-
-  class addActionRechargeOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Oxygen_Tanks\fn_addAction.sqf";};
-  class addActionsShowerCBRN {file = "\FCLA_Interactions\CBRN\functions\Shower\fn_addActions.sqf";};
 
   class conditionActivateOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Backpack\fn_conditionActivateOxygen.sqf";};
   class conditionDesactivateOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Backpack\fn_conditionDesactivateOxygen.sqf";};

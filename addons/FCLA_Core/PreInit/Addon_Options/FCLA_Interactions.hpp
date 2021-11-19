@@ -34,7 +34,7 @@
 
 [
 	"FCLA_Plate_Number_Allowed", "CHECKBOX",
-	["¿Se pueden ver las patentes/placas?", "Si se activa se podra ver el número de placa/patente de los vehículos, a travez del menú ACE 3D."],
+	["¿Se pueden ver las matrículas?", "Si se activa se podra ver el número de matrícula de los vehículos, a travez del menú ACE 3D."],
 	["FCLA Interacciones", "• General"],
 	true,
 	GLOBAL,

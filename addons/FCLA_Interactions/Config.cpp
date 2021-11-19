@@ -85,6 +85,8 @@ class CfgVehicles {
 	class AllVehicles: All {};
 	class Land: AllVehicles {};
 	class Man: Land {};
+	class LandVehicle: Land {};
+	class Ship: AllVehicles {};
 
 	//Humanos.
 	class CAManBase: Man {
@@ -93,14 +95,12 @@ class CfgVehicles {
 				#include "\FCLA_Interactions\Blindfold\ACE_MainActions.hpp"
 				#include "\FCLA_Interactions\ID_Card\ACE_MainAction.hpp"
 				#include "\FCLA_Interactions\Insignias\ACE_MainActions.hpp"
-				#include "\FCLA_Interactions\Share_Map\ACE_MainAction.hpp"
 			};
 		};
 
 	  class ACE_SelfActions {
 			#include "\FCLA_Interactions\ID_Card\ACE_SelfAction.hpp"
 			#include "\FCLA_Interactions\Light_Sticks\ACE_SelfActions.hpp"
-			#include "\FCLA_Interactions\Share_Map\ACE_SelfAction.hpp"
 
 	    class ACE_Equipment {
 				#include "\FCLA_Interactions\CBRN\ACE_Equipment.hpp"
@@ -115,8 +115,17 @@ class CfgVehicles {
 	  };
 	};
 
-	//Vehículos terrestres.
-	class LandVehicle: Land {
+	//Coches.
+	class Car: LandVehicle {
+		class ACE_Actions {
+			class ACE_MainActions {
+				#include "\FCLA_Interactions\Plate_Number\ACE_MainAction.hpp"
+			};
+		};
+	};
+
+	//Tanques.
+	class Tank: LandVehicle {
 		class ACE_Actions {
 			class ACE_MainActions {
 				#include "\FCLA_Interactions\Plate_Number\ACE_MainAction.hpp"
@@ -125,7 +134,7 @@ class CfgVehicles {
 	};
 
 	//Vehículos maritimos.
-	class Ship: AllVehicles {
+	class Ship_F: Ship {
 		class ACE_Actions {
 			class ACE_MainActions {
 				#include "\FCLA_Interactions\Plate_Number\ACE_MainAction.hpp"
@@ -187,8 +196,9 @@ class ACE_Medical_Treatment_Actions {
 |********************************************************************************/
 
 class Extended_InitPost_EventHandlers {
-	class DeconShower_01_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_addActionsShowerCBRN;";};
-	class Land_GasTank_02_F {init = "[_this select 0] spawn FCLA_Interactions_fnc_addActionRechargeOxygenCBRN;";};
+	class DeconShower_01_F {
+		init = "(_this select 0) setVariable ['BIN_deconshower_disableAction', true, true];";
+	};
 };
 
 class Extended_Fired_Eventhandlers {
