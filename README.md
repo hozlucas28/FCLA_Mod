@@ -5,3 +5,5 @@
 * Facebook: https://www.facebook.com/ArmA3FCLA/
 
 **- Reportar (error/bug/fallo):** https://forms.gle/CpgECcqcvPZpEh7x7
+
+> Si desea tomar funciones del mod puede hacerlo libremente, Sin embargo no se proporcionara ayuda alguna.
