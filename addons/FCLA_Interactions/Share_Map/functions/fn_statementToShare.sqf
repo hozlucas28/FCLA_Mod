@@ -14,15 +14,18 @@ params ["_player"];
 
 
 //Compartir mapa.
-playSound "FCLA_Map_Unfolded";
 _player setVariable ["FCLA_Sharing_Map", true, true];
-[["Compartiendo mapa:", 1.25], ["| √ |", 1.25, [0.345, 0.839, 0.553, 1]], false] call CBA_fnc_Notify;
+[{
+  if (!((_this select 0) getVariable ["FCLA_Sharing_Map", false])) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
+  if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
+  hintSilent parseText "<t size='1.5'>Compartiendo mapa:</t><br/><t size='1.5' color='#FF58D68D'>| √ |</t>";
+}, 0.5, _player] call CBA_fnc_addPerFrameHandler;
 
 
 //Reproducir sonido.
 _soundSource = createAgent ["VirtualAISquad", getPos _player, [], 0, "CAN_COLLIDE"];
 _soundSource attachTo [_player, [0, 0, 0]];
-[_soundSource, "FCLA_Map_Unfolded", 2, 5, true] call FCLA_Common_fnc_globalSay3D;
+[_soundSource, "FCLA_Map_Unfolded", 2, 250, true] call FCLA_Common_fnc_globalSay3D;
 
 
 //Dejar de compartir.
@@ -40,5 +43,6 @@ _soundSource attachTo [_player, [0, 0, 0]];
   params ["_player", "_soundSource"];
   deleteVehicle _soundSource;
   _player setVariable ["FCLA_Sharing_Map", nil, true];
-  [["Compartiendo mapa:", 1.25], ["| X |", 1.25, [0.839, 0.345, 0.345, 1]], true] call CBA_fnc_Notify;
+  hintSilent parseText "<t size='1.5'>Compartiendo mapa:</t><br/><t size='1.5' color='#FFD65858'>| X |</t>";
+  [{hintSilent "";}, [], 4] call CBA_fnc_waitAndExecute;
 }, [_player, _soundSource]] call CBA_fnc_waitUntilAndExecute;

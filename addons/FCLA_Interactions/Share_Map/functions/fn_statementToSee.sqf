@@ -16,7 +16,11 @@ params ["_target", "_player"];
 //Mostrar mapa.
 openMap true;
 _player linkItem (((getUnitLoadout _target) select 9) select 0);
-[["Mapa de:", 1.25], [name _target, 1, [0.345, 0.839, 0.553, 1]], true] call CBA_fnc_Notify;
+[{
+  if (!visibleMap) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
+  if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
+  hintSilent parseText format ["<t size='1.5'>Mapa de:</t><br/><t size='1.25' color='#FF58D68D'>%1</t>", name (_this select 0)];
+}, 0.5, _target] call CBA_fnc_addPerFrameHandler;
 
 
 //Reproducir sonido.
@@ -27,7 +31,7 @@ playsound _randomSound;
 //Ocultar mapa.
 [{
   params ["_target", "_player"];
-  _inVehicle = isNull objectParent _player;
+  _inVehicle = !isNull objectParent _player;
   _isNotOnMap = !visibleMap;
   _areNotNear = _target distance _player > 2;
   _isNotAlive = !alive _target;
@@ -41,9 +45,9 @@ playsound _randomSound;
   _isNotSharingMap = !(_target getVariable ["FCLA_Sharing_Map", false]);
 
   switch (true) do {
-    case (_areNotNear): {[[(name _target) + ":", 1.25], ["Se ha alejado demasiado.", 1, [0.839, 0.345, 0.345, 1]], true] call CBA_fnc_Notify;};
-    case (_isNotSharingMap): {[[(name _target) + ":", 1.25], ["Dejo de compartir su mapa.", 1, [0.839, 0.345, 0.345, 1]], true] call CBA_fnc_Notify;};
-    default {[[""], true] call CBA_fnc_Notify;};
+    case (_areNotNear): {hintSilent parseText format ["<t size='1.5'>%1:</t><br/><t size='1.25' color='#FFD65858'>Se ha alejado demasiado.</t>", name _target];};
+    case (_isNotSharingMap): {hintSilent parseText format ["<t size='1.5'>%1:</t><br/><t size='1.25' color='#FFD65858'>Dejo de compartir su mapa.</t>", name _target];};
+    default {hintSilent "";};
   };
 
   openMap false;
