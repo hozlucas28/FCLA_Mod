@@ -15,8 +15,12 @@ if (_unit getVariable ['FCLA_Disable_Insignias', false]) exitWith {};
 
 
 //Colocar insignia.
-_unit setVariable ["BIS_fnc_setUnitInsignia_class", nil];
-[_unit, _insignia] call BIS_fnc_setUnitInsignia;
+_unit setVariable ["BIS_fnc_setUnitInsignia_class", nil, true];
+if (!([_unit] call FCLA_Common_fnc_isCurator)) then {
+  [_unit, _insignia] call BIS_fnc_setUnitInsignia;
+} else {
+  [_unit, "Curator"] call BIS_fnc_setUnitInsignia;
+};
 
 
 //Guardar insignia.

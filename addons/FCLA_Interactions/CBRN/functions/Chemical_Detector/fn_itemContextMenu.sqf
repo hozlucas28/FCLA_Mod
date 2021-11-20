@@ -58,7 +58,7 @@ _conditionToEnable = {
   _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
   _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 2];
   _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
-  _isCompatible = _item in FCLA_Chemical_Detectors;
+  _isCompatible = _item in FCLA_CBRN_Compatible_Chemical_Detectors;
   _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
   (FCLA_CBRN) && (_isPlayer) && (_currentVolume < 5) && (_isActivated) && (_isCompatible) && (_isNotSwimming);
 };
@@ -68,7 +68,7 @@ _conditionToShow = {
   _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
   _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 2];
   _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
-  _isCompatible = _item in FCLA_Chemical_Detectors;
+  _isCompatible = _item in FCLA_CBRN_Compatible_Chemical_Detectors;
   _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
   (FCLA_CBRN) && (_isPlayer) && (_currentVolume <= 5) && (_isActivated) && (_isCompatible) && (_isNotSwimming);
 };
@@ -89,7 +89,7 @@ _conditionToEnable = {
   _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
   _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 2];
   _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
-  _isCompatible = _item in FCLA_Chemical_Detectors;
+  _isCompatible = _item in FCLA_CBRN_Compatible_Chemical_Detectors;
   _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
   (FCLA_CBRN) && (_isPlayer) && (_currentVolume > 0) && (_isActivated) && (_isCompatible) && (_isNotSwimming);
 };
@@ -99,7 +99,7 @@ _conditionToShow = {
   _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
   _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 2];
   _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
-  _isCompatible = _item in FCLA_Chemical_Detectors;
+  _isCompatible = _item in FCLA_CBRN_Compatible_Chemical_Detectors;
   _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
   (FCLA_CBRN) && (_isPlayer) && (_currentVolume >= 0) && (_isActivated) && (_isCompatible) && (_isNotSwimming);
 };

@@ -13,7 +13,7 @@ params ["_unit", "_item"];
 
 _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
 _isNotOnMap = !visibleMap;
-_isCompatible = _item in FCLA_Backpacks_With_Oxygen;
+_isCompatible = _item in FCLA_CBRN_Compatible_Backpacks_With_Oxygen;
 _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
 _isNotDragging = !(_unit getVariable ["ACE_Dragging_isDragging", false]);
 _isNotCarrying = !(_unit getVariable ["ACE_Dragging_isCarrying", false]);

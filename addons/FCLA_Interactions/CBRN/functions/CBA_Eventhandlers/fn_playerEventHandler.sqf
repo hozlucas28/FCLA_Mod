@@ -13,7 +13,7 @@
 ["loadout", {
   params ["_unit", "_newUnitLoadout", "_oldUnitLoadout"];
   _isChemicalDetectorDesactivated = !(_unit getVariable ["FCLA_Chemical_Detector_Activated", false]);
-  _haveCompatibleChemicalDetector = ({[_unit, _x] call BIS_fnc_hasItem} count FCLA_Chemical_Detectors) >= 1;
+  _haveCompatibleChemicalDetector = ({[_unit, _x] call BIS_fnc_hasItem} count FCLA_CBRN_Compatible_Chemical_Detectors) >= 1;
   if ((!FCLA_CBRN) || (_isChemicalDetectorDesactivated) || (_haveCompatibleChemicalDetector)) exitWith {};
   [_unit] spawn FCLA_Interactions_fnc_statementTurnOffChemicalDetectorCBRN;
 }, false] call CBA_fnc_addPlayerEventHandler;

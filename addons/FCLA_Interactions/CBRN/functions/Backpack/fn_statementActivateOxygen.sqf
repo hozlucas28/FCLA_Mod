@@ -43,8 +43,8 @@ _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
   _isNotAlive = !alive _player;
   _isSwimming = [_player] call ACE_Common_fnc_isSwimming;
   _inCameraMode = _player in (call ACE_Spectator_fnc_players);
-  _hasNotCompatibleMask = !(_currentGoggles in FCLA_Oxygen_Masks);
-  _hasNotCompatibleBackpack = !(_currentBackpack in FCLA_Backpacks_With_Oxygen);
+  _hasNotCompatibleMask = !(_currentGoggles in FCLA_CBRN_Compatible_Oxygen_Masks);
+  _hasNotCompatibleBackpack = !(_currentBackpack in FCLA_CBRN_Compatible_Backpacks_With_Oxygen);
   _isBackpackOxygenDesactivated = !(_backpackContainer getVariable ["FCLA_Backpack_Oxygen_Activated", false]);
   _isNotControlledUnit = _player != _controlledUnit;
 

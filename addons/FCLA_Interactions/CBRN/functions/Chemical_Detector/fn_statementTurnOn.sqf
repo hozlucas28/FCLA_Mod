@@ -20,7 +20,7 @@ _perFrameHandlerOne = [{
   _isSwimming = [_player] call ACE_Common_fnc_isSwimming;
   _isNotAlive = !alive _player;
   _isDesactivated = !(_player getVariable ["FCLA_Chemical_Detector_Activated", false]);
-  _isNotCompatible = !(_item in FCLA_Chemical_Detectors);
+  _isNotCompatible = !(_item in FCLA_CBRN_Compatible_Chemical_Detectors);
   if ((_isSwimming) || (_isNotAlive) || (_isDesactivated) || (_isNotCompatible)) exitWith {
     [_player] spawn FCLA_Interactions_fnc_statementTurnOffChemicalDetectorCBRN;
     [_handle] call CBA_fnc_removePerFrameHandler;
@@ -119,7 +119,7 @@ _perFrameHandlerTwo = [{
   _isSwimming = [_player] call ACE_Common_fnc_isSwimming;
   _inCameraMode = _controlledUnit in (call ACE_Spectator_fnc_players);
   _isDesactivated = !(_player getVariable ["FCLA_Chemical_Detector_Activated", false]);
-  _isNotCompatible = !(_item in FCLA_Chemical_Detectors);
+  _isNotCompatible = !(_item in FCLA_CBRN_Compatible_Chemical_Detectors);
   _isNotControlledUnit = _player != _controlledUnit;
   if ((_isSwimming) || (_isDesactivated) || (_isNotCompatible)) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
   if ((((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) || (_inCurator) || (_inCameraMode) || (_isNotControlledUnit)) exitWith {_args set [2, CBA_missionTime];};

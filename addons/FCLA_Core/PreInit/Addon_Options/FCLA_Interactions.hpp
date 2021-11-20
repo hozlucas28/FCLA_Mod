@@ -128,6 +128,39 @@
 ] call CBA_fnc_addSetting;
 
 
+[
+	"FCLA_CBRN_Compatible_Chemical_Detectors", "EDITBOX",
+	["Detectores químicos", "Determina los classnames de los detectores químicos compatibles para poder utilizar las interaciones relacionadas con la guerra biologíca/química."],
+	["FCLA Interacciones", "CBRN"],
+	#include "\FCLA_Core\PreInit\Addon_Options\includes\Chemical_Detectors.hpp",
+	GLOBAL,
+	{FCLA_CBRN_Compatible_Chemical_Detectors = parseSimpleArray _this;},
+	false
+] call CBA_Settings_fnc_init;
+
+
+[
+	"FCLA_CBRN_Compatible_Oxygen_Masks", "EDITBOX",
+	["Máscaras de oxígeno", "Determina los classnames de las máscaras compatibles para poder utilizar las interaciones relacionadas con la guerra biologíca/química."],
+	["FCLA Interacciones", "CBRN"],
+	#include "\FCLA_Core\PreInit\Addon_Options\includes\Oxygen_Masks.hpp",
+	GLOBAL,
+	{FCLA_CBRN_Compatible_Oxygen_Masks = parseSimpleArray _this;},
+	false
+] call CBA_Settings_fnc_init;
+
+
+[
+	"FCLA_CBRN_Compatible_Backpacks_With_Oxygen", "EDITBOX",
+	["Mochilas con oxígeno", "Determina los classnames de las mochilas compatibles para poder utilizar las interaciones relacionadas con la guerra biologíca/química."],
+	["FCLA Interacciones", "CBRN"],
+	#include "\FCLA_Core\PreInit\Addon_Options\includes\Backpacks_With_Oxygen.hpp",
+	GLOBAL,
+	{FCLA_CBRN_Compatible_Backpacks_With_Oxygen = parseSimpleArray _this;},
+	false
+] call CBA_Settings_fnc_init;
+
+
 
 /* ---------------------------- VISIÓN NOCTURNA ---------------------------- */
 
