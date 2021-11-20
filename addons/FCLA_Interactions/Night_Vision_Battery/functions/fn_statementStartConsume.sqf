@@ -21,8 +21,11 @@ if (_isConsuming) exitWith {};
 //Comenzar consumo.
 _handle = [{
   _args params ["_player", "_lastTimeUpdated"];
+  _isOnMap = visibleMap;
+  _inStairs = _player getVariable ["FCLA_inStairs", false];
+  _isUnconscious = _player getVariable ["ACE_isUnconscious", false];
   if ((!FCLA_NVG_Require_Battery) || (!alive _player)) exitWith {[_player] spawn FCLA_Interactions_fnc_statementStopConsumeNVB;};
-  if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
+  if ((((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) || (_isOnMap) || (_inStairs) || (_isUnconscious)) exitWith {setAperture 0; "FCLA_NVG_Battery_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, false];};
 
   _battery = _player getVariable ["FCLA_NVG_Battery", FCLA_NVG_Initial_Battery];
   switch (true) do {
@@ -35,10 +38,9 @@ _handle = [{
   };
 
   _delta = (CBA_missionTime - _lastTimeUpdated);
-  _NVGBattery = _player getVariable ["FCLA_NVG_Battery", 100];
   _batteryLifeTime = FCLA_NVG_Battery_Life_Time * 60;
   _batteryConsumed = linearConversion [0, _batteryLifeTime, _delta, 0, 100, true];
-  _player setVariable ["FCLA_NVG_Battery", (_NVGBattery - _batteryConsumed) max 0];
+  _player setVariable ["FCLA_NVG_Battery", (_battery - _batteryConsumed) max 0];
 
   _args set [1, CBA_missionTime];
 }, 0.1, [_player, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;

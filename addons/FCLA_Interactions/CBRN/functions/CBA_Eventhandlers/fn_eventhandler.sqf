@@ -73,11 +73,7 @@
 
 
   //Interrupción.
-  [{
-    _isDesactivated = !(_this getVariable ["FCLA_Shower_Status", false]);
-    _isCBRNDesactivated = isNil "FCLA_CBRN_Activated";
-    (_isDesactivated) || (_isCBRNDesactivated);
-  }, {
+  [{!(_this getVariable ["FCLA_Shower_Status", false])}, {
     _isDesactivated = !(_this getVariable ["FCLA_Shower_Status", false]);
     if (_isDesactivated) exitWith {};
     ["FCLA_Switch_Shower", [_this, false]] call CBA_fnc_localEvent;

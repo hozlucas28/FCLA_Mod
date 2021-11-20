@@ -48,12 +48,13 @@ switch ("" in _IDCard) do {
 //Forzar cierre.
 [{
 	_isOnMap = visibleMap;
-	_isDragging = _player getVariable ["ACE_Dragging_isDragging", false];
-	_isCarrying = _player getVariable ["ACE_Dragging_isCarrying", false];
-	_isSwimming = [_player] call ACE_Common_fnc_isSwimming;
-	_isSurrendering = _player getVariable ["ACE_Captives_isSurrendering", false];
-	_isNotTouchingGround = !(isTouchingGround _player);
-	(isNull findDisplay 10001) || (!FCLA_ID_Card_Allowed) || (_isOnMap) || (_isDragging) || (_isCarrying) || (_isSwimming) || (_isSurrendering) || (_isNotTouchingGround);
+	_isNotAlive = !alive _this;
+	_isDragging = _this getVariable ["ACE_Dragging_isDragging", false];
+	_isCarrying = _this getVariable ["ACE_Dragging_isCarrying", false];
+	_isSwimming = [_this] call ACE_Common_fnc_isSwimming;
+	_isSurrendering = _this getVariable ["ACE_Captives_isSurrendering", false];
+	_isNotTouchingGround = !(isTouchingGround _this);
+	(isNull findDisplay 10001) || (!FCLA_ID_Card_Allowed) || (_isOnMap) || (_isNotAlive) || (_isDragging) || (_isCarrying) || (_isSwimming) || (_isSurrendering) || (_isNotTouchingGround);
 }, {
 	if (!isNull findDisplay 10001) then {closeDialog 0};
   [_this, "", "SwitchMove"] call FCLA_Common_fnc_playAnimation;

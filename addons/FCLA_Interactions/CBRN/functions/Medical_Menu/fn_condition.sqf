@@ -13,7 +13,6 @@ params ["_medic", "_patient"];
 
 
 _areNotSwimming = !([_patient] call ACE_Common_fnc_isSwimming) && !([_medic] call ACE_Common_fnc_isSwimming);
-_isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
 _isTouchingGround = isTouchingGround _medic;
 _haveCompatibleChemicalDetector = ({([_medic, _x] call BIS_fnc_hasItem) || ([_patient, _x] call BIS_fnc_hasItem)} count FCLA_Chemical_Detectors) >= 1;
-(_areNotSwimming) && (_isCBRNActivated) && (_isTouchingGround) && (_haveCompatibleChemicalDetector)
+(FCLA_CBRN) && (_areNotSwimming) && (_isTouchingGround) && (_haveCompatibleChemicalDetector)

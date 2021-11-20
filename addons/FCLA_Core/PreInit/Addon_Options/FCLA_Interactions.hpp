@@ -93,10 +93,46 @@
 
 
 
+/* --------------------------------- CBRN ---------------------------------- */
+
+[
+	"FCLA_CBRN", "CHECKBOX",
+	["Activar", "Al activar se podran utilizar las funciones e interaciones relacionadas con la guerra biologíca/química.\n¡SI NO ESTA OPCIÓN NO FUE ACTIVADA, LOS MÓDULOS CBRN NO FUNCIONARAN!"],
+	["FCLA Interacciones", "CBRN"],
+	true,
+	GLOBAL,
+	{},
+	true
+] call CBA_fnc_addSetting;
+
+
+[
+	"FCLA_CBRN_Initial_Backpack_Oxygen", "SLIDER",
+	["Oxígeno inicial", "Determina el nivel de oxígeno inicial con la que contaran las mochilas CBRN."],
+	["FCLA Interacciones", "CBRN"],
+	[0, 100, 100, 0],
+	GLOBAL,
+	{},
+	false
+] call CBA_fnc_addSetting;
+
+
+[
+	"FCLA_CBRN_Backpack_Oxygen_Life_Time", "SLIDER",
+	["Duración del oxígeno", "Determina la duración del oxígeno, que tiene la mochila CBRN, en minutos."],
+	["FCLA Interacciones", "CBRN"],
+	[5, 180, 30, 0],
+	GLOBAL,
+	{},
+	false
+] call CBA_fnc_addSetting;
+
+
+
 /* ---------------------------- VISIÓN NOCTURNA ---------------------------- */
 
 [
-	"FCLA_NVG_Require_Battery","CHECKBOX",
+	"FCLA_NVG_Require_Battery", "CHECKBOX",
 	["¿NVGs requieren baterías?", "Al activar las gafas de visión nocturna requeriran de baterías para poder funcionar correctamente.\n¡SE PODRÁN RECARGAR A TRAVEZ DEL MENÚ ACE 3D, SI SE TIENE BATERÍAS NVG EN EL INVENTARIO!"],
 	["FCLA Interacciones", "Visión nocturna"],
 	true,

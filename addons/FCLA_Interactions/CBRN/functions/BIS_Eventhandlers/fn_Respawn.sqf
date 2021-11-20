@@ -10,7 +10,7 @@
 
 //Variables de referencia.
 params ["_unit", "_corpse"];
-if (isNil "FCLA_CBRN_Activated") exitWith {};
+if (!FCLA_CBRN) exitWith {};
 
 
 

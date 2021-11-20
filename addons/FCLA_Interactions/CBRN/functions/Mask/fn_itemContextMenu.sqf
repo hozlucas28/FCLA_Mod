@@ -14,23 +14,23 @@ if (["Contact"] call FCLA_Common_fnc_isDLCOwned) exitWith {};
 {
   _conditionToEnable = {
     params ["_unit", "_container", "_item"];
+    _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
     _currentGoggles = goggles _unit;
-    _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
-    (_isCBRNActivated) && (_currentGoggles != _item);
+    (FCLA_CBRN) && (_isPlayer) && (_currentGoggles != _item);
   };
 
   _conditionToShow = {
     params ["_unit", "_container", "_item"];
+    _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
     _currentGoggles = goggles _unit;
-    _isCBRNActivated = !(isNil "FCLA_CBRN_Activated");
-    (_isCBRNActivated) && (_currentGoggles != _item);
+    (FCLA_CBRN) && (_isPlayer) && (_currentGoggles != _item);
   };
 
   _Statement = {
-    params ["_unit", "_container", "_item"];
-    _unit addGoggles _item;
+    params ["_player", "_container", "_item"];
+    _player addGoggles _item;
     playSound "FCLA_Goggles_Equipped";
-    [_unit, goggles _unit, true] call CBA_fnc_addItem;
+    [_player, goggles _player, true] call CBA_fnc_addItem;
   };
 
   [_x, "CONTAINER", "Equipar", [], "\FCLA_Interactions\CBRN\data\Take.paa", [_conditionToEnable, _conditionToShow], _Statement, true, []] call CBA_fnc_addItemContextMenuOption;

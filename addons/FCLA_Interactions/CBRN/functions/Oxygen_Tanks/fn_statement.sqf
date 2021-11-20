@@ -15,7 +15,7 @@ _backpackContainer = backpackContainer _player;
 
 
 //Verificar si la mochila tiene el máximo de oxígeno.
-if ((_backpackContainer getVariable ["FCLA_Backpack_Oxygen", 100]) >= 100) exitWith {
+if ((_backpackContainer getVariable ["FCLA_Backpack_Oxygen", FCLA_CBRN_Initial_Backpack_Oxygen]) >= 100) exitWith {
   _text = ["||||||||||", [0, 1, 0]] call ACE_Common_fnc_stringToColoredText;
   _picture = getText (configFile >> "CfgVehicles" >> (backpack _player) >> "picture");
   [_text, _picture] call ACE_Common_fnc_displayTextPicture;
@@ -39,7 +39,7 @@ _statementOnFinish = {
   _targetOxygen = _target getVariable ["FCLA_Oxygen", 1000];
   _backpackContainer = backpackContainer _player;
 
-  _backpackContainer setVariable ["FCLA_Backpack_Oxygen", nil, true];
+  _backpackContainer setVariable ["FCLA_Backpack_Oxygen", 100, true];
   _backpackContainer setVariable ["FCLA_Backpack_Current_Alert_Played", nil, true];
   _target setVariable ["FCLA_Oxygen", ((_targetOxygen - 100) max 0) min 1000, true];
   [_player, "quick_view", "%1 recargando suministro de oxígeno", [name _player]] call ACE_Medical_Treatment_fnc_addToLog;
