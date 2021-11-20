@@ -79,12 +79,12 @@ _perFrameHandlerOne = [{
 
   _controlledUnit = call CBA_fnc_currentUnit;
   _inUAV = ([_controlledUnit] call ACE_Common_fnc_getUavControlPosition) != "";
+  _isOnMap = visibleMap;
   _inStairs = _controlledUnit getVariable ["FCLA_inStairs", false];
-  _isNotOnMap = !visibleMap;
-  _inCameraMode = _player in (call ACE_Spectator_fnc_players);
+  _inCameraMode = _controlledUnit in (call ACE_Spectator_fnc_players);
   _isUnconscious = _controlledUnit getVariable ["ACE_isUnconscious", false];
   _isNotControlledUnit = _player != _controlledUnit;
-  if ((_inUAV) || (_inStairs) || (_isNotOnMap) || (_inCameraMode) || (_isUnconscious) || (_isNotControlledUnit)) exitWith {
+  if ((_inUAV) || (_isOnMap) || (_inStairs) || (_inCameraMode) || (_isUnconscious) || (_isNotControlledUnit)) exitWith {
     _ctrlColorPalette ctrlShow false;
     _ctrlNeedle ctrlShow false;
     _ctrlBackground ctrlShow false;
@@ -107,7 +107,7 @@ _perFrameHandlerOne = [{
   _ctrlNeedle ctrlSetAngle [(linearConversion [0, 4, _max - 0.05 + (random 0.1), 90, -90, true]) mod 360, 0.5, 0.5];
 
   _args set [2, CBA_missionTime];
-}, 0.5, [_player, _item, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+}, 0.1, [_player, _item, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 
 
 
@@ -134,4 +134,4 @@ _perFrameHandlerTwo = [{
     playSound format ["FCLA_Chemical_Detector_Alert_%1", _currentVolume];
     _args set [2, CBA_missionTime];
   };
-}, 0.5, [_player, _item, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+}, 0.1, [_player, _item, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
