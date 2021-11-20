@@ -194,10 +194,6 @@ class ACE_Medical_Treatment_Actions {
 |                                 EVENTHANDLERS                                  |
 |********************************************************************************/
 
-class Extended_PreInit_EventHandlers {
-	init = "[] spawn compile preprocessFileLineNumbers '\FCLA_Interactions\XEH_preInit.sqf';";
-};
-
 class Extended_InitPost_EventHandlers {
 	class DeconShower_01_F {
 		init = "(_this select 0) setVariable ['BIN_deconshower_disableAction', true, true];";
