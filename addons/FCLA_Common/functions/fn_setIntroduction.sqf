@@ -46,11 +46,12 @@ uiNamespace setVariable ["FCLA_Introduction_Subtitle", _subtitle];
   _subtitle = uiNamespace getVariable ["FCLA_Introduction_Subtitle", ""];
   if ((_title == "") || (_subtitle == "")) exitWith {};
 
-  [{!(uiNamespace getVariable ["FCLA_Introduction_Video", false])}, {
+  [{!(uiNamespace getVariable ["FCLA_Introduction_Video_Status", false])}, {
     _this Spawn {
       player action ["WeaponOnBack", player];
       cutText ["", "BLACK FADED", 3600, true, false];
 			if (isGameFocused) then {playsound "FCLA_Introduction";};
+			uiNamespace setVariable ["FCLA_Introduction_Status", true];
       [{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
 
       Sleep 3;
@@ -68,6 +69,9 @@ uiNamespace setVariable ["FCLA_Introduction_Subtitle", _subtitle];
       sleep 5;
       cutText ["", "BLACK IN", 5, true, false];
       [false] call ACE_Common_fnc_disableUserInput;
+			uiNamespace setVariable ["FCLA_Introduction_Status", nil];
+			uiNamespace setVariable ["FCLA_Introduction_Title", nil];
+			uiNamespace setVariable ["FCLA_Introduction_Subtitle", nil];
     };
   }, [_title, _subtitle]] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;

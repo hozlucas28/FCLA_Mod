@@ -24,11 +24,12 @@
  *             14: ¿Esta apoyando el arma?
  *             15: ¿Tiene el inventario abierto?
  *             16: ¿Esta recargando ó manipulando un arma?
+ *             17: ¿Esta abierto el menú médico?
  *
  * Arguments:
  *            0: Unidad a verificar. <UNIT>
  *            1: Condiciones a excluir, opcional. <ARRAY OF NUMBER/S> (default: [])
- *                # Numeros aceptados: 0 al 16 incluídos (guiarse con el comentario "Conditions").
+ *                # Numeros aceptados: 0 al 17 incluídos (guiarse con el comentario "Conditions").
  *
  * Return Value:
  * ¿Cumple con las condiciones? <BOOL>
@@ -46,7 +47,7 @@
 //Variables de referencia.
 params [
         ["_unit", objNull, [objNull, teamMemberNull], 0],
-        ["_excludedConditions", [], [[]], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]]
+        ["_excludedConditions", [], [[]], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]]
        ];
 if (isNull _unit) exitWith {false};
 
@@ -70,8 +71,9 @@ _isShowingIDCard = !isNull findDisplay 10001;
 _isWeaponDeployed = isWeaponDeployed _unit;
 _isInventoryOpened = !isnull (findDisplay 602);
 _inWeaponAnimation = !isNil "FCLA_Weapon_Animation";
+_isMedicalMenuOpened = !isNull findDisplay 38580;
 
 //Excluir condiciones.
-_conditions = [_inUAV, _isOnMap, _inStairs, _inCurator, _inVehicle, _isNotAlive, _isDragging, _isCarrying, _isSwimming, _inCameraMode, _isHandcuffed, _isUnconscious, _isSurrendering, _isShowingIDCard, _isWeaponDeployed, _isInventoryOpened, _inWeaponAnimation];
+_conditions = [_inUAV, _isOnMap, _inStairs, _inCurator, _inVehicle, _isNotAlive, _isDragging, _isCarrying, _isSwimming, _inCameraMode, _isHandcuffed, _isUnconscious, _isSurrendering, _isShowingIDCard, _isWeaponDeployed, _isInventoryOpened, _inWeaponAnimation, _isMedicalMenuOpened];
 {_conditions set [_x, nil]} forEach _excludedConditions;
 true in _conditions

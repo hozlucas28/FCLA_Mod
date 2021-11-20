@@ -38,7 +38,10 @@ _this spawn {
     };
 
     sleep 0.5;
-    _soundSource = _building modelToWorld (_building selectionPosition ((_intersects select 0) select 0));
+    _sourcePos = _building modelToWorld (_building selectionPosition ((_intersects select 0) select 0));
+    _soundSource = createAgent ["VirtualAISquad", _sourcePos, [], 0, "CAN_COLLIDE"];
+    _soundSource attachTo [_building];
+
     if (!(call FCLA_Common_fnc_isDoorLocked) || (_successRate <= FCLA_Kick_Door_Success_Rate)) then {
       _selectDoor = format ["%1_rot", ((_intersects select 0) select 0)];
       enableCamShake true;

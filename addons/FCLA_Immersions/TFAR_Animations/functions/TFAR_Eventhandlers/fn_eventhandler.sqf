@@ -11,20 +11,27 @@
 
 ["FCLA_TFAR_Animations_OnTangentEH", "OnTangent", {
   params ["_unit", "_currentRadio", "_transceiver", "_hasAdditionalChannel", "_buttonDown"];
+  _vehicle = vehicle _unit;
+  _FFVSeats = [_vehicle] call ACE_Common_fnc_getTurretsFFV;
+  _currentTurret = _vehicle unitTurret _unit;
   _vehicleRole = [_unit] call CBA_fnc_vehicleRole;
-  _severalConditions = [_unit, [0, 1, 3, 4, 7, 12, 13, 14, 15]] call FCLA_Common_fnc_severalConditions;
-  _isNotInCargoVehicle = (_vehicleRole != "") && (_vehicleRole != "cargo");
+  _severalConditions = [_unit, [0, 1, 3, 4, 7, 12, 13, 14, 15, 17]] call FCLA_Common_fnc_severalConditions;
   _isNotTouchingGround = !isTouchingGround _unit;
-  if ((!FCLA_Radio_Animations) || (_severalConditions) || (_isNotInCargoVehicle) || (_isNotTouchingGround)) exitWith {};
+  _isNotInCompatibleSeat = (_vehicle isKindOf "Air") && !(_currentTurret in _FFVSeats) && (_vehicleRole != "cargo");
+  if ((!FCLA_Radio_Animations) || (_severalConditions) || (_isNotTouchingGround) || (_isNotInCompatibleSeat)) exitWith {};
 
 
   if (_buttonDown) then {
     _isHidden = isObjectHidden _unit;
+    _inVehicle = !isNull objectParent _unit;
     _isChestCompatible = (vest _unit) in FCLA_Radio_Animations_Vests;
     _usingBackpackRadio = _transceiver == 1;
+    _isNotWeaponLowered = !(weaponLowered _unit);
     _isHeadsetCompatible = (((goggles _unit) in FCLA_Radio_Animations_Headgears_Headsets) || ((headgear _unit) in FCLA_Radio_Animations_Headgears_Headsets));
+    _hasNotLauncherOnHand = (currentWeapon _unit) != (secondaryWeapon _unit);
+
     _unit setVariable ["FCLA_Transmitting", true, true];
-    if (!(weaponLowered _unit)) then {_unit action ["WeaponOnBack", _unit];};
+    if ((_isNotWeaponLowered) && (_hasNotLauncherOnHand)) then {_unit action ["WeaponOnBack", _unit];};
 
     switch (true) do {
     	case ((!_usingBackpackRadio) && (_isHeadsetCompatible) && (_isChestCompatible)): {
@@ -44,7 +51,7 @@
       };
 
     	default {
-        if (_isHidden) exitWith {};
+        if ((_isHidden) || (_inVehicle)) exitWith {};
         [_unit, _currentRadio] spawn FCLA_Immersions_fnc_radioOnHandTFAR;
       };
     };
