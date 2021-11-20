@@ -22,7 +22,7 @@ _perFrameHandlerOne = [{
   _isNotCompatible = !(_item in FCLA_Chemical_Detectors);
   _isCBRNDesactivated = isNil "FCLA_CBRN_Activated";
   if ((_isSwimming) || (_isDesactivated) || (_isNotCompatible) || (_isCBRNDesactivated)) exitWith {
-    [_unit] spawn FCLA_Interactions_fnc_statementDesactivateOxygenCBRN;
+    [_unit] spawn FCLA_Interactions_fnc_statementTurnOffChemicalDetectorCBRN;
     [_handle] call CBA_fnc_removePerFrameHandler;
   };
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
@@ -51,21 +51,21 @@ _perFrameHandlerOne = [{
   if (isNil {_unit getVariable "FCLA_CBRN_Chemical_Detector_Ctrls"}) then {
     _ctrlColorPalette = (findDisplay 46) ctrlCreate ["RscPicture", 753];
     _ctrlColorPalette ctrlCommit 0;
-    _ctrlColorPalette ctrlSetText "\FCLA_Interactions\CBRN\data\Detector_Color_Palette.paa";
+    _ctrlColorPalette ctrlSetText "\FCLA_Interactions\CBRN\data\Detector\Color_Palette.paa";
     _ctrlColorPalette ctrlSetPosition [0.5 - ((256 * pixelW) / 2),safeZoneY,256 * pixelW, 256 * pixelH];
     _ctrlColorPalette ctrlSetTextColor [1, 1, 1, 1];
     _ctrlColorPalette ctrlSetBackgroundColor [1, 1, 1, 0.5];
 
     _ctrlNeedle = (findDisplay 46) ctrlCreate ["RscPicture", 755];
     _ctrlNeedle ctrlCommit 0;
-    _ctrlNeedle ctrlSetText "\FCLA_Interactions\CBRN\data\Detector_Needle.paa";
+    _ctrlNeedle ctrlSetText "\FCLA_Interactions\CBRN\data\Detector\Needle.paa";
     _ctrlNeedle ctrlSetPosition [0.5 - ((256 * pixelW) / 2), safeZoneY - ((256 * pixelH) / 2), 256 * pixelW, 256 * pixelH];
     _ctrlNeedle ctrlSetTextColor [1, 1, 1, 1];
     _ctrlNeedle ctrlSetBackgroundColor [1, 1, 1, 1];
 
     _ctrlBackground = (findDisplay 46) ctrlCreate ["RscPicture", 755];
     _ctrlBackground ctrlCommit 0;
-    _ctrlBackground ctrlSetText "\FCLA_Interactions\CBRN\data\Detector_Background.paa";
+    _ctrlBackground ctrlSetText "\FCLA_Interactions\CBRN\data\Detector\Background.paa";
     _ctrlBackground ctrlSetPosition [0.5 - ((256 * pixelW) / 2),safeZoneY,256 * pixelW, 256 * pixelH];
     _ctrlBackground ctrlSetTextColor [1, 1, 1, 1];
     _ctrlBackground ctrlSetBackgroundColor [1, 1, 1, 1];
@@ -103,10 +103,7 @@ _perFrameHandlerTwo = [{
   _isDesactivated = !(_unit getVariable ["FCLA_Chemical_Detector_Activated", false]);
   _isNotCompatible = !(_item in FCLA_Chemical_Detectors);
   _isCBRNDesactivated = isNil "FCLA_CBRN_Activated";
-  if ((_isSwimming) || (_isDesactivated) || (_isNotCompatible) || (_isCBRNDesactivated)) exitWith {
-    [_unit] spawn FCLA_Interactions_fnc_statementDesactivateOxygenCBRN;
-    [_handle] call CBA_fnc_removePerFrameHandler;
-  };
+  if ((_isSwimming) || (_isDesactivated) || (_isNotCompatible) || (_isCBRNDesactivated)) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
   _currentThreatLevel = _unit getVariable ["FCLA_CBRN_Threat_Level", 0];

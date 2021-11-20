@@ -28,7 +28,7 @@ _Statement = {
   [_unit, _item] spawn FCLA_Interactions_fnc_statementTurnOnChemicalDetectorCBRN;
 };
 
-["##Watch", "ASSIGNED_ITEM", "Encender", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
+["##Watch", "ASSIGNED_ITEM", "Encender", [], "\FCLA_Interactions\CBRN\data\Switch.paa", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
 
 
 /* -------------------------------- APAGAR --------------------------------- */
@@ -48,7 +48,7 @@ _Statement = {
   [_unit] spawn FCLA_Interactions_fnc_statementTurnOffChemicalDetectorCBRN;
 };
 
-["##Watch", "ASSIGNED_ITEM", "Apagar", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
+["##Watch", "ASSIGNED_ITEM", "Apagar", [], "\FCLA_Interactions\CBRN\data\Switch.paa", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
 
 
 /* ----------------------------- SUBIR VOLUMEN ----------------------------- */
@@ -79,7 +79,7 @@ _Statement = {
   _unit setVariable ["FCLA_Chemical_Detector_Volume", (_currentVolume + 1), true];
 };
 
-["##Watch", "ASSIGNED_ITEM", "Volumen ( + )", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
+["##Watch", "ASSIGNED_ITEM", "Volumen ( + )", [], "\FCLA_Interactions\CBRN\data\Turn_Up_Volume.paa", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
 
 
 /* ----------------------------- BAJAR VOLUMEN ----------------------------- */
@@ -110,7 +110,7 @@ _Statement = {
   _unit setVariable ["FCLA_Chemical_Detector_Volume", (_currentVolume - 1), true];
 };
 
-["##Watch", "ASSIGNED_ITEM", "Volumen ( - )", [], "", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
+["##Watch", "ASSIGNED_ITEM", "Volumen ( - )", [], "\FCLA_Interactions\CBRN\data\Turn_Down_Volume.paa", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
 
 
 
@@ -139,4 +139,4 @@ _Statement = {
   playSound (selectRandom ["FCLA_Generic_Use_1", "FCLA_Generic_Use_2", "FCLA_Generic_Use_3", "FCLA_Generic_Use_4"]);
 };
 
-["ChemicalDetector_01_watch_F", "CONTAINER", "Equipar", [], "", [_conditionToEnable, _conditionToShow], _Statement, true, []] call CBA_fnc_addItemContextMenuOption;
+["ChemicalDetector_01_watch_F", "CONTAINER", "Equipar", [], "\FCLA_Interactions\CBRN\data\Take.paa", [_conditionToEnable, _conditionToShow], _Statement, true, []] call CBA_fnc_addItemContextMenuOption;

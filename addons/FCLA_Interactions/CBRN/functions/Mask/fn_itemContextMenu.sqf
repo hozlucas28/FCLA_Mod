@@ -33,5 +33,5 @@ if (["Contact"] call FCLA_Common_fnc_isDLCOwned) exitWith {};
     [_unit, goggles _unit, true] call CBA_fnc_addItem;
   };
 
-  [_x, "CONTAINER", "Equipar", [], "", [_conditionToEnable, _conditionToShow], _Statement, true, []] call CBA_fnc_addItemContextMenuOption;
+  [_x, "CONTAINER", "Equipar", [], "\FCLA_Interactions\CBRN\data\Take.paa", [_conditionToEnable, _conditionToShow], _Statement, true, []] call CBA_fnc_addItemContextMenuOption;
 } forEach ["G_AirPurifyingRespirator_01_F", "G_AirPurifyingRespirator_01_nofilter_F", "G_AirPurifyingRespirator_02_sand_F", "G_AirPurifyingRespirator_02_black_F", "G_AirPurifyingRespirator_02_olive_F", "G_RegulatorMask_F"];
