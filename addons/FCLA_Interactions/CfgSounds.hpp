@@ -77,12 +77,12 @@ class FCLA_Switch_Smoke {
 
 class FCLA_Smoke_Explosion {
   name = "FCLA - Explosión (señal de humo)";
-  sound[] = {"\FCLA_Interactions\sounds\Smoke_Explosion.ogg", db+1, 1};
+  sound[] = {"\FCLA_Interactions\sounds\Smoke_Explosion.ogg", db+5, 1};
   titles[] = {0, ""};
 };
 
 class FCLA_Smoke_Explosion_Echo {
   name = "FCLA - Eco de explosión (señal de humo)";
-  sound[] = {"\FCLA_Interactions\sounds\Smoke_Explosion_Echo.ogg", db+0.5, 1};
+  sound[] = {"\FCLA_Interactions\sounds\Smoke_Explosion_Echo.ogg", db+5, 1};
   titles[] = {0, ""};
 };

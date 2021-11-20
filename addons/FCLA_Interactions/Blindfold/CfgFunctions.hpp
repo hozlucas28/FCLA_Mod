@@ -14,6 +14,8 @@ class Blindfold {
     postInit = 1;
   };
 
+  class respawnBlindfoldEH {file = "\FCLA_Interactions\Blindfold\functions\BIS_Eventhandlers\fn_Respawn.sqf";};
+
   class conditionOnBlindfold {file = "\FCLA_Interactions\Blindfold\functions\fn_conditionOn.sqf";};
   class conditionOffBlindfold {file = "\FCLA_Interactions\Blindfold\functions\fn_conditionOff.sqf";};
 

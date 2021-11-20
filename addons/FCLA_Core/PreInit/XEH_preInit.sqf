@@ -13,7 +13,6 @@
 ["\n\nFCLA_Core.pbo - PreInit cargando..."] call ACE_Common_fnc_serverLog;
 #define LOCAL 0
 #define GLOBAL 2
-#include "\FCLA_Core\PreInit\Global_Variables.hpp"
 #include "\FCLA_Core\PreInit\Addon_Options\FCLA_Interactions.hpp"
 #include "\FCLA_Core\PreInit\Addon_Options\FCLA_Development.hpp"
 #include "\FCLA_Core\PreInit\Addon_Options\FCLA_Effects.hpp"

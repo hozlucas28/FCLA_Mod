@@ -162,7 +162,6 @@ class CfgWeapons {
 	#include "\FCLA_Interactions\Helmet_Camo_Net\CfgWeapons.hpp"
 	#include "\FCLA_Interactions\Light_Sticks\CfgWeapon.hpp"
 	#include "\FCLA_Interactions\Night_Vision_Battery\CfgWeapon.hpp"
-	#include "\FCLA_Interactions\Whistle\CfgWeapon.hpp"
 };
 
 
@@ -195,13 +194,17 @@ class ACE_Medical_Treatment_Actions {
 |                                 EVENTHANDLERS                                  |
 |********************************************************************************/
 
+class Extended_PreInit_EventHandlers {
+	init = "[] spawn compile preprocessFileLineNumbers '\FCLA_Interactions\XEH_preInit.sqf';";
+};
+
 class Extended_InitPost_EventHandlers {
 	class DeconShower_01_F {
 		init = "(_this select 0) setVariable ['BIN_deconshower_disableAction', true, true];";
 	};
 };
 
-class Extended_Fired_Eventhandlers {
+class Extended_FiredBIS_Eventhandlers {
 	class CAManBase {
 		init = "if (!is3DEN) then {_this spawn FCLA_Interactions_fnc_firedSSEH;};";
 	};
@@ -215,6 +218,6 @@ class Extended_Killed_Eventhandlers {
 
 class Extended_Respawn_Eventhandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Interactions_fnc_respawnCBRNEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Interactions_fnc_respawnBlindfoldEH; _this spawn FCLA_Interactions_fnc_respawnCBRNEH;};";
 	};
 };

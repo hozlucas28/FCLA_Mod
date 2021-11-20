@@ -31,13 +31,13 @@ if ((!FCLA_Smoke_Signal_Allowed) || (_isUnderwater) || (_isDesactivated) || (_is
   deleteVehicle _projectile;
 
   _color = switch (true) do {
-    case (_magazine in _redSmokeMagazines): {[1, 0.253, 0];};
-    case (_magazine in _blueSmokeMagazines): {[0.266, 0.537, 1];};
-    case (_magazine in _greenSmokeMagazines): {[0.1, 0.5, 0.05];};
-    case (_magazine in _orangeSmokeMagazines): {[1, 0.54, 0.21];};
-    case (_magazine in _yellowSmokeMagazines): {[0.956, 1, 0.21];};
+    case (_magazine in _redSmokeMagazines): {[1, 0.253, 0, 1];};
+    case (_magazine in _blueSmokeMagazines): {[0.266, 0.537, 1, 1];};
+    case (_magazine in _greenSmokeMagazines): {[0.1, 0.5, 0.05, 1];};
+    case (_magazine in _orangeSmokeMagazines): {[1, 0.54, 0.21, 1];};
+    case (_magazine in _yellowSmokeMagazines): {[0.956, 1, 0.21, 1];};
     case (_magazine in _purpleSmokeMagazines): {[0.8, 0.432, 0.8, 1];};
-    default {[1, 1, 1];};
+    default {[1, 1, 1, 1];};
   };
 
   _lightObj = createVehicle ["#lightpoint", _projectilePos, [], 0, "CAN_COLLIDE"];
@@ -55,8 +55,8 @@ if ((!FCLA_Smoke_Signal_Allowed) || (_isUnderwater) || (_isDesactivated) || (_is
 
   _soundSourceOne = createAgent ["VirtualAISquad", _projectilePos, [], 0, "CAN_COLLIDE"];
   _soundSourceTwo = createAgent ["VirtualAISquad", _projectilePos, [], 0, "CAN_COLLIDE"];
-  [_soundSourceOne, "FCLA_Smoke_Explosion", 4, 1000, true] call FCLA_Common_fnc_globalSay3D;
-  [_soundSourceTwo, "FCLA_Smoke_Explosion_Echo", 3, 2000, true] call FCLA_Common_fnc_globalSay3D;
+  [_soundSourceOne, "FCLA_Smoke_Explosion", 4, 2000, true] call FCLA_Common_fnc_globalSay3D;
+  [_soundSourceTwo, "FCLA_Smoke_Explosion_Echo", 3, 3000, true] call FCLA_Common_fnc_globalSay3D;
 
   [{
     params ["_projectilePos", "_color"];
