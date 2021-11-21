@@ -37,6 +37,5 @@ if (("" in _line) || (_color == "")) exitWith {};
 
 
 //Mostrar subtítulo y reproducir animación.
-[_player] call FCLA_Common_fnc_hideSubtitles;
 [_player, [_line], _color, 3] call FCLA_Common_fnc_showSubtitles;
 [_player, _animation, 'SwitchMove', true] spawn FCLA_Common_fnc_playAnimation;

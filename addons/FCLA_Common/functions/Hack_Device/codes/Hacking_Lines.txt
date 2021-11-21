@@ -1,4 +1,4 @@
- login1: admin@
+ login: admin@
 password : ******************@
 conected!@
 sudo ipconfig -p -s -v@
