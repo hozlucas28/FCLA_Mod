@@ -25,6 +25,7 @@ if ((_isExplosive) && (_isPlayer)) then {
 };
 
 
+if (_currentHeadgear == "") exitWith {};
 if ((FCLA_Helmet_Hit_Sounds) && (_helmetProtection >= 2)) then {
   _randomSound = selectRandom ["FCLA_Impact_Helmet_1", "FCLA_Impact_Helmet_2", "FCLA_Impact_Helmet_3"];
   [_target, _randomSound, 1, 500, false] call FCLA_Common_fnc_globalSay3D;

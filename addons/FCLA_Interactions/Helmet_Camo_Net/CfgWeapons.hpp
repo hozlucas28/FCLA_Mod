@@ -17,6 +17,7 @@ class FCLA_Camo_Net_Arid: CBA_MiscItem {
   class ItemInfo: CBA_MiscItem_ItemInfo {mass = 1;};
 };
 
+
 class FCLA_Camo_Net_Tropical: CBA_MiscItem {
   author = "hozlucas28";
   displayName = "Red de camuflaje (tropical)";

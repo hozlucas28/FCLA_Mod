@@ -10,6 +10,7 @@ class FCLA_Activate_Smoke_Signal {
   displayName = "Activar señal de humo";
 };
 
+
 class FCLA_Desactivate_Smoke_Signal {
   icon = "\FCLA_Data\ACE_Actions\Desactivate_Smoke_Signal.paa";
   condition = "[_player] call FCLA_Interactions_fnc_conditionDesactivateSS";

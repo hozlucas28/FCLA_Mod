@@ -5,198 +5,198 @@
 
 class FCLA_Molotov {
 	class Light1 {
-		simulation = "light";
-		type = "FCLA_Molotov_Light";
-		position[] = {0, 0, 0};
-		intensity = 0.0099999998;
-		interval = 1;
+		type = "FCLA_Molotov";
 		start = 2;
+		interval = 1;
 		lifeTime = 40;
+		intensity = 0.0099999998;
+		simulation = "light";
+		position[] = {0, 0, 0};
 	};
 
 	class Fire {
-		simulation = "particles";
 		type = "FCLA_Molotov_Fire_1";
-		position[] = {0, 0, 0};
-		intensity = 1;
-		interval = 1;
 		start = 2;
+		interval = 1;
 		lifeTime = 40;
+		intensity = 1;
+		simulation = "particles";
+		position[] = {0, 0, 0};
 	};
 
 	class Fire2 {
-		simulation = "particles";
 		type = "FCLA_Molotov_Fire_2";
-		position[] = {0, 0, 0};
-		intensity = 1;
-		interval = 1;
 		start = 2;
+		interval = 1;
 		lifeTime = 40;
+		intensity = 1;
+		simulation = "particles";
+		position[] = {0, 0, 0};
 	};
 
 	class Fire3 {
-		simulation = "particles";
 		type = "FCLA_Molotov_Fire_3";
-		position[] = {0, 0, 0};
-		intensity = 1;
-		interval = 1;
 		start = 2;
+		interval = 1;
 		lifeTime = 40;
+		intensity = 1;
+		simulation = "particles";
+		position[] = {0, 0, 0};
 	};
 
 	class refract1 {
-		simulation = "particles";
 		type = "FCLA_Molotov_Refract";
-		position[] = {0, 0, 0};
-		intensity = 1;
-		interval = 1;
 		start = 2;
+		interval = 1;
 		lifeTime = 40;
+		intensity = 1;
+		simulation = "particles";
+		position[] = {0, 0, 0};
 	};
 
 	class smoke1 {
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Smoke";
-		position[] = {0, 0, 0};
-		intensity = 1;
-		interval = 1;
 		start = 2;
+		interval = 1;
 		lifeTime = 40;
+		intensity = 1;
+		simulation = "particles";
+		position[] = {0, 0, 0};
 	};
 
 	class sound {
-		simulation = "sound";
 		type = "Fire";
+		simulation = "sound";
 	};
 
 	class FCLA_Molotov_Small_Fire {
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
 	};
 
 	class MSmallFireF1 {
-		position[] = {1, 0, 0};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {1, 0, 0};
 	};
 
 	class MSmallFireF2 {
-		position[] = {-1, 0, 0};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {-1, 0, 0};
 	};
 
 	class MSmallFireF3 {
-		position[] = {2, 0, 0};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {2, 0, 0};
 	};
 
 	class MSmallFireF4 {
-		position[] = {-2, 0, 0};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {-2, 0, 0};
 	};
 
 	class MSmallFireF5 {
-		position[] = {0, 1, 0};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {0, 1, 0};
 	};
 
 	class MSmallFireF6 {
-		position[] = {0, -1, 0};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {0, -1, 0};
 	};
 
 	class MSmallFireF7 {
-		position[] = {0, 2, 0};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {0, 2, 0};
 	};
 
 	class MSmallFireF8 {
-		position[] = {0, -2, 0};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {0, -2, 0};
 	};
 
 	class MSmallFireF9 {
-		position[] = {1, 1, 0};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {1, 1, 0};
 	};
 
 	class MSmallFireF10 {
-		position[] = {-1, -1, 0};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {-1, -1, 0};
 	};
 
 	class MSmallFireF11 {
-		position[] = {2, 2, 0};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {2, 2, 0};
 	};
 
 	class MSmallFireF12 {
-		position[] = {-2, -2, 0};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {-2, -2, 0};
 	};
 
 	class MSmallFireF13 {
-		position[] = {0, 0, 1};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {0, 0, 1};
 	};
 
 	class MSmallFireF14 {
-		position[] = {0, 0, -1};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {0, 0, -1};
 	};
 
 	class MSmallFireF15 {
-		position[] = {0, 0, 2};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {0, 0, 2};
 	};
 
 	class MSmallFireF16 {
-		position[] = {0, 0, -2};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {0, 0, -2};
 	};
 
 	class MSmallFireF17 {
-		position[] = {1, 0, 1};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {1, 0, 1};
 	};
 
 	class MSmallFireF18 {
-		position[] = {1, 1, 1};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {1, 1, 1};
 	};
 
 	class MSmallFireF19 {
-		position[] = {-1, 0, 1};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {-1, 0, 1};
 	};
 
 	class MSmallFireF20 {
-		position[] = {-1, -1, 1};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {-1, -1, 1};
 	};
 
 	class MSmallFireF21 {
-		position[] = {-1, -1, -1};
-		simulation = "particles";
 		type = "FCLA_Molotov_Small_Fire";
+		simulation = "particles";
+		position[] = {-1, -1, -1};
 	};
 };

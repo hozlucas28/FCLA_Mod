@@ -6,11 +6,12 @@
 class CfgPatches {
 	class FCLA_Interactions {
 		units[] = {};
-		#include "\FCLA_Interactions\weapons.hpp"
 		requiredAddons[] = {};
+		#include "\FCLA_Interactions\weapons.hpp"
 		version = "2.0";
 		author = "hozlucas28";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
+		requiredVersion = 2.0;
 	};
 };
 

@@ -19,6 +19,7 @@ class G_Blindfold_01_black_F: G_Blindfold_01_base_F {
   scopeCurator = 1;
 };
 
+
 class G_Blindfold_01_white_F: G_Blindfold_01_base_F {
   _generalMacro = "G_Blindfold_01_white_F";
   author = "Bohemia Interactive";

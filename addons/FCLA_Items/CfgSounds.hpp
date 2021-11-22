@@ -5,7 +5,7 @@
 
 class FCLA_Can {
   name = "FCLA - Lata";
-	sound[] = {"\FCLA_Items\sounds\Can.wav", 10, 1};
-	titles[] = {0,""};
+	sound[] = {"\FCLA_Items\sounds\Can.wav", "db+10", 1};
+	titles[] = {0, ""};
 	duration = 2;
 };

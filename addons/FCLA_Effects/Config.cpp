@@ -6,11 +6,11 @@
 class CfgPatches {
 	class FCLA_Effects {
 		#include "\FCLA_Effects\units.hpp"
-		ammo[] = {"FlareBase", "F_40mm_White", "Flare_82mm_AMOS_White"};
 		requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_beta"};
 		version = "2.0";
 		author = "hozlucas28";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
+		requiredVersion = 2.0;
 	};
 };
 
@@ -100,17 +100,6 @@ class CfgVehicles {
 	class AllVehicles: All {};
 	#include "\FCLA_Effects\Enhanced_Sounds\CfgVehicles.hpp"
 	#include "\FCLA_Effects\Lights_Flare\CfgVehicle.hpp"
-};
-
-
-
-/********************************************************************************|
-|                                   MUNICIONES                                   |
-|********************************************************************************/
-
-class CfgAmmo {
-	class FlareCore;
-	#include "\FCLA_Effects\Flares\CfgAmmo.hpp"
 };
 
 

@@ -5,12 +5,13 @@
 
 class CfgPatches {
 	class FCLA_Immersions {
-		#include "\FCLA_Immersions\units.hpp"
 		weapons[] = {};
 		requiredAddons[] = {};
+		#include "\FCLA_Immersions\units.hpp"
 		version = "2.0";
 		author = "hozlucas28";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
+		requiredVersion = 2.0;
 	};
 };
 

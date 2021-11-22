@@ -17,6 +17,7 @@ class FCLA_G_Blindfold_01_Black_F: CBA_MiscItem {
   class ItemInfo: CBA_MiscItem_ItemInfo {mass = 1;};
 };
 
+
 class FCLA_G_Blindfold_01_White_F: CBA_MiscItem {
   author = "hozlucas28";
   displayName = "Venda (blanca)";

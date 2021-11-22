@@ -15,6 +15,7 @@ class FCLA_Common {
 	textureVehicle = "";
 };
 
+
 class FCLA_Unassigned {
 	author = "hozlucas28";
 	displayName = "Sin asignar";
@@ -35,6 +36,7 @@ class FCLA_Takana {
 	textureVehicle = "";
 };
 
+
 class FCLA_Jaguar {
 	author = "hozlucas28";
 	displayName = "Jaguar";
@@ -42,6 +44,7 @@ class FCLA_Jaguar {
 	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
 	textureVehicle = "";
 };
+
 
 class FCLA_Condor {
 	author = "hozlucas28";
@@ -51,6 +54,7 @@ class FCLA_Condor {
 	textureVehicle = "";
 };
 
+
 class FCLA_Salamandra {
 	author = "hozlucas28";
 	displayName = "Salamandra";
@@ -58,6 +62,7 @@ class FCLA_Salamandra {
 	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
 	textureVehicle = "";
 };
+
 
 class FCLA_Anaconda {
 	author = "hozlucas28";
@@ -67,6 +72,7 @@ class FCLA_Anaconda {
 	textureVehicle = "";
 };
 
+
 class FCLA_Quetzal {
 	author = "hozlucas28";
 	displayName = "Quetzal";
@@ -75,6 +81,7 @@ class FCLA_Quetzal {
 	textureVehicle = "";
 };
 
+
 class FCLA_FES {
 	author = "hozlucas28";
 	displayName = "FES";
@@ -82,6 +89,7 @@ class FCLA_FES {
 	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
 	textureVehicle = "";
 };
+
 
 class FCLA_Medic {
 	author = "hozlucas28";
@@ -103,6 +111,7 @@ class FCLA_CBI {
 	textureVehicle = "";
 };
 
+
 class FCLA_CAI {
 	author = "hozlucas28";
 	displayName = "CAI";
@@ -110,6 +119,7 @@ class FCLA_CAI {
 	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
 	textureVehicle = "";
 };
+
 
 class FCLA_CPR {
 	author = "hozlucas28";
@@ -119,6 +129,7 @@ class FCLA_CPR {
 	textureVehicle = "";
 };
 
+
 class FCLA_CMC {
 	author = "hozlucas28";
 	displayName = "CMC";
@@ -126,6 +137,7 @@ class FCLA_CMC {
 	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
 	textureVehicle = "";
 };
+
 
 class FCLA_CFG {
 	author = "hozlucas28";
@@ -135,6 +147,7 @@ class FCLA_CFG {
 	textureVehicle = "";
 };
 
+
 class FCLA_CFA {
 	author = "hozlucas28";
 	displayName = "CFA";
@@ -142,6 +155,7 @@ class FCLA_CFA {
 	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
 	textureVehicle = "";
 };
+
 
 class FCLA_CAL {
 	author = "hozlucas28";
@@ -151,6 +165,7 @@ class FCLA_CAL {
 	textureVehicle = "";
 };
 
+
 class FCLA_CEE {
 	author = "hozlucas28";
 	displayName = "CEE";
@@ -158,6 +173,7 @@ class FCLA_CEE {
 	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
 	textureVehicle = "";
 };
+
 
 class FCLA_CIM {
 	author = "hozlucas28";
@@ -167,6 +183,7 @@ class FCLA_CIM {
 	textureVehicle = "";
 };
 
+
 class FCLA_CTC {
 	author = "hozlucas28";
 	displayName = "CTC";
@@ -174,6 +191,7 @@ class FCLA_CTC {
 	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
 	textureVehicle = "";
 };
+
 
 class FCLA_COR {
 	author = "hozlucas28";
@@ -183,6 +201,7 @@ class FCLA_COR {
 	textureVehicle = "";
 };
 
+
 class FCLA_CTS {
 	author = "hozlucas28";
 	displayName = "CTS";
@@ -190,6 +209,7 @@ class FCLA_CTS {
 	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
 	textureVehicle = "";
 };
+
 
 class FCLA_CFT {
 	author = "hozlucas28";
@@ -199,6 +219,7 @@ class FCLA_CFT {
 	textureVehicle = "";
 };
 
+
 class FCLA_OPVNT {
 	author = "hozlucas28";
 	displayName = "OPVNT";
@@ -206,6 +227,7 @@ class FCLA_OPVNT {
 	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
 	textureVehicle = "";
 };
+
 
 class FCLA_PARA {
 	author = "hozlucas28";
@@ -215,6 +237,7 @@ class FCLA_PARA {
 	textureVehicle = "";
 };
 
+
 class FCLA_CBC {
 	author = "hozlucas28";
 	displayName = "CBC";
@@ -223,6 +246,7 @@ class FCLA_CBC {
 	textureVehicle = "";
 };
 
+
 class FCLA_CPH {
 	author = "hozlucas28";
 	displayName = "CPH";
@@ -230,6 +254,7 @@ class FCLA_CPH {
 	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
 	textureVehicle = "";
 };
+
 
 class FCLA_CPA {
 	author = "hozlucas28";

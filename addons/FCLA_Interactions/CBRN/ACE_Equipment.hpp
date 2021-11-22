@@ -10,6 +10,7 @@ class FCLA_Activate_Oxygen {
   displayName = "Activar oxígeno";
 };
 
+
 class FCLA_Desactivate_Oxygen {
   icon = "\FCLA_Data\ACE_Actions\Desactivate_Backpack_Oxygen.paa";
   condition = "[_player] call FCLA_Interactions_fnc_conditionDesactivateOxygenCBRN";

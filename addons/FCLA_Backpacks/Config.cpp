@@ -5,12 +5,13 @@
 
 class CfgPatches {
 	class FCLA_Backpacks {
-		#include "\FCLA_Backpacks\units.hpp"
 		weapons[] = {};
 		requiredAddons[] = {};
+		#include "\FCLA_Backpacks\units.hpp"
 		version = "2.0";
 		author = "hozlucas28";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
+		requiredVersion = 2.0;
 	};
 };
 

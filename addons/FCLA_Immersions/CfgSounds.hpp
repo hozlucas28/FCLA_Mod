@@ -5,13 +5,13 @@
 
 class FCLA_Open_Door {
   name = "FCLA - Abrir puerta";
-  sound[] = {"\FCLA_Immersions\sounds\Open_Door.ogg", +3, 1};
+  sound[] = {"\FCLA_Immersions\sounds\Open_Door.ogg", "db+3", 1};
   titles[] = {0, ""};
 };
 
 class FCLA_Close_Door {
   name = "FCLA - Cerrar puerta";
-  sound[] = {"\FCLA_Immersions\sounds\Close_Door.ogg", +3, 1};
+  sound[] = {"\FCLA_Immersions\sounds\Close_Door.ogg", "db+3", 1};
   titles[] = {0, ""};
 };
 

@@ -6,10 +6,12 @@
 class CfgPatches {
 	class FCLA_Ammo {
 		units[] = {};
-		requiredAddons[] = {};
+		#include "\FCLA_Ammo\ammo.hpp"
+		requiredAddons[] = {"A3_Weapons_F", "ace_grenades"};
 		version = "2.0";
 		author = "hozlucas28";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
+		requiredVersion = 2.0;
 	};
 };
 
@@ -21,10 +23,14 @@ class CfgPatches {
 
 class CfgAmmo {
 	class Default;
+	class GrenadeCore: Default {};
+	class FlareCore: GrenadeCore {};
 	class RocketCore: Default {};
 	class RocketBase: RocketCore {};
 	class R_MRAAWS_HEAT_F: RocketBase {};
 	class R_MRAAWS_HE_F: R_MRAAWS_HEAT_F {};
+
+	#include "\FCLA_Ammo\Flares\CfgAmmo.hpp"
 	#include "\FCLA_Ammo\Launcher\CfgAmmo.hpp"
 };
 
