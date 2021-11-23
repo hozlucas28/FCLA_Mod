@@ -32,6 +32,7 @@ class FCLA_Common_Functions {
   class setAmbientFired {file = "\FCLA_Common\functions\fn_setAmbientFired.sqf";};
   class setHelipadLights {file = "\FCLA_Common\functions\fn_setHelipadLights.sqf";};
   class setIntroduction {file = "\FCLA_Common\functions\fn_setIntroduction.sqf";};
+  class setPTSD {file = "\FCLA_Common\functions\fn_setPTSD.sqf";};
   class setRadioFrequencies {file = "\FCLA_Common\functions\fn_setRadioFrequencies.sqf";};
   class setUnitTrait {file = "\FCLA_Common\functions\fn_setUnitTrait.sqf";};
   class severalConditions {file = "\FCLA_Common\functions\fn_severalConditions.sqf";};

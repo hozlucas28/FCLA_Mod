@@ -25,7 +25,7 @@ _player setVariable ["FCLA_Sharing_Map", true, true];
 //Reproducir sonido.
 _soundSource = createAgent ["VirtualAISquad", getPos _player, [], 0, "CAN_COLLIDE"];
 _soundSource attachTo [_player, [0, 0, 0]];
-[_soundSource, "FCLA_Map_Unfolded", 2, 250, true] call FCLA_Common_fnc_globalSay3D;
+[_soundSource, "FCLA_Map_Unfolded", nil, 250, true] call FCLA_Common_fnc_globalSay3D;
 
 
 //Dejar de compartir.

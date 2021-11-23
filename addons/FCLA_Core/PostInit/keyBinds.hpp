@@ -57,7 +57,7 @@
 		_severalConditions = [_unit, [6, 7, 12, 14, 16]] call FCLA_Common_fnc_severalConditions;
 		if (_severalConditions) exitWith {};
 		_randomSound = selectRandom ["FCLA_Hiss_1", "FCLA_Hiss_2"];
-		[_unit, _randomSound, 1, 125, false] call FCLA_Common_fnc_globalSay3D;
+		[_unit, _randomSound, nil, 150, false] call FCLA_Common_fnc_globalSay3D;
 	},
 	{},
   [DIK_T, [true, false, false]],

@@ -46,7 +46,7 @@
     _isNotAlive = !alive (_this select 0);
     if (_isNotAlive) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
     if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
-    [_this select 0, "FCLA_Shower", 8, 20, false] call FCLA_Common_fnc_globalSay3D;
+    [_this select 0, "FCLA_Shower", nil, 20, false] call FCLA_Common_fnc_globalSay3D;
   }, 0.5, _soundObj] call CBA_fnc_addPerFrameHandler;
 
 

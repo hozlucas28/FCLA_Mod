@@ -9,7 +9,7 @@
  * Arguments:
  *            0: Origen del sonido. <UNIT|OBJECT|VEHICLE>
  *            1: Classname del sonido que se quiere reproducir. <STRING>
- *            2: Tiempo en segundos que dura el sonido a reproducir. <NUMBER>
+ *            2: Tiempo en segundos que dura el sonido a reproducir, opcional. <NUMBER> (default: duración definida en su classname)
  *            3: Máxima distancia en la que se escuchara el sonido, opcional. <NUMBER> (default: 100)
  *            4: ¿Borrar origen del sonido cuando se termina de reproducir?, opcional. <BOOL> (default: false)
  *
@@ -35,7 +35,7 @@
 params [
         ["_source", objNull, [objNull, teamMemberNull], 0],
         ["_soundClass", "", [""], 0],
-        ["_soundTime", 0, [0], 0],
+        ["_soundTime", getNumber (configFile >> "CfgSounds" >> (_this select 1) >> "duration"), [0], 0],
         ["_maxDistance", 100, [0], 0],
         ["_deleteSource", false, [true], 0]
        ];

@@ -44,8 +44,8 @@ if ((isNull _device) || (_title == "")) exitWith {false};
 	_title,
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
-	"(alive _target) && (_this distance _target < 2.5) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_this, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
-	"(alive _target) && (_caller distance _target < 2.5) && ((!(_arguments select 0)) || ([_caller, 'ACE_WaterBottle'] call BIS_fnc_hasItem)) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_caller, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
+	"(alive _target) && (_this distance _target <= 2.5) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_this, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
+	"(alive _target) && (_caller distance _target <= 2.5) && ((!(_arguments select 0)) || ([_caller, 'ACE_WaterBottle'] call BIS_fnc_hasItem)) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_caller, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
 	{ //Sentencias al iniciar.
     params ["_target", "_caller", "_actionId", "_arguments"];
     if ((!(_arguments select 0)) || ([_caller, "ACE_WaterBottle"] call BIS_fnc_hasItem)) exitWith {};
@@ -128,7 +128,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
       (_this select 0) ctrlCommit 1;
       [{_this ctrlShow true; ctrlSetFocus _this;}, _this select 1, 1] call CBA_fnc_waitAndExecute;
     }, [_ctrlIntroductoryVideo, _ctrlBoxToWrite], 10] call CBA_fnc_waitAndExecute;
-    [_caller, "FCLA_Hacking_Initialized", 12, 25] call FCLA_Common_fnc_globalSay3D;
+    [_caller, "FCLA_Hacking_Initialized", nil, 25] call FCLA_Common_fnc_globalSay3D;
 
 
     //Bloquear movilidad y posicionar laptop.
@@ -146,6 +146,22 @@ if ((isNull _device) || (_title == "")) exitWith {false};
       _caller setVariable ["FCLA_Current_Hacking_Laptop", _laptop, true];
       [_caller, "ACE_HandcuffedFFV", "switchMove"] call FCLA_Common_fnc_playAnimation;
     }, [_caller, _display]] call CBA_fnc_waitUntilAndExecute;
+
+
+    //Condicional para interrumpir hackeo.
+    [{
+      params ["_target", "_caller", "_arguments", "_display"];
+      _tooFar = _caller distance _target > 3;
+      _areNotAlive = (!alive _target) || (!alive _caller);
+      _alreadyHacked = _target getVariable ['FCLA_Hacked', false];
+      _hasNotHackDevice = (_arguments select 0) && !([_caller, 'ACE_WaterBottle'] call BIS_fnc_hasItem);
+      _severalConditions = [_caller, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions;
+      (isNull _display) || (_tooFar) || (_areNotAlive) || (_alreadyHacked) || (_hasNotHackDevice) || (_severalConditions);
+    }, {
+      params ["_target", "_caller", "_arguments", "_display"];
+      if ((isNull _display) || (_target getVariable ['FCLA_Hacked', false])) exitWith {};
+      _display closeDisplay 1;
+    }, [_target, _caller, _arguments, _display]] call CBA_fnc_waitUntilAndExecute;
 
 
     //Colocar código a medida que se teclea.
@@ -180,7 +196,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
       _ctrlHackingLines ctrlShow false;
       _target setVariable ["FCLA_Hacked", true, true];
       _ctrlEndingVideo ctrlSetText "\FCLA_Data\Videos\Hacking_Initialized_Without_Sound.ogv";
-      [_caller, "FCLA_Hacking_Initialized", 12, 25] call FCLA_Common_fnc_globalSay3D;
+      [_caller, "FCLA_Hacking_Initialized", nil, 25] call FCLA_Common_fnc_globalSay3D;
       [_target, _actionId] remoteExec ["BIS_fnc_holdActionRemove", 0, true];
 
       [{
