@@ -22,6 +22,7 @@ class CfgPatches {
 |                                  INCLUSIONES                                   |
 |********************************************************************************/
 
+#include "\FCLA_Items\Flashlight_Red\Classes.hpp"
 #include "\FCLA_Items\Throwables\Classes.hpp"
 
 
@@ -77,10 +78,18 @@ class CfgWeapons {
 	class Default;
 	class InventoryItem_Base_F;
 	class ItemCore: Default {};
+	class Binocular: Default {};
+	class NVGoggles: Binocular {};
 	class CBA_MiscItem: ItemCore {};
-	class CBA_MiscItem_ItemInfo: InventoryItem_Base_F {};
 	class GrenadeLauncher: Default {};
+	class CBA_MiscItem_ItemInfo: InventoryItem_Base_F {};
+	class InventoryFlashLightItem_Base_F: InventoryItem_Base_F {};
 
+	#include "\FCLA_Items\Blindfolds\CfgWeapons.hpp"
+	#include "\FCLA_Items\Camouflage_Nets\CfgWeapons.hpp"
+	#include "\FCLA_Items\Flashlight_Red\CfgWeapon.hpp"
+	#include "\FCLA_Items\Light_Sticks\CfgWeapon.hpp"
+	#include "\FCLA_Items\Night_Vision_Battery\CfgWeapon.hpp"
 	#include "\FCLA_Items\Others\CfgWeapons.hpp"
 	#include "\FCLA_Items\Throwables\CfgWeapons.hpp"
 };
@@ -115,4 +124,17 @@ class CfgMagazines {
 	class CA_Magazine: Default {};
 	class HandGrenade: CA_Magazine {};
 	#include "\FCLA_Items\Throwables\CfgMagazines.hpp"
+};
+
+
+
+/********************************************************************************|
+|                                    ANTEOJOS                                    |
+|********************************************************************************/
+
+class CfgGlasses {
+	class None;
+	class G_Blindfold_01_base_F: None {};
+	#include "\FCLA_Items\Blindfolds\CfgGlasses.hpp"
+	#include "\FCLA_Items\Masks\CfgGlasses.hpp"
 };

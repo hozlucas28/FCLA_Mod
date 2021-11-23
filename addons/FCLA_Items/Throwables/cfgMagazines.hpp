@@ -12,6 +12,8 @@ class FCLA_Can: HandGrenade {
 	ammo = "FCLA_Can";
 	mass = 3;
 	scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
 };
 
 
@@ -24,6 +26,8 @@ class FCLA_Bottle: HandGrenade {
 	ammo = "FCLA_Bottle";
 	mass = 5;
 	scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
 };
 
 
@@ -36,6 +40,8 @@ class FCLA_Stone: HandGrenade {
 	ammo = "FCLA_Stone";
 	mass = 5;
 	scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
 };
 
 
@@ -48,4 +54,6 @@ class FCLA_Molotov: HandGrenade {
 	ammo = "FCLA_Molotov";
 	mass = 6;
 	scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
 };

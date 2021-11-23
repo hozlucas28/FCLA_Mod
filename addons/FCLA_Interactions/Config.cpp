@@ -6,8 +6,8 @@
 class CfgPatches {
 	class FCLA_Interactions {
 		units[] = {};
+		weapons[] = {};
 		requiredAddons[] = {};
-		#include "\FCLA_Interactions\weapons.hpp"
 		version = "2.0";
 		author = "hozlucas28";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
@@ -89,7 +89,6 @@ class CfgVehicles {
 	class LandVehicle: Land {};
 	class Ship: AllVehicles {};
 
-	//Humanos.
 	class CAManBase: Man {
 		class ACE_Actions {
 			class ACE_MainActions {
@@ -116,7 +115,6 @@ class CfgVehicles {
 	  };
 	};
 
-	//Coches.
 	class Car: LandVehicle {
 		class ACE_Actions {
 			class ACE_MainActions {
@@ -125,7 +123,6 @@ class CfgVehicles {
 		};
 	};
 
-	//Tanques.
 	class Tank: LandVehicle {
 		class ACE_Actions {
 			class ACE_MainActions {
@@ -134,7 +131,6 @@ class CfgVehicles {
 		};
 	};
 
-	//Vehículos maritimos.
 	class Ship_F: Ship {
 		class ACE_Actions {
 			class ACE_MainActions {
@@ -142,40 +138,6 @@ class CfgVehicles {
 			};
 		};
 	};
-};
-
-
-
-/********************************************************************************|
-|                                     ARMAS                                      |
-|********************************************************************************/
-
-class CfgWeapons {
-	class Default;
-	class InventoryItem_Base_F;
-	class ItemCore: Default {};
-	class Binocular: Default {};
-	class NVGoggles: Binocular {};
-	class CBA_MiscItem: ItemCore {};
-	class CBA_MiscItem_ItemInfo: InventoryItem_Base_F {};
-
-	#include "\FCLA_Interactions\Blindfold\CfgWeapons.hpp"
-	#include "\FCLA_Interactions\Helmet_Camo_Net\CfgWeapons.hpp"
-	#include "\FCLA_Interactions\Light_Sticks\CfgWeapon.hpp"
-	#include "\FCLA_Interactions\Night_Vision_Battery\CfgWeapon.hpp"
-};
-
-
-
-/********************************************************************************|
-|                                    ANTEOJOS                                    |
-|********************************************************************************/
-
-class CfgGlasses {
-	class None;
-	class G_Blindfold_01_base_F: None {};
-	#include "\FCLA_Interactions\Blindfold\CfgGlasses.hpp"
-	#include "\FCLA_Interactions\CBRN\CfgGlasses.hpp"
 };
 
 
