@@ -5,8 +5,8 @@
 
 class CfgPatches {
 	class FCLA_Items {
+		units[] = {};
 		#include "\FCLA_Items\ammo.hpp"
-		#include "\FCLA_Items\units.hpp"
 		#include "\FCLA_Items\weapons.hpp"
 		requiredAddons[] = {"A3_characters_F", "A3_Data_F", "A3_Missions_F_Oldman", "ace_explosives"};
 		version = "2.0";
@@ -91,6 +91,7 @@ class CfgWeapons {
 	#include "\FCLA_Items\Light_Sticks\CfgWeapon.hpp"
 	#include "\FCLA_Items\Night_Vision_Battery\CfgWeapon.hpp"
 	#include "\FCLA_Items\Others\CfgWeapons.hpp"
+	#include "\FCLA_Items\RF_3080\CfgWeapon.hpp"
 	#include "\FCLA_Items\Throwables\CfgWeapons.hpp"
 };
 
