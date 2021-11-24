@@ -4,9 +4,9 @@
 |********************************************************************************/
 
 class FCLA_Aircraft_Gestures {
-  displayName = "Gestos<br/>(aeronaves)";
   icon = "\FCLA_Data\ACE_Actions\Aircraft_Marshall.paa";
   condition = "[_player] call FCLA_Interactions_fnc_conditionToStartLS";
+  displayName = "Gestos<br/>(aeronaves)";
 
   class FCLA_Turn_On_Engines {
     condition = "[_player] call FCLA_Interactions_fnc_conditionToStartLS";

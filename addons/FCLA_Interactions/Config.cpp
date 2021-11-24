@@ -102,6 +102,7 @@ class CfgVehicles {
 	  class ACE_SelfActions {
 			#include "\FCLA_Interactions\ID_Card\ACE_SelfAction.hpp"
 			#include "\FCLA_Interactions\Light_Sticks\ACE_SelfActions.hpp"
+			#include "\FCLA_Interactions\Stretcher\ACE_SelfAction.hpp"
 
 	    class ACE_Equipment {
 				#include "\FCLA_Interactions\CBRN\ACE_Equipment.hpp"
