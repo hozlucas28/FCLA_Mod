@@ -34,6 +34,7 @@ class CfgFunctions {
 	class FCLA_Interactions {
 		#include "\FCLA_Interactions\Blindfold\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\CBRN\CfgFunctions.hpp"
+		#include "\FCLA_Interactions\EOD_Drone\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Helmet_Camo_Net\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\ID_Card\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Insignias\CfgFunctions.hpp"
@@ -129,6 +130,15 @@ class CfgVehicles {
 				#include "\FCLA_Interactions\Plate_Number\ACE_MainAction.hpp"
 			};
 		};
+	};
+
+	class Tank_F: Tank {};
+	class UGV_02_Base_F: Tank_F {};
+	class UGV_02_Science_Base_F: UGV_02_Base_F {};
+	class B_UGV_02_Science_F: UGV_02_Science_Base_F {
+		class ACE_SelfActions {
+			#include "\FCLA_Interactions\EOD_Drone\ACE_SelfAction.hpp"
+	  };
 	};
 
 	class Ship_F: Ship {
