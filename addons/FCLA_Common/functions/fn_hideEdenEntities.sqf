@@ -15,7 +15,7 @@
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Note:
- * Si se quiere excluir una entidad específica asignale la variable de tipo
+ * Si se quiere excluir una entidad específica asígnele la variable de tipo
  * objeto "FCLA_Exclude_Concealment" con el valor <true>.
  *
  * Examples:
@@ -23,7 +23,7 @@
  *             [player, 150] call FCLA_Common_fnc_hideEdenEntities;
  *
  *             //IA excluida.
- *             [getPos player, 150, true] call FCLA_Common_fnc_hideEdenEntities; 
+ *             [getPos player, 150, true] call FCLA_Common_fnc_hideEdenEntities;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

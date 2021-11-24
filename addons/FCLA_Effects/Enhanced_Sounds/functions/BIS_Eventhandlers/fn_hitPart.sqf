@@ -21,7 +21,7 @@ if ((_selection select 0 != "head") || (!_areNearPlayers)) exitWith {};
 
 
 if ((_isExplosive) && (_isPlayer)) then {
-  ["FCLA_Shellshock", _target] call CBA_fnc_localEvent;
+  ["FCLA_Shellshock", [_target]] call CBA_fnc_localEvent;
 };
 
 

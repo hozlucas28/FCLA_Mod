@@ -34,7 +34,7 @@ params [
 
 //Definir intervalo.
 _array = [];
-for "_i" from (round _minimum) to (round _maximum) do {_array pushBack _i;};
+for "_i" from (ceil _minimum) to (ceil _maximum) do {_array pushBack _i;};
 
 
 //Seleccionar número al azar.

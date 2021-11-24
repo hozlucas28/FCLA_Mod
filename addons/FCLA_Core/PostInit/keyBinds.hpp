@@ -84,7 +84,7 @@
 
 		if (!(_unit getVariable ["FCLA_Tactical_Position", false])) then {
 			_unit setVariable ["FCLA_Tactical_Position", true, true];
-			[_unit, "FCLA_Tactical_Position_Up", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+			[_unit, "FCLA_Tactical_Position_Up"] call ACE_Common_fnc_doGesture;
 
 			[{
 				_isProne = (stance _this) == "PRONE";
@@ -96,11 +96,11 @@
 			}, {
 				if (!(_this getVariable ["FCLA_Tactical_Position", false])) exitWith {};
 				_this setVariable ["FCLA_Tactical_Position", nil, true];
-				[_this, "FCLA_Tactical_Position_Stop", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+				[_unit, "FCLA_Tactical_Position_Stop"] call ACE_Common_fnc_doGesture;
 			}, _unit] call CBA_fnc_waitUntilAndExecute;
 		} else {
 			_unit setVariable ["FCLA_Tactical_Position", nil, true];
-			[_unit, "FCLA_Tactical_Position_Stop", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+			[_unit, "FCLA_Tactical_Position_Stop"] call ACE_Common_fnc_doGesture;
 		};
 	},
 	{},
@@ -125,7 +125,7 @@
 
 		if (!(_unit getVariable ["FCLA_Tactical_Position", false])) then {
 			_unit setVariable ["FCLA_Tactical_Position", true, true];
-			[_unit, "FCLA_Tactical_Position_Down", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+			[_unit, "FCLA_Tactical_Position_Down"] call ACE_Common_fnc_doGesture;
 
 			[{
 				_isProne = (stance _this) == "PRONE";
@@ -137,11 +137,11 @@
 			}, {
 				if (!(_this getVariable ["FCLA_Tactical_Position", false])) exitWith {};
 				_this setVariable ["FCLA_Tactical_Position", nil, true];
-				[_this, "FCLA_Tactical_Position_Stop", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+				[_unit, "FCLA_Tactical_Position_Stop"] call ACE_Common_fnc_doGesture;
 			}, _unit] call CBA_fnc_waitUntilAndExecute;
 		} else {
 			_unit setVariable ["FCLA_Tactical_Position", nil, true];
-			[_unit, "FCLA_Tactical_Position_Stop", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+			[_unit, "FCLA_Tactical_Position_Stop"] call ACE_Common_fnc_doGesture;
 		};
 	},
 	{},

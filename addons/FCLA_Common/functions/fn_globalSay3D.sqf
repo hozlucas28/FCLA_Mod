@@ -18,7 +18,7 @@
  *
  * Examples:
  *             //Opcionales no definidos.
- *             [player, "FCLA_Hiss_1", 1] call FCLA_Common_fnc_globalSay3D;
+ *             [player, "FCLA_Hiss_1"] call FCLA_Common_fnc_globalSay3D;
  *
  *             //Opcionales definidos.
  *             [Unidad_1, "FCLA_Hiss_2", 1, 50, true] call FCLA_Common_fnc_globalSay3D;
@@ -42,7 +42,7 @@ params [
 
 
 
-//Verficar argumentos.
+//Verificar argumentos.
 _soundNotExist = !(isClass (configFile >> "CfgSounds" >> _soundClass));
 _isSourceHidden = isObjectHidden _source;
 _isSourcePlayingSound = _source getVariable ["FCLA_Playing_Sound", false];
@@ -50,13 +50,27 @@ if ((isNull _source) || (_maxDistance <= 0) || (_soundTime <= 0) || (_soundNotEx
 
 
 //Reproducir sonido.
-[_source, _soundClass, _maxDistance] call CBA_fnc_globalSay3D;
+_soundObj = createAgent ["VirtualAISquad", getPos _source, [], 0, "CAN_COLLIDE"];
+_soundObj attachTo [_source, [0, 0, 0]];
+[_soundObj, _soundClass, _maxDistance] call CBA_fnc_globalSay3D;
 _source setVariable ["FCLA_Playing_Sound", true, true];
+
+
+//Detener sonido.
+[{
+  params ["_source", "_soundObj"];
+  _isHidden = isObjectHidden _source;
+  _areNotAlive = (!alive _source) || (!alive _soundObj) || (isNull _source) || (isNull _soundObj);
+  _isSoundFinished = !(_source getVariable ["FCLA_Playing_Sound", false]);
+  (_isHidden) || (_areNotAlive) || (_isSoundFinished);
+}, {
+  deleteVehicle (_this select 1);
+}, [_source, _soundObj]] call CBA_fnc_waitUntilAndExecute;
 
 
 //Eliminar origen.
 [{
   (_this select 0) setVariable ["FCLA_Playing_Sound", nil, true];
   if (_this select 1) then {deleteVehicle (_this select 0)};
-}, [_source, _deleteSource], round _soundTime] call CBA_fnc_waitAndExecute;
+}, [_source, _deleteSource], ceil _soundTime] call CBA_fnc_waitAndExecute;
 true

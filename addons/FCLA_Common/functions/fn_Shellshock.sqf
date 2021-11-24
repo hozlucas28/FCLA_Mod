@@ -7,12 +7,17 @@
  *
  * Argument:
  *            0: Unidad a la que se le aplicara el efecto. <UNIT>
+ *            1: ¿Provocar caída de la unidad?, opcional. <BOOL> (default: true)
  *
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Example:
- * [player] call FCLA_Common_fnc_Shellshock;
+ *             //La unidad se caerá.
+ *             [player] call FCLA_Common_fnc_Shellshock;
+ *
+ *             //La unidad no se caerá.
+ *             [player, false] call FCLA_Common_fnc_Shellshock;
  *
  * Note:
  * Se recomienda utilizar esta función a travez del evento
@@ -21,8 +26,11 @@
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
 
-//Variable de referencia.
-params [["_unit", objNull, [objNull, teamMemberNull], 0]];
+//Variables de referencia.
+params [
+        ["_unit", objNull, [objNull, teamMemberNull], 0],
+        ["_fallDown", true, [true], 0]
+       ];
 
 
 
@@ -32,8 +40,22 @@ if ((isNull _unit) || (_isShellshockInitialized)) exitWith {false};
 
 
 
-_this spawn {
-  _this setVariable ["FCLA_Shellshock_Initialized", true, true];
+[_unit, _fallDown] spawn {
+  params ["_unit", "_fallDown"];
+  _stance = stance _unit;
+  _unit setVariable ["FCLA_Shellshock_Initialized", true, true];
+
+  if (_fallDown) then {
+    if (_stance == "STAND") then {
+      _randomAnimation = selectRandom ["AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft", "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright", "AmovPercMsprSlowWrflDf_AmovPpneMstpSrasWrflDnon"];
+      [_unit, _randomAnimation, "SwitchMove"] call FCLA_Common_fnc_playAnimation;
+    };
+
+    if (_stance == "CROUCH") then {
+      _randomAnimation = selectRandom ["AmovPknlMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft", "AmovPknlMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright", "AmovPercMsprSlowWrflDf_AmovPpneMstpSrasWrflDnon"];
+      [_unit, _randomAnimation, "SwitchMove"] call FCLA_Common_fnc_playAnimation;
+    };
+  };
 
   0 fadeSound 0.05;
   _randomWaveSound = selectRandom ["FCLA_Explosion_Wave_1", "FCLA_Explosion_Wave_2"];
@@ -45,16 +67,6 @@ _this spawn {
 
   _randomScreamSound = selectRandom ["FCLA_Pain_1", "FCLA_Pain_2", "FCLA_Pain_3", "FCLA_Pain_4", "FCLA_Pain_5", "FCLA_Pain_6", "FCLA_Pain_7"];
   playSound _randomScreamSound;
-
-  if ((stance _this) == "STAND") then {
-    _randomAnimation = selectRandom ["AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft", "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright", "AmovPercMsprSlowWrflDf_AmovPpneMstpSrasWrflDnon"];
-    [_this select 0, _randomAnimation, "SwitchMove"] call FCLA_Common_fnc_playAnimation;
-  };
-
-  if ((stance _this) == "CROUCH") then {
-    _randomAnimation = selectRandom ["AmovPknlMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft", "AmovPknlMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright", "AmovPercMsprSlowWrflDf_AmovPpneMstpSrasWrflDnon"];
-    [_this select 0, _randomAnimation, "SwitchMove"] call FCLA_Common_fnc_playAnimation;
-  };
 
   addCamShake [2, 5, 20];
   _blur = ppEffectCreate ["DynamicBlur", 474];
@@ -74,6 +86,6 @@ _this spawn {
   _blur ppEffectEnable false;
   ppEffectDestroy _blur;
   3 fadeSound 1;
-  _this setVariable ["FCLA_Shellshock_Initialized", nil, true];
+  _unit setVariable ["FCLA_Shellshock_Initialized", nil, true];
 };
 true

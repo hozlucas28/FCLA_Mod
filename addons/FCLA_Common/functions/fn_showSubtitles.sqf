@@ -41,7 +41,7 @@
  *
  * Notes:
  * Se recomienda utilizar esta función a travez del evento
- * personalizado "FCLA_Subtitles".
+ * personalizado "FCLA_Show_Subtitles".
  *
  * Si no sea desea definir un emisor asignele el valor <objNull>, como se
  * observa en el primer ejemplo.
@@ -123,7 +123,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
       _hasShortRadio = if ((!isNull _emitter) && (_needShortRadio)) then {call TFAR_fnc_haveSWRadio} else {true};
       _hasLongRadio = if ((!isNull _emitter) && (_needLongRadio)) then {call TFAR_fnc_haveLRRadio} else {true};
       _isSelectedSide = if ((!isNull _emitter) && ((_selectedSide) isNotEqualTo "All")) then {(side _caller) == _selectedSide} else {true};
-      _notShowingSubtitles = !(uiNamespace getVariable ["FCLA_Showing_Subtitles", false]);
+      _notShowingSubtitles = !(localNamespace getVariable ["FCLA_Showing_Subtitles", false]);
 
       if ((_hasShortRadio) && (_hasLongRadio) && (_isSelectedSide) && (_notShowingSubtitles)) then {
         private "_display";
@@ -131,8 +131,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
         waitUntil {_display = uiNamespace getVariable "BIS_dynamicText"; !(isNull _display)};
         _ctrl = _display displayCtrl 9999;
         _emitter setVariable ["FCLA_Subtitles_ctrl", _ctrl, true];
-        uiNamespace setVariable ["FCLA_Showing_Subtitles", true];
-        uiNamespace setVariable ["BIS_dynamicText", displayNull];
+        localNamespace setVariable ["FCLA_Showing_Subtitles", true];
 
         _ctrlBackground = _display ctrlCreate ["RscText", 99999];
         _w = 0.4 * safeZoneW;
@@ -151,7 +150,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
         sleep (ceil _timeToHideEachLine);
         _ctrl ctrlSetFade 1;
         _ctrl ctrlCommit 0.5;
-        uiNamespace setVariable ["FCLA_Showing_Subtitles", nil];
+        localNamespace setVariable ["FCLA_Showing_Subtitles", nil];
       } else {
         _ctrl = _emitter getVariable "FCLA_Subtitles_ctrl";
         if (isNil "_ctrl") exitWith {};
@@ -160,7 +159,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
         sleep (ceil _timeToHideEachLine);
         _ctrl ctrlSetFade 1;
         _ctrl ctrlCommit 0.5;
-        uiNamespace setVariable ["FCLA_Showing_Subtitles", nil];
+        localNamespace setVariable ["FCLA_Showing_Subtitles", nil];
       };
     };
     waitUntil {scriptDone _handle};
@@ -171,7 +170,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
   //Eliminar variables de tipo objeto/interfaz.
   _emitter setVariable ["FCLA_Hide_Subtitles", nil, true];
   _emitter setVariable ["FCLA_Subtitles_ctrl", nil, true];
-  uiNamespace setVariable ["FCLA_Showing_Subtitles", nil];
+  localNamespace setVariable ["FCLA_Showing_Subtitles", nil];
 
 
   //Detener labios del emisor.

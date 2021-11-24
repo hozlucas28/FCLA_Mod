@@ -17,6 +17,20 @@ class FCLA_Hacking_Initialized {
   duration = 12;
 };
 
+class FCLA_Crying_Man {
+  name = "FCLA - Hombre llorando";
+  sound[] = {"\FCLA_Common\sounds\Crying_Man.ogg", "db+5", 1};
+  titles[] = {1, ""};
+  duration = 35;
+};
+
+class FCLA_Whispers_Fear_8D {
+  name = "FCLA - Susurros (8D)";
+  sound[] = {"\FCLA_Common\sounds\Whispers_Fear_8D.ogg", "db+5", 1};
+  titles[] = {};
+  duration = 73;
+};
+
 class FCLA_Explosion_Wave_1 {
 	name = "FCLA - Onda de choque (1)";
 	sound[] = {"\FCLA_Common\sounds\Explosion_Wave_1.wav", "db+5", 1};

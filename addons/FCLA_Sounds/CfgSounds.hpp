@@ -150,13 +150,6 @@ class FCLA_Alien_Egg {
   duration = 5;
 };
 
-class FCLA_Crying_Man {
-  name = "FCLA - Hombre llorando";
-  sound[] = {"\FCLA_Sounds\sounds\Crying_Man.ogg", "db+5", 1};
-  titles[] = {1, ""};
-  duration = 35;
-};
-
 class FCLA_Scream {
   name = "FCLA - Grito de dolor";
   sound[] = {"\FCLA_Sounds\sounds\Scream.ogg", "db+5", 1};
@@ -169,11 +162,4 @@ class FCLA_Scream_8D {
   sound[] = {"\FCLA_Sounds\sounds\Scream_8D.ogg", "db+5", 1};
   titles[] = {};
   duration = 7;
-};
-
-class FCLA_Whispers_Fear_8D {
-  name = "FCLA - Susurros (8D)";
-  sound[] = {"\FCLA_Sounds\sounds\Whispers_Fear_8D.ogg", "db+5", 1};
-  titles[] = {};
-  duration = 73;
 };
