@@ -9,12 +9,12 @@
  * Return Value:
  * ¿Esta cerrada? <BOOL>
  *
+ * Example:
+ * call FCLA_Common_fnc_isDoorLocked;
+ *
  * Note:
  * Si la distancia entre el cliente y la puerta es mayor a 3 metros ó si no se
  * encuentra frente a una puerta se devolvera un "false".
- *
- * Example:
- * call FCLA_Common_fnc_isDoorLocked;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

@@ -52,7 +52,7 @@
   _isCurator = [player] call FCLA_Common_fnc_isCurator;
   _isNotAlive = !(alive player);
   _inCameraMode = player in (call ACE_Spectator_fnc_players);
-  _isNotAuthorized = !((getPlayerUID player) in FCLA_Editors_UIDs) && !((getPlayerUID player) in FCLA_Commanders_UIDs) && !((getPlayerUID player) in FCLA_Instructors_UIDs);
+  _isNotAuthorized = !((getPlayerUID player) in FCLA_Commanders_UIDs) && !((getPlayerUID player) in FCLA_Editors_UIDs) && !((getPlayerUID player) in FCLA_Instructors_UIDs);
   _currentControledUnit = call CBA_fnc_currentUnit;
   if (_inUAV) exitWith {[{systemChat "No puedes utilizar este comando si estas utilizando un dron.";}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_isOnMap) exitWith {[{systemChat "No puedes utilizar este comando si el mapa esta abierto.";}, [], 0.1] call CBA_fnc_waitAndExecute;};

@@ -12,11 +12,11 @@
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
- * Note:
- * Se recomienda utilizar esta función en el "initPlayerLocal".
- *
  * Example:
  * ["Mi título", "subtítulo"] call FCLA_Common_fnc_setIntroduction;
+ *
+ * Note:
+ * Se recomienda utilizar esta función en el "initPlayerLocal".
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

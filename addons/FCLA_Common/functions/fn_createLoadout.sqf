@@ -28,12 +28,15 @@
  *                    - _this --> unidad que ejecuta la acción.
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ID del <addAction> utilizado en la función. <NUMBER>
  *
  * Full Example:
  *            [player, "Equiparse traje ghillie", {
  *              _caller forceAddUniform "U_B_FullGhillie_ard";
  *            }, [true, true, false], true, "true"] call FCLA_Common_fnc_createLoadout;
+ *
+ * Note:
+ * Si devuelve un -1, entonces la función no se ha ejecutado con éxito.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -55,7 +58,7 @@ _setDoctor = _traits select 0;
 _setAdvancedEnginner = _traits select 1;
 _setEOD = _traits select 2;
 _supportedValuesForTraits = [true, false];
-if ((isNull _entity) || (_title == "") || (_loadout isEqualType objNull) || !(_setDoctor in _supportedValuesForTraits) || !(_setAdvancedEnginner in _supportedValuesForTraits) || !(_setEOD in _supportedValuesForTraits)) exitWith {false};
+if ((isNull _entity) || (_title == "") || (_loadout isEqualType objNull) || !(_setDoctor in _supportedValuesForTraits) || !(_setAdvancedEnginner in _supportedValuesForTraits) || !(_setEOD in _supportedValuesForTraits)) exitWith {-1};
 
 
 
@@ -70,4 +73,3 @@ _setRadioFrequencies = [{if (_arguments select 3) then {call FCLA_Common_fnc_set
 
 //Crear acción.
 _entity addAction [_title, compile (_params + _loadout + _isDoctor + _isAdvancedEnginner + _isEOD + _setRadioFrequencies), [_setDoctor, _setAdvancedEnginner, _setEOD, _setFrequencies], 1.5, false, true, "", _conditions, 2.5, false, "", ""];
-true

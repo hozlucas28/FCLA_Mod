@@ -13,15 +13,15 @@
  * Return Value:
  * ¿Cuenta con visión nocturna/térmica? <BOOL>
  *
- * Note:
- * Funciona con los coches, los vehículos de personal y las torretas (no VANTs).
- *
  * Examples:
  *             //Visión térmica incluida.
  *             ["B_MRAP_01_hmg_F"] call FCLA_Common_fnc_checkVehicleVisionModes;
  *
  *             //Visión térmica excluida.
  *             ["B_MRAP_01_hmg_F", true] call FCLA_Common_fnc_checkVehicleVisionModes;
+ *
+ * Note:
+ * Funciona con los coches, los vehículos de personal y las torretas (no VANTs).
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

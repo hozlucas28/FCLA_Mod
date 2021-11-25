@@ -12,16 +12,16 @@
  * Return Value:
  * ¿El arma cuenta con visión nocturna/térmica? <BOOL>
  *
- * Note:
- * Funciona con las armas principales, secundarias, los lanzables (ATs, AA, etc.)
- * y los binoculares.
- *
  * Examples:
  *             //Visión térmica incluida.
  *             [player] call FCLA_Common_fnc_checkWeaponVisionModes;
  *
  *             //Visión térmica excluida.
  *             [player, true] call FCLA_Common_fnc_checkWeaponVisionModes;
+ *
+ * Note:
+ * Funciona con las armas principales, secundarias, los lanzables (ATs, AA, etc.)
+ * y los binoculares.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

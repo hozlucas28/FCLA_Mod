@@ -27,7 +27,7 @@
  * Script para obtener las municiones del vehículo: <magazines VEHICLE;>
  *
  * Si desea detener el bucle de disparos asignele la variable de tipo
- * objeto "FCLA_Ambient_Fire" al vehículo, con el valor <false> ó <objNull>.
+ * objeto "FCLA_Ambient_Fire" al vehículo, con el valor <false> ó <nil>.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

@@ -22,11 +22,7 @@ if ((_backpackContainer getVariable ["FCLA_Backpack_Oxygen", FCLA_CBRN_Initial_B
 };
 
 //Verificar si el tanque tiene oxígeno.
-if ((_target getVariable ["FCLA_Oxygen", 1000]) <= 0) exitWith {
-  _text = ["||||||||||", "#808080"] call ACE_Common_fnc_stringToColoredText;
-  _picture = getText (configFile >> "CfgVehicles" >> (typeOf _target) >> "picture");
-  [_text, _picture] call ACE_Common_fnc_displayTextPicture;
-};
+if ((_target getVariable ["FCLA_Oxygen", 1000]) <= 0) exitWith {[["| Tanque vacío |", 1.25, [0.839, 0.345, 0.345, 1]], true] call CBA_fnc_Notify;};
 
 
 

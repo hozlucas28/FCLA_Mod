@@ -16,6 +16,13 @@
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
+ * Example:
+ *             //Opcional sin definir.
+ *             [player] call FCLA_Common_fnc_setPTSD;
+ *
+ *             //Opcional definidos.
+ *             [player, true, false, false] call FCLA_Common_fnc_setPTSD;
+ *
  * Note:
  * Se recomienda utilizar esta función a travez del evento
  * personalizado "FCLA_Set_PTSD".
@@ -25,13 +32,6 @@
  *
  * Para eliminar este efecto de la unidad, asígnele la variable de tipo
  * objeto "FCLA_Disable_PTDS" con con el valor <true>.
- *
- * Example:
- *             //Opcional sin definir.
- *             [player] call FCLA_Common_fnc_setPTSD;
- *
- *             //Opcional definidos.
- *             [player, true, false, false] call FCLA_Common_fnc_setPTSD;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

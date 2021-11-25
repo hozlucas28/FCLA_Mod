@@ -13,17 +13,17 @@
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
- * Note:
- * Una vez el dispositivo sea hackeado se le asociara la variable de
- * tipo objeto "FCLA_Hacked" con el valor <true>. Por defecto la variable de
- * tipo objeto mencionada no tendra valor, es decir, nulo.
- *
  * Examples:
  *             //Opcionales no definidos.
  *            [Laptop_1] call FCLA_Common_fnc_hackDevice;
  *
  *             //Opcionales definidos.
  *            [Laptop_1, "Título personalizado", false] call FCLA_Common_fnc_hackDevice;
+ *
+ * Note:
+ * Una vez el dispositivo sea hackeado se le asociara la variable de
+ * tipo objeto "FCLA_Hacked" con el valor <true>. Por defecto la variable de
+ * tipo objeto mencionada no tendra valor, es decir, nulo.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

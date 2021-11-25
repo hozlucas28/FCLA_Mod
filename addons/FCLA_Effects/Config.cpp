@@ -7,8 +7,8 @@ class CfgPatches {
 	class FCLA_Effects {
 		#include "\FCLA_Effects\units.hpp"
 		requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_beta"};
-		version = "2.0";
 		author = "hozlucas28";
+		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
 		requiredVersion = 2.0;
 	};

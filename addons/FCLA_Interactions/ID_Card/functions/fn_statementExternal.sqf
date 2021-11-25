@@ -50,14 +50,14 @@ switch ("" in _IDCard) do {
 	params ["_target", "_player"];
 	_isDragging = _player getVariable ["ACE_Dragging_isDragging", false];
 	_isCarrying = _player getVariable ["ACE_Dragging_isCarrying", false];
-	_areNotAlive = (!alive _target) || (!alive _player);
+	_isNotAlive = !alive _player;
 	_areSwimming = ([_target] call ACE_Common_fnc_isSwimming) || ([_player] call ACE_Common_fnc_isSwimming);
 	_isSurrendering = _player getVariable ["ACE_Captives_isSurrendering", false];
 	_areNotFriendly = !([side _target, side _player] call BIS_fnc_sideIsFriendly);
 	_isNotHandcuffed = !(_target getVariable ["ACE_Captives_isHandcuffed", false]);
 	_isNotTouchingGround = !(isTouchingGround _player);
 	_isNotTargetSurrendering = !(_target getVariable ["ACE_Captives_isSurrendering", false]);
-	(isNull findDisplay 10001) || (!FCLA_ID_Card_Allowed) || ((_areNotFriendly) && (_isNotHandcuffed) && (_isNotTargetSurrendering)) || (_isDragging) || (_isCarrying) || (_areNotAlive) || (_areSwimming) || (_isSurrendering) || (_isNotTouchingGround);
+	(isNull findDisplay 10001) || (!FCLA_ID_Card_Allowed) || ((_areNotFriendly) && (_isNotHandcuffed) && (_isNotTargetSurrendering)) || (_isDragging) || (_isCarrying) || (_isNotAlive) || (_areSwimming) || (_isSurrendering) || (_isNotTouchingGround);
 }, {
 	if (!isNull findDisplay 10001) then {closeDialog 0;};
   [_this select 1, "", "SwitchMove"] call FCLA_Common_fnc_playAnimation;

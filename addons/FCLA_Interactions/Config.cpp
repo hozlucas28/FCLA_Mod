@@ -8,8 +8,8 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredAddons[] = {};
-		version = "2.0";
 		author = "hozlucas28";
+		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
 		requiredVersion = 2.0;
 	};
@@ -102,7 +102,6 @@ class CfgVehicles {
 	  class ACE_SelfActions {
 			#include "\FCLA_Interactions\ID_Card\ACE_SelfAction.hpp"
 			#include "\FCLA_Interactions\Light_Sticks\ACE_SelfActions.hpp"
-			#include "\FCLA_Interactions\Stretcher\ACE_SelfAction.hpp"
 
 	    class ACE_Equipment {
 				#include "\FCLA_Interactions\CBRN\ACE_Equipment.hpp"

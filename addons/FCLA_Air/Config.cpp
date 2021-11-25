@@ -7,8 +7,8 @@ class CfgPatches {
 	class FCLA_Air {
 		#include "\FCLA_Air\units.hpp"
 		requiredAddons[] = {"A3_Air_F_Beta", "A3_Air_F_Beta_Heli_Transport_01", "A3_Air_F_Heli_Heli_Transport_04"};
-		version = "2.0";
 		author = "hozlucas28";
+		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
 		requiredVersion = 2.0;
 	};

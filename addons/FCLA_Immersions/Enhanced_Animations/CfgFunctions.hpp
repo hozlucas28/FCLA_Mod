@@ -4,8 +4,8 @@
 |********************************************************************************/
 
 class Enhanced_Animations {
-	class displayEventHandlerEA {
-		file = "\FCLA_Immersions\Enhanced_Animations\functions\fn_displayEventHandler.sqf";
+	class displayHandlerEA {
+		file = "\FCLA_Immersions\Enhanced_Animations\functions\fn_displayHandler.sqf";
 		postInit = 1;
 	};
 
