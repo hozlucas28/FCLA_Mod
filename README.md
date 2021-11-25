@@ -6,4 +6,4 @@
 
 **- Reportar (error/bug/fallo):** https://forms.gle/CpgECcqcvPZpEh7x7
 
-> Si desea tomar funciones del mod puede hacerlo libremente, Sin embargo no se proporcionara ayuda alguna.
+> Si desea tomar funciones del mod puede hacerlo libremente, pero no se proporcionara ayuda alguna.
