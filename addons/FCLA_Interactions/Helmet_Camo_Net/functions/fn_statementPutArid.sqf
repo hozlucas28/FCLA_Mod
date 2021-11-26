@@ -30,17 +30,24 @@ _aridSnakeskinHelmetsWithoutCamoNet = [
 _statementOnFinish = {
   (_this select 0) params ["_player", "_aridCommonHelmetsWithoutCamoNet", "_aridSnakeskinHelmetsWithoutCamoNet"];
   _headgear = headgear _player;
-  _itemCamoNet = "FCLA_Camo_Net_Arid";
-  _camouflageCoef = _player getUnitTrait "camouflageCoef";
-  [_player, _itemCamoNet] call ACE_Common_fnc_useItem;
-  _player setUnitTrait ["camouflageCoef", _camouflageCoef - 0.2];
-  _player setVariable ["FCLA_Saved_Headgear", [_headgear, _itemCamoNet, _camouflageCoef], true];
+  [_player, "FCLA_Camo_Net_Arid"] call ACE_Common_fnc_useItem;
 
   playSound "FCLA_Helmet_Equipped";
   switch (true) do {
-    case (_headgear == "rhsusf_ach_helmet_ocp"): {_player addHeadgear "rhsusf_ach_helmet_camo_ocp";};
-    case (_headgear in _aridCommonHelmetsWithoutCamoNet): {_player addHeadgear "H_HelmetB_camo";};
-    case (_headgear in _aridSnakeskinHelmetsWithoutCamoNet): {_player addHeadgear "H_HelmetB_Camo_Snake";};
+    case (_headgear == "rhsusf_ach_helmet_ocp"): {
+      removeHeadgear _player;
+      _player addHeadgear "rhsusf_ach_helmet_camo_ocp";
+    };
+
+    case (_headgear in _aridCommonHelmetsWithoutCamoNet): {
+      removeHeadgear _player;
+      _player addHeadgear "H_HelmetB_camo";
+    };
+
+    case (_headgear in _aridSnakeskinHelmetsWithoutCamoNet): {
+      removeHeadgear _player;
+      _player addHeadgear "H_HelmetB_Camo_Snake";
+    };
   };
 };
 

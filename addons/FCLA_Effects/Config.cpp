@@ -20,8 +20,8 @@ class CfgPatches {
 |                             INCLUSIÓN DE ARCHIVOS                              |
 |********************************************************************************/
 
-#include "\FCLA_Effects\Blast_Refract\Classnames.hpp"
 #include "\FCLA_Effects\Metal_Sparks\Classnames.hpp"
+#include "\FCLA_Effects\Blast_Refract\Classnames.hpp"
 
 
 
@@ -41,6 +41,7 @@ class CfgCoreData {
 
 class CfgFunctions {
 	class FCLA_Effects {
+		#include "\FCLA_Effects\NVG\CfgFunctions.hpp"
 		#include "\FCLA_Effects\Planes\CfgFunctions.hpp"
 		#include "\FCLA_Effects\Enhanced_Sounds\CfgFunctions.hpp"
 	};
@@ -54,8 +55,8 @@ class CfgFunctions {
 
 class CfgCloudlets {
 	class Default;
-	#include "\FCLA_Effects\Blast_Refract\CfgCloudlets.hpp"
 	#include "\FCLA_Effects\Metal_sparks\CfgCloudlets.hpp"
+	#include "\FCLA_Effects\Blast_Refract\CfgCloudlets.hpp"
 };
 
 
@@ -98,8 +99,8 @@ class CfgVehicles {
 	class All;
 	class Sound: All {};
 	class AllVehicles: All {};
-	#include "\FCLA_Effects\Enhanced_Sounds\CfgVehicles.hpp"
 	#include "\FCLA_Effects\Lights_Flare\CfgVehicle.hpp"
+	#include "\FCLA_Effects\Enhanced_Sounds\CfgVehicles.hpp"
 };
 
 
@@ -116,36 +117,42 @@ class Extended_Engine_EventHandlers {
 
 class Extended_HitPart_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_hitPartSoundsES;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_hitPartESEH;};";
 	};
 };
 
 class Extended_InventoryClosed_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryClosedSoundsES;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryClosedESEH;};";
 	};
 };
 
 class Extended_InventoryOpened_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryOpenedSoundsES;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryOpenedESEH;};";
 	};
 };
 
 class Extended_Killed_Eventhandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_killedSoundsES;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_killedESEH;};";
 	};
 };
 
 class Extended_Put_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_putSoundsES;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_putESEH;};";
+	};
+};
+
+class Extended_Respawn_Eventhandlers {
+	class CAManBase {
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_respawnNVGEH;};";
 	};
 };
 
 class Extended_Take_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_takeSoundsES;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_takeESEH;};";
 	};
 };

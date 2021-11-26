@@ -31,17 +31,24 @@ _tropicalDigitalHelmetsWithoutCamoNet = [
 _statementOnFinish = {
   (_this select 0) params ["_player", "_tropicalCommonHelmetsWithoutCamoNet", "_tropicalWoodlandHelmetsWithoutCamoNet", "_tropicalDigitalHelmetsWithoutCamoNet"];
   _headgear = headgear _player;
-  _itemCamoNet = "FCLA_Camo_Net_Tropical";
-  _camouflageCoef = _player getUnitTrait "camouflageCoef";
-  [_player, _itemCamoNet] call ACE_Common_fnc_useItem;
-  _player setUnitTrait ["camouflageCoef", _camouflageCoef - 0.2];
-  _player setVariable ["FCLA_Saved_Headgear", [_headgear, _itemCamoNet, _camouflageCoef], true];
+  [_player, "FCLA_Camo_Net_Tropical"] call ACE_Common_fnc_useItem;
 
   playSound "FCLA_Helmet_Equipped";
   switch (true) do {
-    case (_headgear in _tropicalCommonHelmetsWithoutCamoNet): {_player addHeadgear "H_HelmetB_Camo_Tropical";};
-    case (_headgear in _tropicalWoodlandHelmetsWithoutCamoNet): {_player addHeadgear "H_HelmetB_Camo_Woodland";};
-    case (_headgear in _tropicalDigitalHelmetsWithoutCamoNet): {_player addHeadgear "H_HelmetB_Camo_Digital";};
+    case (_headgear in _tropicalCommonHelmetsWithoutCamoNet): {
+      removeHeadgear _player;
+      _player addHeadgear "H_HelmetB_Camo_Tropical";
+    };
+
+    case (_headgear in _tropicalWoodlandHelmetsWithoutCamoNet): {
+      removeHeadgear _player;
+      _player addHeadgear "H_HelmetB_Camo_Woodland";
+    };
+
+    case (_headgear in _tropicalDigitalHelmetsWithoutCamoNet): {
+      removeHeadgear _player;
+      _player addHeadgear "H_HelmetB_Camo_Digital";
+    };
   };
 };
 

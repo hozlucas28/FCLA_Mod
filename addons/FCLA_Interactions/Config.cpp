@@ -32,17 +32,17 @@ class CfgPatches {
 
 class CfgFunctions {
 	class FCLA_Interactions {
-		#include "\FCLA_Interactions\Blindfold\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\CBRN\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\EOD_Drone\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\Helmet_Camo_Net\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\ID_Card\CfgFunctions.hpp"
+		#include "\FCLA_Interactions\Blindfold\CfgFunctions.hpp"
+		#include "\FCLA_Interactions\EOD_Drone\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Insignias\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\Light_Sticks\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\Night_Vision_Battery\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\Plate_Number\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Share_Map\CfgFunctions.hpp"
+		#include "\FCLA_Interactions\Light_Sticks\CfgFunctions.hpp"
+		#include "\FCLA_Interactions\Plate_Number\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Smoke_Signal\CfgFunctions.hpp"
+		#include "\FCLA_Interactions\Helmet_Camo_Net\CfgFunctions.hpp"
+		#include "\FCLA_Interactions\Night_Vision_Battery\CfgFunctions.hpp"
 	};
 };
 
@@ -93,8 +93,8 @@ class CfgVehicles {
 	class CAManBase: Man {
 		class ACE_Actions {
 			class ACE_MainActions {
-				#include "\FCLA_Interactions\Blindfold\ACE_MainActions.hpp"
 				#include "\FCLA_Interactions\ID_Card\ACE_MainAction.hpp"
+				#include "\FCLA_Interactions\Blindfold\ACE_MainActions.hpp"
 				#include "\FCLA_Interactions\Insignias\ACE_MainActions.hpp"
 			};
 		};
@@ -105,9 +105,9 @@ class CfgVehicles {
 
 	    class ACE_Equipment {
 				#include "\FCLA_Interactions\CBRN\ACE_Equipment.hpp"
+				#include "\FCLA_Interactions\Smoke_Signal\ACE_Equipment.hpp"
 				#include "\FCLA_Interactions\Helmet_Camo_Net\ACE_Equipment.hpp"
 				#include "\FCLA_Interactions\Night_Vision_Battery\ACE_Equipment.hpp"
-				#include "\FCLA_Interactions\Smoke_Signal\ACE_Equipment.hpp"
 	    };
 
 			class ACE_TeamManagement {

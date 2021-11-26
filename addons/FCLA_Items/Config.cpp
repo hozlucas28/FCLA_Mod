@@ -22,8 +22,8 @@ class CfgPatches {
 |                                  INCLUSIONES                                   |
 |********************************************************************************/
 
-#include "\FCLA_Items\Flashlight_Red\Classes.hpp"
 #include "\FCLA_Items\Throwables\Classes.hpp"
+#include "\FCLA_Items\Flashlight_Red\Classes.hpp"
 
 
 
@@ -85,14 +85,14 @@ class CfgWeapons {
 	class CBA_MiscItem_ItemInfo: InventoryItem_Base_F {};
 	class InventoryFlashLightItem_Base_F: InventoryItem_Base_F {};
 
-	#include "\FCLA_Items\Blindfolds\CfgWeapons.hpp"
-	#include "\FCLA_Items\Camouflage_Nets\CfgWeapons.hpp"
-	#include "\FCLA_Items\Flashlight_Red\CfgWeapon.hpp"
-	#include "\FCLA_Items\Light_Sticks\CfgWeapon.hpp"
-	#include "\FCLA_Items\Night_Vision_Battery\CfgWeapon.hpp"
 	#include "\FCLA_Items\Others\CfgWeapons.hpp"
 	#include "\FCLA_Items\RF_3080\CfgWeapon.hpp"
 	#include "\FCLA_Items\Throwables\CfgWeapons.hpp"
+	#include "\FCLA_Items\Blindfolds\CfgWeapons.hpp"
+	#include "\FCLA_Items\Light_Sticks\CfgWeapon.hpp"
+	#include "\FCLA_Items\Flashlight_Red\CfgWeapon.hpp"
+	#include "\FCLA_Items\Camouflage_Nets\CfgWeapons.hpp"
+	#include "\FCLA_Items\Night_Vision_Battery\CfgWeapon.hpp"
 };
 
 
@@ -110,8 +110,8 @@ class CfgAmmo {
 	class DirectionalBombBase: DirectionalBombCore {};
 	class APERSTripMine_Wire_Ammo: DirectionalBombBase {};
 
-	#include "\FCLA_Items\Flare_Trip_Mine\CfgAmmo.hpp"
 	#include "\FCLA_Items\Throwables\CfgAmmo.hpp"
+	#include "\FCLA_Items\Flare_Trip_Mine\CfgAmmo.hpp"
 };
 
 
@@ -136,6 +136,7 @@ class CfgMagazines {
 class CfgGlasses {
 	class None;
 	class G_Blindfold_01_base_F: None {};
-	#include "\FCLA_Items\Blindfolds\CfgGlasses.hpp"
+
 	#include "\FCLA_Items\Masks\CfgGlasses.hpp"
+	#include "\FCLA_Items\Blindfolds\CfgGlasses.hpp"
 };

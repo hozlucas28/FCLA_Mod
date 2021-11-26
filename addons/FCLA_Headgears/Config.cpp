@@ -44,9 +44,9 @@ class CfgWeapons {
 	class H_PilotHelmetFighter_B: H_HelmetB {};
 
 	#include "\FCLA_Headgears\Custom\CfgWeapon.hpp"
-	#include "\FCLA_Headgears\Digital\CfgWeapons.hpp"
-	#include "\FCLA_Headgears\Marine\CfgWeapons.hpp"
 	#include "\FCLA_Headgears\Urban\CfgWeapons.hpp"
-	#include "\FCLA_Headgears\Vanilla\CfgWeapons.hpp"
+	#include "\FCLA_Headgears\Marine\CfgWeapons.hpp"
 	#include "\FCLA_Headgears\Winter\CfgWeapons.hpp"
+	#include "\FCLA_Headgears\Digital\CfgWeapons.hpp"
+	#include "\FCLA_Headgears\Vanilla\CfgWeapons.hpp"
 };

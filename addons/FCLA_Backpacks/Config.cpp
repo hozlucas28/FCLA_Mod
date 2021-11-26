@@ -36,10 +36,10 @@ class CfgVehicles {
 	class B_Kitbag_cbr: B_Kitbag_Base {};
 	class TFAR_Bag_Base: Bag_Base {};
 
-	#include "\FCLA_Backpacks\Digital\CfgVehicles.hpp"
+	#include "\FCLA_Backpacks\Urban\CfgVehicles.hpp"
+	#include "\FCLA_Backpacks\Winter\CfgVehicles.hpp"
 	#include "\FCLA_Backpacks\Marine\CfgVehicles.hpp"
 	#include "\FCLA_Backpacks\Radios\CfgVehicles.hpp"
-	#include "\FCLA_Backpacks\Urban\CfgVehicles.hpp"
+	#include "\FCLA_Backpacks\Digital\CfgVehicles.hpp"
 	#include "\FCLA_Backpacks\Vanilla\CfgVehicles.hpp"
-	#include "\FCLA_Backpacks\Winter\CfgVehicles.hpp"
 };

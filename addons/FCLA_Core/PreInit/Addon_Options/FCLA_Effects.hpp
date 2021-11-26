@@ -5,6 +5,20 @@
 
 
 
+/* -------------------------------- GENERAL -------------------------------- */
+
+[
+	"FCLA_Modify_Color_NVG", "CHECKBOX",
+	["¿Modificar color (NVG)?", "Al activar el color de la visión nocturna sera remplazado por el tono verdeagua."],
+	["FCLA Efectos", "• General"],
+	true,
+	GLOBAL,
+	{},
+	false
+] call CBA_fnc_addSetting;
+
+
+
 /* -------------------------------- AVIONES -------------------------------- */
 
 [
