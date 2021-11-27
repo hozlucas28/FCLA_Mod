@@ -37,7 +37,6 @@ class CfgFunctions {
 		#include "\FCLA_Interactions\Blindfold\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\EOD_Drone\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Insignias\CfgFunctions.hpp"
-		#include "\FCLA_Interactions\Share_Map\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Light_Sticks\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Plate_Number\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Smoke_Signal\CfgFunctions.hpp"

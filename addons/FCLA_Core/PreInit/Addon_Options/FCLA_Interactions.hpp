@@ -44,17 +44,6 @@
 
 
 [
-	"FCLA_Share_Map_Allowed","CHECKBOX",
-	["¿Se puede compartir el mapa?", "Si se activa, la unidad con mapa podra compartirlo a travez del menú ACE 3D en el mapa."],
-	["FCLA Interacciones", "• General"],
-	true,
-	GLOBAL,
-	{},
-	false
-] call CBA_fnc_addSetting;
-
-
-[
 	"FCLA_Blindfold_Allowed", "CHECKBOX",
 	["¿Se puede vendar a los prisioneros?", "Si se activa se podra vendar a las unidades que esten arrestadas/rendidas.\n¡PARA PODER VENDAR A UNA UNIDAD SE DEBE DISPONER DE UNA VENDA NEGRA/BLANCA EN EL INVENTARIO!"],
 	["FCLA Interacciones", "• General"],

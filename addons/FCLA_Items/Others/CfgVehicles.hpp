@@ -362,3 +362,22 @@ class Item_FCLA_Laptop: Item_Base_F {
     };
   };
 };
+
+
+class Item_FCLA_Hacking_Device: Item_Base_F {
+  author = "hozlucas28";
+  displayName = "Dispositivo de hackeo";
+  vehicleClass = "Small_items";
+  editorCategory = "EdCat_Equipment";
+  editorSubcategory = "EdSubcat_InventoryItems";
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+
+  class TransportItems {
+    class FCLA_Hacking_Device {
+      name = "FCLA_Hacking_Device";
+      count = 1;
+    };
+  };
+};

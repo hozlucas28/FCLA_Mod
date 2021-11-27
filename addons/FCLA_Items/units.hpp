@@ -10,5 +10,5 @@ units[] = {
   "Item_FCLA_Afghan_Passport", "Item_FCLA_Cocaine", "Item_FCLA_Cocaine_Brick", "Item_FCLA_Weed_Brick",
   "Item_FCLA_Fertilizer", "Item_FCLA_Hydrogen_Peroxide", "Item_FCLA_Nail_Polish_Remover", "Item_FCLA_Money_Roll",
   "Item_FCLA_Wire", "Item_FCLA_Portable_HDD", "Item_FCLA_Camera", "Item_FCLA_Camcorder",
-  "Item_FCLA_Laptop", "Item_FCLA_RF_3080"
+  "Item_FCLA_Laptop", "Item_FCLA_Hacking_Device", "Item_FCLA_RF_3080"
 };

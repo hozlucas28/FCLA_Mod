@@ -51,8 +51,8 @@ _players = [];
 //Verificar si hay un jugador/unidad controlada dentro del rango.
 _return = false;
 {
-  _numberOfNearPlayers = {([_entity, _x] call CBA_fnc_getDistance) < _distance} count _players;
-  if ((([_entity, _x] call CBA_fnc_getDistance) < _distance) && (_numberOfNearPlayers >= _minimumNumberOfUnits)) exitWith {
+  _numberOfNearPlayers = {(_x distance _entity) < _distance} count _players;
+  if (((_x distance _entity) < _distance) && (_numberOfNearPlayers >= _minimumNumberOfUnits)) exitWith {
     _return = true;
   };
 } forEach _players;

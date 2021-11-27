@@ -45,10 +45,10 @@ if ((isNull _device) || (_title == "")) exitWith {false};
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
 	"(alive _target) && (_this distance _target <= 2.5) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_this, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
-	"(alive _target) && (_caller distance _target <= 2.5) && ((!(_arguments select 0)) || ([_caller, 'ACE_WaterBottle'] call BIS_fnc_hasItem)) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_caller, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
+	"(alive _target) && (_caller distance _target <= 2.5) && ((!(_arguments select 0)) || ([_caller, 'FCLA_Hacking_Device'] call BIS_fnc_hasItem)) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_caller, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
 	{ //Sentencias al iniciar.
     params ["_target", "_caller", "_actionId", "_arguments"];
-    if ((!(_arguments select 0)) || ([_caller, "ACE_WaterBottle"] call BIS_fnc_hasItem)) exitWith {};
+    if ((!(_arguments select 0)) || ([_caller, "FCLA_Hacking_Device"] call BIS_fnc_hasItem)) exitWith {};
     _line = ["[Sistema]", "Se necesita un dispositivo de hackeo."];
     [objNull, [_line], "System", 3] call FCLA_Common_fnc_showSubtitles;
   },
@@ -154,7 +154,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
       _tooFar = _caller distance _target > 3;
       _areNotAlive = (!alive _target) || (!alive _caller);
       _alreadyHacked = _target getVariable ['FCLA_Hacked', false];
-      _hasNotHackDevice = (_arguments select 0) && !([_caller, 'ACE_WaterBottle'] call BIS_fnc_hasItem);
+      _hasNotHackDevice = (_arguments select 0) && !([_caller, "FCLA_Hacking_Device"] call BIS_fnc_hasItem);
       _severalConditions = [_caller, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions;
       (isNull _display) || (_tooFar) || (_areNotAlive) || (_alreadyHacked) || (_hasNotHackDevice) || (_severalConditions);
     }, {
@@ -170,7 +170,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     _linesOfCode = (loadFile "\FCLA_Common\functions\Hack_Device\codes\Hacking_Lines.txt") splitString "@";
     _numberOfLines = count _linesOfCode;
 
-    while {(alive _target) && (!isNull _display) && (_numberOfLinesDisplayed < _numberOfLines) && (_caller distance _target < 2.5) && ((!(_arguments select 0)) || ([_caller, "ACE_WaterBottle"] call BIS_fnc_hasItem)) && !([_caller] call FCLA_Common_fnc_severalConditions)} do {
+    while {(alive _target) && (!isNull _display) && (_numberOfLinesDisplayed < _numberOfLines) && (_caller distance _target < 2.5) && ((!(_arguments select 0)) || ([_caller, "FCLA_Hacking_Device"] call BIS_fnc_hasItem)) && !([_caller] call FCLA_Common_fnc_severalConditions)} do {
     	_lineToWrite = _linesOfCode select _numberOfLinesDisplayed;
       _lastLetterNumber = _caller getVariable ['FCLA_Letter_Number', 0];
     	_lastWritten = _lineToWrite select [0, _lastLetterNumber];
@@ -225,7 +225,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
 	},
 	{ //Sentencias al interrumpirse.
     params ["_target", "_caller", "_actionId", "_arguments"];
-    if ((!(_arguments select 0)) || ([_caller, "ACE_WaterBottle"] call BIS_fnc_hasItem)) exitWith {};
+    if ((!(_arguments select 0)) || ([_caller, "FCLA_Hacking_Device"] call BIS_fnc_hasItem)) exitWith {};
     _line = ["[Sistema]", "Se necesita un dispositivo de hackeo."];
     [objNull, [_line], "System", 3] call FCLA_Common_fnc_showSubtitles;
   },

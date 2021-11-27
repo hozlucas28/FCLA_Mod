@@ -246,3 +246,17 @@ class FCLA_Laptop: CBA_MiscItem {
   scopeCurator = 2;
   class ItemInfo: CBA_MiscItem_ItemInfo {mass = 6;};
 };
+
+
+class FCLA_Hacking_Device: CBA_MiscItem {
+  author = "hozlucas28";
+  displayName = "Dispositivo de hackeo";
+  hiddenSelections[] = {"Camo_1", "Screen_1"};
+  hiddenSelectionsTextures[] = {"\FCLA_Items\Others\data\Hacking_Device\Hacking_Device_co.paa"};
+  model = "\FCLA_Items\Others\data\Hacking_Device\Hacking_Device.p3d";
+  picture = "\FCLA_Items\Others\data\pictures\Hacking_Device.paa";
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+  class ItemInfo: CBA_MiscItem_ItemInfo {mass = 5;};
+};
