@@ -5,8 +5,8 @@
 
 class CfgPatches {
 	class FCLA_Items {
-		units[] = {};
 		#include "\FCLA_Items\ammo.hpp"
+		#include "\FCLA_Items\units.hpp"
 		#include "\FCLA_Items\weapons.hpp"
 		requiredAddons[] = {"A3_characters_F", "A3_Data_F", "A3_Missions_F_Oldman", "ace_explosives"};
 		author = "hozlucas28";
@@ -66,6 +66,31 @@ class CfgCloudlets {
 
 class CfgLights {
 	#include "\FCLA_Items\Throwables\CfgLights.hpp"
+};
+
+
+
+/********************************************************************************|
+|                                   VEHÍCULOS                                    |
+|********************************************************************************/
+
+class CfgVehicles {
+	class All;
+	class Static: All {};
+	class Building: Static {};
+	class Strategic: Building {};
+	class ReammoBox: Strategic {};
+	class WeaponHolder: ReammoBox {};
+	class Item_Base_F: WeaponHolder {};
+	class Headgear_Base_F: WeaponHolder {};
+
+	#include "\FCLA_Items\Others\CfgVehicles.hpp"
+	#include "\FCLA_Items\RF_3080\CfgVehicle.hpp"
+	#include "\FCLA_Items\Blindfolds\CfgVehicles.hpp"
+	#include "\FCLA_Items\Light_Sticks\CfgVehicle.hpp"
+	#include "\FCLA_Items\Flashlight_Red\CfgVehicle.hpp"
+	#include "\FCLA_Items\Camouflage_Nets\CfgVehicles.hpp"
+	#include "\FCLA_Items\Night_Vision_Battery\CfgVehicle.hpp"
 };
 
 

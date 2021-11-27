@@ -5,14 +5,37 @@
 
 class CfgPatches {
 	class FCLA_Headgears {
-		weapons[] = {};
 		requiredAddons[] = {};
 		#include "\FCLA_Headgears\units.hpp"
+		#include "\FCLA_Headgears\weapons.hpp"
 		author = "hozlucas28";
 		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
 		requiredVersion = 2.0;
 	};
+};
+
+
+
+/********************************************************************************|
+|                                   VEHÍCULOS                                    |
+|********************************************************************************/
+
+class CfgVehicles {
+	class All;
+	class Static: All {};
+	class Building: Static {};
+	class Strategic: Building {};
+	class ReammoBox: Strategic {};
+	class WeaponHolder: ReammoBox {};
+	class Headgear_Base_F: WeaponHolder {};
+
+	#include "\FCLA_Headgears\Custom\CfgVehicle.hpp"
+	#include "\FCLA_Headgears\Urban\CfgVehicles.hpp"
+	#include "\FCLA_Headgears\Marine\CfgVehicles.hpp"
+	#include "\FCLA_Headgears\Winter\CfgVehicles.hpp"
+	#include "\FCLA_Headgears\Digital\CfgVehicles.hpp"
+	#include "\FCLA_Headgears\Vanilla\CfgVehicles.hpp"
 };
 
 

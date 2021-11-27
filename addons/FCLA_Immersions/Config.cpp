@@ -49,8 +49,8 @@ class CfgSounds {
 
 class CfgMovesBasic {
 	class ManActions {
+		#include "\FCLA_Immersions\TFAR_Animations\CfgMovesBasic\ManActions.hpp"
 	  #include "\FCLA_Immersions\Enhanced_Animations\CfgMovesBasic\ManActions.hpp"
-	  #include "\FCLA_Immersions\TFAR_Animations\CfgMovesBasic\ManActions.hpp"
 	};
 
 	class Actions {
@@ -68,10 +68,8 @@ class CfgMovesBasic {
 
 class CfgMovesMaleSdr: CfgMovesBasic {
 	class States {
-	  class AmovPercMstpSrasWrflDnon;
+	  class AmovPercMstpSrasWrflDnon; 
 	  class AmovPercMstpSrasWpstDnon;
-	  class AmovPercMstpSlowWrflDnon;
-	  class AmovPercMstpSlowWpstDnon;
 	  #include "\FCLA_Immersions\Kick_Door\CfgMovesMaleSdr\States.hpp"
 	};
 };
