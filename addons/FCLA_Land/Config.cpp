@@ -5,16 +5,15 @@
 
 class CfgPatches {
 	class FCLA_Land {
-		units[] = {};
 		weapons[] = {};
 		requiredAddons[] = {};
+		#include "\FCLA_Land\units.hpp"
 		version = "2.0";
 		author = "hozlucas28";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
+		requiredVersion = 2.0;
 	};
 };
-
-
 
 
 
@@ -23,19 +22,12 @@ class CfgPatches {
 |********************************************************************************/
 
 class CfgVehicles {
-	#include "\FCLA_Land\CfgVehicles.hpp"
-};
-
-
-
-
-
-
-/********************************************************************************|
-|                                 CATEGORÍAS 3EDEN                               |
-|********************************************************************************/
-
-class CfgEditorCategories {
-	class FCLA_Category_Side {displayName = "FCLA";};
-	class FCLA_Category_Structures {displayName = "Estructuras (FCLA)";};
+	class All;
+	class AllVehicles: All {};
+	class Land: AllVehicles {};
+	class LandVehicle: Land {};
+	class Tank: LandVehicle {};
+	class Tank_F: Tank {};
+	class APC_Tracked_01_base_F: Tank_F {};
+	#include "\FCLA_Land\Vanilla\CfgVehicles.hpp"
 };
