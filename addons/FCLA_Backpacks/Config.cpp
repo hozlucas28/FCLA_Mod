@@ -5,7 +5,6 @@
 
 class CfgPatches {
 	class FCLA_Backpacks {
-		weapons[] = {};
 		requiredAddons[] = {};
 		#include "\FCLA_Backpacks\units.hpp"
 		author = "hozlucas28";

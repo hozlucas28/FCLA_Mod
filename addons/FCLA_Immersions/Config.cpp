@@ -5,7 +5,6 @@
 
 class CfgPatches {
 	class FCLA_Immersions {
-		weapons[] = {};
 		requiredAddons[] = {};
 		#include "\FCLA_Immersions\units.hpp"
 		author = "hozlucas28";
@@ -68,7 +67,7 @@ class CfgMovesBasic {
 
 class CfgMovesMaleSdr: CfgMovesBasic {
 	class States {
-	  class AmovPercMstpSrasWrflDnon; 
+	  class AmovPercMstpSrasWrflDnon;
 	  class AmovPercMstpSrasWpstDnon;
 	  #include "\FCLA_Immersions\Kick_Door\CfgMovesMaleSdr\States.hpp"
 	};

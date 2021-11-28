@@ -5,8 +5,6 @@
 
 class CfgPatches {
 	class FCLA_Interactions {
-		units[] = {};
-		weapons[] = {};
 		requiredAddons[] = {};
 		author = "hozlucas28";
 		version = "2.0";
