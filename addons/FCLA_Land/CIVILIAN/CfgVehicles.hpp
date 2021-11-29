@@ -5,7 +5,7 @@
 
 
 
-/* -------------------------- AMBULANCIA - ALTIS --------------------------- */
+/* ------------------------------ AMBULANCIAS ------------------------------ */
 
 class FCLA_C_Van_02_medevac_F_Altis: C_Van_02_medevac_F {
   displayName = "Furgoneta (ambulancia - Altis)";
@@ -25,9 +25,6 @@ class FCLA_C_Van_02_medevac_F_Altis: C_Van_02_medevac_F {
 };
 
 
-
-/* -------------------------- AMBULANCIA - MALDEN -------------------------- */
-
 class FCLA_C_Van_02_medevac_F_Malden: C_Van_02_medevac_F {
   displayName = "Furgoneta (ambulancia - Malden)";
   //editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Malden.jpg";
@@ -45,9 +42,6 @@ class FCLA_C_Van_02_medevac_F_Malden: C_Van_02_medevac_F {
   };
 };
 
-
-
-/* -------------------------- AMBULANCIA - TANOA --------------------------- */
 
 class FCLA_C_Van_02_medevac_F_Tanoa: C_Van_02_medevac_F {
   displayName = "Furgoneta (ambulancia - Tanoa)";
@@ -67,9 +61,6 @@ class FCLA_C_Van_02_medevac_F_Tanoa: C_Van_02_medevac_F {
 };
 
 
-
-/* ------------------------- AMBULANCIA - LIVONIA -------------------------- */
-
 class FCLA_C_Van_02_medevac_F_Livonia: C_Van_02_medevac_F {
   displayName = "Furgoneta (ambulancia - Livonia)";
   //editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Livonia.jpg";
@@ -88,9 +79,6 @@ class FCLA_C_Van_02_medevac_F_Livonia: C_Van_02_medevac_F {
 };
 
 
-
-/* ------------------------ AMBULANCIA - CHERNARUS ------------------------- */
-
 class FCLA_C_Van_02_medevac_F_Chernarus: C_Van_02_medevac_F {
   displayName = "Furgoneta (ambulancia - Chernarus)";
   //editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Chernarus.jpg";
@@ -108,9 +96,6 @@ class FCLA_C_Van_02_medevac_F_Chernarus: C_Van_02_medevac_F {
   };
 };
 
-
-
-/* ------------------------- AMBULANCIA - TAKISTAN ------------------------- */
 
 class FCLA_C_Van_02_medevac_F_Takistan: C_Van_02_medevac_F {
   displayName = "Furgoneta (ambulancia - Takistan)";
