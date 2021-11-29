@@ -30,6 +30,7 @@ class CfgVehicles {
 	class Car_F: Car {};
 	class Tank_F: Tank {};
 	class Truck_F: Car_F {};
+	class UGV_01_base_F: Car_F {};
 	class Van_02_base_F: Truck_F {};
 	class APC_Tracked_01_base_F: Tank_F {};
 	class Van_02_service_base_F: Van_02_base_F {};
@@ -43,5 +44,6 @@ class CfgVehicles {
 
 	#include "\FCLA_Land\OPFOR\CfgVehicles.hpp"
 	#include "\FCLA_Land\BLUFOR\CfgVehicles.hpp"
+	#include "\FCLA_Land\CIVILIAN\CfgVehicles.hpp"
 	#include "\FCLA_Land\INDEPENDENT\CfgVehicles.hpp"
 };
