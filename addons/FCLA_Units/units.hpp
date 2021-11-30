@@ -4,5 +4,5 @@
 |***************************************************************************/
 
 units[] = {
-  "O_R_Pilot_F","O_R_helipilot_F"
+  "FCLA_O_Spetsnaz_crew_F", "FCLA_O_Spetsnaz_helipilot_F", "FCLA_O_Spetsnaz_Pilot_F"
 };

@@ -9,7 +9,6 @@
 
 class FCLA_I_Van_02_Transport_F: C_Van_02_transport_F {
   crew = "I_soldier_F";
-  displayName = "Furgoneta (transporte)";
   //editorPreview = "\FCLA_Land\INDEPENDENT\data\pictures\FCLA_I_Van_02_Transport_F.jpg";
   side = 2;
   faction = "IND_F";
@@ -29,7 +28,6 @@ class FCLA_I_Van_02_Transport_F: C_Van_02_transport_F {
 
 class FCLA_I_Van_02_Vehicle_F: C_Van_02_vehicle_F {
   crew = "I_engineer_F";
-  displayName = "Furgoneta (carga)";
   //editorPreview = "\FCLA_Land\INDEPENDENT\data\pictures\FCLA_I_Van_02_Vehicle_F.jpg";
   side = 2;
   faction = "IND_F";
@@ -49,7 +47,6 @@ class FCLA_I_Van_02_Vehicle_F: C_Van_02_vehicle_F {
 
 class FCLA_I_Van_02_Service_F: C_Van_02_service_F {
   crew = "I_engineer_F";
-  displayName = "Furgoneta (servicios)";
   //editorPreview = "\FCLA_Land\INDEPENDENT\data\pictures\FCLA_I_Van_02_Service_F.jpg";
   side = 2;
   faction = "IND_F";
@@ -69,7 +66,6 @@ class FCLA_I_Van_02_Service_F: C_Van_02_service_F {
 
 class FCLA_I_Van_02_Medevac_F: C_Van_02_medevac_F {
   crew = "I_medic_F";
-  displayName = "Furgoneta (ambulancia)";
   //editorPreview = "\FCLA_Land\INDEPENDENT\data\pictures\FCLA_I_Van_02_Medevac_F.jpg";
   side = 2;
   faction = "IND_F";

@@ -5,7 +5,7 @@
 
 
 
-/* ------------------------ UH-80 GHOST HAWK (OTAN) ------------------------ */
+/* -------------------------- HELICÓPTEROS (OTAN) -------------------------- */
 
 class B_Heli_Transport_01_F: Heli_Transport_01_base_F {
   class UserActions {
@@ -90,102 +90,6 @@ class B_Heli_Transport_Medvac_01_F: B_Heli_Transport_01_F {
   };
 };
 
-
-
-/* ------------------------ UH-80 GHOST HAWK (CTRG) ------------------------ */
-
-class B_CTRG_Heli_Transport_01_Sand_F: Heli_Transport_01_base_F {
-  class UserActions {
-    class DoorL1_Open {
-      userActionID = 50;
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenLdoor0";
-      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-      radius = 2.5;
-      radiusView = 0.2;
-      showIn3D = 17;
-      available = 0;
-      priority = 0.5;
-      position = "door_L";
-      showWindow = 1;
-      onlyForPlayer = 0;
-      shortcut = "";
-      condition = "(this doorPhase 'door_L' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_L', 1]";
-    };
-
-    class DoorR1_Open: DoorL1_Open {
-      userActionID = 51;
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenRdoor0";
-      position = "door_R";
-      condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_R', 1]";
-    };
-
-    class DoorL1_Close: DoorL1_Open {
-      userActionID = 53;
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseLdoor0";
-      condition = "(this doorPhase 'door_L' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_L', 0]";
-    };
-
-    class DoorR1_Close: DoorL1_Close {
-      userActionID = 54;
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseRdoor0";
-      position = "door_R";
-      condition = "(this doorPhase 'door_R' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_R', 0]";
-    };
-  };
-};
-
-
-class B_CTRG_Heli_Transport_01_tropic_F: Heli_Transport_01_base_F {
-  class UserActions {
-    class DoorL1_Open {
-      userActionID = 50;
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenLdoor0";
-      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-      radius = 2.5;
-      radiusView = 0.2;
-      showIn3D = 17;
-      available = 0;
-      priority = 0.5;
-      position = "door_L";
-      showWindow = 1;
-      onlyForPlayer = 0;
-      shortcut = "";
-      condition = "(this doorPhase 'door_L' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_L', 1]";
-    };
-
-    class DoorR1_Open: DoorL1_Open {
-      userActionID = 51;
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenRdoor0";
-      position = "door_R";
-      condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_R', 1]";
-    };
-
-    class DoorL1_Close: DoorL1_Open {
-      userActionID = 53;
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseLdoor0";
-      condition = "(this doorPhase 'door_L' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_L', 0]";
-    };
-
-    class DoorR1_Close: DoorL1_Close {
-      userActionID = 54;
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseRdoor0";
-      position = "door_R";
-      condition = "(this doorPhase 'door_R' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_R', 0]";
-    };
-  };
-};
-
-
-
-/* ------------------------ CH - 47I CHINNOK (OTAN) ------------------------ */
 
 class B_Heli_Transport_03_F: Heli_Transport_03_base_F {
   waterLeakiness = 0.1;
@@ -354,7 +258,100 @@ class B_Heli_Transport_03_unarmed_F: Heli_Transport_03_unarmed_base_F {
 
 
 
-/* ----------------- V - 44 X BLACKFISH (OTAN - PACÍFICO) ------------------ */
+/* -------------------------- HELICÓPTEROS (CTRG) -------------------------- */
+
+class B_CTRG_Heli_Transport_01_Sand_F: Heli_Transport_01_base_F {
+  class UserActions {
+    class DoorL1_Open {
+      userActionID = 50;
+      displayName = "$STR_A3_CfgVehicles_UserActions_OpenLdoor0";
+      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+      radius = 2.5;
+      radiusView = 0.2;
+      showIn3D = 17;
+      available = 0;
+      priority = 0.5;
+      position = "door_L";
+      showWindow = 1;
+      onlyForPlayer = 0;
+      shortcut = "";
+      condition = "(this doorPhase 'door_L' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
+      statement = "this animateDoor ['door_L', 1]";
+    };
+
+    class DoorR1_Open: DoorL1_Open {
+      userActionID = 51;
+      displayName = "$STR_A3_CfgVehicles_UserActions_OpenRdoor0";
+      position = "door_R";
+      condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
+      statement = "this animateDoor ['door_R', 1]";
+    };
+
+    class DoorL1_Close: DoorL1_Open {
+      userActionID = 53;
+      displayName = "$STR_A3_CfgVehicles_UserActions_CloseLdoor0";
+      condition = "(this doorPhase 'door_L' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
+      statement = "this animateDoor ['door_L', 0]";
+    };
+
+    class DoorR1_Close: DoorL1_Close {
+      userActionID = 54;
+      displayName = "$STR_A3_CfgVehicles_UserActions_CloseRdoor0";
+      position = "door_R";
+      condition = "(this doorPhase 'door_R' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
+      statement = "this animateDoor ['door_R', 0]";
+    };
+  };
+};
+
+
+class B_CTRG_Heli_Transport_01_tropic_F: Heli_Transport_01_base_F {
+  class UserActions {
+    class DoorL1_Open {
+      userActionID = 50;
+      displayName = "$STR_A3_CfgVehicles_UserActions_OpenLdoor0";
+      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+      radius = 2.5;
+      radiusView = 0.2;
+      showIn3D = 17;
+      available = 0;
+      priority = 0.5;
+      position = "door_L";
+      showWindow = 1;
+      onlyForPlayer = 0;
+      shortcut = "";
+      condition = "(this doorPhase 'door_L' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
+      statement = "this animateDoor ['door_L', 1]";
+    };
+
+    class DoorR1_Open: DoorL1_Open {
+      userActionID = 51;
+      displayName = "$STR_A3_CfgVehicles_UserActions_OpenRdoor0";
+      position = "door_R";
+      condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
+      statement = "this animateDoor ['door_R', 1]";
+    };
+
+    class DoorL1_Close: DoorL1_Open {
+      userActionID = 53;
+      displayName = "$STR_A3_CfgVehicles_UserActions_CloseLdoor0";
+      condition = "(this doorPhase 'door_L' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
+      statement = "this animateDoor ['door_L', 0]";
+    };
+
+    class DoorR1_Close: DoorL1_Close {
+      userActionID = 54;
+      displayName = "$STR_A3_CfgVehicles_UserActions_CloseRdoor0";
+      position = "door_R";
+      condition = "(this doorPhase 'door_R' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
+      statement = "this animateDoor ['door_R', 0]";
+    };
+  };
+};
+
+
+
+/* ----------------------- AVIONES (OTAN - PACÍFICO) ----------------------- */
 
 class B_T_VTOL_01_vehicle_F: VTOL_01_vehicle_base_F {
   class UserActions {
@@ -396,9 +393,6 @@ class B_T_VTOL_01_vehicle_F: VTOL_01_vehicle_base_F {
   };
 };
 
-
-
-/* ------------------------ Y - 32 XI'AN (OTAN - PACÍFICO)  ------------------------ */
 
 class B_T_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamicLoadout_F {
   author = "hozlucas28";

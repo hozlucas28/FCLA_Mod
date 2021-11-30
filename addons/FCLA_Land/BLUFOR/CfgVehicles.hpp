@@ -135,7 +135,6 @@ class B_T_UGV_01_olive_F: UGV_01_base_F {
 
 class FCLA_B_Offroad_01_F: B_GEN_Offroad_01_gen_F {
   crew = "B_Soldier_F";
-  displayName = "Todoterreno";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Offroad_01_F.jpg";
   side = 1;
   faction = "BLU_F";
@@ -162,7 +161,6 @@ class FCLA_B_Offroad_01_F: B_GEN_Offroad_01_gen_F {
 
 class FCLA_B_Offroad_01_covered_F: B_GEN_Offroad_01_covered_F {
   crew = "B_Soldier_F";
-  displayName = "Todoterreno (cubierto)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Offroad_01_covered_F.jpg";
   side = 1;
   faction = "BLU_F";
@@ -189,7 +187,6 @@ class FCLA_B_Offroad_01_covered_F: B_GEN_Offroad_01_covered_F {
 
 class FCLA_B_Offroad_01_armed_F: B_G_Offroad_01_armed_F {
   crew = "B_Soldier_F";
-  displayName = "Todoterreno (ametralladora pesada)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Offroad_01_armed_F.jpg";
   side = 1;
   faction = "BLU_F";
@@ -216,7 +213,6 @@ class FCLA_B_Offroad_01_armed_F: B_G_Offroad_01_armed_F {
 
 class FCLA_B_Offroad_01_comms_F: B_GEN_Offroad_01_comms_F {
   crew = "B_Soldier_F";
-  displayName = "Todoterreno (comunicaciones)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Offroad_01_comms_F.jpg";
   side = 1;
   faction = "BLU_F";
@@ -246,7 +242,6 @@ class FCLA_B_Offroad_01_comms_F: B_GEN_Offroad_01_comms_F {
 
 class FCLA_B_T_Offroad_01_F: FCLA_B_Offroad_01_F {
   crew = "B_T_Soldier_F";
-  displayName = "Todoterreno";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Offroad_01_F.jpg";
   side = 1;
   faction = "BLU_T_F";
@@ -272,7 +267,6 @@ class FCLA_B_T_Offroad_01_F: FCLA_B_Offroad_01_F {
 
 class FCLA_B_T_Offroad_01_covered_F: FCLA_B_Offroad_01_covered_F {
   crew = "B_T_Soldier_F";
-  displayName = "Todoterreno (cubierto)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Offroad_01_covered_F.jpg";
   side = 1;
   faction = "BLU_T_F";
@@ -298,7 +292,6 @@ class FCLA_B_T_Offroad_01_covered_F: FCLA_B_Offroad_01_covered_F {
 
 class FCLA_B_T_Offroad_01_armed_F: FCLA_B_Offroad_01_armed_F {
   crew = "B_T_Soldier_F";
-  displayName = "Todoterreno (ametralladora pesada)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Offroad_01_armed_F.jpg";
   side = 1;
   faction = "BLU_T_F";
@@ -324,7 +317,6 @@ class FCLA_B_T_Offroad_01_armed_F: FCLA_B_Offroad_01_armed_F {
 
 class FCLA_B_T_Offroad_01_comms_F: FCLA_B_Offroad_01_comms_F {
   crew = "B_T_Soldier_F";
-  displayName = "Todoterreno (comunicaciones)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Offroad_01_comms_F.jpg";
   side = 1;
   faction = "BLU_T_F";
@@ -353,7 +345,6 @@ class FCLA_B_T_Offroad_01_comms_F: FCLA_B_Offroad_01_comms_F {
 
 class FCLA_B_CTRG_Offroad_01_F: FCLA_B_Offroad_01_F {
   crew = "B_CTRG_Soldier_tna_F";
-  displayName = "Todoterreno";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_CTRG_Offroad_01_F.jpg";
   side = 1;
   faction = "BLU_CTRG_F";
@@ -379,7 +370,6 @@ class FCLA_B_CTRG_Offroad_01_F: FCLA_B_Offroad_01_F {
 
 class FCLA_B_CTRG_Offroad_01_covered_F: FCLA_B_Offroad_01_covered_F {
   crew = "B_CTRG_Soldier_tna_F";
-  displayName = "Todoterreno (cubierto)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_CTRG_Offroad_01_covered_F.jpg";
   side = 1;
   faction = "BLU_CTRG_F";
@@ -405,7 +395,6 @@ class FCLA_B_CTRG_Offroad_01_covered_F: FCLA_B_Offroad_01_covered_F {
 
 class FCLA_B_CTRG_Offroad_01_armed_F: FCLA_B_Offroad_01_armed_F {
   crew = "B_CTRG_Soldier_tna_F";
-  displayName = "Todoterreno (ametralladora pesada)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_CTRG_Offroad_01_armed_F.jpg";
   side = 1;
   faction = "BLU_CTRG_F";
@@ -431,7 +420,6 @@ class FCLA_B_CTRG_Offroad_01_armed_F: FCLA_B_Offroad_01_armed_F {
 
 class FCLA_B_CTRG_Offroad_01_comms_F: FCLA_B_Offroad_01_comms_F {
   crew = "B_CTRG_Soldier_tna_F";
-  displayName = "Todoterreno (comunicaciones)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_CTRG_Offroad_01_comms_F.jpg";
   side = 1;
   faction = "BLU_CTRG_F";
@@ -460,7 +448,6 @@ class FCLA_B_CTRG_Offroad_01_comms_F: FCLA_B_Offroad_01_comms_F {
 
 class FCLA_B_Van_02_Transport_F: C_Van_02_transport_F {
   crew = "B_Soldier_F";
-  displayName = "Furgoneta (transporte)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Van_02_Transport_F.jpg";
   side = 1;
   faction = "BLU_F";
@@ -480,7 +467,6 @@ class FCLA_B_Van_02_Transport_F: C_Van_02_transport_F {
 
 class FCLA_B_Van_02_Vehicle_F: C_Van_02_vehicle_F {
   crew = "B_engineer_F";
-  displayName = "Furgoneta (carga)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Van_02_Vehicle_F.jpg";
   side = 1;
   faction = "BLU_F";
@@ -500,7 +486,6 @@ class FCLA_B_Van_02_Vehicle_F: C_Van_02_vehicle_F {
 
 class FCLA_B_Van_02_Service_F: C_Van_02_service_F {
   crew = "B_engineer_F";
-  displayName = "Furgoneta (servicios)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Van_02_Service_F.jpg";
   side = 1;
   faction = "BLU_F";
@@ -520,7 +505,6 @@ class FCLA_B_Van_02_Service_F: C_Van_02_service_F {
 
 class FCLA_B_Van_02_Medevac_F: C_Van_02_medevac_F {
   crew = "B_medic_F";
-  displayName = "Furgoneta (ambulancia)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Van_02_Medevac_F.jpg";
   side = 1;
   faction = "BLU_F";
@@ -543,7 +527,6 @@ class FCLA_B_Van_02_Medevac_F: C_Van_02_medevac_F {
 
 class FCLA_B_T_Van_02_Transport_F: FCLA_B_Van_02_Transport_F {
   crew = "B_T_Soldier_F";
-  displayName = "Furgoneta (transporte)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Van_02_Transport_F.jpg";
   side = 1;
   faction = "BLU_T_F";
@@ -563,7 +546,6 @@ class FCLA_B_T_Van_02_Transport_F: FCLA_B_Van_02_Transport_F {
 
 class FCLA_B_T_Van_02_Vehicle_F: FCLA_B_Van_02_Vehicle_F {
   crew = "B_T_Engineer_F";
-  displayName = "Furgoneta (carga)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Van_02_Vehicle_F.jpg";
   side = 1;
   faction = "BLU_T_F";
@@ -583,7 +565,6 @@ class FCLA_B_T_Van_02_Vehicle_F: FCLA_B_Van_02_Vehicle_F {
 
 class FCLA_B_T_Van_02_Service_F: FCLA_B_Van_02_Service_F {
   crew = "B_T_Engineer_F";
-  displayName = "Furgoneta (servicios)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Van_02_Service_F.jpg";
   side = 1;
   faction = "BLU_T_F";
@@ -603,7 +584,6 @@ class FCLA_B_T_Van_02_Service_F: FCLA_B_Van_02_Service_F {
 
 class FCLA_B_T_Van_02_Medevac_F: FCLA_B_Van_02_Medevac_F {
   crew = "B_T_Medic_F";
-  displayName = "Furgoneta (ambulancia)";
   //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Van_02_Medevac_F.jpg";
   side = 1;
   faction = "BLU_T_F";

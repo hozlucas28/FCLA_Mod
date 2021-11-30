@@ -6,11 +6,11 @@
 class CfgPatches {
 	class FCLA_Units {
 		#include "\FCLA_Units\units.hpp"
-		weapons[] = {};
 		requiredAddons[] = {};
 		version = "2.0";
 		author = "hozlucas28";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
+		requiredVersion = 2.0;
 	};
 };
 
@@ -32,6 +32,6 @@ class CfgVehicles {
 	class O_helipilot_F: O_Soldier_02_F {};
 	class O_Pilot_F: O_helipilot_F {};
 	class O_T_Pilot_F: O_Pilot_F {};
-
+	class O_crew_F: O_Soldier_base_F {};
 	#include "\FCLA_Units\OPFOR\CfgVehicles.hpp"
 };

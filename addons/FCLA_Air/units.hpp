@@ -9,10 +9,10 @@ units[] = {
   "B_T_VTOL_01_vehicle_F", "B_T_VTOL_02_infantry_dynamicLoadout_F", "B_T_VTOL_02_vehicle_dynamicLoadout_F",
   "C_IDAP_Heli_Transport_02_F", "I_Heli_Transport_02_F", "O_Heli_Attack_02_dynamicLoadout_F",
   "O_CSAT_VTOL_02_infantry_dynamicLoadout_F", "O_T_VTOL_02_vehicle_dynamicLoadout_F", "O_CSAT_VTOL_02_vehicle_dynamicLoadout_F",
-  "O_Spetsnaz_Heli_Light_02_unarmed_F", "O_Spetsnaz_Heli_Light_02_dynamicLoadout_F", "O_Spetsnaz_Heli_Attack_02_dynamicLoadout_F",
-  "O_Spetsnaz_Heli_Transport_04_F", "O_Spetsnaz_Heli_Transport_04_bench_F", "O_Spetsnaz_Heli_Transport_04_covered_F",
-  "O_Spetsnaz_Heli_Transport_04_medevac_F", "O_Spetsnaz_Heli_Transport_04_repair_F", "O_Spetsnaz_Heli_Transport_04_fuel_F",
-  "O_Spetsnaz_Heli_Transport_04_ammo_F", "O_Spetsnaz_Heli_Transport_04_box_F", "O_Spetsnaz_VTOL_02_infantry_dynamicLoadout_F",
-  "O_Spetsnaz_VTOL_02_vehicle_dynamicLoadout_F", "O_Spetsnaz_Plane_Fighter_02_Stealth_F", "O_Spetsnaz_Plane_Fighter_02_F",
-  "O_Spetsnaz_UAV_04_CAS_F"
+  "FCLA_O_Spetsnaz_Heli_Light_02_unarmed_F", "FCLA_O_Spetsnaz_Heli_Light_02_dynamicLoadout_F", "FCLA_O_Spetsnaz_Heli_Attack_02_dynamicLoadout_F",
+  "FCLA_O_Spetsnaz_Heli_Transport_04_F", "FCLA_O_Spetsnaz_Heli_Transport_04_bench_F", "FCLA_O_Spetsnaz_Heli_Transport_04_covered_F",
+  "FCLA_O_Spetsnaz_Heli_Transport_04_medevac_F", "FCLA_O_Spetsnaz_Heli_Transport_04_repair_F", "FCLA_O_Spetsnaz_Heli_Transport_04_fuel_F",
+  "FCLA_O_Spetsnaz_Heli_Transport_04_ammo_F", "FCLA_O_Spetsnaz_Heli_Transport_04_box_F", "FCLA_O_Spetsnaz_VTOL_02_infantry_dynamicLoadout_F",
+  "FCLA_O_Spetsnaz_VTOL_02_vehicle_dynamicLoadout_F", "FCLA_O_Spetsnaz_Plane_Fighter_02_Stealth_F", "FCLA_O_Spetsnaz_Plane_Fighter_02_F",
+  "FCLA_O_Spetsnaz_UAV_04_CAS_F"
 };
