@@ -31,7 +31,7 @@
 
 //Variables de referencia.
 params [
-        ["_entity", objNull, [], [0, 1, 2, 3]],
+        ["_entity", objNull, [], [0, 3]],
         ["_distance", 0, [0], 0],
         ["_minimumNumberOfUnits", 1, [0], 0],
         ["_excludeRemoteControlled", false, [true], 0]

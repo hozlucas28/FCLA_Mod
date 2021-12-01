@@ -58,20 +58,19 @@ params [
         ["_lines", [[]], [[]], []],
         ["_emitterColor", "", [""], 0],
         ["_timeToHideEachLine", 0, [0], 0],
-        ["_conditions", [false, false, "All"], [[]], [0, 1, 2, 3]]
+        ["_conditions", [false, false, "All"], [[]], 3]
        ];
 
 
 
 //Verificar argumentos.
 _emitterColor = toUpper _emitterColor;
-_needShortRadio = _conditions select 0;
-_needLongRadio = _conditions select 1;
 _selectedSide = toUpper (_conditions select 2);
-_compatibleConditionsForRadios = [true, false];
-_compatibleConditionsForSide = ["ALL", "BLUFOR", "OPFOR", "INDEPENDANT", "CIVILIAN"];
+_needLongRadio = _conditions select 1;
+_needShortRadio = _conditions select 0;
 _compatibleEmitterColors = ["SIDE", "VEHICLE", "COMMAND", "GROUP", "DIRECT", "SYSTEM", "BLUFOR", "OPFOR", "INDEPENDANT", "CIVILIAN"];
-if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (_timeToHideEachLine <= 0) || !(_needShortRadio in _compatibleConditionsForRadios) || !(_needLongRadio in _compatibleConditionsForRadios) || !(_selectedSide in _compatibleConditionsForSide)) exitWith {false};
+_compatibleConditionsForSide = ["ALL", "BLUFOR", "OPFOR", "INDEPENDANT", "CIVILIAN"];
+if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (_timeToHideEachLine <= 0) || !(_conditions isEqualTypeArray [false, false, ""]) || !(_selectedSide in _compatibleConditionsForSide)) exitWith {false};
 
 
 

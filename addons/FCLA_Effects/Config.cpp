@@ -5,7 +5,7 @@
 
 class CfgPatches {
 	class FCLA_Effects {
-		#include "\FCLA_Effects\units.hpp"
+		units[] = {};
 		requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_beta"};
 		author = "hozlucas28";
 		version = "2.0";
@@ -82,16 +82,6 @@ class CfgSounds {
 
 
 /********************************************************************************|
-|                                  SONIDOS - FX                                  |
-|********************************************************************************/
-
-class CfgSFX {
-	#include "\FCLA_Effects\Enhanced_Sounds\CfgSFX.hpp"
-};
-
-
-
-/********************************************************************************|
 |                                    VEHÍCULOS                                   |
 |********************************************************************************/
 
@@ -100,7 +90,6 @@ class CfgVehicles {
 	class Sound: All {};
 	class AllVehicles: All {};
 	#include "\FCLA_Effects\Lights_Flare\CfgVehicle.hpp"
-	#include "\FCLA_Effects\Enhanced_Sounds\CfgVehicles.hpp"
 };
 
 

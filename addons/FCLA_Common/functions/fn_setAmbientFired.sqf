@@ -37,8 +37,8 @@ params [
 				["_vehicle", objNull, [objNull], 0],
 				["_turretType", (weapons (_this select 0)) select 0, [""], 0],
 				["_ammoType", (magazines (_this select 0)) select 0, [""], 0],
-				["_arrayNumberOfShots", [15, 30], [[]], [0, 1, 2]],
-				["_arrayDelayOfShots", [5, 10], [[]], [0, 1, 2]]
+				["_arrayNumberOfShots", [15, 30], [[]], 2],
+				["_arrayDelayOfShots", [5, 10], [[]], 2]
 			 ];
 
 
@@ -48,7 +48,8 @@ _minimumShots = ceil (_arrayNumberOfShots select 0);
 _maximumShots = ceil (_arrayNumberOfShots select 1);
 _minimumDelay = _arrayDelayOfShots select 0;
 _maximumDelay = _arrayDelayOfShots select 1;
-if ((isNull _vehicle) || (_turretType == "") || (_ammoType == "") || (_minimumShots <= 0) || (_maximumShots <= 0) || (_minimumDelay <= 0) || (_maximumDelay <= 0)) exitWith {false};
+if ((isNull _vehicle) || (_turretType == "") || (_ammoType == "") || !(_arrayNumberOfShots isEqualTypeArray [0, 0]) || !(_arrayDelayOfShots isEqualTypeArray [0, 0])) exitWith {false};
+if ((_minimumShots <= 0) || (_maximumShots <= 0) || (_minimumDelay <= 0) || (_maximumDelay <= 0)) exitWith {false};
 
 
 

@@ -26,7 +26,7 @@
 
 //Variables de referencia.
 params [
-        ["_center", objNull, [], [0, 1, 2, 3]],
+        ["_center", objNull, [], [0, 3]],
         ["_rad", 0, [0], 0],
         ["_state", "", [""], 0]
        ];

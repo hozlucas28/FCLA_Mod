@@ -4,4 +4,5 @@
 |********************************************************************************/
 
 class RHS {
+  class setRHSUSAF {file = "\FCLA_Loadouts\RHS\functions\fn_setRHSUSAF.sqf";};
 };

@@ -5,6 +5,7 @@
 
 class CfgPatches {
 	class FCLA_Common {
+		units[] = {};
 		requiredAddons[] = {};
 		author = "hozlucas28";
 		version = "2.0";

@@ -46,7 +46,7 @@ params [
         ["_entity", objNull, [objNull, teamMemberNull], 0],
         ["_title", "", [""], 0],
         ["_loadout", objNull, [{}], 0],
-        ["_traits", [false, false, false], [[]], [0, 1, 2, 3]],
+        ["_traits", [false, false, false], [[]], 3],
         ["_setFrequencies", true, [true], 0],
         ["_conditions", "", [""], 0]
        ];
@@ -54,11 +54,10 @@ params [
 
 
 //Verificar argumentos.
+_setEOD = _traits select 2;
 _setDoctor = _traits select 0;
 _setAdvancedEnginner = _traits select 1;
-_setEOD = _traits select 2;
-_supportedValuesForTraits = [true, false];
-if ((isNull _entity) || (_title == "") || (_loadout isEqualType objNull) || !(_setDoctor in _supportedValuesForTraits) || !(_setAdvancedEnginner in _supportedValuesForTraits) || !(_setEOD in _supportedValuesForTraits)) exitWith {-1};
+if ((isNull _entity) || (_title == "") || (_loadout isEqualType objNull) || !(_traits isEqualTypeArray [false, false, false])) exitWith {-1};
 
 
 
