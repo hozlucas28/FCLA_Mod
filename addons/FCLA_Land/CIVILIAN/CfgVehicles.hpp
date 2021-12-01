@@ -8,8 +8,9 @@
 /* ------------------------------ AMBULANCIAS ------------------------------ */
 
 class FCLA_C_Van_02_medevac_F_Altis: C_Van_02_medevac_F {
+  author = "hozlucas28";
   displayName = "Furgoneta (ambulancia - Altis)";
-  //editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Altis.jpg";
+  editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Altis.jpg";
   scope = 2;
   scopeCurator = 2;
 
@@ -26,8 +27,9 @@ class FCLA_C_Van_02_medevac_F_Altis: C_Van_02_medevac_F {
 
 
 class FCLA_C_Van_02_medevac_F_Malden: C_Van_02_medevac_F {
+  author = "hozlucas28";
   displayName = "Furgoneta (ambulancia - Malden)";
-  //editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Malden.jpg";
+  editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Malden.jpg";
   scope = 2;
   scopeCurator = 2;
 
@@ -44,8 +46,9 @@ class FCLA_C_Van_02_medevac_F_Malden: C_Van_02_medevac_F {
 
 
 class FCLA_C_Van_02_medevac_F_Tanoa: C_Van_02_medevac_F {
+  author = "hozlucas28";
   displayName = "Furgoneta (ambulancia - Tanoa)";
-  //editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Tanoa.jpg";
+  editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Tanoa.jpg";
   scope = 2;
   scopeCurator = 2;
 
@@ -62,8 +65,9 @@ class FCLA_C_Van_02_medevac_F_Tanoa: C_Van_02_medevac_F {
 
 
 class FCLA_C_Van_02_medevac_F_Livonia: C_Van_02_medevac_F {
+  author = "hozlucas28";
   displayName = "Furgoneta (ambulancia - Livonia)";
-  //editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Livonia.jpg";
+  editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Livonia.jpg";
   scope = 2;
   scopeCurator = 2;
 
@@ -80,8 +84,9 @@ class FCLA_C_Van_02_medevac_F_Livonia: C_Van_02_medevac_F {
 
 
 class FCLA_C_Van_02_medevac_F_Chernarus: C_Van_02_medevac_F {
+  author = "hozlucas28";
   displayName = "Furgoneta (ambulancia - Chernarus)";
-  //editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Chernarus.jpg";
+  editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Chernarus.jpg";
   scope = 2;
   scopeCurator = 2;
 
@@ -98,8 +103,9 @@ class FCLA_C_Van_02_medevac_F_Chernarus: C_Van_02_medevac_F {
 
 
 class FCLA_C_Van_02_medevac_F_Takistan: C_Van_02_medevac_F {
+  author = "hozlucas28";
   displayName = "Furgoneta (ambulancia - Takistan)";
-  //editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Takistan.jpg";
+  editorPreview = "\FCLA_Land\CIVILIAN\data\pictures\FCLA_C_Van_02_medevac_F_Takistan.jpg";
   scope = 2;
   scopeCurator = 2;
 

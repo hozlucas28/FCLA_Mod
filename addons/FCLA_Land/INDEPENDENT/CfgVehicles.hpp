@@ -8,8 +8,9 @@
 /* --------------------------- FURGONETAS (AAF) ---------------------------- */
 
 class FCLA_I_Van_02_Transport_F: C_Van_02_transport_F {
+  author = "hozlucas28";
   crew = "I_soldier_F";
-  //editorPreview = "\FCLA_Land\INDEPENDENT\data\pictures\FCLA_I_Van_02_Transport_F.jpg";
+  editorPreview = "\FCLA_Land\INDEPENDENT\data\pictures\FCLA_I_Van_02_Transport_F.jpg";
   side = 2;
   faction = "IND_F";
   scope = 2;
@@ -27,8 +28,9 @@ class FCLA_I_Van_02_Transport_F: C_Van_02_transport_F {
 
 
 class FCLA_I_Van_02_Vehicle_F: C_Van_02_vehicle_F {
+  author = "hozlucas28";
   crew = "I_engineer_F";
-  //editorPreview = "\FCLA_Land\INDEPENDENT\data\pictures\FCLA_I_Van_02_Vehicle_F.jpg";
+  editorPreview = "\FCLA_Land\INDEPENDENT\data\pictures\FCLA_I_Van_02_Vehicle_F.jpg";
   side = 2;
   faction = "IND_F";
   scope = 2;
@@ -46,8 +48,9 @@ class FCLA_I_Van_02_Vehicle_F: C_Van_02_vehicle_F {
 
 
 class FCLA_I_Van_02_Service_F: C_Van_02_service_F {
+  author = "hozlucas28";
   crew = "I_engineer_F";
-  //editorPreview = "\FCLA_Land\INDEPENDENT\data\pictures\FCLA_I_Van_02_Service_F.jpg";
+  editorPreview = "\FCLA_Land\INDEPENDENT\data\pictures\FCLA_I_Van_02_Service_F.jpg";
   side = 2;
   faction = "IND_F";
   scope = 2;
@@ -65,8 +68,9 @@ class FCLA_I_Van_02_Service_F: C_Van_02_service_F {
 
 
 class FCLA_I_Van_02_Medevac_F: C_Van_02_medevac_F {
+  author = "hozlucas28";
   crew = "I_medic_F";
-  //editorPreview = "\FCLA_Land\INDEPENDENT\data\pictures\FCLA_I_Van_02_Medevac_F.jpg";
+  editorPreview = "\FCLA_Land\INDEPENDENT\data\pictures\FCLA_I_Van_02_Medevac_F.jpg";
   side = 2;
   faction = "IND_F";
   scope = 2;

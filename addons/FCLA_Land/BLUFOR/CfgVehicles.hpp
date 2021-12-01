@@ -134,8 +134,9 @@ class B_T_UGV_01_olive_F: UGV_01_base_F {
 /* -------------------------- TODOTERRENO (OTAN) --------------------------- */
 
 class FCLA_B_Offroad_01_F: B_GEN_Offroad_01_gen_F {
+  author = "hozlucas28";
   crew = "B_Soldier_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Offroad_01_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Offroad_01_F.jpg";
   side = 1;
   faction = "BLU_F";
   scope = 2;
@@ -160,8 +161,9 @@ class FCLA_B_Offroad_01_F: B_GEN_Offroad_01_gen_F {
 
 
 class FCLA_B_Offroad_01_covered_F: B_GEN_Offroad_01_covered_F {
+  author = "hozlucas28";
   crew = "B_Soldier_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Offroad_01_covered_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Offroad_01_covered_F.jpg";
   side = 1;
   faction = "BLU_F";
   scope = 2;
@@ -186,8 +188,9 @@ class FCLA_B_Offroad_01_covered_F: B_GEN_Offroad_01_covered_F {
 
 
 class FCLA_B_Offroad_01_armed_F: B_G_Offroad_01_armed_F {
+  author = "hozlucas28";
   crew = "B_Soldier_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Offroad_01_armed_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Offroad_01_armed_F.jpg";
   side = 1;
   faction = "BLU_F";
   scope = 2;
@@ -212,8 +215,9 @@ class FCLA_B_Offroad_01_armed_F: B_G_Offroad_01_armed_F {
 
 
 class FCLA_B_Offroad_01_comms_F: B_GEN_Offroad_01_comms_F {
+  author = "hozlucas28";
   crew = "B_Soldier_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Offroad_01_comms_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Offroad_01_comms_F.jpg";
   side = 1;
   faction = "BLU_F";
   scope = 2;
@@ -241,8 +245,9 @@ class FCLA_B_Offroad_01_comms_F: B_GEN_Offroad_01_comms_F {
 /* --------------------- TODOTERRENO (OTAN - PACÍFICO) --------------------- */
 
 class FCLA_B_T_Offroad_01_F: FCLA_B_Offroad_01_F {
+  author = "hozlucas28";
   crew = "B_T_Soldier_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Offroad_01_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Offroad_01_F.jpg";
   side = 1;
   faction = "BLU_T_F";
   scope = 2;
@@ -266,8 +271,9 @@ class FCLA_B_T_Offroad_01_F: FCLA_B_Offroad_01_F {
 
 
 class FCLA_B_T_Offroad_01_covered_F: FCLA_B_Offroad_01_covered_F {
+  author = "hozlucas28";
   crew = "B_T_Soldier_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Offroad_01_covered_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Offroad_01_covered_F.jpg";
   side = 1;
   faction = "BLU_T_F";
   scope = 2;
@@ -291,8 +297,9 @@ class FCLA_B_T_Offroad_01_covered_F: FCLA_B_Offroad_01_covered_F {
 
 
 class FCLA_B_T_Offroad_01_armed_F: FCLA_B_Offroad_01_armed_F {
+  author = "hozlucas28";
   crew = "B_T_Soldier_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Offroad_01_armed_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Offroad_01_armed_F.jpg";
   side = 1;
   faction = "BLU_T_F";
   scope = 2;
@@ -316,8 +323,9 @@ class FCLA_B_T_Offroad_01_armed_F: FCLA_B_Offroad_01_armed_F {
 
 
 class FCLA_B_T_Offroad_01_comms_F: FCLA_B_Offroad_01_comms_F {
+  author = "hozlucas28";
   crew = "B_T_Soldier_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Offroad_01_comms_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Offroad_01_comms_F.jpg";
   side = 1;
   faction = "BLU_T_F";
   scope = 2;
@@ -344,8 +352,9 @@ class FCLA_B_T_Offroad_01_comms_F: FCLA_B_Offroad_01_comms_F {
 /* -------------------------- TODOTERRENO (CTRG) --------------------------- */
 
 class FCLA_B_CTRG_Offroad_01_F: FCLA_B_Offroad_01_F {
+  author = "hozlucas28";
   crew = "B_CTRG_Soldier_tna_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_CTRG_Offroad_01_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_CTRG_Offroad_01_F.jpg";
   side = 1;
   faction = "BLU_CTRG_F";
   scope = 2;
@@ -369,8 +378,9 @@ class FCLA_B_CTRG_Offroad_01_F: FCLA_B_Offroad_01_F {
 
 
 class FCLA_B_CTRG_Offroad_01_covered_F: FCLA_B_Offroad_01_covered_F {
+  author = "hozlucas28";
   crew = "B_CTRG_Soldier_tna_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_CTRG_Offroad_01_covered_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_CTRG_Offroad_01_covered_F.jpg";
   side = 1;
   faction = "BLU_CTRG_F";
   scope = 2;
@@ -394,8 +404,9 @@ class FCLA_B_CTRG_Offroad_01_covered_F: FCLA_B_Offroad_01_covered_F {
 
 
 class FCLA_B_CTRG_Offroad_01_armed_F: FCLA_B_Offroad_01_armed_F {
+  author = "hozlucas28";
   crew = "B_CTRG_Soldier_tna_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_CTRG_Offroad_01_armed_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_CTRG_Offroad_01_armed_F.jpg";
   side = 1;
   faction = "BLU_CTRG_F";
   scope = 2;
@@ -419,8 +430,9 @@ class FCLA_B_CTRG_Offroad_01_armed_F: FCLA_B_Offroad_01_armed_F {
 
 
 class FCLA_B_CTRG_Offroad_01_comms_F: FCLA_B_Offroad_01_comms_F {
+  author = "hozlucas28";
   crew = "B_CTRG_Soldier_tna_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_CTRG_Offroad_01_comms_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_CTRG_Offroad_01_comms_F.jpg";
   side = 1;
   faction = "BLU_CTRG_F";
   scope = 2;
@@ -447,8 +459,9 @@ class FCLA_B_CTRG_Offroad_01_comms_F: FCLA_B_Offroad_01_comms_F {
 /* --------------------------- FURGONETAS (OTAN) --------------------------- */
 
 class FCLA_B_Van_02_Transport_F: C_Van_02_transport_F {
+  author = "hozlucas28";
   crew = "B_Soldier_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Van_02_Transport_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Van_02_Transport_F.jpg";
   side = 1;
   faction = "BLU_F";
   scope = 2;
@@ -466,8 +479,9 @@ class FCLA_B_Van_02_Transport_F: C_Van_02_transport_F {
 
 
 class FCLA_B_Van_02_Vehicle_F: C_Van_02_vehicle_F {
+  author = "hozlucas28";
   crew = "B_engineer_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Van_02_Vehicle_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Van_02_Vehicle_F.jpg";
   side = 1;
   faction = "BLU_F";
   scope = 2;
@@ -485,8 +499,9 @@ class FCLA_B_Van_02_Vehicle_F: C_Van_02_vehicle_F {
 
 
 class FCLA_B_Van_02_Service_F: C_Van_02_service_F {
+  author = "hozlucas28";
   crew = "B_engineer_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Van_02_Service_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Van_02_Service_F.jpg";
   side = 1;
   faction = "BLU_F";
   scope = 2;
@@ -504,8 +519,9 @@ class FCLA_B_Van_02_Service_F: C_Van_02_service_F {
 
 
 class FCLA_B_Van_02_Medevac_F: C_Van_02_medevac_F {
+  author = "hozlucas28";
   crew = "B_medic_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Van_02_Medevac_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_Van_02_Medevac_F.jpg";
   side = 1;
   faction = "BLU_F";
   scope = 2;
@@ -526,8 +542,9 @@ class FCLA_B_Van_02_Medevac_F: C_Van_02_medevac_F {
 /* --------------------- FURGONETAS (OTAN - PACÍFICO) ---------------------- */
 
 class FCLA_B_T_Van_02_Transport_F: FCLA_B_Van_02_Transport_F {
+  author = "hozlucas28";
   crew = "B_T_Soldier_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Van_02_Transport_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Van_02_Transport_F.jpg";
   side = 1;
   faction = "BLU_T_F";
   scope = 2;
@@ -545,8 +562,9 @@ class FCLA_B_T_Van_02_Transport_F: FCLA_B_Van_02_Transport_F {
 
 
 class FCLA_B_T_Van_02_Vehicle_F: FCLA_B_Van_02_Vehicle_F {
+  author = "hozlucas28";
   crew = "B_T_Engineer_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Van_02_Vehicle_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Van_02_Vehicle_F.jpg";
   side = 1;
   faction = "BLU_T_F";
   scope = 2;
@@ -564,8 +582,9 @@ class FCLA_B_T_Van_02_Vehicle_F: FCLA_B_Van_02_Vehicle_F {
 
 
 class FCLA_B_T_Van_02_Service_F: FCLA_B_Van_02_Service_F {
+  author = "hozlucas28";
   crew = "B_T_Engineer_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Van_02_Service_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Van_02_Service_F.jpg";
   side = 1;
   faction = "BLU_T_F";
   scope = 2;
@@ -583,8 +602,9 @@ class FCLA_B_T_Van_02_Service_F: FCLA_B_Van_02_Service_F {
 
 
 class FCLA_B_T_Van_02_Medevac_F: FCLA_B_Van_02_Medevac_F {
+  author = "hozlucas28";
   crew = "B_T_Medic_F";
-  //editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Van_02_Medevac_F.jpg";
+  editorPreview = "\FCLA_Land\BLUFOR\data\pictures\FCLA_B_T_Van_02_Medevac_F.jpg";
   side = 1;
   faction = "BLU_T_F";
   scope = 2;
