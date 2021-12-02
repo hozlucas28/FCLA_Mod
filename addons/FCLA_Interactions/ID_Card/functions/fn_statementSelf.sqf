@@ -10,7 +10,7 @@
 
 //Variable de referencia.
 params ["_player"];
-_IDCard = _player getVariable ["FCLA_ID", ["", -1, ""]];
+_IDCard = _player getVariable ["FCLA_ID", ["", "", ""]];
 
 
 
@@ -21,7 +21,7 @@ createDialog "FCLA_ID_Card_Dialog";
 
 
 //Asignar información.
-switch ("" in _IDCard) do {
+switch ((_IDCard select 0) == "") do {
 	case true: {
 		_name = [_player] call FCLA_Common_fnc_getCleanName;
     _randomAge = [19, 65, true] call FCLA_Common_fnc_getRandomNumber;
@@ -36,7 +36,7 @@ switch ("" in _IDCard) do {
 	case false: {
 		ctrlSetText [1007, _IDCard select 0];
 		ctrlSetText [1008, _IDCard select 1];
-		ctrlSetText [1009, _IDCard select 2];
+		if ((_IDCard select 2) != "") then {ctrlSetText [1009, _IDCard select 2];};
 	};
 };
 

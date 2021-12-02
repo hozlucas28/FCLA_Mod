@@ -2,7 +2,7 @@
 /********************************************************************************|
 |                                    SONIDOS                                     |
 |********************************************************************************/
-
+/*
 class FCLA_Sparks_1 {
   name = "FCLA - Chispas 1";
   sound[] = {"\FCLA_Modules\sounds\Sparks_1.ogg", db+5, 1};
@@ -194,3 +194,4 @@ class FCLA_Chemical_Detector_Beep_5 {
   sound[] = {"\FCLA_Modules\sounds\Chemical_Detector_Beep.ogg", 3, 1, 50};
   titles[] = {0, ""};
 };
+*/
