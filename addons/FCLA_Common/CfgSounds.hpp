@@ -17,9 +17,9 @@ class FCLA_Hacking_Initialized {
   duration = 12;
 };
 
-class FCLA_Crying_Man {
+class FCLA_Man_Crying {
   name = "FCLA - Hombre llorando";
-  sound[] = {"\FCLA_Common\sounds\Crying_Man.ogg", "db+5", 1};
+  sound[] = {"\FCLA_Common\sounds\Man_Crying.ogg", "db+5", 1};
   titles[] = {1, ""};
   duration = 35;
 };

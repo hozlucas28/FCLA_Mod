@@ -7,11 +7,194 @@
 
 /* ------------------------------ NATURALEZA ------------------------------- */
 
+class FCLA_SFX_Flies: Sound {
+	_generalMacro = "FCLA_SFX_Flies";
+	author = "hozlucas28";
+	displayName = "FCLA - Moscas";
+	sound = "FCLA_SFX_Flies";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Night_Crickets: Sound {
+	_generalMacro = "FCLA_SFX_Night_Crickets";
+	author = "hozlucas28";
+	displayName = "FCLA - Grillos";
+	sound = "FCLA_SFX_Night_Crickets";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Campfire: Sound {
+	_generalMacro = "FCLA_SFX_Campfire";
+	author = "hozlucas28";
+	displayName = "FCLA - Fogata";
+	sound = "FCLA_SFX_Campfire";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
 class FCLA_SFX_Forest_Ambience: Sound {
 	_generalMacro = "FCLA_SFX_Forest_Ambience";
 	author = "hozlucas28";
 	displayName = "FCLA - Bosque";
 	sound = "FCLA_SFX_Forest_Ambience";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+
+/* ------------------------------- PERSONAS -------------------------------- */
+
+class FCLA_SFX_Baby_Crying: Sound {
+	_generalMacro = "FCLA_SFX_Baby_Crying";
+	author = "hozlucas28";
+	displayName = "FCLA - Bebe llorando";
+	sound = "FCLA_SFX_Baby_Crying";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Arab_People_Talking: Sound {
+	_generalMacro = "FCLA_SFX_Arab_People_Talking";
+	author = "hozlucas28";
+	displayName = "FCLA - Personas charlando (Arabia)";
+	sound = "FCLA_SFX_Arab_People_Talking";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Arab_Marketplace: Sound {
+	_generalMacro = "FCLA_SFX_Arab_Marketplace";
+	author = "hozlucas28";
+	displayName = "FCLA - Mercado (Arabia)";
+	sound = "FCLA_SFX_Arab_Marketplace";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Africa_Crowd_v1: Sound {
+	_generalMacro = "FCLA_SFX_Africa_Crowd_v1";
+	author = "hozlucas28";
+	displayName = "FCLA - Multitud (África v1)";
+	sound = "FCLA_SFX_Africa_Crowd_v1";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Africa_Crowd_v2: Sound {
+	_generalMacro = "FCLA_SFX_Africa_Crowd_v2";
+	author = "hozlucas28";
+	displayName = "FCLA - Multitud (África v2)";
+	sound = "FCLA_SFX_Africa_Crowd_v2";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Africa_Crowd_v3: Sound {
+	_generalMacro = "FCLA_SFX_Africa_Crowd_v3";
+	author = "hozlucas28";
+	displayName = "FCLA - Multitud (África v3)";
+	sound = "FCLA_SFX_Africa_Crowd_v3";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Africa_Crowd_v4: Sound {
+	_generalMacro = "FCLA_SFX_Africa_Crowd_v4";
+	author = "hozlucas28";
+	displayName = "FCLA - Multitud (África v4)";
+	sound = "FCLA_SFX_Africa_Crowd_v4";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Africa_Crowd_v5: Sound {
+	_generalMacro = "FCLA_SFX_Africa_Crowd_v5";
+	author = "hozlucas28";
+	displayName = "FCLA - Multitud (África v5)";
+	sound = "FCLA_SFX_Africa_Crowd_v5";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Arab_Crowd_Vehicles_v1: Sound {
+	_generalMacro = "FCLA_SFX_Arab_Crowd_Vehicles_v1";
+	author = "hozlucas28";
+	displayName = "FCLA - Multitud y vehículos (Arabia v1)";
+	sound = "FCLA_SFX_Arab_Crowd_Vehicles_v1";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Arab_Crowd_Vehicles_v2: Sound {
+	_generalMacro = "FCLA_SFX_Arab_Crowd_Vehicles_v2";
+	author = "hozlucas28";
+	displayName = "FCLA - Multitud y vehículos (Arabia v2)";
+	sound = "FCLA_SFX_Arab_Crowd_Vehicles_v2";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Arab_Crowd_Vehicles_v3: Sound {
+	_generalMacro = "FCLA_SFX_Arab_Crowd_Vehicles_v3";
+	author = "hozlucas28";
+	displayName = "FCLA - Multitud y vehículos (Arabia v3)";
+	sound = "FCLA_SFX_Arab_Crowd_Vehicles_v3";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Africa_Crowd_Vehicles_v1: Sound {
+	_generalMacro = "FCLA_SFX_Africa_Crowd_Vehicles_v1";
+	author = "hozlucas28";
+	displayName = "FCLA - Multitud y vehículos (África v1)";
+	sound = "FCLA_SFX_Africa_Crowd_Vehicles_v1";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Africa_Crowd_Vehicles_v2: Sound {
+	_generalMacro = "FCLA_SFX_Africa_Crowd_Vehicles_v2";
+	author = "hozlucas28";
+	displayName = "FCLA - Multitud y vehículos (África v2)";
+	sound = "FCLA_SFX_Africa_Crowd_Vehicles_v2";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Africa_Crowd_Vehicles_v3: Sound {
+	_generalMacro = "FCLA_SFX_Africa_Crowd_Vehicles_v3";
+	author = "hozlucas28";
+	displayName = "FCLA - Multitud y vehículos (África v3)";
+	sound = "FCLA_SFX_Africa_Crowd_Vehicles_v3";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Africa_Crowd_Vehicles_v4: Sound {
+	_generalMacro = "FCLA_SFX_Africa_Crowd_Vehicles_v4";
+	author = "hozlucas28";
+	displayName = "FCLA - Multitud y vehículos (África v4)";
+	sound = "FCLA_SFX_Africa_Crowd_Vehicles_v4";
 	scope = 2;
   scopeCurator = 2;
 };
@@ -51,7 +234,80 @@ class FCLA_SFX_Air_Alarm_Far: Sound {
 
 
 
+/* --------------------------- RADIOS/MEGÁFONOS ---------------------------- */
+
+class FCLA_SFX_Arab_Music_Radio: Sound {
+	_generalMacro = "FCLA_SFX_Arab_Music_Radio";
+	author = "hozlucas28";
+	displayName = "FCLA - Radio (música árabe)";
+	sound = "FCLA_SFX_Arab_Music_Radio";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Russian_Military_Radio: Sound {
+	_generalMacro = "FCLA_SFX_Russian_Military_Radio";
+	author = "hozlucas28";
+	displayName = "FCLA - Radio militar (rusa)";
+	sound = "FCLA_SFX_Russian_Military_Radio";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Insurgent_Military_Radio_v1: Sound {
+	_generalMacro = "FCLA_SFX_Insurgent_Military_Radio_v1";
+	author = "hozlucas28";
+	displayName = "FCLA - Radio militar (insurgente v1)";
+	sound = "FCLA_SFX_Insurgent_Military_Radio_v1";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Insurgent_Military_Radio_v2: Sound {
+	_generalMacro = "FCLA_SFX_Insurgent_Military_Radio_v2";
+	author = "hozlucas28";
+	displayName = "FCLA - Radio militar (insurgente v2)";
+	sound = "FCLA_SFX_Insurgent_Military_Radio_v2";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Insurgent_Speech: Sound {
+	_generalMacro = "FCLA_SFX_Insurgent_Speech";
+	author = "hozlucas28";
+	displayName = "FCLA - Discurso insurgente (megáfono)";
+	sound = "FCLA_SFX_Insurgent_Speech";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Call_To_Prayer_Speech: Sound {
+	_generalMacro = "FCLA_SFX_Call_To_Prayer_Speech";
+	author = "hozlucas28";
+	displayName = "FCLA - Llamado a la oración (megáfono)";
+	sound = "FCLA_SFX_Call_To_Prayer_Speech";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+
 /* --------------------------- CAMPOS DE BATALLA --------------------------- */
+
+class FCLA_SFX_Battlefield_Sniper_Suppression: Sound {
+	_generalMacro = "FCLA_SFX_Battlefield_Sniper_Suppression";
+	author = "hozlucas28";
+	displayName = "FCLA - Supresión de francotirador";
+	sound = "FCLA_SFX_Battlefield_Sniper_Suppression";
+	scope = 2;
+  scopeCurator = 2;
+};
+
 
 class FCLA_SFX_Battlefield_Fire_Fight_Rifles: Sound {
 	_generalMacro = "FCLA_SFX_Battlefield_Fire_Fight_Rifles";
@@ -116,440 +372,81 @@ class FCLA_SFX_Battlefield_Fire_Fight_Urban: Sound {
 
 /* --------------------------------- OTROS --------------------------------- */
 
+class FCLA_SFX_IED_Ring: Sound {
+	_generalMacro = "FCLA_SFX_IED_Ring";
+	author = "hozlucas28";
+	displayName = "FCLA - Tono de llamada (IED)";
+	sound = "FCLA_SFX_IED_Ring";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
 class FCLA_SFX_Generator_v1: Sound {
-	_generalMacro = "FCLA_SFX_Generator_1";
+	_generalMacro = "FCLA_SFX_Generator_v1";
 	author = "hozlucas28";
 	displayName = "FCLA - Generador (v1)";
-	sound = "FCLA_SFX_Generator_1";
+	sound = "FCLA_SFX_Generator_v1";
 	scope = 2;
   scopeCurator = 2;
 };
 
 
 class FCLA_SFX_Generator_v2: Sound {
-	_generalMacro = "FCLA_SFX_Generator_2";
+	_generalMacro = "FCLA_SFX_Generator_v2";
 	author = "hozlucas28";
 	displayName = "FCLA - Generador (v2)";
-	sound = "FCLA_SFX_Generator_2";
+	sound = "FCLA_SFX_Generator_v2";
 	scope = 2;
   scopeCurator = 2;
 };
 
 
 class FCLA_SFX_Generator_v3: Sound {
-	_generalMacro = "FCLA_SFX_Generator_3";
+	_generalMacro = "FCLA_SFX_Generator_v3";
 	author = "hozlucas28";
 	displayName = "FCLA - Generador (v3)";
-	sound = "FCLA_SFX_Generator_3";
+	sound = "FCLA_SFX_Generator_v3";
 	scope = 2;
   scopeCurator = 2;
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-class Zeus_Sound_Africa_CrowdTalk1: Sound {
-	_generalMacro = "Zeus_Sound_Africa_CrowdTalk1";
+class FCLA_SFX_Burning_Vehicle: Sound {
+	_generalMacro = "FCLA_SFX_Burning_Vehicle";
 	author = "hozlucas28";
-	displayName = "[16AA] Africa Crowd Talk 1";
-	sound = "Zeus_Sound_Africa_CrowdTalk1";
+	displayName = "FCLA - Vehículo en llamas";
+	sound = "FCLA_SFX_Burning_Vehicle";
 	scope = 2;
   scopeCurator = 2;
 };
 
 
-class Zeus_Sound_Africa_CrowdTalk2: Sound {
-	_generalMacro = "Zeus_Sound_Africa_CrowdTalk2";
+class FCLA_SFX_Barking_Dogs_v1: Sound {
+	_generalMacro = "FCLA_SFX_Barking_Dogs_v1";
 	author = "hozlucas28";
-	displayName = "[16AA] Africa Crowd Talk 2";
-	sound = "Zeus_Sound_Africa_CrowdTalk2";
+	displayName = "FCLA - Perros ladrando (v1)";
+	sound = "FCLA_SFX_Barking_Dogs_v1";
 	scope = 2;
   scopeCurator = 2;
 };
 
 
-class Zeus_Sound_Africa_CrowdTalk3: Sound {
-	_generalMacro = "Zeus_Sound_Africa_CrowdTalk3";
+class FCLA_SFX_Barking_Dogs_v2: Sound {
+	_generalMacro = "FCLA_SFX_Barking_Dogs_v2";
 	author = "hozlucas28";
-	displayName = "[16AA] Africa Crowd Talk 3";
-	sound = "Zeus_Sound_Africa_CrowdTalk3";
+	displayName = "FCLA - Perros ladrando (v2)";
+	sound = "FCLA_SFX_Barking_Dogs_v2";
 	scope = 2;
   scopeCurator = 2;
 };
 
 
-class Zeus_Sound_Africa_CrowdTalk4: Sound {
-	_generalMacro = "Zeus_Sound_Africa_CrowdTalk4";
+class FCLA_SFX_Attempt_Start_Vehicle: Sound {
+	_generalMacro = "FCLA_SFX_Attempt_Start_Vehicle";
 	author = "hozlucas28";
-	displayName = "[16AA] Africa Crowd Talk 4";
-	sound = "Zeus_Sound_Africa_CrowdTalk4";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Africa_CrowdTalk5: Sound {
-	_generalMacro = "Zeus_Sound_Africa_CrowdTalk5";
-	author = "hozlucas28";
-	displayName = "[16AA] Africa Crowd Talk 5";
-	sound = "Zeus_Sound_Africa_CrowdTalk5";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Africa_StreetCrowd1: Sound {
-	_generalMacro = "Zeus_Sound_Africa_StreetCrowd1";
-	author = "hozlucas28";
-	displayName = "[16AA] Africa Street Crowd 1";
-	sound = "Zeus_Sound_Africa_StreetCrowd1";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Africa_StreetCrowd2: Sound {
-	_generalMacro = "Zeus_Sound_Africa_StreetCrowd2";
-	author = "hozlucas28";
-	displayName = "[16AA] Africa Street Crowd 2";
-	sound = "Zeus_Sound_Africa_StreetCrowd2";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Africa_StreetCrowd3: Sound {
-	_generalMacro = "Zeus_Sound_Africa_StreetCrowd3";
-	author = "hozlucas28";
-	displayName = "[16AA] Africa Street Crowd 3";
-	sound = "Zeus_Sound_Africa_StreetCrowd3";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Africa_StreetCrowd4: Sound {
-	_generalMacro = "Zeus_Sound_Africa_StreetCrowd4";
-	author = "hozlucas28";
-	displayName = "[16AA] Africa Street Crowd 4";
-	sound = "Zeus_Sound_Africa_StreetCrowd4";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Desert_AngryInsurgentSpeech: Sound {
-	_generalMacro = "Zeus_Sound_Desert_AngryInsurgentSpeech";
-	author = "hozlucas28";
-	displayName = "[16AA] Angry Insurgent Speech";
-	sound = "Zeus_Sound_Desert_AngryInsurgentSpeech";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Desert_Arabic_Music_Radio: Sound {
-	_generalMacro = "Zeus_Sound_Desert_Arabic_Music_Radio";
-	author = "hozlucas28";
-	displayName = "[16AA] Arabic Music Radio";
-	sound = "Zeus_Sound_Desert_Arabic_Music_Radio";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Desert_Arab_Talking: Sound {
-	_generalMacro = "Zeus_Sound_Desert_Arab_Talking";
-	author = "hozlucas28";
-	displayName = "[16AA] Arabic Talking";
-	sound = "Zeus_Sound_Desert_Arab_Talking";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Desert_Call_To_Prayer: Sound {
-	_generalMacro = "Zeus_Sound_Desert_Call_To_Prayer";
-	author = "hozlucas28";
-	displayName = "[16AA] Call To Prayer";
-	sound = "Zeus_Sound_Desert_Call_To_Prayer";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Desert_CityAmbience1: Sound {
-	_generalMacro = "Zeus_Sound_Desert_CityAmbience1";
-	author = "hozlucas28";
-	displayName = "[16AA] Desert City Ambience";
-	sound = "Zeus_Sound_Desert_CityAmbience1";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Desert_CityAmbienceLarge: Sound {
-	_generalMacro = "Zeus_Sound_Desert_CityAmbienceLarge";
-	author = "hozlucas28";
-	displayName = "[16AA] Desert City Ambience Large";
-	sound = "Zeus_Sound_Desert_CityAmbienceLarge";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Desert_CityAmbienceLarge2: Sound {
-	_generalMacro = "Zeus_Sound_Desert_CityAmbienceLarge2";
-	author = "hozlucas28";
-	displayName = "[16AA] Desert City Ambience Large 2";
-	sound = "Zeus_Sound_Desert_CityAmbienceLarge2";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Desert_InsurgentRadio_Plain: Sound {
-	_generalMacro = "Zeus_Sound_Desert_InsurgentRadio_Plain";
-	author = "hozlucas28";
-	displayName = "[16AA] Insurgent Radio (Plain)";
-	sound = "Zeus_Sound_Desert_InsurgentRadio_Plain";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Desert_InsurgentRadio_Weapons: Sound {
-	_generalMacro = "Zeus_Sound_Desert_InsurgentRadio_Weapons";
-	author = "hozlucas28";
-	displayName = "[16AA] Insurgent Radio (Weapons)";
-	sound = "Zeus_Sound_Desert_InsurgentRadio_Weapons";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Desert_MarketplaceAmbience: Sound {
-	_generalMacro = "Zeus_Sound_Desert_MarketplaceAmbience";
-	author = "hozlucas28";
-	displayName = "[16AA] Desert Marketplace Ambience";
-	sound = "Zeus_Sound_Desert_MarketplaceAmbience";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Rus_Radio: Sound {
-	_generalMacro = "Zeus_Sound_Rus_Radio";
-	author = "hozlucas28";
-	displayName = "[16AA] Russian Radio Chatter";
-	sound = "Zeus_Sound_Rus_Radio";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Alarm_AlarmOpenAir: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Alarm_AlarmOpenAir";
-	author = "hozlucas28";
-	displayName = "[16AA] Base Alarm Open Air";
-	sound = "Zeus_Sound_Misc_Alarm_AlarmOpenAir";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Car_CarStartFail: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Car_CarStartFail";
-	author = "hozlucas28";
-	displayName = "[16AA] Car Start Fail";
-	sound = "Zeus_Sound_Misc_Car_CarStartFail";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Dog_BarkingDogCloseMid: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Dog_BarkingDogCloseMid";
-	author = "hozlucas28";
-	displayName = "[16AA] Barking Dog Close Medium Distance";
-	sound = "Zeus_Sound_Misc_Dog_BarkingDogCloseMid";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Dog_BarkingDogFar: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Dog_BarkingDogFar";
-	author = "hozlucas28";
-	displayName = "[16AA] Barking Dog Far Distance";
-	sound = "Zeus_Sound_Misc_Dog_BarkingDogFar";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Fire_AmmoDumpFireAndExplosion: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Fire_AmmoDumpFireAndExplosion";
-	author = "hozlucas28";
-	displayName = "[16AA] Ammo Dump Fire and Explosion";
-	sound = "Zeus_Sound_Misc_Fire_AmmoDumpFireAndExplosion";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Fire_BurningVehicle: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Fire_BurningVehicle";
-	author = "hozlucas28";
-	displayName = "[16AA] Burning Vehicle";
-	sound = "Zeus_Sound_Misc_Fire_BurningVehicle";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Fire_CampFire: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Fire_CampFire";
-	author = "hozlucas28";
-	displayName = "[16AA] Small Campfire";
-	sound = "Zeus_Sound_Misc_Fire_CampFire";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Firefight_British_Army_Defence: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Firefight_British_Army_Defence";
-	author = "hozlucas28";
-	displayName = "[16AA] British Army Firefight Defence";
-	sound = "Zeus_Sound_Misc_Firefight_British_Army_Defence";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Firefight_Sniper_Suppression: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Firefight_Sniper_Suppression";
-	author = "hozlucas28";
-	displayName = "[16AA] Sniper Suppression";
-	sound = "Zeus_Sound_Misc_Firefight_Sniper_Suppression";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Jets_A10_Fire: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Jets_A10_Fire";
-	author = "hozlucas28";
-	displayName = "[16AA] A-10 Fire Medium Distance";
-	sound = "Zeus_Sound_Misc_Jets_A10_Fire";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Jets_A10_Fire_2: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Jets_A10_Fire_2";
-	author = "hozlucas28";
-	displayName = "[16AA] A-10 Fire Long Distance";
-	sound = "Zeus_Sound_Misc_Jets_A10_Fire_2";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Jets_Flyover_Far: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Jets_Flyover_Far";
-	author = "hozlucas28";
-	displayName = "[16AA] Jets Flyover Far";
-	sound = "Zeus_Sound_Misc_Jets_Flyover_Far";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Gasleak: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Gasleak";
-	author = "hozlucas28";
-	displayName = "[16AA] Gas Leak";
-	sound = "Zeus_Sound_Misc_Gasleak";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_IEDRing: Sound {
-	_generalMacro = "Zeus_Sound_Misc_IEDRing";
-	author = "hozlucas28";
-	displayName = "[16AA] IED Phone Ring and Detonation";
-	sound = "Zeus_Sound_Misc_IEDRing";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_NightCrickets: Sound {
-	_generalMacro = "Zeus_Sound_Misc_NightCrickets";
-	author = "hozlucas28";
-	displayName = "[16AA] Night Crickets";
-	sound = "Zeus_Sound_Misc_NightCrickets";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Flies: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Flies";
-	author = "hozlucas28";
-	displayName = "[16AA] Flies";
-	sound = "Zeus_Sound_Misc_Flies";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class Zeus_Sound_Misc_Baby_Cry: Sound {
-	_generalMacro = "Zeus_Sound_Misc_Baby_Cry";
-	author = "hozlucas28";
-	displayName = "[16AA] Baby Cry";
-	sound = "Zeus_Sound_Misc_Baby_Cry";
+	displayName = "FCLA - Intento de encender vehículo";
+	sound = "FCLA_SFX_Attempt_Start_Vehicle";
 	scope = 2;
   scopeCurator = 2;
 };
