@@ -16,7 +16,7 @@
   if ((_setInsigniaDisableByEditor)) exitWith {["¡EL EDITOR A DESACTIVADO EL CAMBIO DE INSIGNIA EN ESTA UNIDAD!"] call ZEN_Common_fnc_showMessage;};
 
 
-  _defaultValue = switch (_savedInsignia) do {
+  _originalInsignia = switch (_savedInsignia) do {
     case "FCLA_Common": {0;};
     case "FCLA_Takana": {1;};
     case "FCLA_Jaguar": {2;};
@@ -46,7 +46,6 @@
     case "FCLA_CPA": {26;};
     default {0;};
   };
-  _this = [_attachedObject, _defaultValue];
 
 
   ["SELECCIONAR INSIGNIA",
@@ -89,21 +88,21 @@
         ["CPH", "", "\FCLA_interactions\Insignias\data\pictures\CPH.paa"],
         ["CPA", "", "\FCLA_interactions\Insignias\data\pictures\CPA.paa"]
        ],
-       _this select 1
-      ]
+       _originalInsignia
+      ],
+      true
      ]
     ],
   {
-    (_this select 0) params ["_newInsignia"];
-    (_this select 1) params ["_attachedObject"];
-    _isPlayer = [_attachedObject, true] call ACE_common_fnc_isPlayer;
+    (_this select 0) params ["_insigniaSelected"];
+    _isPlayer = [_this select 1, true] call ACE_common_fnc_isPlayer;
 
     if (_isPlayer) then {
-      [_attachedObject, _newInsignia] spawn FCLA_Interactions_fnc_statementSelfInsignias;
+      [_this select 1, _insigniaSelected] spawn FCLA_Interactions_fnc_statementSelfInsignias;
       ["INSIGNIA COLOCADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
     } else {
-      [_attachedObject, _newInsignia] spawn FCLA_Interactions_fnc_statementExternalInsignias;
+      [_this select 1, _insigniaSelected] spawn FCLA_Interactions_fnc_statementExternalInsignias;
       ["INSIGNIA COLOCADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
     };
-  }, {}, _this] call ZEN_Dialog_fnc_Create;
+  }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_data\ACE_Actions\Insignia_Management.paa"] call ZEN_Custom_Modules_fnc_Register;

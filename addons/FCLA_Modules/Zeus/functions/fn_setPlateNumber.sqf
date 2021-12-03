@@ -16,24 +16,23 @@
   if ((isNull _attachedObject) || !(_attachedObject in _allCompatibleVehicles)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UN VEHÍCULO COMPATIBLE"] call ZEN_Common_fnc_showMessage;};
 
 
-  _plateNumber = if (_plateNumber != "") then {_plateNumber;} else {getPlateNumber _attachedObject;};
-  _this = [_attachedObject, _plateNumber];
+  _originalPlateNumber = if (_plateNumber != "") then {_plateNumber;} else {getPlateNumber _attachedObject;};
 
 
   ["NUEVA MATRÍCULA",
 	[
    ["EDIT", "Matrícula",
 	  [
-	   _this select 1,
+	   _originalPlateNumber,
 	   nil,
 	   nil
-	  ]
+	  ],
+    true
 	 ]
 	],
   {
-    (_this select 0) params ["_newPlateNumber"];
-    (_this select 1) params ["_attachedObject"];
-    _attachedObject setVariable ["FCLA_Plate_Number", _newPlateNumber, true];
+    (_this select 0) params ["_plateNumberSelected"];
+    (_this select 1) setVariable ["FCLA_Plate_Number", _plateNumberSelected, true];
     ["MATRÍCULA MODIFICADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-  }, {}, _this] call ZEN_Dialog_fnc_Create;
+  }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, ""] call ZEN_Custom_Modules_fnc_Register;

@@ -80,7 +80,7 @@ _EventHandlerID = [_vehicle, "Dammaged", {
 
     //Efecto visual.
     _isPlayer = [_x, false] call ACE_Common_fnc_isPlayer;
-    if ((alive _x) && (_isPlayer)) then {["FCLA_Shellshock", [_x]] call CBA_fnc_localEvent;};
+    if ((alive _x) && (_isPlayer)) then {["FCLA_Shellshock", [_x], _x] call CBA_fnc_targetEvent;};
   } forEach _vehicleCrew;
 }, [_dammageWeapons, _dammageItems]] call CBA_fnc_addBISEventHandler;
 

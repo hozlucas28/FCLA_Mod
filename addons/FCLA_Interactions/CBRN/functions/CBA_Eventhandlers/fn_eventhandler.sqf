@@ -70,13 +70,5 @@
   _trigger setTriggerArea [0.75, 0.75, getDir _shower, true, 2.3];
   _trigger setTriggerStatements [[_Condition] call ACE_Common_fnc_codeToString, [_Statement] call ACE_Common_fnc_codeToString, ""];
   _objects pushBack _trigger;
-
-
-  //Interrupción.
-  [{!(_this getVariable ["FCLA_Shower_Status", false])}, {
-    _isDesactivated = !(_this getVariable ["FCLA_Shower_Status", false]);
-    if (_isDesactivated) exitWith {};
-    ["FCLA_Switch_Shower", [_this, false]] call CBA_fnc_localEvent;
-  }, _shower] call CBA_fnc_waitUntilAndExecute;
   _shower setVariable ["FCLA_Shower_Objects", _objects, true];
 }] call CBA_fnc_addEventhandler;

@@ -18,7 +18,8 @@
       2,
       ["Encender", "Apagar"],
       nil
-     ]
+     ],
+     true
     ],
     ["SLIDER", "Radio",
      [
@@ -26,17 +27,17 @@
       25000,
       150,
       0
-     ]
+     ],
+     true
     ]
 	 ],
    {
-     (_this select 0) params ["_state", "_rad"];
-     (_this select 1) params ["_position"];
+     (_this select 0) params ["_stateSelected", "_radSelected"];
 
-     _state = if (_state == 0) then {"On";} else {"Off";};
-     [_position, _rad, _state] call FCLA_Common_fnc_switchLights;
+     _stateSelected = if (_stateSelected == 0) then {"On";} else {"Off";};
+     [_this select 1, _radSelected, _stateSelected] call FCLA_Common_fnc_switchLights;
 
-     _text = if (_state == "On") then {"LAS LUCES FUERON ENCENDIDAS";} else {"LAS LUCES FUERON APAGADAS";};
+     _text = if (_stateSelected == "On") then {"LAS LUCES FUERON ENCENDIDAS";} else {"LAS LUCES FUERON APAGADAS";};
      [_text] call ZEN_Common_fnc_showMessage;
-   }, {}, _this] call ZEN_Dialog_fnc_Create;
+   }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
 }, "\x\zen\addons\modules\ui\light_ca.paa"] call ZEN_Custom_Modules_fnc_Register;
