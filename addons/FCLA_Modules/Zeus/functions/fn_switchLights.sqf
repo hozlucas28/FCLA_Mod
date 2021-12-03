@@ -8,7 +8,7 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-["FCLA", "Alternar luces3", {
+["FCLA", "Alternar luces", {
   ["ALTERNAR LUCES",
 	 [
     ["TOOLBOX", "Estado",
@@ -31,7 +31,7 @@
 	 ],
    {
      (_this select 0) params ["_state", "_rad"];
-     (_this select 1) params ["_position", "_attachedObject"];
+     (_this select 1) params ["_position"];
 
      _state = if (_state == 0) then {"On";} else {"Off";};
      [_position, _rad, _state] call FCLA_Common_fnc_switchLights;

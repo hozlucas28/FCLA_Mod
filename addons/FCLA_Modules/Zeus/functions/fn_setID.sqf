@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Modifica la identificación de la unidad enviada.
+ * Modifica la identificación de la unidad.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -46,7 +46,7 @@
 	],
   {
     (_this select 0) params ["_newName", "_newAge", "_newPlaceOfBirth"];
-    (_this select 1) params ["_attachedObject", "_name", "_age", "_placeOfBirth"];
+    (_this select 1) params ["_attachedObject"];
     _attachedObject setVariable ["FCLA_ID", [_newName, _newAge, _newPlaceOfBirth], true];
     ["IDENTIFICACIÓN MODIFICADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _this] call ZEN_Dialog_fnc_Create;

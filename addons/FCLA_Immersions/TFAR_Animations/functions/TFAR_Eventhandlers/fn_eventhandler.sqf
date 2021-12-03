@@ -9,7 +9,7 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-["FCLA_TFAR_Animations_OnTangentEH", "OnTangent", {
+["FCLA_TFAR_Animations", "OnTangent", {
   params ["_unit", "_currentRadio", "_transceiver", "_hasAdditionalChannel", "_buttonDown"];
   _vehicle = vehicle _unit;
   _FFVSeats = [_vehicle] call ACE_Common_fnc_getTurretsFFV;

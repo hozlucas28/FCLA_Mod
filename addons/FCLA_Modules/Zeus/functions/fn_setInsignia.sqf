@@ -95,7 +95,7 @@
     ],
   {
     (_this select 0) params ["_newInsignia"];
-    (_this select 1) params ["_attachedObject", "_defaultValue"];
+    (_this select 1) params ["_attachedObject"];
     _isPlayer = [_attachedObject, true] call ACE_common_fnc_isPlayer;
 
     if (_isPlayer) then {
