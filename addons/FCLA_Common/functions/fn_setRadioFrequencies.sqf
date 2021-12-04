@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Establece automáticamente las frecuencias de las radios (corta y larga),
+ * Establece automáticamente las frecuencias de las radios de onda corta y larga,
  * que se utilizan en la comunidad de FCLA.
  *
  * Return Value:

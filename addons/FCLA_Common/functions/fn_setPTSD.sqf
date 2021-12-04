@@ -21,7 +21,7 @@
  *             [player] call FCLA_Common_fnc_setPTSD;
  *
  *             //Opcional definidos.
- *             [player, true, false, false] call FCLA_Common_fnc_setPTSD;
+ *             [player, true, false, false, true] call FCLA_Common_fnc_setPTSD;
  *
  * Note:
  * Se recomienda utilizar esta función a travez del evento
@@ -31,7 +31,7 @@
  * 12 minutos ó 15 minutos, una vez llamada la función.
  *
  * Para eliminar este efecto de la unidad, asígnele la variable de tipo
- * objeto "FCLA_Disable_PTDS" con con el valor <true>.
+ * objeto "FCLA_Disable_PTSD" con con el valor <true>.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -45,18 +45,18 @@ params [
         ["_involuntaryMovements", true, [true], 0]
        ];
 if ((isNull _unit) || ((!_cry) && (!_voices) && (!_unwantedThoughts) && (!_involuntaryMovements))) exitWith {false};
+_unit setVariable ["FCLA_has_PTSD", true, true];
 
 
 
-[{
+//Generar trastorno.
+_handle = [{
   _args params ["_unit", "_cry", "_voices", "_unwantedThoughts", "_involuntaryMovements"];
   _onPTSD = _unit getVariable ["FCLA_PTSD_Initialized", false];
   _inCurator = !isNull findDisplay 312;
   _isNotAlive = !alive _unit;
   _inCameraMode = _unit in (call ACE_Spectator_fnc_players);
   _isUnconscious = _unit getVariable ["ACE_isUnconscious", false];
-  _disableByAdmin = _unit getVariable ["FCLA_Disable_PTDS", false];
-  if (_disableByAdmin) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
   if ((_onPTSD) || (_inCurator) || (_isNotAlive) || (_inCameraMode) || (_isUnconscious)) exitWith {};
   _unit setVariable ["FCLA_PTSD_Initialized", true, true];
@@ -98,4 +98,15 @@ if ((isNull _unit) || ((!_cry) && (!_voices) && (!_unwantedThoughts) && (!_invol
   };
   [{_this setVariable ["FCLA_PTSD_Initialized", nil, true];}, _unit, 108] call CBA_fnc_waitAndExecute;
 }, 600 + (selectRandom [0, 100, 300]), [_unit, _cry, _voices, _unwantedThoughts, _involuntaryMovements]] call CBA_fnc_addPerFrameHandler;
+
+
+
+//Quitar trastorno.
+[{
+  !((_this select 0) getVariable ["FCLA_has_PTSD", false]) || ((_this select 0) getVariable ["FCLA_Disable_PTSD", false])
+  }, {
+  (_this select 0) setVariable ["FCLA_has_PTSD", nil, true];
+  (_this select 0) setVariable ["FCLA_Disable_PTSD", nil, true];
+  [_this select 1] call CBA_fnc_removePerFrameHandler;
+}, [_unit, _handle]] call CBA_fnc_waitUntilAndExecute;
 true

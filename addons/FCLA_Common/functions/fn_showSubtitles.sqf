@@ -21,8 +21,8 @@
  *            3: Tiempo (en segundos) para ocultar cada línea, una vez mostrada. <NUMBER>
  *
  *            4: Condiciones para mostrar los subtítulos, opcional. <ARRAY>
- *                - ¿Necesita tener una radio corta? <BOOL> (default: false)
- *                - ¿Necesita tener una radio larga? <BOOL> (default: false)
+ *                - ¿Necesita tener una radio de onda corta? <BOOL> (default: false)
+ *                - ¿Necesita tener una radio de onda larga? <BOOL> (default: false)
  *                - Mostrar unicamente para el bando... <"All"|"Blufor"|"Opfor"|"Independant"|"Civilian"> (default: "All")
  *
  * Return Value:

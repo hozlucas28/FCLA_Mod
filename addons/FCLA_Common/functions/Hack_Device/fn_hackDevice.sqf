@@ -46,12 +46,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
 	"(alive _target) && (_this distance _target <= 2.5) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_this, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
 	"(alive _target) && (_caller distance _target <= 2.5) && ((!(_arguments select 0)) || ([_caller, 'FCLA_Hacking_Device'] call BIS_fnc_hasItem)) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_caller, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
-	{ //Sentencias al iniciar.
-    params ["_target", "_caller", "_actionId", "_arguments"];
-    if ((!(_arguments select 0)) || ([_caller, "FCLA_Hacking_Device"] call BIS_fnc_hasItem)) exitWith {};
-    _line = ["[Sistema]", "Se necesita un dispositivo de hackeo."];
-    [objNull, [_line], "System", 3] call FCLA_Common_fnc_showSubtitles;
-  },
+	{},
 	{},
 	{ //Sentencias al completar.
 		params ["_target", "_caller", "_actionId", "_arguments"];
@@ -227,7 +222,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     params ["_target", "_caller", "_actionId", "_arguments"];
     if ((!(_arguments select 0)) || ([_caller, "FCLA_Hacking_Device"] call BIS_fnc_hasItem)) exitWith {};
     _line = ["[Sistema]", "Se necesita un dispositivo de hackeo."];
-    [objNull, [_line], "System", 3] call FCLA_Common_fnc_showSubtitles;
+    ["FCLA_Show_Subtitles", [objNull, [_line], "System", 3], _caller] call CBA_fnc_targetEvent;
   },
 	[_needHackingDevice],
 	1,

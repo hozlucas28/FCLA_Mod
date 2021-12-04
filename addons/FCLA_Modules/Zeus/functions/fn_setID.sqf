@@ -11,6 +11,7 @@
 ["FCLA", "Modificar ID", {
   params ["_position", "_attachedObject"];
   _IDCard = _attachedObject getVariable ["FCLA_ID", ["", "", ""]];
+  if (!FCLA_ID_Card_Allowed) exitWith {["¡LAS IDENTIFICACIONES ESTAN DESACTIVADAS POR EL ADDON OPTION: FCLA INTERACCIONES!"] call ZEN_Common_fnc_showMessage;};
   if ((isNull _attachedObject) || !(_attachedObject in allUnits)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UNA UNIDAD"] call ZEN_Common_fnc_showMessage;};
 
 

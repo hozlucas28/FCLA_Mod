@@ -78,8 +78,9 @@
 		_isProne = (stance _unit) == "PRONE";
 		_severalConditions = [_unit] call FCLA_Common_fnc_severalConditions;
 		_isNotTouchingGround = !isTouchingGround _unit;
+		_hasNotWeaponOnHands = (currentWeapon _unit) == "";
 		_notUsingPrimaryWeapon = (currentWeapon _unit) != (primaryWeapon _unit);
-		if ((_isProne) || (_severalConditions) || (_isNotTouchingGround) || (_notUsingPrimaryWeapon)) exitWith {};
+		if ((_isProne) || (_severalConditions) || (_isNotTouchingGround) || (_hasNotWeaponOnHands) || (_notUsingPrimaryWeapon)) exitWith {};
 
 
 		if (!(_unit getVariable ["FCLA_Tactical_Position", false])) then {
@@ -90,9 +91,10 @@
 				_isProne = (stance _this) == "PRONE";
 				_severalConditions = [_this] call FCLA_Common_fnc_severalConditions;
 				_isNotTouchingGround = !isTouchingGround _this;
+				_hasNotWeaponOnHands = (currentWeapon _this) == "";
 				_notUsingPrimaryWeapon = (currentWeapon _this) != (primaryWeapon _this);
 				_tacticaPositionFinished = !(_this getVariable ["FCLA_Tactical_Position", false]);
-				(_isProne) || (_severalConditions) || (_isNotTouchingGround) || (_notUsingPrimaryWeapon) || (_tacticaPositionFinished);
+				(_isProne) || (_severalConditions) || (_isNotTouchingGround) || (_hasNotWeaponOnHands) || (_notUsingPrimaryWeapon) || (_tacticaPositionFinished);
 			}, {
 				if (!(_this getVariable ["FCLA_Tactical_Position", false])) exitWith {};
 				_this setVariable ["FCLA_Tactical_Position", nil, true];
@@ -119,8 +121,9 @@
 		_isProne = (stance _unit) == "PRONE";
 		_severalConditions = [_unit] call FCLA_Common_fnc_severalConditions;
 		_isNotTouchingGround = !isTouchingGround _unit;
+		_hasNotWeaponOnHands = (currentWeapon _unit) == "";
 		_notUsingPrimaryWeapon = (currentWeapon _unit) != (primaryWeapon _unit);
-		if ((_isProne) || (_severalConditions) || (_isNotTouchingGround) || (_notUsingPrimaryWeapon)) exitWith {};
+		if ((_isProne) || (_severalConditions) || (_isNotTouchingGround) || (_hasNotWeaponOnHands) || (_notUsingPrimaryWeapon)) exitWith {};
 
 
 		if (!(_unit getVariable ["FCLA_Tactical_Position", false])) then {
@@ -131,9 +134,10 @@
 				_isProne = (stance _this) == "PRONE";
 				_severalConditions = [_this] call FCLA_Common_fnc_severalConditions;
 				_isNotTouchingGround = !isTouchingGround _this;
+				_hasNotWeaponOnHands = (currentWeapon _this) == "";
 				_notUsingPrimaryWeapon = (currentWeapon _this) != (primaryWeapon _this);
 				_tacticaPositionFinished = !(_this getVariable ["FCLA_Tactical_Position", false]);
-				(_isProne) || (_severalConditions) || (_isNotTouchingGround) || (_notUsingPrimaryWeapon) || (_tacticaPositionFinished);
+				(_isProne) || (_severalConditions) || (_isNotTouchingGround) || (_hasNotWeaponOnHands) || (_notUsingPrimaryWeapon) || (_tacticaPositionFinished);
 			}, {
 				if (!(_this getVariable ["FCLA_Tactical_Position", false])) exitWith {};
 				_this setVariable ["FCLA_Tactical_Position", nil, true];
