@@ -31,8 +31,8 @@
 	 ]
 	],
   {
-    (_this select 0) params ["_plateNumberSelected"];
-    (_this select 1) setVariable ["FCLA_Plate_Number", _plateNumberSelected, true];
+    (_this select 0) params ["_newPlateNumber"];
+    (_this select 1) setVariable ["FCLA_Plate_Number", _newPlateNumber, true];
     ["MATRÍCULA MODIFICADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, ""] call ZEN_Custom_Modules_fnc_Register;

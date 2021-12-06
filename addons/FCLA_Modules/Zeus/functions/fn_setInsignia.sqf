@@ -16,15 +16,15 @@
   if ((_setInsigniaDisableByEditor)) exitWith {["¡EL EDITOR A DESACTIVADO EL CAMBIO DE INSIGNIA EN ESTA UNIDAD!"] call ZEN_Common_fnc_showMessage;};
 
 
-  _originalInsignia = switch (_savedInsignia) do {
-    case "FCLA_Common": {0;};
-    case "FCLA_Takana": {1;};
-    case "FCLA_Jaguar": {2;};
-    case "FCLA_Condor": {3;};
-    case "FCLA_Salamandra": {4;};
-    case "FCLA_Anaconda": {5;};
-    case "FCLA_Quetzal": {6;};
-    case "FCLA_Medic": {7;};
+  _originalInsignia = switch (toUpper _savedInsignia) do {
+    case "FCLA_COMMON": {0;};
+    case "FCLA_TAKANA": {1;};
+    case "FCLA_JAGUAR": {2;};
+    case "FCLA_CONDOR": {3;};
+    case "FCLA_SALAMANDRA": {4;};
+    case "FCLA_ANACONDA": {5;};
+    case "FCLA_QUETZAL": {6;};
+    case "FCLA_MEDIC": {7;};
     case "FCLA_CBI": {8;};
     case "FCLA_CAI": {9;};
     case "FCLA_CPR": {10;};
@@ -94,15 +94,15 @@
      ]
     ],
   {
-    (_this select 0) params ["_insigniaSelected"];
+    (_this select 0) params ["_newInsignia"];
     _isPlayer = [_this select 1, true] call ACE_common_fnc_isPlayer;
 
     if (_isPlayer) then {
-      [_this select 1, _insigniaSelected] spawn FCLA_Interactions_fnc_statementSelfInsignias;
+      [_this select 1, _newInsignia] spawn FCLA_Interactions_fnc_statementSelfInsignias;
       ["INSIGNIA COLOCADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
     } else {
-      [_this select 1, _insigniaSelected] spawn FCLA_Interactions_fnc_statementExternalInsignias;
+      [_this select 1, _newInsignia] spawn FCLA_Interactions_fnc_statementExternalInsignias;
       ["INSIGNIA COLOCADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
     };
   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_data\ACE_Actions\Insignia_Management.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Zeus\data\Insignia_Management.paa"] call ZEN_Custom_Modules_fnc_Register;

@@ -47,11 +47,11 @@
     ]
 	 ],
    {
-     (_this select 0) params ["_dammageWeaponsStateSelected", "_dammageItemsStateSelected"];
-     _dammageWeaponsStateSelected = if (_dammageWeaponsStateSelected == 0) then {true;} else {false;};
-     _dammageItemsStateSelected = if (_dammageItemsStateSelected == 0) then {true;} else {false;};
+     (_this select 0) params ["_dammageWeaponsState", "_dammageItemsState"];
+     _dammageItemsState = if (_dammageItemsState == 0) then {true;} else {false;};
+     _dammageWeaponsState = if (_dammageWeaponsState == 0) then {true;} else {false;};
 
-     [_this select 1, _dammageWeaponsStateSelected, _dammageItemsStateSelected] call FCLA_Common_fnc_setAdvancedVehicleDamage;
+     [_this select 1, _dammageWeaponsState, _dammageItemsState] call FCLA_Common_fnc_setAdvancedVehicleDamage;
      ["SE HA ACTIVADO EL DAÑO AVANZADO DE ESTE VEHÍCULO"] call ZEN_Common_fnc_showMessage;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\x\zen\addons\modules\ui\truck_ca.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Zeus\data\Vehicle.paa"] call ZEN_Custom_Modules_fnc_Register;

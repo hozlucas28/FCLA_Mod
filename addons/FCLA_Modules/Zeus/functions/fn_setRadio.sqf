@@ -55,13 +55,13 @@
     ]
 	 ],
    {
-     (_this select 0) params ["_radioStateSelected", "_radioSideSelected"];
+     (_this select 0) params ["_hasRadio", "_radioSideSelected"];
 
-     _radioStateSelected = if (_radioStateSelected == 0) then {true;} else {false;};
+     _hasRadio = if (_hasRadio == 0) then {true;} else {false;};
      (_this select 1) setVariable ["tf_side", _radioSideSelected, true];
-     (_this select 1) setVariable ["tf_hasRadio", _radioStateSelected, true];
+     (_this select 1) setVariable ["tf_hasRadio", _hasRadio, true];
 
-     _text = if (_radioStateSelected) then {"RADIO AÑADIDA AL VEHÍCULO CON ÉXITO";} else {"SE HA ELIMINADO LA RADIO DEL VEHÍCULO";};
+     _text = if (_hasRadio) then {"RADIO AÑADIDA AL VEHÍCULO CON ÉXITO";} else {"SE HA ELIMINADO LA RADIO DEL VEHÍCULO";};
      [_text] call ZEN_Common_fnc_showMessage;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\a3\Modules_F_Curator\Data\portraitRadio_ca.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Zeus\data\Radio.paa"] call ZEN_Custom_Modules_fnc_Register;

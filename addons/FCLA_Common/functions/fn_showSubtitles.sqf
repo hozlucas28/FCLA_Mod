@@ -21,9 +21,10 @@
  *            3: Tiempo (en segundos) para ocultar cada línea, una vez mostrada. <NUMBER>
  *
  *            4: Condiciones para mostrar los subtítulos, opcional. <ARRAY>
- *                - ¿Necesita tener una radio de onda corta? <BOOL> (default: false)
- *                - ¿Necesita tener una radio de onda larga? <BOOL> (default: false)
- *                - Mostrar unicamente para el bando... <"All"|"Blufor"|"Opfor"|"Independant"|"Civilian"> (default: "All")
+ *                - ¿Se necesita tener una radio de onda corta? <BOOL> (default: false)
+ *                - ¿Se necesita tener una radio de onda larga? <BOOL> (default: false)
+ *                - Determina a que bando esta dirigido el mensaje. <"All"|"Blufor"|"Opfor"|"Independant"|"Civilian"> (default: "All")
+ *                - Distancia máxima con el emisor para mostrar el mensaje. <NUMBER> (default: -1)
  *
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
@@ -37,7 +38,7 @@
  *            _line1 = ["[Cbo] Enemigo", "Hola mundo!, primer linea!"];
  *            _line2 = ["[Cbo] Enemigo", "¿Todo bien?, segunda linea!"];
  *            _line3 = ["[Cbo] Enemigo", "Adios mundo!, tercera linea!"];
- *            [Civil_1, [_line1, _line2, _line3], "Civilian", 5, [false, true, "All"]] call FCLA_Common_fnc_showSubtitles;
+ *            [Civil_1, [_line1, _line2, _line3], "Civilian", 5, [false, true, "All", 150]] call FCLA_Common_fnc_showSubtitles;
  *
  * Notes:
  * Se recomienda utilizar esta función a travez del evento
@@ -49,6 +50,8 @@
  * Para que se verifiquen las condiciones el emisor debera estar definido, sino
  * estas seran ignoradas y se les asignara el valor que tienen por defecto.
  *
+ * Si la distancia máxima con el emisor es -1, no se tomara en cuenta.
+ *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
 
@@ -58,7 +61,7 @@ params [
         ["_lines", [[]], [[]], []],
         ["_emitterColor", "", [""], 0],
         ["_timeToHideEachLine", 0, [0], 0],
-        ["_conditions", [false, false, "All"], [[]], 3]
+        ["_conditions", [false, false, "All", -1], [[]], 4]
        ];
 
 
@@ -68,14 +71,15 @@ _emitterColor = toUpper _emitterColor;
 _selectedSide = toUpper (_conditions select 2);
 _needLongRadio = _conditions select 1;
 _needShortRadio = _conditions select 0;
+_distanceToShow = _conditions select 3;
 _compatibleEmitterColors = ["SIDE", "VEHICLE", "COMMAND", "GROUP", "DIRECT", "SYSTEM", "BLUFOR", "OPFOR", "INDEPENDANT", "CIVILIAN"];
 _compatibleConditionsForSide = ["ALL", "BLUFOR", "OPFOR", "INDEPENDANT", "CIVILIAN"];
-if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (_timeToHideEachLine <= 0) || !(_conditions isEqualTypeArray [false, false, ""]) || !(_selectedSide in _compatibleConditionsForSide)) exitWith {false};
+if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (_timeToHideEachLine <= 0) || !(_conditions isEqualTypeArray [false, false, "", 0]) || !(_selectedSide in _compatibleConditionsForSide)) exitWith {false};
 
 
 
-[_emitter, _lines, _emitterColor, _timeToHideEachLine, _needShortRadio, _needLongRadio, _selectedSide] spawn {
-  params ["_emitter", "_lines", "_emitterColor", "_timeToHideEachLine", "_needShortRadio", "_needLongRadio", "_selectedSide"];
+[_emitter, _lines, _emitterColor, _timeToHideEachLine, _needShortRadio, _needLongRadio, _selectedSide, _distanceToShow] spawn {
+  params ["_emitter", "_lines", "_emitterColor", "_timeToHideEachLine", "_needShortRadio", "_needLongRadio", "_selectedSide", "_distanceToShow"];
 
   //Mover labios del emisor.
   if (!isNull _emitter) then {
@@ -112,8 +116,8 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
   //Mostrar/Ocultar subtítulos.
   for "_i" from 0 to (count _lines) - 1 do {
     if (_emitter getVariable ["FCLA_Hide_Subtitles", false]) exitWith {};
-    _handle = [_emitter, _lines, _emitterColor, _timeToHideEachLine, _needShortRadio, _needLongRadio, _selectedSide, _i] spawn {
-      params ["_emitter", "_lines", "_emitterColor", "_timeToHideEachLine", "_needShortRadio", "_needLongRadio", "_selectedSide", "_i"];
+    _handle = [_emitter, _lines, _emitterColor, _timeToHideEachLine, _needShortRadio, _needLongRadio, _selectedSide, _distanceToShow, _i] spawn {
+      params ["_emitter", "_lines", "_emitterColor", "_timeToHideEachLine", "_needShortRadio", "_needLongRadio", "_selectedSide", "_distanceToShow", "_i"];
       disableSerialization;
       _caller = call CBA_fnc_currentUnit;
       _currentLine = _lines select _i;
@@ -122,9 +126,10 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
       _hasShortRadio = if ((!isNull _emitter) && (_needShortRadio)) then {call TFAR_fnc_haveSWRadio} else {true};
       _hasLongRadio = if ((!isNull _emitter) && (_needLongRadio)) then {call TFAR_fnc_haveLRRadio} else {true};
       _isSelectedSide = if ((!isNull _emitter) && ((_selectedSide) isNotEqualTo "All")) then {(side _caller) == _selectedSide} else {true};
+      _isCloseEnough = if ((!isNull _emitter) && (_distanceToShow != -1)) then {_emitter distance _caller <= _distanceToShow} else {true};
       _notShowingSubtitles = !(localNamespace getVariable ["FCLA_Showing_Subtitles", false]);
 
-      if ((_hasShortRadio) && (_hasLongRadio) && (_isSelectedSide) && (_notShowingSubtitles)) then {
+      if ((_hasShortRadio) && (_hasLongRadio) && (_isSelectedSide) && (_isCloseEnough) && (_notShowingSubtitles)) then {
         private "_display";
         titleRsc ["RscDynamicText", "PLAIN"];
         waitUntil {_display = uiNamespace getVariable "BIS_dynamicText"; !(isNull _display)};

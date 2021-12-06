@@ -40,9 +40,7 @@ _Statement = {
      ]
     ],
   {
-    _unit = _this select 1;
-    _timer = (_this select 0) select 0;
-    _unit setVariable ["FCLA_Smoke_Signal_Timer", _timer, true];
+    (_this select 1) setVariable ["FCLA_Smoke_Signal_Timer", (_this select 0) select 0, true];
   }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
 };
 

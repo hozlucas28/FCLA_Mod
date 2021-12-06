@@ -17,17 +17,16 @@ _savedInsignia = _unit getVariable ["FCLA_Insignia", FCLA_Default_Patche];
 /* -------------------------------- PROPIO --------------------------------- */
 
 if (_isSelf) exitWith {
-  _defaultValue = switch (_savedInsignia) do {
-    case "FCLA_Takana": {0;};
-    case "FCLA_Jaguar": {1;};
-    case "FCLA_Condor": {2;};
-    case "FCLA_Salamandra": {3;};
-    case "FCLA_Anaconda": {4;};
-    case "FCLA_Quetzal": {5;};
-    case "FCLA_Medic": {6;};
+  _defaultValue = switch (toUpper _savedInsignia) do {
+    case "FCLA_TAKANA": {0;};
+    case "FCLA_JAGUAR": {1;};
+    case "FCLA_CONDOR": {2;};
+    case "FCLA_SALAMANDRA": {3;};
+    case "FCLA_ANACONDA": {4;};
+    case "FCLA_QUETZAL": {5;};
+    case "FCLA_MEDIC": {6;};
     default {0;};
   };
-  _this = [_unit, _defaultValue];
 
   ["SELECCIONAR INSIGNIA",
     [
@@ -45,22 +44,20 @@ if (_isSelf) exitWith {
         ["Quetzal", "", "\FCLA_interactions\Insignias\data\pictures\Quetzal.paa"],
         ["Médico", "", "\FCLA_interactions\Insignias\data\pictures\Medic.paa"]
        ],
-       _this select 1
+       _defaultValue
       ]
      ]
     ],
   {
-    (_this select 0) params ["_newInsignia"];
-    (_this select 1) params ["_unit", "_defaultValue"];
-    [_unit, _newInsignia] spawn FCLA_Interactions_fnc_statementSelfInsignias;
-  }, {}, _this] call ZEN_Dialog_fnc_Create;
+    [(_this select 1) select 0, (_this select 0) select 0] spawn FCLA_Interactions_fnc_statementSelfInsignias;
+  }, {}, _unit] call ZEN_Dialog_fnc_Create;
 };
 
 
 
 /* -------------------------------- EXTERNO -------------------------------- */
 
-_defaultValue = switch (_savedInsignia) do {
+_defaultValue = switch (toUpper _savedInsignia) do {
   case "FCLA_CBI": {0;};
   case "FCLA_CAI": {1;};
   case "FCLA_CPR": {2;};
@@ -82,7 +79,6 @@ _defaultValue = switch (_savedInsignia) do {
   case "FCLA_CPA": {18;};
   default {0;};
 };
-_this = [_unit, _defaultValue];
 
 
 ["SELECCIONAR INSIGNIA",
@@ -116,12 +112,10 @@ _this = [_unit, _defaultValue];
       ["CPH", "", "\FCLA_interactions\Insignias\data\pictures\CPH.paa"],
       ["CPA", "", "\FCLA_interactions\Insignias\data\pictures\CPA.paa"]
      ],
-     _this select 1
+     _defaultValue
     ]
    ]
   ],
 {
-  (_this select 0) params ["_newInsignia"];
-  (_this select 1) params ["_unit", "_defaultValue"];
-  [_unit, _newInsignia] spawn FCLA_Interactions_fnc_statementExternalInsignias;
-}, {}, _this] call ZEN_Dialog_fnc_Create;
+  [(_this select 1) select 0, (_this select 0) select 0] spawn FCLA_Interactions_fnc_statementExternalInsignias;
+}, {}, _unit] call ZEN_Dialog_fnc_Create;

@@ -27,9 +27,9 @@
     ]
 	 ],
    {
-     (_this select 0) params ["_needHackingDeviceStateSelected"];
-     _needHackingDeviceStateSelected = if (_needHackingDeviceStateSelected == 0) then {true;} else {false;};
-     [_this select 1, "Hackear dispositivo", _needHackingDeviceStateSelected] call FCLA_Common_fnc_hackDevice;
+     (_this select 0) params ["_needHackingDeviceState"];
+     _needHackingDeviceState = if (_needHackingDeviceState == 0) then {true;} else {false;};
+     [_this select 1, "Hackear dispositivo", _needHackingDeviceState] call FCLA_Common_fnc_hackDevice;
      ["EL OBJETO AHORA ES HACKEABLE"] call ZEN_Common_fnc_showMessage;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\x\zen\addons\modules\ui\code_ca.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Zeus\data\Code.paa"] call ZEN_Custom_Modules_fnc_Register;

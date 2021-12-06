@@ -63,13 +63,13 @@
     ]
 	 ],
    {
-     (_this select 0) params ["_cryStateSelected", "_voicesStateSelected", "_unwantedThoughtsStateSelected", "_involuntaryMovementsStateSelected"];
-     _cryStateSelected = if (_cryStateSelected == 0) then {true;} else {false;};
-     _voicesStateSelected = if (_voicesStateSelected == 0) then {true;} else {false;};
-     _unwantedThoughtsStateSelected = if (_unwantedThoughtsStateSelected == 0) then {true;} else {false;};
-     _involuntaryMovementsStateSelected = if (_involuntaryMovementsStateSelected == 0) then {true;} else {false;};
+     (_this select 0) params ["_cryState", "_voicesState", "_unwantedThoughtsState", "_involuntaryMovementsState"];
+     _cryState = if (_cryState == 0) then {true;} else {false;};
+     _voicesState = if (_voicesState == 0) then {true;} else {false;};
+     _unwantedThoughtsState = if (_unwantedThoughtsState == 0) then {true;} else {false;};
+     _involuntaryMovementsState = if (_involuntaryMovementsState == 0) then {true;} else {false;};
 
-     ["FCLA_Set_PTSD", [_this select 1, _cryStateSelected, _voicesStateSelected, _unwantedThoughtsStateSelected, _involuntaryMovementsStateSelected], _this select 1] call CBA_fnc_targetEvent;
+     ["FCLA_Set_PTSD", [_this select 1, _cryState, _voicesState, _unwantedThoughtsState, _involuntaryMovementsState], _this select 1] call CBA_fnc_targetEvent;
      ["LA UNIDAD SUFRIRA TRASTORNO POR ESTRÉS POSTRAUMÁTICO (TEPT)"] call ZEN_Common_fnc_showMessage;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\x\zen\addons\modules\ui\person_ca.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Zeus\data\Person.paa"] call ZEN_Custom_Modules_fnc_Register;

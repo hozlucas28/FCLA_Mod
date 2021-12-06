@@ -22,4 +22,4 @@
     _attachedObject setVariable ["FCLA_Disable_Aircraft_Turbulences", true, true];
     ["EL VEHÍCULO YA NO SE VERA AFECTADO POR LAS TURBULENCIAS"] call ZEN_Common_fnc_showMessage;
   };
-}, "\a3\Modules_F_Curator\Data\portraitWeather_ca.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Zeus\data\Weather.paa"] call ZEN_Custom_Modules_fnc_Register;

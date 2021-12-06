@@ -67,7 +67,7 @@
      ],
      ["SLIDER", ["Mínimo de disparos", "Cantidad mínima de disparos que se efectuaran"],
       [
-       0,
+       1,
        100,
        10,
        0
@@ -76,7 +76,7 @@
      ],
      ["SLIDER", ["Máximo de disparos", "Cantidad máxima de disparos que se efectuaran"],
       [
-       0,
+       1,
        100,
        20,
        0
@@ -85,7 +85,7 @@
      ],
      ["SLIDER", ["Tiempo mínimo", "Tiempo mínimo (en segundos) para repetir disparos"],
       [
-       0,
+       1,
        300,
        4,
        0
@@ -94,7 +94,7 @@
      ],
      ["SLIDER", ["Tiempo máximo", "Tiempo máximo (en segundos) para repetir disparos"],
       [
-       0,
+       1,
        300,
        8,
        0
@@ -103,10 +103,10 @@
      ]
   	],
     {
-      (_this select 0) params ["_magazineSelected", "_minimumShotsSelected", "_maximumShotsSelected", "_minimumDelaySelected", "_maximumDelaySelected"];
-      (_this select 1) params ["_attachedObject", "_weaponSelected"];
+      (_this select 0) params ["_magazine", "_minimumShots", "_maximumShots", "_minimumDelay", "_maximumDelay"];
+      (_this select 1) params ["_attachedObject", "_weapon"];
       ["EL VEHÍCULO COMENZARA A REALIZAR DISPAROS AMBIENTALES"] call ZEN_Common_fnc_showMessage;
-      [_attachedObject, _weaponSelected, _magazineSelected, [_minimumShotsSelected, _maximumShotsSelected], [_minimumDelaySelected, _maximumDelaySelected]] call FCLA_Common_fnc_setAmbientFired;
+      [_attachedObject, _weapon, _magazine, [_minimumShots, _maximumShots], [_minimumDelay, _maximumDelay]] call FCLA_Common_fnc_setAmbientFired;
     }, {}, [_attachedObject, _weaponSelected]] call ZEN_Dialog_fnc_Create;
   }, {}, [_attachedObject, _vehicleName, _vehicleWeapons, _vehicleWeaponsNames]] call ZEN_Dialog_fnc_Create;
-}, "\a3\Modules_F_Curator\Data\portraitTracers_ca.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Zeus\data\Tracers.paa"] call ZEN_Custom_Modules_fnc_Register;

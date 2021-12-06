@@ -49,6 +49,24 @@
      ],
      false
     ],
+    ["SLIDER", ["Tiempo", "Tiempo en segundos para ocultar el mensaje"],
+     [
+      1,
+      60,
+      5,
+      0
+     ],
+     false
+    ],
+    ["SLIDER", ["Radio / Distancia", "Aquellas unidades comprendidas dentro del radio definido podrán ver el mensaje, tomando como origen del radio la posición donde se colocó el módulo.\n• Nota: si colocas -1 la distancia no importara"],
+     [
+      -1,
+      5000,
+      -1,
+      0
+     ],
+     false
+    ],
     ["TOOLBOX", ["¿Necesita radio corta?", "Si se activa únicamente aquellas unidades que posean radio de onda corta podran ver los subtítulos"],
      [
       1,
@@ -69,7 +87,7 @@
      ],
      false
     ],
-    ["COMBO", ["Seleccionar bando", "Determina a que bando debe pertenecer la unidad para ver el subtítulo"],
+    ["COMBO", ["Seleccionar bando", "Determina a que bando debe pertenecer la unidad para ver el mensaje"],
      [
       [
        "ALL",
@@ -91,11 +109,11 @@
     ]
 	 ],
    {
-     (_this select 0) params ["_emitterName", "_line", "_colorSelected", "_needShortRadio", "_needLongRadio", "_selectedSide"];
+     (_this select 0) params ["_emitterName", "_subtitle", "_color", "_timeToHide", "_distanceToShow", "_needShortRadio", "_needLongRadio", "_selectedSide"];
+     _needLongRadio = if (_needLongRadio == 0) then {true;} else {false;};
      _needShortRadio = if (_needShortRadio == 0) then {true;} else {false;};
-     _needLongRadio = if (_needLongRadio == 0) then {true;} else {false;};//FALTA COLOCAR TIEMPO PARA DESAPARECER Y RADIAL.
 
-     ["FCLA_Show_Subtitles", [objNull, [_line], _colorSelected, 5, [_needShortRadio, _needLongRadio, _selectedSide]]] call CBA_fnc_globalEventJIP;
+     ["FCLA_Show_Subtitles", [objNull, [[_emitterName, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _selectedSide, _distanceToShow]]] call CBA_fnc_globalEventJIP;
      ["SUBTÍTULO MOSTRADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
-}, "\x\zen\addons\modules\ui\chat_ca.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Zeus\data\Chat.paa"] call ZEN_Custom_Modules_fnc_Register;

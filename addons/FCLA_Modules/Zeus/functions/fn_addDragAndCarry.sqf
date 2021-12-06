@@ -56,11 +56,12 @@
     ]
 	 ],
    {
-     (boundingCenter (_this select 1)) params ["_xCenter", "_yCenter"];
-     (boundingBoxReal (_this select 1)) params ["_minPos", "_maxPos", "_boundingSphereDiameter"];
-     (_this select 0) params ["_dragStateSelected", "_carryStateSelected", "_ignoreWeightDragStateSelected", "_ignoreWeightCarryStateSelected"];
-     _dragStateSelected = if (_dragStateSelected == 0) then {true;} else {false;};
-     _carryStateSelected = if (_carryStateSelected == 0) then {true;} else {false;};
+     (_this select 1) params ["_attachedObject"];
+     (_this select 0) params ["_dragState", "_carryState", "_ignoreWeightDragState", "_ignoreWeightCarryState"];
+     (boundingCenter _attachedObject) params ["_xCenter", "_yCenter"];
+     (boundingBoxReal _attachedObject) params ["_minPos", "_maxPos", "_boundingSphereDiameter"];
+     _dragState = if (_dragState == 0) then {true;} else {false;};
+     _carryState = if (_carryState == 0) then {true;} else {false;};
 
      _minPos params ["_xMin", "_yMin", "_zMin"];
      _maxPos params ["_xMax", "_yMax", "_zMax"];
@@ -71,26 +72,26 @@
      _offset = [[0, _distance, 0], [_distance, 0, 0]] select _isWiderThanLonger;
 
      ["ZEN_Common_Execute", [ACE_Dragging_fnc_setDraggable, [
-      _this select 1,
+      _attachedObject,
       true,
-      [configOf (_this select 1), "ACE_Dragging_dragPosition", _offset] call BIS_fnc_returnConfigEntry,
-      [configOf (_this select 1), "ACE_Dragging_dragDirection", [0, 90] select _isWiderThanLonger] call BIS_fnc_returnConfigEntry,
-      _ignoreWeightDragStateSelected
+      [configOf _attachedObject, "ACE_Dragging_dragPosition", _offset] call BIS_fnc_returnConfigEntry,
+      [configOf _attachedObject, "ACE_Dragging_dragDirection", [0, 90] select _isWiderThanLonger] call BIS_fnc_returnConfigEntry,
+      _ignoreWeightDragState
      ]]] call CBA_fnc_globalEventJIP;
 
      ["ZEN_Common_Execute", [ACE_Dragging_fnc_setCarryable, [
-      _this select 1,
+      _attachedObject,
       true,
-      [configOf (_this select 1), "ACE_Dragging_carryPosition", _offset] call BIS_fnc_returnConfigEntry,
-      [configOf (_this select 1), "ACE_Dragging_carryDirection", [90, 0] select _isWiderThanLonger] call BIS_fnc_returnConfigEntry,
-      _ignoreWeightCarryStateSelected
+      [configOf _attachedObject, "ACE_Dragging_carryPosition", _offset] call BIS_fnc_returnConfigEntry,
+      [configOf _attachedObject, "ACE_Dragging_carryDirection", [90, 0] select _isWiderThanLonger] call BIS_fnc_returnConfigEntry,
+      _ignoreWeightCarryState
      ]]] call CBA_fnc_globalEventJIP;
 
      _text = switch (true) do {
-       case ((_dragStateSelected) && (!_carryStateSelected)): {"SE HA AÑADIDO LA POSIBILIDAD DE ARRASTRAR EL OBJETO";};
-       case ((!_dragStateSelected) && (_carryStateSelected)): {"SE HA AÑADIDO LA POSIBILIDAD DE PORTAR EL OBJETO";};
+       case ((_dragState) && (!_carryState)): {"SE HA AÑADIDO LA POSIBILIDAD DE ARRASTRAR EL OBJETO";};
+       case ((!_dragState) && (_carryState)): {"SE HA AÑADIDO LA POSIBILIDAD DE PORTAR EL OBJETO";};
        default {"SE HA AÑADIDO LA POSIBILIDAD DE ARRASTRAR Y PORTAR EL OBJETO";};
      };
      [_text] call ZEN_Common_fnc_showMessage;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\x\zen\addons\modules\ui\edit_obj_ca.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Zeus\data\Edit_Object.paa"] call ZEN_Custom_Modules_fnc_Register; 

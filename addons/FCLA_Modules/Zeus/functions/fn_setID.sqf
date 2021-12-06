@@ -48,8 +48,8 @@
 	 ]
 	],
   {
-    (_this select 0) params ["_nameSelected", "_ageSelected", "_placeOfBirthSelected"];
-    (_this select 1) setVariable ["FCLA_ID", [_nameSelected, _ageSelected, _placeOfBirthSelected], true];
+    (_this select 0) params ["_newName", "_newAge", "_newPlaceOfBirth"];
+    (_this select 1) setVariable ["FCLA_ID", [_newName, _newAge, _newPlaceOfBirth], true];
     ["IDENTIFICACIÓN MODIFICADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Data\ACE_Actions\ID_Card.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Zeus\data\ID_Card.paa"] call ZEN_Custom_Modules_fnc_Register;

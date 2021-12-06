@@ -9,7 +9,7 @@
  * Argument:
  *            0: Centro del radio de búsqueda. <POSITION|UNIT|OBJECT|VEHICLE|GROUP|MARKER|LOCATION>
  *            1: Radio de búsqueda. <NUMBER>
- *            2: ¿Encender ó apagar?. <""Off|"On">
+ *            2: ¿Encender ó apagar?. <"Off"|"On">
  *
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
@@ -20,6 +20,10 @@
  *
  *            //Encender luces.
  *            [getPos player, 500, "On"] call FCLA_Common_fnc_switchLights;
+ *
+ * Note:
+ * Si deseas encender/apagar todas las luces del mapa en el radio de
+ * búsqueda (argumento 1) coloca un -1.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -34,8 +38,10 @@ params [
 
 
 //Verificar argumento.
+_rad = if (_rad == -1) then {worldSize} else {_rad};
 _state = toUpper _state;
-if ((_rad <= 0) || ((_state != "OFF") && (_state != "ON"))) exitWith {false};
+if ((_rad < -1) || ((_state != "OFF") && (_state != "ON"))) exitWith {false};
+
 
 
 //Convertir estado al formato correcto

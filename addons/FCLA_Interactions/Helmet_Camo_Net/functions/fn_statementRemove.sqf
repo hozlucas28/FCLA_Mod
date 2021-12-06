@@ -19,39 +19,40 @@ params ["_player"];
 
 _statementOnFinish = {
   (_this select 0) params ["_player"];
+  _currentHeadgear = headgear _player;
 
-  switch (headgear _player) do {
-    case "H_HelmetB_camo": {
+  switch (toUpper _currentHeadgear) do {
+    case "H_HELMETB_CAMO": {
       removeHeadgear _player;
       _player addHeadgear "H_HelmetB";
       [_player, "FCLA_Camo_Net_Arid", "", -1] call ACE_Common_fnc_addToInventory;
     };
 
-    case "H_HelmetB_Camo_Snake": {
+    case "H_HELMETB_CAMO_SNAKE": {
       removeHeadgear _player;
       _player addHeadgear "H_HelmetB_snakeskin";
       [_player, "FCLA_Camo_Net_Arid", "", -1] call ACE_Common_fnc_addToInventory;
     };
 
-    case "rhsusf_ach_helmet_camo_ocp": {
+    case "RHSUSF_ACH_HELMET_CAMO_OCP": {
       removeHeadgear _player;
       _player addHeadgear "rhsusf_ach_helmet_ocp";
       [_player, "FCLA_Camo_Net_Arid", "", -1] call ACE_Common_fnc_addToInventory;
     };
 
-    case "H_HelmetB_Camo_Tropical": {
+    case "H_HELMETB_CAMO_TROPICAL": {
       removeHeadgear _player;
       _player addHeadgear "H_HelmetB_tna_F";
       [_player, "FCLA_Camo_Net_Tropical", "", -1] call ACE_Common_fnc_addToInventory;
     };
 
-    case "H_HelmetB_Camo_Woodland": {
+    case "H_HELMETB_CAMO_WOODLAND": {
       removeHeadgear _player;
       _player addHeadgear "H_HelmetB_plain_wdl";
       [_player, "FCLA_Camo_Net_Tropical", "", -1] call ACE_Common_fnc_addToInventory;
     };
 
-    case "H_HelmetB_Camo_Digital": {
+    case "H_HELMETB_CAMO_DIGITAL": {
       removeHeadgear _player;
       _player addHeadgear "H_HelmetB_Digital";
       [_player, "FCLA_Camo_Net_Tropical", "", -1] call ACE_Common_fnc_addToInventory;

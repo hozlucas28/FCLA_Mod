@@ -26,4 +26,4 @@ if (!isMultiplayer) exitWith {};
     _attachedObject setVariable ["FCLA_Camera_Mode_Disable_By_Curator", true, true];
     ["LA UNIDAD YA NO TIENE ACCESO AL MODO CÁMARA"] call ZEN_Common_fnc_showMessage;
   };
-}, "\a3\Modules_F_Curator\Data\portraitCuratorSetCamera_ca.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Zeus\data\Camera.paa"] call ZEN_Custom_Modules_fnc_Register;
