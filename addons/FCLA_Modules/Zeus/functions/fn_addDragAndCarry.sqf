@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Permite que el objeto se pueda arrastrar y/o portar.
+ * Crea un módulo que permite que el objeto se pueda arrastrar y/o portar.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -56,12 +56,12 @@
     ]
 	 ],
    {
-     (_this select 1) params ["_attachedObject"];
      (_this select 0) params ["_dragState", "_carryState", "_ignoreWeightDragState", "_ignoreWeightCarryState"];
-     (boundingCenter _attachedObject) params ["_xCenter", "_yCenter"];
-     (boundingBoxReal _attachedObject) params ["_minPos", "_maxPos", "_boundingSphereDiameter"];
+     (boundingCenter (_this select 1)) params ["_xCenter", "_yCenter"];
+     (boundingBoxReal (_this select 1)) params ["_minPos", "_maxPos", "_boundingSphereDiameter"];
      _dragState = if (_dragState == 0) then {true;} else {false;};
      _carryState = if (_carryState == 0) then {true;} else {false;};
+     _attachedObject = _this select 1;
 
      _minPos params ["_xMin", "_yMin", "_zMin"];
      _maxPos params ["_xMax", "_yMax", "_zMax"];
@@ -94,4 +94,4 @@
      };
      [_text] call ZEN_Common_fnc_showMessage;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Modules\Zeus\data\Edit_Object.paa"] call ZEN_Custom_Modules_fnc_Register; 
+}, "\FCLA_Modules\Zeus\data\Edit_Object.paa"] call ZEN_Custom_Modules_fnc_Register;

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera una serie de mensajes a modo de subtítulos.
+ * Crea un módulo para generar un de mensaje a modo de subtítulo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -25,7 +25,7 @@
       nil,
       nil
      ],
-     true
+     false
     ],
     ["COMBO", "Color",
      [
@@ -113,7 +113,9 @@
      _needLongRadio = if (_needLongRadio == 0) then {true;} else {false;};
      _needShortRadio = if (_needShortRadio == 0) then {true;} else {false;};
 
-     ["FCLA_Show_Subtitles", [objNull, [[_emitterName, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _selectedSide, _distanceToShow]]] call CBA_fnc_globalEventJIP;
+     _emitter = createAgent ["VirtualAISquad", _this select 1, [], 0, "CAN_COLLIDE"];
+     systemchat str (player distance _emitter);
+     ["FCLA_Show_Subtitles", [_emitter, [[_emitterName, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _selectedSide, _distanceToShow]]] call CBA_fnc_globalEventJIP;
      ["SUBTÍTULO MOSTRADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-   }, {}, _this] call ZEN_Dialog_fnc_Create;
+   }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Zeus\data\Chat.paa"] call ZEN_Custom_Modules_fnc_Register;

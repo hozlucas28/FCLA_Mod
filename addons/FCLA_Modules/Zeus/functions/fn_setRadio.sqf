@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Permite agregar ó quitar la radio del vehículo. Ademas de modificar el bando
- * al que está pertenece.
+ * Crea un módulo que permite agregar ó quitar la radio del vehículo. Ademas de
+ * modificar el bando al que está pertenece.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

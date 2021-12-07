@@ -20,7 +20,7 @@
   if (!isNull findDisplay 10001) then {
     hintSilent parseText format ["
     <t font='PuristaBold' size='1.5' underline='1'>ESPECIALIDADES</t><br/><br/>
-    <t font='PuristaBold' size='1.25'>Medico...        |<t color='%1'> %2 </t>|</t><br/>
+    <t font='PuristaBold' size='1.25'>Médico...        |<t color='%1'> %2 </t>|</t><br/>
     <t font='PuristaBold' size='1.25'>Ingeniero...    |<t color='%3'> %4 </t>|</t><br/>
     <t font='PuristaBold' size='1.25'>  EOD...            |<t color='%5'> %6 </t>|</t>
     ", _doctorTextProperties select 0, _doctorTextProperties select 1, _advancedEnginnerTextProperties select 0, _advancedEnginnerTextProperties select 1, _EODTextProperties select 0, _EODTextProperties select 1];

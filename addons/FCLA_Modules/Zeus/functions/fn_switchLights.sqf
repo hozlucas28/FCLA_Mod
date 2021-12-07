@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Enciende/Apaga las luces en la posición y radio indicado.
+ * Crea un módulo para enciender/apagar las luces en la posición y radio indicados.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

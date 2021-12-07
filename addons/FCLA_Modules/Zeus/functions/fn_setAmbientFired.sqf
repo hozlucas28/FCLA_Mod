@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Fuerza al vehículo a disparar hacia el cielo.
+ * Crea un módulo que fuerza al vehículo a disparar hacia el cielo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

@@ -82,10 +82,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
   params ["_emitter", "_lines", "_emitterColor", "_timeToHideEachLine", "_needShortRadio", "_needLongRadio", "_selectedSide", "_distanceToShow"];
 
   //Mover labios del emisor.
-  if (!isNull _emitter) then {
-    if (!(_emitter in allUnits)) exitWith {};
-    _emitter setRandomLip true;
-  };
+  if (_emitter in allUnits) then {_emitter setRandomLip true;};
 
 
   //Convertir color al formato HTML.
@@ -177,10 +174,8 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
   localNamespace setVariable ["FCLA_Showing_Subtitles", nil];
 
 
-  //Detener labios del emisor.
-  if (!isNull _emitter) then {
-    if (!(_emitter in allUnits)) exitWith {};
-    _emitter setRandomLip false;
-  };
+  //Detener labios del emisor y eliminar si es una lógica.
+  if (_emitter in allUnits) then {_emitter setRandomLip false;};
+  if ((typeOf _emitter) == "VirtualAISquad") then {deleteVehicle _emitter;};
 };
 true

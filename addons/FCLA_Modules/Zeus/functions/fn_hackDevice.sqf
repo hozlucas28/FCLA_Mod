@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Permite hackear el dispositivo.
+ * Crea un módulo que permite hackear el dispositivo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
