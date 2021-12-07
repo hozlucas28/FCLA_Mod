@@ -105,6 +105,11 @@
     {
       (_this select 0) params ["_magazine", "_minimumShots", "_maximumShots", "_minimumDelay", "_maximumDelay"];
       (_this select 1) params ["_attachedObject", "_weapon"];
+      _minimumShots = [_minimumShots, 0] call BIS_fnc_cutDecimals;
+      _maximumShots = [_maximumShots, 0] call BIS_fnc_cutDecimals;
+      _minimumDelay = [_minimumDelay, 0] call BIS_fnc_cutDecimals;
+      _maximumDelay = [_maximumDelay, 0] call BIS_fnc_cutDecimals;
+
       ["EL VEHÍCULO COMENZARA A REALIZAR DISPAROS AMBIENTALES"] call ZEN_Common_fnc_showMessage;
       [_attachedObject, _weapon, _magazine, [_minimumShots, _maximumShots], [_minimumDelay, _maximumDelay]] call FCLA_Common_fnc_setAmbientFired;
     }, {}, [_attachedObject, _weaponSelected]] call ZEN_Dialog_fnc_Create;

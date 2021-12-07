@@ -21,7 +21,7 @@
      ],
      true
     ],
-    ["SLIDER", ["Radio", "Aquellas luces comprendidas dentro del radio definido se veran afectadas, tomando como origen del radio la posición donde se colocó el módulo.\n• Nota: si colocas -1 todas las luces del mapa seran afectadas"],
+    ["SLIDER", ["Radio", "Aquellas luces comprendidas dentro del radio definido se veran afectadas, tomando como origen del radio la posición donde se colocó el módulo.\n• Nota: si colocas -1 todas las luces del mapa seran afectadas."],
      [
       -1,
       5000,
@@ -33,10 +33,10 @@
 	 ],
    {
      (_this select 0) params ["_state", "_rad"];
-
+     _rad = [_rad, 0] call BIS_fnc_cutDecimals;
      _state = if (_state == 0) then {"On";} else {"Off";};
+     
      [_this select 1, _rad, _state] call FCLA_Common_fnc_switchLights;
-
      _text = if (_state == "On") then {"LAS LUCES FUERON ENCENDIDAS";} else {"LAS LUCES FUERON APAGADAS";};
      [_text] call ZEN_Common_fnc_showMessage;
    }, {}, _this select 0] call ZEN_Dialog_fnc_Create;

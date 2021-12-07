@@ -98,11 +98,11 @@
     _isPlayer = [_this select 1, true] call ACE_common_fnc_isPlayer;
 
     if (_isPlayer) then {
+      ["INSIGNIA COLOCADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
       [_this select 1, _newInsignia] spawn FCLA_Interactions_fnc_statementSelfInsignias;
-      ["INSIGNIA COLOCADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
     } else {
-      [_this select 1, _newInsignia] spawn FCLA_Interactions_fnc_statementExternalInsignias;
       ["INSIGNIA COLOCADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
+      [_this select 1, _newInsignia] spawn FCLA_Interactions_fnc_statementExternalInsignias;
     };
   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Zeus\data\Insignia_Management.paa"] call ZEN_Custom_Modules_fnc_Register;

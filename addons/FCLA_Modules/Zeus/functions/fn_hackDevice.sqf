@@ -15,6 +15,14 @@
 
   ["HACKEO DE DISPOSITIVO",
 	 [
+    ["EDIT", ["Nombre", "Nombre personalizado para poder reconocer al dispositivo, cuando se nos informe que ha sido hackeado."],
+     [
+      "",
+      nil,
+      nil
+     ],
+     true
+    ],
     ["TOOLBOX", ["¿Se necesita un dispositivo?", "Si se activa se necesitara de un dispositivo de hackeo para realizar la acción"],
      [
       0,
@@ -27,9 +35,19 @@
     ]
 	 ],
    {
-     (_this select 0) params ["_needHackingDeviceState"];
+     (_this select 0) params ["_identifiableName", "_needHackingDeviceState"];
      _needHackingDeviceState = if (_needHackingDeviceState == 0) then {true;} else {false;};
-     [_this select 1, "Hackear dispositivo", _needHackingDeviceState] call FCLA_Common_fnc_hackDevice;
+
      ["EL OBJETO AHORA ES HACKEABLE"] call ZEN_Common_fnc_showMessage;
+     [_this select 1, "Hackear dispositivo", _needHackingDeviceState] call FCLA_Common_fnc_hackDevice;
+
+     [{
+       params ["_curator", "_identifiableName", "_device"];
+       (!alive _device) || (_device getVariable ["FCLA_Hacked", false]);
+     }, {
+       params ["_curator", "_identifiableName", "_device"];
+       if ((!alive _curator) || (!alive _device)) exitWith {};
+       hint ("EL DISPOSITIVO " + _identifiableName + " HA SIDO HACKEADO.");
+     }, [player, _identifiableName, _this select 1]] call CBA_fnc_waitUntilAndExecute;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Zeus\data\Code.paa"] call ZEN_Custom_Modules_fnc_Register;

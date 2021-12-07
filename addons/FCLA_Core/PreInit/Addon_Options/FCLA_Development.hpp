@@ -45,7 +45,7 @@
 
 [
 	"FCLA_isPromotionDay", "CHECKBOX",
-	["¿Día de ascensos?", "Al activar los jugadores se equiparan con un traje formal, a su vez las cajas de loadouts solo dispondran de una acción para equiparse con el traje.\n ¡ESTA OPCIÓN FUNCIONA SI EL TIPO DE MISIÓN ES DE ENTRENAMIENTO!"],
+	["¿Día de ascensos?", "Al activar los loadouts seran remplazados por un uniforme formal, se podran utilizar las acciones relacionadas con\nlos ascensos y los jugadores que entren, luego de haberse activado, vestiran un uniforme formal.\n ¡ESTA OPCIÓN FUNCIONA SI EL TIPO DE MISIÓN ES DE ENTRENAMIENTO!"],
 	["FCLA Desarrollo","• General"],
 	false,
 	GLOBAL,

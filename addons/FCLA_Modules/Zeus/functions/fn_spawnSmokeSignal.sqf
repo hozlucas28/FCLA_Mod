@@ -48,6 +48,7 @@
    {
      (_this select 1) params ["_x", "_y", "_z"];
      (_this select 0) params ["_height", "_color"];
+     _height = [_height, 0] call BIS_fnc_cutDecimals;
      _smokePos = [_x, _y, _z + _height];
 
      _lightObj = createVehicle ["#lightpoint", _smokePos, [], 0, "CAN_COLLIDE"];

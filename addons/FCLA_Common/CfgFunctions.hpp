@@ -10,6 +10,7 @@ class FCLA_Common_Functions {
   };
 
   class hackDevice {file = "\FCLA_Common\functions\Hack_Device\fn_hackDevice.sqf";};
+  class changeRadioRange {file = "\FCLA_Common\functions\fn_changeRadioRange.sqf";};
   class checkUnitTrait {file = "\FCLA_Common\functions\fn_checkUnitTrait.sqf";};
   class checkWeaponVisionModes {file = "\FCLA_Common\functions\fn_checkWeaponVisionModes.sqf";};
   class createLoadout {file = "\FCLA_Common\functions\fn_createLoadout.sqf";};

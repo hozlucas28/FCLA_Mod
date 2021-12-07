@@ -58,7 +58,7 @@
      ],
      false
     ],
-    ["SLIDER", ["Radio / Distancia", "Aquellas unidades comprendidas dentro del radio definido podrán ver el mensaje, tomando como origen del radio la posición donde se colocó el módulo.\n• Nota: si colocas -1 la distancia no importara"],
+    ["SLIDER", ["Radio / Distancia", "Aquellas unidades comprendidas dentro del radio definido podrán ver el mensaje, tomando como origen del radio la posición donde se colocó el módulo.\n• Nota: si colocas -1 la distancia no importara."],
      [
       -1,
       5000,
@@ -110,12 +110,13 @@
 	 ],
    {
      (_this select 0) params ["_emitterName", "_subtitle", "_color", "_timeToHide", "_distanceToShow", "_needShortRadio", "_needLongRadio", "_selectedSide"];
+     _timeToHide = [_timeToHide, 0] call BIS_fnc_cutDecimals;
+     _distanceToShow = [_distanceToShow, 0] call BIS_fnc_cutDecimals;
      _needLongRadio = if (_needLongRadio == 0) then {true;} else {false;};
      _needShortRadio = if (_needShortRadio == 0) then {true;} else {false;};
 
-     _emitter = createAgent ["VirtualAISquad", _this select 1, [], 0, "CAN_COLLIDE"];
-     systemchat str (player distance _emitter);
-     ["FCLA_Show_Subtitles", [_emitter, [[_emitterName, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _selectedSide, _distanceToShow]]] call CBA_fnc_globalEventJIP;
      ["SUBTÍTULO MOSTRADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
+     _emitter = createAgent ["VirtualAISquad", _this select 1, [], 0, "CAN_COLLIDE"];
+     ["FCLA_Show_Subtitles", [_emitter, [[_emitterName, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _selectedSide, _distanceToShow]]] call CBA_fnc_globalEvent;
    }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Zeus\data\Chat.paa"] call ZEN_Custom_Modules_fnc_Register;

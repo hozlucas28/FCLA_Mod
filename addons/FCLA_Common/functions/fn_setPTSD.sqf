@@ -104,7 +104,7 @@ _handle = [{
 //Quitar trastorno.
 [{
   !((_this select 0) getVariable ["FCLA_has_PTSD", false]) || ((_this select 0) getVariable ["FCLA_Disable_PTSD", false])
-  }, {
+}, {
   (_this select 0) setVariable ["FCLA_has_PTSD", nil, true];
   (_this select 0) setVariable ["FCLA_Disable_PTSD", nil, true];
   [_this select 1] call CBA_fnc_removePerFrameHandler;
