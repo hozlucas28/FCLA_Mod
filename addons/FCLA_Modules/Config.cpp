@@ -6,13 +6,21 @@
 class CfgPatches {
 	class FCLA_Modules {
 		units[] = {};
-		requiredAddons[] = {};
+		requiredAddons[] = {"zen_context_actions"};
 		author = "hozlucas28";
 		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
 		requiredVersion = 2.0;
 	};
 };
+
+
+
+/********************************************************************************|
+|                                  INCLUSIONES                                   |
+|********************************************************************************/
+
+#include "\FCLA_Modules\Zeus\CfgContext.hpp"
 
 
 

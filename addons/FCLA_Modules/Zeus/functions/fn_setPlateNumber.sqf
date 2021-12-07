@@ -35,4 +35,4 @@
     (_this select 1) setVariable ["FCLA_Plate_Number", _newPlateNumber, true];
     ["MATRÍCULA MODIFICADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, ""] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Zeus\data\Vehicle.paa"] call ZEN_Custom_Modules_fnc_Register;
