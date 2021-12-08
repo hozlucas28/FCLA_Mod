@@ -13,6 +13,9 @@
  * call FCLA_Common_fnc_setRadioFrequencies;
  *
  * Note:
+ * Se recomienda utilizar esta función a travez del evento
+ * personalizado "FCLA_Radio_Frequencies".
+ *
  * Las frecuencias se estableceran en el cliente que ejecuto la función.
  *
  * Public: [Yes]

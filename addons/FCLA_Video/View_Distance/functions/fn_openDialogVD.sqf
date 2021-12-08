@@ -10,7 +10,7 @@ Public: [No]
 
 	if (isNull (findDisplay 2900)) then {
 		_dialog = createDialog "FCLA_VD_dialog";
-		if (!_dialog) exitWith {systemChat "Distancia de Visión: error, no se pudo abrir el dialog."};
+		if (!_dialog) exitWith {["FCLA_System_Chat", ["Distancia de Visión: error, no se pudo abrir el dialog."]] call CBA_fnc_localEvent;};
 	};
 
 	disableSerialization;

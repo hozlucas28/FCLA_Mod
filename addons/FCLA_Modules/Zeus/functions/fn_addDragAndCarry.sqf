@@ -71,7 +71,7 @@
      _distance = 0.75 + ([_dY / 2, _dX / 2] select _isWiderThanLonger) + ([_yCenter, _xCenter] select _isWiderThanLonger);
      _offset = [[0, _distance, 0], [_distance, 0, 0]] select _isWiderThanLonger;
 
-     ["ZEN_Common_Execute", [ACE_Dragging_fnc_setDraggable, [
+     ["FCLA_Common_Execute", [ACE_Dragging_fnc_setDraggable, [
       _attachedObject,
       true,
       [configOf _attachedObject, "ACE_Dragging_dragPosition", _offset] call BIS_fnc_returnConfigEntry,
@@ -79,7 +79,7 @@
       _ignoreWeightDragState
      ]]] call CBA_fnc_globalEventJIP;
 
-     ["ZEN_Common_Execute", [ACE_Dragging_fnc_setCarryable, [
+     ["FCLA_Common_Execute", [ACE_Dragging_fnc_setCarryable, [
       _attachedObject,
       true,
       [configOf _attachedObject, "ACE_Dragging_carryPosition", _offset] call BIS_fnc_returnConfigEntry,

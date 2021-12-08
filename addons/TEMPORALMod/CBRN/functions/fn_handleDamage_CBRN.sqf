@@ -24,7 +24,7 @@ _maxDamage = FCLA_CBRN_Maximum_Damage;
 
 if (((_curDamage / _maxDamage) > 0.5) && !(_unit getVariable ["FCLA_CBRN_autoDamage", false])) then {
   _unit setVariable ["FCLA_CBRN_autoDamage", true];
-  hint parseText "<t color='#FF0000'>¡La contaminación de tu cuerpo ha llegado a unos niveles muy elevados!</t><br/>Encuentra una ducha descontaminante para librarte del exceso de contaminación.";
+  ["FCLA_Hint_Silent", [parseText "<t color='#FF0000'>¡La contaminación de tu cuerpo ha llegado a unos niveles muy elevados!</t><br/>Encuentra una ducha descontaminante para librarte del exceso de contaminación."], _unit] call CBA_fnc_targetEvent;
 
   [{
     params ["_args", "_idPFH"];

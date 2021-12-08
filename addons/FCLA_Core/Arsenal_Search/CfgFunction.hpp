@@ -4,6 +4,8 @@
 |********************************************************************************/
 
 class Arsenal {
-  file = "\FCLA_Core\Arsenal_Search";
-  class initArsenalSearch {postInit = 1;};
+  class initArsenalSearch {
+    file = "\FCLA_Core\Arsenal_Search\fn_init.sqf";
+    postInit = 1;
+  };
 };

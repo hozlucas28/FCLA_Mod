@@ -47,7 +47,7 @@
      }, {
        params ["_curator", "_identifiableName", "_device"];
        if ((!alive _curator) || (!alive _device)) exitWith {};
-       hint ("EL DISPOSITIVO " + _identifiableName + " HA SIDO HACKEADO.");
+       ["FCLA_Hint_Silent", ["EL DISPOSITIVO " + _identifiableName + " HA SIDO HACKEADO."], _curator] call CBA_fnc_targetEvent;
      }, [player, _identifiableName, _this select 1]] call CBA_fnc_waitUntilAndExecute;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Zeus\data\Code.paa"] call ZEN_Custom_Modules_fnc_Register;

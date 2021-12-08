@@ -73,6 +73,15 @@ class FCLA_SFX_Arab_Marketplace {
 };
 
 
+class FCLA_SFX_Riot {
+	name = "FCLA - Manifestación";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\People\Riot.ogg", 15, 1, 300, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+};
+
+
 class FCLA_SFX_Africa_Crowd_v1 {
 	name = "FCLA - Multitud (África v1)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
@@ -184,6 +193,24 @@ class FCLA_SFX_Africa_Crowd_Vehicles_v4 {
 
 /* -------------------------------- ALARMAS -------------------------------- */
 
+class FCLA_SFX_Submarine_Alarm {
+	name = "FCLA - Submarino (alarma)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Alarms\Submarine_Alarm.ogg", 5, 1, 150, 1, 0, 0, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+};
+
+
+class FCLA_SFX_Shooting_Range_Alarm {
+	name = "FCLA - Campo de tiro (alarma)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Alarms\Shooting_Range_Alarm.ogg", 5, 1, 150, 1, 0, 0, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+};
+
+
 class FCLA_SFX_Alarm {
 	name = "FCLA - Alarma";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
@@ -211,6 +238,33 @@ class FCLA_SFX_Air_Alarm_Far	{
 };
 
 
+class FCLA_SFX_Artillery_Incoming_Alarm {
+	name = "FCLA - Artillería inminente (alarma)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Alarms\Artillery_Incoming_Alarm.ogg", 10, 1, 400, 1, 0, 0, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+};
+
+
+class FCLA_SFX_Biologic_Alarm {
+	name = "FCLA - Alarma biológica";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Alarms\Biologic_Alarm.ogg", 10, 1, 400, 1, 0, 0, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+};
+
+
+class FCLA_SFX_Nuclear_Alarm {
+	name = "FCLA - Alarma nuclear";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Alarms\Nuclear_Alarm.ogg", 10, 1, 400, 1, 0, 0, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+};
+
+
 
 /* --------------------------- RADIOS/MEGÁFONOS ---------------------------- */
 
@@ -223,10 +277,55 @@ class FCLA_SFX_Arab_Music_Radio {
 };
 
 
+class FCLA_SFX_Spanish_News_Radio {
+	name = "FCLA - Radio (noticias en español)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Spanish_News_Radio.ogg", 15, 1, 50, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+};
+
+
+class FCLA_SFX_English_Military_Radio_v1 {
+	name = "FCLA - Radio militar (inglesa v1)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Radios\English_Military_Radio_v1.ogg", 15, 1, 30, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+};
+
+
+class FCLA_SFX_English_Military_Radio_v2 {
+	name = "FCLA - Radio militar (inglesa v2)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Radios\English_Military_Radio_v2.ogg", 15, 1, 30, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+};
+
+
 class FCLA_SFX_Russian_Military_Radio {
 	name = "FCLA - Radio militar (rusa)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Russian_Military_Radio.ogg", 15, 1, 30, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+};
+
+
+class FCLA_SFX_German_Military_Radio {
+	name = "FCLA - Radio militar (alemana)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Radios\German_Military_Radio.ogg", 15, 1, 30, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+};
+
+
+class FCLA_SFX_Japanese_Military_Radio {
+	name = "FCLA - Radio militar (japonesa)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Japanese_Military_Radio.ogg", 15, 1, 30, 1, 1, 1, 0};
 	sounds[] = {"sound"};
 	titles[] = {};
 };
@@ -262,7 +361,16 @@ class FCLA_SFX_Insurgent_Speech {
 class FCLA_SFX_Call_To_Prayer_Speech {
 	name = "FCLA - Llamado a la oración (megáfono)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
-	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Call_To_Prayer_Speech.ogg", 15, 1, 2000, 1, 1, 1, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Call_To_Prayer_Speech.ogg", 10, 1, 2000, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+};
+
+
+class FCLA_SFX_Speaker_Curfew {
+	name = "FCLA - Toque de queda (altavoz)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Speaker_Curfew.ogg", 25, 1, 300, 1, 1, 1, 0};
 	sounds[] = {"sound"};
 	titles[] = {};
 };

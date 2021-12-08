@@ -67,7 +67,7 @@ _loadout = [_loadout] call ACE_Common_fnc_codeToString;
 _isDoctor = [{if (_arguments select 0) then {[_caller, "Doctor"] call FCLA_Common_fnc_setUnitTrait;};}] call ACE_Common_fnc_codeToString;
 _isAdvancedEnginner = [{if (_arguments select 1) then {[_caller, "Advanced Enginner"] call FCLA_Common_fnc_setUnitTrait;};}] call ACE_Common_fnc_codeToString;
 _isEOD = [{if (_arguments select 2) then {[_caller, "EOD"] call FCLA_Common_fnc_setUnitTrait;};}] call ACE_Common_fnc_codeToString;
-_setRadioFrequencies = [{if (_arguments select 3) then {call FCLA_Common_fnc_setRadioFrequencies;};}] call ACE_Common_fnc_codeToString;
+_setRadioFrequencies = [{if (_arguments select 3) then {["FCLA_Radio_Frequencies", []] call CBA_fnc_localEvent;};}] call ACE_Common_fnc_codeToString;
 
 
 //Crear acción.

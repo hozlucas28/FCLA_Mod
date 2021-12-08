@@ -54,5 +54,5 @@ _state = switch (_state) do {
 //Encender/Apagar luces.
 _centerPos = [_center] call CBA_fnc_getPos;
 _lightsToSwitch = nearestObjects [_centerPos, ["BUILDING"], _rad];
-{[_x, _state] call BIS_fnc_switchLamp;} forEach _lightsToSwitch;
+["FCLA_Switch_Lamps", [_lightsToSwitch, _state]] call CBA_fnc_globalEvent;
 true

@@ -80,6 +80,16 @@ class FCLA_SFX_Arab_Marketplace: Sound {
 };
 
 
+class FCLA_SFX_Riot: Sound {
+	_generalMacro = "FCLA_SFX_Riot";
+	author = "hozlucas28";
+	displayName = "FCLA - Manifestación";
+	sound = "FCLA_SFX_Riot";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
 class FCLA_SFX_Africa_Crowd_v1: Sound {
 	_generalMacro = "FCLA_SFX_Africa_Crowd_v1";
 	author = "hozlucas28";
@@ -203,6 +213,26 @@ class FCLA_SFX_Africa_Crowd_Vehicles_v4: Sound {
 
 /* -------------------------------- ALARMAS -------------------------------- */
 
+class FCLA_SFX_Submarine_Alarm: Sound {
+	_generalMacro = "FCLA_SFX_Submarine_Alarm";
+	author = "hozlucas28";
+	displayName = "FCLA - Submarino (alarma)";
+	sound = "FCLA_SFX_Submarine_Alarm";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Shooting_Range_Alarm: Sound {
+	_generalMacro = "FCLA_SFX_Shooting_Range_Alarm";
+	author = "hozlucas28";
+	displayName = "FCLA - Campo de tiro (alarma)";
+	sound = "FCLA_SFX_Shooting_Range_Alarm";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
 class FCLA_SFX_Alarm: Sound {
 	_generalMacro = "FCLA_SFX_Alarm";
 	author = "hozlucas28";
@@ -233,6 +263,36 @@ class FCLA_SFX_Air_Alarm_Far: Sound {
 };
 
 
+class FCLA_SFX_Artillery_Incoming_Alarm: Sound {
+	_generalMacro = "FCLA_SFX_Artillery_Incoming_Alarm";
+	author = "hozlucas28";
+	displayName = "FCLA - Artillería inminente (alarma)";
+	sound = "FCLA_SFX_Artillery_Incoming_Alarm";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Biologic_Alarm: Sound {
+	_generalMacro = "FCLA_SFX_Biologic_Alarm";
+	author = "hozlucas28";
+	displayName = "FCLA - Alarma biológica";
+	sound = "FCLA_SFX_Biologic_Alarm";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Nuclear_Alarm: Sound {
+	_generalMacro = "FCLA_SFX_Nuclear_Alarm";
+	author = "hozlucas28";
+	displayName = "FCLA - Alarma nuclear";
+	sound = "FCLA_SFX_Nuclear_Alarm";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
 
 /* --------------------------- RADIOS/MEGÁFONOS ---------------------------- */
 
@@ -246,11 +306,61 @@ class FCLA_SFX_Arab_Music_Radio: Sound {
 };
 
 
+class FCLA_SFX_Spanish_News_Radio: Sound {
+	_generalMacro = "FCLA_SFX_Spanish_News_Radio";
+	author = "hozlucas28";
+	displayName = "FCLA - Radio (noticias en español)";
+	sound = "FCLA_SFX_Spanish_News_Radio";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_English_Military_Radio_v1: Sound {
+	_generalMacro = "FCLA_SFX_English_Military_Radio_v1";
+	author = "hozlucas28";
+	displayName = "FCLA - Radio militar (inglesa v1)";
+	sound = "FCLA_SFX_English_Military_Radio_v1";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_English_Military_Radio_v2: Sound {
+	_generalMacro = "FCLA_SFX_English_Military_Radio_v2";
+	author = "hozlucas28";
+	displayName = "FCLA - Radio militar (inglesa v2)";
+	sound = "FCLA_SFX_English_Military_Radio_v2";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
 class FCLA_SFX_Russian_Military_Radio: Sound {
 	_generalMacro = "FCLA_SFX_Russian_Military_Radio";
 	author = "hozlucas28";
 	displayName = "FCLA - Radio militar (rusa)";
 	sound = "FCLA_SFX_Russian_Military_Radio";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_German_Military_Radio: Sound {
+	_generalMacro = "FCLA_SFX_German_Military_Radio";
+	author = "hozlucas28";
+	displayName = "FCLA - Radio militar (alemana)";
+	sound = "FCLA_SFX_German_Military_Radio";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Japanese_Military_Radio: Sound {
+	_generalMacro = "FCLA_SFX_Japanese_Military_Radio";
+	author = "hozlucas28";
+	displayName = "FCLA - Radio militar (japonesa)";
+	sound = "FCLA_SFX_Japanese_Military_Radio";
 	scope = 2;
   scopeCurator = 2;
 };
@@ -291,6 +401,16 @@ class FCLA_SFX_Call_To_Prayer_Speech: Sound {
 	author = "hozlucas28";
 	displayName = "FCLA - Llamado a la oración (megáfono)";
 	sound = "FCLA_SFX_Call_To_Prayer_Speech";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Speaker_Curfew: Sound {
+	_generalMacro = "FCLA_SFX_Speaker_Curfew";
+	author = "hozlucas28";
+	displayName = "FCLA - Toque de queda (altavoz)";
+	sound = "FCLA_SFX_Speaker_Curfew";
 	scope = 2;
   scopeCurator = 2;
 };

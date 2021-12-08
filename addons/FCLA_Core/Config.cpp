@@ -44,11 +44,11 @@ class CfgSounds {
 
 class Cfg3DEN {
 	class EventHandlers {
-		class Arsenal {
-		  OnTerrainNew = "[] call FCLA_Core_fnc_initArsenalSearch";
-		  OnMissionNew = "[] call FCLA_Core_fnc_initArsenalSearch";
-			OnMissionLoad = "[] call FCLA_Core_fnc_initArsenalSearch";
-			OnMissionPreviewEnd = "[] call FCLA_Core_fnc_initArsenalSearch";
+		class FCLA_Arsenal_Search {
+		  OnTerrainNew = "[] call FCLA_Core_fnc_initArsenalSearch;";
+		  OnMissionNew = "[] call FCLA_Core_fnc_initArsenalSearch;";
+			OnMissionLoad = "[] call FCLA_Core_fnc_initArsenalSearch;";
+			OnMissionPreviewEnd = "[] call FCLA_Core_fnc_initArsenalSearch;";
 		};
 	};
 };
