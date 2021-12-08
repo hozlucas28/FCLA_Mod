@@ -32,4 +32,4 @@
     ["MATRÍCULA MODIFICADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
     (_this select 1) setVariable ["FCLA_Plate_Number", _newPlateNumber, true];
   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Modules\Zeus\data\Vehicle.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Curator\data\Vehicle.paa"] call ZEN_Custom_Modules_fnc_Register;

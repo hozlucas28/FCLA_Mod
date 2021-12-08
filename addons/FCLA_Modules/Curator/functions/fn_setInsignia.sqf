@@ -105,4 +105,4 @@
       [_this select 1, _newInsignia] spawn FCLA_Interactions_fnc_statementExternalInsignias;
     };
   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Modules\Zeus\data\Insignia_Management.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Curator\data\Insignia_Management.paa"] call ZEN_Custom_Modules_fnc_Register;

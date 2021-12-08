@@ -91,4 +91,4 @@
     if (_advancedEnginnerState == 0) then {_attachedObject setVariable ["ACE_isEngineer", 2, true];} else {_attachedObject setVariable ["ACE_isEngineer", nil, true];};
     if (_doctorState == 0) then {_attachedObject setVariable ["ACE_Medical_medicClass", 2, true];} else {_attachedObject setVariable ["ACE_Medical_medicClass", nil, true];};
   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Modules\Zeus\data\ID_Card.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Curator\data\ID_Card.paa"] call ZEN_Custom_Modules_fnc_Register;

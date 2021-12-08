@@ -114,4 +114,4 @@
      _attachedObject setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
      ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_attachedObject]], _attachedObject] call CBA_fnc_targetEvent;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Modules\Zeus\data\Medical_Cross.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Curator\data\Medical_Cross.paa"] call ZEN_Custom_Modules_fnc_Register;

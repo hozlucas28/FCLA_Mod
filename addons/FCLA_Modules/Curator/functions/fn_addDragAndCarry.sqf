@@ -94,4 +94,4 @@
      };
      [_text] call ZEN_Common_fnc_showMessage;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Modules\Zeus\data\Edit_Object.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Curator\data\Edit_Object.paa"] call ZEN_Custom_Modules_fnc_Register;

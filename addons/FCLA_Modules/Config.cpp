@@ -5,7 +5,7 @@
 
 class CfgPatches {
 	class FCLA_Modules {
-		units[] = {};
+		#include "\FCLA_Modules\units.hpp"
 		requiredAddons[] = {"zen_context_actions"};
 		author = "hozlucas28";
 		version = "2.0";
@@ -20,7 +20,7 @@ class CfgPatches {
 |                                  INCLUSIONES                                   |
 |********************************************************************************/
 
-#include "\FCLA_Modules\Zeus\CfgContext.hpp"
+#include "\FCLA_Modules\Curator\CfgContext.hpp"
 
 
 
@@ -29,9 +29,9 @@ class CfgPatches {
 |********************************************************************************/
 
 class CfgFactionClasses {
-	class FCLA_Faction_Modules {
+	class FCLA_Modules {
 		side = 7;
-		priority = 2;
+		priority = 1;
 		displayName = "FCLA";
 	};
 };
@@ -45,7 +45,7 @@ class CfgFactionClasses {
 class CfgFunctions {
 	class FCLA_Modules {
 		#include "\FCLA_Modules\3DEN\CfgFunctions.hpp"
-		#include "\FCLA_Modules\Zeus\CfgFunctions.hpp"
+		#include "\FCLA_Modules\Curator\CfgFunctions.hpp"
 	};
 };
 
@@ -81,4 +81,5 @@ class CfgVehicles {
 			class Anything;
 		};
 	};
+	#include "\FCLA_Modules\3DEN\CfgVehicles.hpp"
 };

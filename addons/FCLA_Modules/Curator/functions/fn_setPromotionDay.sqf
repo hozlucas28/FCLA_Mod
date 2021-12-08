@@ -33,4 +33,4 @@
      _text = if (_isPromotionDay) then {"DÍA DE ASCENSOS ACTIVADO";} else {"DÍA DE ASCENSOS DESACTIVADO";};
      [_text] call ZEN_Common_fnc_showMessage;
    }, {}, nil] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Modules\Zeus\data\Elegant_Person.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Curator\data\Elegant_Person.paa"] call ZEN_Custom_Modules_fnc_Register;

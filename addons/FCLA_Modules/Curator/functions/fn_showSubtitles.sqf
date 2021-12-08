@@ -119,4 +119,4 @@
      _emitter = createAgent ["VirtualAISquad", _this select 1, [], 0, "CAN_COLLIDE"];
      ["FCLA_Show_Subtitles", [_emitter, [[_emitterName, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _selectedSide, _distanceToShow]]] call CBA_fnc_globalEvent;
    }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Modules\Zeus\data\Chat.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Curator\data\Chat.paa"] call ZEN_Custom_Modules_fnc_Register;

@@ -40,4 +40,4 @@
      _text = if (_state == "On") then {"LAS LUCES FUERON ENCENDIDAS";} else {"LAS LUCES FUERON APAGADAS";};
      [_text] call ZEN_Common_fnc_showMessage;
    }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Modules\Zeus\data\Lamps.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Curator\data\Lamps.paa"] call ZEN_Custom_Modules_fnc_Register;

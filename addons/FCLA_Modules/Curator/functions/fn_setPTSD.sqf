@@ -72,4 +72,4 @@
      ["LA UNIDAD SUFRIRA TRASTORNO POR ESTRÉS POSTRAUMÁTICO (TEPT)"] call ZEN_Common_fnc_showMessage;
      ["FCLA_Set_PTSD", [_this select 1, _cryState, _voicesState, _unwantedThoughtsState, _involuntaryMovementsState], _this select 1] call CBA_fnc_targetEvent;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Modules\Zeus\data\Brain.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Curator\data\Brain.paa"] call ZEN_Custom_Modules_fnc_Register;

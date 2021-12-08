@@ -80,4 +80,4 @@
      }, [_smokePos, _color], 0.2] call CBA_fnc_waitAndExecute;
      ["SEÑAL DE HUMO GENERADA"] call ZEN_Common_fnc_showMessage;
    }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Modules\Zeus\data\Smoke.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Curator\data\Smoke.paa"] call ZEN_Custom_Modules_fnc_Register;

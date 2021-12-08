@@ -29,4 +29,4 @@
      ["FCLA_Change_Radio_Range", [allUnits, _rangeMultiplier]] call CBA_fnc_globalEventJIP;
      ["ALCANCE DE LAS RADIOS MULTIPLICADO: " + str _rangeMultiplier + "X"] call zen_common_fnc_showMessage;
    }, {}, nil] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Modules\Zeus\data\Radio.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Curator\data\Radio.paa"] call ZEN_Custom_Modules_fnc_Register;
