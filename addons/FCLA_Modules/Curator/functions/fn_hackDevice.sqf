@@ -15,7 +15,7 @@
 
   ["HACKEO DE DISPOSITIVO",
 	 [
-    ["EDIT", ["Nombre", "Nombre personalizado para poder reconocer al dispositivo, cuando se nos informe que ha sido hackeado."],
+    ["EDIT", ["Identificador", "Nombre personalizado para poder reconocer al dispositivo, cuando se le informe a los Zeus que ha sido hackeado."],
      [
       "",
       nil,
@@ -41,13 +41,15 @@
      ["EL OBJETO AHORA ES HACKEABLE"] call ZEN_Common_fnc_showMessage;
      [_this select 1, "Hackear dispositivo", _needHackingDeviceState] call FCLA_Common_fnc_hackDevice;
 
-     [{
-       params ["_curator", "_identifiableName", "_device"];
-       (!alive _device) || (_device getVariable ["FCLA_Hacked", false]);
-     }, {
-       params ["_curator", "_identifiableName", "_device"];
-       if ((!alive _curator) || (!alive _device)) exitWith {};
-       ["FCLA_Hint_Silent", ["EL DISPOSITIVO " + _identifiableName + " HA SIDO HACKEADO."], _curator] call CBA_fnc_targetEvent;
-     }, [player, _identifiableName, _this select 1]] call CBA_fnc_waitUntilAndExecute;
+     [{(!alive (_this select 1)) || ((_this select 1) getVariable ["FCLA_Hacked", false])}, {
+       if (!alive (_this select 1)) exitWith {};
+       _unitsWithCurator = [];
+       {
+         _curatorUnit = getAssignedCuratorUnit _x;
+         if (isNull _curatorUnit) exitWith {};
+         _unitsWithCurator pushBack _curatorUnit;
+       } forEach allCurators;
+       ["FCLA_GUI_Message", ["DISPOSITIVO HACKEADO", "El dispositivo '" + (_this select 0) + "' ha sido hackeado con éxito."], _unitsWithCurator] call CBA_fnc_targetEvent;
+     }, [_identifiableName, _this select 1]] call CBA_fnc_waitUntilAndExecute;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Code.paa"] call ZEN_Custom_Modules_fnc_Register;

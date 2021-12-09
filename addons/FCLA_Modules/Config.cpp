@@ -20,6 +20,7 @@ class CfgPatches {
 |                                  INCLUSIONES                                   |
 |********************************************************************************/
 
+#include "\FCLA_Modules\defines.hpp"
 #include "\FCLA_Modules\Curator\CfgContext.hpp"
 
 

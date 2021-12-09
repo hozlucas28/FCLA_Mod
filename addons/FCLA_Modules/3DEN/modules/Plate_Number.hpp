@@ -15,7 +15,7 @@ class FCLA_Module_Plate_Number: Module_F {
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setPlateNumber3DEN";
   is3DEN = NOT_RUN_IN_3DEN;
-	isGlobal = SERVER;
+	isGlobal = GLOBAL;
   isDisposable = UNREPEATABLE;
 	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
   scope = 2;
@@ -23,9 +23,11 @@ class FCLA_Module_Plate_Number: Module_F {
 
 	class Attributes: AttributesBase {
 		class FCLA_New_Plate_Number: Edit {
-			typeName = "STRING";
+      tooltip = "";
+      typeName = "STRING";
+      property = "FCLA_New_Plate_Number";
       displayName = "Matrícula";
-			defaultValue = "";
+      defaultValue = "''";
 		};
 		class ModuleDescription: ModuleDescription {};
 	};
