@@ -14,7 +14,7 @@ class FCLA_Module_Smoke_Signal: Module_F {
   icon = "\FCLA_Modules\3DEN\data\Smoke.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_spawnSmokeSignal3DEN";
-  is3DEN = RUN_IN_3DEN;
+  is3DEN = NOT_RUN_IN_3DEN;
 	isGlobal = GLOBAL;
   isDisposable = UNREPEATABLE;
 	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
