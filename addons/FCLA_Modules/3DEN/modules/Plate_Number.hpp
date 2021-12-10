@@ -33,6 +33,6 @@ class FCLA_Module_Plate_Number: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Modifica la matrícula de los vehículos sincronizados al módulo."};
+		description[] =	{"Modifica las matrículas de los vehículos sincronizados al módulo."};
 	};
 };

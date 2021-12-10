@@ -9,7 +9,16 @@
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.
-params ["_errorID", "_header", "_text"];
+params [
+        ["_errorID", "", [""], 0],
+        ["_header", "", [""], 0],
+        ["_text", "", [""], 0]
+       ];
+if ((_errorID == "") || (_header == "") || (_text == "")) exitWith {};
+
+
+
+//Verificar argumento.
 _reportedErrors = missionNamespace getVariable ["FCLA_Reported_Errors", []];
 if (_errorID in _reportedErrors) exitWith {};
 

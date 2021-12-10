@@ -11,13 +11,13 @@
 
 ["FCLA", "Modificar radio (TFAR)", {
   params ["_position", "_attachedObject"];
-  _getVehicleSide = _attachedObject call TFAR_fnc_getVehicleSide;
+  _vehicleSide = _attachedObject call TFAR_fnc_getVehicleSide;
   if ((isNull _attachedObject) || !(_attachedObject in vehicles)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UN VEHÍCULO"] call ZEN_Common_fnc_showMessage;};
 
 
   _vehicleName = getText (configFile >> "CfgVehicles" >> (typeOf _attachedObject) >> "displayName");
   _originalRadioState = if (_attachedObject call TFAR_fnc_hasVehicleRadio) then {0;} else {1;};
-  _vehicleSide = switch (_getVehicleSide) do {
+  _originalRadioSide = switch (_vehicleSide) do {
     case WEST: {0;};
     case EAST: {1;};
     case GUER: {2;};
@@ -49,7 +49,7 @@
        "OPFOR",
        "Independiente"
       ],
-      _vehicleSide
+      _originalRadioSide
      ],
      true
     ]
