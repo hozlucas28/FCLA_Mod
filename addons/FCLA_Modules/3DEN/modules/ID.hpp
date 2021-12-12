@@ -16,6 +16,7 @@ class FCLA_Module_Set_ID: Module_F {
 	function = "FCLA_Modules_fnc_setID3DEN";
   is3DEN = NOT_RUN_IN_3DEN;
 	isGlobal = GLOBAL;
+  canSetArea = HAS_NOT_SETTABLE_AREA;
   isDisposable = UNREPEATABLE;
 	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
   scope = 2;

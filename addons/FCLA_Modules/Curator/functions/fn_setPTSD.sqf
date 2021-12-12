@@ -29,7 +29,7 @@
       ["Si", "No"],
       nil
      ],
-     true
+     false
     ],
     ["TOOLBOX", "¿Escucha voces?",
      [
@@ -39,7 +39,7 @@
       ["Si", "No"],
       nil
      ],
-     true
+     false
     ],
     ["TOOLBOX", "¿Pensamientos no deseados?",
      [
@@ -49,7 +49,7 @@
       ["Si", "No"],
       nil
      ],
-     true
+     false
     ],
     ["TOOLBOX", "¿Movimientos involuntarios?",
      [
@@ -59,7 +59,7 @@
       ["Si", "No"],
       nil
      ],
-     true
+     false
     ]
 	 ],
    {

@@ -9,8 +9,11 @@
 ---------------------------------------------------------------------------- */
 
 ["FCLA_Change_Radio_Range", {
-  {_x setVariable ["tf_sendingDistanceMultiplicator", _this select 1];} forEach (_this select 0);
-  {_x setVariable ["tf_receivingDistanceMultiplicator", _this select 1];} forEach (_this select 0);
+  {
+    if (_x isKindOf "AllVehicles") exitWith {_x setVariable ["tf_range", _this select 1, true]};
+    _x setVariable ["tf_sendingDistanceMultiplicator", _this select 1, true];
+    _x setVariable ["tf_receivingDistanceMultiplicator", _this select 1, true];
+  } forEach (_this select 0);
 }] call CBA_fnc_addEventHandler;
 
 

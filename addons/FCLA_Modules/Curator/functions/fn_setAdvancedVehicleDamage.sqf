@@ -33,7 +33,7 @@
       ["Si", "No"],
       nil
      ],
-     true
+     false
     ],
     ["TOOLBOX", ["¿Destruir items?", "Si se activa se destruiran los items de la tripulación, cuando el vehiculo reciba un daño fatal."],
      [
@@ -43,7 +43,7 @@
       ["Si", "No"],
       nil
      ],
-     true
+     false
     ]
 	 ],
    {
