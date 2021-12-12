@@ -25,7 +25,7 @@
 
   ["DAÑO AVANZADO DE VEHÍCULO (DAV)",
 	 [
-    ["TOOLBOX", ["¿Destruir armas", "Si se activa se destruiran las armas de la tripulación, cuando el vehiculo reciba un daño fatal."],
+    ["TOOLBOX", ["¿Destruir armas?", "Si se activa se destruiran las armas de la tripulación, cuando el vehiculo reciba un daño fatal."],
      [
       0,
       1,
@@ -47,11 +47,11 @@
     ]
 	 ],
    {
-     (_this select 0) params ["_dammageWeaponsState", "_dammageItemsState"];
-     _dammageItemsState = if (_dammageItemsState == 0) then {true;} else {false;};
-     _dammageWeaponsState = if (_dammageWeaponsState == 0) then {true;} else {false;};
+     (_this select 0) params ["_damageWeaponsState", "_damageItemsState"];
+     _damageItemsState = if (_damageItemsState == 0) then {true;} else {false;};
+     _damageWeaponsState = if (_damageWeaponsState == 0) then {true;} else {false;};
 
      ["SE HA ACTIVADO EL DAÑO AVANZADO DE ESTE VEHÍCULO"] call ZEN_Common_fnc_showMessage;
-     [_this select 1, _dammageWeaponsState, _dammageItemsState] call FCLA_Common_fnc_setAdvancedVehicleDamage;
+     [_this select 1, _damageWeaponsState, _damageItemsState] call FCLA_Common_fnc_setAdvancedVehicleDamage;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Vehicle.paa"] call ZEN_Custom_Modules_fnc_Register;

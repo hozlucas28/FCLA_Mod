@@ -86,5 +86,5 @@ _EventHandlerID = [_vehicle, "Dammaged", {
 
 
 //Guardar ID en una variable de tipo objeto.
-_vehicle setVariable ["FCLA_Disable_Vehicle_Destruction_ID", _EventHandlerID, true];
+_vehicle setVariable ["FCLA_Advanced_Vehicle_Damage_ID", _EventHandlerID, true];
 true

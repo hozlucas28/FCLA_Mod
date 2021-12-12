@@ -35,23 +35,24 @@ _subtitle = toLower _subtitle;
 if ((_title == "") || (_subtitle == "")) exitWith {false};
 
 
-//Guardar argumentos en variables de tipo interfaz.
-localNamespace setVariable ["FCLA_Introduction_Title", _title];
-localNamespace setVariable ["FCLA_Introduction_Subtitle", _subtitle];
+
+//Guardar argumentos en variables asociados a la misión.
+missionNamespace setVariable ["FCLA_Introduction_Title", _title];
+missionNamespace setVariable ["FCLA_Introduction_Subtitle", _subtitle];
 
 
 //Reproducir introducción.
 ["CBA_loadingScreenDone", {
-  _title = localNamespace getVariable ["FCLA_Introduction_Title", ""];
-  _subtitle = localNamespace getVariable ["FCLA_Introduction_Subtitle", ""];
+  _title = missionNamespace getVariable ["FCLA_Introduction_Title", ""];
+  _subtitle = missionNamespace getVariable ["FCLA_Introduction_Subtitle", ""];
   if ((_title == "") || (_subtitle == "")) exitWith {};
 
-  [{!(localNamespace getVariable ["FCLA_Introduction_Video_Status", false])}, {
+  [{!(player getVariable ["FCLA_Introduction_Video_Status", false])}, {
     _this Spawn {
       player action ["WeaponOnBack", player];
       cutText ["", "BLACK FADED", 3600, true, false];
 			if (isGameFocused) then {playsound "FCLA_Introduction";};
-			localNamespace setVariable ["FCLA_Introduction_Status", true];
+			player setVariable ["FCLA_Introduction_Status", true];
       [{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
 
       Sleep 3;
@@ -69,9 +70,7 @@ localNamespace setVariable ["FCLA_Introduction_Subtitle", _subtitle];
       sleep 5;
       cutText ["", "BLACK IN", 5, true, false];
       [false] call ACE_Common_fnc_disableUserInput;
-			localNamespace setVariable ["FCLA_Introduction_Status", nil];
-			localNamespace setVariable ["FCLA_Introduction_Title", nil];
-			localNamespace setVariable ["FCLA_Introduction_Subtitle", nil];
+			player setVariable ["FCLA_Introduction_Status", nil];
     };
   }, [_title, _subtitle]] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;

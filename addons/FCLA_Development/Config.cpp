@@ -23,7 +23,6 @@ class CfgPatches {
 class CfgFunctions {
 	class FCLA_Development {
 		#include "\FCLA_Development\Donations\CfgFunction.hpp"
-		#include "\FCLA_Development\Save_Position\CfgFunction.hpp"
 	};
 };
 
