@@ -12,7 +12,7 @@
 params [
         ["_module", objNull, [objNull], 0],
         ["_synchronizedObjects", [], [[]], []],
-        ["_isActivated", false, [true], 0]
+        ["_isActivated", true, [true], 0]
        ];
 if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 

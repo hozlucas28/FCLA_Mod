@@ -76,17 +76,6 @@
 ] call CBA_fnc_addSetting;
 
 
-[
-	"FCLA_Save_Position_onDisconnect", "CHECKBOX",
-	["¿Guardar ultima ubicación?", "Al activar se guardara la ultima ubicación del jugador antes de su desconexión, hasta que el server se reinicie."],
-	["FCLA Desarrollo", "• General"],
-	true,
-	GLOBAL,
-	{},
-	true
-] call CBA_fnc_addSetting;
-
-
 
 /* --------------------------------- UIDS ---------------------------------- */
 

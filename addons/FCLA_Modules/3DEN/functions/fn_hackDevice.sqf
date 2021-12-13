@@ -12,7 +12,7 @@
 params [
         ["_module", objNull, [objNull], 0],
         ["_synchronizedObjects", [], [[]], []],
-        ["_isActivated", false, [true], 0]
+        ["_isActivated", true, [true], 0]
        ];
 if ((is3DEN) || (isNull _module) || (_synchronizedObjects isEqualTo []) || (!_isActivated)) exitWith {};
 
@@ -21,14 +21,15 @@ if ((is3DEN) || (isNull _module) || (_synchronizedObjects isEqualTo []) || (!_is
 //Verificar argumentos.
 _deviceID = _module getVariable ["FCLA_Device_ID", ""];
 _needHackingDevice = _module getVariable ["FCLA_Need_Hacking_Device", false];
-_areNotCompatibleSynchronizedObjects = ({!(_x isKindOf "CAManBase")} count _synchronizedObjects) <= 0;
-if ((_deviceID == "") || (_areNotCompatibleSynchronizedObjects)) exitWith {};
+_compatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector") && !(_x isKindOf "CAManBase")} count _synchronizedObjects;
+_areNotCompatibleSynchronizedObjects = _compatibleSynchronizedObjects <= 0;
+if ((_deviceID == "") || (_compatibleSynchronizedObjects > 1) || (_areNotCompatibleSynchronizedObjects)) exitWith {};
 
 
 
 //Agregar acción para hackear.
 {
-  if (_x isKindOf "CAManBase") exitWith {};
+  if ((_x isKindOf "EmptyDetector") || (_x isKindOf "CAManBase")) exitWith {};
   [_x, "Hackear dispositivo", _needHackingDevice] call FCLA_Common_fnc_hackDevice;
 
   [{(!alive (_this select 1)) || ((_this select 1) getVariable ["FCLA_Hacked", false])}, {

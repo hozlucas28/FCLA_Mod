@@ -13,7 +13,7 @@
 params [
         ["_module", objNull, [objNull], 0],
         ["_synchronizedObjects", [], [[]], []],
-        ["_isActivated", false, [true], 0]
+        ["_isActivated", true, [true], 0]
        ];
 _moduleArea = _module getvariable ["objectArea", [0, 0, 0, false, -1]];
 _sizeA = _moduleArea select 0;

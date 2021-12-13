@@ -51,7 +51,7 @@ class FCLA_Module_Set_ID: Module_F {
       tooltip = "";
       typeName = "BOOL";
       property = "FCLA_Doctor_State";
-      displayName = "Médico";
+      displayName = "¿Es médico?";
       defaultValue = "false";
 		};
 
@@ -59,7 +59,7 @@ class FCLA_Module_Set_ID: Module_F {
       tooltip = "";
       typeName = "BOOL";
       property = "FCLA_Advanced_Enginner_State";
-      displayName = "Ingeniero";
+      displayName = "¿Es ingeniero?";
       defaultValue = "false";
 		};
 
@@ -67,7 +67,7 @@ class FCLA_Module_Set_ID: Module_F {
       tooltip = "";
       typeName = "BOOL";
       property = "FCLA_EOD_State";
-      displayName = "EOD";
+      displayName = "¿Es EOD?";
       defaultValue = "false";
 		};
 		class ModuleDescription: ModuleDescription {};

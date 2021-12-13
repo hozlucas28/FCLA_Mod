@@ -69,8 +69,8 @@ class Curator {
     postInit = 1;
   };
 
-  class showSubtitlesCurator {
-    file = "\FCLA_Modules\Curator\functions\fn_showSubtitles.sqf";
+  class showSubtitleCurator {
+    file = "\FCLA_Modules\Curator\functions\fn_showSubtitle.sqf";
     postInit = 1;
   };
 

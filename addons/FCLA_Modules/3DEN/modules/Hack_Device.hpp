@@ -42,6 +42,6 @@ class FCLA_Module_Hack_Device: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Permite hackear los dispositivos sincronizados a travez de una acción.<br/><br/>• Una vez que el dispositivo es hackeado se le asociara la variable de tipo objeto 'FCLA_Hacked' con el valor 'true'."};
+		description[] =	{"Permite hackear el dispositivo sincronizado a travez de una acción.<br/><br/>• El módulo debe estar sincronizado únicamente a un objeto.<br/>• Una vez que el dispositivo es hackeado se le asociara la variable de tipo objeto 'FCLA_Hacked' con el valor 'true'."};
 	};
 };

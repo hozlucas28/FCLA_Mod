@@ -24,10 +24,10 @@ class FCLA_Module_Radio: Module_F {
 
 	class Attributes: AttributesBase {
     class FCLA_Has_Radio: CheckBox {
-      tooltip = "";
+      tooltip = "Si se activa se le colocara una radio al vehículo.";
       typeName = "BOOL";
       property = "FCLA_Has_Radio";
-      displayName = "Radio";
+      displayName = "¿Tiene radio?";
       defaultValue = "true";
 		};
 
