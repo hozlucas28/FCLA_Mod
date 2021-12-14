@@ -33,3 +33,7 @@ if (_areNotCompatibleSynchronizedObjects) exitWith {};
   if (!(_x in vehicles)) exitWith {};
   [_x, _damageWeaponsState, _damageItemsState] call FCLA_Common_fnc_setAdvancedVehicleDamage;
 } forEach _synchronizedObjects;
+
+
+//Eliminar módulo.
+deleteVehicle _module;

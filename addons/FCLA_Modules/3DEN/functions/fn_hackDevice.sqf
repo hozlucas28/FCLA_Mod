@@ -43,3 +43,7 @@ if ((_deviceID == "") || (_compatibleSynchronizedObjects > 1) || (_areNotCompati
     ["FCLA_GUI_Message", ["DISPOSITIVO HACKEADO", "El dispositivo '" + (_this select 0) + "' ha sido hackeado con éxito."], _unitsWithCurator] call CBA_fnc_targetEvent;
   }, [_deviceID, _x]] call CBA_fnc_waitUntilAndExecute;
 } forEach _synchronizedObjects;
+
+
+//Eliminar módulo.
+deleteVehicle _module;

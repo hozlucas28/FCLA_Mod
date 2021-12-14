@@ -13,6 +13,7 @@ class FCLA_Module_Advanced_Vehicle_Damage: Module_F {
   author = "hozlucas28";
 	displayName = "Asignar DAV";
   icon = "\FCLA_Modules\3DEN\data\Vehicle.paa";
+  portrait = "\FCLA_Modules\3DEN\data\Vehicle.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setAdvancedVehicleDamage3DEN";
   is3DEN = NOT_RUN_IN_3DEN;

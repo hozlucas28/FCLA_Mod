@@ -33,3 +33,7 @@ if ((_newPlateNumber == "") || (_areNotCompatibleSynchronizedObjects)) exitWith 
   _x setPlateNumber _newPlateNumber;
   _x setVariable ["FCLA_Plate_Number", _newPlateNumber, true];
 } forEach _synchronizedObjects;
+
+
+//Eliminar módulo.
+deleteVehicle _module;

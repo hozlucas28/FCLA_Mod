@@ -46,7 +46,7 @@ params [
 _soundNotExist = !(isClass (configFile >> "CfgSounds" >> _soundClass));
 _isSourceHidden = isObjectHidden _source;
 _isSourcePlayingSound = _source getVariable ["FCLA_Playing_Sound", false];
-if ((isNull _source) || (_maxDistance <= 0) || (_soundTime <= 0) || (_soundNotExist) || (_isSourceHidden) || (_isSourcePlayingSound)) exitWith {false};
+if ((isNull _source) || (_maxDistance <= 0) || ((ceil _soundTime) <= 0) || (_soundNotExist) || (_isSourceHidden) || (_isSourcePlayingSound)) exitWith {false};
 
 
 //Reproducir sonido.

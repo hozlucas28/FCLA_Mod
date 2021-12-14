@@ -12,6 +12,7 @@ class FCLA_Module_Hack_Device: Module_F {
   author = "hozlucas28";
 	displayName = "Dispositivo hackeable";
   icon = "\FCLA_Modules\3DEN\data\Code.paa";
+  portrait = "\FCLA_Modules\3DEN\data\Code.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_hackDevice3DEN";
   is3DEN = NOT_RUN_IN_3DEN;

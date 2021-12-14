@@ -14,8 +14,8 @@ class Curator {
     postInit = 1;
   };
 
-  class createInjuresCurator {
-    file = "\FCLA_Modules\Curator\functions\fn_createInjures.sqf";
+  class createInjuriesCurator {
+    file = "\FCLA_Modules\Curator\functions\fn_createInjuries.sqf";
     postInit = 1;
   };
 

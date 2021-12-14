@@ -98,9 +98,9 @@
     ]
 	 ],
    {
-     (_this select 0) params ["_typeOfInjury", "_levelOfInjury", "_unconsciousState", "_fractureRightArm", "_fractureLeftArm", "_fractureRightLeg", "_fractureLeftLeg"];
+     (_this select 0) params ["_typeOfInjury", "_levelOfInjury", "_forceUnconsciousness", "_fractureRightArm", "_fractureLeftArm", "_fractureRightLeg", "_fractureLeftLeg"];
      _levelOfInjury = [_levelOfInjury, 2] call BIS_fnc_cutDecimals;
-     _unconsciousState = if (_unconsciousState == 0) then {true;} else {nil;};
+     _forceUnconsciousness = if (_forceUnconsciousness == 0) then {true;} else {nil;};
      _fractureLeftArm = if (_fractureLeftArm == 0) then {1;} else {0;};
      _fractureLeftLeg = if (_fractureLeftLeg == 0) then {1;} else {0;};
      _fractureRightArm = if (_fractureRightArm == 0) then {1;} else {0;};
@@ -110,8 +110,8 @@
      ["LESIONES PROVOCADAS CON ÉXITO"] call ZEN_Common_fnc_showMessage;
      ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_attachedObject, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury]], _attachedObject] call CBA_fnc_targetEvent;
 
-     [_attachedObject, _unconsciousState] call ACE_Medical_fnc_setUnconscious;
      _attachedObject setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
+     [_attachedObject, _forceUnconsciousness] call ACE_Medical_fnc_setUnconscious;
      ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_attachedObject]], _attachedObject] call CBA_fnc_targetEvent;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Medical_Cross.paa"] call ZEN_Custom_Modules_fnc_Register;

@@ -12,6 +12,7 @@ class FCLA_Module_Radio: Module_F {
   author = "hozlucas28";
 	displayName = "Modificar radio (TFAR)";
   icon = "\FCLA_Modules\3DEN\data\Radio.paa";
+  portrait = "\FCLA_Modules\3DEN\data\Radio.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setRadio3DEN";
   is3DEN = NOT_RUN_IN_3DEN;
@@ -39,17 +40,17 @@ class FCLA_Module_Radio: Module_F {
       defaultValue = """west""";
 
 			class Values {
-				class Side_West {
+				class West {
 					name = "BLUFOR";
 					value = "west";
 				};
 
-				class Side_East {
+				class East {
 					name = "OPFOR";
 					value = "east";
 				};
 
-				class Side_Independant {
+				class Independant {
 					name = "Independiente";
 					value = "guer";
 				};

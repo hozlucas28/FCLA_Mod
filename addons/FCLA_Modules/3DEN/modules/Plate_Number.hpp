@@ -12,6 +12,7 @@ class FCLA_Module_Plate_Number: Module_F {
   author = "hozlucas28";
 	displayName = "Modificar matrícula";
   icon = "\FCLA_Modules\3DEN\data\Vehicle.paa";
+  portrait = "\FCLA_Modules\3DEN\data\Vehicle.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setPlateNumber3DEN";
   is3DEN = NOT_RUN_IN_3DEN;

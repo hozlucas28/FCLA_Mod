@@ -12,6 +12,7 @@ class FCLA_Module_Switch_Lights: Module_F {
   author = "hozlucas28";
 	displayName = "Alternar luces";
   icon = "\FCLA_Modules\3DEN\data\Lamps.paa";
+  portrait = "\FCLA_Modules\3DEN\data\Lamps.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_switchLights3DEN";
   is3DEN = NOT_RUN_IN_3DEN;

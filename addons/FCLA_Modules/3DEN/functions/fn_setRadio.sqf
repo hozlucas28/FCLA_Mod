@@ -33,3 +33,7 @@ if (_areNotCompatibleSynchronizedObjects) exitWith {};
   _x setVariable ["tf_hasRadio", _hasRadio, true];
   _x setVariable ["tf_side", _radioSideSelected, true];
 } forEach _synchronizedObjects;
+
+
+//Eliminar módulo.
+deleteVehicle _module;

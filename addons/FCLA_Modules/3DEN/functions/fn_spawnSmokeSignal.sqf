@@ -57,3 +57,7 @@ _soundSourceTwo = createAgent ["VirtualAISquad", _modulePos, [], 0, "CAN_COLLIDE
   _particleObj setParticleParams [["\A3\data_f\ParticleEffects\Universal\Universal_02.p3d", 8, 0, 40, 0], "", "Billboard", 1, FCLA_Smoke_Signal_Time, [0, 0, 0], [0, 0, 0], 5, 10.2, 8, 0.05, [5, 20], [[_newColorSelected select 0, _newColorSelected select 1, _newColorSelected select 2, 1], [_newColorSelected select 0, _newColorSelected select 1, _newColorSelected select 2, 0.5], [_newColorSelected select 0, _newColorSelected select 1, _newColorSelected select 2, 0.3], [_newColorSelected select 0, _newColorSelected select 1, _newColorSelected select 2, 0]], [0.3], 0, 0, "", "", _modulePos];
   [{deleteVehicle _this;}, _particleObj, 0.1] call CBA_fnc_waitAndExecute;
 }, [_modulePos, _newColorSelected], 0.2] call CBA_fnc_waitAndExecute;
+
+
+//Eliminar módulo.
+deleteVehicle _module;

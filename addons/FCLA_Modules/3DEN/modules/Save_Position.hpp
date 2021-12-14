@@ -14,6 +14,7 @@ class FCLA_Module_Save_Position: Module_F {
   author = "hozlucas28";
 	displayName = "Guardar ultima ubicación";
   icon = "\FCLA_Modules\3DEN\data\Save.paa";
+  portrait = "\FCLA_Modules\3DEN\data\Save.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_savePosition3DEN";
   is3DEN = NOT_RUN_IN_3DEN;

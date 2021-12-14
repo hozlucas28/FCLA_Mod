@@ -58,3 +58,7 @@ addMissionEventHandler ["HandleDisconnect", {
     _playersSavedData pushBack [_posAndDirToSave, _loadoutToSave, _vehicleToSave];
   };
 }, [_savePosAndDirState, _saveLoadoutState, _saveVehicleState]];
+
+
+//Eliminar módulo.
+deleteVehicle _module;

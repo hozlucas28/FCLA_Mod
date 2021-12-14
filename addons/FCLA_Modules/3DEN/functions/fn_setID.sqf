@@ -40,3 +40,7 @@ if ((_newAge == "") || (_newName == "") || (_newPlaceOfBirth == "") || (_areNotC
   if (_doctorState) then {_x setVariable ["ACE_Medical_medicClass", 2, true];} else {_x setVariable ["ACE_Medical_medicClass", nil, true];};
   if (_advancedEnginnerState) then {_x setVariable ["ACE_isEngineer", 2, true];} else {_x setVariable ["ACE_isEngineer", nil, true];};
 } forEach _synchronizedObjects;
+
+
+//Eliminar módulo.
+deleteVehicle _module;

@@ -12,6 +12,7 @@ class FCLA_Module_Smoke_Signal: Module_F {
   author = "hozlucas28";
 	displayName = "Señal de humo";
   icon = "\FCLA_Modules\3DEN\data\Smoke.paa";
+  portrait = "\FCLA_Modules\3DEN\data\Smoke.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_spawnSmokeSignal3DEN";
   is3DEN = NOT_RUN_IN_3DEN;

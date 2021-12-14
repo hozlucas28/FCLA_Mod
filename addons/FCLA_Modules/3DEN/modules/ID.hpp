@@ -12,6 +12,7 @@ class FCLA_Module_Set_ID: Module_F {
   author = "hozlucas28";
 	displayName = "Modificar ID";
   icon = "\FCLA_Modules\3DEN\data\ID_Card.paa";
+  portrait = "\FCLA_Modules\3DEN\data\ID_Card.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setID3DEN";
   is3DEN = NOT_RUN_IN_3DEN;

@@ -13,6 +13,7 @@ class FCLA_Module_Radio_Range: Module_F {
   author = "hozlucas28";
 	displayName = "Modificar alcance (TFAR)";
   icon = "\FCLA_Modules\3DEN\data\Radio.paa";
+  portrait = "\FCLA_Modules\3DEN\data\Radio.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_changeRadioRange3DEN";
   is3DEN = NOT_RUN_IN_3DEN;
