@@ -117,7 +117,7 @@ class FCLA_Module_Show_Subtitle: Module_F {
 		};
 
     class FCLA_Repeatable: CheckBox {
-      tooltip = "Si se activa el mensaje se repetira cuando la unidad vuelva a estar dentro del 'Radio / Distancia'.<br/>• Si 'Radio / Distancia' es -1, el mensaje no se repetira.";
+      tooltip = "Si se activa el mensaje se repetira cuando la unidad vuelva a estar dentro del 'Radio / Distancia'.\n• Si 'Radio / Distancia' es -1, el mensaje no se repetira.";
       typeName = "BOOL";
       property = "FCLA_Repeatable";
       displayName = "¿Repetible?";

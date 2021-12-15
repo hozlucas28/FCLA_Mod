@@ -36,6 +36,7 @@ if ((isNull _emitter) || (isNil "_ctrl")) exitWith {false};
 
 
 //Ocultar subtítulos.
-_ctrl ctrlSetStructuredText parseText "";
+_ctrl ctrlSetFade 1;
+_ctrl ctrlCommit 0.5;
 _emitter setVariable ["FCLA_Hide_Subtitles", true, true];
 true

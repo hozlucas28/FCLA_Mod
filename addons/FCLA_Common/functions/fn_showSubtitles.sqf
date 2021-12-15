@@ -153,14 +153,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
         _ctrl ctrlCommit 0.5;
         localNamespace setVariable ["FCLA_Showing_Subtitles", nil];
       } else {
-        _ctrl = _emitter getVariable "FCLA_Subtitles_ctrl";
-        if (isNil "_ctrl") exitWith {};
-        _ctrl ctrlSetStructuredText parseText "";
-
         sleep (ceil _timeToHideEachLine);
-        _ctrl ctrlSetFade 1;
-        _ctrl ctrlCommit 0.5;
-        localNamespace setVariable ["FCLA_Showing_Subtitles", nil];
       };
     };
     waitUntil {scriptDone _handle};
