@@ -41,9 +41,8 @@ _soundObj attachTo [_soundSource];
 
 if (!_loopSound) then {
   [{
-    params ["_module", "_soundSource", "_soundObj"];
-    deleteVehicle _soundObj;
-    if (_module == _soundSource) then {deleteVehicle _module};
+    deleteVehicle (_this select 2);
+    if ((_this select 0) == (_this select 1)) then {deleteVehicle (_this select 0)};
   }, [_module, _soundSource, _soundObj], _soundDuration] call CBA_fnc_waitAndExecute;
 };
 

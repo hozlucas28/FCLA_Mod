@@ -38,7 +38,7 @@ params [
 
 
 //Verificar argumento.
-_rad = if (_rad == -1) then {worldSize} else {_rad};
+_rad = if (_rad <= -1) then {worldSize;} else {_rad;};
 _state = toUpper _state;
 if ((_rad < -1) || ((_state != "OFF") && (_state != "ON"))) exitWith {false};
 

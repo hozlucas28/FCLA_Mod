@@ -7,4 +7,37 @@
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
-//ELIMINAR MODULO AL CONCLUIR.
+//Variables de referencia.
+params [
+        ["_module", objNull, [objNull], 0],
+        ["_synchronizedObjects", [], [[]], []],
+        ["_isActivated", true, [true], 0]
+       ];
+if ((is3DEN) || (isNull _module) || (_synchronizedObjects isEqualTo []) || (!_isActivated)) exitWith {};
+
+
+
+//Verificar argumentos.
+_ammoClass = _module getVariable ["FCLA_Ammo", ""];
+_weaponClass = _module getVariable ["FCLA_Weapon", ""];
+_minimumShots = [_module getVariable ["FCLA_Minimum_Shots", 0], 0] call BIS_fnc_cutDecimals;
+_maximumShots = [_module getVariable ["FCLA_Maximum_Shots", 0], 0] call BIS_fnc_cutDecimals;
+_minimumDelay = [_module getVariable ["FCLA_Minimum_Delay", 0], 0] call BIS_fnc_cutDecimals;
+_maximumDelay = [_module getVariable ["FCLA_Maximum_Delay", 0], 0] call BIS_fnc_cutDecimals;
+_compatibleSynchronizedObjects = {_x in vehicles} count _synchronizedObjects;
+_areNotCompatibleSynchronizedObjects = _compatibleSynchronizedObjects <= 0;
+if ((_ammoClass == "") || (_weaponClass == "") || (_minimumShots <= 0) || (_maximumShots <= 0) || (_minimumDelay <= 0) || (_maximumDelay <= 0) || (_compatibleSynchronizedObjects >= 2) || (_areNotCompatibleSynchronizedObjects)) exitWith {};
+
+
+
+//Efectuar disparos.
+_findedVehicle = _synchronizedObjects findIf {_x in vehicles;};
+_vehicle = _synchronizedObjects select _findedVehicle;
+_hasNotWeapons = (count (weapons _vehicle)) <= 0;
+_hasNotMagazines = (count (magazines _vehicle)) <= 0;
+if ((_hasNotWeapons) || (_hasNotMagazines)) exitWith {};
+[_vehicle, _weaponClass, _ammoClass, [_minimumShots, _maximumShots], [_minimumDelay, _maximumDelay]] call FCLA_Common_fnc_setAmbientFired;
+
+
+//Eliminar módulo.
+deleteVehicle _module;

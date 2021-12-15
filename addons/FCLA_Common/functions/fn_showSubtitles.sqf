@@ -120,10 +120,10 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
       _currentLine = _lines select _i;
       _emitterName = _currentLine select 0;
       _emitterText = _currentLine select 1;
-      _hasShortRadio = if ((!isNull _emitter) && (_needShortRadio)) then {call TFAR_fnc_haveSWRadio} else {true};
-      _hasLongRadio = if ((!isNull _emitter) && (_needLongRadio)) then {call TFAR_fnc_haveLRRadio} else {true};
-      _isSelectedSide = if ((!isNull _emitter) && ((_selectedSide) isNotEqualTo "All")) then {(side _caller) == _selectedSide} else {true};
-      _isCloseEnough = if ((!isNull _emitter) && (_distanceToShow != -1)) then {_emitter distance _caller <= _distanceToShow} else {true};
+      _hasShortRadio = if ((!isNull _emitter) && (_needShortRadio)) then {call TFAR_fnc_haveSWRadio;} else {true;};
+      _hasLongRadio = if ((!isNull _emitter) && (_needLongRadio)) then {call TFAR_fnc_haveLRRadio;} else {true;};
+      _isSelectedSide = if ((!isNull _emitter) && ((_selectedSide) isNotEqualTo "All")) then {(side _caller) == _selectedSide;} else {true;};
+      _isCloseEnough = if ((!isNull _emitter) && (_distanceToShow > -1)) then {_emitter distance _caller <= _distanceToShow;} else {true;};
       _notShowingSubtitles = !(localNamespace getVariable ["FCLA_Showing_Subtitles", false]);
 
       if ((_hasShortRadio) && (_hasLongRadio) && (_isSelectedSide) && (_isCloseEnough) && (_notShowingSubtitles)) then {

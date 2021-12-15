@@ -64,6 +64,7 @@
   };
 
   _trigger = createTrigger ["EmptyDetector", getpos _shower, true];
+  _trigger setTriggerInterval 0.5;
   _trigger attachTo [_shower, [0, 0, 0]];
   _trigger setTriggerTimeout [5, 5, 5, true];
   _trigger setTriggerActivation ["ANY", "PRESENT", true];

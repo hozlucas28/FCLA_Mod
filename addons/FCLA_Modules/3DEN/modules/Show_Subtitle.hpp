@@ -24,18 +24,18 @@ class FCLA_Module_Show_Subtitle: Module_F {
 
 
 	class Attributes: AttributesBase {
-		class FCLA_Emitter_Name: Edit {
+		class FCLA_Emitter: Edit {
       tooltip = "Nombre del emisor.";
       typeName = "STRING";
-      property = "FCLA_Emitter_Name";
+      property = "FCLA_Emitter";
       displayName = "Emisor";
       defaultValue = "''";
 		};
 
-    class FCLA_Emitter_Subtitle: Edit {
+    class FCLA_Subtitle: Edit {
       tooltip = "Mensaje que se mostrara a modo de subtítulo.";
       typeName = "STRING";
-      property = "FCLA_Emitter_Subtitle";
+      property = "FCLA_Subtitle";
       displayName = "Subtítulo";
       defaultValue = "''";
 		};
@@ -114,6 +114,14 @@ class FCLA_Module_Show_Subtitle: Module_F {
       property = "FCLA_Distance_To_Show";
       displayName = "Radio / Distancia";
       defaultValue = -1;
+		};
+
+    class FCLA_Repeatable: CheckBox {
+      tooltip = "Si se activa el mensaje se repetira cuando la unidad vuelva a estar dentro del 'Radio / Distancia'.<br/>• Si 'Radio / Distancia' es -1, el mensaje no se repetira.";
+      typeName = "BOOL";
+      property = "FCLA_Repeatable";
+      displayName = "¿Repetible?";
+      defaultValue = "false";
 		};
 
     class FCLA_Need_Short_Radio: CheckBox {
