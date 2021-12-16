@@ -19,6 +19,7 @@ class FCLA_Create_Injuries: Module_F {
   isGlobal = GLOBAL;
   canSetArea = HAS_NOT_SETTABLE_AREA;
   isDisposable = UNREPEATABLE;
+  canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
   isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
   scope = 2;
 

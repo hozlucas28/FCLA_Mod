@@ -23,7 +23,7 @@ _modulePos = getPos _module;
 _loopSound = _module getVariable ["FCLA_Sound_On_Loop", false];
 _soundClass = _module getVariable ["FCLA_Classname_Sound", ""];
 _moduleArea = _module getvariable ["objectArea", [0, 0, 0, false, -1]];
-_maxDistance = selectMax [_moduleArea select 0, _moduleArea select 1];
+_maxDistance = selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4];
 _soundDuration = ceil (getNumber (configFile >> "CfgSounds" >> _soundClass >> "duration"));
 _numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count _synchronizedObjects;
 if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {};
@@ -42,7 +42,7 @@ if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {};
       if (_isNotAlive) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
       if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
       (_this select 0) call FCLA_Common_fnc_globalSay3D;
-    }, _soundDuration, [_soundSource, _soundClass, _soundDuration, _maxDistance, false]] call CBA_fnc_addPerFrameHandler;
+    }, 0.5, [_soundSource, _soundClass, _soundDuration, _maxDistance, false]] call CBA_fnc_addPerFrameHandler;
   } else {
     _deleteSource = if (_soundSource isKindOf "VirtualAISquad") then {true;} else {false;};
     [_soundSource, _soundClass, _soundDuration, _maxDistance, _deleteSource] call FCLA_Common_fnc_globalSay3D;

@@ -17,7 +17,7 @@ _ppEffect = _unit getVariable ["FCLA_NVG_Effect", -1];
 //Generar postprocesado.
 if (_state) then {
   if (_ppEffect != -1) exitWith {};
-  _ppEffect = ppEffectCreate ["ColorCorrections", 1500]; //16735
+  _ppEffect = ppEffectCreate ["ColorCorrections", 1500];
   _ppEffect ppEffectCommit 0.01;
   _ppEffect ppEffectEnable true;
   _ppEffect ppEffectForceInNVG true;

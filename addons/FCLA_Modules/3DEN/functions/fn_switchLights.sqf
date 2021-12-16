@@ -24,7 +24,7 @@ _moduleArea = _module getvariable ["objectArea", [0, 0, 0, false, -1]];
 [{
   _state = (_this select 0) getVariable ["FCLA_Lights_State", "Off"];
   [_this select 0, _this select 1, _state] call FCLA_Common_fnc_switchLights;
-}, [_module, selectMax [_moduleArea select 0, _moduleArea select 1]], 0.1] call CBA_fnc_waitAndExecute;
+}, [_module, selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4]], 0.1] call CBA_fnc_waitAndExecute;
 
 
 //Eliminar módulo.

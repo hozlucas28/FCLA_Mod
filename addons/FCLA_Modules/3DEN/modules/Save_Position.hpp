@@ -21,6 +21,7 @@ class FCLA_Module_Save_Position: Module_F {
 	isGlobal = GLOBAL;
   canSetArea = HAS_NOT_SETTABLE_AREA;
   isDisposable = UNREPEATABLE;
+  canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
 	isTriggerActivated = CAN_NOT_ACTIVATED_BY_TRIGGER;
   scope = 2;
 

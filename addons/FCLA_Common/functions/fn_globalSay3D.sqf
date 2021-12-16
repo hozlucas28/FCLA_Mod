@@ -52,7 +52,7 @@ if ((isNull _source) || (_maxDistance <= 0) || ((ceil _soundTime) <= 0) || (_sou
 //Reproducir sonido.
 _soundObj = createAgent ["VirtualAISquad", getPos _source, [], 0, "CAN_COLLIDE"];
 _soundObj attachTo [_source, [0, 0, 0]];
-[_soundObj, _soundClass, _maxDistance] call CBA_fnc_globalSay3D;
+[_soundObj, [_soundClass, _maxDistance, 1, false, 0]] remoteExec ["say3D", 0, false];
 _source setVariable ["FCLA_Playing_Sound", true, true];
 
 
@@ -60,7 +60,7 @@ _source setVariable ["FCLA_Playing_Sound", true, true];
 [{
   params ["_source", "_soundObj"];
   _isHidden = isObjectHidden _source;
-  _areNotAlive = (!alive _source) || (!alive _soundObj) || (isNull _source) || (isNull _soundObj);
+  _areNotAlive = (!alive _source) || (!alive _soundObj);
   _isSoundFinished = !(_source getVariable ["FCLA_Playing_Sound", false]);
   (_isHidden) || (_areNotAlive) || (_isSoundFinished);
 }, {

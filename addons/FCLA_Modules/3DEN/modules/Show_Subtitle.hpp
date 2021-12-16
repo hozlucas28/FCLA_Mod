@@ -17,8 +17,9 @@ class FCLA_Module_Show_Subtitle: Module_F {
 	function = "FCLA_Modules_fnc_showSubtitle3DEN";
   is3DEN = NOT_RUN_IN_3DEN;
 	isGlobal = GLOBAL;
-  canSetArea = HAS_NOT_SETTABLE_AREA;
+  canSetArea = HAS_SETTABLE_AREA;
   isDisposable = REPEATABLE;
+  canSetAreaHeight = HAS_SETTABLE_AREA_HEIGHT;
 	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
   scope = 2;
 
@@ -108,16 +109,8 @@ class FCLA_Module_Show_Subtitle: Module_F {
       defaultValue = 5;
 		};
 
-    class FCLA_Distance_To_Show: Edit {
-      tooltip = "Aquellas unidades comprendidas dentro del radio definido podrán ver el mensaje, tomando como origen del radio al módulo ó la entidad sincronizada.\n• Nota: si colocas -1 la distancia no importara.";
-      typeName = "NUMBER";
-      property = "FCLA_Distance_To_Show";
-      displayName = "Radio / Distancia";
-      defaultValue = -1;
-		};
-
     class FCLA_Repeatable: CheckBox {
-      tooltip = "Si se activa el mensaje se repetira cuando la unidad vuelva a estar dentro del 'Radio / Distancia'.\n• Si 'Radio / Distancia' es -1, el mensaje no se repetira.";
+      tooltip = "Si se activa el mensaje se repetira cuando la unidad vuelva a estar dentro de los tamaños del módulo.\n• Si todos los tamaños son -1, el mensaje no se repetira.";
       typeName = "BOOL";
       property = "FCLA_Repeatable";
       displayName = "¿Repetible?";
@@ -178,6 +171,10 @@ class FCLA_Module_Show_Subtitle: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Genera un mensaje a modo de subtítulo.<br/><br/>• Si sincronizas únicamente una entidad (objeto, unidad, vehículo, etc.) al módulo, esta se tomara como origen del 'Radio / Distancia'. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."};
+		description[] =	{"Genera un mensaje a modo de subtítulo.<br/><br/>• Los tamaños del módulo determinan el área en el cual debe estar la unidad para ver el mensaje. Si todos son -1 se asumirá que la unidad esta dentro del área.<br/>• Si sincronizas únicamente una entidad (objeto, unidad, vehículo, etc.) al módulo, esta se tomara como origen/centro del área. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."};
 	};
+
+  class AttributeValues {
+    size3[] = {5, 5, 2};
+  };
 };
