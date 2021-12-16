@@ -14,6 +14,7 @@ class 3DEN {
   class reportError3DEN {file = "\FCLA_Modules\3DEN\functions\fn_reportError.sqf";};
   class setAdvancedVehicleDamage3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setAdvancedVehicleDamage.sqf";};
   class setAmbientFired3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setAmbientFired.sqf";};
+  class setBuildingTraits3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setBuildingTraits.sqf";};
   class setID3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setID.sqf";};
   class setPlateNumber3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setPlateNumber.sqf";};
   class setRadio3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setRadio.sqf";};
