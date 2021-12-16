@@ -25,11 +25,19 @@ class FCLA_Module_Building_Traits: Module_F {
 
 
 	class Attributes: AttributesBase {
+    class FCLA_Notify_Building: CheckBox {
+      tooltip = "Si se activa se le notificara al editor el nombre de la construcción a la que se le aplicaran los rasgos.";
+      typeName = "BOOL";
+      property = "FCLA_Notify_Building";
+      displayName = "Notificar construcción";
+      defaultValue = "false";
+    };
+
     class FCLA_isMedical_Facility: CheckBox {
       tooltip = "";
       typeName = "BOOL";
       property = "FCLA_isMedical_Facility";
-      displayName = "Es un centro de médico";
+      displayName = "Es centro médico";
       defaultValue = "false";
     };
 
