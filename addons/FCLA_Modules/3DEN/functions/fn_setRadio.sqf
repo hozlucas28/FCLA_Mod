@@ -22,7 +22,7 @@ if ((is3DEN) || (isNull _module) || (_synchronizedObjects isEqualTo []) || (!_is
 _hasRadio = _module getVariable ["FCLA_Has_Radio", false];
 _radioSideSelected = _module getVariable ["FCLA_Radio_Side", "west"];
 _areNotCompatibleSynchronizedObjects = ({_x in vehicles} count _synchronizedObjects) <= 0;
-if (_areNotCompatibleSynchronizedObjects) exitWith {};
+if (_areNotCompatibleSynchronizedObjects) exitWith {["¡Error! El/Un módulo 'Modificar radio (TFAR)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
 

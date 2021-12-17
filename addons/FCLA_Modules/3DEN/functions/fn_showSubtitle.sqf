@@ -30,7 +30,7 @@ _repeatable = _module getVariable ["FCLA_Repeatable", false];
 _needLongRadio = _module getVariable ["FCLA_Need_Long_Radio", false];
 _needShortRadio = _module getVariable ["FCLA_Need_Short_Radio", false];
 _numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count _synchronizedObjects;
-if ((_emitter == "") || (_subtitle == "") || (_timeToHide <= 0)) exitWith {};
+if ((_emitter == "") || (_subtitle == "") || (_timeToHide <= 0)) exitWith {["¡Error! El/Un módulo 'Mostrar subtítulo' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
 

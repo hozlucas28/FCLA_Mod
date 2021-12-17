@@ -6,17 +6,24 @@
  * Reproduce una introducción animada al comienzo del escenario.
  *
  * Arguments:
- *            0: Título. <STRING>
- *            1: Subtítulo. <STRING>
+ *            0: Título, opcional. <STRING> (default: "")
+ *            1: Subtítulo, opcional. <STRING> (default: "")
+ *            2: Video introductorio, opcional. <STRING> (default: "")
  *
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Example:
- * ["Mi título", "subtítulo"] call FCLA_Common_fnc_setIntroduction;
+ *             //Sin video introductorio.
+ *             ["Mi título", "subtítulo"] call FCLA_Common_fnc_setIntroduction;
+ *
+ *             //Con video introductorio.
+ *             ["Mi título", "subtítulo", "\FCLA_Data\Videos\Community_Presentation_1.ogv"] call FCLA_Common_fnc_setIntroduction;
  *
  * Note:
  * Se recomienda utilizar esta función en el "initPlayerLocal".
+ *
+ * Si los argumentos 0 y/o 1 son <""> únicamente se mostrara el video introductorio.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -24,7 +31,8 @@
 //Variables de referencia.
 params [
 				["_title", "", [""], 0],
-				["_subtitle", "", [""], 0]
+				["_subtitle", "", [""], 0],
+				["_introductoryVideo", "", [""], 0]
 			 ];
 
 
@@ -32,46 +40,54 @@ params [
 //Verificar argumentos.
 _title = toUpper _title;
 _subtitle = toLower _subtitle;
-if ((_title == "") || (_subtitle == "")) exitWith {false};
+if ((_title == "") && (_subtitle == "") && (_introductoryVideo == "")) exitWith {false};
 
 
 
 //Guardar argumentos en variables asociados a la misión.
 missionNamespace setVariable ["FCLA_Introduction_Title", _title];
 missionNamespace setVariable ["FCLA_Introduction_Subtitle", _subtitle];
+missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introductoryVideo];
 
 
 //Reproducir introducción.
 ["CBA_loadingScreenDone", {
   _title = missionNamespace getVariable ["FCLA_Introduction_Title", ""];
   _subtitle = missionNamespace getVariable ["FCLA_Introduction_Subtitle", ""];
-  if ((_title == "") || (_subtitle == "")) exitWith {};
+	_introductoryVideo = missionNamespace getVariable ["FCLA_Introduction_Introductory_Video", ""];
 
-  [{!(player getVariable ["FCLA_Introduction_Video_Status", false])}, {
-    _this Spawn {
-      player action ["WeaponOnBack", player];
-      cutText ["", "BLACK FADED", 3600, true, false];
-			if (isGameFocused) then {playsound "FCLA_Introduction";};
-			player setVariable ["FCLA_Introduction_Status", true];
-      [{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
+	[_title, _subtitle, _introductoryVideo] Spawn {
+		params ["_title", "_subtitle", "_introductoryVideo"];
+		player action ["WeaponOnBack", player];
+		cutText ["", "BLACK FADED", 3600, true, false];
+		[{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
 
-      Sleep 3;
-      [
-       "<img size='10' image='\FCLA_Common\data\FCLA_Squads.jpg'/>",
-       safeZoneX + 0.71, safeZoneY + safeZoneH - 1.5, 4, 4, 0, 789
-      ] spawn bis_fnc_dynamicText;
+		if ((_title == "") || (_subtitle == "")) exitWith {
+			_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
+			waitUntil {scriptDone _videoStatus};
+			cutText ["", "BLACK IN", 5, true, false];
+			[false] call ACE_Common_fnc_disableUserInput;
+		};
 
-      Sleep 10;
-      [[
-      	[_this select 0, "<t align='center' size='1.75' font='PuristaBold'>%1</t><br/>"],
-      	["(" + (_this select 1) + ")", "<t align='center' size='1' font='PuristaSemibold'>%1</t>"]
-      ]] spawn BIS_fnc_typeText;
+		_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
+		waitUntil {scriptDone _videoStatus};
+		if (isGameFocused) then {playsound "FCLA_Introduction";};
 
-      sleep 5;
-      cutText ["", "BLACK IN", 5, true, false];
-      [false] call ACE_Common_fnc_disableUserInput;
-			player setVariable ["FCLA_Introduction_Status", nil];
-    };
-  }, [_title, _subtitle]] call CBA_fnc_waitUntilAndExecute;
+		Sleep 3;
+		[
+		 "<img size='10' image='\FCLA_Common\data\FCLA_Squads.jpg'/>",
+		 safeZoneX + 0.71, safeZoneY + safeZoneH - 1.5, 4, 4, 0, 789
+		] spawn bis_fnc_dynamicText;
+
+		Sleep 10;
+		[[
+			[_title, "<t align='center' size='1.75' font='PuristaBold'>%1</t><br/>"],
+			["(" + _subtitle + ")", "<t align='center' size='1' font='PuristaSemibold'>%1</t>"]
+		]] spawn BIS_fnc_typeText;
+
+		sleep 5;
+		cutText ["", "BLACK IN", 5, true, false];
+		[false] call ACE_Common_fnc_disableUserInput;
+	};
 }] call CBA_fnc_addEventHandler;
 true

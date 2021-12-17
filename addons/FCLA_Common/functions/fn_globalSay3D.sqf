@@ -52,7 +52,7 @@ if ((isNull _source) || (_maxDistance <= 0) || ((ceil _soundTime) <= 0) || (_sou
 //Reproducir sonido.
 _soundObj = createAgent ["VirtualAISquad", getPos _source, [], 0, "CAN_COLLIDE"];
 _soundObj attachTo [_source, [0, 0, 0]];
-[_soundObj, [_soundClass, _maxDistance, 1, false, 0]] remoteExec ["say3D", 0, false];
+[_soundObj, [_soundClass, _maxDistance, 1, false, 0]] remoteExec ["say3D", 0, true];
 _source setVariable ["FCLA_Playing_Sound", true, true];
 
 

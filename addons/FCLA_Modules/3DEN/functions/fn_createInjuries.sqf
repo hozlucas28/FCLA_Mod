@@ -27,7 +27,7 @@ _fractureRightArm = if (_module getVariable ["FCLA_Fracture_Right_Arm", false]) 
 _fractureRightLeg = if (_module getVariable ["FCLA_Fracture_Right_Leg", false]) then {1;} else {0;};
 _forceUnconsciousness = _module getVariable ["FCLA_Force_Unconsciousness", false];
 _areNotCompatibleSynchronizedObjects = ({_x in allUnits} count _synchronizedObjects) <= 0;
-if ((_typeOfInjury == "") || (_levelOfInjury <= 0) || (_areNotCompatibleSynchronizedObjects)) exitWith {};
+if ((_typeOfInjury == "") || (_levelOfInjury <= 0) || (_areNotCompatibleSynchronizedObjects)) exitWith {["¡Error! El/Un módulo 'Provocar lesiones (ACE)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
 

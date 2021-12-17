@@ -21,10 +21,13 @@ if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 
 
 //Verificar argumentos.
+_allLogics = allMissionObjects "Logic";
+_moreThanOne = ("FCLA_Module_Save_Position" countType _allLogics) > 1;
 _saveLoadoutState = _module getVariable ["FCLA_Save_Loadout", false];
 _saveVehicleState = _module getVariable ["FCLA_Save_Vehicle", false];
 _savePosAndDirState = _module getVariable ["FCLA_Save_PosAndDir", false];
-if ((!_saveLoadoutState) && (!_saveVehicleState) && (!_savePosAndDirState)) exitWith {};
+if (_moreThanOne) exitWith {["FCLA_Module_Save_Position", "• MÓDULO: GUARDAR ULTIMA UBICACIÓN", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Guardar ultima ubicación' han sido desactivados."] spawn FCLA_Modules_fnc_reportError3DEN;};
+if ((!_saveLoadoutState) && (!_saveVehicleState) && (!_savePosAndDirState)) exitWith {["¡Error! El módulo 'Guardar ultima ubicación' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
 

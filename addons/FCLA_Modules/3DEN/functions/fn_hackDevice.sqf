@@ -23,7 +23,7 @@ _deviceID = _module getVariable ["FCLA_Device_ID", ""];
 _needHackingDevice = _module getVariable ["FCLA_Need_Hacking_Device", false];
 _compatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector") && !(_x isKindOf "CAManBase")} count _synchronizedObjects;
 _areNotCompatibleSynchronizedObjects = _compatibleSynchronizedObjects <= 0;
-if ((_deviceID == "") || (_compatibleSynchronizedObjects > 1) || (_areNotCompatibleSynchronizedObjects)) exitWith {};
+if ((_deviceID == "") || (_compatibleSynchronizedObjects > 1) || (_areNotCompatibleSynchronizedObjects)) exitWith {["¡Error! El/Un módulo 'Dispositivo hackeable' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
 

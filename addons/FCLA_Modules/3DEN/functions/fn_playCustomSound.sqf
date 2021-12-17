@@ -26,7 +26,7 @@ _moduleArea = _module getvariable ["objectArea", [0, 0, 0, false, -1]];
 _maxDistance = selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4];
 _soundDuration = ceil (getNumber (configFile >> "CfgSounds" >> _soundClass >> "duration"));
 _numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count _synchronizedObjects;
-if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {};
+if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {["¡Error! El/Un módulo 'Reproducir sonido (personalizado)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
 

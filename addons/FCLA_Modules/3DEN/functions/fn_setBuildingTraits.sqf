@@ -27,7 +27,7 @@ switch (_mode) do {
   case "init": {
     _building = nearestObject [_module, "BUILDING"];
     _nearesTerrainObjects = nearestTerrainObjects [_module, [], 50];
-    if (((_module distance _building) > 10) || !(_building in _nearesTerrainObjects)) exitWith {};
+    if (((_module distance _building) > 10) || !(_building in _nearesTerrainObjects)) exitWith {["¡Error! El/Un módulo 'Asignar rasgos' no se pudo inicializar con éxito."] call BIS_fnc_error;};
     _building setVariable ["ACE_isRepairFacility", true, true];
     _building setVariable ["ACE_Medical_isMedicalFacility", true, true];
     deleteVehicle _module;

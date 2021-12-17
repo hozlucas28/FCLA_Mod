@@ -23,7 +23,7 @@ _loopSound = _module getVariable ["FCLA_Loop", false];
 _soundClass = _module getVariable ["FCLA_Sound", ""];
 _soundDuration = ceil (getNumber (configFile >> "CfgSFX" >> _soundClass >> "duration"));
 _numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count _synchronizedObjects;
-if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {};
+if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {["¡Error! El/Un módulo 'Reproducir sonido' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
 
