@@ -4,6 +4,8 @@
 |********************************************************************************/
 
 class 3DEN {
+  class initLastLoadout3DEN {file = "\FCLA_Modules\3DEN\functions\Last_Loadout\fn_init.sqf";};
+  class setLastLoadout3DEN {file = "\FCLA_Modules\3DEN\functions\Last_Loadout\fn_setLoadout.sqf";};
   class savePosition3DEN {file = "\FCLA_Modules\3DEN\functions\Save_Position\fn_savePosition.sqf";};
   class setPosition3DEN {file = "\FCLA_Modules\3DEN\functions\Save_Position\fn_setPosition.sqf";};
   class changeRadioRange3DEN {file = "\FCLA_Modules\3DEN\functions\fn_changeRadioRange.sqf";};

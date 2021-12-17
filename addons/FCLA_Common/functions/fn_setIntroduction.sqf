@@ -38,7 +38,7 @@ params [
 				["_title", "", [""], 0],
 				["_subtitle", "", [""], 0],
 				["_introductoryVideo", "", [""], 0],
-				["_showOnReconnect", "None", [""], 0],
+				["_showOnReconnect", "None", [""], 0]
 			 ];
 
 

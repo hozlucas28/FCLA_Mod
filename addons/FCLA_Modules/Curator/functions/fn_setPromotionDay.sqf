@@ -9,8 +9,9 @@
 ---------------------------------------------------------------------------- */
 
 ["FCLA", "Ascensos", {
-  if (FCLA_Mission_Type != "Training") exitWith {["¡SE REQUIERE ESTAR EN UN MAPA DE ENTRENAMIENTO!"] call ZEN_Common_fnc_showMessage;};
   _defaultValue = if (missionNamespace getVariable ["FCLA_isPromotionDay", false]) then {0;} else {1;};
+  if (FCLA_Mission_Type != "Training") exitWith {["¡SE REQUIERE ESTAR EN UN MAPA DE ENTRENAMIENTO!"] call ZEN_Common_fnc_showMessage;};
+
 
   ["ASCENSOS",
 	 [

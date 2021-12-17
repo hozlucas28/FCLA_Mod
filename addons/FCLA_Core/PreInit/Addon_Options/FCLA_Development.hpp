@@ -44,17 +44,6 @@
 
 
 [
-	"FCLA_isPromotionDay", "CHECKBOX",
-	["¿Día de ascensos?", "Al activar los loadouts seran remplazados por un uniforme formal, se podran utilizar las acciones relacionadas con\nlos ascensos y los jugadores que entren, luego de haberse activado, vestiran un uniforme formal.\n ¡ESTA OPCIÓN FUNCIONA SI EL TIPO DE MISIÓN ES DE ENTRENAMIENTO!"],
-	["FCLA Desarrollo","• General"],
-	false,
-	GLOBAL,
-	{},
-	false
-] call CBA_fnc_addSetting;
-
-
-[
 	"FCLA_Donations_Message", "CHECKBOX",
 	["¿Mensaje de donaciones?", "Al activar se generara un mensaje en forma de recordatorio sobre las donaciones al servidor, el cual se repetira según el tiempo indicado debajo."],
 	["FCLA Desarrollo", "• General"],
