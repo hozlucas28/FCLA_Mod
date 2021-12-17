@@ -9,6 +9,9 @@
  *            0: Título, opcional. <STRING> (default: "")
  *            1: Subtítulo, opcional. <STRING> (default: "")
  *            2: Video introductorio, opcional. <STRING> (default: "")
+ *            3: Determina que veran aquellos jugadores que han reproducido la
+ *               introducción, pero tuvieron que reconectarse a la partida, opcional. <STRING> (default: "None")
+ *						    # Decisiones posibles: "None", "Title_and_subtitle", "Video" y "All".
  *
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
@@ -17,8 +20,8 @@
  *             //Sin video introductorio.
  *             ["Mi título", "subtítulo"] call FCLA_Common_fnc_setIntroduction;
  *
- *             //Con video introductorio.
- *             ["Mi título", "subtítulo", "\FCLA_Data\Videos\Community_Presentation_1.ogv"] call FCLA_Common_fnc_setIntroduction;
+ *             //Con video introductorio y al reconectarse se mostrara únicamente el título y subtítulo.
+ *             ["Mi título", "subtítulo", "\FCLA_Data\Videos\Community_Presentation_1.ogv", "Title_and_subtitle"] call FCLA_Common_fnc_setIntroduction;
  *
  * Note:
  * Si los argumentos 0 y/o 1 son <""> únicamente se mostrara el video introductorio.
@@ -34,7 +37,8 @@
 params [
 				["_title", "", [""], 0],
 				["_subtitle", "", [""], 0],
-				["_introductoryVideo", "", [""], 0]
+				["_introductoryVideo", "", [""], 0],
+				["_showOnReconnect", "None", [""], 0],
 			 ];
 
 
@@ -42,13 +46,16 @@ params [
 //Verificar argumentos.
 _title = toUpper _title;
 _subtitle = toLower _subtitle;
-if ((_title == "") && (_subtitle == "") && (_introductoryVideo == "")) exitWith {false};
+_showOnReconnect = toUpper _showOnReconnect;
+_acceptedDecisions = ["NONE", "TITLE_AND_SUBTITLE", "VIDEO", "ALL"];
+if (((_title == "") && (_subtitle == "") && (_introductoryVideo == "")) || !(_showOnReconnect in _acceptedDecisions)) exitWith {false};
 
 
 
 //Guardar argumentos en variables asociados a la misión.
 missionNamespace setVariable ["FCLA_Introduction_Title", _title];
 missionNamespace setVariable ["FCLA_Introduction_Subtitle", _subtitle];
+missionNamespace setVariable ["FCLA_Show_On_Reconnect", _showOnReconnect];
 missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introductoryVideo];
 
 
@@ -56,43 +63,93 @@ missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introduct
 ["CBA_loadingScreenDone", {
   _title = missionNamespace getVariable ["FCLA_Introduction_Title", ""];
   _subtitle = missionNamespace getVariable ["FCLA_Introduction_Subtitle", ""];
+	_showOnReconnect = missionNamespace getVariable ["FCLA_Show_On_Reconnect", "NONE"];
 	_introductoryVideo = missionNamespace getVariable ["FCLA_Introduction_Introductory_Video", ""];
 
-	[_title, _subtitle, _introductoryVideo] Spawn {
-		params ["_title", "_subtitle", "_introductoryVideo"];
-		player action ["WeaponOnBack", player];
-		cutText ["", "BLACK FADED", 3600, true, false];
-		player setVariable ["FCLA_Playing_Introduction", true, true];
-		[{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
 
-		if ((_title == "") || (_subtitle == "")) exitWith {
+	[_title, _subtitle, _introductoryVideo, _showOnReconnect] Spawn {
+		params ["_title", "_subtitle", "_introductoryVideo", "_showOnReconnect"];
+		_playerUID = getPlayerUID player;
+		_introductionPlayedPlayers = missionNamespace getVariable ["FCLA_Introduction_Players", []];
+		_findedUID = _introductionPlayedPlayers find _playerUID;
+
+		if (_findedUID <= -1) then {
+			player action ["WeaponOnBack", player];
+			cutText ["", "BLACK FADED", 3600, true, false];
+			player setVariable ["FCLA_Playing_Introduction", true, true];
+			[{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
+
+			if ((_title == "") || (_subtitle == "")) exitWith {
+				_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
+				waitUntil {scriptDone _videoStatus};
+				cutText ["", "BLACK IN", 5, true, false];
+				[false] call ACE_Common_fnc_disableUserInput;
+				player setVariable ["FCLA_Playing_Introduction", nil, true];
+			};
+
 			_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
 			waitUntil {scriptDone _videoStatus};
+			if (isGameFocused) then {playsound "FCLA_Introduction";};
+
+			Sleep 3;
+			[
+			 "<img size='10' image='\FCLA_Common\data\FCLA_Squads.jpg'/>",
+			 safeZoneX + 0.71, safeZoneY + safeZoneH - 1.5, 4, 4, 0, 789
+			] spawn bis_fnc_dynamicText;
+
+			Sleep 10;
+			[[
+				[_title, "<t align='center' size='1.75' font='PuristaBold'>%1</t><br/>"],
+				["(" + _subtitle + ")", "<t align='center' size='1' font='PuristaSemibold'>%1</t>"]
+			]] spawn BIS_fnc_typeText;
+
+			sleep 5;
+			cutText ["", "BLACK IN", 5, true, false];
+			[false] call ACE_Common_fnc_disableUserInput;
+
+			_introductionPlayedPlayers pushBack _playerUID;
+			player setVariable ["FCLA_Playing_Introduction", nil, true];
+			missionNamespace setVariable ["FCLA_Introduction_Players", _introductionPlayedPlayers];
+		} else {
+			_title = if (_showOnReconnect in ["TITLE_AND_SUBTITLE", "ALL"]) then {_title;} else {"";};
+		  _subtitle = if (_showOnReconnect in ["TITLE_AND_SUBTITLE", "ALL"]) then {_subtitle;} else {"";};
+			_introductoryVideo = if (_showOnReconnect in ["VIDEO", "ALL"]) then {_introductoryVideo} else {"";};
+			if (_showOnReconnect == "NONE") exitWith {};
+
+			player action ["WeaponOnBack", player];
+			cutText ["", "BLACK FADED", 3600, true, false];
+			player setVariable ["FCLA_Playing_Introduction", true, true];
+			[{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
+
+			if ((_title == "") || (_subtitle == "")) exitWith {
+				_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
+				waitUntil {scriptDone _videoStatus};
+				cutText ["", "BLACK IN", 5, true, false];
+				[false] call ACE_Common_fnc_disableUserInput;
+				player setVariable ["FCLA_Playing_Introduction", nil, true];
+			};
+
+			_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
+			waitUntil {scriptDone _videoStatus};
+			if (isGameFocused) then {playsound "FCLA_Introduction";};
+
+			Sleep 3;
+			[
+			 "<img size='10' image='\FCLA_Common\data\FCLA_Squads.jpg'/>",
+			 safeZoneX + 0.71, safeZoneY + safeZoneH - 1.5, 4, 4, 0, 789
+			] spawn bis_fnc_dynamicText;
+
+			Sleep 10;
+			[[
+			  [_title, "<t align='center' size='1.75' font='PuristaBold'>%1</t><br/>"],
+			  ["(" + _subtitle + ")", "<t align='center' size='1' font='PuristaSemibold'>%1</t>"]
+			]] spawn BIS_fnc_typeText;
+
+			sleep 5;
 			cutText ["", "BLACK IN", 5, true, false];
 			[false] call ACE_Common_fnc_disableUserInput;
 			player setVariable ["FCLA_Playing_Introduction", nil, true];
 		};
-
-		_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
-		waitUntil {scriptDone _videoStatus};
-		if (isGameFocused) then {playsound "FCLA_Introduction";};
-
-		Sleep 3;
-		[
-		 "<img size='10' image='\FCLA_Common\data\FCLA_Squads.jpg'/>",
-		 safeZoneX + 0.71, safeZoneY + safeZoneH - 1.5, 4, 4, 0, 789
-		] spawn bis_fnc_dynamicText;
-
-		Sleep 10;
-		[[
-			[_title, "<t align='center' size='1.75' font='PuristaBold'>%1</t><br/>"],
-			["(" + _subtitle + ")", "<t align='center' size='1' font='PuristaSemibold'>%1</t>"]
-		]] spawn BIS_fnc_typeText;
-
-		sleep 5;
-		cutText ["", "BLACK IN", 5, true, false];
-		[false] call ACE_Common_fnc_disableUserInput;
-		player setVariable ["FCLA_Playing_Introduction", nil, true];
 	};
 }] call CBA_fnc_addEventHandler;
 true

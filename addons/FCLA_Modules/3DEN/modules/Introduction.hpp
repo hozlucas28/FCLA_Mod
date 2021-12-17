@@ -48,6 +48,36 @@ class FCLA_Module_Introduction: Module_F {
       displayName = "Video introductorio";
       defaultValue = "''";
 		};
+
+    class FCLA_Show_Reconnect: Combo {
+      tooltip = "Determina que veran aquellos jugadores que han reproducido la introducción, pero tuvieron que reconectarse a la partida.";
+      typeName = "STRING";
+      property = "FCLA_Show_Reconnect";
+      displayName = "Al reconectarse reproducir";
+      defaultValue = """NONE""";
+
+			class Values {
+				class Title_And_Subtitle {
+					name = "Título y subtítulo";
+					value = "TITLE_AND_SUBTITLE";
+				};
+
+				class Video {
+					name = "Video introductorio";
+					value = "VIDEO";
+				};
+
+        class All {
+					name = "Todo";
+					value = "ALL";
+				};
+
+        class None {
+					name = "Nada";
+					value = "NONE";
+				};
+			};
+		};
 		class ModuleDescription: ModuleDescription {};
 	};
 

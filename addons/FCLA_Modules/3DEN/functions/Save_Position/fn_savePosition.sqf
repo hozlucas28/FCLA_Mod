@@ -56,9 +56,11 @@ addMissionEventHandler ["HandleDisconnect", {
   if (_findedUID > -1) then {
     _playerData = _findedUID + 1;
     _playersSavedData set [_playerData, [_posAndDirToSave, _loadoutToSave, _vehicleToSave]];
+    missionNamespace setVariable ["FCLA_Players_Saved_Data", _playersSavedData];
   } else {
     _playersSavedData pushBack _playerUID;
     _playersSavedData pushBack [_posAndDirToSave, _loadoutToSave, _vehicleToSave];
+    missionNamespace setVariable ["FCLA_Players_Saved_Data", _playersSavedData];
   };
 }, [_savePosAndDirState, _saveLoadoutState, _saveVehicleState]];
 
