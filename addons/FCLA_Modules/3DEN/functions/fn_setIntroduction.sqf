@@ -31,3 +31,7 @@ if ((_title == "") && (_subtitle == "") && (_introductoryVideo == "")) exitWith 
 
 //Reproducir introducción.
 [_title, _subtitle, _introductoryVideo] call FCLA_Common_fnc_setIntroduction;
+
+
+//Eliminar módulo.
+deleteVehicle _module;

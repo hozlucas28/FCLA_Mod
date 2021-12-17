@@ -21,9 +21,11 @@
  *             ["Mi título", "subtítulo", "\FCLA_Data\Videos\Community_Presentation_1.ogv"] call FCLA_Common_fnc_setIntroduction;
  *
  * Note:
- * Se recomienda utilizar esta función en el "initPlayerLocal".
- *
  * Si los argumentos 0 y/o 1 son <""> únicamente se mostrara el video introductorio.
+ *
+ * Cuando la introducción comienza se le asigna al jugador la variable de tipo
+ * objeto "FCLA_Playing_Introduction" con el valor <true>, una vez que finaliza
+ * esta variable es borrada pasando a tener el valor <nil>.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -60,6 +62,7 @@ missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introduct
 		params ["_title", "_subtitle", "_introductoryVideo"];
 		player action ["WeaponOnBack", player];
 		cutText ["", "BLACK FADED", 3600, true, false];
+		player setVariable ["FCLA_Playing_Introduction", true, true];
 		[{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
 
 		if ((_title == "") || (_subtitle == "")) exitWith {
@@ -67,6 +70,7 @@ missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introduct
 			waitUntil {scriptDone _videoStatus};
 			cutText ["", "BLACK IN", 5, true, false];
 			[false] call ACE_Common_fnc_disableUserInput;
+			player setVariable ["FCLA_Playing_Introduction", nil, true];
 		};
 
 		_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
@@ -88,6 +92,7 @@ missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introduct
 		sleep 5;
 		cutText ["", "BLACK IN", 5, true, false];
 		[false] call ACE_Common_fnc_disableUserInput;
+		player setVariable ["FCLA_Playing_Introduction", nil, true];
 	};
 }] call CBA_fnc_addEventHandler;
 true

@@ -52,6 +52,6 @@ class FCLA_Module_Introduction: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Reproduce una introducción animada al comienzo del escenario.<br/><br/>• Si el título y/o subtítulo no se definen únicamente se mostrara el video introductorio, el cual es opcional."};
+		description[] =	{"Reproduce una introducción animada al comienzo del escenario.<br/><br/>• Si el título y/o subtítulo no son definidos únicamente se mostrara el video introductorio, el cual es opcional."};
 	};
 };
