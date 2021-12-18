@@ -4,9 +4,6 @@
 |********************************************************************************/
 
 class 3DEN {
-  class initLastLoadout3DEN {file = "\FCLA_Modules\3DEN\functions\Last_Loadout\fn_init.sqf";};
-  class setLastLoadout3DEN {file = "\FCLA_Modules\3DEN\functions\Last_Loadout\fn_setLoadout.sqf";};
-  class savePosition3DEN {file = "\FCLA_Modules\3DEN\functions\Save_Position\fn_savePosition.sqf";};
   class setPosition3DEN {file = "\FCLA_Modules\3DEN\functions\Save_Position\fn_setPosition.sqf";};
   class changeRadioRange3DEN {file = "\FCLA_Modules\3DEN\functions\fn_changeRadioRange.sqf";};
   class createInjuries3DEN {file = "\FCLA_Modules\3DEN\functions\fn_createInjuries.sqf";};
@@ -14,6 +11,7 @@ class 3DEN {
   class playCustomSound3DEN {file = "\FCLA_Modules\3DEN\functions\fn_playCustomSound.sqf";};
   class playSound3DEN {file = "\FCLA_Modules\3DEN\functions\fn_playSound.sqf";};
   class reportError3DEN {file = "\FCLA_Modules\3DEN\functions\fn_reportError.sqf";};
+  class saveLastLoadout3DEN {file = "\FCLA_Modules\3DEN\functions\fn_saveLastLoadout.sqf";};
   class setAdvancedVehicleDamage3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setAdvancedVehicleDamage.sqf";};
   class setAmbientFired3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setAmbientFired.sqf";};
   class setBuildingTraits3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setBuildingTraits.sqf";};

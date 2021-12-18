@@ -49,32 +49,32 @@ class FCLA_Module_Introduction: Module_F {
       defaultValue = "''";
 		};
 
-    class FCLA_Show_Reconnect: Combo {
+    class FCLA_Show_On_Reconnect: Combo {
       tooltip = "Determina que veran aquellos jugadores que han reproducido la introducción, pero tuvieron que reconectarse a la partida.";
       typeName = "STRING";
-      property = "FCLA_Show_Reconnect";
-      displayName = "Al reconectarse reproducir";
+      property = "FCLA_Show_On_Reconnect";
+      displayName = "Al reconectarse";
       defaultValue = """NONE""";
 
 			class Values {
+        class None {
+					name = "Nada";
+					value = "NONE";
+				};
+        
 				class Title_And_Subtitle {
-					name = "Título y subtítulo";
+					name = "Reproducir título y subtítulo";
 					value = "TITLE_AND_SUBTITLE";
 				};
 
 				class Video {
-					name = "Video introductorio";
+					name = "Reproducir video introductorio";
 					value = "VIDEO";
 				};
 
         class All {
-					name = "Todo";
+					name = "Reproducir todo";
 					value = "ALL";
-				};
-
-        class None {
-					name = "Nada";
-					value = "NONE";
 				};
 			};
 		};

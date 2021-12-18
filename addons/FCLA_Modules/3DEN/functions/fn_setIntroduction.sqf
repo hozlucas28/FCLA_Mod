@@ -23,7 +23,7 @@ _allLogics = allMissionObjects "Logic";
 _moreThanOne = ("FCLA_Module_Introduction" countType _allLogics) > 1;
 _title = _module getVariable ["FCLA_Title", ""];
 _subtitle = _module getVariable ["FCLA_Subtitle", ""];
-_showOnReconnect = toUpper (_module getVariable ["FCLA_Show_Reconnect", "None"]);
+_showOnReconnect = toUpper (_module getVariable ["FCLA_Show_On_Reconnect", "None"]);
 _introductoryVideo = _module getVariable ["FCLA_Introductory_Video", ""];
 _acceptedDecisions = ["NONE", "TITLE_AND_SUBTITLE", "VIDEO", "ALL"];
 if (_moreThanOne) exitWith {["FCLA_Module_Introduction", "• MÓDULO: INTRODUCCIÓN", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Introducción' han sido desactivados."] spawn FCLA_Modules_fnc_reportError3DEN;};

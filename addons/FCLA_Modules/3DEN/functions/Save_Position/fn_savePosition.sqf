@@ -34,10 +34,10 @@ if ((!_saveLoadoutState) && (!_saveVehicleState) && (!_savePosAndDirState)) exit
 //Al conectarse.
 addMissionEventHandler ["PlayerConnected", {
   params ["_eventHandlerID", "_playerUID", "_playerName", "_JIP", "_player", "_eventHandlerIDStr"];
-  _playersSavedData = missionNamespace getVariable ["FCLA_Players_Saved_Data", []];
-  _findedUID = _playersSavedData find _playerUID;
-  if ((!_JIP) || (_playersSavedData isEqualTo []) || (_findedUID <= -1)) exitWith {};
-  _playerData = (_playersSavedData select (_findedUID + 1));
+  _playersSavedPositionData = missionNamespace getVariable ["FCLA_Players_Saved_Position_Data", []];
+  _findedUID = _playersSavedPositionData find _playerUID;
+  if ((!_JIP) || (_playersSavedPositionData isEqualTo []) || (_findedUID <= -1)) exitWith {};
+  _playerData = (_playersSavedPositionData select (_findedUID + 1));
   [_playerData, _thisArgs] remoteExec ["FCLA_Modules_fnc_setPosition3DEN", _player];
 }, [_savePosAndDirState, _saveLoadoutState, _saveVehicleState]];
 
@@ -46,8 +46,8 @@ addMissionEventHandler ["PlayerConnected", {
 addMissionEventHandler ["HandleDisconnect", {
   params ["_player", "_eventHandlerID", "_playerUID", "_playerName"];
   _thisArgs params ["_savePosAndDirState", "_saveLoadoutState", "_saveVehicleState"];
-  _playersSavedData = missionNamespace getVariable ["FCLA_Players_Saved_Data", []];
-  _findedUID = _playersSavedData find _playerUID;
+  _playersSavedPositionData = missionNamespace getVariable ["FCLA_Players_Saved_Position_Data", []];
+  _findedUID = _playersSavedPositionData find _playerUID;
 
   _vehicleToSave = if (_saveVehicleState) then {vehicle _player;};
   _loadoutToSave = if (_saveLoadoutState) then {getUnitLoadout _player;};
@@ -55,12 +55,12 @@ addMissionEventHandler ["HandleDisconnect", {
 
   if (_findedUID > -1) then {
     _playerData = _findedUID + 1;
-    _playersSavedData set [_playerData, [_posAndDirToSave, _loadoutToSave, _vehicleToSave]];
-    missionNamespace setVariable ["FCLA_Players_Saved_Data", _playersSavedData];
+    _playersSavedPositionData set [_playerData, [_posAndDirToSave, _loadoutToSave, _vehicleToSave]];
+    missionNamespace setVariable ["FCLA_Players_Saved_Position_Data", _playersSavedPositionData];
   } else {
-    _playersSavedData pushBack _playerUID;
-    _playersSavedData pushBack [_posAndDirToSave, _loadoutToSave, _vehicleToSave];
-    missionNamespace setVariable ["FCLA_Players_Saved_Data", _playersSavedData];
+    _playersSavedPositionData pushBack _playerUID;
+    _playersSavedPositionData pushBack [_posAndDirToSave, _loadoutToSave, _vehicleToSave];
+    missionNamespace setVariable ["FCLA_Players_Saved_Position_Data", _playersSavedPositionData];
   };
 }, [_savePosAndDirState, _saveLoadoutState, _saveVehicleState]];
 
