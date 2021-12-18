@@ -16,22 +16,18 @@
       [
        "Sparks",
        "Fireflies",
-       "Dust_Blast",
-       "Sand_Swirl",
-       "Suspended_Dust"
+       "Wind_Gust"
       ],
       [
        "Chispas",
        "Luciérnagas",
-       "Ráfaga de polvo",
-       "Remolino de arena",
-       "Polvo (suspendido)"
+       "Ráfaga de viento"
       ],
       0
      ],
      false
     ],
-    ["SLIDER", ["Tiempo", "Segundos para que se repita el efecto.\n• Nota: solo funciona con las chispas, la ráfaga de polvo y el remolino de arena."],
+    ["SLIDER", ["Tiempo", "Segundos para que se repita el efecto.\n• Nota: solo funciona con las chispas y la ráfaga de viento."],
      [
       1,
       3600,
@@ -48,10 +44,8 @@
 
      _effectName = switch (_selectedEffect) do {
        case "SPARKS": {"CHISPAS";};
+       case "WIND_GUST": {"RÁFAGA DE VIENTO";};
        case "FIREFLIES": {"LUCIÉRNAGAS";};
-       case "DUST_BLAST": {"RÁFAGA DE POLVO";};
-       case "SAND_SWIRL": {"REMOLINO DE ARENA";};
-       case "SUSPENDED_DUST": {"POLVO (SUSPENDIDO)";};
      };
 
      _logic = createAgent ["VirtualAISquad", _this select 1, [], 0, "CAN_COLLIDE"];
@@ -60,10 +54,8 @@
 
      switch (_selectedEffect) do {
        case "SPARKS": {[_logic, _delay] spawn FCLA_Modules_fnc_spawnSparksCurator;};
-       case "FIREFLIES": {;};
-       case "DUST_BLAST": {;};
-       case "SAND_SWIRL": {;};
-       case "SUSPENDED_DUST": {;};
+       case "WIND_GUST": {[_logic, _delay] spawn FCLA_Modules_fnc_spawnWindGustCurator;};
+       case "FIREFLIES": {[_logic] spawn FCLA_Modules_fnc_spawnFirefliesCurator;};
      };
      ["EL EFECTO " + _effectName + " SE HA GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this select 0] call ZEN_Dialog_fnc_Create;

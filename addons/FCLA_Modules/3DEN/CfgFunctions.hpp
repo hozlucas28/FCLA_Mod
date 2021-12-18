@@ -4,6 +4,10 @@
 |********************************************************************************/
 
 class 3DEN {
+  class setEffect3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_setEffect.sqf";};
+  class spawnFireflies3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_spawnFireflies.sqf";};
+  class spawnSparks3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_spawnSparks.sqf";};
+  class spawnWindGust3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_spawnWindGust.sqf";};
   class setPosition3DEN {file = "\FCLA_Modules\3DEN\functions\Save_Position\fn_setPosition.sqf";};
   class changeRadioRange3DEN {file = "\FCLA_Modules\3DEN\functions\fn_changeRadioRange.sqf";};
   class createInjuries3DEN {file = "\FCLA_Modules\3DEN\functions\fn_createInjuries.sqf";};

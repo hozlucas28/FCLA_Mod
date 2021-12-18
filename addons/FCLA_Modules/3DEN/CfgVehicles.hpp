@@ -19,4 +19,5 @@
 #include "\FCLA_Modules\3DEN\modules\Save_Position.hpp"
 #include "\FCLA_Modules\3DEN\modules\Show_Subtitle.hpp"
 #include "\FCLA_Modules\3DEN\modules\Smoke_Signal.hpp"
+#include "\FCLA_Modules\3DEN\modules\Spawn_Effect.hpp"
 #include "\FCLA_Modules\3DEN\modules\Switch_Lights.hpp"

@@ -99,11 +99,9 @@ class Curator {
     postInit = 1;
   };
 
-  class spawnDustBlastCurator {file = "\FCLA_Modules\Curator\functions\Effects\fn_spawnDustBlast.sqf";};
   class spawnFirefliesCurator {file = "\FCLA_Modules\Curator\functions\Effects\fn_spawnFireflies.sqf";};
-  class spawnSandSwirlCurator {file = "\FCLA_Modules\Curator\functions\Effects\fn_spawnSandSwirl.sqf";};
   class spawnSparksCurator {file = "\FCLA_Modules\Curator\functions\Effects\fn_spawnSparks.sqf";};
-  class spawnSuspendedDustCurator {file = "\FCLA_Modules\Curator\functions\Effects\fn_spawnSuspendedDust.sqf";};
+  class spawnWindGustCurator {file = "\FCLA_Modules\Curator\functions\Effects\fn_spawnWindGust.sqf";};
   class attachAndDetachCurator {file = "\FCLA_Modules\Curator\functions\fn_attachAndDetach.sqf";};
   class hideCurator {file = "\FCLA_Modules\Curator\functions\fn_hideCurator.sqf";};
   class teleportCurator {file = "\FCLA_Modules\Curator\functions\fn_teleportCurator.sqf";};
