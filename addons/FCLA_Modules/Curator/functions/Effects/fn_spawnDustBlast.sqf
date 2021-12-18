@@ -29,7 +29,7 @@ while {alive _module} do {
 	[_soundAndDuration select 0] remoteExec ["playSound", 0, true];
 	sleep 1;
 
-	_isInHouse = [player] call FCLA_Development_fnc_isInHouse;
+	_isInHouse = FCLA_Development_fnc_isInHouse;
 
 	if (!_isInHouse) then {
 		_color = [1.0, 0.9, 0.8];
@@ -62,5 +62,5 @@ while {alive _module} do {
 		sleep 1;
 		deletevehicle _particleObj;
 	};
-	if (_delaySended < 0) then {Sleep 15;} else {Sleep 15 + (round random _delaySended);};
+	if (5 < 0) then {Sleep 15;} else {Sleep 15 + (round random 5);};
 };

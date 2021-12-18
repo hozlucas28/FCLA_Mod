@@ -2,49 +2,49 @@
 /********************************************************************************|
 |                                    SONIDOS                                     |
 |********************************************************************************/
-/*
+
 class FCLA_Sparks_1 {
-  name = "FCLA - Chispas 1";
-  sound[] = {"\FCLA_Modules\sounds\Sparks_1.ogg", db+5, 1};
+  name = "FCLA - Chispas (1)";
+  sound[] = {"\FCLA_Modules\sounds\Sparks_1.ogg", "db+5", 1};
   titles[] = {0, ""};
 };
 
 class FCLA_Sparks_2 {
-  name = "FCLA - Chispas 2";
-  sound[] = {"\FCLA_Modules\sounds\Sparks_2.ogg", db+5, 1};
+  name = "FCLA - Chispas (2)";
+  sound[] = {"\FCLA_Modules\sounds\Sparks_2.ogg", "db+5", 1};
   titles[] = {0, ""};
 };
 
 class FCLA_Sparks_3 {
-  name = "FCLA - Chispas 3";
-  sound[] = {"\FCLA_Modules\sounds\Sparks_3.ogg", db+5, 1};
+  name = "FCLA - Chispas (3)";
+  sound[] = {"\FCLA_Modules\sounds\Sparks_3.ogg", "db+5", 1};
   titles[] = {0, ""};
 };
 
 class FCLA_Sparks_4 {
-  name = "FCLA - Chispas 4";
-  sound[] = {"\FCLA_Modules\sounds\Sparks_4.ogg", db+5, 1};
+  name = "FCLA - Chispas (4)";
+  sound[] = {"\FCLA_Modules\sounds\Sparks_4.ogg", "db+5", 1};
   titles[] = {0, ""};
 };
 
 class FCLA_Sparks_5 {
-  name = "FCLA - Chispas 5";
-  sound[] = {"\FCLA_Modules\sounds\Sparks_5.ogg", db+5, 1};
+  name = "FCLA - Chispas (5)";
+  sound[] = {"\FCLA_Modules\sounds\Sparks_5.ogg", "db+5", 1};
   titles[] = {0, ""};
 };
 
 class FCLA_Sparks_6 {
-  name = "FCLA - Chispas 6";
-  sound[] = {"\FCLA_Modules\sounds\Sparks_6.ogg", db+5, 1};
+  name = "FCLA - Chispas (6)";
+  sound[] = {"\FCLA_Modules\sounds\Sparks_6.ogg", "db+5", 1};
   titles[] = {0, ""};
 };
 
 class FCLA_Sparks_7 {
-  name = "FCLA - Chispas 7";
-  sound[] = {"\FCLA_Modules\sounds\Sparks_7.ogg", db+5, 1};
+  name = "FCLA - Chispas (7)";
+  sound[] = {"\FCLA_Modules\sounds\Sparks_7.ogg", "db+5", 1};
   titles[] = {0, ""};
 };
-
+/*
 class FCLA_Wind_Strong {
   name = "FCLA - Viento fuerte";
   sound[] = {\FCLA_Modules\sounds\Wind_Strong.ogg, 1, 1};
@@ -113,19 +113,19 @@ class FCLA_Dust_Whirlwinds_3 {
 
 class FCLA_Short_Gust_1 {
   name = "FCLA - Ráfaga corta de viento (1)";
-  sound[] = {"\FCLA_Modules\sounds\Short_Gust_1.ogg", db+5, 1};
+  sound[] = {"\FCLA_Modules\sounds\Short_Gust_1.ogg", "db+5", 1};
   titles[] = {0, ""};
 };
 
 class FCLA_Short_Gust_2 {
   name = "FCLA - Ráfaga corta de viento (2)";
-  sound[] = {"\FCLA_Modules\sounds\Short_Gust_2.ogg", db+5, 1};
+  sound[] = {"\FCLA_Modules\sounds\Short_Gust_2.ogg", "db+5", 1};
   titles[] = {0, ""};
 };
 
 class FCLA_Short_Gust_3 {
   name = "FCLA - Ráfaga corta de viento (3)";
-  sound[] = {"\FCLA_Modules\sounds\Short_Gust_3.ogg", db+5, 1};
+  sound[] = {"\FCLA_Modules\sounds\Short_Gust_3.ogg", "db+5", 1};
   titles[] = {0, ""};
 };
 
