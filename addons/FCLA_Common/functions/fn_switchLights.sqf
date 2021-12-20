@@ -10,16 +10,17 @@
  *            0: Centro del radio de búsqueda. <POSITION|UNIT|OBJECT|VEHICLE|GROUP|MARKER|LOCATION>
  *            1: Radio de búsqueda. <NUMBER>
  *            2: ¿Encender ó apagar?. <"Off"|"On">
+ *            3: ¿Excluir vehículos?, opcional <BOOL> (default: true)
  *
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
  *
  * Example:
- *            //Apagar luces.
+ *            //Apagar luces, vehículos excluidos.
  *            [player, 500, "Off"] call FCLA_Common_fnc_switchLights;
  *
- *            //Encender luces.
- *            [getPos player, 500, "On"] call FCLA_Common_fnc_switchLights;
+ *            //Encender luces, vehículos incluidos.
+ *            [getPos player, 500, "On", false] call FCLA_Common_fnc_switchLights;
  *
  * Note:
  * Si deseas encender/apagar todas las luces del mapa en el radio de
@@ -32,7 +33,8 @@
 params [
         ["_center", objNull, [], [0, 3]],
         ["_rad", 0, [0], 0],
-        ["_state", "", [""], 0]
+        ["_state", "", [""], 0],
+        ["_excludeVehicles", true, [true], 0]
        ];
 
 
@@ -40,6 +42,10 @@ params [
 //Verificar argumento.
 _rad = if (_rad <= -1) then {worldSize;} else {_rad;};
 _state = toUpper _state;
+_centerPos = [_center] call CBA_fnc_getPos;
+_lampsInRad = nearestObjects [_centerPos, ["BUILDING"], _rad];
+_vehiclesInRad = nearestObjects [_centerPos, ["ALLVEHICLES"], _rad];
+_lightsToSwitch = if (!_excludeVehicles) then {_lampsInRad + _vehiclesInRad;} else {_lampsInRad;};
 if ((_rad < -1) || ((_state != "OFF") && (_state != "ON"))) exitWith {false};
 
 
@@ -50,9 +56,16 @@ _state = switch (_state) do {
   case "ON": {true};
 };
 
+//Evitar que la IA vuelva a prender las luces.
+if (!_excludeVehicles) then {
+  _crews = [];
+  {
+    _vehicleCrew = crew _x;
+    _crews pushBack _vehicleCrew;
+  } forEach _vehiclesInRad;
+  if (_state) then {{_x enableAI "LIGHTS";} forEach _crews;} else {{_x disableAI "LIGHTS";} forEach _crews;};
+};
 
 //Encender/Apagar luces.
-_centerPos = [_center] call CBA_fnc_getPos;
-_lightsToSwitch = nearestObjects [_centerPos, ["BUILDING"], _rad];
-["FCLA_Switch_Lamps", [_lightsToSwitch, _state]] call CBA_fnc_globalEvent;
+["FCLA_Switch_Lights", [_lightsToSwitch, _state]] call CBA_fnc_globalEventJIP;
 true

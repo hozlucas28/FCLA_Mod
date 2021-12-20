@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Asigna un eventhandler del tipo 'TFAR_fnc_addEventHandler', que se ejecutara
- * cuando se transmita por radio.
+ * Asigna un controlador de evento del tipo 'TFAR_fnc_addEventHandler', que
+ * se ejecutara cuando se transmita por radio.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

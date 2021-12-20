@@ -7,6 +7,7 @@
 #include "\FCLA_Modules\3DEN\modules\Ambient_Fired.hpp"
 #include "\FCLA_Modules\3DEN\modules\Building_Traits.hpp"
 #include "\FCLA_Modules\3DEN\modules\Create_Injuries.hpp"
+#include "\FCLA_Modules\3DEN\modules\EMP.hpp"
 #include "\FCLA_Modules\3DEN\modules\Hack_Device.hpp"
 #include "\FCLA_Modules\3DEN\modules\ID.hpp"
 #include "\FCLA_Modules\3DEN\modules\Introduction.hpp"

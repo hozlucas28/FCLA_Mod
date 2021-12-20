@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Asigna eventhandlers del tipo 'addPlayerEventHandler' para que se consuma
- * la batería de la visión nocturna.
+ * Asigna controladores de eventos del tipo 'addPlayerEventHandler' para que se
+ * consuma la batería de la visión nocturna.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

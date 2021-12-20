@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Asigna un eventhandler del tipo 'addPlayerEventHandler' para colocarle la
- * insignia al jugador.
+ * Asigna un controlador de evento del tipo 'addPlayerEventHandler' para
+ * colocarle la insignia al jugador.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

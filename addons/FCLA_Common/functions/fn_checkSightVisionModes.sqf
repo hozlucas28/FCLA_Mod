@@ -3,21 +3,23 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si el arma que tiene la unidad cuenta con visión nocturna/térmica.
+ * Verifica si la mira del arma, que tiene la unidad, cuenta con
+ * visión nocturna/térmica.
  *
  * Arguments:
  *            0: Unidad que posee el arma. <UNIT>
- *            1: ¿Excluir visión térmica?, opcional. <BOOL> (default: false)
+ *            1: Arma que posee la unidad a verificar. <STRING>
+ *            2: ¿Excluir visión térmica?, opcional. <BOOL> (default: false)
  *
  * Return Value:
- * ¿El arma cuenta con visión nocturna/térmica? <BOOL>
+ * ¿La mira del arma cuenta con visión nocturna/térmica? <BOOL>
  *
  * Examples:
  *             //Visión térmica incluida.
- *             [player] call FCLA_Common_fnc_checkWeaponVisionModes;
+ *             [player, currentWeapon player] call FCLA_Common_fnc_checkSightVisionModes;
  *
  *             //Visión térmica excluida.
- *             [player, true] call FCLA_Common_fnc_checkWeaponVisionModes;
+ *             [player, currentWeapon player, true] call FCLA_Common_fnc_checkSightVisionModes;
  *
  * Note:
  * Funciona con las armas principales, secundarias, los lanzables (ATs, AA, etc.)
@@ -29,13 +31,13 @@
 //Variables de referencia.
 params [
         ["_unit", objNull, [objNull, teamMemberNull], 0],
+        ["_weapon", "", [""], 0],
         ["_excludeTi", false, [true], 0]
        ];
 
 
 
 //Verificar argumentos.
-_weapon = currentWeapon _unit;
 _weaponNotExist = !(isClass (configFile >> "CfgWeapons" >> _weapon));
 if ((isNull _unit) || (_weaponNotExist)) exitWith {false};
 

@@ -47,6 +47,7 @@ class CfgFunctions {
 	class FCLA_Modules {
 		#include "\FCLA_Modules\3DEN\CfgFunctions.hpp"
 		#include "\FCLA_Modules\Curator\CfgFunctions.hpp"
+		#include "\FCLA_Modules\EventHandlers\CfgFunction.hpp"
 	};
 };
 

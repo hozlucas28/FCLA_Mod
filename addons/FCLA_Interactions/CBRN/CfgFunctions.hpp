@@ -4,13 +4,13 @@
 |********************************************************************************/
 
 class CBRN {
-  class eventHandlerCBRN {
-    file = "\FCLA_Interactions\CBRN\functions\CBA_Eventhandlers\fn_eventhandler.sqf";
+  class setEventHandlerCBRN {
+    file = "\FCLA_Interactions\CBRN\functions\CBA_EventHandlers\fn_setEventHandler.sqf";
     postInit = 1;
   };
 
-  class playerEventHandlerCBRN {
-    file = "\FCLA_Interactions\CBRN\functions\CBA_Eventhandlers\fn_playerEventHandler.sqf";
+  class setPlayerEventHandlerCBRN {
+    file = "\FCLA_Interactions\CBRN\functions\CBA_EventHandlers\fn_setPlayerEventHandler.sqf";
     postInit = 1;
   };
 
@@ -39,8 +39,8 @@ class CBRN {
     postInit = 1;
   };
 
-  class killedCBRNEH {file = "\FCLA_Interactions\CBRN\functions\BIS_Eventhandlers\fn_Killed.sqf";};
-  class respawnCBRNEH {file = "\FCLA_Interactions\CBRN\functions\BIS_Eventhandlers\fn_Respawn.sqf";};
+  class killedCBRNEH {file = "\FCLA_Interactions\CBRN\functions\BIS_EventHandlers\fn_Killed.sqf";};
+  class respawnCBRNEH {file = "\FCLA_Interactions\CBRN\functions\BIS_EventHandlers\fn_Respawn.sqf";};
 
   class conditionActivateOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Backpack\fn_conditionActivateOxygen.sqf";};
   class conditionDesactivateOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Backpack\fn_conditionDesactivateOxygen.sqf";};

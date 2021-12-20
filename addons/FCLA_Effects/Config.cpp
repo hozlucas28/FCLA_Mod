@@ -95,7 +95,7 @@ class CfgVehicles {
 
 
 /********************************************************************************|
-|                                 EVENTHANDLERS                                  |
+|                            CONTROLADORES DE EVENTOS                            |
 |********************************************************************************/
 
 class Extended_Engine_EventHandlers {

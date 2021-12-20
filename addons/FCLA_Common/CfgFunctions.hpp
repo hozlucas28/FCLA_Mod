@@ -4,15 +4,15 @@
 |********************************************************************************/
 
 class FCLA_Common_Functions {
-  class eventHandlers {
-    file = "\FCLA_Common\functions\CBA_Eventhandlers\fn_eventHandlers.sqf"
+  class EventHandlers {
+    file = "\FCLA_Common\functions\CBA_EventHandlers\fn_setEventHandlers.sqf"
     postInit = 1;
   };
 
   class hackDevice {file = "\FCLA_Common\functions\Hack_Device\fn_hackDevice.sqf";};
   class changeRadioRange {file = "\FCLA_Common\functions\fn_changeRadioRange.sqf";};
   class checkUnitTrait {file = "\FCLA_Common\functions\fn_checkUnitTrait.sqf";};
-  class checkWeaponVisionModes {file = "\FCLA_Common\functions\fn_checkWeaponVisionModes.sqf";};
+  class checkSightVisionModes {file = "\FCLA_Common\functions\fn_checkSightVisionModes.sqf";};
   class createLoadout {file = "\FCLA_Common\functions\fn_createLoadout.sqf";};
   class getCleanName {file = "\FCLA_Common\functions\fn_getCleanName.sqf";};
   class getDoorInfo {file = "\FCLA_Common\functions\fn_getDoorInfo.sqf";};

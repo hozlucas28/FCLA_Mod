@@ -4,8 +4,8 @@
 |********************************************************************************/
 
 class Night_Vision_Battery {
-  class playerEventHandlersNVB {
-    file = "\FCLA_Interactions\Night_Vision_Battery\functions\CBA_Eventhandlers\fn_playerEventHandlers.sqf";
+  class setPlayerEventHandlersNVB {
+    file = "\FCLA_Interactions\Night_Vision_Battery\functions\CBA_EventHandlers\fn_setPlayerEventHandlers.sqf";
     postInit = 1;
   };
 

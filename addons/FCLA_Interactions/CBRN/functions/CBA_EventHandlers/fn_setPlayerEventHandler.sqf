@@ -3,9 +3,10 @@
  * Author: hozlucas28
  *
  * Description:
- * Asigna un eventhandler del tipo 'addPlayerEventHandler' para desactivar el
- * ruido y la interfaz del detector químico, cuando no se encuentre en su
- * inventario. Se revisara cada vez que se modifique el inventario.
+ * Asigna un controlador de evento del tipo 'addPlayerEventHandler' para
+ * desactivar el ruido y la interfaz del detector químico, cuando no se
+ * encuentre en su inventario. Se revisara cada vez que se modifique el
+ * inventario.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

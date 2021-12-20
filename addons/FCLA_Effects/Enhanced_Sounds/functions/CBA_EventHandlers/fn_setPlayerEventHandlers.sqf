@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Asigna dos eventhandlers del tipo 'addPlayerEventHandler', donde uno
- * reproduce un sonido al apuntar con el arma y el otro cuando se cambia
+ * Asigna dos controladores de eventos del tipo 'addPlayerEventHandler', donde
+ * uno reproduce un sonido al apuntar con el arma y el otro cuando se cambia
  * el modo de visión (nocturna/térmica).
  *
  * Public: [No]

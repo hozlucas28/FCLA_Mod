@@ -35,7 +35,7 @@ _this spawn {
 				_particleObj setParticleRandom [1, [0.05, 0.05, 0.1], [5, 5, 3], 0, 0.0025, [0, 0, 0, 0], 0, 0];
 				_particleObj setParticleParams [["\A3\data_f\proxies\muzzle_flash\muzzle_flash_silencer.p3d", 1, 0, 1], "", "SpaceObject", 1, 1 + (random 2), [0, 0, _sparkPos], [0, 0, 0], 0, 20, 7.9, 0, [0.3, 0.3, 0.05], [[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 0]], [0.08], 1, 0, "", "", _module, 0, true, 0.3, [[0, 0, 0, 0]]];
 				[_module, [_randomSound, 200, 1, false, 0]] remoteExec ["say3D", 0, true];
-				Sleep (0.1 + _randomNumber);
+				sleep (0.1 + _randomNumber);
 				deleteVehicle _particleObj;
 			} else {
 				_modulePos = getPos _module;
@@ -46,12 +46,12 @@ _this spawn {
 				_particleObj setParticleRandom [1, [0.1, 0.1, 0.1], [0, 0, 0], 0, 0.25, [0, 0, 0, 0], 0, 0];
 				_particleObj setParticleParams [["\A3\data_f\proxies\muzzle_flash\muzzle_flash_silencer.p3d", 1, 0, 1], "", "SpaceObject", 1, 1 + (random 2), [0, 0, _sparkPos], [0, 0, 0], 0, 15, 7.9, 0, [0.3, 0.3, 0.05], [[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 0]], [0.08], 1, 0, "", "", _module, 0, true, 0.3, [[0, 0, 0, 0]]];
 				[_module, [_randomSound, 200, 1, false, 0]] remoteExec ["say3D", 0, true];
-				Sleep _randomDelay;
+				sleep _randomDelay;
 				deleteVehicle _particleObj;
 			};
-			Sleep _randomDelay;
+			sleep _randomDelay;
 			_numberOfLoops = _numberOfLoops + 1;
 		};
-		Sleep _delayEffect;
+		sleep _delayEffect;
 	};
 };

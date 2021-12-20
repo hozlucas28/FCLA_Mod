@@ -3,9 +3,9 @@
  * Author: hozlucas28
  *
  * Description:
- * Asigna un eventhandler del tipo 'addPlayerEventHandler' para remplazar un
- * item si este cumple con la condición. Se revisara cada vez que se modifique
- * el inventario.
+ * Asigna un controlador de evento del tipo 'addPlayerEventHandler' para
+ * remplazar un item si este cumple con la condición. Se revisara cada vez que
+ * se modifique el inventario.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

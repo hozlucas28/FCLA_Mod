@@ -4,8 +4,8 @@
 |********************************************************************************/
 
 class Patches {
-  class playerEventHandlerInsignias {
-    file = "\FCLA_Interactions\Insignias\functions\CBA_Eventhandlers\fn_playerEventHandler.sqf";
+  class setPlayerEventHandlerInsignias {
+    file = "\FCLA_Interactions\Insignias\functions\CBA_EventHandlers\fn_setPlayerEventHandler.sqf";
     postInit = 1;
   };
 

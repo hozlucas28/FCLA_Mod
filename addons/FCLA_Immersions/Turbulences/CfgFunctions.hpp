@@ -4,8 +4,8 @@
 |********************************************************************************/
 
 class Turbulences {
-  class playerEventHandlerTurbulences {
-    file = "\FCLA_Immersions\Turbulences\functions\CBA_Eventhandlers\fn_playerEventHandler.sqf";
+  class setPlayerEventHandlerTurbulences {
+    file = "\FCLA_Immersions\Turbulences\functions\CBA_EventHandlers\fn_setPlayerEventHandler.sqf";
     postInit = 1;
   };
 

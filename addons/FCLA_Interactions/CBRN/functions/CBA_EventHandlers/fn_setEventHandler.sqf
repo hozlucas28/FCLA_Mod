@@ -3,7 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un eventhandler que permite encender/apagar la ducha descontaminante.
+ * Crea un controlador de evento que permite encender/apagar la ducha
+ * descontaminante.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

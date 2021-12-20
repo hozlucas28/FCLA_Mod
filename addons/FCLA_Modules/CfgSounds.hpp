@@ -106,6 +106,14 @@ class FCLA_Wind_Gust_7 {
   titles[] = {0, ""};
   duration = 16;
 };
+
+class FCLA_Radiation {
+  name = "FCLA - Radiación";
+  sound[] = {\FCLA_Modules\sounds\Radiation.ogg, "db+0.7", 1};
+  titles[] = {0, ""};
+  duration = 4;
+};
+
 /*
 class FCLA_Dust_Whirlwinds_1 {
   name = "FCLA - Torbellino de polvo (1)";
@@ -143,11 +151,7 @@ class FCLA_Short_Gust_3 {
   titles[] = {0, ""};
 };
 
-class FCLA_Radiation_Meter {
-  name = "FCLA - Medidor de radiación";
-  sound[] = {\FCLA_Modules\sounds\Radiation_Meter.ogg, 0.7, 1};
-  titles[] = {0, ""};
-};
+
 
 class FCLA_Earthquake {
   name = "FCLA - Terremoto";

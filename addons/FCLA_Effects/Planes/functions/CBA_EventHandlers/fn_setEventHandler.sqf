@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un eventhandler para el uso de las funciones "Planes".
+ * Crea un controlador de evento para el uso de las funciones "Planes".
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

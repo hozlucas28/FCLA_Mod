@@ -44,6 +44,14 @@ class FCLA_Module_Switch_Lights: Module_F {
 				};
 			};
 		};
+
+    class FCLA_Exclude_Vehicles: CheckBox {
+      tooltip = "";
+      typeName = "BOOL";
+      property = "FCLA_Exclude_Vehicles";
+      displayName = "¿Excluir vehículos?";
+      defaultValue = "false";
+		};
 		class ModuleDescription: ModuleDescription {};
 	};
 

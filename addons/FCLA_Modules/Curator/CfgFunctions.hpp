@@ -9,6 +9,11 @@ class Curator {
     postInit = 1;
   };
 
+  class initEMPCurator {
+    file = "\FCLA_Modules\Curator\functions\EMP\fn_initEMP.sqf";
+    postInit = 1;
+  };
+
   class addDragAndCarryCurator {
     file = "\FCLA_Modules\Curator\functions\fn_addDragAndCarry.sqf";
     postInit = 1;
@@ -102,6 +107,7 @@ class Curator {
   class spawnFirefliesCurator {file = "\FCLA_Modules\Curator\functions\Effects\fn_spawnFireflies.sqf";};
   class spawnSparksCurator {file = "\FCLA_Modules\Curator\functions\Effects\fn_spawnSparks.sqf";};
   class spawnWindGustCurator {file = "\FCLA_Modules\Curator\functions\Effects\fn_spawnWindGust.sqf";};
+  class spawnEMPCurator {file = "\FCLA_Modules\Curator\functions\EMP\fn_spawnEMP.sqf";};
   class attachAndDetachCurator {file = "\FCLA_Modules\Curator\functions\fn_attachAndDetach.sqf";};
   class hideCurator {file = "\FCLA_Modules\Curator\functions\fn_hideCurator.sqf";};
   class teleportCurator {file = "\FCLA_Modules\Curator\functions\fn_teleportCurator.sqf";};

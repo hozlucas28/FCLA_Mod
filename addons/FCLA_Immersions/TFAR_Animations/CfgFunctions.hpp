@@ -4,8 +4,8 @@
 |********************************************************************************/
 
 class TFAR_Animations {
-  class eventHandlerTFAR {
-    file = "\FCLA_Immersions\TFAR_Animations\functions\TFAR_Eventhandlers\fn_eventhandler.sqf";
+  class setEventHandlerTFAR {
+    file = "\FCLA_Immersions\TFAR_Animations\functions\TFAR_EventHandlers\fn_setEventHandler.sqf";
     postInit = 1;
   };
 

@@ -141,7 +141,7 @@ class CfgWeapons {
 
 
 /********************************************************************************|
-|                                 EVENTHANDLERS                                  |
+|                            CONTROLADORES DE EVENTOS                            |
 |********************************************************************************/
 
 class Extended_PreInit_EventHandlers {

@@ -124,7 +124,7 @@ class CfgWeapons {
 
 
 /********************************************************************************|
-|                                 EVENTHANDLERS                                  |
+|                            CONTROLADORES DE EVENTOS                            |
 |********************************************************************************/
 
 class Extended_Killed_Eventhandlers {

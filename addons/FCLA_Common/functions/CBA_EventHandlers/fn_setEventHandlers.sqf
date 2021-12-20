@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea eventhandlers públicos.
+ * Crea controladores de eventos públicos.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -28,4 +28,4 @@
 ["FCLA_Random_Lip", {(_this select 0) setRandomLip (_this select 1);}] call CBA_fnc_addEventHandler;
 ["FCLA_Radio_Frequencies", {call FCLA_Common_fnc_setRadioFrequencies;}] call CBA_fnc_addEventHandler;
 ["FCLA_GUI_Message", {_this spawn {[_this select 1, _this select 0] call BIS_fnc_guiMessage;};}] call CBA_fnc_addEventHandler;
-["FCLA_Switch_Lamps", {{[_x, _this select 1] call BIS_fnc_switchLamp;} forEach (_this select 0);}] call CBA_fnc_addEventHandler;
+["FCLA_Switch_Lights", {{[_x, _this select 1] call BIS_fnc_switchLamp;} forEach (_this select 0);}] call CBA_fnc_addEventHandler;

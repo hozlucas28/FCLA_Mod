@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Asigna un eventhandler del tipo 'addPlayerEventHandler' para aplicar
+ * Asigna un controlador de evento del tipo 'addPlayerEventHandler' para aplicar
  * turbulencias en el avión/helicóptero cuando entre/salga de un vehículo.
 
  * Public: [No]

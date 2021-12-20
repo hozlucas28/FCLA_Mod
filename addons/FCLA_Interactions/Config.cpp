@@ -162,7 +162,7 @@ class ACE_Medical_Treatment_Actions {
 
 
 /********************************************************************************|
-|                                 EVENTHANDLERS                                  |
+|                            CONTROLADORES DE EVENTOS                            |
 |********************************************************************************/
 
 class Extended_InitPost_EventHandlers {

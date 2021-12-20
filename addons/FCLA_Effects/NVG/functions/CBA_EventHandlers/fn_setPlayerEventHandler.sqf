@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Asigna dos eventhandlers del tipo 'addPlayerEventHandler', que modifican el
- * color de la visión nocturna.
+ * Asigna dos controladores de eventos del tipo 'addPlayerEventHandler', que
+ * modifican el color de la visión nocturna.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

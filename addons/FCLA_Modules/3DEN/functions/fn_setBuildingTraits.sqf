@@ -55,7 +55,7 @@ switch (_mode) do {
       while {(_module getVariable ["FCLA_Old_Building", objNull]) == _building} do {
         _isNotDraggingModule = !(_module getVariable ["FCLA_isDragged", false]);
         if (_isNotDraggingModule) then {_module set3DENAttribute ["position", _buildingPos];};
-        Sleep 0.1;
+        sleep 0.1;
       };
     };
   };
