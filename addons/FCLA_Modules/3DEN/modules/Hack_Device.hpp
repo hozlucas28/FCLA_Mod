@@ -26,7 +26,7 @@ class FCLA_Module_Hack_Device: Module_F {
 
 	class Attributes: AttributesBase {
     class FCLA_Device_ID: Edit {
-      tooltip = "Nombre personalizado para poder reconocer al dispositivo, cuando se le informe a los Zeus que ha sido hackeado.";
+      tooltip = "Nombre personalizado para poder reconocer al dispositivo, cuando se le informe a los Zeus que ha sido hackeado.\n• Si no se define un identificador no se informara a los Zeus.";
       typeName = "STRING";
       property = "FCLA_Device_ID";
       displayName = "Identificador";

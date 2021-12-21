@@ -61,9 +61,9 @@ if ((_minimumShots <= 0) || (_maximumShots <= 0) || (_minimumDelay <= 0) || (_ma
 	_conditions = {
 		_isAlive = alive _this;
 		_areCrewAlive = ({alive _x} count (crew _this)) != 0;
-		_AmbientFireStatus = _this getVariable ["FCLA_Ambient_Fire", false];
+		_ambientFireStatus = _this getVariable ["FCLA_Ambient_Fire", false];
 		_areNotPlayersInCrew = ({[_x, false] call ACE_Common_fnc_isPlayer} count (crew _this)) == 0;
-		(_isAlive) && (_areCrewAlive) && (_AmbientFireStatus) && (_areNotPlayersInCrew)
+		(_isAlive) && (_areCrewAlive) && (_ambientFireStatus) && (_areNotPlayersInCrew)
 	};
 
 

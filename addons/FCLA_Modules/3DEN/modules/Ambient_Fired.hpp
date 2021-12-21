@@ -76,6 +76,6 @@ class FCLA_Module_Ambient_Fired: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Permite forzar los vehículos sincronizados al módulo a disparar hacia el cielo.<br/><br/>• El módulo solo puede estar sincronizado a un único vehículo.<br/>• Si desea detener los disparos ambientales de un vehículo asignele la variable de tipo objeto 'FCLA_Ambient_Fire' con el valor 'true' ó 'nil'."};
+		description[] =	{"Permite forzar los vehículos sincronizados al módulo a disparar hacia el cielo.<br/><br/>• El módulo solo puede estar sincronizado a un único vehículo.<br/>• Si desea detener los disparos ambientales bastará con borrar el módulo correspondiente."};
 	};
 };

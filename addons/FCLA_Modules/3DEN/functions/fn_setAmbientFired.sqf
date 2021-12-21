@@ -39,5 +39,8 @@ if ((_hasNotWeapons) || (_hasNotMagazines)) exitWith {["¡Error! El/Un módulo '
 [_vehicle, _weaponClass, _ammoClass, [_minimumShots, _maximumShots], [_minimumDelay, _maximumDelay]] call FCLA_Common_fnc_setAmbientFired;
 
 
-//Eliminar módulo.
-deleteVehicle _module;
+//Detener disparos.
+[{(!alive (_this select 0)) || (!alive (_this select 1)) || !((_this select 1) getVariable ["FCLA_Ambient_Fire", false])}, {
+  deleteVehicle (_this select 0);
+  (_this select 1) setVariable ["FCLA_Ambient_Fire", nil, true];
+}, [_module, _vehicle]] call CBA_fnc_waitUntilAndExecute;

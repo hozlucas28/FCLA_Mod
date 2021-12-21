@@ -11,6 +11,7 @@
 #include "\FCLA_Modules\3DEN\modules\Hack_Device.hpp"
 #include "\FCLA_Modules\3DEN\modules\ID.hpp"
 #include "\FCLA_Modules\3DEN\modules\Introduction.hpp"
+#include "\FCLA_Modules\3DEN\modules\Jammer.hpp"
 #include "\FCLA_Modules\3DEN\modules\Plate_Number.hpp"
 #include "\FCLA_Modules\3DEN\modules\Play_Custom_Sound.hpp"
 #include "\FCLA_Modules\3DEN\modules\Play_Sound.hpp"

@@ -23,7 +23,7 @@
  *             //Opcional definidos.
  *             [player, true, false, false, true] call FCLA_Common_fnc_setPTSD;
  *
- * Note:
+ * Notes:
  * Se recomienda utilizar esta función a travez del evento
  * personalizado "FCLA_Set_PTSD".
  *

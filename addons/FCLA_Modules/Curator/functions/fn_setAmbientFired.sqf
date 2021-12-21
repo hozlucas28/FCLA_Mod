@@ -14,7 +14,7 @@
   _hasNotMagazines = (count (magazines _attachedObject)) <= 0;
   if ((isNull _attachedObject) || !(_attachedObject in vehicles) || (_hasNotWeapons) || (_hasNotMagazines)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UN VEHÍCULO COMPATIBLE"] call ZEN_Common_fnc_showMessage;};
   if (_attachedObject getVariable ["FCLA_Ambient_Fire", false]) exitWith {
-    _attachedObject setVariable ["FCLA_Ambient_Fire", false, true];
+    _attachedObject setVariable ["FCLA_Ambient_Fire", nil, true];
     ["LOS DISPAROS AMBIENTALES DEL VEHÍCULO SE HAN DESACTIVADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   };
 

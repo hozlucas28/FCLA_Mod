@@ -23,6 +23,7 @@ class 3DEN {
   class setBuildingTraits3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setBuildingTraits.sqf";};
   class setID3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setID.sqf";};
   class setIntroduction3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setIntroduction.sqf";};
+  class setJammer3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setJammer.sqf";};
   class setPlateNumber3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setPlateNumber.sqf";};
   class setRadio3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setRadio.sqf";};
   class showSubtitle3DEN {file = "\FCLA_Modules\3DEN\functions\fn_showSubtitle.sqf";};

@@ -54,6 +54,11 @@ class Curator {
     postInit = 1;
   };
 
+  class setJammerCurator {
+    file = "\FCLA_Modules\Curator\functions\fn_setJammer.sqf";
+    postInit = 1;
+  };
+
   class setPlateNumberCurator {
     file = "\FCLA_Modules\Curator\functions\fn_setPlateNumber.sqf";
     postInit = 1;

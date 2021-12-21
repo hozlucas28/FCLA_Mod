@@ -15,7 +15,7 @@
  * Example:
  * [Civil_1] call FCLA_Common_fnc_hideSubtitles;
  *
- * Note:
+ * Notes:
  * Se recomienda utilizar esta función a travez del evento
  * personalizado "FCLA_Hide_Subtitles".
  *

@@ -59,7 +59,3 @@ addMissionEventHandler ["HandleDisconnect", {
     profileNamespace setVariable ["FCLA_Saved_Loadouts", _savedLoadouts];
   };
 }, [_missionID]];
-
-
-//Eliminar módulo.
-deleteVehicle _module;

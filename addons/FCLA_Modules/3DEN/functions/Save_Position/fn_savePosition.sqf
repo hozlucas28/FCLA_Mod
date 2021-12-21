@@ -63,7 +63,3 @@ addMissionEventHandler ["HandleDisconnect", {
     missionNamespace setVariable ["FCLA_Players_Saved_Position_Data", _playersSavedPositionData];
   };
 }, [_savePosAndDirState, _saveLoadoutState, _saveVehicleState]];
-
-
-//Eliminar módulo.
-deleteVehicle _module;

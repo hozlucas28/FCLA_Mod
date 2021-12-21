@@ -8,7 +8,8 @@
  * Arguments:
  *            0: Dispositivo al que se le asociara la acción. <OBJECT|VEHICLE>
  *            1: Título de la acción, opcional. <STRING> (default: "Hackear dispositivo")
- *            2: ¿Se necesita un dispositivo de hackeo?, opcional. <BOOL> (default: true)
+ *            2: Imagen de la acción, opcional. <STRING> (default: "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa")
+ *            3: ¿Se necesita un dispositivo de hackeo?, opcional. <BOOL> (default: true)
  *
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
@@ -18,9 +19,12 @@
  *            [Laptop_1] call FCLA_Common_fnc_hackDevice;
  *
  *             //Opcionales definidos.
- *            [Laptop_1, "Título personalizado", false] call FCLA_Common_fnc_hackDevice;
+ *            [Laptop_1, "Título personalizado", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_requestleadership_ca.paa", false] call FCLA_Common_fnc_hackDevice;
  *
- * Note:
+ * Notes:
+ * Cuando el dispositivo esta siendo hackeado se le asigna la
+ * variable de tipo objeto "FCLA_Hacking" con el valor <true>.
+ *
  * Una vez el dispositivo sea hackeado se le asociara la variable de
  * tipo objeto "FCLA_Hacked" con el valor <true>. Por defecto la variable de
  * tipo objeto mencionada no tendra valor, es decir, nulo.
@@ -32,6 +36,7 @@
 params [
         ["_device", objNull, [objNull], 0],
         ["_title", "Hackear dispositivo", [""], 0],
+        ["_actionPicture", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa", [""], 0],
         ["_needHackingDevice", true, [true], 0]
        ];
 if ((isNull _device) || (_title == "")) exitWith {false};
@@ -42,8 +47,8 @@ if ((isNull _device) || (_title == "")) exitWith {false};
 [
 	_device,
 	_title,
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
+	_actionPicture,
+	_actionPicture,
 	"(alive _target) && (_this distance _target <= 2.5) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_this, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
 	"(alive _target) && (_caller distance _target <= 2.5) && ((!(_arguments select 0)) || ([_caller, 'FCLA_Hacking_Device'] call BIS_fnc_hasItem)) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_caller, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
 	{},

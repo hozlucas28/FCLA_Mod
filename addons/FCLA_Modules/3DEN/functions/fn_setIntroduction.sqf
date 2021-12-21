@@ -33,7 +33,3 @@ if (((_title == "") && (_subtitle == "") && (_introductoryVideo == "")) || !(_sh
 
 //Reproducir introducción.
 [_title, _subtitle, _introductoryVideo, _showOnReconnect] call FCLA_Common_fnc_setIntroduction;
-
-
-//Eliminar módulo.
-deleteVehicle _module;

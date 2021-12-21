@@ -23,7 +23,7 @@
  *             //Con video introductorio y al reconectarse se mostrara únicamente el título y subtítulo.
  *             ["Mi título", "subtítulo", "\FCLA_Data\Videos\Community_Presentation_1.ogv", "Title_and_subtitle"] call FCLA_Common_fnc_setIntroduction;
  *
- * Note:
+ * Notes:
  * Si los argumentos 0 y/o 1 son <""> únicamente se mostrara el video introductorio.
  *
  * Cuando la introducción comienza se le asigna al jugador la variable de tipo

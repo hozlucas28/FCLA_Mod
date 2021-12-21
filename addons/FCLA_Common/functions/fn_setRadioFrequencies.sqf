@@ -12,7 +12,7 @@
  * Example:
  * call FCLA_Common_fnc_setRadioFrequencies;
  *
- * Note:
+ * Notes:
  * Se recomienda utilizar esta función a travez del evento
  * personalizado "FCLA_Radio_Frequencies".
  *
