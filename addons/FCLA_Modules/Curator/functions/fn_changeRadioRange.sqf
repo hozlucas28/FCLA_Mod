@@ -9,7 +9,7 @@
 ---------------------------------------------------------------------------- */
 
 ["FCLA", "Modificar alcance (TFAR)", {
-  _defaultValue = call TFAR_fnc_getTransmittingDistanceMultiplicator;
+  _defaultValue = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", 1];
   ["ALCANCE DE LAS RADIOS",
 	 [
     ["SLIDER", ["Multiplicador", "Multiplica el alcance que tienen todas las radios de onda corta y larga, incluyendo vehículos.\n• Nota: el multiplicador de alcance, que trae por defecto el mod: Task Force Radio, es 1."],

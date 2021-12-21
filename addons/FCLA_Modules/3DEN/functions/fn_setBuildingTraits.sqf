@@ -25,7 +25,7 @@ if (((_mode != "init") && (_mode != "dragged3DEN") && (_mode != "attributesChang
 //Asignar rasgos.
 switch (_mode) do {
   case "init": {
-    _building = nearestObject [_module, "BUILDING"];
+    _building = nearestObject [_module, "Building"];
     _nearesTerrainObjects = nearestTerrainObjects [_module, [], 50];
     if (((_module distance _building) > 10) || !(_building in _nearesTerrainObjects)) exitWith {["¡Error! El/Un módulo 'Asignar rasgos' no se pudo inicializar con éxito."] call BIS_fnc_error;};
     _building setVariable ["ACE_isRepairFacility", true, true];
@@ -39,7 +39,7 @@ switch (_mode) do {
   };
 
   case "attributesChanged3DEN": {
-    _building = nearestObject [_module, "BUILDING"];
+    _building = nearestObject [_module, "Building"];
     _buildingPos = getPos _building;
     _oldSelectedBuilding = _module getVariable ["FCLA_Old_Building", objNull];
     _nearesTerrainObjects = nearestTerrainObjects [_module, [], 50];

@@ -3,6 +3,20 @@
 |                                    SONIDOS                                     |
 |********************************************************************************/
 
+class FCLA_Deafness {
+  name = "FCLA - Sordera";
+  sound[] = {\FCLA_Modules\sounds\Deafness.ogg, "db+0.2", 1};
+  titles[] = {0, ""};
+  duration = 3;
+};
+
+class FCLA_Radiation {
+  name = "FCLA - Radiación";
+  sound[] = {\FCLA_Modules\sounds\Radiation.ogg, "db+0.7", 1};
+  titles[] = {0, ""};
+  duration = 4;
+};
+
 class FCLA_Sparks_1 {
   name = "FCLA - Chispas (1)";
   sound[] = {"\FCLA_Modules\sounds\Sparks_1.ogg", "db+5", 1};
@@ -107,12 +121,9 @@ class FCLA_Wind_Gust_7 {
   duration = 16;
 };
 
-class FCLA_Radiation {
-  name = "FCLA - Radiación";
-  sound[] = {\FCLA_Modules\sounds\Radiation.ogg, "db+0.7", 1};
-  titles[] = {0, ""};
-  duration = 4;
-};
+
+
+
 
 /*
 class FCLA_Dust_Whirlwinds_1 {
@@ -156,12 +167,6 @@ class FCLA_Short_Gust_3 {
 class FCLA_Earthquake {
   name = "FCLA - Terremoto";
   sound[] = {"\FCLA_Modules\sounds\Earthquake.ogg",0.7, 1};
-  titles[] = {0, ""};
-};
-
-class FCLA_Deafness {
-  name = "FCLA - Sordera";
-  sound[] = {\FCLA_Modules\sounds\Deafness.ogg, 0.2, 1};
   titles[] = {0, ""};
 };
 

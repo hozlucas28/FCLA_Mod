@@ -43,8 +43,8 @@ params [
 _rad = if (_rad <= -1) then {worldSize;} else {_rad;};
 _state = toUpper _state;
 _centerPos = [_center] call CBA_fnc_getPos;
-_lampsInRad = nearestObjects [_centerPos, ["BUILDING"], _rad];
-_vehiclesInRad = nearestObjects [_centerPos, ["ALLVEHICLES"], _rad];
+_lampsInRad = nearestObjects [_centerPos, ["Building"], _rad];
+_vehiclesInRad = nearestObjects [_centerPos, ["LandVehicle", "Air", "Ship"], _rad];
 _lightsToSwitch = if (!_excludeVehicles) then {_lampsInRad + _vehiclesInRad;} else {_lampsInRad;};
 if ((_rad < -1) || ((_state != "OFF") && (_state != "ON"))) exitWith {false};
 
@@ -60,8 +60,8 @@ _state = switch (_state) do {
 if (!_excludeVehicles) then {
   _crews = [];
   {
-    _vehicleCrew = crew _x;
-    _crews pushBack _vehicleCrew;
+    _crewInVehicle = crew _x;
+    for [{_i = 0}, {_i < (count _crewInVehicle)}, {_i = _i + 1}] do {_crews pushBack (_crewInVehicle select _i);};
   } forEach _vehiclesInRad;
   if (_state) then {{_x enableAI "LIGHTS";} forEach _crews;} else {{_x disableAI "LIGHTS";} forEach _crews;};
 };

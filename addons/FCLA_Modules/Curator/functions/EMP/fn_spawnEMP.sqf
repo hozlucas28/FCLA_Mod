@@ -137,21 +137,24 @@ _this spawn {
     [{deleteVehicle _this;}, _particleObjSix, 1] call CBA_fnc_waitAndExecute;
 
     _unitLoadout = getUnitLoadout _x;
-    _unitNVG = (_unitLoadout select 9) select 5;
-    _unitBinocular = (_unitLoadout select 8) select 0;
-    _unitPrimaryWeapon = (_unitLoadout select 0) select 0;
-    _unitHandgunWeapon = (_unitLoadout select 2) select 0;
-    _unitLauncherWeapon = (_unitLoadout select 1) select 0;
+    _unitNVG = hmd _x;
+    _unitBinocular = binocular _x;
+    _unitPrimaryWeapon = primaryWeapon _x;
+    _unitHandgunWeapon = handgunWeapon _x;
+    _unitLauncherWeapon = secondaryWeapon _x;
+    _unitPrimaryWeaponItems = primaryWeaponItems _x;
+    _unitHandgunWeaponItems = handgunItems _x;
+    _unitLauncherWeaponItems = secondaryWeaponItems _x;
     _hasLauncherVisionModes = [_x, _unitLauncherWeapon, false] call FCLA_Common_fnc_checkSightVisionModes;
     _hasBinocularsVisionModes = [_x, _unitBinocular, false] call FCLA_Common_fnc_checkSightVisionModes;
     _hasPrimaryWeaponVisionModes = [_x, _unitPrimaryWeapon, false] call FCLA_Common_fnc_checkSightVisionModes;
     _hasHandgunWeaponVisionModes = [_x, _unitHandgunWeapon, false] call FCLA_Common_fnc_checkSightVisionModes;
-    _launcherSight = (_unitLoadout select 1) select 3;
-    _primaryWeaponSight = (_unitLoadout select 0) select 3;
-    _handgunWeaponSight = (_unitLoadout select 2) select 3;
-    _launcherPointer = (_unitLoadout select 1) select 2;
-    _primaryWeaponPointer = (_unitLoadout select 0) select 2;
-    _handgunWeaponPointer = (_unitLoadout select 2) select 2;
+    _launcherSight = _unitLauncherWeaponItems select 2;
+    _primaryWeaponSight = _unitPrimaryWeaponItems select 2;
+    _handgunWeaponSight = _unitHandgunWeaponItems select 2;
+    _launcherPointer = _unitLauncherWeaponItems select 1;
+    _primaryWeaponPointer = _unitPrimaryWeaponItems select 1;
+    _handgunWeaponPointer = _unitHandgunWeaponItems select 1;
     _itemInGPSSlot = (_unitLoadout select 9) select 1;
     //_itemInRadioSlot = (_unitLoadout select 9) select 2;
     _itemInClockSlot = (_unitLoadout select 9) select 4;
@@ -198,7 +201,7 @@ _this spawn {
     _unitsNotInArea = allUnits select {!(_x inArea [_logic, _rad, _rad, 0, false, _rad])};
     _vehiclesNotInArea = vehicles select {!(_x inArea [_logic, _rad, _rad, 0, false, _rad])};
     _entitiesAffected = _logic getVariable ["FCLA_Entities_Affected", []];
-    _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", call TFAR_fnc_getTransmittingDistanceMultiplicator];
+    _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", 1];
     if (_isNotAlive) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
     if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
