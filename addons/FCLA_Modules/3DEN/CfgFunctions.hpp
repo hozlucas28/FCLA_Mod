@@ -8,6 +8,8 @@ class 3DEN {
   class spawnFireflies3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_spawnFireflies.sqf";};
   class spawnSparks3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_spawnSparks.sqf";};
   class spawnWindGust3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_spawnWindGust.sqf";};
+  class initEMP3DEN {file = "\FCLA_Modules\3DEN\functions\EMP\fn_initEMP.sqf";};
+  class spawnEMP3DEN {file = "\FCLA_Modules\3DEN\functions\EMP\fn_spawnEMP.sqf";};
   class setPosition3DEN {file = "\FCLA_Modules\3DEN\functions\Save_Position\fn_setPosition.sqf";};
   class changeRadioRange3DEN {file = "\FCLA_Modules\3DEN\functions\fn_changeRadioRange.sqf";};
   class createInjuries3DEN {file = "\FCLA_Modules\3DEN\functions\fn_createInjuries.sqf";};

@@ -44,10 +44,10 @@
   _soundObj attachTo [_shower, [0, 0, 0]];
   _objects pushBack _soundObj;
   [{
-    _isNotAlive = !alive (_this select 0);
+    _isNotAlive = !alive _args;
     if (_isNotAlive) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
     if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
-    [_this select 0, "FCLA_Shower", nil, 20, false] call FCLA_Common_fnc_globalSay3D;
+    [_args, "FCLA_Shower", nil, 20, false] call FCLA_Common_fnc_globalSay3D;
   }, 0.5, _soundObj] call CBA_fnc_addPerFrameHandler;
 
 

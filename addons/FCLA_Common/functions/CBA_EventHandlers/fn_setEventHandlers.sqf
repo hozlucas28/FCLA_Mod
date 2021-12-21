@@ -9,8 +9,9 @@
 ---------------------------------------------------------------------------- */
 
 ["FCLA_Change_Radio_Range", {
+  missionNamespace setVariable ["FCLA_TFAR_Multiplicator", _this select 1, true];
   {
-    if (_x isKindOf "AllVehicles") exitWith {_x setVariable ["tf_range", _this select 1, true]};
+    if (_x isKindOf "AllVehicles") exitWith {_x setVariable ["tf_range", _this select 1, true];};
     _x setVariable ["tf_sendingDistanceMultiplicator", _this select 1, true];
     _x setVariable ["tf_receivingDistanceMultiplicator", _this select 1, true];
   } forEach (_this select 0);

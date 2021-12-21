@@ -7,13 +7,13 @@
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
-// playSound "";
+
 ["FCLA_EMP", {
   _this spawn {
     params ["_logic", "_rad"];
     _player = call CBA_fnc_currentUnit;
 
-    if (!(_player inArea [_logic, _rad + 100, _rad + 100, 0, false, _rad + 100])) then {
+    if (!(_player inArea [_logic, _rad + (_rad / 2), _rad + (_rad / 2), 0, false, _rad + (_rad / 2)])) then {
       enableCamShake true;
       addCamShake [1, 50, 27];
     };

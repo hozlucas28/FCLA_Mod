@@ -14,7 +14,7 @@ class FCLA_Module_EMP: Module_F {
   icon = "\FCLA_Modules\3DEN\data\EMP.paa";
   portrait = "\FCLA_Modules\3DEN\data\EMP.paa";
 	category = "FCLA_Modules";
-	function = "FCLA_Modules_fnc_spawnEMP3DEN";
+	function = "FCLA_Modules_fnc_initEMP3DEN";
   is3DEN = NOT_RUN_IN_3DEN;
 	isGlobal = GLOBAL;
   canSetArea = HAS_SETTABLE_AREA;
@@ -26,7 +26,7 @@ class FCLA_Module_EMP: Module_F {
 
 	class Attributes: AttributesBase {
     class FCLA_Jammer: CheckBox {
-      tooltip = "Si se activa se generara un jammer donde ocurrio el pulso electromagnético.\n• Los jammers bloquean/interfieren las señales de comunicación, por lo que las radios se verían afectadas.";
+      tooltip = "Si se activa se generara un jammer donde ocurrio el pulso electromagnético.\n• Los jammers bloquean/interfieren las señales de comunicación, por lo que las radios se verían afectadas. El efecto es total cuando te encuentras a menos de la mitad del tamaño definido.";
       typeName = "BOOL";
       property = "FCLA_Jammer";
       displayName = "¿Se generara un jammer?";

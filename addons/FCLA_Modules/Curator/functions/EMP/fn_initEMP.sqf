@@ -20,7 +20,7 @@
      ],
      false
     ],
-    ["TOOLBOX", ["¿Se generara un jammer?", "Si se activa se generara un jammer donde ocurrio el pulso electromagnético.\n• Los jammers bloquean/interfieren las señales de comunicación, por lo que las radios se verían afectadas."],
+    ["TOOLBOX", ["¿Se generara un jammer?", "Si se activa se generara un jammer donde ocurrio el pulso electromagnético.\n• Los jammers bloquean/interfieren las señales de comunicación, por lo que las radios se verían afectadas. El efecto es total cuando te encuentras a menos de la mitad del radio definido."],
      [
       0,
       1,
@@ -33,12 +33,13 @@
 	 ],
    {
      (_this select 0) params ["_rad", "_jammer"];
+     _rad = [_rad, 0] call BIS_fnc_cutDecimals;
      _jammer = if (_jammer == 0) then {true;} else {false;};
 
      _logic = createAgent ["VirtualAISquad", _this select 1, [], 0, "CAN_COLLIDE"];
      _curatorLogic = getAssignedCuratorLogic player;
      _curatorLogic addCuratorEditableObjects [[_logic], false];
-     
+
      [_logic, _rad, _jammer] spawn FCLA_Modules_fnc_spawnEMPCurator;
      ["PULSO ELECTROMAGNÉTICO GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this select 0] call ZEN_Dialog_fnc_Create;

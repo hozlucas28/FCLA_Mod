@@ -27,13 +27,11 @@ if (((_curDamage / _maxDamage) > 0.5) && !(_unit getVariable ["FCLA_CBRN_autoDam
   ["FCLA_Hint_Silent", [parseText "<t color='#FF0000'>¡La contaminación de tu cuerpo ha llegado a unos niveles muy elevados!</t><br/>Encuentra una ducha descontaminante para librarte del exceso de contaminación."], _unit] call CBA_fnc_targetEvent;
 
   [{
-    params ["_args", "_idPFH"];
-    _args params ["_unit"];
-    if (!(alive _unit) || {_unit getVariable ["FCLA_CBRN_Enable_Damage", false]}) exitWith {[_idPFH] call CBA_fnc_removePerFrameHandler;};
-    _newDamage = ((_unit getVariable ["FCLA_CBRN_Damage", 0]) + 0.0277777777777777) min 100;
-    _unit setVariable ["FCLA_CBRN_Damage", _newDamage];
-    if (_newDamage >= 100) then {_unit setDamage 1;};
-  }, 1, [_unit]] call CBA_fnc_addPerFrameHandler;
+    if (!(alive _args) || {_args getVariable ["FCLA_CBRN_Enable_Damage", false]}) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
+    _newDamage = ((_args getVariable ["FCLA_CBRN_Damage", 0]) + 0.0277777777777777) min 100;
+    _args setVariable ["FCLA_CBRN_Damage", _newDamage];
+    if (_newDamage >= 100) then {_args setDamage 1;};
+  }, 1, _unit] call CBA_fnc_addPerFrameHandler;
 };
 
 

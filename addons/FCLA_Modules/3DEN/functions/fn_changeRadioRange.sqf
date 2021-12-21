@@ -27,7 +27,8 @@ if (_moreThanOne) exitWith {["FCLA_Module_Radio_Range", "• MÓDULO: MODIFICAR 
 
 //Modificar alcance.
 _multiplier = [_module getVariable ["FCLA_Multiplier", 1], 0] call BIS_fnc_cutDecimals;
-{_x setVariable ["tf_range", _multiplier, true]} forEach vehicles;
+missionNamespace setVariable ["FCLA_TFAR_Multiplicator", _multiplier, true];
+{_x setVariable ["tf_range", _multiplier, true];} forEach vehicles;
 
 {
   _x setVariable ["tf_sendingDistanceMultiplicator", _multiplier, true];

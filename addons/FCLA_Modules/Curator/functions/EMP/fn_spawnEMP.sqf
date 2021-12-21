@@ -3,13 +3,14 @@
  * Author: hozlucas28
  *
  * Description:
- * Generar un pulso electromagnético.
+ * Genera un pulso electromagnético.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
 _this spawn {
   params ["_logic", "_rad", "_jammer"];
+  _rad = if (_rad <= -1) then {worldSize;} else {_rad;};
   _logicPos = getPos _logic;
   _nearUnits = _logicPos nearEntities [["CAManBase"], _rad];
   _nearVehicles = _logicPos nearEntities [["LandVehicle", "Air", "Ship"], _rad];
@@ -48,7 +49,7 @@ _this spawn {
   deleteVehicle _lightObj;
 
 
-  //Apagar luces (vehículos incluidos).
+  //Apagar luces.
   [_logic, _rad, "Off", false] call FCLA_Common_fnc_switchLights;
 
 
@@ -131,50 +132,101 @@ _this spawn {
     _particleObjSix = createVehicle ["#particlesource", getPos _x, [], 0, "CAN_COLLIDE"];
     _particleObjSix setDropInterval 0.01;
     _particleObjSix setParticleCircle [0, [0, 0, 0]];
-    _particleObjSix setParticleRandom [0.2, [_maxWidth/4, _maxLength/4, _maxHeight], [0, 0, 0], 0, 0.001, [0, 0, 0, 1], 1, 0];
+    _particleObjSix setParticleRandom [0.2, [_maxWidth / 4, _maxLength / 4, _maxHeight], [0, 0, 0], 0, 0.001, [0, 0, 0, 1], 1, 0];
     _particleObjSix setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 0.2, [0, 0, 0], [0, 0, 0], 0, 10, 7.9, 0, [0.002, 0.002], [[1, 1, 0.1, 1], [1, 1, 1, 1]], [0.08], 1, 0, "", "", _x];
     [{deleteVehicle _this;}, _particleObjSix, 1] call CBA_fnc_waitAndExecute;
 
     _unitLoadout = getUnitLoadout _x;
-    _unitNVG = hmd _x;
-    _unitBinocular = binocular _x;
-    _unitPrimaryWeapon = primaryWeapon _x;
-    _unitHandgunWeapon = handgunWeapon _x;
-    _unitLauncherWeapon = secondaryWeapon _x;
+    _unitNVG = (_unitLoadout select 9) select 5;
+    _unitBinocular = (_unitLoadout select 8) select 0;
+    _unitPrimaryWeapon = (_unitLoadout select 0) select 0;
+    _unitHandgunWeapon = (_unitLoadout select 2) select 0;
+    _unitLauncherWeapon = (_unitLoadout select 1) select 0;
     _hasLauncherVisionModes = [_x, _unitLauncherWeapon, false] call FCLA_Common_fnc_checkSightVisionModes;
     _hasBinocularsVisionModes = [_x, _unitBinocular, false] call FCLA_Common_fnc_checkSightVisionModes;
     _hasPrimaryWeaponVisionModes = [_x, _unitPrimaryWeapon, false] call FCLA_Common_fnc_checkSightVisionModes;
-    _hasSecondaryWeaponVisionModes = [_x, _unitHandgunWeapon, false] call FCLA_Common_fnc_checkSightVisionModes;
+    _hasHandgunWeaponVisionModes = [_x, _unitHandgunWeapon, false] call FCLA_Common_fnc_checkSightVisionModes;
+    _launcherSight = (_unitLoadout select 1) select 3;
+    _primaryWeaponSight = (_unitLoadout select 0) select 3;
+    _handgunWeaponSight = (_unitLoadout select 2) select 3;
+    _launcherPointer = (_unitLoadout select 1) select 2;
+    _primaryWeaponPointer = (_unitLoadout select 0) select 2;
+    _handgunWeaponPointer = (_unitLoadout select 2) select 2;
+    _itemInGPSSlot = (_unitLoadout select 9) select 1;
+    //_itemInRadioSlot = (_unitLoadout select 9) select 2;
+    _itemInClockSlot = (_unitLoadout select 9) select 4;
 
-    _launcherSight = ;
-    _primaryWeaponSight = ;
-    _secondaryWeaponSight = ;
+    if (_hasLauncherVisionModes) then {
+      if (_launcherSight == "") exitWith {_x removeWeapon _unitLauncherWeapon;};
+      _x removeSecondaryWeaponItem _launcherSight;
+    };
 
-    _itemInGPSSlot = ;
-    _itemInRadioSlot = ;
-    _itemInClockSlot = ;
+    if (_hasPrimaryWeaponVisionModes) then {
+      if (_primaryWeaponSight == "") exitWith {_x removeWeapon _unitPrimaryWeapon;};
+      _x removePrimaryWeaponItem _primaryWeaponSight;
+    };
 
-    if (_hasLauncherVisionModes) then {_x removeSecondaryWeaponItem _launcherSight;}; //REVISAR SI ME SACA LA MUNICION ACTUAL. Y QUE PASA SI LA MIRA BIENE INTEGRADA.
+    if (_hasHandgunWeaponVisionModes) then {
+      if (_handgunWeaponSight == "") exitWith {_x removeWeapon _unitHandgunWeapon;};
+      _x removeHandgunItem _handgunWeaponSight;
+    };
+
     if (_hasBinocularsVisionModes) then {[_x, _unitBinocular] call CBA_fnc_removeWeapon;};
-    if (_hasPrimaryWeaponVisionModes) then {_x removePrimaryWeaponItem _primaryWeaponSight;};
-    if (_hasSecondaryWeaponVisionModes) then {_x removeHandgunItem _secondaryWeaponSight;}; ///TRATAR DE VER QUE PASA SI LE DOY UNA MIRA CON STRING VACIO
+    if (_unitNVG != "FCLA_Light_Sticks") then {_x unassignItem _unitNVG; _x removeItem _unitNVG;};
 
-
-
-
-
-
-
+    _x removeHandgunItem _handgunWeaponPointer;
+    _x removePrimaryWeaponItem _primaryWeaponPointer;
+    _x removeSecondaryWeaponItem _launcherPointer;
+    _x unassignItem _itemInGPSSlot;
+    _x removeItem _itemInGPSSlot;
+    //_x unassignItem _itemInRadioSlot;
+    //_x removeItem _itemInRadioSlot;
+    _x unassignItem _itemInClockSlot;
+    _x removeItem _itemInClockSlot;
+    _x unassignItem _itemInClockSlot;
+    _x removeItem _itemInClockSlot;
   } forEach _nearUnits;
 
 
+  //Crear jammer.
+  if (!_jammer) exitWith {deleteVehicle _logic;};
+  [{
+    _args params ["_logic", "_rad"];
+    _isNotAlive = !alive _logic;
+    _unitsInArea = allUnits select {_x inArea [_logic, _rad, _rad, 0, false, _rad]};
+    _vehiclesInArea = vehicles select {_x inArea [_logic, _rad, _rad, 0, false, _rad]};
+    _unitsNotInArea = allUnits select {!(_x inArea [_logic, _rad, _rad, 0, false, _rad])};
+    _vehiclesNotInArea = vehicles select {!(_x inArea [_logic, _rad, _rad, 0, false, _rad])};
+    _entitiesAffected = _logic getVariable ["FCLA_Entities_Affected", []];
+    _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", call TFAR_fnc_getTransmittingDistanceMultiplicator];
+    if (_isNotAlive) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
+    if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
-  ///AFECTAR RADIOS DE UNIDADES Y VEHICULOS
-  //SI TENGO LOS PALITOS DE LUZ QUE NO ME LOS QUITE.
-  //APAGAR LUCES.
-  //QUITAR LACERES.
-  //QUITAR RADIOS.
-  //QUITAR GPS Y TERMINALES.
-  //RELOJES INTELIGENTES.
-  //Destrui items en las cajas y vehículos, salvo que sean anti PEM. Aclarar en los coments de los módulos.
+    {
+      _affectedRadioRange = linearConversion [_rad, _rad / 2, _x distance _logic, _normalRadioRange, 0, true];
+      _x setVariable ["tf_sendingDistanceMultiplicator", _affectedRadioRange, true];
+      _x setVariable ["tf_receivingDistanceMultiplicator", _affectedRadioRange, true];
+      if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
+    } forEach _unitsInArea;
+
+    {
+      _affectedRadioRange = linearConversion [_rad, _rad / 2, _x distance _logic, _normalRadioRange, 0, true];
+      _x setVariable ["tf_range", _affectedRadioRange, true];
+      if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
+    } forEach _vehiclesInArea;
+
+    {
+      if (!(_x in _entitiesAffected)) exitWith {};
+      _x setVariable ["tf_sendingDistanceMultiplicator", _normalRadioRange, true];
+      _x setVariable ["tf_receivingDistanceMultiplicator", _normalRadioRange, true];
+      _entitiesAffected = _entitiesAffected - [_x];
+    } forEach _unitsNotInArea;
+
+    {
+      if (!(_x in _entitiesAffected)) exitWith {};
+      _x setVariable ["tf_range", _normalRadioRange, true];
+      _entitiesAffected = _entitiesAffected - [_x];
+    } forEach _vehiclesNotInArea;
+    _logic setVariable ["FCLA_Entities_Affected", _entitiesAffected, true];
+  }, 0.5, [_logic, _rad]] call CBA_fnc_addPerFrameHandler;
 };

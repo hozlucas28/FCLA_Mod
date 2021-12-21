@@ -38,10 +38,10 @@ if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {["¡Error! El/Un mó
 
   if (_loopSound) then {
     [{
-      _isNotAlive = !alive ((_this select 0) select 0);
+      _isNotAlive = !alive (_args select 0);
       if (_isNotAlive) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
       if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
-      (_this select 0) call FCLA_Common_fnc_globalSay3D;
+      _args call FCLA_Common_fnc_globalSay3D;
     }, 0.5, [_soundSource, _soundClass, _soundDuration, _maxDistance, false]] call CBA_fnc_addPerFrameHandler;
   } else {
     _deleteSource = if (_soundSource isKindOf "VirtualAISquad") then {true;} else {false;};
