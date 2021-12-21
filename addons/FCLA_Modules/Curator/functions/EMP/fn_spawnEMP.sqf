@@ -202,7 +202,14 @@ _this spawn {
     _vehiclesNotInArea = vehicles select {!(_x inArea [_logic, _rad, _rad, 0, false, _rad])};
     _entitiesAffected = _logic getVariable ["FCLA_Entities_Affected", []];
     _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", 1];
-    if (_isNotAlive) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
+    if (_isNotAlive) exitWith {
+      {
+        _x setVariable ["tf_sendingDistanceMultiplicator", _normalRadioRange, true];
+        _x setVariable ["tf_receivingDistanceMultiplicator", _normalRadioRange, true];
+      } forEach (_unitsInArea + _unitsNotInArea);
+      {_x setVariable ["tf_range", _normalRadioRange, true];} forEach (_vehiclesInArea + _vehiclesNotInArea);
+      [_handle] call CBA_fnc_removePerFrameHandler;
+    };
     if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
     {
