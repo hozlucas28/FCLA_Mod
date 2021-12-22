@@ -4,6 +4,9 @@
 |********************************************************************************/
 
 class 3DEN {
+  class classnameAction3DEN {file = "\FCLA_Modules\3DEN\functions\ACE_Actions\fn_classnameAction.sqf";};
+  class objectAction3DEN {file = "\FCLA_Modules\3DEN\functions\ACE_Actions\fn_objectAction.sqf";};
+  class zeusAction3DEN {file = "\FCLA_Modules\3DEN\functions\ACE_Actions\fn_zeusAction.sqf";};
   class setEffect3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_setEffect.sqf";};
   class spawnFireflies3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_spawnFireflies.sqf";};
   class spawnSparks3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_spawnSparks.sqf";};

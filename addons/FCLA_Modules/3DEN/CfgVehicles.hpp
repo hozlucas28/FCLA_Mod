@@ -3,6 +3,7 @@
 |                               VEHÍCULOS - "3DEN"                               |
 |********************************************************************************/
 
+#include "\FCLA_Modules\3DEN\modules\ACE_Actions.hpp"
 #include "\FCLA_Modules\3DEN\modules\Advanced_Vehicle_Damage.hpp"
 #include "\FCLA_Modules\3DEN\modules\Ambient_Fired.hpp"
 #include "\FCLA_Modules\3DEN\modules\Building_Traits.hpp"
