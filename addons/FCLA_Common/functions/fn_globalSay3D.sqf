@@ -44,9 +44,8 @@ params [
 
 //Verificar argumentos.
 _soundNotExist = !(isClass (configFile >> "CfgSounds" >> _soundClass));
-_isSourceHidden = isObjectHidden _source;
 _isSourcePlayingSound = _source getVariable ["FCLA_Playing_Sound", false];
-if ((isNull _source) || (_maxDistance <= 0) || ((ceil _soundTime) <= 0) || (_soundNotExist) || (_isSourceHidden) || (_isSourcePlayingSound)) exitWith {false};
+if ((isNull _source) || (_maxDistance <= 0) || ((ceil _soundTime) <= 0) || (_soundNotExist) || (_isSourcePlayingSound)) exitWith {false};
 
 
 //Reproducir sonido.
@@ -59,10 +58,9 @@ _source setVariable ["FCLA_Playing_Sound", true, true];
 //Detener sonido.
 [{
   params ["_source", "_soundObj"];
-  _isHidden = isObjectHidden _source;
   _areNotAlive = (!alive _source) || (!alive _soundObj);
   _isSoundFinished = !(_source getVariable ["FCLA_Playing_Sound", false]);
-  (_isHidden) || (_areNotAlive) || (_isSoundFinished);
+  (_areNotAlive) || (_isSoundFinished);
 }, {
   deleteVehicle (_this select 1);
 }, [_source, _soundObj]] call CBA_fnc_waitUntilAndExecute;

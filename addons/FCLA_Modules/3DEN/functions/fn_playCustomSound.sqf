@@ -14,7 +14,8 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
-if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
+_forceDeactivation = _module getvariable ["FCLA_Force_Deactivation", false];
+if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
 
 
@@ -31,11 +32,10 @@ if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {["¡Error! El/Un mó
 
 
 //Reproducir sonido.
+_findedEntity = _synchronizedObjects findIf {!(_x isKindOf "EmptyDetector")};
+_soundSource = if ((_findedEntity > -1) && (_numberOfCompatibleSynchronizedObjects == 1)) then {_synchronizedObjects select _findedEntity;} else {_module;};
 [{
-  params ["_modulePos", "_synchronizedObjects", "_loopSound", "_soundClass", "_maxDistance", "_soundDuration", "_numberOfCompatibleSynchronizedObjects"];
-  _findedEntity = _synchronizedObjects findIf {!(_x isKindOf "EmptyDetector")};
-  _soundSource = if ((_findedEntity > -1) && (_numberOfCompatibleSynchronizedObjects == 1)) then {_synchronizedObjects select _findedEntity;} else {createAgent ["VirtualAISquad", _modulePos, [], 0, "CAN_COLLIDE"];};
-
+  params ["_soundSource", "_loopSound", "_soundClass", "_maxDistance", "_soundDuration"];
   if (_loopSound) then {
     [{
       _isNotAlive = !alive (_args select 0);
@@ -47,8 +47,8 @@ if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {["¡Error! El/Un mó
     _deleteSource = if (_soundSource isKindOf "VirtualAISquad") then {true;} else {false;};
     [_soundSource, _soundClass, _soundDuration, _maxDistance, _deleteSource] call FCLA_Common_fnc_globalSay3D;
   };
-}, [_modulePos, _synchronizedObjects, _loopSound, _soundClass, _maxDistance, _soundDuration, _numberOfCompatibleSynchronizedObjects], 0.1] call CBA_fnc_waitAndExecute;
+}, [_soundSource, _loopSound, _soundClass, _maxDistance, _soundDuration], 0.1] call CBA_fnc_waitAndExecute;
 
 
 //Eliminar módulo.
-deleteVehicle _module;
+if (_soundSource != _module) then {deleteVehicle _module;};

@@ -14,8 +14,8 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
-if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
-if (((_mode != "init") && (_mode != "attributesChanged3DEN")) || (isNull _module) || (!_isActivated)) exitWith {};
+_forceDeactivation = _module getvariable ["FCLA_Force_Deactivation", false];
+if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
 
 

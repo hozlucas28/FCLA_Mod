@@ -21,6 +21,8 @@ if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 //Verificar argumentos.
 _jammer = _module getVariable ["FCLA_Jammer", false];
 _moduleArea = _module getvariable ["objectArea", [0, 0, 0, false, -1]];
+_forceDeactivation = _module getvariable ["FCLA_Force_Deactivation", false];
+if (_forceDeactivation) exitWith {};
 
 
 

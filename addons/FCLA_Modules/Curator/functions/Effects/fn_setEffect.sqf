@@ -48,14 +48,15 @@
        case "FIREFLIES": {"LUCIÉRNAGAS";};
      };
 
-     _logic = createAgent ["VirtualAISquad", _this select 1, [], 0, "CAN_COLLIDE"];
+     _module = createAgent ["FCLA_Module_Spawn_Effect", _this select 1, [], 0, "CAN_COLLIDE"];
      _curatorLogic = getAssignedCuratorLogic player;
-     _curatorLogic addCuratorEditableObjects [[_logic], false];
+     _curatorLogic addCuratorEditableObjects [[_module], false];
+     _module setVariable ["FCLA_Force_Deactivation", true, true];
 
      switch (_selectedEffect) do {
-       case "SPARKS": {[_logic, _delay] spawn FCLA_Modules_fnc_spawnSparksCurator;};
-       case "WIND_GUST": {[_logic, _delay] spawn FCLA_Modules_fnc_spawnWindGustCurator;};
-       case "FIREFLIES": {[_logic] spawn FCLA_Modules_fnc_spawnFirefliesCurator;};
+       case "SPARKS": {[_module, _delay] spawn FCLA_Modules_fnc_spawnSparksCurator;};
+       case "WIND_GUST": {[_module, _delay] spawn FCLA_Modules_fnc_spawnWindGustCurator;};
+       case "FIREFLIES": {[_module] spawn FCLA_Modules_fnc_spawnFirefliesCurator;};
      };
      ["EL EFECTO " + _effectName + " SE HA GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
