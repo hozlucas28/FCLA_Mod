@@ -37,7 +37,7 @@ class FCLA_Module_Hack_Device: Module_F {
       tooltip = "Si se activa se necesitara de un dispositivo de hackeo para realizar la acción.";
       typeName = "BOOL";
       property = "FCLA_Need_Hacking_Device";
-      displayName = "¿Se necesita un dispositivo?";
+      displayName = "¿Se necesita dispositivo?";
       defaultValue = "true";
 		};
 		class ModuleDescription: ModuleDescription {};

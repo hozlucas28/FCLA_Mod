@@ -29,7 +29,7 @@ class FCLA_Module_EMP: Module_F {
       tooltip = "Si se activa se generara un jammer donde ocurrio el pulso electromagnético.\n• Los jammers bloquean/interfieren las señales de comunicación, por lo que las radios se verían afectadas. El efecto es total cuando te encuentras a menos de la mitad del tamaño definido.";
       typeName = "BOOL";
       property = "FCLA_Jammer";
-      displayName = "¿Se generara un jammer?";
+      displayName = "Generar jammer";
       defaultValue = "true";
 		};
 		class ModuleDescription: ModuleDescription {};

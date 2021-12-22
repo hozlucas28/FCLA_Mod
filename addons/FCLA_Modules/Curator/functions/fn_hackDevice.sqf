@@ -39,7 +39,7 @@
      _needHackingDeviceState = if (_needHackingDeviceState == 0) then {true;} else {false;};
 
      ["EL OBJETO AHORA ES HACKEABLE"] call ZEN_Common_fnc_showMessage;
-     [_this select 1, "Hackear dispositivo", _needHackingDeviceState] call FCLA_Common_fnc_hackDevice;
+     [_this select 1, "hackear dispositivo", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa", _needHackingDeviceState] call FCLA_Common_fnc_hackDevice;
 
      [{(!alive (_this select 1)) || ((_this select 1) getVariable ["FCLA_Hacked", false])}, {
        if (!alive (_this select 1)) exitWith {};

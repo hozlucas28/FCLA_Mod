@@ -21,24 +21,31 @@ if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 //Verificar argumentos.
 _jammerID = _module getVariable ["FCLA_Jammer_ID", ""];
 _moduleArea = _module getvariable ["objectArea", [0, 0, 0, false, -1]];
-_deactivatable = _module getVariable ["FCLA_Deactivatable", false];
+_canBeDisabled = _module getVariable ["FCLA_Deactivatable", false];
 _affectVehicles = _module getVariable ["FCLA_Affect_Vehicles", false];
 _needHackingDevice = _module getVariable ["FCLA_Need_Hacking_Device", false];
 _numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count _synchronizedObjects;
 
 
 
+//Pegar módulo.
+_findedEntity = _synchronizedObjects findIf {!(_x isKindOf "EmptyDetector")};
+_jammerSource = if ((_findedEntity > -1) && (_numberOfCompatibleSynchronizedObjects == 1)) then {_synchronizedObjects select _findedEntity;} else {_module;};
+if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];};
+
+
 //Generar jammer.
 [{
-  _args params ["_module", "_rad", "_affectVehicles"];
-  _isNotAlive = !alive _module;
-  _unitsInArea = allUnits select {_x inArea [_module, _rad, _rad, 0, false, _rad]};
-  _vehiclesInArea = vehicles select {_x inArea [_module, _rad, _rad, 0, false, _rad]};
-  _unitsNotInArea = allUnits select {!(_x inArea [_module, _rad, _rad, 0, false, _rad])};
-  _vehiclesNotInArea = vehicles select {!(_x inArea [_module, _rad, _rad, 0, false, _rad])};
-  _entitiesAffected = _module getVariable ["FCLA_Entities_Affected", []];
+  _args params ["_module", "_jammerSource", "_rad", "_affectVehicles"];
+  _areNotAlive = (!alive _module) || (!alive _jammerSource);
+  _isDesactivated = _jammerSource getVariable ["FCLA_Hacked", false];
+  _unitsInArea = allUnits select {_x inArea [_jammerSource, _rad, _rad, 0, false, _rad]};
+  _vehiclesInArea = vehicles select {_x inArea [_jammerSource, _rad, _rad, 0, false, _rad]};
+  _unitsNotInArea = allUnits select {!(_x inArea [_jammerSource, _rad, _rad, 0, false, _rad])};
+  _vehiclesNotInArea = vehicles select {!(_x inArea [_jammerSource, _rad, _rad, 0, false, _rad])};
+  _entitiesAffected = _jammerSource getVariable ["FCLA_Entities_Affected", []];
   _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", 1];
-  if (_isNotAlive) exitWith {
+  if ((_areNotAlive) || (_isDesactivated)) exitWith {
     deleteVehicle _module;
     {
       _x setVariable ["tf_sendingDistanceMultiplicator", _normalRadioRange, true];
@@ -50,7 +57,7 @@ _numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count 
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
   {
-    _affectedRadioRange = linearConversion [_rad, _rad / 2, _x distance _module, _normalRadioRange, 0, true];
+    _affectedRadioRange = linearConversion [_rad, _rad / 2, _x distance _jammerSource, _normalRadioRange, 0, true];
     _x setVariable ["tf_sendingDistanceMultiplicator", _affectedRadioRange, true];
     _x setVariable ["tf_receivingDistanceMultiplicator", _affectedRadioRange, true];
     if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
@@ -58,7 +65,7 @@ _numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count 
 
   if (_affectVehicles) then {
     {
-      _affectedRadioRange = linearConversion [_rad, _rad / 2, _x distance _module, _normalRadioRange, 0, true];
+      _affectedRadioRange = linearConversion [_rad, _rad / 2, _x distance _jammerSource, _normalRadioRange, 0, true];
       _x setVariable ["tf_range", _affectedRadioRange, true];
       if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
     } forEach _vehiclesInArea;
@@ -78,21 +85,13 @@ _numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count 
       _entitiesAffected = _entitiesAffected - [_x];
     } forEach _vehiclesNotInArea;
   };
-  _module setVariable ["FCLA_Entities_Affected", _entitiesAffected, true];
-}, 0.5, [_module, selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4], _affectVehicles]] call CBA_fnc_addPerFrameHandler;
-
-
-//Eliminar módulo.
-_findedEntity = _synchronizedObjects findIf {!(_x isKindOf "EmptyDetector")};
-_jammerSource = if ((_findedEntity > -1) && (_numberOfCompatibleSynchronizedObjects == 1)) then {_synchronizedObjects select _findedEntity;} else {_module;};
-if (_module == _jammerSource) exitWith {};
-_module attachTo [_jammerSource, [0, 0, 0]];
-[{(!alive (_this select 0)) || (!alive (_this select 1))}, {deleteVehicle (_this select 0);}, [_module, _jammerSource]] call CBA_fnc_waitUntilAndExecute;
+  _jammerSource setVariable ["FCLA_Entities_Affected", _entitiesAffected, true];
+}, 0.5, [_module, _jammerSource, selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4], _affectVehicles]] call CBA_fnc_addPerFrameHandler;
 
 
 //Acción para desactivar.
-if (!_deactivatable) exitWith {};
-[_jammerSource, "Desactivar jammer", "\FCLA_Data\Hold_Actions\Desactivate_Jammer.paa", _needHackingDevice] call FCLA_Common_fnc_hackDevice;
+if ((_module == _jammerSource) || (!_canBeDisabled)) exitWith {};
+[_jammerSource, "desactivar jammer", "\FCLA_Data\Hold_Actions\Desactivate_Jammer.paa", _needHackingDevice] call FCLA_Common_fnc_hackDevice;
 
 
 //Notificar a los Zeus.

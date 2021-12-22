@@ -7,7 +7,7 @@
  *
  * Arguments:
  *            0: Dispositivo al que se le asociara la acción. <OBJECT|VEHICLE>
- *            1: Título de la acción, opcional. <STRING> (default: "Hackear dispositivo")
+ *            1: Título de la acción, opcional. <STRING> (default: "hackear dispositivo")
  *            2: Imagen de la acción, opcional. <STRING> (default: "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa")
  *            3: ¿Se necesita un dispositivo de hackeo?, opcional. <BOOL> (default: true)
  *
@@ -35,7 +35,7 @@
 //Variables de referencia.
 params [
         ["_device", objNull, [objNull], 0],
-        ["_title", "Hackear dispositivo", [""], 0],
+        ["_title", "hackear dispositivo", [""], 0],
         ["_actionPicture", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa", [""], 0],
         ["_needHackingDevice", true, [true], 0]
        ];

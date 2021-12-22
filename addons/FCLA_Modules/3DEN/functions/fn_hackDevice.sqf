@@ -30,7 +30,7 @@ if ((_compatibleSynchronizedObjects > 1) || (_areNotCompatibleSynchronizedObject
 //Agregar acción para hackear.
 {
   if ((_x isKindOf "EmptyDetector") || (_x isKindOf "CAManBase")) exitWith {};
-  [_x, "Hackear dispositivo", _needHackingDevice] call FCLA_Common_fnc_hackDevice;
+  [_x, "hackear dispositivo", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa", _needHackingDevice] call FCLA_Common_fnc_hackDevice;
 
   if (_deviceID == "") exitWith {};
   [{(!alive (_this select 1)) || ((_this select 1) getVariable ["FCLA_Hacked", false])}, {
