@@ -15,7 +15,7 @@
 
   ["HACKEO DE DISPOSITIVO",
 	 [
-    ["EDIT", ["Identificador", "Nombre personalizado para poder reconocer al dispositivo, cuando se le informe a los Zeus que ha sido hackeado."],
+    ["EDIT", ["Identificador", "Nombre personalizado para poder reconocer al dispositivo, cuando se le informe a los Zeus que ha sido hackeado.\n• Si no se define un identificador no se informara a los Zeus."],
      [
       "",
       nil,

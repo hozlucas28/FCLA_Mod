@@ -25,6 +25,8 @@ _canBeDisabled = _module getVariable ["FCLA_Deactivatable", false];
 _affectVehicles = _module getVariable ["FCLA_Affect_Vehicles", false];
 _needHackingDevice = _module getVariable ["FCLA_Need_Hacking_Device", false];
 _numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count _synchronizedObjects;
+_jammerRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4]) <= -1) then {worldSize;} else {selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4];};
+_jammerHalfRad = if (_jammerRad == worldSize) then {worldSize;} else {_jammerRad / 2;};
 
 
 
@@ -36,13 +38,13 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
 
 //Generar jammer.
 [{
-  _args params ["_module", "_jammerSource", "_rad", "_affectVehicles"];
+  _args params ["_module", "_jammerSource", "_jammerRad", "_jammerHalfRad", "_affectVehicles"];
   _areNotAlive = (!alive _module) || (!alive _jammerSource);
   _isDesactivated = _jammerSource getVariable ["FCLA_Hacked", false];
-  _unitsInArea = allUnits select {_x inArea [_jammerSource, _rad, _rad, 0, false, _rad]};
-  _vehiclesInArea = vehicles select {_x inArea [_jammerSource, _rad, _rad, 0, false, _rad]};
-  _unitsNotInArea = allUnits select {!(_x inArea [_jammerSource, _rad, _rad, 0, false, _rad])};
-  _vehiclesNotInArea = vehicles select {!(_x inArea [_jammerSource, _rad, _rad, 0, false, _rad])};
+  _unitsInArea = allUnits select {_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad]};
+  _vehiclesInArea = vehicles select {_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad]};
+  _unitsNotInArea = allUnits select {!(_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad])};
+  _vehiclesNotInArea = vehicles select {!(_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad])};
   _entitiesAffected = _jammerSource getVariable ["FCLA_Entities_Affected", []];
   _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", 1];
   if ((_areNotAlive) || (_isDesactivated)) exitWith {
@@ -57,7 +59,7 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
   {
-    _affectedRadioRange = linearConversion [_rad, _rad / 2, _x distance _jammerSource, _normalRadioRange, 0, true];
+    _affectedRadioRange = linearConversion [_jammerRad, _jammerHalfRad, _x distance _jammerSource, _normalRadioRange, 0, true];
     _x setVariable ["tf_sendingDistanceMultiplicator", _affectedRadioRange, true];
     _x setVariable ["tf_receivingDistanceMultiplicator", _affectedRadioRange, true];
     if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
@@ -65,7 +67,7 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
 
   if (_affectVehicles) then {
     {
-      _affectedRadioRange = linearConversion [_rad, _rad / 2, _x distance _jammerSource, _normalRadioRange, 0, true];
+      _affectedRadioRange = linearConversion [_jammerRad, _jammerHalfRad, _x distance _jammerSource, _normalRadioRange, 0, true];
       _x setVariable ["tf_range", _affectedRadioRange, true];
       if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
     } forEach _vehiclesInArea;
@@ -86,7 +88,7 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
     } forEach _vehiclesNotInArea;
   };
   _jammerSource setVariable ["FCLA_Entities_Affected", _entitiesAffected, true];
-}, 0.5, [_module, _jammerSource, selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4], _affectVehicles]] call CBA_fnc_addPerFrameHandler;
+}, 0.5, [_module, _jammerSource, _jammerRad, _jammerHalfRad,_affectVehicles]] call CBA_fnc_addPerFrameHandler;
 
 
 //Acción para desactivar.

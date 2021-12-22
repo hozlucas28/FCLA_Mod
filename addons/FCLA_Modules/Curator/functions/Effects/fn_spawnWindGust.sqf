@@ -44,7 +44,7 @@ _this spawn {
 			addCamShake [0.5, _soundDuration * 1.7, 25];
 		};
 
-		_trigger = createTrigger ["EmptyDetector", _logicPos, true];
+		_trigger = createTrigger ["EmptyDetector", _logicPos, false];
 		_trigger setTriggerInterval 0.5;
 		_trigger attachTo [_logic, [0, 0, 0]];
 		_trigger setTriggerActivation ["ANY", "PRESENT", false];

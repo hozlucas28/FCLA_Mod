@@ -63,7 +63,7 @@ _StatementOnDesactivation = {
   ["FCLA_Hide_Subtitles", [_arguments select 0], _player] call CBA_fnc_targetEvent;
 };
 
-_trigger = createTrigger ["EmptyDetector", getpos _emitterObject, true];
+_trigger = createTrigger ["EmptyDetector", getpos _emitterObject, false];
 _trigger setTriggerInterval 0.5;
 _trigger attachTo [_emitterObject, [0, 0, 0]];
 _trigger setTriggerActivation ["ANY", "PRESENT", _repeatable];
