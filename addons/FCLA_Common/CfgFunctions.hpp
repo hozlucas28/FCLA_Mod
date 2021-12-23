@@ -40,5 +40,6 @@ class FCLA_Common_Functions {
   class showHiddenEdenEntities {file = "\FCLA_Common\functions\fn_showHiddenEdenEntities.sqf";};
   class showParentTree {file = "\FCLA_Common\functions\fn_showParentTree.sqf";};
   class showSubtitles {file = "\FCLA_Common\functions\fn_showSubtitles.sqf";};
+  class stringToCode {file = "\FCLA_Common\functions\fn_stringToCode.sqf";};
   class switchLights {file = "\FCLA_Common\functions\fn_switchLights.sqf";};
 };

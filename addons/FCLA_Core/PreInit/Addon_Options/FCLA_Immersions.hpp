@@ -63,7 +63,7 @@
 	["FCLA Inmersiones", "Radios"],
 	#include "\FCLA_Core\PreInit\Addon_Options\includes\Headgears_and_Headsets.hpp",
 	GLOBAL,
-	{FCLA_Radio_Animations_Headgears_Headsets = parseSimpleArray _this;},
+	{FCLA_Radio_Animations_Headgears_Headsets = parseSimpleArray ([_this, """", "'"] call CBA_fnc_replace);},
 	false
 ] call CBA_Settings_fnc_init;
 
@@ -74,7 +74,7 @@
 	["FCLA Inmersiones", "Radios"],
 	#include "\FCLA_Core\PreInit\Addon_Options\includes\Vests_with_Radios.hpp",
 	GLOBAL,
-	{FCLA_Radio_Animations_Vests = parseSimpleArray _this;},
+	{FCLA_Radio_Animations_Vests = parseSimpleArray ([_this, """", "'"] call CBA_fnc_replace);},
 	false
 ] call CBA_Settings_fnc_init;
 

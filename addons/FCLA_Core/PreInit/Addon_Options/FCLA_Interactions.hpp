@@ -64,7 +64,8 @@
 	true,
 	GLOBAL,
 	{
-		if (!_this) then {(call CBA_fnc_currentUnit) setVariable ["FCLA_Smoke_Signal_Switch", false, true];};
+		_unit = call CBA_fnc_currentUnit;
+		if (!_this) then {_unit setVariable ["FCLA_Smoke_Signal_Switch", false, true];};
 	},
 	false
 ] call CBA_fnc_addSetting;
@@ -123,7 +124,7 @@
 	["FCLA Interacciones", "CBRN"],
 	#include "\FCLA_Core\PreInit\Addon_Options\includes\Chemical_Detectors.hpp",
 	GLOBAL,
-	{FCLA_CBRN_Compatible_Chemical_Detectors = parseSimpleArray _this;},
+	{FCLA_CBRN_Compatible_Chemical_Detectors = parseSimpleArray ([_this, """", "'"] call CBA_fnc_replace);},
 	false
 ] call CBA_Settings_fnc_init;
 
@@ -134,7 +135,7 @@
 	["FCLA Interacciones", "CBRN"],
 	#include "\FCLA_Core\PreInit\Addon_Options\includes\Oxygen_Masks.hpp",
 	GLOBAL,
-	{FCLA_CBRN_Compatible_Oxygen_Masks = parseSimpleArray _this;},
+	{FCLA_CBRN_Compatible_Oxygen_Masks = parseSimpleArray ([_this, """", "'"] call CBA_fnc_replace);},
 	false
 ] call CBA_Settings_fnc_init;
 
@@ -145,7 +146,7 @@
 	["FCLA Interacciones", "CBRN"],
 	#include "\FCLA_Core\PreInit\Addon_Options\includes\Backpacks_With_Oxygen.hpp",
 	GLOBAL,
-	{FCLA_CBRN_Compatible_Backpacks_With_Oxygen = parseSimpleArray _this;},
+	{FCLA_CBRN_Compatible_Backpacks_With_Oxygen = parseSimpleArray ([_this, """", "'"] call CBA_fnc_replace);},
 	false
 ] call CBA_Settings_fnc_init;
 
