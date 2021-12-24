@@ -19,10 +19,11 @@ _Condition = {
   _isNotDragging = !(_player getVariable ["ACE_Dragging_isDragging", false]);
   _isNotCarrying = !(_player getVariable ["ACE_Dragging_isCarrying", false]);
   _isDesactivated = !(_target getVariable ["FCLA_Shower_Status", false]);
+  _isCBRNActivated = missionNamespace getVariable ["FCLA_CBRN", false];
   _isTouchingGround = isTouchingGround _player;
   _isNotSurrendering = !(_player getVariable ["ACE_Captives_isSurrendering", false]);
   _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
-  (FCLA_CBRN) && (_isAlive) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isDesactivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation);
+  (_isAlive) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isDesactivated) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation);
 };
 
 _Statement = {
@@ -44,10 +45,11 @@ _Condition = {
   _isNotSwimming = !([_player] call ACE_Common_fnc_isSwimming);
   _isNotDragging = !(_player getVariable ["ACE_Dragging_isDragging", false]);
   _isNotCarrying = !(_player getVariable ["ACE_Dragging_isCarrying", false]);
+  _isCBRNActivated = missionNamespace getVariable ["FCLA_CBRN", false];
   _isTouchingGround = isTouchingGround _player;
   _isNotSurrendering = !(_player getVariable ["ACE_Captives_isSurrendering", false]);
   _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
-  (FCLA_CBRN) && (_isAlive) && (_isActivated) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation);
+  (_isAlive) && (_isActivated) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation);
 };
 
 _Statement = {

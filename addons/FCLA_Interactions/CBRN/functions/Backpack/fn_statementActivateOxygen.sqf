@@ -37,14 +37,16 @@ _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
   _currentGoggles = goggles _player;
   _currentBackpack = backpack _player;
   _backpackContainer = backpackContainer _player;
+  _compatibleOxygenMasks = missionNamespace getVariable ["FCLA_CBRN_Compatible_Oxygen_Masks", ["G_AirPurifyingRespirator_01_F", "G_AirPurifyingRespirator_01_nofilter_F", "G_AirPurifyingRespirator_02_sand_F", "G_AirPurifyingRespirator_02_black_F", "G_AirPurifyingRespirator_02_olive_F", "G_RegulatorMask_F"]];
+  _compatibleBackpacksWithOxygen = missionNamespace getVariable ["FCLA_CBRN_Compatible_Backpacks_With_Oxygen", ["B_CombinationUnitRespirator_01_F", "B_SCBA_01_F"]];
 
   _inStairs = _controlledUnit getVariable ["FCLA_inStairs", false];
   _inCurator = !isNull findDisplay 312;
   _isNotAlive = !alive _player;
   _isSwimming = [_player] call ACE_Common_fnc_isSwimming;
   _inCameraMode = _player in (call ACE_Spectator_fnc_players);
-  _hasNotCompatibleMask = !(_currentGoggles in FCLA_CBRN_Compatible_Oxygen_Masks);
-  _hasNotCompatibleBackpack = !(_currentBackpack in FCLA_CBRN_Compatible_Backpacks_With_Oxygen);
+  _hasNotCompatibleMask = !(_currentGoggles in _compatibleOxygenMasks);
+  _hasNotCompatibleBackpack = !(_currentBackpack in _compatibleBackpacksWithOxygen);
   _isBackpackOxygenDesactivated = !(_backpackContainer getVariable ["FCLA_Backpack_Oxygen_Activated", false]);
   _isNotControlledUnit = _player != _controlledUnit;
 

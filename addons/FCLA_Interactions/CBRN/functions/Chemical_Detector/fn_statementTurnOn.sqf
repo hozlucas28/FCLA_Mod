@@ -17,10 +17,11 @@ _player setVariable ["FCLA_Chemical_Detector_Activated", true, true];
 //Mostrar interfaz.
 _perFrameHandlerOne = [{
   _args params ["_player", "_item", "_lastTimeUpdated"];
+  _compatibleChemicalDetectors = missionNamespace getVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", ["ChemicalDetector_01_watch_F", "tf_microdagr"]];
   _isSwimming = [_player] call ACE_Common_fnc_isSwimming;
   _isNotAlive = !alive _player;
   _isDesactivated = !(_player getVariable ["FCLA_Chemical_Detector_Activated", false]);
-  _isNotCompatible = !(_item in FCLA_CBRN_Compatible_Chemical_Detectors);
+  _isNotCompatible = !(_item in _compatibleChemicalDetectors);
   if ((_isSwimming) || (_isNotAlive) || (_isDesactivated) || (_isNotCompatible)) exitWith {
     [_player] spawn FCLA_Interactions_fnc_statementTurnOffChemicalDetectorCBRN;
     [_handle] call CBA_fnc_removePerFrameHandler;
@@ -114,12 +115,13 @@ _perFrameHandlerOne = [{
 //Reproducir sonido.
 _perFrameHandlerTwo = [{
   _args params ["_player", "_item", "_lastTimeUpdated"];
+  _compatibleChemicalDetectors = missionNamespace getVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", ["ChemicalDetector_01_watch_F", "tf_microdagr"]];
   _controlledUnit = call CBA_fnc_currentUnit;
   _inCurator = !isNull findDisplay 312;
   _isSwimming = [_player] call ACE_Common_fnc_isSwimming;
   _inCameraMode = _controlledUnit in (call ACE_Spectator_fnc_players);
   _isDesactivated = !(_player getVariable ["FCLA_Chemical_Detector_Activated", false]);
-  _isNotCompatible = !(_item in FCLA_CBRN_Compatible_Chemical_Detectors);
+  _isNotCompatible = !(_item in _compatibleChemicalDetectors);
   _isNotControlledUnit = _player != _controlledUnit;
   if ((_isSwimming) || (_isDesactivated) || (_isNotCompatible)) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
   if ((((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) || (_inCurator) || (_inCameraMode) || (_isNotControlledUnit)) exitWith {_args set [2, CBA_missionTime];};

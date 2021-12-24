@@ -16,14 +16,16 @@ if (["Contact"] call FCLA_Common_fnc_isDLCOwned) exitWith {};
     params ["_unit", "_container", "_item"];
     _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
     _currentGoggles = goggles _unit;
-    (FCLA_CBRN) && (_isPlayer) && (_currentGoggles != _item);
+    _isCBRNActivated = missionNamespace getVariable ["FCLA_CBRN", false];
+    (_isPlayer) && (_currentGoggles != _item) && (_isCBRNActivated);
   };
 
   _conditionToShow = {
     params ["_unit", "_container", "_item"];
     _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
     _currentGoggles = goggles _unit;
-    (FCLA_CBRN) && (_isPlayer) && (_currentGoggles != _item);
+    _isCBRNActivated = missionNamespace getVariable ["FCLA_CBRN", false];
+    (_isPlayer) && (_currentGoggles != _item) && (_isCBRNActivated);
   };
 
   _Statement = {

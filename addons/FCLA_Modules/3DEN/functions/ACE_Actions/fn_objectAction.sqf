@@ -28,13 +28,12 @@ _parentPath = _module getVariable ["FCLA_Parent_Path", []];
 _typeOfAction = _module getVariable ["FCLA_Type_Of_Action", -1];
 _associatedObject = _module getVariable ["FCLA_Associated_Object", objNull];
 _numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count _synchronizedObjects;
-if ((_name == "") || (_condition == "") || (_statement == "") || (_parentPath == "") || (_typeOfAction <= -1)) exitWith {["¡Error! El/Un módulo 'Crear acción (ACE - objeto)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
+if ((_name == "") || (_condition == "") || (_statement == "") || (_typeOfAction <= -1)) exitWith {["¡Error! El/Un módulo 'Crear acción (ACE - objeto)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
 
 //Pasar ruta de padres y classnames asociadas al formato correcto.
-_parentPath = [_parentPath, """", "'"] call CBA_fnc_replace;
-_parentPath = parseSimpleArray _parentPath;
+_parentPath = parseSimpleArray ([_parentPath, """", "'"] call CBA_fnc_replace);
 _findedEntity = _synchronizedObjects findIf {!(_x isKindOf "EmptyDetector")};
 _associatedObject = if ((_findedEntity > -1) && (_numberOfCompatibleSynchronizedObjects == 1)) then {_synchronizedObjects select _findedEntity;} else {call compile format ["%1", _associatedObject];};
 

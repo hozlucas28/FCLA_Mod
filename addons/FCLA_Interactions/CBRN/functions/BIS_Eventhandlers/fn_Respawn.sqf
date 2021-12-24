@@ -10,7 +10,7 @@
 
 //Variables de referencia.
 params ["_unit", "_corpse"];
-if (!FCLA_CBRN) exitWith {};
+if (!(missionNamespace getVariable ["FCLA_CBRN", false])) exitWith {};
 
 
 
