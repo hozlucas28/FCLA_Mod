@@ -33,6 +33,21 @@ class FCLA_Create_Injuries: Module_F {
       defaultValue = """grenade""";
 
      class Values {
+       class Falling {
+         name = "Caida";
+         value = "falling";
+       };
+
+       class Drowning {
+         name = "Ahogo";
+         value = "drowning";
+       };
+
+       class Bullet {
+         name = "Disparo";
+         value = "bullet";
+       };
+
        class Grenade {
          name = "Granada";
          value = "grenade";
@@ -41,6 +56,21 @@ class FCLA_Create_Injuries: Module_F {
        class Collision {
          name = "Colisión";
          value = "collision";
+       };
+
+       class Stab {
+         name = "Puñalada";
+         value = "stab";
+       };
+
+       class Punch {
+         name = "Puñetazo";
+         value = "punch";
+       };
+
+       class Burn {
+         name = "Quemadura";
+         value = "burn";
        };
 
        class Explosive {
@@ -56,6 +86,11 @@ class FCLA_Create_Injuries: Module_F {
        class Backblast {
          name = "Onda de choque";
          value = "backblast";
+       };
+
+       class Rope_Burn {
+         name = "Quemadura de cuerda";
+         value = "ropeburn";
        };
 
        class Vehicle_Crash {

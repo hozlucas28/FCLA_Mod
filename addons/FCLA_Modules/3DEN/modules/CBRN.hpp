@@ -30,6 +30,14 @@ class FCLA_Module_CBRN_Configuration: Module_F {
 
 
 	class Attributes: AttributesBase {
+    class FCLA_NRBQ_Uniforms: Edit {
+      tooltip = "Classnames de los uniformes NRBQ compatibles.";
+      typeName = "STRING";
+      property = "FCLA_NRBQ_Uniforms";
+      displayName = "Uniformes NRBQ";
+      defaultValue = "'['U_C_CBRN_Suit_01_Blue_F', 'U_C_CBRN_Suit_01_White_F', 'U_B_CBRN_Suit_01_Wdl_F', 'U_B_CBRN_Suit_01_MTP_F', 'U_B_CBRN_Suit_01_Tropic_F', 'U_I_CBRN_Suit_01_AAF_F', 'U_I_E_CBRN_Suit_01_EAF_F']'";
+		};
+
     class FCLA_Chemical_Detectors: Edit {
       tooltip = "Classnames de los detectores químicos compatibles.";
       typeName = "STRING";
@@ -83,7 +91,7 @@ class FCLA_Module_CBRN_Contaminated_Area: Module_F {
 
 	class Attributes: AttributesBase {
     class FCLA_Threat_Level: Combo {
-      tooltip = "• Nivel 1: se necesita máscara de oxígeno.\n• Nivel 2: se necesita máscara y mochila con oxígeno.\n• Nivel 3: se necesita máscara, mochila con oxígeno y un traje NRBQ.\n• Niveles 4 y 5: mismas necesidades que el nivel 3, pero el daño recibido es más alto.";
+      tooltip = "• Nivel 1: se necesita máscara de oxígeno.\n• Nivel 2: se necesita máscara y mochila con oxígeno.\n• Nivel 3: se necesita máscara, mochila con oxígeno y un traje NRBQ.\n• Nivel 4: no hay equipamiento que brinde protección alguna.";
       typeName = "NUMBER";
       property = "FCLA_Threat_Level";
       displayName = "Nivel de amenaza";
@@ -109,21 +117,16 @@ class FCLA_Module_CBRN_Contaminated_Area: Module_F {
          name = "4";
          value = 4;
        };
-
-       class Five {
-         name = "5";
-         value = 5;
-       };
      };
    };
 		class ModuleDescription: ModuleDescription {};
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Crea áreas contaminadas donde se tendra que utilizar un equipamiento correcto, definido por el módulo: 'Configuración CBRN'. El efecto es total cuando te encuentras a menos de la mitad del tamaño definido."};
+		description[] =	{"Crea áreas contaminadas donde se tendra que utilizar un equipamiento correcto, definido por el módulo: 'Configuración CBRN'. El efecto es total cuando te encuentras a menos de la mitad del tamaño definido.<br/><br/>• Se recomienda que los tamaños de la zona coincidan, si no se cumple se elegirá el que tenga mayor valor.<br/>• Si colocas -1, en los tamaños de la zona, todo el mapa se vera afectado por el jammer."};
 	};
 
   class AttributeValues {
-    size3[] = {250, 250, 250};
+    size3[] = {50, 50, 50};
   };
 };

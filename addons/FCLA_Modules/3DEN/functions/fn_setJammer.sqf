@@ -26,8 +26,8 @@ _canBeDisabled = _module getVariable ["FCLA_Deactivatable", false];
 _affectVehicles = _module getVariable ["FCLA_Affect_Vehicles", false];
 _needHackingDevice = _module getVariable ["FCLA_Need_Hacking_Device", false];
 _numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count _synchronizedObjects;
-_jammerRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4]) <= -1) then {worldSize;} else {selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4];};
-_jammerHalfRad = if (_jammerRad == worldSize) then {worldSize;} else {_jammerRad / 2;};
+_jammerRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4]) <= -1) then {worldSize * 2;} else {selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4];};
+_jammerHalfRad = _jammerRad / 2;
 
 
 

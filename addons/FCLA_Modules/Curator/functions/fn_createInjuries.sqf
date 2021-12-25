@@ -18,19 +18,33 @@
     ["COMBO", "Tipo de lesión",
      [
       [
+       "falling",
+       "drowning",
+       "bullet",
        "grenade",
        "collision",
+       "stab",
+       "punch",
+       "burn",
        "explosive",
        "shell",
        "backblast",
+       "ropeburn",
        "vehiclecrash"
       ],
       [
+       "Caida",
+       "Ahogo", 
+       "Disparo",
        "Granada",
        "Colisión",
+       "Puñalada",
+       "Puñetazo",
+       "Quemadura",
        "Explosivo",
        "Proyectil",
        "Onda de choque",
+       "Quemadura de cuerda",
        "Accidente de vehículo"
       ],
       0
@@ -108,7 +122,7 @@
      _attachedObject = _this select 1;
 
      ["LESIONES PROVOCADAS CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-     ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_attachedObject, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury]], _attachedObject] call CBA_fnc_targetEvent;
+     ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_attachedObject, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], false]], _attachedObject] call CBA_fnc_targetEvent;
 
      _attachedObject setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
      [_attachedObject, _forceUnconsciousness] call ACE_Medical_fnc_setUnconscious;

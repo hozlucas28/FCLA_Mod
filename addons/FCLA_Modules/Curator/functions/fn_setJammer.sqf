@@ -65,7 +65,7 @@
     (_this select 0) params ["_jammerID", "_jammerRad", "_canBeDisabled", "_affectVehicles", "_needHackingDevice"];
     (_this select 1) params ["_jammerSource"];
     _jammerRad = if (_jammerRad <= -1) then {worldSize * 2;} else {_jammerRad;};
-    _jammerHalfRad = if (_jammerRad == (worldSize * 2)) then {worldSize;} else {_jammerRad / 2;};
+    _jammerHalfRad = _jammerRad / 2;
     _canBeDisabled = if (_canBeDisabled == 0) then {true;} else {false;};
     _affectVehicles = if (_affectVehicles == 0) then {true;} else {false;};
     _needHackingDevice = if (_needHackingDevice == 0) then {true;} else {false;};
