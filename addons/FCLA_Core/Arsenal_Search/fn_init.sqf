@@ -104,7 +104,7 @@
 			_ctrl ctrlAddEventHandler ["LBSelChanged",{
 				if (_this#1 >= 2) then {
 					defineBase
-					_statsExtremes = uinamespace getvariable "bis_fnc_arsenal_weaponStats";
+					_statsExtremes = uinamespace getVariable "bis_fnc_arsenal_weaponStats";
 					_statsMin = _statsExtremes select 0;
 					_statsMax = _statsExtremes select 1;
 					for "_i" from 0 to lbSize _ctrl-1 do {
@@ -180,7 +180,7 @@
 									100000-((_wpnClass >> "maxZeroing") call BIS_fnc_parseNumberSafe)
 								} ;
 								if (_this#1 == 3) exitWith {
-									_statsExtremes = uinamespace getvariable "bis_fnc_arsenal_weaponStats";
+									_statsExtremes = uinamespace getVariable "bis_fnc_arsenal_weaponStats";
 									_statsMin = _statsExtremes select 0;
 									_statsMax = _statsExtremes select 1;
 									_stats = [

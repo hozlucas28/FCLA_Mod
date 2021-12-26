@@ -14,19 +14,17 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
-_forceDeactivation = _module getvariable ["FCLA_Force_Deactivation", false];
+_forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
 
 
 //Verificar argumentos.
-_allLogics = allMissionObjects "Logic";
-_moduleArea = _module getvariable ["objectArea", [0, 0, 0, false, -1]];
+_moduleArea = _module getVariable ["objectArea", [0, 0, 0, false, -1]];
 _threatLevel = _module getVariable ["FCLA_Threat_Level", 0];
 _contaminationRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4]) <= -1) then {worldSize * 2;} else {selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4];};
 _contaminationHalfRad = _contaminationRad / 2;
-_thereIsntConfigurationModule = ("FCLA_Module_CBRN_Configuration" countType _allLogics) <= 0;
-if ((_threatLevel <= 0) || (_thereIsntConfigurationModule)) exitWith {["¡Error! El/Un módulo 'Área contaminada (CBRN)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
+if (_threatLevel <= 0) exitWith {["¡Error! El/Un módulo 'Área contaminada (CBRN)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
 
@@ -47,7 +45,6 @@ if ((_threatLevel <= 0) || (_thereIsntConfigurationModule)) exitWith {["¡Error!
       if (_contaminatedAreas isEqualTo []) exitWith {_x setVariable ["FCLA_Contaminated_Areas", nil, true];};
       _x setVariable ["FCLA_Contaminated_Areas", _contaminatedAreas, true];
     } forEach (_playersInArea + _playersNotInArea);
-    systemChat "SALIO";
     [_handle] call CBA_fnc_removePerFrameHandler;
   };
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
@@ -83,7 +80,6 @@ if ((_threatLevel <= 0) || (_thereIsntConfigurationModule)) exitWith {["¡Error!
     ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_x]], _x] call CBA_fnc_targetEvent;
     if (!(_x in _playersAffected)) then {_playersAffected pushBack _x;};
   } forEach _playersInArea;
-
 
   {
     _contaminatedAreas = _x getVariable ["FCLA_Contaminated_Areas", []];

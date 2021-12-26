@@ -14,7 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
-_forceDeactivation = _module getvariable ["FCLA_Force_Deactivation", false];
+_forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
 
@@ -25,7 +25,7 @@ _color = _module getVariable ["FCLA_Color", "SIDE"];
 _emitter = _module getVariable ["FCLA_Emitter", ""];
 _subtitle = _module getVariable ["FCLA_Subtitle", ""];
 _timeToHide = _module getVariable ["FCLA_Time_To_Hide", 0];
-_moduleArea = _module getvariable ["objectArea", [0, 0, 0, false, -1]];
+_moduleArea = _module getVariable ["objectArea", [0, 0, 0, false, -1]];
 _areaToShow = [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4];
 _repeatable = _module getVariable ["FCLA_Repeatable", false];
 _needLongRadio = _module getVariable ["FCLA_Need_Long_Radio", false];

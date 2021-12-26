@@ -7,8 +7,8 @@ class 3DEN {
   class createACEClassnameAction3DEN {file = "\FCLA_Modules\3DEN\functions\ACE_Actions\fn_classnameAction.sqf";};
   class createACEObjectAction3DEN {file = "\FCLA_Modules\3DEN\functions\ACE_Actions\fn_objectAction.sqf";};
   class createACEZeusAction3DEN {file = "\FCLA_Modules\3DEN\functions\ACE_Actions\fn_zeusAction.sqf";};
-  class initCBRNConfiguration3DEN {file = "\FCLA_Modules\3DEN\functions\CBRN\fn_initConfiguration.sqf";};
-  class setCBRNContaminatedArea3DEN {file = "\FCLA_Modules\3DEN\functions\CBRN\fn_setContaminatedArea.sqf";};
+  class setCBRNConfiguration3DEN {file = "\FCLA_Modules\3DEN\functions\CBRN\fn_setConfiguration.sqf";};
+  class setCBRNContaminatedZone3DEN {file = "\FCLA_Modules\3DEN\functions\CBRN\fn_setContaminatedZone.sqf";};
   class setEffect3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_setEffect.sqf";};
   class spawnFireflies3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_spawnFireflies.sqf";};
   class spawnSparks3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_spawnSparks.sqf";};

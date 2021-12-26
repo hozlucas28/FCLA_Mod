@@ -124,11 +124,10 @@
      if (_isHidden) exitWith {["ERROR! LA UNIDAD NO DEBE ESTAR OCULTA"] call ZEN_Common_fnc_showMessage;};
      if (_isInvulnerable) exitWith {["ERROR! LA UNIDAD DEBE TENER EL DAÑO ACTIVADO"] call ZEN_Common_fnc_showMessage;};
 
-     ["LESIONES PROVOCADAS CON ÉXITO"] call ZEN_Common_fnc_showMessage;
      ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_this select 1, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true]], _this select 1] call CBA_fnc_targetEvent;
-
      (_this select 1) setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
      [_this select 1, _forceUnconsciousness] call ACE_Medical_fnc_setUnconscious;
      ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_this select 1]], _this select 1] call CBA_fnc_targetEvent;
+     ["LESIONES PROVOCADAS CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Medical_Cross.paa"] call ZEN_Custom_Modules_fnc_Register;

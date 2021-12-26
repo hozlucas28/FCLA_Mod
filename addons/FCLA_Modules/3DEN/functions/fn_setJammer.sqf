@@ -14,14 +14,14 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
-_forceDeactivation = _module getvariable ["FCLA_Force_Deactivation", false];
+_forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
 
 
 //Verificar argumentos.
 _jammerID = _module getVariable ["FCLA_Jammer_ID", ""];
-_moduleArea = _module getvariable ["objectArea", [0, 0, 0, false, -1]];
+_moduleArea = _module getVariable ["objectArea", [0, 0, 0, false, -1]];
 _canBeDisabled = _module getVariable ["FCLA_Deactivatable", false];
 _affectVehicles = _module getVariable ["FCLA_Affect_Vehicles", false];
 _needHackingDevice = _module getVariable ["FCLA_Need_Hacking_Device", false];

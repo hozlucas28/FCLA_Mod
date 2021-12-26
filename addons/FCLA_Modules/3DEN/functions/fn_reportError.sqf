@@ -14,7 +14,7 @@ params [
         ["_header", "", [""], 0],
         ["_text", "", [""], 0]
        ];
-_forceDeactivation = _module getvariable ["FCLA_Force_Deactivation", false];
+_forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((_errorID == "") || (_header == "") || (_text == "") || (_forceDeactivation)) exitWith {};
 
 

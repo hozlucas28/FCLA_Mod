@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo para coloar un jammer que bloquea/interfiere las señales de
+ * Crea un módulo para colocar un jammer que bloquea/interfiere las señales de
  * comunicación de las radios de onda corta y larga, incluyendo vehículos.
  *
  * Public: [No]

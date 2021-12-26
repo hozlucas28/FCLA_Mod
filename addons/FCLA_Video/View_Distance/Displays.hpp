@@ -238,7 +238,7 @@ class FCLA_VD_rscEdit {
 	colorBackground[] = {0,0,0,1};
 	colorText[] = {0.94999999,0.94999999,0.94999999,1};
 	colorDisabled[] = {1,1,1,0.25};
-	colorSelection[] = 	{"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])",1};
+	colorSelection[] = 	{"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])",1};
 	canModify = 1;
 	tooltipColorText[] = {1,1,1,1};
 	tooltipColorBox[] = {1,1,1,1};
@@ -270,7 +270,7 @@ class FCLA_VD_dialog {
 			y = 0 * GUI_GRID_H + GUI_GRID_Y;
 			w = 24.5 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])","(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+			colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.3843])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.7019])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.8862])","(profilenamespace getVariable ['GUI_BCG_RGB_A',0.7])"};
 		};
 
 		class FCLA_VD_rscFootHeaderText: FCLA_VD_rscTextRight {

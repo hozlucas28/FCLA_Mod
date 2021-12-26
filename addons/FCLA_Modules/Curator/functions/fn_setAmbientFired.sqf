@@ -18,7 +18,6 @@
     ["LOS DISPAROS AMBIENTALES DEL VEHÍCULO SE HAN DESACTIVADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   };
 
-
   _vehicleName = getText (configFile >> "CfgVehicles" >> (typeOf _attachedObject) >> "displayName");
   _vehicleWeaponsNames = [];
   _vehicleWeapons = weapons _attachedObject;
@@ -110,8 +109,8 @@
       _minimumDelay = [_minimumDelay, 0] call BIS_fnc_cutDecimals;
       _maximumDelay = [_maximumDelay, 0] call BIS_fnc_cutDecimals;
 
-      ["EL VEHÍCULO COMENZARA A REALIZAR DISPAROS AMBIENTALES"] call ZEN_Common_fnc_showMessage;
       [_attachedObject, _weapon, _magazine, [_minimumShots, _maximumShots], [_minimumDelay, _maximumDelay]] call FCLA_Common_fnc_setAmbientFired;
+      ["EL VEHÍCULO COMENZARA A REALIZAR DISPAROS AMBIENTALES"] call ZEN_Common_fnc_showMessage;
     }, {}, [_attachedObject, _weaponSelected]] call ZEN_Dialog_fnc_Create;
   }, {}, [_attachedObject, _vehicleName, _vehicleWeapons, _vehicleWeaponsNames]] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Tracers.paa"] call ZEN_Custom_Modules_fnc_Register;

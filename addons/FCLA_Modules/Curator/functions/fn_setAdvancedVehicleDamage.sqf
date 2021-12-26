@@ -51,7 +51,7 @@
      _damageItemsState = if (_damageItemsState == 0) then {true;} else {false;};
      _damageWeaponsState = if (_damageWeaponsState == 0) then {true;} else {false;};
 
-     ["SE HA ACTIVADO EL DAÑO AVANZADO DE ESTE VEHÍCULO"] call ZEN_Common_fnc_showMessage;
      [_this select 1, _damageWeaponsState, _damageItemsState] call FCLA_Common_fnc_setAdvancedVehicleDamage;
+     ["SE HA ACTIVADO EL DAÑO AVANZADO DE ESTE VEHÍCULO"] call ZEN_Common_fnc_showMessage;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Vehicle.paa"] call ZEN_Custom_Modules_fnc_Register;

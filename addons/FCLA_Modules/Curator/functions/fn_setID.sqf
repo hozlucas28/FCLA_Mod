@@ -85,10 +85,10 @@
     (_this select 0) params ["_newName", "_newAge", "_newPlaceOfBirth", "_doctorState", "_advancedEnginnerState", "_EODState"];
     _attachedObject = _this select 1;
 
-    ["IDENTIFICACIÓN MODIFICADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
     _attachedObject setVariable ["FCLA_ID", [_newName, _newAge, _newPlaceOfBirth], true];
     if (_EODState == 0) then {_attachedObject setVariable ["ACE_isEOD", true, true];} else {_attachedObject setVariable ["ACE_isEOD", nil, true];};
     if (_advancedEnginnerState == 0) then {_attachedObject setVariable ["ACE_isEngineer", 2, true];} else {_attachedObject setVariable ["ACE_isEngineer", nil, true];};
     if (_doctorState == 0) then {_attachedObject setVariable ["ACE_Medical_medicClass", 2, true];} else {_attachedObject setVariable ["ACE_Medical_medicClass", nil, true];};
+    ["IDENTIFICACIÓN MODIFICADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\ID_Card.paa"] call ZEN_Custom_Modules_fnc_Register;

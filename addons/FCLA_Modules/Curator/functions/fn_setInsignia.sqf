@@ -97,12 +97,7 @@
     (_this select 0) params ["_newInsignia"];
     _isPlayer = [_this select 1, true] call ACE_common_fnc_isPlayer;
 
-    if (_isPlayer) then {
-      ["INSIGNIA COLOCADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-      [_this select 1, _newInsignia] spawn FCLA_Interactions_fnc_statementSelfInsignias;
-    } else {
-      ["INSIGNIA COLOCADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-      [_this select 1, _newInsignia] spawn FCLA_Interactions_fnc_statementExternalInsignias;
-    };
+    if (_isPlayer) then {[_this select 1, _newInsignia] spawn FCLA_Interactions_fnc_statementSelfInsignias;} else {[_this select 1, _newInsignia] spawn FCLA_Interactions_fnc_statementExternalInsignias;};
+    ["INSIGNIA COLOCADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Insignia_Management.paa"] call ZEN_Custom_Modules_fnc_Register;

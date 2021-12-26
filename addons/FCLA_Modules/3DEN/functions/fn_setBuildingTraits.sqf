@@ -18,7 +18,7 @@ _mode = _this select 0;
 _notifyBuilding = _module getVariable ["FCLA_Notify_Building", false];
 _isRepairFacility = _module getVariable ["FCLA_isRepair_Facility", false];
 _isMedicalFacility = _module getVariable ["FCLA_isMedical_Facility", false];
-_forceDeactivation = _module getvariable ["FCLA_Force_Deactivation", false];
+_forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if (((_mode != "init") && (_mode != "dragged3DEN") && (_mode != "attributesChanged3DEN")) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
 

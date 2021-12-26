@@ -38,9 +38,7 @@
      (_this select 0) params ["_identificableName", "_needHackingDeviceState"];
      _needHackingDeviceState = if (_needHackingDeviceState == 0) then {true;} else {false;};
 
-     ["EL OBJETO AHORA ES HACKEABLE"] call ZEN_Common_fnc_showMessage;
      [_this select 1, "hackear dispositivo", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa", _needHackingDeviceState] call FCLA_Common_fnc_hackDevice;
-
      [{(!alive (_this select 1)) || ((_this select 1) getVariable ["FCLA_Hacked", false])}, {
        if (!alive (_this select 1)) exitWith {};
        _unitsWithCurator = [];
@@ -51,5 +49,6 @@
        } forEach allCurators;
        ["FCLA_GUI_Message", ["DISPOSITIVO HACKEADO", "El dispositivo '" + (_this select 0) + "' ha sido hackeado con éxito."], _unitsWithCurator] call CBA_fnc_targetEvent;
      }, [_identificableName, _this select 1]] call CBA_fnc_waitUntilAndExecute;
+     ["EL OBJETO AHORA ES HACKEABLE"] call ZEN_Common_fnc_showMessage;
    }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Code.paa"] call ZEN_Custom_Modules_fnc_Register;

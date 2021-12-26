@@ -4,6 +4,16 @@
 |********************************************************************************/
 
 class Curator {
+  class setCBRNConfigurationCurator {
+    file = "\FCLA_Modules\Curator\functions\CBRN\fn_setConfiguration.sqf";
+    postInit = 1;
+  };
+
+  class setCBRNContaminatedZoneCurator {
+    file = "\FCLA_Modules\Curator\functions\CBRN\fn_setContaminatedZone.sqf";
+    postInit = 1;
+  };
+
   class setEffectCurator {
     file = "\FCLA_Modules\Curator\functions\Effects\fn_setEffect.sqf";
     postInit = 1;

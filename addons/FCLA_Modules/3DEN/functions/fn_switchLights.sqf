@@ -15,13 +15,13 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
-_forceDeactivation = _module getvariable ["FCLA_Force_Deactivation", false];
+_forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
 
 
 //Alternar luces.
-_moduleArea = _module getvariable ["objectArea", [0, 0, 0, false, -1]];
+_moduleArea = _module getVariable ["objectArea", [0, 0, 0, false, -1]];
 [{
   _state = (_this select 0) getVariable ["FCLA_Lights_State", "Off"];
   _excludeVehicles = (_this select 0) getVariable ["FCLA_Exclude_Vehicles", false];
