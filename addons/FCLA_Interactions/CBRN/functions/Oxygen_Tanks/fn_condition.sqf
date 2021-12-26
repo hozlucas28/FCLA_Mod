@@ -15,6 +15,7 @@ _compatibleBackpacksWithOxygen = missionNamespace getVariable ["FCLA_CBRN_Compat
 
 
 _isAlive = alive _target;
+_isPlayer = [_player, true] call ACE_Common_fnc_isPlayer;
 _isNotSwimming = !([_player] call ACE_Common_fnc_isSwimming);
 _isNotDragging = !(_player getVariable ["ACE_Dragging_isDragging", false]);
 _isNotCarrying = !(_player getVariable ["ACE_Dragging_isCarrying", false]);
@@ -23,4 +24,4 @@ _isTouchingGround = isTouchingGround _player;
 _isNotSurrendering = !(_player getVariable ["ACE_Captives_isSurrendering", false]);
 _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
 _haveCompatibleBackpack = _backpack in _compatibleBackpacksWithOxygen;
-(_isAlive) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation) && (_haveCompatibleBackpack)
+(_isAlive) && (_isPlayer) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation) && (_haveCompatibleBackpack)

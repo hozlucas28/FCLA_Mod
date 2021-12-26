@@ -35,7 +35,7 @@ class FCLA_Module_CBRN_Configuration: Module_F {
       typeName = "STRING";
       property = "FCLA_NRBQ_Uniforms";
       displayName = "Uniformes NRBQ";
-      defaultValue = "'['U_C_CBRN_Suit_01_Blue_F', 'U_C_CBRN_Suit_01_White_F', 'U_B_CBRN_Suit_01_Wdl_F', 'U_B_CBRN_Suit_01_MTP_F', 'U_B_CBRN_Suit_01_Tropic_F', 'U_I_CBRN_Suit_01_AAF_F', 'U_I_E_CBRN_Suit_01_EAF_F']'";
+      defaultValue = "['U_C_CBRN_Suit_01_Blue_F', 'U_C_CBRN_Suit_01_White_F', 'U_B_CBRN_Suit_01_Wdl_F', 'U_B_CBRN_Suit_01_MTP_F', 'U_B_CBRN_Suit_01_Tropic_F', 'U_I_CBRN_Suit_01_AAF_F', 'U_I_E_CBRN_Suit_01_EAF_F']";
 		};
 
     class FCLA_Chemical_Detectors: Edit {
@@ -43,7 +43,7 @@ class FCLA_Module_CBRN_Configuration: Module_F {
       typeName = "STRING";
       property = "FCLA_Chemical_Detectors";
       displayName = "Detectores químicos";
-      defaultValue = "'['ChemicalDetector_01_watch_F', 'tf_microdagr']'";
+      defaultValue = "['ChemicalDetector_01_watch_F', 'tf_microdagr']";
 		};
 
     class FCLA_Oxygen_Masks: Edit {
@@ -51,7 +51,7 @@ class FCLA_Module_CBRN_Configuration: Module_F {
       typeName = "STRING";
       property = "FCLA_Oxygen_Masks";
       displayName = "Máscaras de oxígeno";
-      defaultValue = "'['G_AirPurifyingRespirator_01_F', 'G_AirPurifyingRespirator_01_nofilter_F', 'G_AirPurifyingRespirator_02_sand_F', 'G_AirPurifyingRespirator_02_black_F', 'G_AirPurifyingRespirator_02_olive_F', 'G_RegulatorMask_F']'";
+      defaultValue = "['G_AirPurifyingRespirator_01_F', 'G_AirPurifyingRespirator_01_nofilter_F', 'G_AirPurifyingRespirator_02_sand_F', 'G_AirPurifyingRespirator_02_black_F', 'G_AirPurifyingRespirator_02_olive_F', 'G_RegulatorMask_F']";
 		};
 
     class FCLA_Backpacks_With_Oxygen: Edit {
@@ -59,7 +59,7 @@ class FCLA_Module_CBRN_Configuration: Module_F {
       typeName = "STRING";
       property = "FCLA_Backpacks_With_Oxygen";
       displayName = "Mochilas con oxígeno";
-      defaultValue = "'['B_CombinationUnitRespirator_01_F', 'B_SCBA_01_F']'";
+      defaultValue = "['B_CombinationUnitRespirator_01_F', 'B_SCBA_01_F']";
 		};
 		class ModuleDescription: ModuleDescription {};
 	};

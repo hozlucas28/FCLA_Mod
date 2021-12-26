@@ -4,11 +4,6 @@
 |********************************************************************************/
 
 class CBRN {
-  class setEventHandlerCBRN {
-    file = "\FCLA_Interactions\CBRN\functions\CBA_EventHandlers\fn_setEventHandler.sqf";
-    postInit = 1;
-  };
-
   class setPlayerEventHandlerCBRN {
     file = "\FCLA_Interactions\CBRN\functions\CBA_EventHandlers\fn_setPlayerEventHandler.sqf";
     postInit = 1;
@@ -34,11 +29,6 @@ class CBRN {
     postInit = 1;
   };
 
-  class addActionsShowerCBRN {
-    file = "\FCLA_Interactions\CBRN\functions\Shower\fn_addActions.sqf";
-    postInit = 1;
-  };
-
   class killedCBRNEH {file = "\FCLA_Interactions\CBRN\functions\BIS_EventHandlers\fn_Killed.sqf";};
   class respawnCBRNEH {file = "\FCLA_Interactions\CBRN\functions\BIS_EventHandlers\fn_Respawn.sqf";};
 
@@ -47,7 +37,6 @@ class CBRN {
   class conditionCheckOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Backpack\fn_conditionCheckOxygen.sqf";};
   class conditionTurnOnChemicalDetectorCBRN {file = "\FCLA_Interactions\CBRN\functions\Chemical_Detector\fn_conditionTurnOn.sqf";};
   class conditionTurnOffChemicalDetectorCBRN {file = "\FCLA_Interactions\CBRN\functions\Chemical_Detector\fn_conditionTurnOff.sqf";};
-  class conditionChemicalExposureCBRN {file = "\FCLA_Interactions\CBRN\functions\Medical_Menu\fn_condition.sqf";};
   class conditionRechargeOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Oxygen_Tanks\fn_condition.sqf";};
 
   class statementActivateOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Backpack\fn_statementActivateOxygen.sqf";};
@@ -55,6 +44,5 @@ class CBRN {
   class statementCheckOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Backpack\fn_statementCheckOxygen.sqf";};
   class statementTurnOnChemicalDetectorCBRN {file = "\FCLA_Interactions\CBRN\functions\Chemical_Detector\fn_statementTurnOn.sqf";};
   class statementTurnOffChemicalDetectorCBRN {file = "\FCLA_Interactions\CBRN\functions\Chemical_Detector\fn_statementTurnOff.sqf";};
-  class statementChemicalExposureCBRN {file = "\FCLA_Interactions\CBRN\functions\Medical_Menu\fn_statement.sqf";};
   class statementRechargeOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Oxygen_Tanks\fn_statement.sqf";};
 };

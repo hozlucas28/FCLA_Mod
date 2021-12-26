@@ -34,8 +34,8 @@ if ((_typeOfInjury == "") || (_levelOfInjury <= 0) || (_areNotCompatibleSynchron
 
 //Provocar lesiones.
 {
-  if (!(_x in allUnits)) exitWith {};
-  ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_x, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], false]], _x] call CBA_fnc_targetEvent;
+  if ((isHidden _x) || !(isDamageAllowed _x) || !(_x in allUnits)) exitWith {};
+  ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_x, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true]], _x] call CBA_fnc_targetEvent;
   _x setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
   [_x, _forceUnconsciousness] call ACE_Medical_fnc_setUnconscious;
   ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_x]], _x] call CBA_fnc_targetEvent;

@@ -17,6 +17,7 @@ _compatibleOxygenMasks = missionNamespace getVariable ["FCLA_CBRN_Compatible_Oxy
 _compatibleBackpacksWithOxygen = missionNamespace getVariable ["FCLA_CBRN_Compatible_Backpacks_With_Oxygen", ["B_CombinationUnitRespirator_01_F", "B_SCBA_01_F"]];
 
 
+_isPlayer = [_player, true] call ACE_Common_fnc_isPlayer;
 _isNotOnMap = !visibleMap;
 _isNotSwimming = !([_player] call ACE_Common_fnc_isSwimming);
 _isNotDragging = !(_player getVariable ["ACE_Dragging_isDragging", false]);
@@ -28,4 +29,4 @@ _hasCompatibleMask = _currentGoggles in _compatibleOxygenMasks;
 _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
 _hasCompatibleBackpack = _currentBackpack in _compatibleBackpacksWithOxygen;
 _isBackpackOxygenActivated = _backpackContainer getVariable ["FCLA_Backpack_Oxygen_Activated", false];
-(_isNotOnMap) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_hasCompatibleMask) && (_notInWeaponAnimation) && (_hasCompatibleBackpack) && (_isBackpackOxygenActivated)
+(_isPlayer) && (_isNotOnMap) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_hasCompatibleMask) && (_notInWeaponAnimation) && (_hasCompatibleBackpack) && (_isBackpackOxygenActivated)

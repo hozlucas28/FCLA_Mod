@@ -81,7 +81,7 @@ _conditionToShow = {
 
 _Statement = {
   params ["_player", "_container", "_item"];
-  _currentVolume = _player getVariable ["FCLA_Chemical_Detector_Volume", 0];
+  _currentVolume = _player getVariable ["FCLA_Chemical_Detector_Volume", 2];
   _player setVariable ["FCLA_Chemical_Detector_Volume", (_currentVolume + 1), true];
 };
 
@@ -106,7 +106,7 @@ _conditionToEnable = {
 _conditionToShow = {
   params ["_unit", "_container", "_item"];
   _compatibleChemicalDetectors = missionNamespace getVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", ["ChemicalDetector_01_watch_F", "tf_microdagr"]];
-  
+
   _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
   _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 2];
   _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
@@ -118,7 +118,7 @@ _conditionToShow = {
 
 _Statement = {
   params ["_player", "_container", "_item"];
-  _currentVolume = _player getVariable ["FCLA_Chemical_Detector_Volume", 0];
+  _currentVolume = _player getVariable ["FCLA_Chemical_Detector_Volume", 2];
   _player setVariable ["FCLA_Chemical_Detector_Volume", (_currentVolume - 1), true];
 };
 

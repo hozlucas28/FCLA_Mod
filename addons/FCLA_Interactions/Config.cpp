@@ -151,25 +151,8 @@ class CfgVehicles {
 
 
 /********************************************************************************|
-|                   ACCIONES PARA TRATAMIENTOS DEL MENÚ MEDICO                   |
-|********************************************************************************/
-
-class ACE_Medical_Treatment_Actions {
-	class Diagnose;
-	#include "\FCLA_Interactions\CBRN\ACE_Medical_Treatment_Action.hpp"
-};
-
-
-
-/********************************************************************************|
 |                            CONTROLADORES DE EVENTOS                            |
 |********************************************************************************/
-
-class Extended_InitPost_EventHandlers {
-	class DeconShower_01_F {
-		init = "(_this select 0) setVariable ['BIN_deconshower_disableAction', true, true];";
-	};
-};
 
 class Extended_FiredBIS_Eventhandlers {
 	class CAManBase {

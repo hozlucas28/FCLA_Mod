@@ -10,13 +10,6 @@ class FCLA_Gagged_Man {
   duration = 4;
 };
 
-class FCLA_Shower {
-  name = "FCLA - Ducha";
-  sound[] = {"\FCLA_Interactions\sounds\Shower.ogg", "db+2.5", 1};
-  titles[] = {0, ""};
-  duration = 8;
-};
-
 class FCLA_Oxygen_Alert {
   name = "FCLA - Alerta (oxígeno bajo)";
   sound[] = {"\FCLA_Interactions\sounds\Oxygen_Alert.ogg", "db+1.5", 1};

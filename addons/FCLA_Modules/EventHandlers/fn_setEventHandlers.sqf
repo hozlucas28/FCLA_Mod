@@ -12,6 +12,7 @@
   _this spawn {
     params ["_logic", "_rad"];
     _player = call CBA_fnc_currentUnit;
+    if (isHidden _player) exitWith {};
 
     if (_player inArea [_logic, _rad + (_rad / 2), _rad + (_rad / 2), 0, false, _rad + (_rad / 2)]) then {
       enableCamShake true;
@@ -21,7 +22,7 @@
 
     sleep 1;
     cutText ["", "WHITE OUT", 1];
-    [_player, 0.75] call ACE_Medical_fnc_adjustPainLevel;
+    if (isDamageAllowed _player) then {[_player, 0.75] call ACE_Medical_fnc_adjustPainLevel;};
     hint parseText "<t color='#FF0000'>Fuiste afectado por un PEM.<br/>Tus accesorios electrónicos se han destruido.</t>";
     {playSound _x;} forEach ["FCLA_Radiation", "Earthquake_01"];
 
