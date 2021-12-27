@@ -113,7 +113,7 @@
 	 ],
    {
      (_this select 0) params ["_typeOfInjury", "_levelOfInjury", "_forceUnconsciousness", "_fractureRightArm", "_fractureLeftArm", "_fractureRightLeg", "_fractureLeftLeg"];
-     _isHidden = isHidden _x;
+     _isHidden = isObjectHidden _x;
      _levelOfInjury = [_levelOfInjury, 2] call BIS_fnc_cutDecimals;
      _isInvulnerable = !(isDamageAllowed (_this select 1));
      _forceUnconsciousness = if (_forceUnconsciousness == 0) then {true;} else {nil;};

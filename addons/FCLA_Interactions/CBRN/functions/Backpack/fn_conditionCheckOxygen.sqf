@@ -19,8 +19,7 @@ _isCompatible = _item in _compatibleBackpacksWithOxygen;
 _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
 _isNotDragging = !(_unit getVariable ["ACE_Dragging_isDragging", false]);
 _isNotCarrying = !(_unit getVariable ["ACE_Dragging_isCarrying", false]);
-_isCBRNActivated = missionNamespace getVariable ["FCLA_CBRN", false];
 _isTouchingGround = isTouchingGround _unit;
 _isNotSurrendering = !(_unit getVariable ["ACE_Captives_isSurrendering", false]);
 _notInWeaponAnimation = isNil "FCLA_Weapon_Animation";
-(_isPlayer) && (_isNotOnMap) && (_isCompatible) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isCBRNActivated) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation)
+(_isPlayer) && (_isNotOnMap) && (_isCompatible) && (_isNotSwimming) && (_isNotDragging) && (_isNotCarrying) && (_isTouchingGround) && (_isNotSurrendering) && (_notInWeaponAnimation)

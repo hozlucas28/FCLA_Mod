@@ -62,8 +62,7 @@ _conditionToEnable = {
   _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
   _isCompatible = _item in _compatibleChemicalDetectors;
   _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
-  _isCBRNActivated = missionNamespace getVariable ["FCLA_CBRN", false];
-  (_isPlayer) && (_currentVolume < 5) && (_isActivated) && (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated);
+  (_isPlayer) && (_currentVolume < 5) && (_isActivated) && (_isCompatible) && (_isNotSwimming);
 };
 
 _conditionToShow = {
@@ -75,8 +74,7 @@ _conditionToShow = {
   _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
   _isCompatible = _item in _compatibleChemicalDetectors;
   _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
-  _isCBRNActivated = missionNamespace getVariable ["FCLA_CBRN", false];
-  (_isPlayer) && (_currentVolume <= 5) && (_isActivated) && (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated);
+  (_isPlayer) && (_currentVolume <= 5) && (_isActivated) && (_isCompatible) && (_isNotSwimming);
 };
 
 _Statement = {
@@ -99,8 +97,7 @@ _conditionToEnable = {
   _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
   _isCompatible = _item in _compatibleChemicalDetectors;
   _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
-  _isCBRNActivated = missionNamespace getVariable ["FCLA_CBRN", false];
-  (_isPlayer) && (_currentVolume > 0) && (_isActivated) && (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated);
+  (_isPlayer) && (_currentVolume > 0) && (_isActivated) && (_isCompatible) && (_isNotSwimming);
 };
 
 _conditionToShow = {
@@ -112,8 +109,7 @@ _conditionToShow = {
   _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
   _isCompatible = _item in _compatibleChemicalDetectors;
   _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
-  _isCBRNActivated = missionNamespace getVariable ["FCLA_CBRN", false];
-  (_isPlayer) && (_currentVolume >= 0) && (_isActivated) && (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated);
+  (_isPlayer) && (_currentVolume >= 0) && (_isActivated) && (_isCompatible) && (_isNotSwimming);
 };
 
 _Statement = {
@@ -134,16 +130,14 @@ _conditionToEnable = {
   params ["_unit", "_container", "_item"];
   _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
   _itemInWatchSlot = ((getUnitLoadout _unit) select 9) select 4;
-  _isCBRNActivated = missionNamespace getVariable ["FCLA_CBRN", false];
-  (_isPlayer) && (_itemInWatchSlot != _item) && (_isCBRNActivated);
+  (_isPlayer) && (_itemInWatchSlot != _item);
 };
 
 _conditionToShow = {
   params ["_unit", "_container", "_item"];
   _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
   _itemInWatchSlot = ((getUnitLoadout _unit) select 9) select 4;
-  _isCBRNActivated = missionNamespace getVariable ["FCLA_CBRN", false];
-  (_isPlayer) && (_itemInWatchSlot != _item) && (_isCBRNActivated);
+  (_isPlayer) && (_itemInWatchSlot != _item);
 };
 
 _Statement = {

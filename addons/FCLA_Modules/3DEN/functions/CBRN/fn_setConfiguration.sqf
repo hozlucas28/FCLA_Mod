@@ -41,7 +41,6 @@ _compatibleBackpacksWithOxygen = parseSimpleArray ([_compatibleBackpacksWithOxyg
 
 
 //Establecer configuración.
-missionNamespace setVariable ["FCLA_CBRN", true];
 missionNamespace setVariable ["FCLA_CBRN_Compatible_Oxygen_Masks", _compatibleOxygenMasks];
 missionNamespace setVariable ["FCLA_CBRN_Compatible_NRBQ_Uniforms", _compatibleNRBQUniforms];
 missionNamespace setVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", _compatibleChemicalDetectors];

@@ -10,7 +10,4 @@
 
 //Variable de referencia.
 params ["_unit"];
-if (!(missionNamespace getVariable ["FCLA_CBRN", false])) exitWith {};
-
-
 _unit setVariable ["FCLA_Contaminated_Areas", nil, true];

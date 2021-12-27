@@ -17,5 +17,4 @@ _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
 _isActivated = _unit getVariable ["FCLA_Chemical_Detector_Activated", false];
 _isCompatible = _item in _compatibleChemicalDetectors;
 _isNotSwimming = !([_unit] call ACE_Common_fnc_isSwimming);
-_isCBRNActivated = missionNamespace getVariable ["FCLA_CBRN", false];
-(_isPlayer) && (_isActivated) && (_isCompatible) && (_isNotSwimming) && (_isCBRNActivated)
+(_isPlayer) && (_isActivated) && (_isCompatible) && (_isNotSwimming)

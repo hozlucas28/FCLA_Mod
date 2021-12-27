@@ -44,7 +44,7 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
   _isDesactivated = _jammerSource getVariable ["FCLA_Hacked", false];
   _unitsInArea = allUnits select {_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad]};
   _vehiclesInArea = vehicles select {_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad]};
-  _unitsNotInArea = allUnits select {!(_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad])};
+  _unitsNotInArea = allUnits select {(isObjectHidden _x) || !(_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad])};
   _vehiclesNotInArea = vehicles select {!(_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad])};
   _entitiesAffected = _jammerSource getVariable ["FCLA_Entities_Affected", []];
   _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", 1];
@@ -60,6 +60,8 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
   {
+    _isHidden = isObjectHidden _x;
+    if (_isHidden) exitWith {};
     _affectedRadioRange = linearConversion [_jammerRad, _jammerHalfRad, _x distance _jammerSource, _normalRadioRange, 0, true];
     _x setVariable ["tf_sendingDistanceMultiplicator", _affectedRadioRange, true];
     _x setVariable ["tf_receivingDistanceMultiplicator", _affectedRadioRange, true];

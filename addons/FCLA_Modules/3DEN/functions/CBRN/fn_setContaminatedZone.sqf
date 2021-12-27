@@ -51,7 +51,7 @@ if (_threatLevel <= 0) exitWith {["¡Error! El/Un módulo 'Área contaminada (CB
 
 
   {
-    _isHidden = isHidden _x;
+    _isHidden = isObjectHidden _x;
     _isInvulnerable = !(isDamageAllowed _x);
     _backpackContainer = backpackContainer _x;
     _contaminatedAreas = _x getVariable ["FCLA_Contaminated_Areas", []];
@@ -92,4 +92,4 @@ if (_threatLevel <= 0) exitWith {["¡Error! El/Un módulo 'Área contaminada (CB
 
 
 //Guardar atributos.
-_module setVariable ["FCLA_Atributtes", [_threatLevel, _contaminationRad], true];
+_module setVariable ["FCLA_Contamination_Radius", _contaminationRad, true];

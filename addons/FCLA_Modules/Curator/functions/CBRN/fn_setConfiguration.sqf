@@ -59,7 +59,6 @@
     _newCompatibleNRBQUniforms = parseSimpleArray ([_newCompatibleNRBQUniforms, """", "'"] call CBA_fnc_replace);
     _newCompatibleChemicalDetectors = parseSimpleArray ([_newCompatibleChemicalDetectors, """", "'"] call CBA_fnc_replace);
     _newCompatibleBackpacksWithOxygen = parseSimpleArray ([_newCompatibleBackpacksWithOxygen, """", "'"] call CBA_fnc_replace);
-    missionNamespace setVariable ["FCLA_CBRN", true];
     missionNamespace setVariable ["FCLA_CBRN_Compatible_Oxygen_Masks", _newCompatibleOxygenMasks];
     missionNamespace setVariable ["FCLA_CBRN_Compatible_NRBQ_Uniforms", _newCompatibleNRBQUniforms];
     missionNamespace setVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", _newCompatibleChemicalDetectors];

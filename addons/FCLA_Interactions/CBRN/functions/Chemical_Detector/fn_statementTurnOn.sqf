@@ -32,10 +32,8 @@ _player setVariable ["FCLA_Chemical_Detector_Activated", true, true];
   _contaminatedAreas = _player getVariable ["FCLA_Contaminated_Areas", []];
   if (_contaminatedAreas isNotEqualTo []) then {
     _moduleOfContaminatedArea = _contaminatedAreas select ((count _contaminatedAreas) - 1);
-    _moduleAtributtes = _moduleOfContaminatedArea getVariable ["FCLA_Atributtes", []];
-    _threatLevel = _moduleAtributtes select 0;
-    _contaminationRad = _moduleAtributtes select 1;
-    _angleOfNeedle = linearConversion [_contaminationRad, 0, _player distance _moduleOfContaminatedArea, 87, -87, true];
+    _contaminationRadius = _moduleOfContaminatedArea getVariable ["FCLA_Contamination_Radius", 0];
+    _angleOfNeedle = linearConversion [_contaminationRadius, 0, _player distance _moduleOfContaminatedArea, 87, -87, true];
   };
 
   if (isNil {_player getVariable "FCLA_CBRN_Chemical_Detector_Ctrls"}) then {
@@ -117,10 +115,8 @@ _player setVariable ["FCLA_Chemical_Detector_Activated", true, true];
   _contaminatedAreas = _player getVariable ["FCLA_Contaminated_Areas", []];
   if (_contaminatedAreas isNotEqualTo []) then {
     _moduleOfContaminatedArea = _contaminatedAreas select ((count _contaminatedAreas) - 1);
-    _moduleAtributtes = _moduleOfContaminatedArea getVariable ["FCLA_Atributtes", []];
-    _threatLevel = _moduleAtributtes select 0;
-    _contaminationRad = _moduleAtributtes select 1;
-    _angleOfNeedle = linearConversion [_contaminationRad, 0, _player distance _moduleOfContaminatedArea, 87, -87, true];
+    _contaminationRadius = _moduleOfContaminatedArea getVariable ["FCLA_Contamination_Radius", 0];
+    _angleOfNeedle = linearConversion [_contaminationRadius, 0, _player distance _moduleOfContaminatedArea, 87, -87, true];
   };
   if (_angleOfNeedle >= 87) exitWith {};
 

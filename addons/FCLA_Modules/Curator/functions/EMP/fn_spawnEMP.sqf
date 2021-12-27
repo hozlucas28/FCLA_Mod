@@ -55,6 +55,10 @@ _this spawn {
 
   //Dañar vehículos.
   {
+    _isHidden = isObjectHidden _x;
+    _isInvulnerable = !(isDamageAllowed _x);
+    if ((_isHidden) || (_isInvulnerable)) exitWith {};
+
     _x disableTIEquipment true;
     _x disableNVGEquipment true;
     _x setHitPointDamage ["hitGun", 1];
@@ -79,6 +83,10 @@ _this spawn {
 
   //Destruir torretas inteligentes.
   {
+    _isHidden = isObjectHidden _x;
+    _isInvulnerable = !(isDamageAllowed _x);
+    if ((_isHidden) || (_isInvulnerable)) exitWith {};
+
     _maxLoops = 1 + floor (random 5);
     _numberOfLoops = 0;
     _x setDamage [1, false];
@@ -122,6 +130,9 @@ _this spawn {
 
   //Destruir items.
   {
+    _isHidden = isObjectHidden _x;
+    if (_isHidden) exitWith {};
+
     _bbr = boundingBoxReal vehicle _x;
     _p1 = _bbr select 0;
     _p2 = _bbr select 1;
@@ -156,7 +167,6 @@ _this spawn {
     _primaryWeaponPointer = _unitPrimaryWeaponItems select 1;
     _handgunWeaponPointer = _unitHandgunWeaponItems select 1;
     _itemInGPSSlot = (_unitLoadout select 9) select 1;
-    //_itemInRadioSlot = (_unitLoadout select 9) select 2;
     _itemInClockSlot = (_unitLoadout select 9) select 4;
 
     if (_hasLauncherVisionModes) then {
@@ -182,8 +192,6 @@ _this spawn {
     _x removeSecondaryWeaponItem _launcherPointer;
     _x unassignItem _itemInGPSSlot;
     _x removeItem _itemInGPSSlot;
-    //_x unassignItem _itemInRadioSlot;
-    //_x removeItem _itemInRadioSlot;
     _x unassignItem _itemInClockSlot;
     _x removeItem _itemInClockSlot;
     _x unassignItem _itemInClockSlot;
@@ -198,7 +206,7 @@ _this spawn {
     _isNotAlive = !alive _logic;
     _unitsInArea = allUnits select {_x inArea [_logic, _rad, _rad, 0, false, _rad]};
     _vehiclesInArea = vehicles select {_x inArea [_logic, _rad, _rad, 0, false, _rad]};
-    _unitsNotInArea = allUnits select {!(_x inArea [_logic, _rad, _rad, 0, false, _rad])};
+    _unitsNotInArea = allUnits select {(isObjectHidden _x) || !(_x inArea [_logic, _rad, _rad, 0, false, _rad])};
     _vehiclesNotInArea = vehicles select {!(_x inArea [_logic, _rad, _rad, 0, false, _rad])};
     _entitiesAffected = _logic getVariable ["FCLA_Entities_Affected", []];
     _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", 1];
@@ -220,6 +228,8 @@ _this spawn {
     } forEach _unitsInArea;
 
     {
+      _isHidden = isObjectHidden _x;
+      if (_isHidden) exitWith {};
       _affectedRadioRange = linearConversion [_rad, _rad / 2, _x distance _logic, _normalRadioRange, 0, true];
       _x setVariable ["tf_range", _affectedRadioRange, true];
       if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
