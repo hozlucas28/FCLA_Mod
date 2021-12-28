@@ -49,8 +49,8 @@ if ((isNull _device) || (_title == "")) exitWith {false};
 	_title,
 	_actionPicture,
 	_actionPicture,
-	"(alive _target) && (_this distance _target <= 2.5) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_this, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
-	"(alive _target) && (_caller distance _target <= 2.5) && ((!(_arguments select 0)) || ([_caller, 'FCLA_Hacking_Device'] call BIS_fnc_hasItem)) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_caller, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
+	"(alive _target) && (_this distance _target <= 3) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_this, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
+	"(alive _target) && (_caller distance _target <= 3) && ((!(_arguments select 0)) || ([_caller, 'FCLA_Hacking_Device'] call BIS_fnc_hasItem)) && !(_target getVariable ['FCLA_Hacking', false]) && !(_target getVariable ['FCLA_Hacked', false]) && !([_caller, [1, 2, 3, 5, 15, 16]] call FCLA_Common_fnc_severalConditions)",
 	{},
 	{},
 	{ //Sentencias al completar.
@@ -152,7 +152,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     //Condicional para interrumpir hackeo.
     [{
       params ["_target", "_caller", "_arguments", "_display"];
-      _tooFar = _caller distance _target > 3;
+      _tooFar = _caller distance _target > 3.5;
       _areNotAlive = (!alive _target) || (!alive _caller);
       _alreadyHacked = _target getVariable ['FCLA_Hacked', false];
       _hasNotHackDevice = (_arguments select 0) && !([_caller, "FCLA_Hacking_Device"] call BIS_fnc_hasItem);
@@ -171,7 +171,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     _linesOfCode = (loadFile "\FCLA_Common\functions\Hack_Device\codes\Hacking_Lines.txt") splitString "@";
     _numberOfLines = count _linesOfCode;
 
-    while {(alive _target) && (!isNull _display) && (_numberOfLinesDisplayed < _numberOfLines) && (_caller distance _target < 2.5) && ((!(_arguments select 0)) || ([_caller, "FCLA_Hacking_Device"] call BIS_fnc_hasItem)) && !([_caller] call FCLA_Common_fnc_severalConditions)} do {
+    while {(alive _target) && (!isNull _display) && (_numberOfLinesDisplayed < _numberOfLines) && (_caller distance _target <= 3) && ((!(_arguments select 0)) || ([_caller, "FCLA_Hacking_Device"] call BIS_fnc_hasItem)) && !([_caller] call FCLA_Common_fnc_severalConditions)} do {
     	_lineToWrite = _linesOfCode select _numberOfLinesDisplayed;
       _lastLetterNumber = _caller getVariable ['FCLA_Letter_Number', 0];
     	_lastWritten = _lineToWrite select [0, _lastLetterNumber];
