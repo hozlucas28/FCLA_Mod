@@ -65,14 +65,13 @@
     (_this select 0) params ["_jammerID", "_jammerRad", "_canBeDisabled", "_affectVehicles", "_needHackingDevice"];
     (_this select 1) params ["_jammerSource"];
     _jammerRad = if (_jammerRad <= -1) then {worldSize * 2;} else {_jammerRad;};
-    _jammerHalfRad = _jammerRad / 2;
     _canBeDisabled = if (_canBeDisabled == 0) then {true;} else {false;};
     _affectVehicles = if (_affectVehicles == 0) then {true;} else {false;};
     _needHackingDevice = if (_needHackingDevice == 0) then {true;} else {false;};
 
 
     [{
-      _args params ["_jammerSource", "_jammerRad", "_jammerHalfRad", "_affectVehicles"];
+      _args params ["_jammerSource", "_jammerRad", "_jammerQuarterOfRad", "_affectVehicles"];
       _isNotAlive = !alive _jammerSource;
       _isDesactivated = _jammerSource getVariable ["FCLA_Hacked", false];
       _unitsInArea = allUnits select {_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad]};
@@ -94,7 +93,7 @@
       {
         _isHidden = isObjectHidden _x;
         if (_isHidden) exitWith {};
-        _affectedRadioRange = linearConversion [_jammerRad, _jammerHalfRad, _x distance _jammerSource, _normalRadioRange, 0, true];
+        _affectedRadioRange = linearConversion [_jammerRad, _jammerQuarterOfRad, _x distance _jammerSource, _normalRadioRange, 0, true];
         _x setVariable ["tf_sendingDistanceMultiplicator", _affectedRadioRange, true];
         _x setVariable ["tf_receivingDistanceMultiplicator", _affectedRadioRange, true];
         if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
@@ -102,7 +101,7 @@
 
       if (_affectVehicles) then {
         {
-          _affectedRadioRange = linearConversion [_jammerRad, _jammerHalfRad, _x distance _jammerSource, _normalRadioRange, 0, true];
+          _affectedRadioRange = linearConversion [_jammerRad, _jammerQuarterOfRad, _x distance _jammerSource, _normalRadioRange, 0, true];
           _x setVariable ["tf_range", _affectedRadioRange, true];
           if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
         } forEach _vehiclesInArea;
@@ -123,7 +122,7 @@
         } forEach _vehiclesNotInArea;
       };
       _jammerSource setVariable ["FCLA_Entities_Affected", _entitiesAffected, true];
-    }, 0.5, [_jammerSource, _jammerRad, _jammerHalfRad, _affectVehicles]] call CBA_fnc_addPerFrameHandler;
+    }, 0.5, [_jammerSource, _jammerRad, (25 * _rad) / 100, _affectVehicles]] call CBA_fnc_addPerFrameHandler;
 
 
     //Acción para desactivar.

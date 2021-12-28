@@ -202,7 +202,7 @@ _this spawn {
   //Crear jammer.
   if (!_jammer) exitWith {deleteVehicle _module;};
   [{
-    _args params ["_module", "_rad"];
+    _args params ["_module", "_rad", "_quarterOfRad"];
     _isNotAlive = !alive _module;
     _unitsInArea = allUnits select {_x inArea [_module, _rad, _rad, 0, false, _rad]};
     _vehiclesInArea = vehicles select {_x inArea [_module, _rad, _rad, 0, false, _rad]};
@@ -223,14 +223,14 @@ _this spawn {
     {
       _isHidden = isObjectHidden _x;
       if (_isHidden) exitWith {};
-      _affectedRadioRange = linearConversion [_rad, _rad / 2, _x distance _module, _normalRadioRange, 0, true];
+      _affectedRadioRange = linearConversion [_rad, _quarterOfRad, _x distance _module, _normalRadioRange, 0, true];
       _x setVariable ["tf_sendingDistanceMultiplicator", _affectedRadioRange, true];
       _x setVariable ["tf_receivingDistanceMultiplicator", _affectedRadioRange, true];
       if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
     } forEach _unitsInArea;
 
     {
-      _affectedRadioRange = linearConversion [_rad, _rad / 2, _x distance _module, _normalRadioRange, 0, true];
+      _affectedRadioRange = linearConversion [_rad, _quarterOfRad, _x distance _module, _normalRadioRange, 0, true];
       _x setVariable ["tf_range", _affectedRadioRange, true];
       if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
     } forEach _vehiclesInArea;
@@ -248,5 +248,5 @@ _this spawn {
       _entitiesAffected = _entitiesAffected - [_x];
     } forEach _vehiclesNotInArea;
     _module setVariable ["FCLA_Entities_Affected", _entitiesAffected, true];
-  }, 0.5, [_module, _rad]] call CBA_fnc_addPerFrameHandler;
+  }, 0.5, [_module, _rad, (25 * _rad) / 100]] call CBA_fnc_addPerFrameHandler;
 };

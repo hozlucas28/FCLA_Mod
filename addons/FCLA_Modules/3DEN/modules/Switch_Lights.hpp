@@ -19,7 +19,7 @@ class FCLA_Module_Switch_Lights: Module_F {
 	isGlobal = GLOBAL;
   canSetArea = HAS_SETTABLE_AREA;
   isDisposable = UNREPEATABLE;
-  canSetAreaHeight = HAS_SETTABLE_AREA_HEIGHT;
+  canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
 	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
   scope = 2;
 
@@ -60,6 +60,6 @@ class FCLA_Module_Switch_Lights: Module_F {
 	};
 
   class AttributeValues {
-    size3[] = {50, 50, 50};
+    size3[] = {50, 50, -1};
   };
 };

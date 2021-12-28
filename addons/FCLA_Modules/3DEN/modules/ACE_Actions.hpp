@@ -101,7 +101,7 @@ class FCLA_Module_ACE_Class_Action: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Crea una acción ACE 3D asociada a las entidades que tengan el mismo classname.<br/>• Más información: https://ace3mod.com/wiki/framework/interactionMenu-framework.html"};
+		description[] =	{"Crea una acción ACE 3D asociada a las entidades que tengan el mismo classname.<br/>• Más información: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"};
 	};
 };
 
@@ -197,7 +197,7 @@ class FCLA_Module_ACE_Object_Action: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Crea una acción ACE 3D asociada a una entidad específica.<br/>• Más información: https://ace3mod.com/wiki/framework/interactionMenu-framework.html"};
+		description[] =	{"Crea una acción ACE 3D asociada a una entidad específica.<br/>• Más información: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"};
 	};
 };
 
@@ -265,6 +265,6 @@ class FCLA_Module_ACE_Zeus_Action: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Crea una acción ACE 3D asociada a los Zeus, disponible cuando se encuentran en la cámara del Zeus.<br/>• Más información: https://ace3mod.com/wiki/framework/interactionMenu-framework.html"};
+		description[] =	{"Crea una acción ACE 3D asociada a los Zeus, disponible cuando se encuentran en la cámara del Zeus.<br/>• Más información: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"};
 	};
 };
