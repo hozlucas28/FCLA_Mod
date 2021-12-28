@@ -31,7 +31,7 @@ if (_areNotCompatibleSynchronizedObjects) exitWith {["¡Error! El/Un módulo 'As
 
 //Evitar daño fatal al vehículo.
 {
-  if (!(_x in vehicles)) exitWith {};
+  if (!(_x in vehicles) || (_x isKindOf "EmptyDetector")) exitWith {};
   [_x, _damageWeaponsState, _damageItemsState] call FCLA_Common_fnc_setAdvancedVehicleDamage;
 } forEach _synchronizedObjects;
 

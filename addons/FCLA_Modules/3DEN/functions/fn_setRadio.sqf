@@ -29,8 +29,7 @@ if (_areNotCompatibleSynchronizedObjects) exitWith {["¡Error! El/Un módulo 'Mo
 
 //Modificar identificación.
 {
-  _isNotKindOfVehicle = !(_x in vehicles);
-  if (_isNotKindOfVehicle) exitWith {};
+  if (!(_x in vehicles) || (_x isKindOf "EmptyDetector")) exitWith {};
   _x setVariable ["tf_hasRadio", _hasRadio, true];
   _x setVariable ["tf_side", _radioSideSelected, true];
 } forEach _synchronizedObjects;

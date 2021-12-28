@@ -32,9 +32,14 @@ class FCLA_Module_Spawn_Effect: Module_F {
       typeName = "STRING";
       property = "FCLA_Effect";
       displayName = "Seleccionar efecto";
-      defaultValue = """sparks""";
+      defaultValue = """smoke""";
 
 			class Values {
+        class Smoke {
+					name = "Humo";
+					value = "smoke";
+				};
+
 				class Sparks {
 					name = "Chispas";
 					value = "sparks";
@@ -43,6 +48,11 @@ class FCLA_Module_Spawn_Effect: Module_F {
 				class Fireflies {
 					name = "Luciérnagas";
 					value = "fireflies";
+				};
+
+        class Big_Fire {
+					name = "Fuego (grande)";
+					value = "big_fire";
 				};
 
 				class Wind_Gust {
@@ -54,10 +64,10 @@ class FCLA_Module_Spawn_Effect: Module_F {
 
 		class FCLA_Delay: Edit {
       tooltip = "Segundos para que se repita el efecto.\n• Solo funciona con las chispas y la ráfaga de viento.";
-      typeName = "STRING";
+      typeName = "NUMBER";
       property = "FCLA_Delay";
       displayName = "Tiempo";
-      defaultValue = "''";
+      defaultValue = 15;
 		};
 		class ModuleDescription: ModuleDescription {};
 	};

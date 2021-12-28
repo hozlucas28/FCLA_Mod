@@ -29,8 +29,7 @@ if ((_newPlateNumber == "") || (_areNotCompatibleSynchronizedObjects)) exitWith 
 
 //Modificar matrícula.
 {
-  _isNotCompatibleVehicle = !(_x isKindOf "Car") && !(_x isKindOf "Tank") && !(_x isKindOf "Ship_F");
-  if (_isNotCompatibleVehicle) exitWith {};
+  if ((!(_x isKindOf "Car") && !(_x isKindOf "Tank") && !(_x isKindOf "Ship_F")) || (_x isKindOf "EmptyDetector")) exitWith {};
   _x setPlateNumber _newPlateNumber;
   _x setVariable ["FCLA_Plate_Number", _newPlateNumber, true];
 } forEach _synchronizedObjects;

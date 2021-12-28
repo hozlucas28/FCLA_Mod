@@ -14,13 +14,17 @@
     ["COMBO", "Tipo de efecto",
      [
       [
+       "Smoke",
        "Sparks",
        "Fireflies",
+       "Big_Fire",
        "Wind_Gust"
       ],
       [
+       "Humo",
        "Chispas",
        "Luciérnagas",
+       "Fuego (grande)",
        "Ráfaga de viento"
       ],
       0
@@ -43,6 +47,8 @@
      _selectedEffect = toUpper _selectedEffect;
 
      _effectName = switch (_selectedEffect) do {
+       case "BIG_FIRE": {"FUEGO (GRANDE)";};
+       case "SMOKE": {"HUMO";};
        case "SPARKS": {"CHISPAS";};
        case "WIND_GUST": {"RÁFAGA DE VIENTO";};
        case "FIREFLIES": {"LUCIÉRNAGAS";};
@@ -54,6 +60,18 @@
      _module setVariable ["FCLA_Force_Deactivation", true, true];
 
      switch (_selectedEffect) do {
+       case "BIG_FIRE": {
+         _effectObj = createVehicle ["test_EmptyObjectForFireBig", getPos _module, [], 0, "CAN_COLLIDE"];
+         _curatorLogic addCuratorEditableObjects [[_effectObj], false];
+         deleteVehicle _module;
+       };
+
+       case "SMOKE": {
+         _effectObj = createVehicle ["test_EmptyObjectForSmoke", getPos _module, [], 0, "CAN_COLLIDE"];
+         _curatorLogic addCuratorEditableObjects [[_effectObj], false];
+         deleteVehicle _module;
+       };
+
        case "SPARKS": {[_module, _delay] spawn FCLA_Modules_fnc_spawnSparksCurator;};
        case "WIND_GUST": {[_module, _delay] spawn FCLA_Modules_fnc_spawnWindGustCurator;};
        case "FIREFLIES": {[_module] spawn FCLA_Modules_fnc_spawnFirefliesCurator;};

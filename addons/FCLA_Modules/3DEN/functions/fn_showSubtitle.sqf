@@ -58,7 +58,7 @@ _StatementOnActivation = {
   ["FCLA_Show_Subtitles", _arguments, _player] call CBA_fnc_targetEvent;
 };
 
-_StatementOnDesactivation = {
+_StatementOnDeactivation = {
   _player = call CBA_fnc_currentUnit;
   _arguments = thisTrigger getVariable ["FCLA_Subtitle_Attributes", []];
   ["FCLA_Hide_Subtitles", [_arguments select 0], _player] call CBA_fnc_targetEvent;
@@ -69,6 +69,6 @@ _trigger setTriggerInterval 0.5;
 _trigger attachTo [_emitterObject, [0, 0, 0]];
 _trigger setTriggerActivation ["ANY", "PRESENT", _repeatable];
 _trigger setTriggerArea _moduleArea;
-_trigger setTriggerStatements [[_Condition] call ACE_Common_fnc_codeToString, [_StatementOnActivation] call ACE_Common_fnc_codeToString, [_StatementOnDesactivation] call ACE_Common_fnc_codeToString];
+_trigger setTriggerStatements [[_Condition] call ACE_Common_fnc_codeToString, [_StatementOnActivation] call ACE_Common_fnc_codeToString, [_StatementOnDeactivation] call ACE_Common_fnc_codeToString];
 _trigger setVariable ["FCLA_Subtitle_Attributes", [_emitterObject, [[_emitter, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _side, _moduleArea]], true];
 [{!alive (_this select 1)}, {{deleteVehicle _x;} forEach _this;}, [_module, _emitterObject, _trigger]] call CBA_fnc_waitUntilAndExecute;

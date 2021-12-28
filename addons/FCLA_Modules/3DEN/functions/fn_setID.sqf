@@ -34,8 +34,7 @@ if ((_newAge == "") || (_newName == "") || (_newPlaceOfBirth == "") || (_areNotC
 
 //Modificar identificación.
 {
-  _isNotKindOfUnit = !(_x isKindOf "CAManBase");
-  if (_isNotKindOfUnit) exitWith {};
+  if (!(_x isKindOf "CAManBase") || (_x isKindOf "EmptyDetector")) exitWith {};
   _x setVariable ["FCLA_ID", [_newName, _newAge, _newPlaceOfBirth], true];
   if (_EODState) then {_x setVariable ["ACE_isEOD", true, true];} else {_x setVariable ["ACE_isEOD", nil, true];};
   if (_doctorState) then {_x setVariable ["ACE_Medical_medicClass", 2, true];} else {_x setVariable ["ACE_Medical_medicClass", nil, true];};

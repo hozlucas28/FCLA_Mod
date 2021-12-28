@@ -28,6 +28,18 @@ if ((_selectedEffect in ["SPARKS", "WIND_GUST"]) && (_delayEffect <= 0)) exitWit
 
 //Generar efecto.
 switch (_selectedEffect) do {
+  case "BIG_FIRE": {
+    _effectObj = createVehicle ["test_EmptyObjectForFireBig", getPos _module, [], 0, "CAN_COLLIDE"];
+    [_effectObj, attachedTo _module] call BIS_fnc_attachToRelative;
+    deleteVehicle _module;
+  };
+
+  case "SMOKE": {
+    _effectObj = createVehicle ["test_EmptyObjectForSmoke", getPos _module, [], 0, "CAN_COLLIDE"];
+    [_effectObj, attachedTo _module] call BIS_fnc_attachToRelative;
+    deleteVehicle _module;
+  };
+
   case "SPARKS": {[_module, _delayEffect] spawn FCLA_Modules_fnc_spawnSparks3DEN;};
   case "WIND_GUST": {[_module, _delayEffect] spawn FCLA_Modules_fnc_spawnWindGust3DEN;};
   case "FIREFLIES": {[_module] spawn FCLA_Modules_fnc_spawnFireflies3DEN;};
