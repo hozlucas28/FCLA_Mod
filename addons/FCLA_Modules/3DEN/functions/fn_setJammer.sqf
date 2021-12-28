@@ -26,7 +26,7 @@ _canBeDisabled = _module getVariable ["FCLA_Deactivatable", false];
 _affectVehicles = _module getVariable ["FCLA_Affect_Vehicles", false];
 _needHackingDevice = _module getVariable ["FCLA_Need_Hacking_Device", false];
 _numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count _synchronizedObjects;
-_jammerRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4]) <= -1) then {worldSize * 2;} else {selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4];};
+_jammerMaxRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1]) <= -1) then {worldSize * 2;} else {selectMax [_moduleArea select 0, _moduleArea select 1];};
 
 
 
@@ -38,13 +38,13 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
 
 //Generar jammer.
 [{
-  _args params ["_module", "_jammerSource", "_jammerRad", "_jammerQuarterOfRad", "_affectVehicles"];
+  _args params ["_module", "_moduleArea", "_jammerSource", "_jammerMaxRad", "_jammerQuarterOfMaxRad", "_affectVehicles"];
   _areNotAlive = (!alive _module) || (!alive _jammerSource);
   _isDesactivated = _jammerSource getVariable ["FCLA_Hacked", false];
-  _unitsInArea = allUnits select {_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad]};
-  _vehiclesInArea = vehicles select {_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad]};
-  _unitsNotInArea = allUnits select {(isObjectHidden _x) || !(_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad])};
-  _vehiclesNotInArea = vehicles select {!(_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad])};
+  _unitsInArea = allUnits select {_x inArea [_jammerSource, _moduleArea select 0, _moduleArea select 1, _moduleArea select 2, false, _moduleArea select 4]};
+  _vehiclesInArea = vehicles select {_x inArea [_jammerSource, _moduleArea select 0, _moduleArea select 1, _moduleArea select 2, false, _moduleArea select 4]};
+  _unitsNotInArea = allUnits select {(isObjectHidden _x) || !(_x in _unitsInArea)};
+  _vehiclesNotInArea = vehicles select {!(_x in _vehiclesInArea)};
   _entitiesAffected = _jammerSource getVariable ["FCLA_Entities_Affected", []];
   _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", 1];
   if ((_areNotAlive) || (_isDesactivated)) exitWith {
@@ -61,7 +61,7 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
   {
     _isHidden = isObjectHidden _x;
     if (_isHidden) exitWith {};
-    _affectedRadioRange = linearConversion [_jammerRad, _jammerQuarterOfRad, _x distance _jammerSource, _normalRadioRange, 0, true];
+    _affectedRadioRange = linearConversion [_jammerMaxRad, _jammerQuarterOfMaxRad, _x distance _jammerSource, _normalRadioRange, 0, true];
     _x setVariable ["tf_sendingDistanceMultiplicator", _affectedRadioRange, true];
     _x setVariable ["tf_receivingDistanceMultiplicator", _affectedRadioRange, true];
     if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
@@ -69,7 +69,7 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
 
   if (_affectVehicles) then {
     {
-      _affectedRadioRange = linearConversion [_jammerRad, _jammerQuarterOfRad, _x distance _jammerSource, _normalRadioRange, 0, true];
+      _affectedRadioRange = linearConversion [_jammerMaxRad, _jammerQuarterOfMaxRad, _x distance _jammerSource, _normalRadioRange, 0, true];
       _x setVariable ["tf_range", _affectedRadioRange, true];
       if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
     } forEach _vehiclesInArea;
@@ -90,7 +90,7 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
     } forEach _vehiclesNotInArea;
   };
   _jammerSource setVariable ["FCLA_Entities_Affected", _entitiesAffected, true];
-}, 0.5, [_module, _jammerSource, _jammerRad, (25 * _rad) / 100, _affectVehicles]] call CBA_fnc_addPerFrameHandler;
+}, 0.5, [_module, _moduleArea, _jammerSource, _jammerMaxRad, (25 * _jammerMaxRad) / 100, _affectVehicles]] call CBA_fnc_addPerFrameHandler;
 
 
 //Acción para desactivar.

@@ -19,9 +19,11 @@ class FCLA_Module_Show_Subtitle: Module_F {
 	isGlobal = GLOBAL;
   canSetArea = HAS_SETTABLE_AREA;
   isDisposable = REPEATABLE;
+  canSetAreaShape = HAS_SETTABLE_SHAPE;
   canSetAreaHeight = HAS_SETTABLE_AREA_HEIGHT;
 	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
   scope = 2;
+  scopeCurator = 0;
 
 
 	class Attributes: AttributesBase {
@@ -175,6 +177,7 @@ class FCLA_Module_Show_Subtitle: Module_F {
 	};
 
   class AttributeValues {
+    isRectangle = 0;
     size3[] = {5, 5, 2};
   };
 };

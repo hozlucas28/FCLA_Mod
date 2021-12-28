@@ -19,14 +19,16 @@ class FCLA_Module_EMP: Module_F {
 	isGlobal = GLOBAL;
   canSetArea = HAS_SETTABLE_AREA;
   isDisposable = UNREPEATABLE;
+  canSetAreaShape = HAS_NOT_SETTABLE_SHAPE;
   canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
 	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
   scope = 2;
+  scopeCurator = 0;
 
 
 	class Attributes: AttributesBase {
     class FCLA_Jammer: CheckBox {
-      tooltip = "Si se activa se generara un jammer donde ocurrio el pulso electromagnético.\n• Los jammers bloquean/interfieren las señales de comunicación, por lo que las radios se verían afectadas. El efecto es total cuando te encuentras a menos de la mitad del tamaño definido.";
+      tooltip = "Si se activa se generara un jammer donde ocurrio el pulso electromagnético.\n• Los jammers bloquean/interfieren las señales de comunicación, por lo que las radios se verían afectadas.";
       typeName = "BOOL";
       property = "FCLA_Jammer";
       displayName = "Generar jammer";

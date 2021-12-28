@@ -115,11 +115,8 @@
      _needLongRadio = if (_needLongRadio == 0) then {true;} else {false;};
      _needShortRadio = if (_needShortRadio == 0) then {true;} else {false;};
 
-     _module = createAgent ["FCLA_Module_Show_Subtitle", _this select 1, [], 0, "CAN_COLLIDE"];
-     _curatorLogic = getAssignedCuratorLogic player;
-     _curatorLogic addCuratorEditableObjects [[_module], false];
-     _module setVariable ["FCLA_Force_Deactivation", true, true];
-     ["FCLA_Show_Subtitles", [_module, [[_emitterName, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _selectedSide, _distanceToShow]]] call CBA_fnc_globalEvent;
+     _logic = createAgent ["VirtualAISquad", _this select 1, [], 0, "CAN_COLLIDE"];
+     ["FCLA_Show_Subtitles", [_logic, [[_emitterName, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _selectedSide, _distanceToShow]]] call CBA_fnc_globalEvent;
      ["SUBTÍTULO MOSTRADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Chat.paa"] call ZEN_Custom_Modules_fnc_Register;

@@ -24,7 +24,7 @@
  *                - ¿Se necesita tener una radio de onda corta? <BOOL> (default: false)
  *                - ¿Se necesita tener una radio de onda larga? <BOOL> (default: false)
  *                - Determina a que bando esta dirigido el mensaje. <"All"|"Blufor"|"Opfor"|"Independant"|"Civilian"> (default: "All")
- *                - Distancia máxima con el emisor para mostrar el mensaje. <NUMBER|ARRAY OF AREA> (default: -1)
+ *                - Distancia máxima con el emisor ó área para mostrar el mensaje. <NUMBER|ARRAY OF AREA> (default: -1)
  *
  * Return Value:
  * ¿Se ha ejecutado con exito la función? <BOOL>
@@ -38,7 +38,7 @@
  *            _line1 = ["[Cbo] Enemigo", "Hola mundo!, primer linea!"];
  *            _line2 = ["[Cbo] Enemigo", "¿Todo bien?, segunda linea!"];
  *            _line3 = ["[Cbo] Enemigo", "Adios mundo!, tercera linea!"];
- *            [Civil_1, [_line1, _line2, _line3], "Civilian", 5, [false, true, "All", [150, 150, 75]]] call FCLA_Common_fnc_showSubtitles;
+ *            [Civil_1, [_line1, _line2, _line3], "Civilian", 5, [false, true, "All", [150, 150, 0, false, 75]]] call FCLA_Common_fnc_showSubtitles;
  *
  * Notes:
  * Se recomienda utilizar esta función a travez del evento
@@ -74,7 +74,7 @@ _needShortRadio = _conditions select 0;
 _distanceToShow = _conditions select 3;
 _compatibleEmitterColors = ["SIDE", "VEHICLE", "COMMAND", "GROUP", "DIRECT", "SYSTEM", "BLUFOR", "OPFOR", "INDEPENDANT", "CIVILIAN"];
 _compatibleConditionsForSide = ["ALL", "BLUFOR", "OPFOR", "INDEPENDANT", "CIVILIAN"];
-if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (_timeToHideEachLine <= 0) || !(_conditions isEqualTypeArray [false, false, "", 0]) || !(_selectedSide in _compatibleConditionsForSide)) exitWith {false};
+if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (_timeToHideEachLine <= 0) || !(_selectedSide in _compatibleConditionsForSide)) exitWith {false};
 
 
 
@@ -124,11 +124,13 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
       _hasLongRadio = if ((!isNull _emitter) && (_needLongRadio)) then {call TFAR_fnc_haveLRRadio;} else {true;};
       _isSelectedSide = if ((!isNull _emitter) && ((_selectedSide) isNotEqualTo "All")) then {(side _caller) == _selectedSide;} else {true;};
       _notShowingSubtitles = !(localNamespace getVariable ["FCLA_Showing_Subtitles", false]);
-      _isCloseEnough = if ((!isNull _emitter) && (_distanceToShow > -1)) then {
+      _isCloseEnough = if (!isNull _emitter) then {
         if (_distanceToShow isEqualType 0) then {
+          if (_distanceToShow <= 0) exitWith {true;};
           _emitter distance _caller <= _distanceToShow;
         } else {
-          _caller inArea [_emitter, _distanceToShow select 0, _distanceToShow select 1, 0, false, _distanceToShow select 2];
+          if (({_x <= 0} count [_distanceToShow select 0, _distanceToShow select 1, _distanceToShow select 4]) >= 3) exitWith {true;};
+          _caller inArea [_emitter, _distanceToShow select 0, _distanceToShow select 1, _distanceToShow select 2, _distanceToShow select 3, _distanceToShow select 4];
         };
       } else {true;};
 

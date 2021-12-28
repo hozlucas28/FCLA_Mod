@@ -20,9 +20,11 @@ class FCLA_Module_Jammer: Module_F {
 	isGlobal = GLOBAL;
   canSetArea = HAS_SETTABLE_AREA;
   isDisposable = UNREPEATABLE;
+  canSetAreaShape = HAS_NOT_SETTABLE_SHAPE;
   canSetAreaHeight = HAS_SETTABLE_AREA_HEIGHT;
 	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
   scope = 2;
+  scopeCurator = 0;
 
 
 	class Attributes: AttributesBase {
@@ -61,7 +63,7 @@ class FCLA_Module_Jammer: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Bloquea/interfiere las señales de comunicación de las radios de onda corta y larga. El efecto es total cuando te encuentras a menos de la mitad del tamaño definido.<br/><br/>• Se recomienda que los tamaños de la zona coincidan, si no se cumple se elegirá el que tenga mayor valor.<br/>• Si colocas -1, en los tamaños de la zona, todo el mapa se vera afectado por el jammer.<br/>• Si sincronizas únicamente una entidad (objeto, unidad, vehículo, etc.) al módulo, esta se tomara como origen/centro del jammer. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."};
+		description[] =	{"Bloquea/interfiere las señales de comunicación de las radios de onda corta y larga.<br/><br/>• Si colocas -1, en los tamaños de la zona, todo el mapa se vera afectado por el jammer.<br/>• Si sincronizas únicamente una entidad (objeto, unidad, vehículo, etc.) al módulo, esta se tomara como origen/centro del jammer. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."};
 	};
 
   class AttributeValues {

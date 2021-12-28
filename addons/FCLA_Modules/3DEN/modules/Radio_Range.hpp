@@ -20,9 +20,11 @@ class FCLA_Module_Radio_Range: Module_F {
 	isGlobal = GLOBAL_JIP;
   canSetArea = HAS_NOT_SETTABLE_AREA;
   isDisposable = UNREPEATABLE;
+  canSetAreaShape = HAS_NOT_SETTABLE_SHAPE;
   canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
 	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
   scope = 2;
+  scopeCurator = 0;
 
 
 	class Attributes: AttributesBase {

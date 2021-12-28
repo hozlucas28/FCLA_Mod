@@ -76,8 +76,8 @@
       _isDesactivated = _jammerSource getVariable ["FCLA_Hacked", false];
       _unitsInArea = allUnits select {_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad]};
       _vehiclesInArea = vehicles select {_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad]};
-      _unitsNotInArea = allUnits select {(isObjectHidden _x) || !(_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad])};
-      _vehiclesNotInArea = vehicles select {!(_x inArea [_jammerSource, _jammerRad, _jammerRad, 0, false, _jammerRad])};
+      _unitsNotInArea = allUnits select {(isObjectHidden _x) || !(_x in _unitsInArea)};
+      _vehiclesNotInArea = vehicles select {!(_x in _vehiclesInArea)};
       _entitiesAffected = _jammerSource getVariable ["FCLA_Entities_Affected", []];
       _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", 1];
       if ((_isNotAlive) || (_isDesactivated)) exitWith {
@@ -122,7 +122,7 @@
         } forEach _vehiclesNotInArea;
       };
       _jammerSource setVariable ["FCLA_Entities_Affected", _entitiesAffected, true];
-    }, 0.5, [_jammerSource, _jammerRad, (25 * _rad) / 100, _affectVehicles]] call CBA_fnc_addPerFrameHandler;
+    }, 0.5, [_jammerSource, _jammerRad, (25 * _jammerRad) / 100, _affectVehicles]] call CBA_fnc_addPerFrameHandler;
 
 
     //Acción para desactivar.

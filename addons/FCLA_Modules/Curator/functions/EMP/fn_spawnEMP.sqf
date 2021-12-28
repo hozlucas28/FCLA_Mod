@@ -206,8 +206,8 @@ _this spawn {
     _isNotAlive = !alive _logic;
     _unitsInArea = allUnits select {_x inArea [_logic, _rad, _rad, 0, false, _rad]};
     _vehiclesInArea = vehicles select {_x inArea [_logic, _rad, _rad, 0, false, _rad]};
-    _unitsNotInArea = allUnits select {(isObjectHidden _x) || !(_x inArea [_logic, _rad, _rad, 0, false, _rad])};
-    _vehiclesNotInArea = vehicles select {!(_x inArea [_logic, _rad, _rad, 0, false, _rad])};
+    _unitsNotInArea = allUnits select {(isObjectHidden _x) || !(_x in _unitsNotInArea)};
+    _vehiclesNotInArea = vehicles select {!(_x in _vehiclesInArea)};
     _entitiesAffected = _logic getVariable ["FCLA_Entities_Affected", []];
     _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", 1];
     if (_isNotAlive) exitWith {

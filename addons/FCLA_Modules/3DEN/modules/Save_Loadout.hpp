@@ -22,9 +22,11 @@ class FCLA_Module_Save_Loadout: Module_F {
 	isGlobal = GLOBAL;
   canSetArea = HAS_NOT_SETTABLE_AREA;
   isDisposable = UNREPEATABLE;
+  canSetAreaShape = HAS_NOT_SETTABLE_SHAPE;
   canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
 	isTriggerActivated = CAN_NOT_ACTIVATED_BY_TRIGGER;
   scope = 2;
+  scopeCurator = 0;
 
 
 	class Attributes: AttributesBase {
