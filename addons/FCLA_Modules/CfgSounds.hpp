@@ -10,11 +10,53 @@ class FCLA_Deafness {
   duration = 3;
 };
 
+class FCLA_Hurricane {
+  name = "FCLA - Huracán";
+  sound[] = {"\FCLA_Modules\sounds\Hurricane.ogg", "db+5", 1};
+  titles[] = {0, ""};
+  duration = 60;
+};
+
 class FCLA_Radiation {
   name = "FCLA - Radiación";
   sound[] = {\FCLA_Modules\sounds\Radiation.ogg, "db+0.7", 1};
   titles[] = {0, ""};
   duration = 4;
+};
+
+class FCLA_Sand_Wind {
+  name = "FCLA - Viento (arena)";
+  sound[] = {"\FCLA_Modules\sounds\Sand_Wind.ogg", "db+5", 1};
+  titles[] = {0, ""};
+  duration = 70;
+};
+
+class FCLA_Sand_Wind_Gust_1 {
+  name = "FCLA - Ráfaga de viento (arena v1)";
+  sound[] = {"\FCLA_Modules\sounds\FCLA_Sand_Wind_Gust_1.ogg", "db+10", 1};
+  titles[] = {0, ""};
+  duration = 6;
+};
+
+class FCLA_Sand_Wind_Gust_2 {
+  name = "FCLA - Ráfaga de viento (arena v2)";
+  sound[] = {"\FCLA_Modules\sounds\FCLA_Sand_Wind_Gust_2.ogg", "db+1", 1};
+  titles[] = {0, ""};
+  duration = 4;
+};
+
+class FCLA_Sand_Wind_Gust_3 {
+  name = "FCLA - Ráfaga de viento (arena v3)";
+  sound[] = {"\FCLA_Modules\sounds\FCLA_Sand_Wind_Gust_3.ogg", "db+1", 1};
+  titles[] = {0, ""};
+  duration = 4;
+};
+
+class FCLA_Sandstorm {
+  name = "FCLA - Tormenta de arena";
+  sound[] = {"\FCLA_Modules\sounds\FCLA_Sandstorm.ogg", "db+10", 1};
+  titles[] = {0, ""};
+  duration = 16;
 };
 
 class FCLA_Sparks_1 {
@@ -65,13 +107,7 @@ class FCLA_Sparks_7 {
   titles[] = {0, ""};
   duration = 1;
 };
-/*
-class FCLA_Wind_Strong {
-  name = "FCLA - Viento fuerte";
-  sound[] = {\FCLA_Modules\sounds\Wind_Strong.ogg, 1, 1};
-  titles[] = {0, ""};
-};
-*/
+
 class FCLA_Wind_Gust_1 {
   name = "FCLA - Ráfaga de viento (1)";
   sound[] = {"\FCLA_Modules\sounds\Wind_Gust_1.ogg", "db+0.5", 1};
@@ -120,101 +156,3 @@ class FCLA_Wind_Gust_7 {
   titles[] = {0, ""};
   duration = 16;
 };
-
-
-
-
-
-/*
-class FCLA_Dust_Whirlwinds_1 {
-  name = "FCLA - Torbellino de polvo (1)";
-  sound[] = {"\FCLA_Modules\sounds\Dust_Whirlwinds_1.ogg", 1, 1};
-  titles[] = {0, ""};
-};
-
-class FCLA_Dust_Whirlwinds_2 {
-  name = "FCLA - Torbellino de polvo (2)";
-  sound[] = {"\FCLA_Modules\sounds\Dust_Whirlwinds_2.ogg", 1, 1};
-  titles[] = {0, ""};
-};
-
-class FCLA_Dust_Whirlwinds_3 {
-  name = "FCLA - Torbellino de polvo (3)";
-  sound[] = {"\FCLA_Modules\sounds\Dust_Whirlwinds_3.ogg", 1, 1};
-  titles[] = {0, ""};
-};
-
-class FCLA_Short_Gust_1 {
-  name = "FCLA - Ráfaga corta de viento (1)";
-  sound[] = {"\FCLA_Modules\sounds\Short_Gust_1.ogg", "db+5", 1};
-  titles[] = {0, ""};
-};
-
-class FCLA_Short_Gust_2 {
-  name = "FCLA - Ráfaga corta de viento (2)";
-  sound[] = {"\FCLA_Modules\sounds\Short_Gust_2.ogg", "db+5", 1};
-  titles[] = {0, ""};
-};
-
-class FCLA_Short_Gust_3 {
-  name = "FCLA - Ráfaga corta de viento (3)";
-  sound[] = {"\FCLA_Modules\sounds\Short_Gust_3.ogg", "db+5", 1};
-  titles[] = {0, ""};
-};
-
-
-
-class FCLA_Earthquake {
-  name = "FCLA - Terremoto";
-  sound[] = {"\FCLA_Modules\sounds\Earthquake.ogg",0.7, 1};
-  titles[] = {0, ""};
-};
-
-class FCLA_Low_Oxygen_Short_Alert {
-  name = "FCLA - Alerta corta (oxígeno bajo)";
-  sound[] = {"\FCLA_Modules\sounds\Low_Oxygen_Short_Alert.ogg", 1.5, 1, 50};
-  titles[] = {0, ""};
-};
-
-class FCLA_Low_Oxygen_Long_Alert {
-  name = "FCLA - Alerta larga (oxígeno bajo)";
-  sound[] = {"\FCLA_Modules\sounds\Low_Oxygen_Long_Alert.ogg", 1.5, 1, 50};
-  titles[] = {0, ""};
-};
-
-class FCLA_Chemical_Detector_Beep_0 {
-  name = "FCLA - Alerta detector químico (db 0.25)";
-  sound[] = {"\FCLA_Modules\sounds\Chemical_Detector_Beep.ogg", 0.25, 1, 50};
-  titles[] = {0, ""};
-};
-
-class FCLA_Chemical_Detector_Beep_1 {
-  name = "FCLA - Alerta detector químico (db 0.5)";
-  sound[] = {"\FCLA_Modules\sounds\Chemical_Detector_Beep.ogg", 0.5, 1, 50};
-  titles[] = {0, ""};
-};
-
-class FCLA_Chemical_Detector_Beep_2 {
-  name = "FCLA - Alerta detector químico (db 0.75)";
-  sound[] = {"\FCLA_Modules\sounds\Chemical_Detector_Beep.ogg", 0.75, 1, 50};
-  titles[] = {0, ""};
-};
-
-class FCLA_Chemical_Detector_Beep_3 {
-  name = "FCLA - Alerta detector químico (db 1)";
-  sound[] = {"\FCLA_Modules\sounds\Chemical_Detector_Beep.ogg", 1, 1, 50};
-  titles[] = {0, ""};
-};
-
-class FCLA_Chemical_Detector_Beep_4 {
-  name = "FCLA - Alerta detector químico (db 2)";
-  sound[] = {"\FCLA_Modules\sounds\Chemical_Detector_Beep.ogg", 2, 1, 50};
-  titles[] = {0, ""};
-};
-
-class FCLA_Chemical_Detector_Beep_5 {
-  name = "FCLA - Alerta detector químico (db 3)";
-  sound[] = {"\FCLA_Modules\sounds\Chemical_Detector_Beep.ogg", 3, 1, 50};
-  titles[] = {0, ""};
-};
-*/
