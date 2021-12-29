@@ -12,13 +12,14 @@
  *                                     "Tanks", "Malden", "Contact", "Marksmen",
  *                                     "Art of War", "Laws of War", "Helicopters",
  *                                     "S.O.G. Prairie Fire", "CSLA Iron Curtain",
- *                                     "Tac - Ops Mission Pack" y "Global Mobilization".
+ *                                     "Tac - Ops Mission Pack", "Global Mobilization"
+ *                                     y "Western Sahara".
  *
  * Return Value:
  * ¿Es propietario? <BOOL>
  *
  * Example:
- * ["Zeus"] call FCLA_Common_fnc_isDLCOwned;
+ * ["Apex"] call FCLA_Common_fnc_isDLCOwned;
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -30,7 +31,7 @@ params [["_DLC", "", [""], 0]];
 
 //Verificar argumento.
 _DLC = toUpper _DLC;
-_acceptedDLCs = ["ZEUS", "JETS", "APEX", "KARTS", "TANKS", "MALDEN", "CONTACT", "MARKSMEN", "ART OF WAR", "LAWS OF WAR", "HELICOPTERS", "S.O.G. PRAIRIE FIRE", "CSLA IRON CURTAIN", "TAC - OPS MISSION PACK", "GLOBAL MOBILIZATION"];
+_acceptedDLCs = ["ZEUS", "JETS", "APEX", "KARTS", "TANKS", "MALDEN", "CONTACT", "MARKSMEN", "ART OF WAR", "LAWS OF WAR", "HELICOPTERS", "S.O.G. PRAIRIE FIRE", "CSLA IRON CURTAIN", "TAC - OPS MISSION PACK", "GLOBAL MOBILIZATION", "WESTERN SAHARA"];
 if (!(_DLC in _acceptedDLCs)) exitWith {false};
 
 
@@ -48,8 +49,9 @@ switch (toUpper _DLC) do {
   case "ART OF WAR": {(1.3255e+006) in _ownedDLCs};
   case "LAWS OF WAR": {(571710) in _ownedDLCs};
   case "HELICOPTERS": {(304380) in _ownedDLCs};
+	case "WESTERN SAHARA": {(1.68117e+006) in _ownedDLCs};
   case "CSLA IRON CURTAIN": {(1.29444e+006) in _ownedDLCs};
-  case "GLOBALMOBILIZATION": {(1.04222e+006) in _ownedDLCs};
+  case "GLOBAL MOBILIZATION": {(1.04222e+006) in _ownedDLCs};
   case "S.O.G. PRAIRIE FIRE": {(1.2277e+006) in _ownedDLCs};
   case "TAC - OPS MISSION PACK": {(744950) in _ownedDLCs};
 };
