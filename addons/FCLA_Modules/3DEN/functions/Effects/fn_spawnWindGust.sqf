@@ -56,10 +56,10 @@ _this spawn {
 		}, [_module, _particleObjOne, _particleObjTwo, _trigger]] call CBA_fnc_waitUntilAndExecute;
 
 		sleep (_soundDuration - 2);
-		deletevehicle _particleObjTwo;
+		deleteVehicle _particleObjTwo;
 
 		sleep 1;
-		deletevehicle _particleObjOne;
+		deleteVehicle _particleObjOne;
 		sleep _delay;
 	};
 };
