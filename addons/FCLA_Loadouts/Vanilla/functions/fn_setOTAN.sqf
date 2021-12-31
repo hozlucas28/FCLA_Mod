@@ -46,4 +46,4 @@ _applyCondor = _loadoutsToApply select 1;
 _applyQuetzal = _loadoutsToApply select 2;
 _applyAnaconda = _loadoutsToApply select 3;
 _applySalamandra = _loadoutsToApply select 4;
-if ((isNull _entity) || !(_loadoutsToApply isEqualTypeArray [false, false, false, false, false])) exitWith {false};
+if ((isNull _entity) || !(_loadoutsToApply isEqualTypeArray [true, true, true, true, true])) exitWith {false};

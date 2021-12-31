@@ -109,7 +109,7 @@
 
 
 /* ---------------------------- VISIÓN NOCTURNA ---------------------------- */
-
+/*
 [
 	"FCLA_NVG_Require_Battery", "CHECKBOX",
 	["¿NVGs requieren baterías?", "Al activar las gafas de visión nocturna requeriran de baterías para poder funcionar correctamente.\n¡SE PODRÁN RECARGAR A TRAVEZ DEL MENÚ ACE 3D, SI SE TIENE BATERÍAS NVG EN EL INVENTARIO!"],
@@ -141,3 +141,4 @@
 	{},
 	false
 ] call CBA_fnc_addSetting;
+*/

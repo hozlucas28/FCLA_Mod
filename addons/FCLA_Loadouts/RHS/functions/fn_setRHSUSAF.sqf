@@ -50,4 +50,5 @@ _applyQuetzal = _loadoutsToApply select 2;
 _applyAnaconda = _loadoutsToApply select 3;
 _applySalamandra = _loadoutsToApply select 4;
 _RHSUSAFModNotLoaded = !(["rhsusf_main"] call ACE_Common_fnc_isModLoaded);
-if ((isNull _entity) || !(_loadoutsToApply isEqualTypeArray [false, false, false, false, false]) || (_RHSUSAFModNotLoaded)) exitWith {false};
+if ((isNull _entity) || !(_loadoutsToApply isEqualTypeArray [true, true, true, true, true])) exitWith {false};
+if (_RHSUSAFModNotLoaded) exitWith {["¡Error! Los loadouts RHSUSAF no pudieron ser generados, debido a que no se encuentra cargado el mod correspondiente."] call BIS_fnc_error;};
