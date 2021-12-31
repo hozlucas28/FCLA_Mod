@@ -3,101 +3,109 @@
 |                         VEHÍCULOS - "ESTANDARTES"                         |
 |***************************************************************************/
 
-class FCLA_Banner_Common: Banner_01_F {
+
+
+/* -------------------------------- PAÍSES --------------------------------- */
+
+class Banner_01_China: Banner_01_base_F {
 	author = "hozlucas28";
-	displayName = "Estandarte (FCLA)";
-	editorCategory = "FCLA_Category_Structures";
-	editorSubcategory = "FCLA_subCategory_Banners";
-	hiddenSelectionsTextures[] = {"\FCLA_Objects\Flags\data\FCLA_Flag_Common.paa"};
-	editorPreview = "\FCLA_Objects\Banners\pictures\FCLA_Banner_Common.jpg";
+	displayName = "Estandarte [China]";
+	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_China.jpg";
+	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_China.paa"};
 	scope = 2;
   scopeCurator = 2;
 };
 
-class FCLA_Banner_Takana: Banner_01_F {
+class Banner_01_Russia: Banner_01_base_F {
 	author = "hozlucas28";
-	displayName = "Estandarte (Takana)";
-	editorCategory = "FCLA_Category_Structures";
-	editorSubcategory = "FCLA_subCategory_Banners";
-	hiddenSelectionsTextures[] = {"\FCLA_Objects\Flags\data\FCLA_Flag_Takana.paa"};
-	editorPreview = "\FCLA_Objects\Banners\pictures\FCLA_Banner_Takana.jpg";
+	displayName = "Estandarte [Rusia]";
+	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Quetzal.jpg";
+	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Russia.paa"};
 	scope = 2;
   scopeCurator = 2;
 };
 
-class FCLA_Banner_Jaguar: Banner_01_F {
+
+
+/* ------------------------------- PELOTONES ------------------------------- */
+
+class Banner_01_FCLA: Banner_01_base_F {
 	author = "hozlucas28";
-	displayName = "Estandarte (Jaguar)";
-	editorCategory = "FCLA_Category_Structures";
-	editorSubcategory = "FCLA_subCategory_Banners";
-	hiddenSelectionsTextures[] = {"\FCLA_Objects\Flags\data\FCLA_Flag_Jaguar.paa"};
-	editorPreview = "\FCLA_Objects\Banners\pictures\FCLA_Banner_Jaguar.jpg";
+	displayName = "Estandarte [FCLA]";
+	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_FCLA.jpg";
+	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_FCLA.paa"};
 	scope = 2;
   scopeCurator = 2;
 };
 
-class FCLA_Banner_Condor: Banner_01_F {
+class Banner_01_Anti_FCLA_v1: Banner_01_base_F {
 	author = "hozlucas28";
-	displayName = "Estandarte (Condor)";
-	editorCategory = "FCLA_Category_Structures";
-	editorSubcategory = "FCLA_subCategory_Banners";
-	hiddenSelectionsTextures[] = {"\FCLA_Objects\Flags\data\FCLA_Flag_Condor.paa"};
-	editorPreview = "\FCLA_Objects\Banners\pictures\FCLA_Banner_Condor.jpg";
+	displayName = "Estandarte [Anti - FCLA (v1)]";
+	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Anti_FCLA_v1.jpg";
+	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Anti_FCLA_v1.paa"};
 	scope = 2;
   scopeCurator = 2;
 };
 
-class FCLA_Banner_Salamandra: Banner_01_F {
+class Banner_01_Anti_FCLA_v2: Banner_01_base_F {
 	author = "hozlucas28";
-	displayName = "Estandarte (Salamandra)";
-	editorCategory = "FCLA_Category_Structures";
-	editorSubcategory = "FCLA_subCategory_Banners";
-	hiddenSelectionsTextures[] = {"\FCLA_Objects\Flags\data\FCLA_Flag_Salamandra.paa"};
-	editorPreview = "\FCLA_Objects\Banners\pictures\FCLA_Banner_Salamandra.jpg";
+	displayName = "Estandarte [Anti - FCLA (v2)]";
+	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Anti_FCLA_v2.jpg";
+	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Anti_FCLA_v2.paa"};
 	scope = 2;
   scopeCurator = 2;
 };
 
-class FCLA_Banner_Anaconda: Banner_01_F {
+class Banner_01_Takana: Banner_01_base_F {
 	author = "hozlucas28";
-	displayName = "Estandarte (Anaconda)";
-	editorCategory = "FCLA_Category_Structures";
-	editorSubcategory = "FCLA_subCategory_Banners";
-	hiddenSelectionsTextures[] = {"\FCLA_Objects\Flags\data\FCLA_Flag_Anaconda.paa"};
-	editorPreview = "\FCLA_Objects\Banners\pictures\FCLA_Banner_Anaconda.jpg";
+	displayName = "Estandarte [Takana]";
+	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Takana.jpg";
+	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Takana.paa"};
 	scope = 2;
   scopeCurator = 2;
 };
 
-class FCLA_Banner_Quetzal: Banner_01_F {
+class Banner_01_Jaguar: Banner_01_base_F {
 	author = "hozlucas28";
-	displayName = "Estandarte (Quetzal)";
-	editorCategory = "FCLA_Category_Structures";
-	editorSubcategory = "FCLA_subCategory_Banners";
-	hiddenSelectionsTextures[] = {"\FCLA_Objects\Flags\data\FCLA_Flag_Quetzal.paa"};
-	editorPreview = "\FCLA_Objects\Banners\pictures\FCLA_Banner_Quetzal.jpg";
+	displayName = "Estandarte [Jaguar]";
+	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Jaguar.jpg";
+	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Jaguar.paa"};
 	scope = 2;
   scopeCurator = 2;
 };
 
-class FCLA_Banner_Russia: Banner_01_F {
+class Banner_01_Condor: Banner_01_base_F {
 	author = "hozlucas28";
-	displayName = "Estandarte (Rusia)";
-	editorCategory = "FCLA_Category_Structures";
-	editorSubcategory = "FCLA_subCategory_Banners";
-	hiddenSelectionsTextures[] = {"\FCLA_Objects\Flags\data\FCLA_Flag_Russia.paa"};
-	editorPreview = "";
+	displayName = "Estandarte [Condor]";
+	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Condor.jpg";
+	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Condor.paa"};
 	scope = 2;
   scopeCurator = 2;
 };
 
-class FCLA_Banner_China: Banner_01_F {
+class Banner_01_Salamandra: Banner_01_base_F {
 	author = "hozlucas28";
-	displayName = "Estandarte (China)";
-	editorCategory = "FCLA_Category_Structures";
-	editorSubcategory = "FCLA_subCategory_Banners";
-	hiddenSelectionsTextures[] = {"\FCLA_Objects\Flags\data\FCLA_Flag_China.paa"};
-	editorPreview = "\FCLA_Objects\Banners\pictures\FCLA_Banner_China.jpg";
+	displayName = "Estandarte [Salamandra]";
+	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Salamandra.jpg";
+	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Salamandra.paa"};
+	scope = 2;
+  scopeCurator = 2;
+};
+
+class Banner_01_Anaconda: Banner_01_base_F {
+	author = "hozlucas28";
+	displayName = "Estandarte [Anaconda]";
+	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Anaconda.jpg";
+	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Anaconda.paa"};
+	scope = 2;
+  scopeCurator = 2;
+};
+
+class Banner_01_Quetzal: Banner_01_base_F {
+	author = "hozlucas28";
+	displayName = "Estandarte [Quetzal]";
+	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Quetzal.jpg";
+	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Quetzal.paa"};
 	scope = 2;
   scopeCurator = 2;
 };
