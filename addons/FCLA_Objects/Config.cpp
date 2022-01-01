@@ -28,11 +28,35 @@ class CfgPatches {
 
 
 /********************************************************************************|
+|                              EDITOR - CATEGORÍAS                               |
+|********************************************************************************/
+
+class CfgEditorCategories {
+	class FCLA_Effects {displayName = "Efectos";};
+};
+
+
+
+/********************************************************************************|
 |                             EDITOR - SUBCATEGORÍAS                             |
 |********************************************************************************/
 
 class CfgEditorSubcategories {
+	class FCLA_Fire {displayName = "Fuego";};
+	class FCLA_Smoke {displayName = "Humo";};
 	class FCLA_Props {displayName = "Utilería";};
+};
+
+
+
+/********************************************************************************|
+|                                     LUCES                                      |
+|********************************************************************************/
+
+class CfgLights {
+	class ObjectDestructionLight;
+	class ObjectDestructionLightSmall;
+	#include "\FCLA_Objects\Effects\CfgLights.hpp"
 };
 
 
@@ -70,5 +94,6 @@ class CfgVehicles {
 
 	#include "\FCLA_Objects\Animals\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Banners\CfgVehicles.hpp"
+	#include "\FCLA_Objects\Effects\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Props\CfgVehicles.hpp"
 };
