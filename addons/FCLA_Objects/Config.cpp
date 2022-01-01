@@ -50,4 +50,5 @@ class CfgVehicles {
 
 	#include "\FCLA_Objects\Animals\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Banners\CfgVehicles.hpp"
+	#include "\FCLA_Objects\Decorations\CfgVehicles.hpp"
 };
