@@ -82,11 +82,15 @@ class CfgVehicles {
 	class UserTexture1m_F: NonStrategic {};
 	class UserTexture10m_F: UserTexture1m_F {};
 	class Land_Laptop_03_base_F: Items_base_F {};
-	class Land_Laptop_03_sand_F: Land_Laptop_03_base_F {};
 	class Land_Laptop_unfolded_F: Items_base_F {};
+	class Land_PCSet_01_screen_F: Items_base_F {};
+	class Land_TripodScreen_01_large_F: Items_base_F {};
+	class Land_Laptop_03_sand_F: Land_Laptop_03_base_F {};
 	class Land_Laptop_03_black_F: Land_Laptop_03_base_F {};
 	class Land_Laptop_03_olive_F: Land_Laptop_03_base_F {};
 	class Furniture_Residental_base_F: Furniture_base_F {};
+	class Land_TripodScreen_01_large_sand_F: Land_TripodScreen_01_large_F {};
+	class Land_TripodScreen_01_large_black_F: Land_TripodScreen_01_large_F {};
 	class Man: Land {};
 	class Animal: Man {};
 	class Animal_Base_F: Animal {};
