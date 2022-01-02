@@ -6,7 +6,7 @@
 class CfgPatches {
 	class FCLA_Objects {
 		#include "\FCLA_Objects\Units.hpp"
-		requiredAddons[] = {"A3_Animals_F_Beta_Sheep", "A3_Animals_F_Beta_Goat", "A3_Animals_F_Beta_Chicken", "A3_Animals_F_Beta_Dog"};
+		requiredAddons[] = {"A3_Animals_F_Beta_Sheep", "A3_Animals_F_Beta_Goat", "A3_Animals_F_Beta_Chicken", "A3_Animals_F_Beta_Dog", "A3_Structures_F_Items_Electronics", "A3_Props_F_Enoch_Military_Equipment"};
 		author = "hozlucas28";
 		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
@@ -81,6 +81,11 @@ class CfgVehicles {
 	class Helper_Base_F: NonStrategic {};
 	class UserTexture1m_F: NonStrategic {};
 	class UserTexture10m_F: UserTexture1m_F {};
+	class Land_Laptop_03_base_F: Items_base_F {};
+	class Land_Laptop_03_sand_F: Land_Laptop_03_base_F {};
+	class Land_Laptop_unfolded_F: Items_base_F {};
+	class Land_Laptop_03_black_F: Land_Laptop_03_base_F {};
+	class Land_Laptop_03_olive_F: Land_Laptop_03_base_F {};
 	class Furniture_Residental_base_F: Furniture_base_F {};
 	class Man: Land {};
 	class Animal: Man {};
@@ -95,5 +100,6 @@ class CfgVehicles {
 	#include "\FCLA_Objects\Animals\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Banners\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Effects\CfgVehicles.hpp"
+	#include "\FCLA_Objects\Electronics\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Props\CfgVehicles.hpp"
 };

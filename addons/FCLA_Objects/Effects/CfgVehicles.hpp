@@ -13,7 +13,7 @@ class Particle_Base_F: Thing {
 
 /* --------------------------------- HUMO --------------------------------- */
 
-class FCLA_Small_Smoke: Particle_Base_F {
+class Small_Smoke: Particle_Base_F {
   displayName = "Humo (pequeño)";
   //editorPreview = "\FCLA_Objects\Effects\pictures\FCLA_Small_Smoke.jpg";
   editorCategory = "FCLA_Effects";
@@ -34,7 +34,7 @@ class FCLA_Small_Smoke: Particle_Base_F {
 };
 
 
-class FCLA_Medium_Smoke: Particle_Base_F {
+class Medium_Smoke: Particle_Base_F {
   displayName = "Humo (medio)";
   //editorPreview = "\FCLA_Objects\Effects\pictures\FCLA_Medium_Smoke.jpg";
   editorCategory = "FCLA_Effects";
@@ -55,7 +55,7 @@ class FCLA_Medium_Smoke: Particle_Base_F {
 };
 
 
-class FCLA_Big_Smoke: Particle_Base_F {
+class Big_Smoke: Particle_Base_F {
   displayName = "Humo (grande)";
   //editorPreview = "\FCLA_Objects\Effects\pictures\FCLA_Big_Smoke.jpg";
   editorCategory = "FCLA_Effects";
@@ -79,7 +79,7 @@ class FCLA_Big_Smoke: Particle_Base_F {
 
 /* --------------------------------- FUEGO --------------------------------- */
 
-class FCLA_Small_Fire: Particle_Base_F	{
+class Small_Fire: Particle_Base_F	{
   displayName = "Fuego (pequeño)";
   //editorPreview = "\FCLA_Objects\Effects\pictures\FCLA_Small_Fire.jpg";
   editorCategory = "FCLA_Effects";
@@ -120,7 +120,7 @@ class FCLA_Small_Fire: Particle_Base_F	{
 };
 
 
-class FCLA_Medium_Fire: Particle_Base_F {
+class Medium_Fire: Particle_Base_F {
   displayName = "Fuego (medio)";
   //editorPreview = "\FCLA_Objects\Effects\pictures\FCLA_Medium_Fire.jpg";
   editorCategory = "FCLA_Effects";
@@ -149,7 +149,7 @@ class FCLA_Medium_Fire: Particle_Base_F {
     };
 
     class Light {
-      type = "MediumFireLight";
+      type = "Medium_Fire_Light";
     	simulation = "light";
     };
 
@@ -161,7 +161,7 @@ class FCLA_Medium_Fire: Particle_Base_F {
 };
 
 
-class FCLA_Big_Fire: Particle_Base_F {
+class Big_Fire: Particle_Base_F {
   displayName = "Fuego (grande)";
   //editorPreview = "\FCLA_Objects\Effects\pictures\FCLA_Big_Fire.jpg";
   editorCategory = "FCLA_Effects";
@@ -195,7 +195,7 @@ class FCLA_Big_Fire: Particle_Base_F {
     };
 
     class Light {
-      type = "BigFireLight";
+      type = "Big_Fire_Light";
     	simulation = "light";
     };
 

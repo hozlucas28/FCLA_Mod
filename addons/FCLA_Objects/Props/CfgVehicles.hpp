@@ -7,7 +7,7 @@
 
 /* ------------------------------- TEXTURAS -------------------------------- */
 
-class FCLA_RainDrops: Helper_Base_F {
+class RainDrops: Helper_Base_F {
   displayName = "Gotas de lluvia";
   icon = "iconObject_1x1";
   model = "\A3\data_f\RainDrop.p3d";
@@ -19,7 +19,7 @@ class FCLA_RainDrops: Helper_Base_F {
 };
 
 
-class FCLA_Small_Bullet_Holes: UserTexture1m_F	{
+class Small_Bullet_Holes: UserTexture1m_F	{
   author = "hozlucas28";
   displayName = "Agujeros de bala (pequeños)";
   //editorPreview = "\FCLA_Objects\Props\pictures\FCLA_Small_Bullet_Holes.jpg";
@@ -32,7 +32,7 @@ class FCLA_Small_Bullet_Holes: UserTexture1m_F	{
 };
 
 
-class FCLA_Planks_v1: Items_base_F	{
+class Planks_v1: Items_base_F	{
   author = "hozlucas28";
   displayName = "Barricada de tablas (v1)";
   model = "\A3\structures_f\data\DoorLocks\planks_1.p3d";
@@ -53,7 +53,7 @@ class FCLA_Planks_v1: Items_base_F	{
 };
 
 
-class FCLA_Planks_v2: Items_base_F	{
+class Planks_v2: Items_base_F	{
   author = "hozlucas28";
   displayName = "Barricada de tablas (v2)";
   model = "\A3\structures_f\data\DoorLocks\planks_2.p3d";
@@ -74,7 +74,7 @@ class FCLA_Planks_v2: Items_base_F	{
 };
 
 
-class FCLA_Huge_Bullet_Holes_v1: UserTexture10m_F {
+class Huge_Bullet_Holes_v1: UserTexture10m_F {
   author = "hozlucas28";
   displayName = "Agujeros de bala (grandes, v1)";
   //editorPreview = "\FCLA_Objects\Props\pictures\FCLA_Huge_Bullet_Holes_v1.jpg";
@@ -98,7 +98,7 @@ class FCLA_Huge_Bullet_Holes_v1: UserTexture10m_F {
 };
 
 
-class FCLA_Huge_Bullet_Holes_v2: FCLA_Huge_Bullet_Holes_v1 {
+class Huge_Bullet_Holes_v2: Huge_Bullet_Holes_v1 {
   author = "hozlucas28";
   displayName = "Agujeros de bala (grandes, v2)";
   //editorPreview = "\FCLA_Objects\Props\pictures\FCLA_Huge_Bullet_Holes_v2.jpg";
@@ -123,7 +123,7 @@ class FCLA_Huge_Bullet_Holes_v2: FCLA_Huge_Bullet_Holes_v1 {
 
 /* -------------------------------- OBJETOS -------------------------------- */
 
-class FCLA_Short_Sandbags: BagFence_base_F	{
+class Short_Sandbags: BagFence_base_F	{
   author = "hozlucas28";
   displayName = "Muro de sacos (corto, verde)";
   icon = "iconObject_1x1";
@@ -147,7 +147,7 @@ class FCLA_Short_Sandbags: BagFence_base_F	{
 };
 
 
-class FCLA_Piano: Furniture_Residental_base_F {
+class Piano: Furniture_Residental_base_F {
   author = "hozlucas28";
   displayName = "Piano";
   icon = "iconObject_1x2";
@@ -170,7 +170,7 @@ class FCLA_Piano: Furniture_Residental_base_F {
 };
 
 
-class FCLA_Christmas_Tree: Strategic {
+class Christmas_Tree: Strategic {
   author = "hozlucas28";
   displayName = "Arbol de navidad";
   model = "\a3\vegetation_f_enoch\Tree\t_PiceaAbiesNativitatis_2s.p3d";
