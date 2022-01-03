@@ -78,6 +78,7 @@ class CfgVehicles {
 	class Strategic: Building {};
 	class Items_base_F: ThingX {};
 	class NonStrategic: Building {};
+	class HouseBase: NonStrategic {};
 	class Land_MapBoard_F: ThingX {};
 	class Furniture_base_F: ThingX {};
 	class BagFence_base_F: Strategic {};
@@ -118,6 +119,7 @@ class CfgVehicles {
 	class GalleryFrame_02_large_rectangle_F: GalleryFrame_02_large_rectangle_base_F {};
 	class Man: Land {};
 	class Animal: Man {};
+	class House: HouseBase {};
 	class Animal_Base_F: Animal {};
 	class Dog_Base_F: Animal_Base_F {};
 	class Fowl_Base_F: Animal_Base_F {};
@@ -126,6 +128,9 @@ class CfgVehicles {
 	class GalleryFrame_02_F: GalleryFrame_02_base_F {};
 	class Goat_Base_F: Animal_Base_F {};
 	class Fin_Base_F: Dog_Base_F {};
+	class House_F: House {};
+	class Industry_base_F: House_F {};
+	class Land_DryDock_01_end_F: Industry_base_F {};
 
 	#include "\FCLA_Objects\Animals\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Banners\CfgVehicles.hpp"

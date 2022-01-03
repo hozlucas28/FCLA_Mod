@@ -170,7 +170,7 @@ class Land_Plane_Fighter_02_Canopy_F: Plane_Canopy_Base_F {
 
 class Land_Ejection_Seat_Plane_Fighter_0304_F: Items_base_F	{
 	author = "hozlucas28";
-	displayName = "Asiento eyectable (A-143 Buzzard o A-149 Gryphon)";
+	displayName = "Asiento eyectable (A-143 Buzzard / A-149 Gryphon)";
 	icon = "iconObject_1x2";
 	model = "\a3\air_f_jets\plane_fighter_04\proxies\ejection_seat_04_f.p3d";
 	//editorPreview = "\FCLA_Objects\Wrecks\pictures\Land_Ejection_Seat_Plane_Fighter_0304_F.jpg";
@@ -192,7 +192,7 @@ class Land_Ejection_Seat_Plane_Fighter_0304_F: Items_base_F	{
 
 class Land_Ejection_Seat_Plane_FighterCAS_0202_F: Items_base_F {
 	author = "hozlucas28";
-	displayName = "Asiento eyectable (To-199 Neophron o To-201 Shikra)";
+	displayName = "Asiento eyectable (To-199 Neophron / To-201 Shikra)";
 	icon = "iconObject_1x2";
 	model = "\a3\air_f_jets\plane_fighter_02\proxies\ejection_seat_02_f.p3d";
 	//editorPreview = "\FCLA_Objects\Wrecks\pictures\Land_Ejection_Seat_Plane_FighterCAS_0202_F.jpg";
