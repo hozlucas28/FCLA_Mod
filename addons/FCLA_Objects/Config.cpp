@@ -81,6 +81,7 @@ class CfgVehicles {
 	class Land_MapBoard_F: ThingX {};
 	class Furniture_base_F: ThingX {};
 	class BagFence_base_F: Strategic {};
+	class Plane_Canopy_Base_F: ThingX {};
 	class Helper_Base_F: NonStrategic {};
 	class UserTexture1m_F: NonStrategic {};
 	class lab_Items_base_F: Items_base_F {};
@@ -135,4 +136,5 @@ class CfgVehicles {
 	#include "\FCLA_Objects\Props\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Targets\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Tools\CfgVehicles.hpp"
+	#include "\FCLA_Objects\Wrecks\CfgVehicles.hpp"
 };
