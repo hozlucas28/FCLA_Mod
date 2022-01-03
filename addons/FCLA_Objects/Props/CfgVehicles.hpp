@@ -190,3 +190,26 @@ class Christmas_Tree: Strategic {
     animate[] = {};
   };
 };
+
+
+
+/* ------------------------------ RELÁMPAGOS ------------------------------- */
+
+class Lightning1_F: NonStrategic {
+  displayName = "Relámpago (ramificado)";
+  //editorPreview = "\FCLA_Objects\Props\pictures\Lightning1_F.jpg";
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "FCLA_Props";
+  scope = 2;
+  scopeCurator = 2;
+};
+
+
+class Lightning2_F: Lightning1_F {
+  displayName = "Relámpago (simple)";
+  //editorPreview = "\FCLA_Objects\Props\pictures\Lightning2_F.jpg";
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "FCLA_Props";
+  scope = 2;
+  scopeCurator = 2;
+};
