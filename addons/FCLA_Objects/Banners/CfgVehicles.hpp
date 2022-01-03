@@ -12,6 +12,8 @@ class Banner_01_China: Banner_01_base_F {
 	displayName = "Estandarte [China]";
 	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_China.jpg";
 	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_China.paa"};
+	editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_Flags";
 	scope = 2;
   scopeCurator = 2;
 };
@@ -21,6 +23,8 @@ class Banner_01_Russia: Banner_01_base_F {
 	displayName = "Estandarte [Rusia]";
 	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Quetzal.jpg";
 	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Russia.paa"};
+	editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_Flags";
 	scope = 2;
   scopeCurator = 2;
 };
@@ -34,6 +38,8 @@ class Banner_01_FCLA: Banner_01_base_F {
 	displayName = "Estandarte [FCLA]";
 	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_FCLA.jpg";
 	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_FCLA.paa"};
+	editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_Flags";
 	scope = 2;
   scopeCurator = 2;
 };
@@ -43,6 +49,8 @@ class Banner_01_Anti_FCLA_v1: Banner_01_base_F {
 	displayName = "Estandarte [Anti - FCLA (v1)]";
 	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Anti_FCLA_v1.jpg";
 	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Anti_FCLA_v1.paa"};
+	editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_Flags";
 	scope = 2;
   scopeCurator = 2;
 };
@@ -52,6 +60,8 @@ class Banner_01_Anti_FCLA_v2: Banner_01_base_F {
 	displayName = "Estandarte [Anti - FCLA (v2)]";
 	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Anti_FCLA_v2.jpg";
 	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Anti_FCLA_v2.paa"};
+	editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_Flags";
 	scope = 2;
   scopeCurator = 2;
 };
@@ -61,6 +71,8 @@ class Banner_01_Takana: Banner_01_base_F {
 	displayName = "Estandarte [Takana]";
 	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Takana.jpg";
 	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Takana.paa"};
+	editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_Flags";
 	scope = 2;
   scopeCurator = 2;
 };
@@ -70,6 +82,8 @@ class Banner_01_Jaguar: Banner_01_base_F {
 	displayName = "Estandarte [Jaguar]";
 	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Jaguar.jpg";
 	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Jaguar.paa"};
+	editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_Flags";
 	scope = 2;
   scopeCurator = 2;
 };
@@ -79,6 +93,8 @@ class Banner_01_Condor: Banner_01_base_F {
 	displayName = "Estandarte [Condor]";
 	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Condor.jpg";
 	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Condor.paa"};
+	editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_Flags";
 	scope = 2;
   scopeCurator = 2;
 };
@@ -88,6 +104,8 @@ class Banner_01_Salamandra: Banner_01_base_F {
 	displayName = "Estandarte [Salamandra]";
 	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Salamandra.jpg";
 	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Salamandra.paa"};
+	editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_Flags";
 	scope = 2;
   scopeCurator = 2;
 };
@@ -97,6 +115,8 @@ class Banner_01_Anaconda: Banner_01_base_F {
 	displayName = "Estandarte [Anaconda]";
 	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Anaconda.jpg";
 	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Anaconda.paa"};
+	editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_Flags";
 	scope = 2;
   scopeCurator = 2;
 };
@@ -106,6 +126,8 @@ class Banner_01_Quetzal: Banner_01_base_F {
 	displayName = "Estandarte [Quetzal]";
 	//editorPreview = "\FCLA_Objects\Banners\data\pictures\Banner_01_Quetzal.jpg";
 	hiddenSelectionsTextures[] = {"\FCLA_Objects\Banners\data\Banner_01_Quetzal.paa"};
+	editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_Flags";
 	scope = 2;
   scopeCurator = 2;
 };

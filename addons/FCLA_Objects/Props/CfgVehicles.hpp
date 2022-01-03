@@ -10,7 +10,7 @@
 class RainDrops: Helper_Base_F {
   displayName = "Gotas de lluvia";
   icon = "iconObject_1x1";
-  model = "\A3\data_f\RainDrop.p3d";
+  model = "\a3\data_f\raindrop.p3d";
   //editorPreview = "\FCLA_Objects\Props\pictures\FCLA_Small_Bullet_Holes.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Props";
@@ -35,7 +35,8 @@ class Small_Bullet_Holes: UserTexture1m_F	{
 class Planks_v1: Items_base_F	{
   author = "hozlucas28";
   displayName = "Barricada de tablas (v1)";
-  model = "\A3\structures_f\data\DoorLocks\planks_1.p3d";
+  icon = "iconObject_1x1";
+  model = "\a3\structures_f\data\doorlocks\planks_1.p3d";
   //editorPreview = "\FCLA_Objects\Props\pictures\FCLA_Planks_v1.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Props";
@@ -56,7 +57,8 @@ class Planks_v1: Items_base_F	{
 class Planks_v2: Items_base_F	{
   author = "hozlucas28";
   displayName = "Barricada de tablas (v2)";
-  model = "\A3\structures_f\data\DoorLocks\planks_2.p3d";
+  icon = "iconObject_1x1";
+  model = "\a3\structures_f\data\doorlocks\planks_2.p3d";
   //editorPreview = "\FCLA_Objects\Props\pictures\FCLA_Planks_v2.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Props";
@@ -121,13 +123,123 @@ class Huge_Bullet_Holes_v2: Huge_Bullet_Holes_v1 {
 
 
 
+/* ------------------------------ TRAZADORAS ------------------------------- */
+
+class Land_shell_tracer_green_F: Helper_Base_F {
+  author = "hozlucas28";
+  displayName = "Trazadora (vehículo, verde)";
+  icon = "iconObject_10x1";
+  model = "\a3\weapons_f\data\bullettracer\shell_tracer_green.p3d";
+  //editorPreview = "\FCLA_Objects\Props\pictures\Land_shell_tracer_green_F.jpg";
+  mapSize = 0.0999;
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "FCLA_Props";
+  scope = 2;
+  scopeCurator = 2;
+
+  class SimpleObject {
+    init = "''";
+    eden = 0;
+    hide[] = {};
+    animate[] = {};
+    verticalOffset = 0.5;
+    verticalOffsetWorld = 0;
+  };
+};
+
+
+class Land_shell_tracer_white_F: Land_shell_tracer_green_F {
+  author = "hozlucas28";
+  displayName = "Trazadora (vehículo, blanca)";
+  model = "\a3\weapons_f\data\bullettracer\shell_tracer_white.p3d";
+  //editorPreview = "\FCLA_Objects\Props\pictures\Land_shell_tracer_white_F.jpg";
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "FCLA_Props";
+  scope = 2;
+  scopeCurator = 2;
+};
+
+
+class Land_shell_tracer_red_F: Land_shell_tracer_green_F {
+  author = "hozlucas28";
+  displayName = "Trazadora (vehículo, roja)";
+  model = "\a3\weapons_f\data\bullettracer\shell_tracer_red.p3d";
+  //editorPreview = "\FCLA_Objects\Props\pictures\Land_shell_tracer_red_F.jpg";
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "FCLA_Props";
+  scope = 2;
+  scopeCurator = 2;
+};
+
+
+class Land_shell_tracer_yellow_F: Land_shell_tracer_green_F {
+  author = "hozlucas28";
+  displayName = "Trazadora (vehículo, amarilla)";
+  model = "\a3\weapons_f\data\bullettracer\shell_tracer_yellow.p3d";
+  //editorPreview = "\FCLA_Objects\Props\pictures\Land_shell_tracer_yellow_F.jpg";
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "FCLA_Props";
+  scope = 2;
+  scopeCurator = 2;
+};
+
+
+class Land_tracer_white_F: Land_shell_tracer_green_F {
+  author = "hozlucas28";
+  displayName = "Trazadora (infantería, blanca)";
+  model = "\a3\weapons_f\data\bullettracer\tracer_white.p3d";
+  //editorPreview = "\FCLA_Objects\Props\pictures\Land_tracer_white_F.jpg";
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "FCLA_Props";
+  scope = 2;
+  scopeCurator = 2;
+};
+
+
+class Land_tracer_red_F: Land_shell_tracer_green_F {
+  author = "hozlucas28";
+  displayName = "Trazadora (infantería, roja)";
+  model = "\a3\weapons_f\data\bullettracer\tracer_red.p3d";
+  //editorPreview = "\FCLA_Objects\Props\pictures\Land_tracer_red_F.jpg";
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "FCLA_Props";
+  scope = 2;
+  scopeCurator = 2;
+};
+
+
+class Land_tracer_green_F: Land_shell_tracer_green_F {
+  author = "hozlucas28";
+  displayName = "Trazadora (infantería, verde)";
+  model = "\a3\weapons_f\data\bullettracer\tracer_green.p3d";
+  //editorPreview = "\FCLA_Objects\Props\pictures\Land_tracer_green_F.jpg";
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "FCLA_Props";
+  scope = 2;
+  scopeCurator = 2;
+};
+
+
+class Land_tracer_yellow_F: Land_shell_tracer_green_F {
+  author = "hozlucas28";
+  displayName = "Trazadora (infantería, amarilla)";
+  model = "\a3\weapons_f\data\bullettracer\tracer_yellow.p3d";
+  //editorPreview = "\FCLA_Objects\Props\pictures\Land_tracer_yellow_F.jpg";
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "FCLA_Props";
+  scope = 2;
+  scopeCurator = 2;
+};
+
+
+
 /* -------------------------------- OBJETOS -------------------------------- */
 
 class Short_Sandbags: BagFence_base_F	{
   author = "hozlucas28";
   displayName = "Muro de sacos (corto, verde)";
   icon = "iconObject_1x1";
-  model = "\A3\structures_f\data\DoorLocks\sandbags_1.p3d";
+  model = "\a3\structures_f\data\doorlocks\sandbags_1.p3d";
   //editorPreview = "\FCLA_Objects\Props\pictures\FCLA_Short_Sandbags.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Props";
@@ -151,7 +263,7 @@ class Piano: Furniture_Residental_base_F {
   author = "hozlucas28";
   displayName = "Piano";
   icon = "iconObject_1x2";
-  model = "\A3\structures_f_enoch\furniture\decoration\piano\piano.p3d";
+  model = "\a3\structures_f_enoch\furniture\decoration\piano\piano.p3d";
   //editorPreview = "\FCLA_Objects\Props\pictures\FCLA_Piano.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Props";
@@ -173,7 +285,8 @@ class Piano: Furniture_Residental_base_F {
 class Christmas_Tree: Strategic {
   author = "hozlucas28";
   displayName = "Arbol de navidad";
-  model = "\a3\vegetation_f_enoch\Tree\t_PiceaAbiesNativitatis_2s.p3d";
+  icon = "iconObject_1x1";
+  model = "\a3\vegetation_f_enoch\tree\t_piceaabiesnativitatis_2s.p3d";
   //editorPreview = "\FCLA_Objects\Props\pictures\FCLA_Christmas_Tree.jpg";
   nameSound = "obj_tree";
   editorCategory = "EdCat_Things";
@@ -197,6 +310,7 @@ class Christmas_Tree: Strategic {
 
 class Lightning1_F: NonStrategic {
   displayName = "Relámpago (ramificado)";
+  icon = "iconObject_1x1";
   //editorPreview = "\FCLA_Objects\Props\pictures\Lightning1_F.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Props";
@@ -207,6 +321,7 @@ class Lightning1_F: NonStrategic {
 
 class Lightning2_F: Lightning1_F {
   displayName = "Relámpago (simple)";
+  icon = "iconObject_1x1";
   //editorPreview = "\FCLA_Objects\Props\pictures\Lightning2_F.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Props";

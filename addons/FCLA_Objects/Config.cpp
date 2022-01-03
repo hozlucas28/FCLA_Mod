@@ -87,6 +87,7 @@ class CfgVehicles {
 	class lab_Items_base_F: Items_base_F {};
 	class Land_Target_Oval_F: TargetBase {};
 	class UserTexture10m_F: UserTexture1m_F {};
+	class SportsGrounds_base_F: NonStrategic {};
 	class Land_Laptop_03_base_F: Items_base_F {};
 	class GalleryFrame_01_base_F: NonStrategic {};
 	class Land_Laptop_unfolded_F: Items_base_F {};
@@ -134,6 +135,7 @@ class CfgVehicles {
 	#include "\FCLA_Objects\Gallery\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Laboratory\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Props\CfgVehicles.hpp"
+	#include "\FCLA_Objects\Structures\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Targets\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Tools\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Wrecks\CfgVehicles.hpp"

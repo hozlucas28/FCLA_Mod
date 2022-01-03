@@ -13,6 +13,8 @@ class Land_Custom_Laptop_03_black_F: Land_Laptop_03_black_F	{
 	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_03_black_F.jpg";
   hiddenSelections[] = {"Camo_1", "Screen_1"};
 	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_black_CO.paa", "\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa"};
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "EdSubcat_Electronics";
 	scope = 2;
   scopeCurator = 2;
 
@@ -82,6 +84,8 @@ class Land_Custom_Laptop_03_olive_F: Land_Laptop_03_olive_F	{
 	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_03_olive_F.jpg";
   hiddenSelections[] = {"Camo_1", "Screen_1"};
 	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_olive_CO.paa", "\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa"};
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "EdSubcat_Electronics";
 	scope = 2;
   scopeCurator = 2;
 
@@ -151,6 +155,8 @@ class Land_Custom_Laptop_03_sand_F: Land_Laptop_03_sand_F	{
 	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_03_sand_F.jpg";
   hiddenSelections[] = {"Camo_1", "Screen_1"};
 	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_sand_CO.paa", "\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa"};
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "EdSubcat_Electronics";
 	scope = 2;
   scopeCurator = 2;
 
@@ -223,6 +229,8 @@ class Land_Custom_Laptop_unfolded_F: Land_Laptop_unfolded_F {
 	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_unfolded_F.jpg";
   hiddenSelections[] = {"camo"};
 	hiddenSelectionsTextures[] = {"\a3\missions_f_oldman\data\img\screens\syndiaktlaptopdesktop_co.paa"};
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "EdSubcat_Electronics";
 	scope = 2;
   scopeCurator = 2;
 
@@ -295,6 +303,8 @@ class Land_Custom_PCSet_01_screen_F: Land_PCSet_01_screen_F	{
 	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_PCSet_01_screen_F.jpg";
   hiddenSelections[] = {"Camo_1"};
 	hiddenSelectionsTextures[] = {"\FCLA_Objects\Electronics\data\Land_PCSet_01_screen_F_Desktop_CIA.paa"};
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "EdSubcat_Electronics";
 	scope = 2;
   scopeCurator = 2;
 
@@ -357,6 +367,8 @@ class Land_Custom_TripodScreen_01_large_black_F: Land_TripodScreen_01_large_blac
 	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_TripodScreen_01_large_black_F.jpg";
   hiddenSelections[] = {"Screen_0", "Screen_1", "Screen_2", "Screen_3", "Screen_4", "Screen_5", "Screen_6", "Screen_7", "Screen_8", "Screen_9", "Camo_1"};
 	hiddenSelectionsTextures[] = {"\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa", "", "", "", "", "", "", "", "", "", "a3\Props_F_Enoch\Military\Camps\data\TripodScreen_01_black_CO.paa"};
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "EdSubcat_Electronics";
 	scope = 2;
   scopeCurator = 2;
 
@@ -426,6 +438,8 @@ class Land_Custom_TripodScreen_01_large_F: Land_TripodScreen_01_large_F	{
 	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_TripodScreen_01_large_F.jpg";
   hiddenSelections[] = {"Screen_0", "Screen_1", "Screen_2", "Screen_3", "Screen_4", "Screen_5", "Screen_6", "Screen_7", "Screen_8", "Screen_9", "Camo_1"};
 	hiddenSelectionsTextures[] = {"\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa", "", "", "", "", "", "", "", "", "", "a3\props_f_exp\military\camps\data\tripodscreen_01_co.paa"};
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "EdSubcat_Electronics";
 	scope = 2;
   scopeCurator = 2;
 
@@ -495,6 +509,8 @@ class Land_Custom_TripodScreen_01_large_sand_F: Land_TripodScreen_01_large_sand_
 	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_TripodScreen_01_large_sand_F.jpg";
   hiddenSelections[] = {"Screen_0", "Screen_1", "Screen_2", "Screen_3", "Screen_4", "Screen_5", "Screen_6", "Screen_7", "Screen_8", "Screen_9", "Camo_1"};
 	hiddenSelectionsTextures[] = {"\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa", "", "", "", "", "", "", "", "", "", "a3\Props_F_Enoch\Military\Camps\data\TripodScreen_01_sand_CO.paa"};
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "EdSubcat_Electronics";
 	scope = 2;
   scopeCurator = 2;
 

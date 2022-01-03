@@ -11,7 +11,7 @@ class Land_graffiti_CrossWithCircle_F: UserTexture1m_F {
   author = "hozlucas28";
   displayName = "Objetivo de grafiti";
   icon = "iconObject_1x1";
-  model = "\A3\Misc_F\Helpers\UserTexture1m.p3d";
+  model = "\a3\misc_f\helpers\usertexture1m.p3d";
   //editorPreview = "\FCLA_Objects\Targets\pictures\Land_graffiti_CrossWithCircle_F.jpg";
   hiddenSelectionsTextures[] = {"\a3\structures_f\mil\helipads\data\jumptarget_ca.paa"};
   hiddenSelectionsMaterials[] = {"\a3\structures_f\mil\helipads\data\helipads.rvmat"};

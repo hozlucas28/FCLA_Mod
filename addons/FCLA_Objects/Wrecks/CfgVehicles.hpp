@@ -11,7 +11,7 @@ class Land_Heli_Transport_02_Main_Rotor_center_F: Items_base_F {
   author = "hozlucas28";
   displayName = "Motor principal (CH-49 Mohawk)";
   icon = "iconObject_1x1";
-  model = "\A3\air_f_beta\Heli_Transport_02\Main_Rotor_center_F.p3d";
+  model = "\a3\air_f_beta\heli_transport_02\main_rotor_center_f.p3d";
   //editorPreview = "\FCLA_Objects\Wrecks\pictures\Land_Heli_Transport_02_Main_Rotor_center_F.jpg";
   editorCategory = "EdCat_Wrecks";
   editorSubcategory = "EdSubcat_Helicopters";
@@ -172,7 +172,7 @@ class Land_Ejection_Seat_Plane_Fighter_0304_F: Items_base_F	{
 	author = "hozlucas28";
 	displayName = "Asiento eyectable (A-143 Buzzard o A-149 Gryphon)";
 	icon = "iconObject_1x2";
-	model = "\A3\air_f_jets\Plane_Fighter_04\Proxies\Ejection_Seat_04_F.p3d";
+	model = "\a3\air_f_jets\plane_fighter_04\proxies\ejection_seat_04_f.p3d";
 	//editorPreview = "\FCLA_Objects\Wrecks\pictures\Land_Ejection_Seat_Plane_Fighter_0304_F.jpg";
 	editorCategory = "EdCat_Wrecks";
   editorSubcategory = "EdSubcat_Planes";
@@ -194,7 +194,7 @@ class Land_Ejection_Seat_Plane_FighterCAS_0202_F: Items_base_F {
 	author = "hozlucas28";
 	displayName = "Asiento eyectable (To-199 Neophron o To-201 Shikra)";
 	icon = "iconObject_1x2";
-	model = "\A3\air_f_jets\Plane_Fighter_02\Proxies\Ejection_Seat_02_F.p3d";
+	model = "\a3\air_f_jets\plane_fighter_02\proxies\ejection_seat_02_f.p3d";
 	//editorPreview = "\FCLA_Objects\Wrecks\pictures\Land_Ejection_Seat_Plane_FighterCAS_0202_F.jpg";
 	editorCategory = "EdCat_Wrecks";
   editorSubcategory = "EdSubcat_Planes";
@@ -216,7 +216,7 @@ class Land_Ejection_Seat_Plane_cas_01_F: Items_base_F	{
 	author = "hozlucas28";
 	displayName = "Asiento eyectable (A-164 Wipeout)";
 	icon = "iconObject_1x2";
-	model = "\A3\air_f_epc\Plane_CAS_01\Ejection_Seat_CAS_01_F.p3d";
+	model = "\a3\air_f_epc\plane_cas_01\ejection_seat_cas_01_f.p3d";
 	//editorPreview = "\FCLA_Objects\Wrecks\pictures\Land_Ejection_Seat_Plane_cas_01_F.jpg";
 	editorCategory = "EdCat_Wrecks";
   editorSubcategory = "EdSubcat_Planes";
@@ -238,7 +238,7 @@ class Land_Ejection_Seat_Plane_Fighter_01_F: Items_base_F	{
 	author = "hozlucas28";
 	displayName = "Asiento eyectable (F/A-181 Black Wasp II)";
 	icon = "iconObject_1x2";
-	model = "\A3\air_f_jets\Plane_Fighter_01\Proxies\Ejection_Seat_01_F.p3d";
+	model = "\a3\air_f_jets\plane_fighter_01\proxies\ejection_seat_01_f.p3d";
 	//editorPreview = "\FCLA_Objects\Wrecks\pictures\Land_Ejection_Seat_Plane_Fighter_01_F.jpg";
 	editorCategory = "EdCat_Wrecks";
   editorSubcategory = "EdSubcat_Planes";

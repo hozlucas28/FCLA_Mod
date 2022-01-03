@@ -9,6 +9,8 @@ class Custom_Land_MapBoard_01_Wall_F: Land_MapBoard_01_Wall_F	{
 	//editorPreview = "\FCLA_Objects\Boards\pictures\Custom_Land_MapBoard_01_Wall_F.jpg";
   hiddenSelections[] = {"camo"};
 	hiddenSelectionsTextures[] = {"a3\missions_f_orange\data\img\showcase_lawsofwar\whiteboard_main_co.paa"};
+  editorCategory = "EdCat_Furniture";
+  editorSubcategory = "EdSubcat_Office";
 	scope = 2;
   scopeCurator = 2;
 
@@ -268,6 +270,8 @@ class Custom_Land_MapBoard_F: Land_MapBoard_F	{
 	//editorPreview = "\FCLA_Objects\Boards\pictures\Custom_Land_MapBoard_F.jpg";
   hiddenSelections[] = {"camo"};
 	hiddenSelectionsTextures[] = {"a3\missions_f_orange\data\img\showcase_lawsofwar\whiteboard_main_co.paa"};
+  editorCategory = "EdCat_Furniture";
+  editorSubcategory = "EdSubcat_Office";
 	scope = 2;
   scopeCurator = 2;
 

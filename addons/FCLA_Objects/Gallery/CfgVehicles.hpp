@@ -9,6 +9,8 @@ class Custom_GalleryFrame_02_F: GalleryFrame_02_F	{
 	//editorPreview = "\FCLA_Objects\Gallery\pictures\Custom_GalleryFrame_02_F.jpg";
   hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3"};
 	hiddenSelectionsTextures[] = {"a3\props_f_aow\civilian\gallery\data\galleryframe_02_rectangle_picture_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_02_large_rectangle_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_02_large_rectangle_f_co.paa"};
+  editorCategory = "EdCat_Furniture";
+  editorSubcategory = "EdSubcat_Gallery";
 	scope = 2;
   scopeCurator = 2;
 
@@ -273,6 +275,8 @@ class Custom_GalleryFrame_02_large_rectangle_F: GalleryFrame_02_large_rectangle_
 	//editorPreview = "\FCLA_Objects\Gallery\pictures\Custom_GalleryFrame_02_large_rectangle_F.jpg";
   hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3"};
 	hiddenSelectionsTextures[] = {"a3\props_f_aow\civilian\gallery\data\galleryframe_02_rectangle_picture_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_02_large_rectangle_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_02_large_rectangle_f_co.paa"};
+  editorCategory = "EdCat_Furniture";
+  editorSubcategory = "EdSubcat_Gallery";
 	scope = 2;
   scopeCurator = 2;
 
@@ -537,6 +541,8 @@ class Custom_GalleryFrame_02_square_F: GalleryFrame_02_square_F	{
 	//editorPreview = "\FCLA_Objects\Gallery\pictures\Custom_GalleryFrame_02_square_F.jpg";
   hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3"};
 	hiddenSelectionsTextures[] = {"a3\Missions_F_AoW\Data\Img\Artwork\Masters\lost_masterwork_04_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_02_square_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_02_square_f_co.paa"};
+  editorCategory = "EdCat_Furniture";
+  editorSubcategory = "EdSubcat_Gallery";
 	scope = 2;
   scopeCurator = 2;
 
@@ -596,6 +602,8 @@ class Custom_GalleryFrame_01_large_portrait_F: GalleryFrame_01_large_portrait_F	
 	//editorPreview = "\FCLA_Objects\Gallery\pictures\Custom_GalleryFrame_01_large_portrait_F.jpg";
   hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3"};
 	hiddenSelectionsTextures[] = {"a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_portrait_picture_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_portrait_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_portrait_f_co.paa"};
+  editorCategory = "EdCat_Furniture";
+  editorSubcategory = "EdSubcat_Gallery";
 	scope = 2;
   scopeCurator = 2;
 
@@ -640,6 +648,8 @@ class Custom_GalleryFrame_01_large_v1_F: GalleryFrame_01_large_v1_F	{
 	//editorPreview = "\FCLA_Objects\Gallery\pictures\Custom_GalleryFrame_01_large_v1_F.jpg";
   hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3"};
 	hiddenSelectionsTextures[] = {"a3\Missions_F_AoW\Data\Img\Artwork\Portrait\showcase_aow_picture_55_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_f_co.paa"};
+  editorCategory = "EdCat_Furniture";
+  editorSubcategory = "EdSubcat_Gallery";
 	scope = 2;
   scopeCurator = 2;
 
@@ -1054,6 +1064,8 @@ class Custom_GalleryFrame_01_large_v2_F: GalleryFrame_01_large_v2_F	{
 	//editorPreview = "\FCLA_Objects\Gallery\pictures\Custom_GalleryFrame_01_large_v2_F.jpg";
   hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3"};
 	hiddenSelectionsTextures[] = {"a3\Missions_F_AoW\Data\Img\Artwork\Portrait\showcase_aow_picture_55_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_02_large_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_02_large_f_co.paa"};
+  editorCategory = "EdCat_Furniture";
+  editorSubcategory = "EdSubcat_Gallery";
 	scope = 2;
   scopeCurator = 2;
 
@@ -1468,6 +1480,8 @@ class Custom_GalleryFrame_01_large_v3_F: GalleryFrame_01_large_v3_F	{
 	//editorPreview = "\FCLA_Objects\Gallery\pictures\Custom_GalleryFrame_01_large_v3_F.jpg";
   hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3"};
 	hiddenSelectionsTextures[] = {"a3\Missions_F_AoW\Data\Img\Artwork\Portrait\showcase_aow_picture_55_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_03_large_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_03_large_f_co.paa"};
+  editorCategory = "EdCat_Furniture";
+  editorSubcategory = "EdSubcat_Gallery";
 	scope = 2;
   scopeCurator = 2;
 
