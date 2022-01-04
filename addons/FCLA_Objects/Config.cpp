@@ -87,6 +87,8 @@ class CfgVehicles {
 	class UserTexture1m_F: NonStrategic {};
 	class lab_Items_base_F: Items_base_F {};
 	class Land_Target_Oval_F: TargetBase {};
+	class Leaflet_05_Base_F: Items_base_F {};
+	class Leaflet_05_F: Leaflet_05_Base_F {};
 	class UserTexture10m_F: UserTexture1m_F {};
 	class SportsGrounds_base_F: NonStrategic {};
 	class Land_Laptop_03_base_F: Items_base_F {};
@@ -125,6 +127,7 @@ class CfgVehicles {
 	class Fowl_Base_F: Animal_Base_F {};
 	class Alsatian_Base_F: Dog_Base_F {};
 	class Banner_01_base_F: NonStrategic {};
+	class Leaflet_05_FIA_F: Leaflet_05_F {};
 	class GalleryFrame_02_F: GalleryFrame_02_base_F {};
 	class Goat_Base_F: Animal_Base_F {};
 	class Fin_Base_F: Dog_Base_F {};
@@ -139,9 +142,23 @@ class CfgVehicles {
 	#include "\FCLA_Objects\Electronics\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Gallery\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Laboratory\CfgVehicles.hpp"
+	#include "\FCLA_Objects\Leaflets\CfgVehicles.hpp"
+	#include "\FCLA_Objects\Military\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Props\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Structures\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Targets\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Tools\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Wrecks\CfgVehicles.hpp"
+};
+
+
+
+/********************************************************************************|
+|                            CONTROLADORES DE EVENTOS                            |
+|********************************************************************************/
+
+class Extended_InitPost_EventHandlers {
+	class Custom_Leaflet_05_F {
+		init = "['init', [_this select 0, (getObjectTextures (_this select 0)) select 0, '']] call BIS_fnc_initLeaflet;";
+	};
 };
