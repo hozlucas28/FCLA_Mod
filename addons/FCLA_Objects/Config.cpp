@@ -6,7 +6,7 @@
 class CfgPatches {
 	class FCLA_Objects {
 		#include "\FCLA_Objects\Units.hpp"
-		requiredAddons[] = {"A3_Animals_F_Beta_Sheep", "A3_Animals_F_Beta_Goat", "A3_Animals_F_Beta_Chicken", "A3_Animals_F_Beta_Dog", "A3_Data_F_Curator_Misc"};
+		requiredAddons[] = {"A3_Animals_F_Beta_Sheep", "A3_Animals_F_Beta_Goat", "A3_Animals_F_Beta_Chicken", "A3_Animals_F_Beta_Dog", "A3_Data_F_Curator_Misc", "A3_Structures_F_Oldman_Signs_Traffic"};
 		author = "hozlucas28";
 		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
@@ -90,6 +90,7 @@ class CfgVehicles {
 	class lab_Items_base_F: Items_base_F {};
 	class Land_Target_Oval_F: TargetBase {};
 	class Land_Photos_V1_F: Items_base_F {};
+	class Land_Sign_Mines_F: NonStrategic {};
 	class Leaflet_05_Base_F: Items_base_F {};
 	class Leaflet_05_F: Leaflet_05_Base_F {};
 	class UserTexture10m_F: UserTexture1m_F {};
@@ -108,6 +109,7 @@ class CfgVehicles {
 	class Furniture_Residental_base_F: Furniture_base_F {};
 	class GalleryFrame_02_base_F: GalleryFrame_01_base_F {};
 	class Land_Photoframe_02_F: Land_Photoframe_02_base_F {};
+	class Land_Sign_WarningMilAreaSmall_F: Land_Sign_Mines_F {};
 	class Land_MapBoard_01_Wall_base_F: Land_MapBoard_01_base {};
 	class GalleryFrame_01_large_base_F: GalleryFrame_01_base_F {};
 	class GalleryFrame_02_square_base_F: GalleryFrame_02_base_F {};
@@ -127,6 +129,7 @@ class CfgVehicles {
 	class Man: Land {};
 	class Animal: Man {};
 	class House: HouseBase {};
+	class Wall: NonStrategic {};
 	class Animal_Base_F: Animal {};
 	class Flag_AAF_F: FlagCarrier {};
 	class Flag_White_F: FlagCarrier {};
@@ -139,8 +142,12 @@ class CfgVehicles {
 	class Goat_Base_F: Animal_Base_F {};
 	class Fin_Base_F: Dog_Base_F {};
 	class House_F: House {};
+	class Wall_F: Wall {};
+	class Sign_F: Wall_F {};
+	class SignAd_Sponsor_F: Sign_F {};
 	class Industry_base_F: House_F {};
 	class Land_DryDock_01_end_F: Industry_base_F {};
+	class SignAd_Sponsor_Fuel_white_F: SignAd_Sponsor_F {};
 
 	#include "\FCLA_Objects\Animals\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Banners\CfgVehicles.hpp"
@@ -151,9 +158,11 @@ class CfgVehicles {
 	#include "\FCLA_Objects\Gallery\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Laboratory\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Leaflets\CfgVehicles.hpp"
+	#include "\FCLA_Objects\Miscellaneous\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Military\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Photos\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Props\CfgVehicles.hpp"
+	#include "\FCLA_Objects\Signs\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Structures\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Targets\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Tools\CfgVehicles.hpp"

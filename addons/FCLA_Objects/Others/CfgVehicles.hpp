@@ -50,12 +50,12 @@ class FCLA_Land_InfoStand_V2_IDAP_random_F: Infostand_base_F {
 
   class EventHandlers {init = "(_this # 0) execVM ""\FCLA_Objects\Others\scripts\Randomize_infoStands_IDAP.sqf""";};
   class SimpleObject {
+    init = "[this, '', []] call bis_fnc_initVehicle";
     eden = 1;
-    animate[] = {};
     hide[] = {};
+    animate[] = {};
     verticalOffset = 0.588;
     verticalOffsetWorld = 0;
-    init = "[this, '', []] call bis_fnc_initVehicle";
   };
 };
 
