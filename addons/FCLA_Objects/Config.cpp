@@ -82,11 +82,14 @@ class CfgVehicles {
 	class Land_MapBoard_F: ThingX {};
 	class Furniture_base_F: ThingX {};
 	class BagFence_base_F: Strategic {};
+	class FlagCarrierCore: Strategic {};
 	class Plane_Canopy_Base_F: ThingX {};
 	class Helper_Base_F: NonStrategic {};
+	class FlagCarrier: FlagCarrierCore {};
 	class UserTexture1m_F: NonStrategic {};
 	class lab_Items_base_F: Items_base_F {};
 	class Land_Target_Oval_F: TargetBase {};
+	class Land_Photos_V1_F: Items_base_F {};
 	class Leaflet_05_Base_F: Items_base_F {};
 	class Leaflet_05_F: Leaflet_05_Base_F {};
 	class UserTexture10m_F: UserTexture1m_F {};
@@ -97,12 +100,14 @@ class CfgVehicles {
 	class Land_PCSet_01_screen_F: Items_base_F {};
 	class Land_WallSign_01_base_F: NonStrategic {};
 	class Land_MapBoard_01_base: Land_MapBoard_F {};
+	class Land_Photoframe_02_base_F: NonStrategic {};
 	class Land_TripodScreen_01_large_F: Items_base_F {};
 	class Land_Laptop_03_sand_F: Land_Laptop_03_base_F {};
 	class Land_Laptop_03_black_F: Land_Laptop_03_base_F {};
 	class Land_Laptop_03_olive_F: Land_Laptop_03_base_F {};
 	class Furniture_Residental_base_F: Furniture_base_F {};
 	class GalleryFrame_02_base_F: GalleryFrame_01_base_F {};
+	class Land_Photoframe_02_F: Land_Photoframe_02_base_F {};
 	class Land_MapBoard_01_Wall_base_F: Land_MapBoard_01_base {};
 	class GalleryFrame_01_large_base_F: GalleryFrame_01_base_F {};
 	class GalleryFrame_02_square_base_F: GalleryFrame_02_base_F {};
@@ -123,6 +128,8 @@ class CfgVehicles {
 	class Animal: Man {};
 	class House: HouseBase {};
 	class Animal_Base_F: Animal {};
+	class Flag_AAF_F: FlagCarrier {};
+	class Flag_White_F: FlagCarrier {};
 	class Dog_Base_F: Animal_Base_F {};
 	class Fowl_Base_F: Animal_Base_F {};
 	class Alsatian_Base_F: Dog_Base_F {};
@@ -140,10 +147,12 @@ class CfgVehicles {
 	#include "\FCLA_Objects\Boards\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Effects\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Electronics\CfgVehicles.hpp"
+	#include "\FCLA_Objects\Flags\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Gallery\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Laboratory\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Leaflets\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Military\CfgVehicles.hpp"
+	#include "\FCLA_Objects\Photos\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Props\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Structures\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Targets\CfgVehicles.hpp"
