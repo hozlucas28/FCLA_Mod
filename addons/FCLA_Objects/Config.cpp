@@ -75,6 +75,7 @@ class CfgVehicles {
 	class FlagCarrierCore: Strategic {};
 	class Plane_Canopy_Base_F: ThingX {};
 	class Helper_Base_F: NonStrategic {};
+	class Constructions_base_F: ThingX {};
 	class FlagCarrier: FlagCarrierCore {};
 	class UserTexture1m_F: NonStrategic {};
 	class lab_Items_base_F: Items_base_F {};
@@ -86,6 +87,7 @@ class CfgVehicles {
 	class UserTexture10m_F: UserTexture1m_F {};
 	class SportsGrounds_base_F: NonStrategic {};
 	class Land_Laptop_03_base_F: Items_base_F {};
+	class GasTank_base_F: Constructions_base_F {};
 	class GalleryFrame_01_base_F: NonStrategic {};
 	class Land_Laptop_unfolded_F: Items_base_F {};
 	class Land_PCSet_01_screen_F: Items_base_F {};
@@ -131,6 +133,7 @@ class CfgVehicles {
 	class Alsatian_Base_F: Dog_Base_F {};
 	class Banner_01_base_F: NonStrategic {};
 	class Leaflet_05_FIA_F: Leaflet_05_F {};
+	class Land_GasTank_02_F: GasTank_base_F {};
 	class GalleryFrame_02_F: GalleryFrame_02_base_F {};
 	class Goat_Base_F: Animal_Base_F {};
 	class Fin_Base_F: Dog_Base_F {};

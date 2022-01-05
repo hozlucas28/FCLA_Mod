@@ -12,7 +12,7 @@ class Custom_Land_InfoStand_V1_F: Land_InfoStand_V1_F {
   displayName = "Stand de información (2 patas, personalizado)";
   //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_InfoStand_V1_F.jpg";
 	hiddenSelections[] = {"camo", "camo_background"};
-  hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa", "A3\Structures_F\Civ\InfoBoards\Data\InfoStands_CA.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa", "a3\structures_f\civ\infoboards\data\infostands_ca.paa"};
   editorCategory = "EdCat_Signs";
   editorSubcategory = "EdSubcat_BlankSigns";
   scope = 2;
@@ -47,7 +47,7 @@ class Custom_Land_InfoStand_V2_F: Land_InfoStand_V2_F {
   displayName = "Stand de información (1 pata, personalizado)";
   //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_InfoStand_V2_F.jpg";
 	hiddenSelections[] = {"camo", "camo_background"};
-  hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa", "A3\Structures_F\Civ\InfoBoards\Data\InfoStands_CA.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa", "a3\structures_f\civ\infoboards\data\infostands_ca.paa"};
   editorCategory = "EdCat_Signs";
   editorSubcategory = "EdSubcat_BlankSigns";
   scope = 2;
@@ -158,7 +158,7 @@ class Land_Box_Science_F: ThingX {
     scopeCurator = 2;
 
     hiddenSelections[] = {"Camo_Miscellaneous",	"Camo"};
-    hiddenSelectionsTextures[] = {"",	"\A3\missions_f_oldman\Data\img\Decals\science_container_co.paa"};
+    hiddenSelectionsTextures[] = {"",	"\a3\missions_f_oldman\data\img\decals\science_container_co.paa"};
     slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1", "SlingLoadCargo2", "SlingLoadCargo3", "SlingLoadCargo4"};
     class TransportItems{};
     class TransportWeapons{};

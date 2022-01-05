@@ -5,6 +5,70 @@
 
 
 
+/* ------------------------- DISPOSITIVO DE HACKEO ------------------------- */
+
+class Land_Hacking_Device_Black_F: Land_Laptop_03_black_F	{
+  author = "hozlucas28";
+	displayName = "Dispositivo de hackeo";
+	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Hacking_Device_Black_F.jpg";
+  hiddenSelections[] = {"Camo_1", "Screen_1"};
+	hiddenSelectionsTextures[] = {"FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_FCLA.paa", "a3\missions_f_oldman\data\img\screens\millerntbscreen02_co.paa"};
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "EdSubcat_Electronics";
+	scope = 2;
+  scopeCurator = 2;
+
+	class Attributes {
+    class FCLA_Switch_Texture {
+      displayName = "Pegatina";
+      control = "Combo";
+    	property = "FCLA_Switch_Texture";
+      typeName = "STRING";
+    	expression = "_this setObjectTextureGlobal [0, _value];";
+      defaultValue = """\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_FCLA.paa""";
+
+    	class values {
+        class Texture_1 {
+        	name = "FCLA";
+        	value = "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_FCLA.paa";
+        };
+
+        class Texture_2 {
+        	name = "Takana";
+        	value = "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Takana.paa";
+        };
+
+        class Texture_3 {
+        	name = "Jaguar";
+        	value = "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Jaguar.paa";
+        };
+
+        class Texture_4 {
+        	name = "Condor";
+        	value = "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Condor.paa";
+        };
+
+        class Texture_5 {
+        	name = "Salamandra";
+        	value = "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Salamandra.paa";
+        };
+
+        class Texture_6 {
+        	name = "Anaconda";
+        	value = "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Anaconda.paa";
+        };
+
+        class Texture_7 {
+        	name = "Quetzal";
+        	value = "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Quetzal.paa";
+        };
+			};
+		};
+	};
+};
+
+
+
 /* ------------------------ PORTÁTILES RESISTENTES ------------------------- */
 
 class Land_Custom_Laptop_03_black_F: Land_Laptop_03_black_F	{

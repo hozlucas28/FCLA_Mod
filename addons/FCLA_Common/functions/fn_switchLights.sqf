@@ -42,8 +42,8 @@ params [
 //Verificar argumento.
 _state = toUpper _state;
 _centerPos = [_center] call CBA_fnc_getPos;
-_allBuildings = allMissionObjects "Building";
-_allVehicles = (allMissionObjects "LandVehicle") + (allMissionObjects "Air") + (allMissionObjects "Ship");
+_allVehicles = nearestObjects [_centerPos, ["LandVehicle", "Air", "Ship"], worldSize];
+_allBuildings = nearestObjects [_centerPos, ["Building"], worldSize];
 if ((_state != "OFF") && (_state != "ON")) exitWith {false};
 
 
@@ -57,21 +57,13 @@ _state = switch (_state) do {
 
 //Obtener lamparas y vehículos.
 _lampsInRad = if (_rad isEqualType 0) then {
-  if (_rad <= -1) then {
-    nearestObjects [_centerPos, ["Building"], worldSize];
-  } else {
-    nearestObjects [_centerPos, ["Building"], _rad];
-  };
+  if (_rad > -1) then {nearestObjects [_centerPos, ["Building"], _rad];} else {_allBuildings};
 } else {
   _allBuildings select {_x inArea [_center, _rad select 0, _rad select 1, _rad select 2, _rad select 3, _rad select 4]};
 };
 
 _vehiclesInRad = if (_rad isEqualType 0) then {
-  if (_rad <= -1) then {
-    nearestObjects [_centerPos, ["LandVehicle", "Air", "Ship"], worldSize];
-  } else {
-    nearestObjects [_centerPos, ["LandVehicle", "Air", "Ship"], _rad];
-  };
+  if (_rad > -1) then {nearestObjects [_centerPos, ["LandVehicle", "Air", "Ship"], _rad];} else {_allVehicles};
 } else {
   _allVehicles select {_x inArea [_center, _rad select 0, _rad select 1, _rad select 2, _rad select 3, _rad select 4]};
 };

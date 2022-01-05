@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Enciende/Apaga todas las luces dentro del tamaño de zona.
+ * Enciende/Apaga todas las luces dentro del tamaño de la zona.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -11,8 +11,8 @@
 class FCLA_Module_Switch_Lights: Module_F {
   author = "hozlucas28";
 	displayName = "Alternar luces";
-  icon = "\FCLA_Modules\3DEN\data\Lamps.paa";
-  portrait = "\FCLA_Modules\3DEN\data\Lamps.paa";
+  icon = "\FCLA_Modules\3DEN\data\Power_Switch.paa";
+  portrait = "\FCLA_Modules\3DEN\data\Power_Switch.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_switchLights3DEN";
   is3DEN = NOT_RUN_IN_3DEN;
@@ -58,7 +58,7 @@ class FCLA_Module_Switch_Lights: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Enciende/Apaga aquellas luces comprendidas dentro del 'Tamaño', determinada por el módulo.<br/><br/>• Si colocas -1, en los tamaños de la zona, todas las luces del mapa seran afectadas."};
+		description[] =	{"Enciende/Apaga aquellas luces comprendidas dentro del 'Tamaño', determinado por el módulo.<br/><br/>• Si colocas -1, en los tamaños de la zona, todas las luces del mapa seran afectadas.<br/>• Si sincronizas únicamente un interruptor de transferencia al módulo, este servira para encender/apagar aquellas luces comprendidas dentro del 'Tamaño'. Sin embargo si hay más de una entidad sincronizada ó ninguna, las luces se encenderan/apagaran sin interacción alguna."};
 	};
 
   class AttributeValues {
