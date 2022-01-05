@@ -1,0 +1,31 @@
+_Video = ["\A3\Missions_F_EPA\video\A_hub_quotation.ogv", "\A3\Missions_F_EPA\video\A_m02_quotation.ogv", "\A3\Missions_F_EPA\video\A_m03_quotation.ogv", "\A3\Missions_F_EPA\video\A_m04_quotation.ogv"] call bis_fnc_selectRandom;
+[_Video, "STR_A3_Campaign_Quote_10"] call BIS_fnc_quotations;
+
+waitUntil {BIS_fnc_quotations_playing || !(isNil "BIS_fnc_quotations_skip")};
+
+sleep 10;
+//wait for player to exist
+waitUntil { !isNull player };
+waitUntil { player == player };
+playMusic "LeadTrack05_F_EPC";
+
+MissionIntro = [] spawn {
+	["BIS_blackStart", false] call BIS_fnc_blackOut;
+	[[["OPERATION INTRO","<t align = 'center' shadow = '1' size = '2.0' font='PuristaBold'>%1</t><br/>"],
+	["By Intro Text Noob","<t align = 'center' shadow = '1' size = '0.7'>%1</t><br/>"]],0,0,"<t color='#FFFFFFFF' align='center'>%1</t>"] spawn BIS_fnc_typeText;
+	sleep 10;
+	"dynamicBlur" ppEffectEnable true;
+	"dynamicBlur" ppEffectAdjust [7];
+	"dynamicBlur" ppEffectCommit 0;
+	"dynamicBlur" ppEffectAdjust [0.0];
+	"dynamicBlur" ppEffectCommit 7;
+	["BIS_blackStart", true] call BIS_fnc_blackIn;
+};
+
+waitUntil {scriptDone MissionIntro};
+
+[] spawn {
+	waitUntil{!(isNil "BIS_fnc_init")};
+	// Info text
+	[str("Welcome to") , str("This Intro Map."), str("Good Luck.")] spawn BIS_fnc_infoText;
+};

@@ -17,17 +17,6 @@ class CfgPatches {
 
 
 /********************************************************************************|
-|                                    FUNCIONES                                   |
-|********************************************************************************/
-
-//class CfgFunctions {
-	//class FCLA_Objects {
-	//};
-//};
-
-
-
-/********************************************************************************|
 |                              EDITOR - CATEGORÍAS                               |
 |********************************************************************************/
 
@@ -81,6 +70,7 @@ class CfgVehicles {
 	class HouseBase: NonStrategic {};
 	class Land_MapBoard_F: ThingX {};
 	class Furniture_base_F: ThingX {};
+	class Infostand_base_F: ThingX {};
 	class BagFence_base_F: Strategic {};
 	class FlagCarrierCore: Strategic {};
 	class Plane_Canopy_Base_F: ThingX {};
@@ -99,6 +89,8 @@ class CfgVehicles {
 	class GalleryFrame_01_base_F: NonStrategic {};
 	class Land_Laptop_unfolded_F: Items_base_F {};
 	class Land_PCSet_01_screen_F: Items_base_F {};
+	class Land_InfoStand_V1_F: Infostand_base_F {};
+	class Land_InfoStand_V2_F: Infostand_base_F {};
 	class Land_WallSign_01_base_F: NonStrategic {};
 	class Land_MapBoard_01_base: Land_MapBoard_F {};
 	class Land_Photoframe_02_base_F: NonStrategic {};
@@ -114,6 +106,7 @@ class CfgVehicles {
 	class GalleryFrame_01_large_base_F: GalleryFrame_01_base_F {};
 	class GalleryFrame_02_square_base_F: GalleryFrame_02_base_F {};
 	class Land_MapBoard_01_Wall_F: Land_MapBoard_01_Wall_base_F {};
+	class Land_WallSign_01_chalkboard_F: Land_WallSign_01_base_F {};
 	class GalleryFrame_02_square_F: GalleryFrame_02_square_base_F {};
 	class GalleryFrame_01_large_v1_base_F: GalleryFrame_01_base_F {};
 	class GalleryFrame_01_large_v2_base_F: GalleryFrame_01_base_F {};
@@ -156,6 +149,7 @@ class CfgVehicles {
 	#include "\FCLA_Objects\Electronics\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Flags\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Gallery\CfgVehicles.hpp"
+	#include "\FCLA_Objects\Graffitis\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Laboratory\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Leaflets\CfgVehicles.hpp"
 	#include "\FCLA_Objects\Miscellaneous\CfgVehicles.hpp"

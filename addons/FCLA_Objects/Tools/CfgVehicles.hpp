@@ -3,14 +3,14 @@
 |                         VEHÍCULOS - "HERRAMIENTAS"                        |
 |***************************************************************************/
 
-class WallSign_chalkboard_Tools: Land_WallSign_01_base_F {
+class Land_WallSign_01_Chalkboard_F_Tools: Land_WallSign_01_chalkboard_F {
   author = "hozlucas28";
   displayName = "Tablero de herramientas";
-  //editorPreview = "\FCLA_Objects\Tools\pictures\WallSign_chalkboard_Tools.jpg";
+  //editorPreview = "\FCLA_Objects\Tools\pictures\Land_WallSign_01_Chalkboard_F_Tools.jpg";
+  hiddenselections[] = {"camo1", "camo2"};
   hiddenSelectionsTextures[] = {"\a3\missions_f_orange\data\img\orange_compositions\n2\wallsign_01_f_chalkboard_tools_co.paa", "\a3\missions_f_orange\data\img\orange_compositions\n2\wallsign_01_f_chalkboard_tools_co.paa"};
   editorCategory = "EdCat_Things";
   editorSubcategory = "EdSubcat_Tools";
-  reversed = 1;
   scope = 2;
   scopeCurator = 2;
 

@@ -5,12 +5,138 @@
 
 
 
+/* -------------------------------- STANDS --------------------------------- */
+
+class Custom_Land_InfoStand_V1_F: Land_InfoStand_V1_F {
+  author = "hozlucas28";
+  displayName = "Stand de información (2 patas, personalizado)";
+  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_InfoStand_V1_F.jpg";
+	hiddenSelections[] = {"camo", "camo_background"};
+  hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa", "A3\Structures_F\Civ\InfoBoards\Data\InfoStands_CA.paa"};
+  editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_BlankSigns";
+  scope = 2;
+
+	class Attributes {
+    class FCLA_Switch_Texture {
+      displayName = "Textura";
+      control = "Combo";
+    	property = "FCLA_Switch_Texture";
+      typeName = "STRING";
+    	expression = "_this setObjectTextureGlobal [0, _value];";
+      defaultValue = """\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa""";
+
+    	class values {
+        class Texture_1 {
+        	name = "FCLA";
+        	value = "\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa";
+        };
+
+        class Texture_2 {
+        	name = "Teletransportador";
+        	value = "\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_Teleport.paa";
+        };
+			};
+		};
+	};
+};
+
+
+class Custom_Land_InfoStand_V2_F: Land_InfoStand_V2_F {
+  author = "hozlucas28";
+  displayName = "Stand de información (1 pata, personalizado)";
+  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_InfoStand_V2_F.jpg";
+	hiddenSelections[] = {"camo", "camo_background"};
+  hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa", "A3\Structures_F\Civ\InfoBoards\Data\InfoStands_CA.paa"};
+  editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_BlankSigns";
+  scope = 2;
+
+	class Attributes {
+    class FCLA_Switch_Texture {
+      displayName = "Textura";
+      control = "Combo";
+    	property = "FCLA_Switch_Texture";
+      typeName = "STRING";
+    	expression = "_this setObjectTextureGlobal [0, _value];";
+      defaultValue = """\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa""";
+
+    	class values {
+        class Texture_1 {
+        	name = "FCLA";
+        	value = "\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa";
+        };
+
+        class Texture_2 {
+        	name = "Teletransportador";
+        	value = "\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_Teleport.paa";
+        };
+			};
+		};
+	};
+};
+
+
+
+/* ------------------------------- PIZARRAS -------------------------------- */
+
+class Custom_Land_WallSign_01_Chalkboard_F: Land_WallSign_01_chalkboard_F {
+  author = "hozlucas28";
+  displayName = "Señal de pared (pizarra, personalizada)";
+  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_WallSign_01_Chalkboard_F.jpg";
+	hiddenselections[] = {"camo1", "camo2"};
+  hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_WallSign_01_Chalkboard_F_Rules.paa", "\FCLA_Objects\Miscellaneous\data\Land_WallSign_01_Chalkboard_F_Rules.paa"};
+  editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_BlankSigns";
+  scope = 2;
+  scopeCurator = 2;
+
+  class SimpleObject {
+    init = "''";
+  	eden = 0;
+    verticalOffset = 0.46000001;
+  	verticalOffsetWorld = 0;
+  	hide[] = {};
+    animate[] = {};
+  };
+
+	class Attributes {
+    class FCLA_Switch_Texture {
+      displayName = "Pizarra";
+      control = "Combo";
+    	property = "FCLA_Switch_Texture";
+      typeName = "STRING";
+    	expression = "{_this setObjectTextureGlobal [_x, _value];} forEach [0, 1];";
+      defaultValue = """\FCLA_Objects\Miscellaneous\data\Land_WallSign_01_Chalkboard_F_Rules.paa""";
+
+    	class values {
+        class Texture_1 {
+        	name = "Reglas";
+        	value = "\FCLA_Objects\Miscellaneous\data\Land_WallSign_01_Chalkboard_F_Rules.paa";
+        };
+
+        class Texture_2 {
+        	name = "Guía médica";
+        	value = "\FCLA_Objects\Miscellaneous\data\Land_WallSign_01_Chalkboard_F_Medical_Guide.paa";
+        };
+
+        class Texture_3 {
+        	name = "Parches FCLA";
+        	value = "\FCLA_Objects\Miscellaneous\data\Land_WallSign_01_Chalkboard_F_FCLA_Patches.paa";
+        };
+			};
+		};
+	};
+};
+
+
+
 /* --------------------------------- CAJAS --------------------------------- */
 
 class Land_Box_Science_F: ThingX {
 		author = "hozlucas28";
     displayName = "Caja de carga (anticuerpos de Atrox)";
-    //editorPreview = "\FCLA_Objects\Miscellaneous\pictures\Land_Box_Science_F.jpg";
+    //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Land_Box_Science_F.jpg";
     icon = "iconObject_1x1";
 		model = "\a3\weapons_f\ammoboxes\ammoveh_f.p3d";
 		destrType = "DestructBuilding";
@@ -84,7 +210,7 @@ class Land_Box_Science_F: ThingX {
 class Radar_Electronics: Items_base_F	{
   author = "hozlucas28";
   displayName = "Estación de radar (electrónica)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\pictures\Radar_Electronics.jpg";
+  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Electronics.jpg";
   icon = "iconObject_1x2";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_electronics.p3d";
   editorCategory = "EdCat_Structures_Enoch";
@@ -107,7 +233,7 @@ class Radar_Electronics: Items_base_F	{
 class Radar_Panel: radar_electronics {
   author = "hozlucas28";
   displayName = "Estación de radar (cuerpo)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\pictures\Radar_Panel.jpg";
+  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Panel.jpg";
   icon = "iconObject_5x2";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_panel.p3d";
   editorCategory = "EdCat_Structures_Enoch";
@@ -130,7 +256,7 @@ class Radar_Panel: radar_electronics {
 class Radar_Panel_Flat: radar_electronics {
   author = "hozlucas28";
   displayName = "Estación de radar (cuerpo, liso)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\pictures\Radar_Panel_Flat.jpg";
+  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Panel_Flat.jpg";
   icon = "iconObject_5x2";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_panel_flat.p3d";
   editorCategory = "EdCat_Structures_Enoch";
@@ -153,7 +279,7 @@ class Radar_Panel_Flat: radar_electronics {
 class Radar_Rack: radar_electronics {
   author = "hozlucas28";
   displayName = "Estación de radar (estante)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\pictures\Radar_Rack.jpg";
+  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Rack.jpg";
   icon = "iconObject_1x4";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_rack.p3d";
   editorCategory = "EdCat_Structures_Enoch";
@@ -176,7 +302,7 @@ class Radar_Rack: radar_electronics {
 class Radar_Rack_Quad: radar_electronics {
   author = "hozlucas28";
   displayName = "Estación de radar (estante, cuádruple)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\pictures\Radar_Rack_Quad.jpg";
+  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Rack_Quad.jpg";
   icon = "iconObject_10x1";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_rack_quad.p3d";
   editorCategory = "EdCat_Structures_Enoch";
@@ -202,7 +328,7 @@ class Radar_Rack_Quad: radar_electronics {
 class Land_Heli_Transport_04_bench_black_proxy_F: Items_base_F {
   author = "hozlucas28";
   displayName = "Unidad de bancada - Taru (negra)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\pictures\Land_Heli_Transport_04_bench_black_proxy_F.jpg";
+  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Land_Heli_Transport_04_bench_black_proxy_F.jpg";
   icon = "iconObject_2x3";
   model = "\a3\air_f_heli\heli_transport_04\heli_transport_04_bench_black_proxy_f.p3d";
   editorCategory = "EdCat_Things";
@@ -224,7 +350,7 @@ class Land_Heli_Transport_04_bench_black_proxy_F: Items_base_F {
 class Land_Heli_Transport_04_bench_proxy_F: Items_base_F {
   author = "hozlucas28";
   displayName = "Unidad de bancada - Taru (arena)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\pictures\Land_Heli_Transport_04_bench_proxy_F.jpg";
+  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Land_Heli_Transport_04_bench_proxy_F.jpg";
   icon = "iconObject_2x3";
   model = "\a3\air_f_heli\heli_transport_04\pod_heli_transport_04_bench_f.p3d";
   editorCategory = "EdCat_Things";
