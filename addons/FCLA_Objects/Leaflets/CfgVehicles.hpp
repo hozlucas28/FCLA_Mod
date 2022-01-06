@@ -6,7 +6,7 @@
 class Custom_Leaflet_05_F: Leaflet_05_F {
   author = "hozlucas28";
   displayName = "Panfleto (personalizado)";
-  //editorPreview = "\FCLA_Objects\Leaflets\pictures\Custom_Leaflet_05_F.jpg";
+  editorPreview = "\FCLA_Objects\Leaflets\pictures\Custom_Leaflet_05_F.jpg";
   hiddenSelectionsTextures[] = {"a3\ui_f_orange\data\cfgleaflets\west_ca.paa"};
   editorCategory = "EdCat_Things";
   editorSubcategory = "EdSubcat_Intel";

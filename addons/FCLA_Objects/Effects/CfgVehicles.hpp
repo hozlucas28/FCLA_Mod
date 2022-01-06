@@ -19,7 +19,6 @@ class Particle_Base_F: Thing {
 
 class Small_Smoke: Particle_Base_F {
   displayName = "Humo (pequeño)";
-  //editorPreview = "\FCLA_Objects\Effects\pictures\FCLA_Small_Smoke.jpg";
   editorCategory = "FCLA_Effects";
   editorSubcategory = "FCLA_Smoke";
   scope = 2;
@@ -40,7 +39,6 @@ class Small_Smoke: Particle_Base_F {
 
 class Medium_Smoke: Particle_Base_F {
   displayName = "Humo (medio)";
-  //editorPreview = "\FCLA_Objects\Effects\pictures\FCLA_Medium_Smoke.jpg";
   editorCategory = "FCLA_Effects";
   editorSubcategory = "FCLA_Smoke";
   scope = 2;
@@ -61,7 +59,6 @@ class Medium_Smoke: Particle_Base_F {
 
 class Big_Smoke: Particle_Base_F {
   displayName = "Humo (grande)";
-  //editorPreview = "\FCLA_Objects\Effects\pictures\FCLA_Big_Smoke.jpg";
   editorCategory = "FCLA_Effects";
   editorSubcategory = "FCLA_Smoke";
   scope = 2;
@@ -85,7 +82,6 @@ class Big_Smoke: Particle_Base_F {
 
 class Small_Fire: Particle_Base_F	{
   displayName = "Fuego (pequeño)";
-  //editorPreview = "\FCLA_Objects\Effects\pictures\FCLA_Small_Fire.jpg";
   editorCategory = "FCLA_Effects";
   editorSubcategory = "FCLA_Fire";
   scope = 2;
@@ -126,7 +122,6 @@ class Small_Fire: Particle_Base_F	{
 
 class Medium_Fire: Particle_Base_F {
   displayName = "Fuego (medio)";
-  //editorPreview = "\FCLA_Objects\Effects\pictures\FCLA_Medium_Fire.jpg";
   editorCategory = "FCLA_Effects";
   editorSubcategory = "FCLA_Fire";
   scope = 2;
@@ -167,7 +162,6 @@ class Medium_Fire: Particle_Base_F {
 
 class Big_Fire: Particle_Base_F {
   displayName = "Fuego (grande)";
-  //editorPreview = "\FCLA_Objects\Effects\pictures\FCLA_Big_Fire.jpg";
   editorCategory = "FCLA_Effects";
   editorSubcategory = "FCLA_Fire";
   scope = 2;

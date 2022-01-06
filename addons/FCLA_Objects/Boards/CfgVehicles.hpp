@@ -6,7 +6,7 @@
 class Custom_Land_MapBoard_F: Land_MapBoard_F	{
   author = "hozlucas28";
 	displayName = "Pizarra (personalizada)";
-	//editorPreview = "\FCLA_Objects\Boards\pictures\Custom_Land_MapBoard_F.jpg";
+	editorPreview = "\FCLA_Objects\Boards\pictures\Custom_Land_MapBoard_F.jpg";
   hiddenSelections[] = {"camo"};
 	hiddenSelectionsTextures[] = {"a3\missions_f_orange\data\img\showcase_lawsofwar\whiteboard_main_co.paa"};
   editorCategory = "EdCat_Furniture";
@@ -267,7 +267,7 @@ class Custom_Land_MapBoard_F: Land_MapBoard_F	{
 class Custom_Land_MapBoard_01_Wall_F: Land_MapBoard_01_Wall_F	{
   author = "hozlucas28";
 	displayName = "Pizarra (pared, personalizada)";
-	//editorPreview = "\FCLA_Objects\Boards\pictures\Custom_Land_MapBoard_01_Wall_F.jpg";
+	editorPreview = "\FCLA_Objects\Boards\pictures\Custom_Land_MapBoard_01_Wall_F.jpg";
   hiddenSelections[] = {"camo"};
 	hiddenSelectionsTextures[] = {"a3\missions_f_orange\data\img\showcase_lawsofwar\whiteboard_main_co.paa"};
   editorCategory = "EdCat_Furniture";

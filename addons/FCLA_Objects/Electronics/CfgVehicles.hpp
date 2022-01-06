@@ -12,7 +12,7 @@ class Satellite_Antenna_RF_3080: ThingX {
 	displayName = "RF 3080 (SATCOM)";
   icon = "iconObject_5x4";
   model = "\FCLA_Objects\Electronics\data\Satellite_Antenna_RF_3080\Satellite_Antenna_RF_3080.p3d";
-  //editorPreview = "\FCLA_Objects\Electronics\data\pictures\Satellite_Antenna_RF_3080.jpg";
+  editorPreview = "\FCLA_Objects\Electronics\data\pictures\Satellite_Antenna_RF_3080.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "EdSubcat_Electronics";
   ACE_Dragging_canDrag = 1;
@@ -32,7 +32,7 @@ class Satellite_Antenna_RF_3080: ThingX {
 class Land_Custom_PCSet_01_screen_F: Land_PCSet_01_screen_F	{
   author = "hozlucas28";
 	displayName = "Equipo de PC (pantalla, personalizada)";
-	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_PCSet_01_screen_F.jpg";
+	editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_PCSet_01_screen_F.jpg";
   hiddenSelections[] = {"Camo_1"};
 	hiddenSelectionsTextures[] = {"\FCLA_Objects\Electronics\data\Land_PCSet_01_screen_F_Desktop_CIA.paa"};
   editorCategory = "EdCat_Things";
@@ -96,7 +96,7 @@ class Land_Custom_PCSet_01_screen_F: Land_PCSet_01_screen_F	{
 class Land_Hacking_Device_Black_F: Land_Laptop_03_black_F	{
   author = "hozlucas28";
 	displayName = "Dispositivo de hackeo";
-	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Hacking_Device_Black_F.jpg";
+	editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Hacking_Device_Black_F.jpg";
   hiddenSelections[] = {"Camo_1", "Screen_1"};
 	hiddenSelectionsTextures[] = {"FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_FCLA.paa", "a3\missions_f_oldman\data\img\screens\millerntbscreen02_co.paa"};
   editorCategory = "EdCat_Things";
@@ -160,7 +160,7 @@ class Land_Hacking_Device_Black_F: Land_Laptop_03_black_F	{
 class Land_Custom_Laptop_unfolded_F: Land_Laptop_unfolded_F {
   author = "hozlucas28";
 	displayName = "Ordenador portátil (abierto, personalizado)";
-	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_unfolded_F.jpg";
+	editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_unfolded_F.jpg";
   hiddenSelections[] = {"camo"};
 	hiddenSelectionsTextures[] = {"\a3\missions_f_oldman\data\img\screens\syndiaktlaptopdesktop_co.paa"};
   editorCategory = "EdCat_Things";
@@ -234,7 +234,7 @@ class Land_Custom_Laptop_unfolded_F: Land_Laptop_unfolded_F {
 class Land_Custom_Laptop_03_black_F: Land_Laptop_03_black_F	{
   author = "hozlucas28";
 	displayName = "Portátil resistente (negro, personalizado)";
-	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_03_black_F.jpg";
+	editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_03_black_F.jpg";
   hiddenSelections[] = {"Camo_1", "Screen_1"};
 	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_black_CO.paa", "\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa"};
   editorCategory = "EdCat_Things";
@@ -305,7 +305,7 @@ class Land_Custom_Laptop_03_black_F: Land_Laptop_03_black_F	{
 class Land_Custom_Laptop_03_olive_F: Land_Laptop_03_olive_F	{
   author = "hozlucas28";
 	displayName = "Portátil resistente (oliva, personalizado)";
-	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_03_olive_F.jpg";
+	editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_03_olive_F.jpg";
   hiddenSelections[] = {"Camo_1", "Screen_1"};
 	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_olive_CO.paa", "\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa"};
   editorCategory = "EdCat_Things";
@@ -376,7 +376,7 @@ class Land_Custom_Laptop_03_olive_F: Land_Laptop_03_olive_F	{
 class Land_Custom_Laptop_03_sand_F: Land_Laptop_03_sand_F	{
   author = "hozlucas28";
 	displayName = "Portátil resistente (arena, personalizado)";
-	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_03_sand_F.jpg";
+	editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_03_sand_F.jpg";
   hiddenSelections[] = {"Camo_1", "Screen_1"};
 	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_sand_CO.paa", "\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa"};
   editorCategory = "EdCat_Things";
@@ -450,7 +450,7 @@ class Land_Custom_Laptop_03_sand_F: Land_Laptop_03_sand_F	{
 class Land_Custom_TripodScreen_01_large_black_F: Land_TripodScreen_01_large_black_F	{
   author = "hozlucas28";
 	displayName = "Pantalla grande resistente (negra, personalizada)";
-	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_TripodScreen_01_large_black_F.jpg";
+	editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_TripodScreen_01_large_black_F.jpg";
   hiddenSelections[] = {"Screen_0", "Screen_1", "Screen_2", "Screen_3", "Screen_4", "Screen_5", "Screen_6", "Screen_7", "Screen_8", "Screen_9", "Camo_1"};
 	hiddenSelectionsTextures[] = {"\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa", "", "", "", "", "", "", "", "", "", "a3\Props_F_Enoch\Military\Camps\data\TripodScreen_01_black_CO.paa"};
   editorCategory = "EdCat_Things";
@@ -521,7 +521,7 @@ class Land_Custom_TripodScreen_01_large_black_F: Land_TripodScreen_01_large_blac
 class Land_Custom_TripodScreen_01_large_F: Land_TripodScreen_01_large_F	{
   author = "hozlucas28";
 	displayName = "Pantalla grande resistente (grande, personalizada)";
-	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_TripodScreen_01_large_F.jpg";
+	editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_TripodScreen_01_large_F.jpg";
   hiddenSelections[] = {"Screen_0", "Screen_1", "Screen_2", "Screen_3", "Screen_4", "Screen_5", "Screen_6", "Screen_7", "Screen_8", "Screen_9", "Camo_1"};
 	hiddenSelectionsTextures[] = {"\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa", "", "", "", "", "", "", "", "", "", "a3\props_f_exp\military\camps\data\tripodscreen_01_co.paa"};
   editorCategory = "EdCat_Things";
@@ -592,7 +592,7 @@ class Land_Custom_TripodScreen_01_large_F: Land_TripodScreen_01_large_F	{
 class Land_Custom_TripodScreen_01_large_sand_F: Land_TripodScreen_01_large_sand_F	{
   author = "hozlucas28";
 	displayName = "Pantalla grande resistente (arena, personalizada)";
-	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_TripodScreen_01_large_sand_F.jpg";
+	editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_TripodScreen_01_large_sand_F.jpg";
   hiddenSelections[] = {"Screen_0", "Screen_1", "Screen_2", "Screen_3", "Screen_4", "Screen_5", "Screen_6", "Screen_7", "Screen_8", "Screen_9", "Camo_1"};
 	hiddenSelectionsTextures[] = {"\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa", "", "", "", "", "", "", "", "", "", "a3\Props_F_Enoch\Military\Camps\data\TripodScreen_01_sand_CO.paa"};
   editorCategory = "EdCat_Things";

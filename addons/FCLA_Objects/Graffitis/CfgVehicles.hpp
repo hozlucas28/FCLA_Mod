@@ -10,7 +10,7 @@
 class Cross_UserTexture1m_F: UserTexture1m_F {
   author = "hozlucas28";
   displayName = "Grafiti (X)";
-  //editorPreview = "\FCLA_Objects\Graffitis\data\pictures\Cross_UserTexture1m_F.jpg";
+  editorPreview = "\FCLA_Objects\Graffitis\data\pictures\Cross_UserTexture1m_F.jpg";
   hiddenSelectionsTextures[] = {"\FCLA_Objects\Graffitis\data\UserTexture1m_F_Cross.paa"};
   editorCategory = "EdCat_Signs";
   editorSubcategory = "EdSubcat_BlankSigns";
@@ -25,7 +25,7 @@ class Cross_UserTexture1m_F: UserTexture1m_F {
 class Custom_UserTexture1m_F: UserTexture1m_F {
   author = "hozlucas28";
   displayName = "Textura de usuario (1 m, personalizada)";
-  //editorPreview = "\FCLA_Objects\Graffitis\data\pictures\Custom_UserTexture1m_F.jpg";
+  editorPreview = "\FCLA_Objects\Graffitis\data\pictures\Custom_UserTexture1m_F.jpg";
   hiddenSelectionsTextures[] = {"\FCLA_Objects\Graffitis\data\UserTexture1m_F_FCLA_Big.paa"};
   editorCategory = "EdCat_Signs";
   editorSubcategory = "EdSubcat_BlankSigns";

@@ -8,7 +8,7 @@ class Dropper: lab_Items_base_F {
   displayName = "Gotero de Strahain";
   icon = "iconObject_circle";
   model = "\a3\structures_f_enoch\furniture\school_equipment\lab_dropper.p3d";
-  //editorPreview = "\FCLA_Objects\Laboratory\pictures\Dropper.jpg";
+  editorPreview = "\FCLA_Objects\Laboratory\pictures\Dropper.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Laboratory";
   scope = 2;
@@ -30,7 +30,7 @@ class Erlenmeyer_Flask: lab_Items_base_F {
   displayName = "Matraz de Erlenmeyer";
   icon = "iconObject_circle";
   model = "\a3\structures_f_enoch\furniture\school_equipment\lab_erlenmeyer_flask.p3d";
-  //editorPreview = "\FCLA_Objects\Laboratory\pictures\Erlenmeyer_Flask.jpg";
+  editorPreview = "\FCLA_Objects\Laboratory\pictures\Erlenmeyer_Flask.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Laboratory";
   scope = 2;
@@ -52,7 +52,7 @@ class Beaker: lab_Items_base_F {
   displayName = "Probeta";
   icon = "iconObject_1x2";
   model = "\a3\structures_f_enoch\furniture\school_equipment\lab_beaker.p3d";
-  //editorPreview = "\FCLA_Objects\Laboratory\pictures\Beaker.jpg";
+  editorPreview = "\FCLA_Objects\Laboratory\pictures\Beaker.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Laboratory";
   scope = 2;
@@ -74,7 +74,7 @@ class Volume_Beaker: lab_Items_base_F	{
   displayName = "Matraz";
   icon = "iconObject_circle";
   model = "\a3\structures_f_enoch\furniture\school_equipment\lab_volume_beaker.p3d";
-  //editorPreview = "\FCLA_Objects\Laboratory\pictures\Volume_Beaker.jpg";
+  editorPreview = "\FCLA_Objects\Laboratory\pictures\Volume_Beaker.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Laboratory";
   scope = 2;
@@ -96,7 +96,7 @@ class Cylinder_Beaker: lab_Items_base_F {
   displayName = "Probeta (cilíndrica)";
   icon = "iconObject_1x4";
   model = "\a3\structures_f_enoch\furniture\school_equipment\lab_cylinder_beaker.p3d";
-  //editorPreview = "\FCLA_Objects\Laboratory\pictures\Cylinder_Beaker.jpg";
+  editorPreview = "\FCLA_Objects\Laboratory\pictures\Cylinder_Beaker.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Laboratory";
   scope = 2;
@@ -118,7 +118,7 @@ class Triple_Beam: lab_Items_base_F {
   displayName = "Balanza (viga triple)";
   icon = "iconObject_1x2";
   model = "\a3\structures_f_enoch\furniture\school_equipment\lab_triplebeam.p3d";
-  //editorPreview = "\FCLA_Objects\Laboratory\pictures\Triple_Beam.jpg";
+  editorPreview = "\FCLA_Objects\Laboratory\pictures\Triple_Beam.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Laboratory";
   scope = 2;
@@ -140,7 +140,7 @@ class Bunsen: lab_Items_base_F {
   displayName = "Mechero Bunsen";
   icon = "iconObject_1x1";
   model = "\a3\structures_f_enoch\furniture\school_equipment\lab_bunsen.p3d";
-  //editorPreview = "\FCLA_Objects\Laboratory\pictures\Bunsen.jpg";
+  editorPreview = "\FCLA_Objects\Laboratory\pictures\Bunsen.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Laboratory";
   scope = 2;
@@ -162,7 +162,7 @@ class Microscope: lab_Items_base_F {
   displayName = "Microscopio";
   icon = "iconObject_1x2";
   model = "\a3\structures_f_enoch\furniture\school_equipment\lab_microscope.p3d";
-  //editorPreview = "\FCLA_Objects\Laboratory\pictures\Microscope.jpg";
+  editorPreview = "\FCLA_Objects\Laboratory\pictures\Microscope.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "FCLA_Laboratory";
   scope = 2;

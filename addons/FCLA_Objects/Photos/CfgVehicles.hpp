@@ -9,7 +9,7 @@
 
 class Land_Photoframe_02_Eddie_F: Land_Photoframe_02_F {
   displayName = "Marco con foto (retrato, Eddie)";
-  //editorPreview = "\FCLA_Objects\Photos\data\pictures\Land_Photoframe_02_Eddie_F.jpg";
+  editorPreview = "\FCLA_Objects\Photos\data\pictures\Land_Photoframe_02_Eddie_F.jpg";
   hiddenSelectionsTextures[] = {"a3\missions_f_aow\data\img\showcase_aow_eddie_co.paa", "a3\props_f_aow\items\decorative\data\photoframe_02_f_co.paa"};
   editorCategory = "EdCat_Things";
   editorSubcategory = "EdSubcat_Office";
@@ -23,7 +23,7 @@ class Land_Photoframe_02_Eddie_F: Land_Photoframe_02_F {
 
 class Custom_Land_Photos_V1_F: Land_Photos_V1_F {
   displayName = "Fotos (meme)";
-  //editorPreview = "\FCLA_Objects\Photos\data\pictures\Custom_Land_Photos_V1_F.jpg";
+  editorPreview = "\FCLA_Objects\Photos\data\pictures\Custom_Land_Photos_V1_F.jpg";
   hiddenSelectionsTextures[] = {"\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_1.paa"};
   editorCategory = "EdCat_Things";
   editorSubcategory = "EdSubcat_Office";

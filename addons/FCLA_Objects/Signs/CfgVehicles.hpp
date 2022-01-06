@@ -10,7 +10,7 @@
 class Land_Sign_WarningQuarantine_F: Land_Sign_WarningMilAreaSmall_F {
   author = "hozlucas28";
   displayName = "Señal (cuarentena)";
-  //editorPreview = "\FCLA_Objects\Signs\pictures\Land_Sign_WarningQuarantine_F.jpg";
+  editorPreview = "\FCLA_Objects\Signs\pictures\Land_Sign_WarningQuarantine_F.jpg";
   hiddenSelectionsTextures[] = {"\a3\missions_f_oldman\data\img\mosquito_sign_ca.paa"};
   editorCategory = "EdCat_Signs";
   editorSubcategory = "EdSubcat_RoadSigns";
@@ -50,7 +50,7 @@ class Land_SignWarning_01_CheckpointZone2_F: SignAd_Sponsor_F {
 class Land_SignWarning_01_CheckpointZone3_F: SignAd_Sponsor_F {
   author = "hozlucas28";
   displayName = "Señal (Punto de control, v4)";
-  //editorPreview = "\FCLA_Objects\Signs\pictures\Land_SignWarning_01_CheckpointZone3_F.jpg";
+  editorPreview = "\FCLA_Objects\Signs\pictures\Land_SignWarning_01_CheckpointZone3_F.jpg";
   hiddenSelectionsTextures[] = {"a3\missions_f_orange\data\img\orange_compositions\checkpoint\signspec_checkpoint_co.paa"};
   editorCategory = "EdCat_Signs";
   editorSubcategory = "EdSubcat_RoadSigns";

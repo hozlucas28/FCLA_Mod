@@ -10,7 +10,7 @@
 class Land_Heli_Transport_04_bench_black_proxy_F: Items_base_F {
   author = "hozlucas28";
   displayName = "Unidad de bancada - Taru (negra)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Land_Heli_Transport_04_bench_black_proxy_F.jpg";
+  editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Land_Heli_Transport_04_bench_black_proxy_F.jpg";
   icon = "iconObject_2x3";
   model = "\a3\air_f_heli\heli_transport_04\heli_transport_04_bench_black_proxy_f.p3d";
   editorCategory = "EdCat_Things";
@@ -32,7 +32,7 @@ class Land_Heli_Transport_04_bench_black_proxy_F: Items_base_F {
 class Land_Heli_Transport_04_bench_proxy_F: Items_base_F {
   author = "hozlucas28";
   displayName = "Unidad de bancada - Taru (arena)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Land_Heli_Transport_04_bench_proxy_F.jpg";
+  editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Land_Heli_Transport_04_bench_proxy_F.jpg";
   icon = "iconObject_2x3";
   model = "\a3\air_f_heli\heli_transport_04\pod_heli_transport_04_bench_f.p3d";
   editorCategory = "EdCat_Things";
@@ -57,7 +57,7 @@ class Land_Heli_Transport_04_bench_proxy_F: Items_base_F {
 class Custom_Land_WallSign_01_Chalkboard_F: Land_WallSign_01_chalkboard_F {
   author = "hozlucas28";
   displayName = "Señal de pared (pizarra, personalizada)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_WallSign_01_Chalkboard_F.jpg";
+  editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_WallSign_01_Chalkboard_F.jpg";
 	hiddenselections[] = {"camo1", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_WallSign_01_Chalkboard_F_Rules.paa", "\FCLA_Objects\Miscellaneous\data\Land_WallSign_01_Chalkboard_F_Rules.paa"};
   editorCategory = "EdCat_Signs";
@@ -110,7 +110,7 @@ class Custom_Land_WallSign_01_Chalkboard_F: Land_WallSign_01_chalkboard_F {
 class Custom_Land_InfoStand_V1_F: Land_InfoStand_V1_F {
   author = "hozlucas28";
   displayName = "Stand de información (2 patas, personalizado)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_InfoStand_V1_F.jpg";
+  editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_InfoStand_V1_F.jpg";
 	hiddenSelections[] = {"camo", "camo_background"};
   hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa", "a3\structures_f\civ\infoboards\data\infostands_ca.paa"};
   editorCategory = "EdCat_Signs";
@@ -145,7 +145,7 @@ class Custom_Land_InfoStand_V1_F: Land_InfoStand_V1_F {
 class Custom_Land_InfoStand_V2_F: Land_InfoStand_V2_F {
   author = "hozlucas28";
   displayName = "Stand de información (1 pata, personalizado)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_InfoStand_V2_F.jpg";
+  editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_InfoStand_V2_F.jpg";
 	hiddenSelections[] = {"camo", "camo_background"};
   hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa", "a3\structures_f\civ\infoboards\data\infostands_ca.paa"};
   editorCategory = "EdCat_Signs";
@@ -183,7 +183,7 @@ class Custom_Land_InfoStand_V2_F: Land_InfoStand_V2_F {
 class Land_Box_Science_F: ThingX {
 		author = "hozlucas28";
     displayName = "Caja de carga (anticuerpos de Atrox)";
-    //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Land_Box_Science_F.jpg";
+    editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Land_Box_Science_F.jpg";
     icon = "iconObject_1x1";
 		model = "\a3\weapons_f\ammoboxes\ammoveh_f.p3d";
 		destrType = "DestructBuilding";
@@ -257,7 +257,7 @@ class Land_Box_Science_F: ThingX {
 class Radar_Electronics: Items_base_F	{
   author = "hozlucas28";
   displayName = "Estación de radar (electrónica)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Electronics.jpg";
+  editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Electronics.jpg";
   icon = "iconObject_1x2";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_electronics.p3d";
   editorCategory = "EdCat_Structures_Enoch";
@@ -280,7 +280,7 @@ class Radar_Electronics: Items_base_F	{
 class Radar_Panel: radar_electronics {
   author = "hozlucas28";
   displayName = "Estación de radar (cuerpo)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Panel.jpg";
+  editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Panel.jpg";
   icon = "iconObject_5x2";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_panel.p3d";
   editorCategory = "EdCat_Structures_Enoch";
@@ -303,7 +303,7 @@ class Radar_Panel: radar_electronics {
 class Radar_Panel_Flat: radar_electronics {
   author = "hozlucas28";
   displayName = "Estación de radar (cuerpo, liso)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Panel_Flat.jpg";
+  editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Panel_Flat.jpg";
   icon = "iconObject_5x2";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_panel_flat.p3d";
   editorCategory = "EdCat_Structures_Enoch";
@@ -326,7 +326,7 @@ class Radar_Panel_Flat: radar_electronics {
 class Radar_Rack: radar_electronics {
   author = "hozlucas28";
   displayName = "Estación de radar (estante)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Rack.jpg";
+  editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Rack.jpg";
   icon = "iconObject_1x4";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_rack.p3d";
   editorCategory = "EdCat_Structures_Enoch";
@@ -349,7 +349,7 @@ class Radar_Rack: radar_electronics {
 class Radar_Rack_Quad: radar_electronics {
   author = "hozlucas28";
   displayName = "Estación de radar (estante, cuádruple)";
-  //editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Rack_Quad.jpg";
+  editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Rack_Quad.jpg";
   icon = "iconObject_10x1";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_rack_quad.p3d";
   editorCategory = "EdCat_Structures_Enoch";

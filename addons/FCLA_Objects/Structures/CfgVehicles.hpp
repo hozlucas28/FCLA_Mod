@@ -12,7 +12,7 @@ class DryDock_01_middle: Industry_base_F {
 	displayName = "Dique seco (mitad)";
 	icon = "iconObject_5x4";
 	model = "\A3\Structures_F_Exp\Industrial\Port\DryDock_01_middle_F.p3d";
-	//editorPreview = "\FCLA_Objects\Structures\pictures\DryDock_01_middle.jpg";
+	editorPreview = "\FCLA_Objects\Structures\pictures\DryDock_01_middle.jpg";
 	vehicleClass = "Structures_Industrial";
 	editorCategory = "EdCat_Structures_Tanoa";
 	editorSubcategory = "EdSubcat_Seaports";
@@ -37,7 +37,7 @@ class DryDock_01_end: Industry_base_F	{
 	displayName = "Dique seco (inicio/final)";
 	icon = "iconObject_1x1";
 	model = "\A3\Structures_F_Exp\Industrial\Port\DryDock_01_end_F.p3d";
-	//editorPreview = "\FCLA_Objects\Structures\pictures\DryDock_01_end.jpg";
+	editorPreview = "\FCLA_Objects\Structures\pictures\DryDock_01_end.jpg";
 	vehicleClass = "Structures_Industrial";
 	editorCategory = "EdCat_Structures_Tanoa";
 	editorSubcategory = "EdSubcat_Seaports";
@@ -65,7 +65,7 @@ class GH_MainBuilding_entry: House_F {
 	displayName = "Hotel fantasma (entrada)";
 	icon = "iconObject_1x1";
 	model = "\a3\structures_f_epc\dominants\ghosthotel\gh_mainbuilding_entry_f.p3d";
-	//editorPreview = "\FCLA_Objects\Structures\pictures\GH_MainBuilding_entry.jpg";
+	editorPreview = "\FCLA_Objects\Structures\pictures\GH_MainBuilding_entry.jpg";
 	nameSound = "obj_house";
 	destrType = "DestructNo";
 	vehicleClass = "Structures_Commercial";
@@ -92,7 +92,7 @@ class GH_MainBuilding_middle: House_F	{
 	displayName = "Hotel fantasma (centro)";
 	icon = "iconObject_1x1";
 	model = "\a3\structures_f_epc\dominants\ghosthotel\gh_mainbuilding_middle_f.p3d";
-	//editorPreview = "\FCLA_Objects\Structures\pictures\GH_MainBuilding_middle.jpg";
+	editorPreview = "\FCLA_Objects\Structures\pictures\GH_MainBuilding_middle.jpg";
 	nameSound = "obj_house";
 	destrType = "DestructNo";
 	vehicleClass = "Structures_Commercial";
@@ -119,7 +119,7 @@ class GH_MainBuilding_right: House_F {
 	displayName = "Hotel fantasma (derecha)";
 	icon = "iconObject_1x1";
 	model = "\a3\structures_f_epc\dominants\ghosthotel\gh_mainbuilding_right_f.p3d";
-	//editorPreview = "\FCLA_Objects\Structures\pictures\GH_MainBuilding_right.jpg";
+	editorPreview = "\FCLA_Objects\Structures\pictures\GH_MainBuilding_right.jpg";
 	nameSound = "obj_house";
 	destrType = "DestructNo";
 	vehicleClass = "Structures_Commercial";
@@ -146,7 +146,7 @@ class GH_MainBuilding_left: House_F {
 	displayName = "Hotel fantasma (izquierda)";
 	icon = "iconObject_1x1";
 	model = "\a3\structures_f_epc\dominants\ghosthotel\gh_mainbuilding_left_f.p3d";
-	//editorPreview = "\FCLA_Objects\Structures\pictures\GH_MainBuilding_left.jpg";
+	editorPreview = "\FCLA_Objects\Structures\pictures\GH_MainBuilding_left.jpg";
 	nameSound = "obj_house";
 	destrType = "DestructNo";
 	vehicleClass = "Structures_Commercial";
@@ -176,7 +176,7 @@ class Stadium_p1: SportsGrounds_base_F {
   displayName = "Estadio (parte 1)";
   icon = "iconObject_1x1";
   model = "\a3\structures_f_epc\dominants\stadium\stadium_p1_f.p3d";
-  //editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p1.jpg";
+  editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p1.jpg";
   destrType = "DestructNo";
   vehicleClass = "Structures_Sports";
   editorCategory = "EdCat_Structures_Altis";
@@ -201,7 +201,7 @@ class Stadium_p2: SportsGrounds_base_F {
   displayName = "Estadio (parte 2)";
   icon = "iconObject_1x1";
   model = "\a3\structures_f_epc\dominants\stadium\stadium_p2_f.p3d";
-  //editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p2.jpg";
+  editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p2.jpg";
   destrType = "DestructNo";
   vehicleClass = "Structures_Sports";
   editorCategory = "EdCat_Structures_Altis";
@@ -226,7 +226,7 @@ class Stadium_p3: SportsGrounds_base_F {
   displayName = "Estadio (parte 3)";
   icon = "iconObject_1x1";
   model = "\a3\structures_f_epc\dominants\stadium\stadium_p3_f.p3d";
-  //editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p3.jpg";
+  editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p3.jpg";
   destrType = "DestructNo";
   vehicleClass = "Structures_Sports";
   editorCategory = "EdCat_Structures_Altis";
@@ -251,7 +251,7 @@ class Stadium_p4: SportsGrounds_base_F {
   displayName = "Estadio (parte 4)";
   icon = "iconObject_1x1";
   model = "\a3\structures_f_epc\dominants\stadium\stadium_p4_f.p3d";
-  //editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p4.jpg";
+  editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p4.jpg";
   destrType = "DestructNo";
   vehicleClass = "Structures_Sports";
   editorCategory = "EdCat_Structures_Altis";
@@ -276,7 +276,7 @@ class Stadium_p5: SportsGrounds_base_F {
   displayName = "Estadio (parte 5)";
   icon = "iconObject_1x1";
   model = "\a3\structures_f_epc\dominants\stadium\stadium_p5_f.p3d";
-  //editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p5.jpg";
+  editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p5.jpg";
   destrType = "DestructNo";
   vehicleClass = "Structures_Sports";
   editorCategory = "EdCat_Structures_Altis";
@@ -301,7 +301,7 @@ class Stadium_p6: SportsGrounds_base_F {
   displayName = "Estadio (parte 6)";
   icon = "iconObject_1x1";
   model = "\a3\structures_f_epc\dominants\stadium\stadium_p6_f.p3d";
-  //editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p6.jpg";
+  editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p6.jpg";
   destrType = "DestructNo";
   vehicleClass = "Structures_Sports";
   editorCategory = "EdCat_Structures_Altis";
@@ -326,7 +326,7 @@ class Stadium_p7: SportsGrounds_base_F {
   displayName = "Estadio (parte 7)";
   icon = "iconObject_1x1";
   model = "\a3\structures_f_epc\dominants\stadium\stadium_p7_f.p3d";
-  //editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p7.jpg";
+  editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p7.jpg";
   destrType = "DestructNo";
   vehicleClass = "Structures_Sports";
   editorCategory = "EdCat_Structures_Altis";
@@ -351,7 +351,7 @@ class Stadium_p8: SportsGrounds_base_F {
   displayName = "Estadio (parte 8)";
   icon = "iconObject_1x1";
   model = "\a3\structures_f_epc\dominants\stadium\stadium_p8_f.p3d";
-  //editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p8.jpg";
+  editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p8.jpg";
   destrType = "DestructNo";
   vehicleClass = "Structures_Sports";
   editorCategory = "EdCat_Structures_Altis";
@@ -376,7 +376,7 @@ class Stadium_p9: SportsGrounds_base_F {
   displayName = "Estadio (parte 9)";
   icon = "iconObject_1x1";
   model = "\a3\structures_f_epc\dominants\stadium\stadium_p9_f.p3d";
-  //editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p9.jpg";
+  editorPreview = "\FCLA_Objects\Structures\pictures\Stadium_p9.jpg";
   destrType = "DestructNo";
   vehicleClass = "Structures_Sports";
   editorCategory = "EdCat_Structures_Altis";
@@ -405,7 +405,7 @@ class Airport_02_hangar_right: DryDock_01_end	{
 	displayName = "$STR_A3_CfgVehicles_Land_Airport_02_hangar_right_F0";
 	icon = "iconObject_2x3";
 	model = "\a3\structures_f_exp\infrastructure\airports\airport_02_hangar_right_f.p3d";
-	//editorPreview = "\FCLA_Objects\Structures\pictures\Airport_02_hangar_right.jpg";
+	editorPreview = "\FCLA_Objects\Structures\pictures\Airport_02_hangar_right.jpg";
 	actionEnd1 = "OpenDoor_1";
 	actionEnd2 = "OpenDoor_2";
 	actionBegin1 = "OpenDoor_1";
@@ -529,7 +529,7 @@ class Airport_02_hangar_left: DryDock_01_end {
 	displayName = "$STR_A3_CfgVehicles_Land_Airport_02_hangar_left_F0";
 	icon = "iconObject_2x3";
 	model = "\a3\structures_f_exp\infrastructure\airports\airport_02_hangar_left_f.p3d";
-	//editorPreview = "\FCLA_Objects\Structures\pictures\Airport_02_hangar_left.jpg";
+	editorPreview = "\FCLA_Objects\Structures\pictures\Airport_02_hangar_left.jpg";
   actionEnd1 = "OpenDoor_1";
 	actionEnd2 = "OpenDoor_2";
 	actionEnd3 = "OpenDoor_3";
