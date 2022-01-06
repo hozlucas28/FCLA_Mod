@@ -9,24 +9,20 @@
 
 class Satellite_Antenna_RF_3080: ThingX {
   author = "hozlucas28";
-	displayName = "Antena satélite (RF 3080)";
+	displayName = "RF 3080 (SATCOM)";
   icon = "iconObject_5x4";
-  model = "\FCLA_Objects\Electronics\data\Satellite_Antenna_RF_3080\Model.p3d";
+  model = "\FCLA_Objects\Electronics\data\Satellite_Antenna_RF_3080\Satellite_Antenna_RF_3080.p3d";
   //editorPreview = "\FCLA_Objects\Electronics\data\pictures\Satellite_Antenna_RF_3080.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "EdSubcat_Electronics";
   ACE_Dragging_canDrag = 1;
   ACE_Dragging_cancarry = 1;
-  ACE_Dragging_dragDirection = 0;
-  ACE_Dragging_carryDirection = 0;
-  ACE_Dragging_dragPosition[] = {0, 1.2, 0};
-  ACE_Dragging_carryPosition[] = {0, 1.2, 0};
+  ACE_Dragging_dragDirection = 135;
+  ACE_Dragging_carryDirection = 135;
+  ACE_Dragging_dragPosition[] = {0, 1, 0};
+  ACE_Dragging_carryPosition[] = {0, 1, 0.5};
   scope = 2;
   scopeCurator = 2;
-
-  class EventHandlers {
-    init = "systemChat str _this;";
-  };
 };
 
 

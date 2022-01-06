@@ -17,6 +17,18 @@ class CfgPatches {
 
 
 /********************************************************************************|
+|                                    FUNCIONES                                   |
+|********************************************************************************/
+
+class CfgFunctions {
+	class FCLA_Objects {
+		#include "\FCLA_Objects\Electronics\CfgFunction.hpp"
+	};
+};
+
+
+
+/********************************************************************************|
 |                              EDITOR - CATEGORÍAS                               |
 |********************************************************************************/
 
@@ -173,6 +185,10 @@ class CfgVehicles {
 |********************************************************************************/
 
 class Extended_InitPost_EventHandlers {
+	class Satellite_Antenna_RF_3080 {
+		init = "[_this select 0] spawn FCLA_Objects_fnc_initSatelliteAntenna;";
+	};
+
 	class Custom_Leaflet_05_F {
 		init = "['init', [_this select 0, (getObjectTextures (_this select 0)) select 0, '']] call BIS_fnc_initLeaflet;";
 	};

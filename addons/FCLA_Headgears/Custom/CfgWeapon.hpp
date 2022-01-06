@@ -13,7 +13,7 @@ class H_PilotHelmetFighter_Advanced: H_PilotHelmetFighter_B {
   hiddenSelections[] = {};
   hiddenSelectionsTextures[] = {};
   picture = "\FCLA_Headgears\Custom\data\pictures\H_PilotHelmetFighter_Advanced.paa";
-  model = "\FCLA_Headgears\Custom\data\H_PilotHelmetFighter_Advanced\Model.p3d";
+  model = "\FCLA_Headgears\Custom\data\H_PilotHelmetFighter_Advanced\H_PilotHelmetFighter_Advanced.p3d";
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;

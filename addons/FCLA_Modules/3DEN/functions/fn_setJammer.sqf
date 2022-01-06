@@ -76,17 +76,19 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
   };
 
   {
-    if (!(_x in _entitiesAffected)) exitWith {};
-    _x setVariable ["tf_sendingDistanceMultiplicator", _normalRadioRange, true];
-    _x setVariable ["tf_receivingDistanceMultiplicator", _normalRadioRange, true];
-    _entitiesAffected = _entitiesAffected - [_x];
+    if (_x in _entitiesAffected) then {
+      _x setVariable ["tf_sendingDistanceMultiplicator", _normalRadioRange, true];
+      _x setVariable ["tf_receivingDistanceMultiplicator", _normalRadioRange, true];
+      _entitiesAffected = _entitiesAffected - [_x];
+    };
   } forEach _unitsNotInArea;
 
   if (_affectVehicles) then {
     {
-      if (!(_x in _entitiesAffected)) exitWith {};
-      _x setVariable ["tf_range", _normalRadioRange, true];
-      _entitiesAffected = _entitiesAffected - [_x];
+      if (_x in _entitiesAffected) then {
+        _x setVariable ["tf_range", _normalRadioRange, true];
+        _entitiesAffected = _entitiesAffected - [_x];
+      };
     } forEach _vehiclesNotInArea;
   };
   _jammerSource setVariable ["FCLA_Entities_Affected", _entitiesAffected, true];
