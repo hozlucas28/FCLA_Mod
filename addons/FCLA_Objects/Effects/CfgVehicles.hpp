@@ -3,6 +3,10 @@
 |                           VEHÍCULOS - "EFECTOS"                           |
 |***************************************************************************/
 
+
+
+/* ------------------------------ PARTÍCULA ------------------------------- */
+
 class Particle_Base_F: Thing {
   icon = "iconObject_circle";
   simulation = "Fire";
@@ -11,7 +15,7 @@ class Particle_Base_F: Thing {
 
 
 
-/* --------------------------------- HUMO --------------------------------- */
+/* --------------------------------- HUMOS ---------------------------------- */
 
 class Small_Smoke: Particle_Base_F {
   displayName = "Humo (pequeño)";
@@ -77,7 +81,7 @@ class Big_Smoke: Particle_Base_F {
 
 
 
-/* --------------------------------- FUEGO --------------------------------- */
+/* --------------------------------- FUEGOS --------------------------------- */
 
 class Small_Fire: Particle_Base_F	{
   displayName = "Fuego (pequeño)";

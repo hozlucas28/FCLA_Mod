@@ -3,6 +3,113 @@
 |                           VEHÍCULOS - "GALERÍA"                           |
 |***************************************************************************/
 
+class Custom_GalleryFrame_01_large_portrait_F: GalleryFrame_01_large_portrait_F	{
+  author = "hozlucas28";
+	displayName = "Marco de galerí­a (grande, retrato personalizado)";
+	//editorPreview = "\FCLA_Objects\Gallery\pictures\Custom_GalleryFrame_01_large_portrait_F.jpg";
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3"};
+	hiddenSelectionsTextures[] = {"a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_portrait_picture_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_portrait_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_portrait_f_co.paa"};
+  editorCategory = "EdCat_Furniture";
+  editorSubcategory = "EdSubcat_Gallery";
+	scope = 2;
+  scopeCurator = 2;
+
+	class Attributes {
+    class FCLA_Switch_Texture {
+      displayName = "Pintura";
+      control = "Combo";
+    	property = "FCLA_Switch_Texture";
+      typeName = "STRING";
+    	expression = "_this setObjectTextureGlobal [0, _value];";
+      defaultValue = """\a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_portrait_picture_f_co.paa""";
+
+    	class values {
+        class Texture_1 {
+        	name = "N° 1";
+        	value = "\a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_portrait_picture_f_co.paa";
+        };
+
+        class Texture_2 {
+        	name = "N° 2";
+        	value = "\a3\missions_f_aow\data\img\artwork\portrait\showcase_aow_picture_08_co.paa";
+        };
+
+        class Texture_3 {
+        	name = "N° 3";
+        	value = "\a3\missions_f_aow\data\img\artwork\portrait\showcase_aow_picture_54_co.paa";
+        };
+
+        class Texture_4 {
+        	name = "N° 4";
+        	value = "\a3\missions_f_aow\data\img\artwork\portrait\showcase_aow_picture_55_co.paa";
+        };
+			};
+		};
+	};
+};
+
+
+class Custom_GalleryFrame_02_square_F: GalleryFrame_02_square_F	{
+  author = "hozlucas28";
+	displayName = "Marco de galerí­a (mediano, cuadrado personalizado)";
+	//editorPreview = "\FCLA_Objects\Gallery\pictures\Custom_GalleryFrame_02_square_F.jpg";
+  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3"};
+	hiddenSelectionsTextures[] = {"a3\Missions_F_AoW\Data\Img\Artwork\Masters\lost_masterwork_04_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_02_square_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_02_square_f_co.paa"};
+  editorCategory = "EdCat_Furniture";
+  editorSubcategory = "EdSubcat_Gallery";
+	scope = 2;
+  scopeCurator = 2;
+
+	class Attributes {
+    class FCLA_Switch_Texture {
+      displayName = "Pintura";
+      control = "Combo";
+    	property = "FCLA_Switch_Texture";
+      typeName = "STRING";
+    	expression = "_this setObjectTextureGlobal [0, _value];";
+      defaultValue = """\a3\Missions_F_AoW\Data\Img\Artwork\Masters\lost_masterwork_04_co.paa""";
+
+    	class values {
+        class Texture_1 {
+        	name = "N° 1";
+        	value = "\a3\Missions_F_AoW\Data\Img\Artwork\Masters\lost_masterwork_04_co.paa";
+        };
+
+        class Texture_2 {
+        	name = "N° 2";
+        	value = "\a3\props_f_aow\civilian\gallery\data\galleryframe_02_square_picture_co.paa";
+        };
+
+        class Texture_3 {
+        	name = "N° 3";
+        	value = "\a3\missions_f_aow\data\img\artwork\square\showcase_aow_picture_29_co.paa";
+        };
+
+        class Texture_4 {
+        	name = "N° 4";
+        	value = "\a3\missions_f_aow\data\img\artwork\square\showcase_aow_picture_43_co.paa";
+        };
+
+        class Texture_5 {
+        	name = "N° 5";
+        	value = "\a3\missions_f_aow\data\img\artwork\square\showcase_aow_picture_48_co.paa";
+        };
+
+        class Texture_6 {
+        	name = "N° 6";
+        	value = "\a3\missions_f_aow\data\img\artwork\square\showcase_aow_picture_51_co.paa";
+        };
+
+        class Texture_7 {
+        	name = "N° 7";
+        	value = "\a3\missions_f_aow\data\img\artwork\square\showcase_aow_picture_119_co.paa";
+        };
+			};
+		};
+	};
+};
+
+
 class Custom_GalleryFrame_02_F: GalleryFrame_02_F	{
   author = "hozlucas28";
 	displayName = "Marco de galerí­a (mediano, personalizado)";
@@ -528,113 +635,6 @@ class Custom_GalleryFrame_02_large_rectangle_F: GalleryFrame_02_large_rectangle_
         class Texture_48 {
         	name = "N° 48";
         	value = "\a3\missions_f_aow\data\img\artwork\masters\lost_masterwork_05_co.paa";
-        };
-			};
-		};
-	};
-};
-
-
-class Custom_GalleryFrame_02_square_F: GalleryFrame_02_square_F	{
-  author = "hozlucas28";
-	displayName = "Marco de galerí­a (mediano, cuadrado personalizado)";
-	//editorPreview = "\FCLA_Objects\Gallery\pictures\Custom_GalleryFrame_02_square_F.jpg";
-  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3"};
-	hiddenSelectionsTextures[] = {"a3\Missions_F_AoW\Data\Img\Artwork\Masters\lost_masterwork_04_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_02_square_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_02_square_f_co.paa"};
-  editorCategory = "EdCat_Furniture";
-  editorSubcategory = "EdSubcat_Gallery";
-	scope = 2;
-  scopeCurator = 2;
-
-	class Attributes {
-    class FCLA_Switch_Texture {
-      displayName = "Pintura";
-      control = "Combo";
-    	property = "FCLA_Switch_Texture";
-      typeName = "STRING";
-    	expression = "_this setObjectTextureGlobal [0, _value];";
-      defaultValue = """\a3\Missions_F_AoW\Data\Img\Artwork\Masters\lost_masterwork_04_co.paa""";
-
-    	class values {
-        class Texture_1 {
-        	name = "N° 1";
-        	value = "\a3\Missions_F_AoW\Data\Img\Artwork\Masters\lost_masterwork_04_co.paa";
-        };
-
-        class Texture_2 {
-        	name = "N° 2";
-        	value = "\a3\props_f_aow\civilian\gallery\data\galleryframe_02_square_picture_co.paa";
-        };
-
-        class Texture_3 {
-        	name = "N° 3";
-        	value = "\a3\missions_f_aow\data\img\artwork\square\showcase_aow_picture_29_co.paa";
-        };
-
-        class Texture_4 {
-        	name = "N° 4";
-        	value = "\a3\missions_f_aow\data\img\artwork\square\showcase_aow_picture_43_co.paa";
-        };
-
-        class Texture_5 {
-        	name = "N° 5";
-        	value = "\a3\missions_f_aow\data\img\artwork\square\showcase_aow_picture_48_co.paa";
-        };
-
-        class Texture_6 {
-        	name = "N° 6";
-        	value = "\a3\missions_f_aow\data\img\artwork\square\showcase_aow_picture_51_co.paa";
-        };
-
-        class Texture_7 {
-        	name = "N° 7";
-        	value = "\a3\missions_f_aow\data\img\artwork\square\showcase_aow_picture_119_co.paa";
-        };
-			};
-		};
-	};
-};
-
-
-class Custom_GalleryFrame_01_large_portrait_F: GalleryFrame_01_large_portrait_F	{
-  author = "hozlucas28";
-	displayName = "Marco de galerí­a (grande, retrato personalizado)";
-	//editorPreview = "\FCLA_Objects\Gallery\pictures\Custom_GalleryFrame_01_large_portrait_F.jpg";
-  hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3"};
-	hiddenSelectionsTextures[] = {"a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_portrait_picture_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_portrait_f_co.paa", "a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_portrait_f_co.paa"};
-  editorCategory = "EdCat_Furniture";
-  editorSubcategory = "EdSubcat_Gallery";
-	scope = 2;
-  scopeCurator = 2;
-
-	class Attributes {
-    class FCLA_Switch_Texture {
-      displayName = "Pintura";
-      control = "Combo";
-    	property = "FCLA_Switch_Texture";
-      typeName = "STRING";
-    	expression = "_this setObjectTextureGlobal [0, _value];";
-      defaultValue = """\a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_portrait_picture_f_co.paa""";
-
-    	class values {
-        class Texture_1 {
-        	name = "N° 1";
-        	value = "\a3\props_f_aow\civilian\gallery\data\galleryframe_01_large_portrait_picture_f_co.paa";
-        };
-
-        class Texture_2 {
-        	name = "N° 2";
-        	value = "\a3\missions_f_aow\data\img\artwork\portrait\showcase_aow_picture_08_co.paa";
-        };
-
-        class Texture_3 {
-        	name = "N° 3";
-        	value = "\a3\missions_f_aow\data\img\artwork\portrait\showcase_aow_picture_54_co.paa";
-        };
-
-        class Texture_4 {
-        	name = "N° 4";
-        	value = "\a3\missions_f_aow\data\img\artwork\portrait\showcase_aow_picture_55_co.paa";
         };
 			};
 		};

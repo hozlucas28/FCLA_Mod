@@ -5,6 +5,96 @@
 
 
 
+/* --------------------------- ANTENA SATÉLITAL ---------------------------- */
+
+class Satellite_Antenna_RF_3080: ThingX {
+  author = "hozlucas28";
+	displayName = "Antena satélite (RF 3080)";
+  icon = "iconObject_5x4";
+  model = "\FCLA_Objects\Electronics\data\Satellite_Antenna_RF_3080\Model.p3d";
+  //editorPreview = "\FCLA_Objects\Electronics\data\pictures\Satellite_Antenna_RF_3080.jpg";
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "EdSubcat_Electronics";
+  ACE_Dragging_canDrag = 1;
+  ACE_Dragging_cancarry = 1;
+  ACE_Dragging_dragDirection = 0;
+  ACE_Dragging_carryDirection = 0;
+  ACE_Dragging_dragPosition[] = {0, 1.2, 0};
+  ACE_Dragging_carryPosition[] = {0, 1.2, 0};
+  scope = 2;
+  scopeCurator = 2;
+
+  class EventHandlers {
+    init = "systemChat str _this;";
+  };
+};
+
+
+
+/* -------------------------------- MONITOR -------------------------------- */
+
+class Land_Custom_PCSet_01_screen_F: Land_PCSet_01_screen_F	{
+  author = "hozlucas28";
+	displayName = "Equipo de PC (pantalla, personalizada)";
+	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_PCSet_01_screen_F.jpg";
+  hiddenSelections[] = {"Camo_1"};
+	hiddenSelectionsTextures[] = {"\FCLA_Objects\Electronics\data\Land_PCSet_01_screen_F_Desktop_CIA.paa"};
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "EdSubcat_Electronics";
+	scope = 2;
+  scopeCurator = 2;
+
+	class Attributes {
+    class FCLA_Switch_Texture {
+      displayName = "Pantalla";
+      control = "Combo";
+    	property = "FCLA_Switch_Texture";
+      typeName = "STRING";
+    	expression = "_this setObjectTextureGlobal [0, _value];";
+      defaultValue = """\FCLA_Objects\Electronics\data\Land_PCSet_01_screen_F_Desktop_CIA.paa""";
+
+    	class values {
+        class Texture_1 {
+        	name = "Escritorio (CIA)";
+        	value = "\FCLA_Objects\Electronics\data\Land_PCSet_01_screen_F_Desktop_CIA.paa";
+        };
+
+        class Texture_2 {
+        	name = "Escritorio (FCLA)";
+        	value = "\FCLA_Objects\Electronics\data\Land_PCSet_01_screen_F_Desktop_FCLA.paa";
+        };
+
+        class Texture_3 {
+        	name = "Programando";
+        	value = "\a3\data_f_exp_b\data\fm_learn_combataudio_ca.paa";
+        };
+
+        class Texture_4 {
+        	name = "Reiniciando";
+        	value = "\a3\missions_f_oldman\data\img\screens\csatntbreboot50_co.paa";
+        };
+
+        class Texture_5 {
+        	name = "Actualizando";
+        	value = "\a3\missions_f_orange\data\img\showcase_lawsofwar\monitor_vr_updating_na_co.paa";
+        };
+
+        class Texture_6 {
+        	name = "Torreta autónoma (activada)";
+        	value = "\a3\missions_f_oldman\data\img\screens\csatntbturretsonline_co.paa";
+        };
+
+        class Texture_7 {
+        	name = "Torreta autónoma (desactivada)";
+        	value = "\a3\missions_f_oldman\data\img\screens\csatntbturretsoffline_co.paa";
+        };
+			};
+		};
+	};
+};
+
+
+
 /* ------------------------- DISPOSITIVO DE HACKEO ------------------------- */
 
 class Land_Hacking_Device_Black_F: Land_Laptop_03_black_F	{
@@ -61,6 +151,80 @@ class Land_Hacking_Device_Black_F: Land_Laptop_03_black_F	{
         class Texture_7 {
         	name = "Quetzal";
         	value = "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Quetzal.paa";
+        };
+			};
+		};
+	};
+};
+
+
+
+/* ------------------------------- PORTÁTIL -------------------------------- */
+
+class Land_Custom_Laptop_unfolded_F: Land_Laptop_unfolded_F {
+  author = "hozlucas28";
+	displayName = "Ordenador portátil (abierto, personalizado)";
+	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_unfolded_F.jpg";
+  hiddenSelections[] = {"camo"};
+	hiddenSelectionsTextures[] = {"\a3\missions_f_oldman\data\img\screens\syndiaktlaptopdesktop_co.paa"};
+  editorCategory = "EdCat_Things";
+  editorSubcategory = "EdSubcat_Electronics";
+	scope = 2;
+  scopeCurator = 2;
+
+  class Attributes {
+    class FCLA_Switch_Texture {
+      displayName = "Pantalla";
+      control = "Combo";
+    	property = "FCLA_Switch_Texture";
+      typeName = "STRING";
+    	expression = "_this setObjectTextureGlobal [0, _value];";
+      defaultValue = """\a3\missions_f_oldman\data\img\screens\syndiaktlaptopdesktop_co.paa""";
+
+    	class values {
+        class Texture_1 {
+        	name = "Escritorio (v1)";
+        	value = "\a3\missions_f_oldman\data\img\screens\syndiaktlaptopdesktop_co.paa";
+        };
+
+        class Texture_2 {
+        	name = "Escritorio (v2)";
+        	value = "\a3\missions_f_oldman\data\img\screens\oldmanntbdesktop_co.paa";
+        };
+
+        class Texture_3 {
+        	name = "Escritorio (CIA)";
+        	value = "\FCLA_Objects\Electronics\data\Laptop_unfolded_F_Desktop_CIA.paa";
+        };
+
+        class Texture_4 {
+        	name = "Escritorio (FCLA)";
+        	value = "\FCLA_Objects\Electronics\data\Laptop_unfolded_F_Desktop_FCLA.paa";
+        };
+
+        class Texture_5 {
+        	name = "AAN (v1)";
+        	value = "\a3\missions_f_orange\data\img\orange_compositions\c8\aan_co.paa";
+        };
+
+        class Texture_6 {
+        	name = "AAN (v2)";
+        	value = "\a3\missions_f_orange\data\img\faction_idap\laptop_campaign_co.paa";
+        };
+
+        class Texture_7 {
+        	name = "Dianas (v1)";
+        	value = "\a3\missions_f_bootcamp\data\img\laptop\electronics_screens_laptop_targetactivated_co.paa";
+        };
+
+        class Texture_8 {
+        	name = "Dianas (v2)";
+        	value = "\a3\missions_f_bootcamp\data\img\laptop\electronics_screens_laptop_targeterror_co.paa";
+        };
+
+        class Texture_9 {
+        	name = "Dianas (v3)";
+        	value = "\a3\missions_f_bootcamp\data\img\laptop\electronics_screens_laptop_targetdeactivated_co.paa";
         };
 			};
 		};
@@ -277,144 +441,6 @@ class Land_Custom_Laptop_03_sand_F: Land_Laptop_03_sand_F	{
         class Texture_9 {
         	name = "Rota";
         	value = "\a3\missions_f_exp\data\img\exp_m01_monitor_ca.paa";
-        };
-			};
-		};
-	};
-};
-
-
-
-/* ------------------------------ PORTÁTILES ------------------------------- */
-
-class Land_Custom_Laptop_unfolded_F: Land_Laptop_unfolded_F {
-  author = "hozlucas28";
-	displayName = "Ordenador portátil (abierto, personalizado)";
-	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_unfolded_F.jpg";
-  hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\a3\missions_f_oldman\data\img\screens\syndiaktlaptopdesktop_co.paa"};
-  editorCategory = "EdCat_Things";
-  editorSubcategory = "EdSubcat_Electronics";
-	scope = 2;
-  scopeCurator = 2;
-
-  class Attributes {
-    class FCLA_Switch_Texture {
-      displayName = "Pantalla";
-      control = "Combo";
-    	property = "FCLA_Switch_Texture";
-      typeName = "STRING";
-    	expression = "_this setObjectTextureGlobal [0, _value];";
-      defaultValue = """\a3\missions_f_oldman\data\img\screens\syndiaktlaptopdesktop_co.paa""";
-
-    	class values {
-        class Texture_1 {
-        	name = "Escritorio (v1)";
-        	value = "\a3\missions_f_oldman\data\img\screens\syndiaktlaptopdesktop_co.paa";
-        };
-
-        class Texture_2 {
-        	name = "Escritorio (v2)";
-        	value = "\a3\missions_f_oldman\data\img\screens\oldmanntbdesktop_co.paa";
-        };
-
-        class Texture_3 {
-        	name = "Escritorio (CIA)";
-        	value = "\FCLA_Objects\Electronics\data\Laptop_unfolded_F_Desktop_CIA.paa";
-        };
-
-        class Texture_4 {
-        	name = "Escritorio (FCLA)";
-        	value = "\FCLA_Objects\Electronics\data\Laptop_unfolded_F_Desktop_FCLA.paa";
-        };
-
-        class Texture_5 {
-        	name = "AAN (v1)";
-        	value = "\a3\missions_f_orange\data\img\orange_compositions\c8\aan_co.paa";
-        };
-
-        class Texture_6 {
-        	name = "AAN (v2)";
-        	value = "\a3\missions_f_orange\data\img\faction_idap\laptop_campaign_co.paa";
-        };
-
-        class Texture_7 {
-        	name = "Dianas (v1)";
-        	value = "\a3\missions_f_bootcamp\data\img\laptop\electronics_screens_laptop_targetactivated_co.paa";
-        };
-
-        class Texture_8 {
-        	name = "Dianas (v2)";
-        	value = "\a3\missions_f_bootcamp\data\img\laptop\electronics_screens_laptop_targeterror_co.paa";
-        };
-
-        class Texture_9 {
-        	name = "Dianas (v3)";
-        	value = "\a3\missions_f_bootcamp\data\img\laptop\electronics_screens_laptop_targetdeactivated_co.paa";
-        };
-			};
-		};
-	};
-};
-
-
-
-/* ------------------------------- MONITORES ------------------------------- */
-
-class Land_Custom_PCSet_01_screen_F: Land_PCSet_01_screen_F	{
-  author = "hozlucas28";
-	displayName = "Equipo de PC (pantalla, personalizada)";
-	//editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_PCSet_01_screen_F.jpg";
-  hiddenSelections[] = {"Camo_1"};
-	hiddenSelectionsTextures[] = {"\FCLA_Objects\Electronics\data\Land_PCSet_01_screen_F_Desktop_CIA.paa"};
-  editorCategory = "EdCat_Things";
-  editorSubcategory = "EdSubcat_Electronics";
-	scope = 2;
-  scopeCurator = 2;
-
-	class Attributes {
-    class FCLA_Switch_Texture {
-      displayName = "Pantalla";
-      control = "Combo";
-    	property = "FCLA_Switch_Texture";
-      typeName = "STRING";
-    	expression = "_this setObjectTextureGlobal [0, _value];";
-      defaultValue = """\FCLA_Objects\Electronics\data\Land_PCSet_01_screen_F_Desktop_CIA.paa""";
-
-    	class values {
-        class Texture_1 {
-        	name = "Escritorio (CIA)";
-        	value = "\FCLA_Objects\Electronics\data\Land_PCSet_01_screen_F_Desktop_CIA.paa";
-        };
-
-        class Texture_2 {
-        	name = "Escritorio (FCLA)";
-        	value = "\FCLA_Objects\Electronics\data\Land_PCSet_01_screen_F_Desktop_FCLA.paa";
-        };
-
-        class Texture_3 {
-        	name = "Programando";
-        	value = "\a3\data_f_exp_b\data\fm_learn_combataudio_ca.paa";
-        };
-
-        class Texture_4 {
-        	name = "Reiniciando";
-        	value = "\a3\missions_f_oldman\data\img\screens\csatntbreboot50_co.paa";
-        };
-
-        class Texture_5 {
-        	name = "Actualizando";
-        	value = "\a3\missions_f_orange\data\img\showcase_lawsofwar\monitor_vr_updating_na_co.paa";
-        };
-
-        class Texture_6 {
-        	name = "Torreta autónoma (activada)";
-        	value = "\a3\missions_f_oldman\data\img\screens\csatntbturretsonline_co.paa";
-        };
-
-        class Texture_7 {
-        	name = "Torreta autónoma (desactivada)";
-        	value = "\a3\missions_f_oldman\data\img\screens\csatntbturretsoffline_co.paa";
         };
 			};
 		};

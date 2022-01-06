@@ -5,7 +5,7 @@
 
 
 
-/* -------------------------- ZONA DE CUARENTENA --------------------------- */
+/* ------------------------------ CUARENTENA ------------------------------- */
 
 class Land_Sign_WarningQuarantine_F: Land_Sign_WarningMilAreaSmall_F {
   author = "hozlucas28";

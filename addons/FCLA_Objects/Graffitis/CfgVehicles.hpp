@@ -5,6 +5,21 @@
 
 
 
+/* ----------------------------------- X ----------------------------------- */
+
+class Cross_UserTexture1m_F: UserTexture1m_F {
+  author = "hozlucas28";
+  displayName = "Grafiti (X)";
+  //editorPreview = "\FCLA_Objects\Graffitis\data\pictures\Cross_UserTexture1m_F.jpg";
+  hiddenSelectionsTextures[] = {"\FCLA_Objects\Graffitis\data\UserTexture1m_F_Cross.paa"};
+  editorCategory = "EdCat_Signs";
+  editorSubcategory = "EdSubcat_BlankSigns";
+  scope = 2;
+  scopeCurator = 2;
+};
+
+
+
 /* ------------------------------- PELOTONES ------------------------------- */
 
 class Custom_UserTexture1m_F: UserTexture1m_F {
@@ -149,19 +164,4 @@ class Custom_UserTexture1m_F: UserTexture1m_F {
 			};
 		};
 	};
-};
-
-
-
-/* --------------------------------- OTROS --------------------------------- */
-
-class Cross_UserTexture1m_F: UserTexture1m_F {
-  author = "hozlucas28";
-  displayName = "Cruz";
-  //editorPreview = "\FCLA_Objects\Graffitis\data\pictures\Cross_UserTexture1m_F.jpg";
-  hiddenSelectionsTextures[] = {"\FCLA_Objects\Graffitis\data\UserTexture1m_F_Cross.paa"};
-  editorCategory = "EdCat_Signs";
-  editorSubcategory = "EdSubcat_BlankSigns";
-  scope = 2;
-  scopeCurator = 2;
 };

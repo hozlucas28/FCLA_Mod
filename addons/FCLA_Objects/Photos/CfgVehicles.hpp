@@ -5,7 +5,7 @@
 
 
 
-/* -------------------------------- MARCOS --------------------------------- */
+/* --------------------------------- MARCO --------------------------------- */
 
 class Land_Photoframe_02_Eddie_F: Land_Photoframe_02_F {
   displayName = "Marco con foto (retrato, Eddie)";
@@ -19,7 +19,7 @@ class Land_Photoframe_02_Eddie_F: Land_Photoframe_02_F {
 
 
 
-/* --------------------------------- FOTOS --------------------------------- */
+/* --------------------------------- FOTO ---------------------------------- */
 
 class Custom_Land_Photos_V1_F: Land_Photos_V1_F {
   displayName = "Fotos (meme)";
