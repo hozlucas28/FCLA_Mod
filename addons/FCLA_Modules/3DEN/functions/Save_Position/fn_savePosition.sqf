@@ -16,6 +16,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
+_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
@@ -64,3 +65,8 @@ addMissionEventHandler ["HandleDisconnect", {
     missionNamespace setVariable ["FCLA_Players_Saved_Position_Data", _playersSavedPositionData];
   };
 }, [_savePosAndDirState, _saveLoadoutState, _saveVehicleState]];
+
+
+//Agregar a objetos editables.
+_curatorLogic = getAssignedCuratorLogic _assignedCurator;
+_curatorLogic addCuratorEditableObjects [[_module], false];

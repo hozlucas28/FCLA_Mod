@@ -14,6 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
+_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
@@ -48,6 +49,11 @@ _soundSource = if ((_findedEntity > -1) && (_numberOfCompatibleSynchronizedObjec
     [_soundSource, _soundClass, _soundDuration, _maxDistance, _deleteSource] call FCLA_Common_fnc_globalSay3D;
   };
 }, [_soundSource, _loopSound, _soundClass, _maxDistance, _soundDuration], 0.1] call CBA_fnc_waitAndExecute;
+
+
+//Agregar a objetos editables.
+_curatorLogic = getAssignedCuratorLogic _assignedCurator;
+_curatorLogic addCuratorEditableObjects [[_module], false];
 
 
 //Eliminar módulo.

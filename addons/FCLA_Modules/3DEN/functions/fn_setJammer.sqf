@@ -14,6 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
+_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
@@ -38,7 +39,7 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
 
 //Generar jammer.
 [{
-  _args params ["_module", "_moduleArea", "_jammerSource", "_jammerMaxRad", "_jammerQuarterOfMaxRad", "_affectVehicles"];
+  _args params ["_module", "_moduleArea", "_jammerSource", "_jammerMaxRad", "_jammerQuarterOfMaxRad", "_canBeDisabled", "_affectVehicles"];
   _areNotAlive = (!alive _module) || (!alive _jammerSource);
   _isDesactivated = _jammerSource getVariable ["FCLA_Hacked", false];
   _unitsInArea = allUnits select {_x inArea [_jammerSource, _moduleArea select 0, _moduleArea select 1, _moduleArea select 2, false, _moduleArea select 4]};
@@ -53,6 +54,7 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
       _x setVariable ["tf_sendingDistanceMultiplicator", _normalRadioRange, true];
       _x setVariable ["tf_receivingDistanceMultiplicator", _normalRadioRange, true];
     } forEach (_unitsInArea + _unitsNotInArea);
+    if ((!alive _module) && (_canBeDisabled) && (_module != _jammerSource)) then {[_jammerSource] remoteExec ["removeAllActions", 0, true];};
     if (_affectVehicles) then {{_x setVariable ["tf_range", _normalRadioRange, true];} forEach (_vehiclesInArea + _vehiclesNotInArea);};
     [_handle] call CBA_fnc_removePerFrameHandler;
   };
@@ -92,7 +94,12 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
     } forEach _vehiclesNotInArea;
   };
   _jammerSource setVariable ["FCLA_Entities_Affected", _entitiesAffected, true];
-}, 0.5, [_module, _moduleArea, _jammerSource, _jammerMaxRad, (25 * _jammerMaxRad) / 100, _affectVehicles]] call CBA_fnc_addPerFrameHandler;
+}, 0.5, [_module, _moduleArea, _jammerSource, _jammerMaxRad, (25 * _jammerMaxRad) / 100, _canBeDisabled, _affectVehicles]] call CBA_fnc_addPerFrameHandler;
+
+
+//Agregar a objetos editables.
+_curatorLogic = getAssignedCuratorLogic _assignedCurator;
+_curatorLogic addCuratorEditableObjects [[_module], false];
 
 
 //Acción para desactivar.

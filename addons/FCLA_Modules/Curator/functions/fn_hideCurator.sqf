@@ -29,4 +29,4 @@ if (!isNull _curatorEagle) then {
 
 //Notificar.
 _text = if (_state) then {"$STR_zen_modules_ZeusIsNowVisible";} else {"$STR_zen_modules_ZeusIsNowHidden";};
-[_text] call zen_common_fnc_showMessage;
+[_text] call ZEN_Common_fnc_showMessage;

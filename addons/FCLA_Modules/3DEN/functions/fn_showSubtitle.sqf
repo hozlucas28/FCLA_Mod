@@ -14,6 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
+_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
@@ -72,3 +73,8 @@ _trigger setTriggerArea _moduleArea;
 _trigger setTriggerStatements [[_Condition] call ACE_Common_fnc_codeToString, [_StatementOnActivation] call ACE_Common_fnc_codeToString, [_StatementOnDeactivation] call ACE_Common_fnc_codeToString];
 _trigger setVariable ["FCLA_Subtitle_Attributes", [_emitterObject, [[_emitter, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _side, _moduleArea]], true];
 [{!alive (_this select 1)}, {{deleteVehicle _x;} forEach _this;}, [_module, _emitterObject, _trigger]] call CBA_fnc_waitUntilAndExecute;
+
+
+//Agregar a objetos editables.
+_curatorLogic = getAssignedCuratorLogic _assignedCurator;
+_curatorLogic addCuratorEditableObjects [[_module], false];

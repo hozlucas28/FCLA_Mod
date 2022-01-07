@@ -14,14 +14,16 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
+_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
 
 
 //Generar señal de humo.
-_modulePos = getPos _module;
-_newColorSelected = switch (toUpper (_module getVariable ["FCLA_Color", "white"])) do {
+_modulePos = getPosATL _module;
+_smokeColor = toUpper (_module getVariable ["FCLA_Color", "white"]);
+_newColorSelected = switch (_smokeColor) do {
   case "RED": {[1, 0.253, 0, 1];};
   case "BLUE": {[0.266, 0.537, 1, 1];};
   case "GREEN": {[0.1, 0.5, 0.05, 1];};

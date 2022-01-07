@@ -40,6 +40,11 @@ class FCLA_Module_Spawn_Effect: Module_F {
 					value = "smoke";
 				};
 
+        class Fire {
+					name = "Fuego";
+					value = "fire";
+				};
+
 				class Sparks {
 					name = "Chispas";
 					value = "sparks";
@@ -48,11 +53,6 @@ class FCLA_Module_Spawn_Effect: Module_F {
 				class Fireflies {
 					name = "Luciérnagas";
 					value = "fireflies";
-				};
-
-        class Big_Fire {
-					name = "Fuego (grande)";
-					value = "big_fire";
 				};
 
 				class Wind_Gust {

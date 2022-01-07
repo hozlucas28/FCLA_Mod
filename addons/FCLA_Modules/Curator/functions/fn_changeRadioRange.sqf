@@ -24,9 +24,8 @@
 	 ],
    {
      (_this select 0) params ["_multiplier"];
-     _multiplier = [_multiplier, 0] call BIS_fnc_cutDecimals;
-
-     ["FCLA_Change_Radio_Range", [allUnits + vehicles, _multiplier]] call CBA_fnc_globalEventJIP;
-     ["ALCANCE DE LAS RADIOS MULTIPLICADO: " + str _multiplier + "X"] call zen_common_fnc_showMessage;
-   }, {}, nil] call ZEN_Dialog_fnc_Create;
+     _module = createAgent ["FCLA_Module_Radio_Range", _this select 1, [], 0, "CAN_COLLIDE"];
+     _module setVariable ["FCLA_Multiplier", round _multiplier, true];
+     ["ALCANCE DE LAS RADIOS MULTIPLICADO: " + str (round _multiplier) + "X"] call ZEN_Common_fnc_showMessage;
+   }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Radio.paa"] call ZEN_Custom_Modules_fnc_Register;

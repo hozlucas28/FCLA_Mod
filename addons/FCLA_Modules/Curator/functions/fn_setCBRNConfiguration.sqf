@@ -55,14 +55,11 @@
   {
     (_this select 0) params ["_newCompatibleNRBQUniforms", "_newCompatibleChemicalDetectors", "_newCompatibleOxygenMasks", "_newCompatibleBackpacksWithOxygen"];
 
-    _newCompatibleOxygenMasks = parseSimpleArray ([_newCompatibleOxygenMasks, """", "'"] call CBA_fnc_replace);
-    _newCompatibleNRBQUniforms = parseSimpleArray ([_newCompatibleNRBQUniforms, """", "'"] call CBA_fnc_replace);
-    _newCompatibleChemicalDetectors = parseSimpleArray ([_newCompatibleChemicalDetectors, """", "'"] call CBA_fnc_replace);
-    _newCompatibleBackpacksWithOxygen = parseSimpleArray ([_newCompatibleBackpacksWithOxygen, """", "'"] call CBA_fnc_replace);
-    missionNamespace setVariable ["FCLA_CBRN_Compatible_Oxygen_Masks", _newCompatibleOxygenMasks];
-    missionNamespace setVariable ["FCLA_CBRN_Compatible_NRBQ_Uniforms", _newCompatibleNRBQUniforms];
-    missionNamespace setVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", _newCompatibleChemicalDetectors];
-    missionNamespace setVariable ["FCLA_CBRN_Compatible_Backpacks_With_Oxygen", _newCompatibleBackpacksWithOxygen];
+    _module = createAgent ["FCLA_Module_CBRN_Configuration", _this select 1, [], 0, "CAN_COLLIDE"];
+    _module setVariable ["FCLA_Oxygen_Masks", _newCompatibleOxygenMasks, true];
+    _module setVariable ["FCLA_NRBQ_Uniforms", _newCompatibleNRBQUniforms, true];
+    _module setVariable ["FCLA_Chemical_Detectors", _newCompatibleChemicalDetectors, true];
+    _module setVariable ["FCLA_Backpacks_With_Oxygen", _newCompatibleBackpacksWithOxygen, true];
     ["NUEVA CONFIGURACIÓN CBRN ESTABLECIDA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, []] call ZEN_Dialog_fnc_Create;
-}, "\FCLA_Modules\Curator\data\CBRN.paa"] call ZEN_Custom_Modules_fnc_Register;
+}, "\FCLA_Modules\Curator\data\CBRN.paa", _this select 0] call ZEN_Custom_Modules_fnc_Register;

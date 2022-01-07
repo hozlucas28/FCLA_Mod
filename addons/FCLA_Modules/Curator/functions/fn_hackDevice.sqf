@@ -35,20 +35,14 @@
     ]
 	 ],
    {
+     (_this select 1) params ["_position", "_attachedObject"];
      (_this select 0) params ["_identificableName", "_needHackingDeviceState"];
      _needHackingDeviceState = if (_needHackingDeviceState == 0) then {true;} else {false;};
 
-     [_this select 1, "hackear dispositivo", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa", _needHackingDeviceState] call FCLA_Common_fnc_hackDevice;
-     [{(!alive (_this select 1)) || ((_this select 1) getVariable ["FCLA_Hacked", false])}, {
-       if (!alive (_this select 1)) exitWith {};
-       _unitsWithCurator = [];
-       {
-         _curatorUnit = getAssignedCuratorUnit _x;
-         if (isNull _curatorUnit) exitWith {};
-         _unitsWithCurator pushBack _curatorUnit;
-       } forEach allCurators;
-       ["FCLA_GUI_Message", ["DISPOSITIVO HACKEADO", "El dispositivo '" + (_this select 0) + "' ha sido hackeado con éxito."], _unitsWithCurator] call CBA_fnc_targetEvent;
-     }, [_identificableName, _this select 1]] call CBA_fnc_waitUntilAndExecute;
+     _module = createAgent ["FCLA_Module_Hack_Device", _position, [], 0, "CAN_COLLIDE"];
+     _module synchronizeObjectsAdd [_attachedObject];
+     _module setVariable ["FCLA_Device_ID", _identificableName, true];
+     _module setVariable ["FCLA_Need_Hacking_Device", _needHackingDeviceState, true];
      ["EL OBJETO AHORA ES HACKEABLE"] call ZEN_Common_fnc_showMessage;
-   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
+   }, {}, [_position, _attachedObject]] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Code.paa"] call ZEN_Custom_Modules_fnc_Register;

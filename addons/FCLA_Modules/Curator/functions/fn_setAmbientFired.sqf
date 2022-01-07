@@ -8,20 +8,16 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-["FCLA", "Alternar disparos ambientales", {
+["FCLA", "Asignar disparos ambientales", {
   params ["_position", "_attachedObject"];
   _hasNotWeapons = (count (weapons _attachedObject)) <= 0;
   _hasNotMagazines = (count (magazines _attachedObject)) <= 0;
   if ((isNull _attachedObject) || !(_attachedObject in vehicles) || (_hasNotWeapons) || (_hasNotMagazines)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UN VEHÍCULO COMPATIBLE"] call ZEN_Common_fnc_showMessage;};
-  if (_attachedObject getVariable ["FCLA_Ambient_Fire", false]) exitWith {
-    _attachedObject setVariable ["FCLA_Ambient_Fire", nil, true];
-    ["LOS DISPAROS AMBIENTALES DEL VEHÍCULO SE HAN DESACTIVADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-  };
+
 
   _vehicleName = getText (configFile >> "CfgVehicles" >> (typeOf _attachedObject) >> "displayName");
   _vehicleWeaponsNames = [];
   _vehicleWeapons = weapons _attachedObject;
-
   {
     _weaponsName = getText (configFile >> "CfgWeapons" >> _x >> "displayName");
     _vehicleWeaponsNames pushBack _weaponsName;
@@ -41,9 +37,7 @@
 	],
   {
     (_this select 0) params ["_weaponSelected"];
-    (_this select 1) params ["_attachedObject", "_vehicleName", "_vehicleWeapons", "_vehicleWeaponsNames"];
-
-    _weaponName = getText (configFile >> "CfgWeapons" >> _weaponSelected >> "displayName");
+    (_this select 1) params ["_position", "_attachedObject", "_vehicleName", "_vehicleWeapons", "_vehicleWeaponsNames"];
     _vehicleMagazines = magazines _attachedObject;
     _compatibleMagazines = getArray (configFile >> "CfgWeapons" >> _weaponSelected >> "magazines");
     _compatibleMagazines = _compatibleMagazines select {_x in _vehicleMagazines};
@@ -54,7 +48,7 @@
       _vehicleMagazinesNames pushBack _magazineName;
     } forEach _compatibleMagazines;
 
-    [_weaponName,
+    [_vehicleName,
   	[
      ["COMBO", "Seleccionar munición",
       [
@@ -102,15 +96,20 @@
      ]
   	],
     {
+      (_this select 1) params ["_position", "_attachedObject", "_weapon"];
       (_this select 0) params ["_magazine", "_minimumShots", "_maximumShots", "_minimumDelay", "_maximumDelay"];
-      (_this select 1) params ["_attachedObject", "_weapon"];
-      _minimumShots = [_minimumShots, 0] call BIS_fnc_cutDecimals;
-      _maximumShots = [_maximumShots, 0] call BIS_fnc_cutDecimals;
-      _minimumDelay = [_minimumDelay, 0] call BIS_fnc_cutDecimals;
-      _maximumDelay = [_maximumDelay, 0] call BIS_fnc_cutDecimals;
 
-      [_attachedObject, _weapon, _magazine, [_minimumShots, _maximumShots], [_minimumDelay, _maximumDelay]] call FCLA_Common_fnc_setAmbientFired;
+      _module = createAgent ["FCLA_Module_Ambient_Fired", _position, [], 0, "CAN_COLLIDE"];
+      _module synchronizeObjectsAdd [_attachedObject];
+      _module setVariable ["FCLA_Ammo", _magazine, true];
+      _module setVariable ["FCLA_Weapon", _weapon, true];
+      _module setVariable ["FCLA_Assigned_Curator", player, true];
+      _module setVariable ["FCLA_Assigned_Vehicle", _attachedObject, true];
+      _module setVariable ["FCLA_Minimum_Shots", round _minimumShots, true];
+      _module setVariable ["FCLA_Maximum_Shots", round _maximumShots, true];
+      _module setVariable ["FCLA_Minimum_Delay", round _minimumDelay, true];
+      _module setVariable ["FCLA_Maximum_Delay", round _maximumDelay, true];
       ["EL VEHÍCULO COMENZARA A REALIZAR DISPAROS AMBIENTALES"] call ZEN_Common_fnc_showMessage;
-    }, {}, [_attachedObject, _weaponSelected]] call ZEN_Dialog_fnc_Create;
-  }, {}, [_attachedObject, _vehicleName, _vehicleWeapons, _vehicleWeaponsNames]] call ZEN_Dialog_fnc_Create;
+    }, {}, [_position, _attachedObject, _weaponSelected]] call ZEN_Dialog_fnc_Create;
+  }, {}, [_position, _attachedObject, _vehicleName, _vehicleWeapons, _vehicleWeaponsNames]] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Tracers.paa"] call ZEN_Custom_Modules_fnc_Register;

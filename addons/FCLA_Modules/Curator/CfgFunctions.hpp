@@ -5,22 +5,12 @@
 
 class Curator {
   class setCBRNConfigurationCurator {
-    file = "\FCLA_Modules\Curator\functions\CBRN\fn_setConfiguration.sqf";
+    file = "\FCLA_Modules\Curator\functions\fn_setCBRNConfiguration.sqf";
     postInit = 1;
   };
 
   class setCBRNContaminatedZoneCurator {
-    file = "\FCLA_Modules\Curator\functions\CBRN\fn_setContaminatedZone.sqf";
-    postInit = 1;
-  };
-
-  class setEffectCurator {
-    file = "\FCLA_Modules\Curator\functions\Effects\fn_setEffect.sqf";
-    postInit = 1;
-  };
-
-  class initEMPCurator {
-    file = "\FCLA_Modules\Curator\functions\EMP\fn_initEMP.sqf";
+    file = "\FCLA_Modules\Curator\functions\fn_setCBRNContaminatedZone.sqf";
     postInit = 1;
   };
 
@@ -99,6 +89,16 @@ class Curator {
     postInit = 1;
   };
 
+  class setEffectCurator {
+    file = "\FCLA_Modules\Curator\functions\fn_spawnEffect.sqf";
+    postInit = 1;
+  };
+
+  class spawnEMPCurator {
+    file = "\FCLA_Modules\Curator\functions\fn_spawnEMP.sqf";
+    postInit = 1;
+  };
+
   class spawnSmokeSignalCurator {
     file = "\FCLA_Modules\Curator\functions\fn_spawnSmokeSignal.sqf";
     postInit = 1;
@@ -119,11 +119,7 @@ class Curator {
     postInit = 1;
   };
 
-  class spawnFirefliesCurator {file = "\FCLA_Modules\Curator\functions\Effects\fn_spawnFireflies.sqf";};
-  class spawnSparksCurator {file = "\FCLA_Modules\Curator\functions\Effects\fn_spawnSparks.sqf";};
-  class spawnWindGustCurator {file = "\FCLA_Modules\Curator\functions\Effects\fn_spawnWindGust.sqf";};
-  class spawnEMPCurator {file = "\FCLA_Modules\Curator\functions\EMP\fn_spawnEMP.sqf";};
-  class attachAndDetachCurator {file = "\FCLA_Modules\Curator\functions\fn_attachAndDetach.sqf";};
   class hideCurator {file = "\FCLA_Modules\Curator\functions\fn_hideCurator.sqf";};
   class teleportCurator {file = "\FCLA_Modules\Curator\functions\fn_teleportCurator.sqf";};
+  class attachAndDetachCurator {file = "\FCLA_Modules\Curator\functions\fn_attachAndDetach.sqf";};
 };

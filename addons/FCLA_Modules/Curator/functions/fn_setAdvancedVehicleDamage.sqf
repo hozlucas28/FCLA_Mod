@@ -11,15 +11,15 @@
 
 ["FCLA", "Alternar DAV", {
   params ["_position", "_attachedObject"];
-  _handle = _attachedObject getVariable ["FCLA_Disable_Vehicle_Destruction_ID", -1];
+  _handle = _attachedObject getVariable ["FCLA_Advanced_Vehicle_Damage_ID", -1];
   if (ACE_Vehicle_Damage_Enabled) exitWith {["¡EL DAÑO AVANZADO DE VEHÍCULO (ACE) DEBE ESTAR DESACTIVADO!"] call ZEN_Common_fnc_showMessage;};
   if ((isNull _attachedObject) || !(_attachedObject in vehicles)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UN VEHÍCULO"] call ZEN_Common_fnc_showMessage;};
 
 
   if (_handle != -1) exitWith {
     _attachedObject removeEventHandler ["Dammaged", _handle];
-    _attachedObject setVariable ["FCLA_Disable_Vehicle_Destruction_ID", nil, true];
-    ["SE HA DESACTIVADO EL DAÑO AVANZADO DE ESTE VEHÍCULO"] call ZEN_Common_fnc_showMessage;
+    _attachedObject setVariable ["FCLA_Advanced_Vehicle_Damage_ID", nil, true];
+    ["SE HA DESACTIVADO EL DAÑO AVANZADO EN EL VEHÍCULO"] call ZEN_Common_fnc_showMessage;
   };
 
 
@@ -47,11 +47,15 @@
     ]
 	 ],
    {
+     (_this select 1) params ["_position", "_attachedObject"];
      (_this select 0) params ["_damageWeaponsState", "_damageItemsState"];
      _damageItemsState = if (_damageItemsState == 0) then {true;} else {false;};
      _damageWeaponsState = if (_damageWeaponsState == 0) then {true;} else {false;};
 
-     [_this select 1, _damageWeaponsState, _damageItemsState] call FCLA_Common_fnc_setAdvancedVehicleDamage;
-     ["SE HA ACTIVADO EL DAÑO AVANZADO DE ESTE VEHÍCULO"] call ZEN_Common_fnc_showMessage;
-   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
+     _module = createAgent ["FCLA_Module_Advanced_Vehicle_Damage", _position, [], 0, "CAN_COLLIDE"];
+     _module synchronizeObjectsAdd [_attachedObject];
+     _module setVariable ["FCLA_Damage_Items", _damageItemsState, true];
+     _module setVariable ["FCLA_Damage_Weapons", _damageWeaponsState, true];
+     ["SE HA ACTIVADO EL DAÑO AVANZADO EN EL VEHÍCULO"] call ZEN_Common_fnc_showMessage;
+   }, {}, [_position, _attachedObject]] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Vehicle.paa"] call ZEN_Custom_Modules_fnc_Register;

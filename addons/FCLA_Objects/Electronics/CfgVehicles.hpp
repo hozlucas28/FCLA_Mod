@@ -23,6 +23,26 @@ class Satellite_Antenna_RF_3080: ThingX {
   ACE_Dragging_carryPosition[] = {0, 1, 0.5};
   scope = 2;
   scopeCurator = 2;
+
+  class DestructionEffects {
+    class Bullets {
+      intensity = 1;
+      interval = 1;
+      lifeTime = 1.2;
+      position = "";
+      simulation = "particles";
+      type = "AmmoBulletCore";
+    };
+
+    class Smoke2 {
+      intensity = 1;
+      interval = 1;
+      lifeTime = 1;
+      position = "";
+      simulation = "particles";
+      type = "AmmoSmokeParticles2";
+    };
+  };
 };
 
 

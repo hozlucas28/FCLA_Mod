@@ -16,6 +16,7 @@
                         ];
 _mode = _this select 0;
 _notifyBuilding = _module getVariable ["FCLA_Notify_Building", false];
+_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _isRepairFacility = _module getVariable ["FCLA_isRepair_Facility", false];
 _isMedicalFacility = _module getVariable ["FCLA_isMedical_Facility", false];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];

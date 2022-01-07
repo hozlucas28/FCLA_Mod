@@ -43,10 +43,9 @@
     (_this select 0) params ["_rad", "_threatLevel"];
 
     _module = createAgent ["FCLA_Module_CBRN_Contaminated_Zone", _this select 1, [], 0, "CAN_COLLIDE"];
-    _curatorLogic = getAssignedCuratorLogic player;
-    _curatorLogic addCuratorEditableObjects [[_module], false];
+    _module setVariable ["FCLA_Assigned_Curator", player, true];
     _module setVariable ["FCLA_Threat_Level", _threatLevel, true];
-    _module setVariable ["objectArea", [_rad, _rad, 0, false, _rad], true];
+    _module setVariable ["objectArea", [round _rad, round _rad, 0, false, round _rad], true];
     ["ZONA CONTAMINADA GENERADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Contaminated_Zone.paa"] call ZEN_Custom_Modules_fnc_Register;

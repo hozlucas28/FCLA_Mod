@@ -10,7 +10,11 @@
 
 ["FCLA", "Provocar lesiones (ACE)", {
   params ["_position", "_attachedObject"];
+  _isHidden = isObjectHidden _attachedObject;
+  _isInvulnerable = !(isDamageAllowed _attachedObject);
   if ((isNull _attachedObject) || !(_attachedObject in allUnits)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UNA UNIDAD"] call ZEN_Common_fnc_showMessage;};
+  if (_isHidden) exitWith {["ERROR! LA UNIDAD NO DEBE ESTAR OCULTA"] call ZEN_Common_fnc_showMessage;};
+  if (_isInvulnerable) exitWith {["ERROR! LA UNIDAD DEBE TENER EL DAÑO ACTIVADO"] call ZEN_Common_fnc_showMessage;};
 
 
   ["LESIONES",
@@ -112,22 +116,23 @@
     ]
 	 ],
    {
+     (_this select 1) params ["_position", "_attachedObject"];
      (_this select 0) params ["_typeOfInjury", "_levelOfInjury", "_forceUnconsciousness", "_fractureRightArm", "_fractureLeftArm", "_fractureRightLeg", "_fractureLeftLeg"];
-     _isHidden = isObjectHidden _x;
-     _levelOfInjury = [_levelOfInjury, 2] call BIS_fnc_cutDecimals;
-     _isInvulnerable = !(isDamageAllowed (_this select 1));
-     _forceUnconsciousness = if (_forceUnconsciousness == 0) then {true;} else {nil;};
-     _fractureLeftArm = if (_fractureLeftArm == 0) then {1;} else {0;};
-     _fractureLeftLeg = if (_fractureLeftLeg == 0) then {1;} else {0;};
-     _fractureRightArm = if (_fractureRightArm == 0) then {1;} else {0;};
-     _fractureRightLeg = if (_fractureRightLeg == 0) then {1;} else {0;};
-     if (_isHidden) exitWith {["ERROR! LA UNIDAD NO DEBE ESTAR OCULTA"] call ZEN_Common_fnc_showMessage;};
-     if (_isInvulnerable) exitWith {["ERROR! LA UNIDAD DEBE TENER EL DAÑO ACTIVADO"] call ZEN_Common_fnc_showMessage;};
+     _fractureLeftArm = if (_fractureLeftArm == 0) then {true;} else {false;};
+     _fractureLeftLeg = if (_fractureLeftLeg == 0) then {true;} else {false;};
+     _fractureRightArm = if (_fractureRightArm == 0) then {true;} else {false;};
+     _fractureRightLeg = if (_fractureRightLeg == 0) then {true;} else {false;};
+     _forceUnconsciousness = if (_forceUnconsciousness == 0) then {true;} else {false;};
 
-     ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_this select 1, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true]], _this select 1] call CBA_fnc_targetEvent;
-     (_this select 1) setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
-     [_this select 1, _forceUnconsciousness] call ACE_Medical_fnc_setUnconscious;
-     ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_this select 1]], _this select 1] call CBA_fnc_targetEvent;
+     _module = createAgent ["FCLA_Create_Injuries", _position, [], 0, "CAN_COLLIDE"];
+     _module synchronizeObjectsAdd [_attachedObject];
+     _module setVariable ["FCLA_Type_Of_Injury", toLower _typeOfInjury, true];
+     _module setVariable ["FCLA_Level_Of_Injury", round _levelOfInjury, true];
+     _module setVariable ["FCLA_Fracture_Left_Arm", _fractureLeftArm, true];
+     _module setVariable ["FCLA_Fracture_Left_Leg", _fractureLeftLeg, true];
+     _module setVariable ["FCLA_Fracture_Right_Arm", _fractureRightArm, true];
+     _module setVariable ["FCLA_Fracture_Right_Leg", _fractureRightLeg, true];
+     _module setVariable ["FCLA_Force_Unconsciousness", _forceUnconsciousness, true];
      ["LESIONES PROVOCADAS CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
+   }, {}, [_position, _attachedObject]] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Medical_Cross.paa"] call ZEN_Custom_Modules_fnc_Register;

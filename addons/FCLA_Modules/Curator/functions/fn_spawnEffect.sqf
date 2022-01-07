@@ -15,16 +15,16 @@
      [
       [
        "Smoke",
+       "Fire",
        "Sparks",
        "Fireflies",
-       "Big_Fire",
        "Wind_Gust"
       ],
       [
        "Humo",
+       "Fuego",
        "Chispas",
        "Luciérnagas",
-       "Fuego (grande)",
        "Ráfaga de viento"
       ],
       0
@@ -43,11 +43,9 @@
 	 ],
    {
      (_this select 0) params ["_selectedEffect", "_delay"];
-     _delay = [_delay, 0] call BIS_fnc_cutDecimals;
      _selectedEffect = toUpper _selectedEffect;
-
      _effectName = switch (_selectedEffect) do {
-       case "BIG_FIRE": {"FUEGO (GRANDE)";};
+       case "FIRE": {"FUEGO";};
        case "SMOKE": {"HUMO";};
        case "SPARKS": {"CHISPAS";};
        case "WIND_GUST": {"RÁFAGA DE VIENTO";};
@@ -55,27 +53,9 @@
      };
 
      _module = createAgent ["FCLA_Module_Spawn_Effect", _this select 1, [], 0, "CAN_COLLIDE"];
-     _curatorLogic = getAssignedCuratorLogic player;
-     _curatorLogic addCuratorEditableObjects [[_module], false];
-     _module setVariable ["FCLA_Force_Deactivation", true, true];
-
-     switch (_selectedEffect) do {
-       case "BIG_FIRE": {
-         _effectObj = createVehicle ["test_EmptyObjectForFireBig", getPos _module, [], 0, "CAN_COLLIDE"];
-         _curatorLogic addCuratorEditableObjects [[_effectObj], false];
-         deleteVehicle _module;
-       };
-
-       case "SMOKE": {
-         _effectObj = createVehicle ["test_EmptyObjectForSmoke", getPos _module, [], 0, "CAN_COLLIDE"];
-         _curatorLogic addCuratorEditableObjects [[_effectObj], false];
-         deleteVehicle _module;
-       };
-
-       case "SPARKS": {[_module, _delay] spawn FCLA_Modules_fnc_spawnSparksCurator;};
-       case "WIND_GUST": {[_module, _delay] spawn FCLA_Modules_fnc_spawnWindGustCurator;};
-       case "FIREFLIES": {[_module] spawn FCLA_Modules_fnc_spawnFirefliesCurator;};
-     };
+     _module setVariable ["FCLA_Delay", round _delay, true];
+     _module setVariable ["FCLA_Effect", _selectedEffect, true];
+     _module setVariable ["FCLA_Assigned_Curator", player, true];
      ["EL EFECTO " + _effectName + " SE HA GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
 }, nil] call ZEN_Custom_Modules_fnc_Register;

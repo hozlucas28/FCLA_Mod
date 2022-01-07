@@ -33,15 +33,12 @@
 	 ],
    {
      (_this select 0) params ["_rad", "_jammer"];
-     _rad = [_rad, 0] call BIS_fnc_cutDecimals;
      _jammer = if (_jammer == 0) then {true;} else {false;};
 
      _module = createAgent ["FCLA_Module_EMP", _this select 1, [], 0, "CAN_COLLIDE"];
-     _curatorLogic = getAssignedCuratorLogic player;
-     _curatorLogic addCuratorEditableObjects [[_module], false];
-     _module setVariable ["FCLA_Force_Deactivation", true, true];
-
-     [_module, _rad, _jammer] spawn FCLA_Modules_fnc_spawnEMPCurator;
+     _module setVariable ["FCLA_Jammer", _jammer, true];
+     _module setVariable ["FCLA_Assigned_Curator", player, true];
+     _module setVariable ["objectArea", [round _rad, round _rad, 0, false, round _rad], true];
      ["PULSO ELECTROMAGNÉTICO GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\EMP.paa"] call ZEN_Custom_Modules_fnc_Register;

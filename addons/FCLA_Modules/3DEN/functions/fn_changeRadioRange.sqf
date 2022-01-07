@@ -14,6 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
+_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
@@ -28,10 +29,8 @@ if (_moreThanOne) exitWith {["FCLA_Module_Radio_Range", "• MÓDULO: MODIFICAR 
 
 //Modificar alcance.
 _multiplier = [_module getVariable ["FCLA_Multiplier", 1], 0] call BIS_fnc_cutDecimals;
-missionNamespace setVariable ["FCLA_TFAR_Multiplicator", _multiplier, true];
-{_x setVariable ["tf_range", _multiplier, true];} forEach vehicles;
+["FCLA_Change_Radio_Range", [allUnits + vehicles, _multiplier]] call CBA_fnc_globalEventJIP;
 
-{
-  _x setVariable ["tf_sendingDistanceMultiplicator", _multiplier, true];
-  _x setVariable ["tf_receivingDistanceMultiplicator", _multiplier, true];
-} forEach allUnits;
+
+//Eliminar módulo.
+deleteVehicle _module;

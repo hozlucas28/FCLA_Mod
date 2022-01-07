@@ -14,6 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
+_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
@@ -46,6 +47,11 @@ if (!_loopSound) then {
     if ((_this select 0) == (_this select 1)) then {deleteVehicle (_this select 0)};
   }, [_module, _soundSource, _soundObj], _soundDuration] call CBA_fnc_waitAndExecute;
 };
+
+
+//Agregar a objetos editables.
+_curatorLogic = getAssignedCuratorLogic _assignedCurator;
+_curatorLogic addCuratorEditableObjects [[_module], false];
 
 
 //Eliminar módulo.

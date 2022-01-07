@@ -16,6 +16,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
+_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
@@ -45,3 +46,7 @@ missionNamespace setVariable ["FCLA_CBRN_Compatible_Oxygen_Masks", _compatibleOx
 missionNamespace setVariable ["FCLA_CBRN_Compatible_NRBQ_Uniforms", _compatibleNRBQUniforms];
 missionNamespace setVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", _compatibleChemicalDetectors];
 missionNamespace setVariable ["FCLA_CBRN_Compatible_Backpacks_With_Oxygen", _compatibleBackpacksWithOxygen];
+
+
+//Eliminar módulo.
+deleteVehicle _module;

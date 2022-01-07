@@ -42,13 +42,16 @@
     ]
 	 ],
    {
+     (_this select 1) params ["_position", "_attachedObject"];
      (_this select 0) params ["_state", "_excludeVehicles", "_rad"];
-     _rad = [_rad, 0] call BIS_fnc_cutDecimals;
      _state = if (_state == 0) then {"On";} else {"Off";};
      _excludeVehicles = if (_excludeVehicles == 0) then {true;} else {false;};
 
-     [_this select 1, _rad, _state, _excludeVehicles] call FCLA_Common_fnc_switchLights;
+     _module = createAgent ["FCLA_Module_Switch_Lights", _position, [], 0, "CAN_COLLIDE"];
+     _module setVariable ["objectArea", [round _rad, round _rad, 0, false, round _rad], true];
+     _module setVariable ["FCLA_Lights_State", _state, true];
+     _module setVariable ["FCLA_Exclude_Vehicles", _excludeVehicles, true];
      _text = if (_state == "On") then {"LAS LUCES FUERON ENCENDIDAS";} else {"LAS LUCES FUERON APAGADAS";};
      [_text] call ZEN_Common_fnc_showMessage;
-   }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
+   }, {}, [_this select 0, _this select 1]] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Power_Switch.paa"] call ZEN_Custom_Modules_fnc_Register;

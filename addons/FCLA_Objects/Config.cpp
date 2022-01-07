@@ -184,6 +184,12 @@ class CfgVehicles {
 |                            CONTROLADORES DE EVENTOS                            |
 |********************************************************************************/
 
+class Extended_Killed_Eventhandlers {
+	class Satellite_Antenna_RF_3080 {
+		init = "_this spawn {sleep 5; deleteVehicle (_this select 0);};";
+	};
+};
+
 class Extended_InitPost_EventHandlers {
 	class Satellite_Antenna_RF_3080 {
 		init = "[_this select 0] spawn FCLA_Objects_fnc_initSatelliteAntenna;";

@@ -14,6 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
+_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
@@ -90,6 +91,11 @@ if (_threatLevel <= 0) exitWith {["¡Error! El/Un módulo 'Área contaminada (CB
     _x setVariable ["FCLA_Contaminated_Areas", _contaminatedAreas, true];
   } forEach _playersNotInMaxRad;
 }, 1, [_module, _moduleArea, _contaminationMaxRad, (25 * _contaminationMaxRad) / 100, _threatLevel]] call CBA_fnc_addPerFrameHandler;
+
+
+//Agregar a objetos editables.
+_curatorLogic = getAssignedCuratorLogic _assignedCurator;
+_curatorLogic addCuratorEditableObjects [[_module], false];
 
 
 //Guardar atributos.
