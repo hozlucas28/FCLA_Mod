@@ -6,7 +6,7 @@
 class CfgPatches {
 	class FCLA_Modules {
 		#include "\FCLA_Modules\units.hpp"
-		requiredAddons[] = {"zen_context_actions"};
+		requiredAddons[] = {"ZEN_Context_Actions"};
 		author = "hozlucas28";
 		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";

@@ -10,43 +10,43 @@
 class B_Heli_Transport_01_F: Heli_Transport_01_base_F {
   class UserActions {
     class DoorL1_Open {
-      userActionID = 50;
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenLdoor0";
-      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-      radius = 2.5;
-      radiusView = 0.2;
-      showIn3D = 17;
-      available = 0;
-      priority = 0.5;
-      position = "door_L";
-      showWindow = 1;
-      onlyForPlayer = 0;
       shortcut = "";
+      position = "door_L";
       condition = "(this doorPhase 'door_L' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_L', 1]";
+      displayName = "Abrir puerta izquierda";
+      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+      radius = 2.5;
+      showIn3D = 17;
+      priority = 0.5;
+      available = 0;
+      radiusView = 0.2;
+      showWindow = 1;
+      userActionID = 50;
+      onlyForPlayer = 0;
     };
 
     class DoorR1_Open: DoorL1_Open {
-      userActionID = 51;
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenRdoor0";
       position = "door_R";
       condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_R', 1]";
+      displayName = "Abrir puerta derech";
+      userActionID = 51;
     };
 
     class DoorL1_Close: DoorL1_Open {
       userActionID = 53;
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseLdoor0";
+      displayName = "Cerrar puerta izquierda";
       condition = "(this doorPhase 'door_L' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_L', 0]";
     };
 
     class DoorR1_Close: DoorL1_Close {
-      userActionID = 54;
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseRdoor0";
       position = "door_R";
       condition = "(this doorPhase 'door_R' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_R', 0]";
+      displayName = "Cerrar puerta derecha";
+      userActionID = 54;
     };
   };
 
@@ -95,57 +95,57 @@ class B_Heli_Transport_03_F: Heli_Transport_03_base_F {
   waterLeakiness = 0.1;
   class UserActions {
     class Ramp_Open {
-      userActionID = 60;
-      displayName = "$STR_ACTION_RAMP_OPEN0";
-      textToolTip = "$STR_ACTION_RAMP_OPEN0";
-      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
       position = "";
+      shortcut = "";
       condition = "(this doorPhase 'Door_rear_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_rear_source', 1]";
-      priority = 1.5;
+      displayName = "Abrir rampa";
+      textToolTip = "Abrir rampa";
+      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
       radius = 1.5;
-      radiusView = 0.2;
+      priority = 1.5;
       showIn3D = 17;
       available = 0;
+      radiusView = 0.2;
       showWindow = 0;
+      userActionID = 60;
       onlyForPlayer = 0;
-      shortcut = "";
     };
 
     class Ramp_Close: Ramp_Open {
-      userActionID = 61;
-      displayName = "$STR_ACTION_RAMP_CLOSE0";
-      textToolTip = "$STR_ACTION_RAMP_CLOSE0";
       condition = "(this doorPhase 'Door_rear_source' > 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_rear_source', 0]";
+      displayName = "Cerrar rampa";
+      textToolTip = "Cerrar rampa";
+      userActionID = 61;
     };
 
     class Right_Door_Open: Ramp_Open {
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenRdoor0";
-      textToolTip = "$STR_A3_CfgVehicles_UserActions_OpenRdoor0";
       condition = "(this doorPhase 'Door_R_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_R_source', 1]";
+      displayName = "Abrir puerta derech";
+      textToolTip = "Abrir puerta derech";
     };
 
-    class Right_Door_Colse: Ramp_Close {
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseRdoor0";
-      textToolTip = "$STR_A3_CfgVehicles_UserActions_CloseRdoor0";
+    class Right_Door_Close: Ramp_Close {
       condition = "(this doorPhase 'Door_R_source' > 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_R_source', 0]";
+      displayName = "Cerrar puerta derecha";
+      textToolTip = "Cerrar puerta derecha";
     };
 
     class Left_Door_Open: Ramp_Open {
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenLdoor0";
-      textToolTip = "$STR_A3_CfgVehicles_UserActions_OpenLdoor0";
       condition = "(this doorPhase 'Door_L_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_L_source', 1]";
+      displayName = "Abrir puerta izquierda";
+      textToolTip = "Abrir puerta izquierda";
     };
 
-    class Left_Door_Colse: Ramp_Close {
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseLdoor0";
-      textToolTip = "$STR_A3_CfgVehicles_UserActions_CloseLdoor0";
+    class Left_Door_Close: Ramp_Close {
       condition = "(this doorPhase 'Door_L_source' > 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_L_source', 0]";
+      displayName = "Cerrar puerta izquierda";
+      textToolTip = "Cerrar puerta izquierda";
     };
   };
 
@@ -178,57 +178,57 @@ class B_Heli_Transport_03_unarmed_F: Heli_Transport_03_unarmed_base_F {
   waterLeakiness = 0.1;
   class UserActions {
     class Ramp_Open {
-      userActionID = 60;
-      displayName = "$STR_ACTION_RAMP_OPEN0";
-      textToolTip = "$STR_ACTION_RAMP_OPEN0";
-      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
       position = "";
+      shortcut = "";
       condition = "(this doorPhase 'Door_rear_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_rear_source', 1]";
-      priority = 1.5;
+      displayName = "Abrir rampa";
+      textToolTip = "Abrir rampa";
+      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
       radius = 1.5;
-      radiusView = 0.2;
+      priority = 1.5;
       showIn3D = 17;
       available = 0;
+      radiusView = 0.2;
       showWindow = 0;
+      userActionID = 60;
       onlyForPlayer = 0;
-      shortcut = "";
     };
 
     class Ramp_Close: Ramp_Open {
-      userActionID = 61;
-      displayName = "$STR_ACTION_RAMP_CLOSE0";
-      textToolTip = "$STR_ACTION_RAMP_CLOSE0";
       condition = "(this doorPhase 'Door_rear_source' > 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_rear_source', 0]";
+      displayName = "Cerrar rampa";
+      textToolTip = "Cerrar rampa";
+      userActionID = 61;
     };
 
     class Right_Door_Open: Ramp_Open {
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenRdoor0";
-      textToolTip = "$STR_A3_CfgVehicles_UserActions_OpenRdoor0";
       condition = "(this doorPhase 'Door_R_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_R_source', 1]";
+      displayName = "Abrir puerta derech";
+      textToolTip = "Abrir puerta derech";
     };
 
-    class Right_Door_Colse: Ramp_Close {
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseRdoor0";
-      textToolTip = "$STR_A3_CfgVehicles_UserActions_CloseRdoor0";
+    class Right_Door_Close: Ramp_Close {
       condition = "(this doorPhase 'Door_R_source' > 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_R_source', 0]";
+      displayName = "Cerrar puerta derecha";
+      textToolTip = "Cerrar puerta derecha";
     };
 
     class Left_Door_Open: Ramp_Open {
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenLdoor0";
-      textToolTip = "$STR_A3_CfgVehicles_UserActions_OpenLdoor0";
       condition = "(this doorPhase 'Door_L_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_L_source', 1]";
+      displayName = "Abrir puerta izquierda";
+      textToolTip = "Abrir puerta izquierda";
     };
 
-    class Left_Door_Colse: Ramp_Close {
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseLdoor0";
-      textToolTip = "$STR_A3_CfgVehicles_UserActions_CloseLdoor0";
+    class Left_Door_Close: Ramp_Close {
       condition = "(this doorPhase 'Door_L_source' > 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_L_source', 0]";
+      displayName = "Cerrar puerta izquierda";
+      textToolTip = "Cerrar puerta izquierda";
     };
   };
 
@@ -263,43 +263,43 @@ class B_Heli_Transport_03_unarmed_F: Heli_Transport_03_unarmed_base_F {
 class B_CTRG_Heli_Transport_01_Sand_F: Heli_Transport_01_base_F {
   class UserActions {
     class DoorL1_Open {
-      userActionID = 50;
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenLdoor0";
-      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-      radius = 2.5;
-      radiusView = 0.2;
-      showIn3D = 17;
-      available = 0;
-      priority = 0.5;
       position = "door_L";
-      showWindow = 1;
-      onlyForPlayer = 0;
       shortcut = "";
       condition = "(this doorPhase 'door_L' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_L', 1]";
+      displayName = "Abrir puerta izquierda";
+      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+      radius = 2.5;
+      showIn3D = 17;
+      priority = 0.5;
+      available = 0;
+      radiusView = 0.2;
+      showWindow = 1;
+      userActionID = 50;
+      onlyForPlayer = 0;
     };
 
     class DoorR1_Open: DoorL1_Open {
-      userActionID = 51;
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenRdoor0";
       position = "door_R";
       condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_R', 1]";
+      displayName = "Abrir puerta derech";
+      userActionID = 51;
     };
 
     class DoorL1_Close: DoorL1_Open {
-      userActionID = 53;
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseLdoor0";
       condition = "(this doorPhase 'door_L' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_L', 0]";
+      displayName = "Cerrar puerta izquierda";
+      userActionID = 53;
     };
 
     class DoorR1_Close: DoorL1_Close {
-      userActionID = 54;
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseRdoor0";
       position = "door_R";
       condition = "(this doorPhase 'door_R' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_R', 0]";
+      displayName = "Cerrar puerta derecha";
+      userActionID = 54;
     };
   };
 };
@@ -308,43 +308,43 @@ class B_CTRG_Heli_Transport_01_Sand_F: Heli_Transport_01_base_F {
 class B_CTRG_Heli_Transport_01_tropic_F: Heli_Transport_01_base_F {
   class UserActions {
     class DoorL1_Open {
-      userActionID = 50;
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenLdoor0";
-      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-      radius = 2.5;
-      radiusView = 0.2;
-      showIn3D = 17;
-      available = 0;
-      priority = 0.5;
       position = "door_L";
-      showWindow = 1;
-      onlyForPlayer = 0;
       shortcut = "";
       condition = "(this doorPhase 'door_L' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_L', 1]";
+      displayName = "Abrir puerta izquierda";
+      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+      radius = 2.5;
+      showIn3D = 17;
+      priority = 0.5;
+      available = 0;
+      radiusView = 0.2;
+      showWindow = 1;
+      userActionID = 50;
+      onlyForPlayer = 0;
     };
 
     class DoorR1_Open: DoorL1_Open {
-      userActionID = 51;
-      displayName = "$STR_A3_CfgVehicles_UserActions_OpenRdoor0";
       position = "door_R";
       condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_R', 1]";
+      displayName = "Abrir puerta derech";
+      userActionID = 51;
     };
 
     class DoorL1_Close: DoorL1_Open {
-      userActionID = 53;
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseLdoor0";
       condition = "(this doorPhase 'door_L' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_L', 0]";
+      displayName = "Cerrar puerta izquierda";
+      userActionID = 53;
     };
 
     class DoorR1_Close: DoorL1_Close {
-      userActionID = 54;
-      displayName = "$STR_A3_CfgVehicles_UserActions_CloseRdoor0";
       position = "door_R";
       condition = "(this doorPhase 'door_R' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_R', 0]";
+      displayName = "Cerrar puerta derecha";
+      userActionID = 54;
     };
   };
 };
@@ -356,39 +356,39 @@ class B_CTRG_Heli_Transport_01_tropic_F: Heli_Transport_01_base_F {
 class B_T_VTOL_01_vehicle_F: VTOL_01_vehicle_base_F {
   class UserActions {
     class Ramp_Open {
-      available = 0;
-      condition = "(this doorPhase ""Door_1_source"" < 0.5) && (alive this) && ({(call CBA_fnc_currentUnit) == _x} count [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]] > 0) && ((this getVariable ['bis_disabled_Ramp',0]) != 1)";
-      displayName = "Abrir rampa";
-      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-      onlyForPlayer = 0;
       position = "";
-      priority = 1.5;
-      radius = 15;
-      radiusView = 0.2;
       shortcut = "";
-      showIn3D = 17;
-      showWindow = 0;
+      condition = "(this doorPhase ""Door_1_source"" < 0.5) && (alive this) && ({(call CBA_fnc_currentUnit) == _x} count [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]] > 0) && ((this getVariable ['bis_disabled_Ramp',0]) != 1)";
       statement = "this animateDoor ['Door_1_source', 1]";
+      displayName = "Abrir rampa";
       textToolTip = "Abrir rampa";
+      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+      radius = 15;
+      priority = 1.5;
+      showIn3D = 17;
+      available = 0;
+      radiusView = 0.2;
+      showWindow = 0;
       userActionID = 60;
+      onlyForPlayer = 0;
     };
 
     class Ramp_Close {
-      available = 0;
-      condition = "(this doorPhase ""Door_1_source"" > 0.5) && (alive this) && ({(call CBA_fnc_currentUnit) == _x} count [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]] > 0) && ((this getVariable ['bis_disabled_Ramp',0]) != 1)";
-      displayName = "Cerrar rampa";
-      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-      onlyForPlayer = 0;
       position = "";
-      priority = 1.5;
-      radius = 15;
-      radiusView = 0.2;
       shortcut = "";
-      showIn3D = 17;
-      showWindow = 0;
+      condition = "(this doorPhase ""Door_1_source"" > 0.5) && (alive this) && ({(call CBA_fnc_currentUnit) == _x} count [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]] > 0) && ((this getVariable ['bis_disabled_Ramp',0]) != 1)";
       statement = "this animateDoor ['Door_1_source', 0]";
+      displayName = "Cerrar rampa";
       textToolTip = "Cerrar rampa";
+      displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+      radius = 15;
+      available = 0;
+      priority = 1.5;
+      showIn3D = 17;
+      radiusView = 0.2;
+      showWindow = 0;
       userActionID = 61;
+      onlyForPlayer = 0;
     };
   };
 };
@@ -397,13 +397,13 @@ class B_T_VTOL_01_vehicle_F: VTOL_01_vehicle_base_F {
 class B_T_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamicLoadout_F {
   author = "hozlucas28";
   editorPreview = "\FCLA_Air\BLUFOR\data\pictures\B_T_VTOL_02_infantry_dynamicLoadout_F.jpg";
-  side = 1;
-  faction = "BLU_T_F";
-  crew = "B_T_Pilot_F";
   typicalCargo[] = {"B_T_Soldier_F"};
-  editorSubcategory = "EdSubcat_Planes";
   hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3", "Camo_4"};
   hiddenSelectionsTextures[] = {"\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_1.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_2.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_3.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_4.paa"};
+  crew = "B_T_Pilot_F";
+  faction = "BLU_T_F";
+  editorSubcategory = "EdSubcat_Planes";
+  side = 1;
   scope = 2;
   scopeCurator = 2;
 
@@ -421,13 +421,13 @@ class B_T_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamicLoadout
 class B_T_VTOL_02_vehicle_dynamicLoadout_F: O_T_VTOL_02_vehicle_dynamicLoadout_F {
   author = "hozlucas28";
   editorPreview = "\FCLA_Air\BLUFOR\data\pictures\B_T_VTOL_02_vehicle_dynamicLoadout_F.jpg";
-  side = 1;
-  faction = "BLU_T_F";
-  crew = "B_T_Pilot_F";
   typicalCargo[] = {"B_T_Soldier_F"};
-  editorSubcategory = "EdSubcat_Planes";
   hiddenSelections[] = {"Camo_1", "Camo_2", "Camo_3", "Camo_4"};
   hiddenSelectionsTextures[] = {"\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_1.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_2.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_3.paa", "\FCLA_Air\BLUFOR\data\B_T_VTOL_02_dynamicLoadout_F_Green_4.paa"};
+  crew = "B_T_Pilot_F";
+  faction = "BLU_T_F";
+  editorSubcategory = "EdSubcat_Planes";
+  side = 1;
   scope = 2;
   scopeCurator = 2;
 

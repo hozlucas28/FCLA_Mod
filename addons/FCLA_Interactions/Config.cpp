@@ -40,6 +40,7 @@ class CfgFunctions {
 		#include "\FCLA_Interactions\Plate_Number\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Smoke_Signal\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Helmet_Camo_Net\CfgFunctions.hpp"
+		#include "\FCLA_Interactions\Satellite_Antenna\CfgFunctions.hpp"
 		//#include "\FCLA_Interactions\Night_Vision_Battery\CfgFunctions.hpp"
 	};
 };
@@ -82,11 +83,13 @@ class CfgUnitInsignia {
 
 class CfgVehicles {
 	class All;
+	//class Thing: All {};
+	//class ThingX: Thing {};
 	class AllVehicles: All {};
 	class Land: AllVehicles {};
-	class Man: Land {};
 	class LandVehicle: Land {};
 	class Ship: AllVehicles {};
+	class Man: Land {};
 
 	class CAManBase: Man {
 		class ACE_Actions {
@@ -105,6 +108,7 @@ class CfgVehicles {
 				#include "\FCLA_Interactions\CBRN\ACE_Equipment.hpp"
 				#include "\FCLA_Interactions\Smoke_Signal\ACE_Equipment.hpp"
 				#include "\FCLA_Interactions\Helmet_Camo_Net\ACE_Equipment.hpp"
+				#include "\FCLA_Interactions\Satellite_Antenna\ACE_Equipment.hpp"
 				//#include "\FCLA_Interactions\Night_Vision_Battery\ACE_Equipment.hpp"
 	    };
 

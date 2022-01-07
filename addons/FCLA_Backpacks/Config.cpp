@@ -5,7 +5,7 @@
 
 class CfgPatches {
 	class FCLA_Backpacks {
-		requiredAddons[] = {};
+		requiredAddons[] = {"Task_Force_Radio_Items"};
 		#include "\FCLA_Backpacks\units.hpp"
 		author = "hozlucas28";
 		version = "2.0";

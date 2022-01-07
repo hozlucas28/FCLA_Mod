@@ -48,7 +48,9 @@
 
     	default {
         if ((_isHidden) || (_inVehicle)) exitWith {};
-        [_unit, _currentRadio] spawn FCLA_Immersions_fnc_radioOnHandTFAR;
+        if (FCLA_Hand_Radio_Animation) exitWith {[_unit, _currentRadio] spawn FCLA_Immersions_fnc_radioOnHandTFAR;};
+        _unit spawn FCLA_Immersions_fnc_waitUntilTFAR;
+        [_unit, "FCLA_Animation_TFAR_onEar"] call ACE_Common_fnc_doGesture;
       };
     };
   } else {

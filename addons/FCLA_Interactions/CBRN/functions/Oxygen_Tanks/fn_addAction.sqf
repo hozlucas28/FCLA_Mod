@@ -19,4 +19,4 @@ _Statement = {
 };
 
 _Action = ["FCLA_Recharge_Oxygen", "Recargar oxígeno", "\FCLA_Data\ACE_Actions\Oxygen_Tank.paa", _Statement, _Condition] call ACE_Interact_Menu_fnc_createAction;
-["Land_GasTank_02_F", 0, [], _Action] call ACE_Interact_Menu_fnc_addActionToClass;
+["Land_OxygenTank_02_F", 0, [], _Action] call ACE_Interact_Menu_fnc_addActionToClass;

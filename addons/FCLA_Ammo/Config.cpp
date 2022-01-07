@@ -7,7 +7,7 @@ class CfgPatches {
 	class FCLA_Ammo {
 		units[] = {};
 		#include "\FCLA_Ammo\ammo.hpp"
-		requiredAddons[] = {"A3_Weapons_F", "ace_grenades"};
+		requiredAddons[] = {"A3_Weapons_F", "ACE_Grenades"};
 		author = "hozlucas28";
 		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";

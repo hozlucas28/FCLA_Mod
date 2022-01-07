@@ -97,16 +97,16 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     //Contenido de los controles.
     _savedInsignia = _caller getVariable ["FCLA_Insignia", FCLA_Default_Patche];
     _hackingLaptopPatch = switch (toUpper _savedInsignia) do {
-      case "FCLA_TAKANA": {"\FCLA_Common\data\Hacking_Laptop_Takana.paa"};
-      case "FCLA_JAGUAR": {"\FCLA_Common\data\Hacking_Laptop_Jaguar.paa"};
-      case "FCLA_CONDOR": {"\FCLA_Common\data\Hacking_Laptop_Condor.paa"};
-      case "FCLA_SALAMANDRA": {"\FCLA_Common\data\Hacking_Laptop_Salamandra.paa"};
-      case "FCLA_ANACONDA": {"\FCLA_Common\data\Hacking_Laptop_Anaconda.paa"};
-      case "FCLA_QUETZAL": {"\FCLA_Common\data\Hacking_Laptop_Quetzal.paa"};
-      default {"\FCLA_Common\data\Hacking_Laptop_FCLA.paa"};
+      case "FCLA_TAKANA": {["\FCLA_Common\data\Hacking_Laptop_Takana.paa", "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Takana.paa"]};
+      case "FCLA_JAGUAR": {["\FCLA_Common\data\Hacking_Laptop_Jaguar.paa", "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Jaguar.paa"]};
+      case "FCLA_CONDOR": {["\FCLA_Common\data\Hacking_Laptop_Condor.paa", "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Condor.paa"]};
+      case "FCLA_SALAMANDRA": {["\FCLA_Common\data\Hacking_Laptop_Salamandra.paa", "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Salamandra.paa"]};
+      case "FCLA_ANACONDA": {["\FCLA_Common\data\Hacking_Laptop_Anaconda.paa", "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Anaconda.paa"]};
+      case "FCLA_QUETZAL": {["\FCLA_Common\data\Hacking_Laptop_Quetzal.paa", "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Quetzal.paa"]};
+      default {["\FCLA_Common\data\Hacking_Laptop_FCLA.paa", "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_FCLA.paa"]};
     };
     _ctrlBoxToWrite ctrlSetText "> Press any key to write...";
-    _ctrlBackground ctrlSetText _hackingLaptopPatch;
+    _ctrlBackground ctrlSetText (_hackingLaptopPatch select 0);
     _ctrlHackingLines ctrlSetFontHeight 0.035;
 
 
@@ -135,18 +135,22 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     //Bloquear movilidad y posicionar laptop.
     [_caller, "amovpercmstpslowwrfldnon_amovpsitmstpslowwrfldnon", "switchMove"] call FCLA_Common_fnc_playAnimation;
     [{
-      params ["_caller", "_display"];
+      params ["_caller", "_display", "_hackingLaptopPatch"];
       (!isNull _display) && ((animationState _caller) != "amovpercmstpslowwrfldnon_amovpsitmstpslowwrfldnon");
     }, {
-      params ["_caller", "_display"];
+      params ["_caller", "_display", "_hackingLaptopPatch"];
       _laptop = createVehicle ["Land_Laptop_03_black_F", getPos _caller, [], 0, "CAN_COLLIDE"];
       _laptop attachTo [_caller, [-0.08, 0.39, 0.365]];
       _laptop allowDamage false;
       _laptop enableSimulationGlobal false;
+      _laptop setObjectTextureGlobal [0, _hackingLaptopPatch];
       _laptop setVectorDirAndUp [[-0.25, 0.989465, 0], [0, 0, 1]];
       _caller setVariable ["FCLA_Current_Hacking_Laptop", _laptop, true];
+      _laptop setObjectTextureGlobal [1, "\FCLA_Data\Videos\Hacking_Initialized_Without_Sound.ogv"];
+      ["\FCLA_Data\Videos\Hacking_Initialized_Without_Sound.ogv", [10, 10]] remoteExec ["BIS_fnc_playVideo", 0, true];
+      [{_this setObjectTextureGlobal [1, "a3\missions_f_oldman\data\img\screens\millerntbscreen02_co.paa"];}, _laptop, 9] call CBA_fnc_waitAndExecute;
       [_caller, "ACE_HandcuffedFFV", "switchMove"] call FCLA_Common_fnc_playAnimation;
-    }, [_caller, _display]] call CBA_fnc_waitUntilAndExecute;
+    }, [_caller, _display, _hackingLaptopPatch select 1]] call CBA_fnc_waitUntilAndExecute;
 
 
     //Condicional para interrumpir hackeo.

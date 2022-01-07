@@ -59,7 +59,7 @@
 
 [
 	"FCLA_Smoke_Signal_Allowed", "CHECKBOX",
-	["¿Permitir?", "Si se activa con los proyectiles de humo de un lanzagranadas se podra enviar señales, para cambiar a este modo deben\nactivarlo manualmente mediante el menú ACE 3D en el apartado 'equipamiento'."],
+	["Activar", "Si se activa con los proyectiles de humo de un lanzagranadas se podra enviar señales, para cambiar a este modo deben\nactivarlo manualmente mediante el menú ACE 3D en el apartado 'equipamiento'."],
 	["FCLA Interacciones", "Señal de humo"],
 	true,
 	GLOBAL,

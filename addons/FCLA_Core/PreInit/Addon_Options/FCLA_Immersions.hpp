@@ -8,9 +8,23 @@
 /* -------------------------------- GENERAL -------------------------------- */
 
 [
-	"FCLA_Kick_Door_Allowed", "CHECKBOX",
-	["¿Permitir patear puertas?", "Al activar se podrán realizar patadas para abrir puertas cerradas."],
+	"FCLA_Gun_Colission", "CHECKBOX",
+	["Colisión de arma", "Al activar las armas colisionaran con las entidades cercanas, dependiendo el largo de la misma."],
 	["FCLA Inmersiones", "• General"],
+	true,
+	GLOBAL,
+	{},
+	false
+] call CBA_fnc_addSetting;
+
+
+
+/* -------------------------------- PUERTAS --------------------------------- */
+
+[
+	"FCLA_Kick_Door_Allowed", "CHECKBOX",
+	["¿Se pueden patear?", "Al activar se podrán realizar patadas para abrir puertas cerradas."],
+	["FCLA Inmersiones", "Puertas"],
 	true,
 	GLOBAL,
 	{},
@@ -20,8 +34,8 @@
 
 [
 	"FCLA_Kick_Door_Success_Rate", "SLIDER",
-	["Probabilidad de éxito (patadas)", "Determina el porcentaje de éxito para que se abra la puerta con una patada."],
-	["FCLA Inmersiones", "• General"],
+	["Probabilidad de éxito", "Determina el porcentaje de éxito para que se abra la puerta con una patada."],
+	["FCLA Inmersiones", "Puertas"],
 	[25, 100, 33, 0],
 	GLOBAL,
 	{},
@@ -34,7 +48,18 @@
 
 [
 	"FCLA_Radio_Animations", "CHECKBOX",
-	["¿Animación al transmitir?", "Al activar si se transmite por radio se realizara una animación."],
+	["Activar", "Si se activa al transmitir por radio se realizara una animación."],
+	["FCLA Inmersiones", "Radios"],
+	true,
+	GLOBAL,
+	{},
+	false
+] call CBA_Settings_fnc_init;
+
+
+[
+	"FCLA_Hand_Radio_Animation", "CHECKBOX",
+	["Radio en mano", "Al activar si se transmite por radio de onda larga o no se posee un auricular/chaleco con radio, se realizara\nuna animación en donde la unidad tendra una radio en mano."],
 	["FCLA Inmersiones", "Radios"],
 	true,
 	GLOBAL,
