@@ -81,6 +81,7 @@ class CfgVehicles {
 	class Offroad_01_unarmed_base_F: Offroad_01_base_F {};
 	class Offroad_01_military_base_F: Offroad_01_base_F {};
 	class C_Van_02_transport_F: Van_02_transport_base_F {};
+	class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {};
 	class O_APC_Tracked_02_base_F: APC_Tracked_02_base_F {};
 	class O_APC_Tracked_02_AA_F: O_APC_Tracked_02_base_F {};
 	class APC_Wheeled_02_base_v2_F: APC_Wheeled_02_base_F {};

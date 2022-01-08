@@ -12,17 +12,17 @@
 
 //Al cambiar vista de cámara.
 ["cameraView", {
-  params ["_unit", "_newCameraMode"];
+  params ["_unit", "_newCameraMode", "_oldCameraMode"];
   _vehicle = vehicle _unit;
   _FFVSeats = [_vehicle] call ACE_Common_fnc_getTurretsFFV;
   _currentTurret = _vehicle unitTurret _unit;
 
-  _notInFFVSeat = !(_currentTurret in _FFVSeats);
+  _notInFFVSeat = _currentTurret in _FFVSeats;
   _noWeaponOnHand = (currentWeapon _unit) == "";
   _isWeaponLowered = weaponLowered _unit;
   _severalConditions = [_unit, [4, 8, 14]] call FCLA_Common_fnc_severalConditions;
   _isNotTouchingGround = !isTouchingGround _unit;
-  if ((!FCLA_Aim_Sounds) || (_notInFFVSeat) || (_noWeaponOnHand) || (_isWeaponLowered) || (_severalConditions) || (_isNotTouchingGround)) exitWith {};
+  if ((!FCLA_Aim_Sounds) || (_notInFFVSeat) || (_noWeaponOnHand) || (_isWeaponLowered) || (_severalConditions) || (_isNotTouchingGround) || ((_newCameraMode == "INTERNAL") && (_oldCameraMode == "EXTERNAL"))) exitWith {};
 
   switch (toUpper _newCameraMode) do {
     case "INTERNAL": {
@@ -47,7 +47,7 @@
   _NVGBattery = _unit getVariable ["FCLA_NVG_Battery", FCLA_NVG_Initial_Battery];
   _currentTurret = _vehicle unitTurret _unit;
 
-  _notInFFVSeat = !(_currentTurret in _FFVSeats);
+  _notInFFVSeat = _currentTurret in _FFVSeats;
   _hasNotNVGBattery = if (FCLA_NVG_Require_Battery) then {_NVGBattery <= 0;} else {false;};
   _severalConditions = [_unit, [4, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16]] call FCLA_Common_fnc_severalConditions;
   _visionModeDesactivated = _newVisionMode == 0;

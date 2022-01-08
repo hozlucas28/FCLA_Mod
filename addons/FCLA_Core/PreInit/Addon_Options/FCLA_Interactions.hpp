@@ -109,11 +109,11 @@
 
 
 /* ---------------------------- VISIÓN NOCTURNA ---------------------------- */
-/*
+
 [
 	"FCLA_NVG_Require_Battery", "CHECKBOX",
 	["¿NVGs requieren baterías?", "Al activar las gafas de visión nocturna requeriran de baterías para poder funcionar correctamente.\n¡SE PODRÁN RECARGAR A TRAVEZ DEL MENÚ ACE 3D, SI SE TIENE BATERÍAS NVG EN EL INVENTARIO!"],
-	["FCLA Interacciones", "Visión nocturna"],
+	["FCLA Interacciones", "Visión nocturna (SIN TERMINAR)"],
 	true,
 	GLOBAL,
 	{},
@@ -124,7 +124,7 @@
 [
 	"FCLA_NVG_Initial_Battery", "SLIDER",
 	["Batería inicial", "Determina el porcentaje de batería inicial con la que contaran las visiones nocturnas."],
-	["FCLA Interacciones", "Visión nocturna"],
+	["FCLA Interacciones", "Visión nocturna (SIN TERMINAR)"],
 	[0, 100, 0, 0],
 	GLOBAL,
 	{},
@@ -135,10 +135,9 @@
 [
 	"FCLA_NVG_Battery_Life_Time", "SLIDER",
 	["Duración de la batería", "Determina la duración de la batería en minutos."],
-	["FCLA Interacciones", "Visión nocturna"],
+	["FCLA Interacciones", "Visión nocturna (SIN TERMINAR)"],
 	[5, 180, 30, 0],
 	GLOBAL,
 	{},
 	false
 ] call CBA_fnc_addSetting;
-*/

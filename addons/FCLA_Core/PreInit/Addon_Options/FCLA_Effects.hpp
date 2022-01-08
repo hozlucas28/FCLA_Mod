@@ -31,6 +31,7 @@
 	false
 ] call CBA_fnc_addSetting;
 
+
 [
 	"FCLA_Planes_Ground_Smoke", "CHECKBOX",
 	["¿Levantar polvo?", "Si se activa los aviones levantaran una estela de polvo si vuelan a menos de 50 metros y con una velocidad de 150km."],
@@ -55,6 +56,7 @@
 	false
 ] call CBA_fnc_addSetting;
 
+
 [
 	"FCLA_Inventory_Sounds", "CHECKBOX",
 	["¿Al abrir/cerrar inventario?", "Si se activa se reproducira un sonido cuando ser abra/cierre el inventario y cuando mueva/agarre un item."],
@@ -64,6 +66,7 @@
 	{},
 	false
 ] call CBA_fnc_addSetting;
+
 
 [
 	"FCLA_visionMode_Sounds", "CHECKBOX",
@@ -75,9 +78,10 @@
 	false
 ] call CBA_fnc_addSetting;
 
+
 [
-	"FCLA_Helmet_Hit_Sounds", "CHECKBOX",
-	["¿Al recibir un impacto en el casco?", "Si se activa se reproducira un sonido cuando la unidad reciba un impacto en su casco."],
+	"FCLA_Aim_Sounds", "CHECKBOX",
+	["¿Al apuntar con la mira del arma?", "Si se activa se reproducira una serie de sonidos cuando se apunte con el arma."],
 	["FCLA Efectos", "Sonidos personalizados"],
 	true,
 	GLOBAL,
@@ -85,9 +89,10 @@
 	false
 ] call CBA_fnc_addSetting;
 
+
 [
-	"FCLA_Aim_Sounds", "CHECKBOX",
-	["¿Al apuntar con la mira del arma?", "Si se activa se reproducira una serie de sonidos cuando se apunte con el arma."],
+	"FCLA_Helmet_Hit_Sounds", "CHECKBOX",
+	["¿Al recibir un impacto en el casco?", "Si se activa se reproducira un sonido cuando la unidad reciba un impacto en su casco."],
 	["FCLA Efectos", "Sonidos personalizados"],
 	true,
 	GLOBAL,
