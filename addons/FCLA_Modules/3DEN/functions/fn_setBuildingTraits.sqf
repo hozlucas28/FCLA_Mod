@@ -15,6 +15,7 @@
                          ["_isCuratorPlaced", false, [true], 0]
                         ];
 _mode = _this select 0;
+_assignedEntity = _module getVariable ["FCLA_Assigned_Entity", objNull];
 _notifyBuilding = _module getVariable ["FCLA_Notify_Building", false];
 _assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _isRepairFacility = _module getVariable ["FCLA_isRepair_Facility", false];

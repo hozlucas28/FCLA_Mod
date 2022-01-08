@@ -4,21 +4,6 @@
 |********************************************************************************/
 
 class Curator {
-  class setCBRNConfigurationCurator {
-    file = "\FCLA_Modules\Curator\functions\fn_setCBRNConfiguration.sqf";
-    postInit = 1;
-  };
-
-  class setCBRNContaminatedZoneCurator {
-    file = "\FCLA_Modules\Curator\functions\fn_setCBRNContaminatedZone.sqf";
-    postInit = 1;
-  };
-
-  class addDragAndCarryCurator {
-    file = "\FCLA_Modules\Curator\functions\fn_addDragAndCarry.sqf";
-    postInit = 1;
-  };
-
   class changeRadioRangeCurator {
     file = "\FCLA_Modules\Curator\functions\fn_changeRadioRange.sqf";
     postInit = 1;
@@ -41,6 +26,21 @@ class Curator {
 
   class setAmbientFiredCurator {
     file = "\FCLA_Modules\Curator\functions\fn_setAmbientFired.sqf";
+    postInit = 1;
+  };
+
+  class setCBRNConfigurationCurator {
+    file = "\FCLA_Modules\Curator\functions\fn_setCBRNConfiguration.sqf";
+    postInit = 1;
+  };
+
+  class setCBRNContaminatedZoneCurator {
+    file = "\FCLA_Modules\Curator\functions\fn_setCBRNContaminatedZone.sqf";
+    postInit = 1;
+  };
+
+  class setDragAndCarryCurator {
+    file = "\FCLA_Modules\Curator\functions\fn_setDragAndCarry.sqf";
     postInit = 1;
   };
 
@@ -101,6 +101,11 @@ class Curator {
 
   class spawnSmokeSignalCurator {
     file = "\FCLA_Modules\Curator\functions\fn_spawnSmokeSignal.sqf";
+    postInit = 1;
+  };
+
+  class switchAutoHoverCurator {
+    file = "\FCLA_Modules\Curator\functions\fn_switchAutoHover.sqf";
     postInit = 1;
   };
 

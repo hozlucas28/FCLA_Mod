@@ -104,7 +104,7 @@
       _module setVariable ["FCLA_Ammo", _magazine, true];
       _module setVariable ["FCLA_Weapon", _weapon, true];
       _module setVariable ["FCLA_Assigned_Curator", player, true];
-      _module setVariable ["FCLA_Assigned_Vehicle", _attachedObject, true];
+      _module setVariable ["FCLA_Assigned_Entity", _attachedObject, true];
       _module setVariable ["FCLA_Minimum_Shots", round _minimumShots, true];
       _module setVariable ["FCLA_Maximum_Shots", round _maximumShots, true];
       _module setVariable ["FCLA_Minimum_Delay", round _minimumDelay, true];

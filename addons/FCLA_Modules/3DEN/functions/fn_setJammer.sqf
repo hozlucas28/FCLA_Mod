@@ -14,6 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
+_assignedEntity = _module getVariable ["FCLA_Assigned_Entity", objNull];
 _assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
@@ -27,7 +28,7 @@ _canBeDisabled = _module getVariable ["FCLA_Deactivatable", false];
 _affectVehicles = _module getVariable ["FCLA_Affect_Vehicles", false];
 _needHackingDevice = _module getVariable ["FCLA_Need_Hacking_Device", false];
 _numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count _synchronizedObjects;
-_jammerMaxRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1]) <= -1) then {worldSize * 2;} else {selectMax [_moduleArea select 0, _moduleArea select 1];};
+_jammerMaxRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1]) <= 0) then {worldSize * 2;} else {selectMax [_moduleArea select 0, _moduleArea select 1];};
 
 
 
@@ -61,12 +62,13 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
   {
-    _isHidden = isObjectHidden _x;
-    if (_isHidden) exitWith {};
-    _affectedRadioRange = linearConversion [_jammerMaxRad, _jammerQuarterOfMaxRad, _x distance _jammerSource, _normalRadioRange, 0, true];
-    _x setVariable ["tf_sendingDistanceMultiplicator", _affectedRadioRange, true];
-    _x setVariable ["tf_receivingDistanceMultiplicator", _affectedRadioRange, true];
-    if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
+    _isNotHidden = !isObjectHidden _x;
+    if (_isNotHidden) then {
+      _affectedRadioRange = linearConversion [_jammerMaxRad, _jammerQuarterOfMaxRad, _x distance _jammerSource, _normalRadioRange, 0, true];
+      _x setVariable ["tf_sendingDistanceMultiplicator", _affectedRadioRange, true];
+      _x setVariable ["tf_receivingDistanceMultiplicator", _affectedRadioRange, true];
+      if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
+    };
   } forEach _unitsInArea;
 
   if (_affectVehicles) then {

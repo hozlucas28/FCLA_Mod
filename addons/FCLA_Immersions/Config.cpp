@@ -23,6 +23,7 @@ class CfgPatches {
 class CfgFunctions {
 	class FCLA_Immersions {
 		#include "\FCLA_Immersions\Kick_Door\CfgFunction.hpp"
+		#include "\FCLA_Immersions\Auto_Hover\CfgFunction.hpp"
 		#include "\FCLA_Immersions\Turbulences\CfgFunctions.hpp"
 		#include "\FCLA_Immersions\Building_Stairs\CfgFunctions.hpp"
 		#include "\FCLA_Immersions\TFAR_Animations\CfgFunctions.hpp"

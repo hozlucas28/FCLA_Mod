@@ -15,6 +15,7 @@ class 3DEN {
   class spawnWindGust3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_spawnWindGust.sqf";};
   class initEMP3DEN {file = "\FCLA_Modules\3DEN\functions\EMP\fn_initEMP.sqf";};
   class spawnEMP3DEN {file = "\FCLA_Modules\3DEN\functions\EMP\fn_spawnEMP.sqf";};
+  class savePosition3DEN {file = "\FCLA_Modules\3DEN\functions\Save_Position\fn_savePosition.sqf";};
   class setPosition3DEN {file = "\FCLA_Modules\3DEN\functions\Save_Position\fn_setPosition.sqf";};
   class changeRadioRange3DEN {file = "\FCLA_Modules\3DEN\functions\fn_changeRadioRange.sqf";};
   class createInjuries3DEN {file = "\FCLA_Modules\3DEN\functions\fn_createInjuries.sqf";};
@@ -26,6 +27,7 @@ class 3DEN {
   class setAdvancedVehicleDamage3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setAdvancedVehicleDamage.sqf";};
   class setAmbientFired3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setAmbientFired.sqf";};
   class setBuildingTraits3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setBuildingTraits.sqf";};
+  class setDragAndCarry3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setDragAndCarry.sqf";};
   class setID3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setID.sqf";};
   class setIntroduction3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setIntroduction.sqf";};
   class setJammer3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setJammer.sqf";};
@@ -33,5 +35,6 @@ class 3DEN {
   class setRadio3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setRadio.sqf";};
   class showSubtitle3DEN {file = "\FCLA_Modules\3DEN\functions\fn_showSubtitle.sqf";};
   class spawnSmokeSignal3DEN {file = "\FCLA_Modules\3DEN\functions\fn_spawnSmokeSignal.sqf";};
+  class switchAutoHover3DEN {file = "\FCLA_Modules\3DEN\functions\fn_switchAutoHover.sqf";};
   class switchLights3DEN {file = "\FCLA_Modules\3DEN\functions\fn_switchLights.sqf";};
 };

@@ -37,8 +37,8 @@ if (_engineState) then {
   }, 0, [_plane, _engineOne, _engineTwo]] call CBA_fnc_addPerFrameHandler;
   _plane setVariable ["FCLA_Planes_perFrameHandler_ID", _handle, true];
 } else {
-  _perFrameHandlerID = _plane getVariable ["FCLA_Planes_perFrameHandler_ID", -1000];
-  if (_perFrameHandlerID == -1000) exitWith {};
+  _perFrameHandlerID = _plane getVariable ["FCLA_Planes_perFrameHandler_ID", -1];
+  if (_perFrameHandlerID <= -1) exitWith {};
   [_perFrameHandlerID] call CBA_fnc_removePerFrameHandler;
   _plane setVariable ["FCLA_Planes_perFrameHandler_ID", nil, true];
 };

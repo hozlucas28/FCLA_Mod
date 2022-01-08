@@ -62,7 +62,7 @@
      _module = createAgent ["FCLA_Module_Radio", _position, [], 0, "CAN_COLLIDE"];
      _module synchronizeObjectsAdd [_attachedObject];
      _module setVariable ["FCLA_Has_Radio", _hasRadio, true];
-     _module setVariable ["FCLA_Assigned_Vehicle", _attachedObject, true];
+     _module setVariable ["FCLA_Assigned_Entity", _attachedObject, true];
      _module setVariable ["FCLA_Radio_Side", toLower _radioSideSelected, true];
      _text = if (_hasRadio) then {"RADIO AÑADIDA AL VEHÍCULO CON ÉXITO";} else {"SE HA ELIMINADO LA RADIO DEL VEHÍCULO";};
      [_text] call ZEN_Common_fnc_showMessage;

@@ -14,6 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
+_assignedEntity = _module getVariable ["FCLA_Assigned_Entity", objNull];
 _assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (_synchronizedObjects isEqualTo []) || (!_isActivated) || (_forceDeactivation)) exitWith {};
@@ -35,11 +36,12 @@ if ((_typeOfInjury == "") || (_levelOfInjury <= 0) || (_areNotCompatibleSynchron
 
 //Provocar lesiones.
 {
-  if ((isObjectHidden _x) || !(isDamageAllowed _x) || !(_x in allUnits) || (_x isKindOf "EmptyDetector")) exitWith {};
-  ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_x, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true]], _x] call CBA_fnc_targetEvent;
-  _x setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
-  [_x, _forceUnconsciousness] call ACE_Medical_fnc_setUnconscious;
-  ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_x]], _x] call CBA_fnc_targetEvent;
+  if (!(isObjectHidden _x) && (isDamageAllowed _x) && (_x in allUnits) && !(_x isKindOf "EmptyDetector")) then {
+    ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_x, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true]], _x] call CBA_fnc_targetEvent;
+    _x setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
+    [_x, _forceUnconsciousness] call ACE_Medical_fnc_setUnconscious;
+    ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_x]], _x] call CBA_fnc_targetEvent;
+  };
 } forEach _synchronizedObjects;
 
 

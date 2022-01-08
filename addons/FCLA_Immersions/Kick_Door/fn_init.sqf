@@ -27,7 +27,7 @@ _this spawn {
   private "_intersects";
   {
     _intersects = ([_building, _x] intersect [_beginPos, _endPos]);
-    if (count (_intersects select 0) > 0) exitwith {_intersects}
+    if (count (_intersects select 0) > 0) exitwith {_intersects;};
   } forEach ["VIEW", "GEOM", "FIRE"];
 
 

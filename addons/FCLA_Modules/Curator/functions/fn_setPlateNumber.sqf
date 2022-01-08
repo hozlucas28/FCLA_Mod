@@ -32,7 +32,7 @@
     (_this select 1) params ["_position", "_attachedObject"];
     _module = createAgent ["FCLA_Module_Plate_Number", _position, [], 0, "CAN_COLLIDE"];
     _module synchronizeObjectsAdd [_attachedObject];
-    _module setVariable ["FCLA_Assigned_Vehicle", _attachedObject, true];
+    _module setVariable ["FCLA_Assigned_Entity", _attachedObject, true];
     _module setVariable ["FCLA_New_Plate_Number", _newPlateNumber, true];
     ["MATRÍCULA MODIFICADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, [_position, _attachedObject]] call ZEN_Dialog_fnc_Create;

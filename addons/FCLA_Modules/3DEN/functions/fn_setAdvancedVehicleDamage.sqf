@@ -15,6 +15,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
+_assignedEntity = _module getVariable ["FCLA_Assigned_Entity", objNull];
 _assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (_synchronizedObjects isEqualTo []) || (!_isActivated) || (_forceDeactivation)) exitWith {};
@@ -32,8 +33,9 @@ if (_areNotCompatibleSynchronizedObjects) exitWith {["¡Error! El/Un módulo 'As
 
 //Evitar daño fatal al vehículo.
 {
-  if (!(_x in vehicles) || (_x isKindOf "EmptyDetector")) exitWith {};
-  [_x, _damageWeaponsState, _damageItemsState] call FCLA_Common_fnc_setAdvancedVehicleDamage;
+  if ((_x in vehicles) && !(_x isKindOf "EmptyDetector")) then {
+    [_x, _damageWeaponsState, _damageItemsState] call FCLA_Common_fnc_setAdvancedVehicleDamage;
+  };
 } forEach _synchronizedObjects;
 
 

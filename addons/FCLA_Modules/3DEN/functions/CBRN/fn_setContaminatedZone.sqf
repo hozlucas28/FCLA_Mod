@@ -14,6 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
+_assignedEntity = _module getVariable ["FCLA_Assigned_Entity", objNull];
 _assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
 if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
@@ -23,7 +24,7 @@ if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exi
 //Verificar argumentos.
 _moduleArea = _module getVariable ["objectArea", [0, 0, 0, false, -1]];
 _threatLevel = _module getVariable ["FCLA_Threat_Level", 0];
-_contaminationMaxRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1]) <= -1) then {worldSize * 2;} else {selectMax [_moduleArea select 0, _moduleArea select 1];};
+_contaminationMaxRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1]) <= 0) then {worldSize * 2;} else {selectMax [_moduleArea select 0, _moduleArea select 1];};
 if (_threatLevel <= 0) exitWith {["¡Error! El/Un módulo 'Área contaminada (CBRN)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
@@ -41,10 +42,14 @@ if (_threatLevel <= 0) exitWith {["¡Error! El/Un módulo 'Área contaminada (CB
   if (_isNotAlive) exitWith {
     {
       _contaminatedAreas = _x getVariable ["FCLA_Contaminated_Areas", []];
-      if (!(_module in _contaminatedAreas)) exitWith {};
-      _contaminatedAreas = _contaminatedAreas - [_module];
-      if (_contaminatedAreas isEqualTo []) exitWith {_x setVariable ["FCLA_Contaminated_Areas", nil, true];};
-      _x setVariable ["FCLA_Contaminated_Areas", _contaminatedAreas, true];
+      if (_module in _contaminatedAreas) then {
+        _contaminatedAreas = _contaminatedAreas - [_module];
+        if (_contaminatedAreas isEqualTo []) then {
+          _x setVariable ["FCLA_Contaminated_Areas", nil, true];
+        } else {
+          _x setVariable ["FCLA_Contaminated_Areas", _contaminatedAreas, true];
+        };
+      };
     } forEach (_playersInArea + _playersNotInMaxRad);
     [_handle] call CBA_fnc_removePerFrameHandler;
   };
@@ -78,17 +83,22 @@ if (_threatLevel <= 0) exitWith {["¡Error! El/Un módulo 'Área contaminada (CB
 
   {
     _contaminatedAreas = _x getVariable ["FCLA_Contaminated_Areas", []];
-    if (_module in _contaminatedAreas) exitWith {};
-    _contaminatedAreas pushBack _module;
-    _x setVariable ["FCLA_Contaminated_Areas", _contaminatedAreas, true];
+    if (!(_module in _contaminatedAreas)) then {
+      _contaminatedAreas pushBack _module;
+      _x setVariable ["FCLA_Contaminated_Areas", _contaminatedAreas, true];
+    };
   } forEach _playersInMaxRad;
 
   {
     _contaminatedAreas = _x getVariable ["FCLA_Contaminated_Areas", []];
-    if (!(_module in _contaminatedAreas)) exitWith {};
-    _contaminatedAreas = _contaminatedAreas - [_module];
-    if (_contaminatedAreas isEqualTo []) exitWith {_x setVariable ["FCLA_Contaminated_Areas", nil, true];};
-    _x setVariable ["FCLA_Contaminated_Areas", _contaminatedAreas, true];
+    if (_module in _contaminatedAreas) then {
+      _contaminatedAreas = _contaminatedAreas - [_module];
+      if (_contaminatedAreas isEqualTo []) then {
+        _x setVariable ["FCLA_Contaminated_Areas", nil, true];
+      } else {
+        _x setVariable ["FCLA_Contaminated_Areas", _contaminatedAreas, true];
+      };
+    };
   } forEach _playersNotInMaxRad;
 }, 1, [_module, _moduleArea, _contaminationMaxRad, (25 * _contaminationMaxRad) / 100, _threatLevel]] call CBA_fnc_addPerFrameHandler;
 

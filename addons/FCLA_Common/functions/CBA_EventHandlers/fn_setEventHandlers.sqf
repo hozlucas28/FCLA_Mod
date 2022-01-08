@@ -11,9 +11,11 @@
 ["FCLA_Change_Radio_Range", {
   missionNamespace setVariable ["FCLA_TFAR_Multiplicator", _this select 1, true];
   {
-    if (_x in vehicles) exitWith {_x setVariable ["tf_range", _this select 1, true];};
-    _x setVariable ["tf_sendingDistanceMultiplicator", _this select 1, true];
-    _x setVariable ["tf_receivingDistanceMultiplicator", _this select 1, true];
+    if (_x in vehicles) then {_x setVariable ["tf_range", _this select 1, true];};
+    if (_x in allUnits) then {
+      _x setVariable ["tf_sendingDistanceMultiplicator", _this select 1, true];
+      _x setVariable ["tf_receivingDistanceMultiplicator", _this select 1, true];
+    };
   } forEach (_this select 0);
 }] call CBA_fnc_addEventHandler;
 

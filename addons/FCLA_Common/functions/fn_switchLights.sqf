@@ -57,13 +57,13 @@ _state = switch (_state) do {
 
 //Obtener lamparas y vehículos.
 _lampsInRad = if (_rad isEqualType 0) then {
-  if (_rad > -1) then {nearestObjects [_centerPos, ["Building"], _rad];} else {_allBuildings};
+  if (_rad > 0) then {nearestObjects [_centerPos, ["Building"], _rad];} else {_allBuildings};
 } else {
   _allBuildings select {_x inArea [_center, _rad select 0, _rad select 1, _rad select 2, _rad select 3, _rad select 4]};
 };
 
 _vehiclesInRad = if (_rad isEqualType 0) then {
-  if (_rad > -1) then {nearestObjects [_centerPos, ["LandVehicle", "Air", "Ship"], _rad];} else {_allVehicles};
+  if (_rad > 0) then {nearestObjects [_centerPos, ["LandVehicle", "Air", "Ship"], _rad];} else {_allVehicles};
 } else {
   _allVehicles select {_x inArea [_center, _rad select 0, _rad select 1, _rad select 2, _rad select 3, _rad select 4]};
 };

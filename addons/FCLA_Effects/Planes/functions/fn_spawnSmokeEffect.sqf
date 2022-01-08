@@ -40,7 +40,7 @@ if (_groundType == "Dust") exitWith {
 
 
 //Agua.
-if (_groundType == "Water") exitWith {
+if (_groundType == "Water") then {
   _particleObjOne = createVehicle ["#particlesource", _surfacePos, [], 0, "CAN_COLLIDE"];
   _particleObjOne setParticleParams [
   ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 12, 13, 0], "", "Billboard",

@@ -10,7 +10,7 @@
 
 class FCLA_Module_Building_Traits: Module_F {
   author = "hozlucas28";
-	displayName = "Asignar rasgos";
+	displayName = "Asignar rasgos (ACE)";
   icon = "\FCLA_Modules\3DEN\data\Building.paa";
   portrait = "\FCLA_Modules\3DEN\data\Building.paa";
 	category = "FCLA_Modules";
@@ -54,6 +54,6 @@ class FCLA_Module_Building_Traits: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Permite asignar rasgos ACE (centro médico o instalación de reparación) a una construcción del mapa, es decir, una construcción que no fue colocada por el editor."};
+		description[] =	{"Permite asignar los rasgos centro médico y/o instalación de reparación a una construcción del mapa, es decir, una construcción que no fue colocada por el editor."};
 	};
 };
