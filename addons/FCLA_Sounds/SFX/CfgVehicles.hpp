@@ -296,6 +296,16 @@ class FCLA_SFX_Nuclear_Alarm: Sound {
 
 /* --------------------------- RADIOS/MEGÁFONOS ---------------------------- */
 
+class FCLA_SFX_Music_Radio: Sound {
+	_generalMacro = "FCLA_SFX_Music_Radio";
+	author = "hozlucas28";
+	displayName = "FCLA - Radio (música)";
+	sound = "FCLA_SFX_Music_Radio";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
 class FCLA_SFX_Arab_Music_Radio: Sound {
 	_generalMacro = "FCLA_SFX_Arab_Music_Radio";
 	author = "hozlucas28";
@@ -416,6 +426,26 @@ class FCLA_SFX_Speaker_Curfew: Sound {
 };
 
 
+class FCLA_SFX_Radio_Static: Sound {
+	_generalMacro = "FCLA_SFX_Radio_Static";
+	author = "hozlucas28";
+	displayName = "FCLA - Radio (estática)";
+	sound = "FCLA_SFX_Radio_Static";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Radio_Morse_Code: Sound {
+	_generalMacro = "FCLA_SFX_Radio_Morse_Code";
+	author = "hozlucas28";
+	displayName = "FCLA - Radio (código morse)";
+	sound = "FCLA_SFX_Radio_Morse_Code";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
 
 /* --------------------------- CAMPOS DE BATALLA --------------------------- */
 
@@ -484,6 +514,16 @@ class FCLA_SFX_Battlefield_Fire_Fight_Urban: Sound {
 	author = "hozlucas28";
 	displayName = "FCLA - Campo de batalla (urbano)";
 	sound = "FCLA_SFX_Battlefield_Fire_Fight_Urban";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Jet_Flying: Sound {
+	_generalMacro = "FCLA_SFX_Jet_Flying";
+	author = "hozlucas28";
+	displayName = "FCLA - Caza sobrevolando";
+	sound = "FCLA_SFX_Jet_Flying";
 	scope = 2;
   scopeCurator = 2;
 };
@@ -567,6 +607,16 @@ class FCLA_SFX_Attempt_Start_Vehicle: Sound {
 	author = "hozlucas28";
 	displayName = "FCLA - Intento de encender vehículo";
 	sound = "FCLA_SFX_Attempt_Start_Vehicle";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
+class FCLA_SFX_Spaceship_Breaking_in_Atmosphere: Sound {
+	_generalMacro = "FCLA_SFX_Spaceship_Breaking_in_Atmosphere";
+	author = "hozlucas28";
+	displayName = "FCLA - Nave alienígena arribando (atmósfera)";
+	sound = "FCLA_SFX_Spaceship_Breaking_in_Atmosphere";
 	scope = 2;
   scopeCurator = 2;
 };

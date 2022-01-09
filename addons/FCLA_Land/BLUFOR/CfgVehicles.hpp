@@ -456,7 +456,7 @@ class FCLA_B_CTRG_Offroad_01_comms_F: FCLA_B_Offroad_01_comms_F {
 
 
 
-/* --------------------------- FURGONETAS (OTAN) --------------------------- */
+/* ----------------------------- COCHES (OTAN) ----------------------------- */
 
 class FCLA_B_Van_02_Transport_F: C_Van_02_transport_F {
   author = "hozlucas28";
@@ -539,7 +539,7 @@ class FCLA_B_Van_02_Medevac_F: C_Van_02_medevac_F {
 
 
 
-/* --------------------- FURGONETAS (OTAN - PACÍFICO) ---------------------- */
+/* ----------------------- COCHES (OTAN - PACÍFICO) ------------------------ */
 
 class FCLA_B_T_Van_02_Transport_F: FCLA_B_Van_02_Transport_F {
   author = "hozlucas28";

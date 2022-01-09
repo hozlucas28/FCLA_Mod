@@ -296,6 +296,16 @@ class FCLA_SFX_Nuclear_Alarm {
 
 /* --------------------------- RADIOS/MEGÁFONOS ---------------------------- */
 
+class FCLA_SFX_Music_Radio {
+	name = "FCLA - Radio (música)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Music_Radio.ogg", 20, 1, 50, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+	duration = 78;
+};
+
+
 class FCLA_SFX_Arab_Music_Radio {
 	name = "FCLA - Radio (música árabe)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
@@ -416,8 +426,28 @@ class FCLA_SFX_Speaker_Curfew {
 };
 
 
+class FCLA_SFX_Radio_Static {
+	name = "FCLA - Radio (estática)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Radio_Static.ogg", 8, 1, 50, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+	duration = 113;
+};
 
-/* --------------------------- CAMPOS DE BATALLA --------------------------- */
+
+class FCLA_SFX_Radio_Morse_Code {
+	name = "FCLA - Radio (código morse)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Radio_Morse_Code.ogg", 8, 1, 50, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+	duration = 23;
+};
+
+
+
+/* --------------------------- CAMPO DE BATALLA ---------------------------- */
 
 class FCLA_SFX_Battlefield_Sniper_Suppression {
 	name = "FCLA - Supresión de francotirador";
@@ -491,10 +521,20 @@ class FCLA_SFX_Battlefield_Fire_Fight_v3 {
 class FCLA_SFX_Battlefield_Fire_Fight_Urban {
 	name = "FCLA - Campo de batalla (urbano)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
-	sound[] = {"\FCLA_Sounds\SFX\data\Battlefields\Fire_Fight_Urban.ogg", 3, 1, 1000, 1, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Battlefields\Fire_Fight_Urban.ogg", 3, 1, 5000, 1, 0, 0, 0};
 	sounds[] = {"sound"};
 	titles[] = {};
 	duration = 45;
+};
+
+
+class FCLA_SFX_Jet_Flying {
+	name = "FCLA - Caza sobrevolando";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Battlefields\Jet_Flying.ogg", 2, 1, 2000, 1, 0, 0, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+	duration = 15;
 };
 
 
@@ -508,6 +548,46 @@ class FCLA_SFX_IED_Ring {
 	sounds[] = {"sound"};
 	titles[] = {};
 	duration = 8;
+};
+
+
+class FCLA_SFX_Attempt_Start_Vehicle {
+	name = "FCLA - Intento de encender vehículo";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Others\Attempt_Start_Vehicle.ogg", 15, 1, 50, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+	duration = 171;
+};
+
+
+class FCLA_SFX_Barking_Dogs_v1 {
+	name = "FCLA - Perros ladrando (v1)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Others\Barking_Dogs_v1.ogg", 15, 1, 50, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+	duration = 20;
+};
+
+
+class FCLA_SFX_Barking_Dogs_v2 {
+	name = "FCLA - Perros ladrando (v2)";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Others\Barking_Dogs_v2.ogg", 15, 1, 400, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+	duration = 129;
+};
+
+
+class FCLA_SFX_Burning_Vehicle {
+	name = "FCLA - Vehículo en llamas";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Others\Burning_Vehicle.ogg", 10, 1, 50, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+	duration = 53;
 };
 
 
@@ -538,44 +618,4 @@ class FCLA_SFX_Generator_v3 {
 	sounds[] = {"sound"};
 	titles[] = {};
 	duration = 5;
-};
-
-
-class FCLA_SFX_Burning_Vehicle {
-	name = "FCLA - Vehículo en llamas";
-	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
-	sound[] = {"\FCLA_Sounds\SFX\data\Others\Burning_Vehicle.ogg", 10, 1, 50, 1, 1, 1, 0};
-	sounds[] = {"sound"};
-	titles[] = {};
-	duration = 53;
-};
-
-
-class FCLA_SFX_Barking_Dogs_v1 {
-	name = "FCLA - Perros ladrando (v1)";
-	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
-	sound[] = {"\FCLA_Sounds\SFX\data\Others\Barking_Dogs_v1.ogg", 15, 1, 50, 1, 1, 1, 0};
-	sounds[] = {"sound"};
-	titles[] = {};
-	duration = 20;
-};
-
-
-class FCLA_SFX_Barking_Dogs_v2 {
-	name = "FCLA - Perros ladrando (v2)";
-	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
-	sound[] = {"\FCLA_Sounds\SFX\data\Others\Barking_Dogs_v2.ogg", 15, 1, 400, 1, 1, 1, 0};
-	sounds[] = {"sound"};
-	titles[] = {};
-	duration = 129;
-};
-
-
-class FCLA_SFX_Attempt_Start_Vehicle {
-	name = "FCLA - Intento de encender vehículo";
-	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
-	sound[] = {"\FCLA_Sounds\SFX\data\Others\Attempt_Start_Vehicle.ogg", 15, 1, 50, 1, 1, 1, 0};
-	sounds[] = {"sound"};
-	titles[] = {};
-	duration = 171;
 };

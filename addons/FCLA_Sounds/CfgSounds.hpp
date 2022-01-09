@@ -233,6 +233,14 @@ class FCLA_Nuclear_Alarm {
 
 /* --------------------------- RADIOS/MEGÁFONOS ---------------------------- */
 
+class FCLA_Music_Radio {
+	name = "FCLA - Radio (música)";
+	sound[] = {"\FCLA_Sounds\sounds\Music_Radio.ogg", "db+20", 1};
+	titles[] = {};
+  duration = 78;
+};
+
+
 class FCLA_Arab_Music_Radio {
 	name = "FCLA - Radio (música árabe)";
 	sound[] = {"\FCLA_Sounds\sounds\Arab_Music_Radio.ogg", "db+15", 1};
@@ -319,6 +327,34 @@ class FCLA_Call_To_Prayer_Speech {
 	titles[] = {};
   duration = 152;
 };
+
+
+class FCLA_Radio_Static {
+	name = "FCLA - Radio (estática)";
+	sound[] = {"\FCLA_Sounds\sounds\Radio_Static.ogg", "db+15", 1};
+	titles[] = {};
+  duration = 113;
+};
+
+
+class FCLA_Radio_Morse_Code {
+	name = "FCLA - Radio (código morse)";
+	sound[] = {"\FCLA_Sounds\sounds\Radio_Morse_Code.ogg", "db+15", 1};
+	titles[] = {};
+  duration = 23;
+};
+
+
+
+/* --------------------------- CAMPO DE BATALLA ---------------------------- */
+
+class FCLA_Jet_Flying {
+  name = "FCLA - Caza sobrevolando";
+  sound[] = {"\FCLA_Sounds\sounds\Jet_Flying.ogg", "db+1", 1};
+  titles[] = {};
+  duration = 15;
+};
+
 
 
 /* --------------------------------- MIEDO --------------------------------- */
@@ -426,4 +462,12 @@ class FCLA_Generator_v3 {
 	sound[] = {"\FCLA_Sounds\sounds\Generator_v3.wav", "db+11", 1};
 	titles[] = {};
   duration = 5;
+};
+
+
+class FCLA_Spaceship_Breaking_in_Atmosphere {
+	name = "FCLA - Nave alienígena arribando (atmósfera)";
+	sound[] = {"\FCLA_Sounds\sounds\Spaceship_Breaking_in_Atmosphere.ogg", "db+20", 1};
+	titles[] = {};
+  duration = 9;
 };

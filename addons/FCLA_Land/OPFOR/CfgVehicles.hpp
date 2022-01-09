@@ -52,30 +52,6 @@ class FCLA_O_Spetsnaz_Radar_System_02_F: O_Radar_System_02_F {
 
 
 
-/* ----------------------- COCHES (CSAT - PACÍFICO) ------------------------ */
-
-class O_T_Truck_03_Science_Containers_ghex_F: O_T_Truck_03_ammo_ghex_F {
-  author = "hozlucas28";
-  displayName = "Typhoon (anticuerpos Atrox)";
-  editorPreview = "\FCLA_Land\OPFOR\data\pictures\O_T_Truck_03_Science_Containers_ghex_F.jpg";
-  hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4"};
-  hiddenSelectionsTextures[] = {"a3\soft_f_exp\truck_03\data\truck_03_ext01_ghex_co.paa", "a3\soft_f_exp\truck_03\data\truck_03_ext02_ghex_co.paa", "a3\soft_f_exp\truck_03\data\truck_03_cargo_ghex_co.paa", "a3\missions_f_oldman\data\img\decals\science_containers_tempest_co.paa"};
-  ACE_Rearm_defaultSupply = -1;
-  scope = 2;
-  scopeCurator = 2;
-
-  textureList[] = {"RusHex", 1};
-  class TextureSources {
-    class RusHex {
-      author = "hozlucas28";
-      displayName = "Hex verde";
-      textures[] = {"a3\soft_f_exp\truck_03\data\truck_03_ext01_ghex_co.paa", "a3\soft_f_exp\truck_03\data\truck_03_ext02_ghex_co.paa", "a3\soft_f_exp\truck_03\data\truck_03_cargo_ghex_co.paa", "a3\missions_f_oldman\data\img\decals\science_containers_tempest_co.paa"};
-    };
-  };
-};
-
-
-
 /* -------------------------- COCHES (SPETSNAZ) ---------------------------- */
 
 class FCLA_O_Spetsnaz_LSV_02_unarmed_F: O_T_LSV_02_unarmed_F {
@@ -299,7 +275,7 @@ class FCLA_O_Spetsnaz_Truck_03_ammo_ghex_F: O_T_Truck_03_ammo_ghex_F {
 
 
 
-/* -------------------------- FURGONETAS (CSAT) ---------------------------- */
+/* ---------------------------- COCHES (CSAT) ------------------------------ */
 
 class FCLA_O_Van_02_Transport_F: C_Van_02_transport_F {
   author = "hozlucas28";
@@ -382,7 +358,7 @@ class FCLA_O_Van_02_Medevac_F: C_Van_02_medevac_F {
 
 
 
-/* --------------------- FURGONETAS (CSAT - PACÍFICO) ---------------------- */
+/* ----------------------- COCHES (CSAT - PACÍFICO) ------------------------ */
 
 class FCLA_O_T_Van_02_Transport_F: FCLA_O_Van_02_Transport_F {
   author = "hozlucas28";
@@ -459,6 +435,27 @@ class FCLA_O_T_Van_02_Medevac_F: FCLA_O_Van_02_Medevac_F {
       author = "hozlucas28";
       displayName = "Oliva";
       textures[] = {"\FCLA_Land\OPFOR\data\FCLA_O_T_Van_02_Medevac_F_1.paa", "\a3\soft_f_orange\van_02\data\van_wheel_co.paa", "\FCLA_Land\OPFOR\data\FCLA_O_T_Van_02_Medevac_F_2.paa"};
+    };
+  };
+};
+
+
+class O_T_Truck_03_Science_Containers_ghex_F: O_T_Truck_03_ammo_ghex_F {
+  author = "hozlucas28";
+  displayName = "Typhoon (anticuerpos Atrox)";
+  editorPreview = "\FCLA_Land\OPFOR\data\pictures\O_T_Truck_03_Science_Containers_ghex_F.jpg";
+  hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4"};
+  hiddenSelectionsTextures[] = {"a3\soft_f_exp\truck_03\data\truck_03_ext01_ghex_co.paa", "a3\soft_f_exp\truck_03\data\truck_03_ext02_ghex_co.paa", "a3\soft_f_exp\truck_03\data\truck_03_cargo_ghex_co.paa", "a3\missions_f_oldman\data\img\decals\science_containers_tempest_co.paa"};
+  ACE_Rearm_defaultSupply = -1;
+  scope = 2;
+  scopeCurator = 2;
+
+  textureList[] = {"RusHex", 1};
+  class TextureSources {
+    class RusHex {
+      author = "hozlucas28";
+      displayName = "Hex verde";
+      textures[] = {"a3\soft_f_exp\truck_03\data\truck_03_ext01_ghex_co.paa", "a3\soft_f_exp\truck_03\data\truck_03_ext02_ghex_co.paa", "a3\soft_f_exp\truck_03\data\truck_03_cargo_ghex_co.paa", "a3\missions_f_oldman\data\img\decals\science_containers_tempest_co.paa"};
     };
   };
 };

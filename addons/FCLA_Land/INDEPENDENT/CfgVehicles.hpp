@@ -5,7 +5,7 @@
 
 
 
-/* --------------------------- FURGONETAS (AAF) ---------------------------- */
+/* ----------------------------- COCHES (AAF) ------------------------------ */
 
 class FCLA_I_Van_02_Transport_F: C_Van_02_transport_F {
   author = "hozlucas28";
