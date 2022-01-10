@@ -7,12 +7,12 @@
 
 /* --------------------------- CARTUCHERA LIGERA --------------------------- */
 
-class V_PlateCarrier_Digital: V_PlateCarrier_Kerry {
+class V_PlateCarrier_Marine: V_PlateCarrier_Kerry {
   author = "hozlucas28";
   displayName = "Cartuchera ligera (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
@@ -30,12 +30,12 @@ class V_PlateCarrier_Digital: V_PlateCarrier_Kerry {
 
 /* ------------------------------ CARTUCHERA ------------------------------- */
 
-class V_PlateCarrier2_Digital: V_PlateCarrier2_rgr {
+class V_PlateCarrier2_Marine: V_PlateCarrier2_rgr {
   author = "hozlucas28";
   displayName = "Cartuchera (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier2_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier2_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier2_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier2_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
@@ -53,12 +53,12 @@ class V_PlateCarrier2_Digital: V_PlateCarrier2_rgr {
 
 /* -------------------- CARTUCHERAS LIGERAS (PELOTONES) -------------------- */
 
-class V_PlateCarrier_FCLA_Digital: V_PlateCarrier_Kerry {
+class V_PlateCarrier_FCLA_Marine: V_PlateCarrier_Kerry {
   author = "hozlucas28";
   displayName = "Cartuchera ligera [FCLA] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier_FCLA_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier_FCLA_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier_FCLA_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier_FCLA_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
@@ -73,72 +73,72 @@ class V_PlateCarrier_FCLA_Digital: V_PlateCarrier_Kerry {
 };
 
 
-class V_PlateCarrier_Takana_Digital: V_PlateCarrier_FCLA_Digital {
+class V_PlateCarrier_Takana_Marine: V_PlateCarrier_FCLA_Marine {
   author = "hozlucas28";
   displayName = "Cartuchera ligera [Takana] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier_Takana_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier_Takana_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier_Takana_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier_Takana_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
 };
 
 
-class V_PlateCarrier_Jaguar_Digital: V_PlateCarrier_FCLA_Digital {
+class V_PlateCarrier_Jaguar_Marine: V_PlateCarrier_FCLA_Marine {
   author = "hozlucas28";
   displayName = "Cartuchera ligera [Jaguar] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier_Jaguar_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier_Jaguar_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier_Jaguar_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier_Jaguar_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
 };
 
 
-class V_PlateCarrier_Condor_Digital: V_PlateCarrier_FCLA_Digital {
+class V_PlateCarrier_Condor_Marine: V_PlateCarrier_FCLA_Marine {
   author = "hozlucas28";
   displayName = "Cartuchera ligera [Condor] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier_Condor_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier_Condor_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier_Condor_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier_Condor_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
 };
 
 
-class V_PlateCarrier_Salamandra_Digital: V_PlateCarrier_FCLA_Digital {
+class V_PlateCarrier_Salamandra_Marine: V_PlateCarrier_FCLA_Marine {
   author = "hozlucas28";
   displayName = "Cartuchera ligera [Salamandra] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier_Salamandra_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier_Salamandra_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier_Salamandra_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier_Salamandra_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
 };
 
 
-class V_PlateCarrier_Anaconda_Digital: V_PlateCarrier_FCLA_Digital {
+class V_PlateCarrier_Anaconda_Marine: V_PlateCarrier_FCLA_Marine {
   author = "hozlucas28";
   displayName = "Cartuchera ligera [Anaconda] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier_Anaconda_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier_Anaconda_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier_Anaconda_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier_Anaconda_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
 };
 
 
-class V_PlateCarrier_Quetzal_Digital: V_PlateCarrier_FCLA_Digital {
+class V_PlateCarrier_Quetzal_Marine: V_PlateCarrier_FCLA_Marine {
   author = "hozlucas28";
   displayName = "Cartuchera ligera [Quetzal] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier_Quetzal_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier_Quetzal_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier_Quetzal_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier_Quetzal_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
@@ -148,12 +148,12 @@ class V_PlateCarrier_Quetzal_Digital: V_PlateCarrier_FCLA_Digital {
 
 /* ------------------------ CARTUCHERAS (PELOTONES) ------------------------ */
 
-class V_PlateCarrier2_FCLA_Digital: V_PlateCarrier2_rgr {
+class V_PlateCarrier2_FCLA_Marine: V_PlateCarrier2_rgr {
   author = "hozlucas28";
   displayName = "Cartuchera [FCLA] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier2_FCLA_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier2_FCLA_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier2_FCLA_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier2_FCLA_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
@@ -168,72 +168,72 @@ class V_PlateCarrier2_FCLA_Digital: V_PlateCarrier2_rgr {
 };
 
 
-class V_PlateCarrier2_Takana_Digital: V_PlateCarrier2_FCLA_Digital {
+class V_PlateCarrier2_Takana_Marine: V_PlateCarrier2_FCLA_Marine {
   author = "hozlucas28";
   displayName = "Cartuchera [Takana] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier2_Takana_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier2_Takana_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier2_Takana_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier2_Takana_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
 };
 
 
-class V_PlateCarrier2_Jaguar_Digital: V_PlateCarrier2_FCLA_Digital {
+class V_PlateCarrier2_Jaguar_Marine: V_PlateCarrier2_FCLA_Marine {
   author = "hozlucas28";
   displayName = "Cartuchera [Jaguar] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier2_Jaguar_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier2_Jaguar_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier2_Jaguar_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier2_Jaguar_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
 };
 
 
-class V_PlateCarrier2_Condor_Digital: V_PlateCarrier2_FCLA_Digital {
+class V_PlateCarrier2_Condor_Marine: V_PlateCarrier2_FCLA_Marine {
   author = "hozlucas28";
   displayName = "Cartuchera [Condor] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier2_Condor_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier2_Condor_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier2_Condor_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier2_Condor_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
 };
 
 
-class V_PlateCarrier2_Salamandra_Digital: V_PlateCarrier2_FCLA_Digital {
+class V_PlateCarrier2_Salamandra_Marine: V_PlateCarrier2_FCLA_Marine {
   author = "hozlucas28";
   displayName = "Cartuchera [Salamandra] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier2_Salamandra_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier2_Salamandra_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier2_Salamandra_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier2_Salamandra_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
 };
 
 
-class V_PlateCarrier2_Anaconda_Digital: V_PlateCarrier2_FCLA_Digital {
+class V_PlateCarrier2_Anaconda_Marine: V_PlateCarrier2_FCLA_Marine {
   author = "hozlucas28";
   displayName = "Cartuchera [Anaconda] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier2_Anaconda_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier2_Anaconda_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier2_Anaconda_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier2_Anaconda_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
 };
 
 
-class V_PlateCarrier2_Quetzal_Digital: V_PlateCarrier2_FCLA_Digital {
+class V_PlateCarrier2_Quetzal_Marine: V_PlateCarrier2_FCLA_Marine {
   author = "hozlucas28";
   displayName = "Cartuchera [Quetzal] (marina)";
-  //picture = "\FCLA_Vests\Marina\data\pictures\V_PlateCarrier2_Quetzal_Digital.paa";
+  //picture = "\FCLA_Vests\Marine\data\pictures\V_PlateCarrier2_Quetzal_Marine.paa";
   hiddenSelections[] = {"camo"};
-  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marina\data\V_PlateCarrier2_Quetzal_Digital.paa"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Marine\data\V_PlateCarrier2_Quetzal_Marine.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
@@ -243,11 +243,11 @@ class V_PlateCarrier2_Quetzal_Digital: V_PlateCarrier2_FCLA_Digital {
 
 /* ----------------- CARTUCHERAS LIGERAS (PERSONALIZADAS) ------------------ */
 
-#include "\FCLA_Vests\Marina\customs\Byron.hpp"
-#include "\FCLA_Vests\Marina\customs\Mario.hpp"
-#include "\FCLA_Vests\Marina\customs\Legion.hpp"
-#include "\FCLA_Vests\Marina\customs\Sagara.hpp"
-#include "\FCLA_Vests\Marina\customs\HozLucas.hpp"
-#include "\FCLA_Vests\Marina\customs\Kovalsky.hpp"
-#include "\FCLA_Vests\Marina\customs\Naretick.hpp"
-#include "\FCLA_Vests\Marina\customs\Ghostkiller.hpp"
+#include "\FCLA_Vests\Marine\customs\Byron.hpp"
+#include "\FCLA_Vests\Marine\customs\Mario.hpp"
+#include "\FCLA_Vests\Marine\customs\Legion.hpp"
+#include "\FCLA_Vests\Marine\customs\Sagara.hpp"
+#include "\FCLA_Vests\Marine\customs\HozLucas.hpp"
+#include "\FCLA_Vests\Marine\customs\Kovalsky.hpp"
+#include "\FCLA_Vests\Marine\customs\Naretick.hpp"
+#include "\FCLA_Vests\Marine\customs\Ghostkiller.hpp"

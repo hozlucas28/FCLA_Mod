@@ -31,6 +31,7 @@ class CfgVehicles {
 	class Vest_Base_F: WeaponHolder {};
 
 	#include "\FCLA_Vests\Digital\CfgVehicles.hpp"
+	#include "\FCLA_Vests\Marine\CfgVehicles.hpp"
 };
 
 
@@ -51,4 +52,5 @@ class CfgWeapons {
 	class V_PlateCarrier2_rgr_noflag_F: V_PlateCarrier2_rgr {};
 
 	#include "\FCLA_Vests\Digital\CfgWeapons.hpp"
+	#include "\FCLA_Vests\Marine\CfgWeapons.hpp"
 };
