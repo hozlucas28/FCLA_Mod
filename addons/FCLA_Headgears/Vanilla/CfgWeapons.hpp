@@ -9,7 +9,7 @@
 
 class H_Beret_FCLA_Black: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - FCLA (negra)";
+  displayName = "Boina [FCLA] (negra)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_FCLA_Black.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_FCLA_Black.paa";
@@ -21,7 +21,7 @@ class H_Beret_FCLA_Black: H_Beret_02 {
 
 class H_Beret_Takana_Black: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Takana (negra)";
+  displayName = "Boina [Takana] (negra)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Takana_Black.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Takana_Black.paa";
@@ -33,7 +33,7 @@ class H_Beret_Takana_Black: H_Beret_02 {
 
 class H_Beret_Jaguar_Black: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Jaguar (negra)";
+  displayName = "Boina [Jaguar] (negra)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Jaguar_Black.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Jaguar_Black.paa";
@@ -45,7 +45,7 @@ class H_Beret_Jaguar_Black: H_Beret_02 {
 
 class H_Beret_Condor_Black: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Condor (negra)";
+  displayName = "Boina [Condor] (negra)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Condor_Black.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Condor_Black.paa";
@@ -57,7 +57,7 @@ class H_Beret_Condor_Black: H_Beret_02 {
 
 class H_Beret_Salamandra_Black: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Salamandra (negra)";
+  displayName = "Boina [Salamandra] (negra)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Salamandra_Black.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Salamandra_Black.paa";
@@ -69,7 +69,7 @@ class H_Beret_Salamandra_Black: H_Beret_02 {
 
 class H_Beret_Anaconda_Black: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Anaconda (negra)";
+  displayName = "Boina [Anaconda] (negra)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Anaconda_Black.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Anaconda_Black.paa";
@@ -81,7 +81,7 @@ class H_Beret_Anaconda_Black: H_Beret_02 {
 
 class H_Beret_Quetzal_Black: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Quetzal (negra)";
+  displayName = "Boina [Quetzal] (negra)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Quetzal_Black.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Quetzal_Black.paa";
@@ -96,7 +96,7 @@ class H_Beret_Quetzal_Black: H_Beret_02 {
 
 class H_Beret_FCLA_Blue: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - FCLA (azul)";
+  displayName = "Boina [FCLA] (azul)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_FCLA_Blue.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_FCLA_Blue.paa";
@@ -108,7 +108,7 @@ class H_Beret_FCLA_Blue: H_Beret_02 {
 
 class H_Beret_Takana_Blue: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Takana (azul)";
+  displayName = "Boina [Takana] (azul)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Takana_Blue.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Takana_Blue.paa";
@@ -120,7 +120,7 @@ class H_Beret_Takana_Blue: H_Beret_02 {
 
 class H_Beret_Jaguar_Blue: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Jaguar (azul)";
+  displayName = "Boina [Jaguar] (azul)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Jaguar_Blue.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Jaguar_Blue.paa";
@@ -132,7 +132,7 @@ class H_Beret_Jaguar_Blue: H_Beret_02 {
 
 class H_Beret_Condor_Blue: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Condor (azul)";
+  displayName = "Boina [Condor] (azul)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Condor_Blue.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Condor_Blue.paa";
@@ -144,7 +144,7 @@ class H_Beret_Condor_Blue: H_Beret_02 {
 
 class H_Beret_Salamandra_Blue: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Salamandra (azul)";
+  displayName = "Boina [Salamandra] (azul)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Salamandra_Blue.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Salamandra_Blue.paa";
@@ -156,7 +156,7 @@ class H_Beret_Salamandra_Blue: H_Beret_02 {
 
 class H_Beret_Anaconda_Blue: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Anaconda (azul)";
+  displayName = "Boina [Anaconda] (azul)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Anaconda_Blue.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Anaconda_Blue.paa";
@@ -168,7 +168,7 @@ class H_Beret_Anaconda_Blue: H_Beret_02 {
 
 class H_Beret_Quetzal_Blue: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Quetzal (azul)";
+  displayName = "Boina [Quetzal] (azul)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Quetzal_Blue.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Quetzal_Blue.paa";
@@ -183,7 +183,7 @@ class H_Beret_Quetzal_Blue: H_Beret_02 {
 
 class H_Beret_FCLA_Red: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - FCLA (roja)";
+  displayName = "Boina [FCLA] (roja)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_FCLA_Red.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_FCLA_Red.paa";
@@ -195,7 +195,7 @@ class H_Beret_FCLA_Red: H_Beret_02 {
 
 class H_Beret_Takana_Red: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Takana (roja)";
+  displayName = "Boina [Takana] (roja)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Takana_Red.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Takana_Red.paa";
@@ -207,7 +207,7 @@ class H_Beret_Takana_Red: H_Beret_02 {
 
 class H_Beret_Jaguar_Red: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Jaguar (roja)";
+  displayName = "Boina [Jaguar] (roja)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Jaguar_Red.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Jaguar_Red.paa";
@@ -219,7 +219,7 @@ class H_Beret_Jaguar_Red: H_Beret_02 {
 
 class H_Beret_Condor_Red: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Condor (roja)";
+  displayName = "Boina [Condor] (roja)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Condor_Red.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Condor_Red.paa";
@@ -231,7 +231,7 @@ class H_Beret_Condor_Red: H_Beret_02 {
 
 class H_Beret_Salamandra_Red: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Salamandra (roja)";
+  displayName = "Boina [Salamandra] (roja)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Salamandra_Red.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Salamandra_Red.paa";
@@ -243,7 +243,7 @@ class H_Beret_Salamandra_Red: H_Beret_02 {
 
 class H_Beret_Anaconda_Red: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Anaconda (roja)";
+  displayName = "Boina [Anaconda] (roja)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Anaconda_Red.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Anaconda_Red.paa";
@@ -255,7 +255,7 @@ class H_Beret_Anaconda_Red: H_Beret_02 {
 
 class H_Beret_Quetzal_Red: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Quetzal (roja)";
+  displayName = "Boina [Quetzal] (roja)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Quetzal_Red.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Quetzal_Red.paa";
@@ -270,7 +270,7 @@ class H_Beret_Quetzal_Red: H_Beret_02 {
 
 class H_Beret_FCLA_Green: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - FCLA (verde)";
+  displayName = "Boina [FCLA] (verde)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_FCLA_Green.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_FCLA_Green.paa";
@@ -282,7 +282,7 @@ class H_Beret_FCLA_Green: H_Beret_02 {
 
 class H_Beret_Takana_Green: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Takana (verde)";
+  displayName = "Boina [Takana] (verde)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Takana_Green.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Takana_Green.paa";
@@ -294,7 +294,7 @@ class H_Beret_Takana_Green: H_Beret_02 {
 
 class H_Beret_Jaguar_Green: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Jaguar (verde)";
+  displayName = "Boina [Jaguar] (verde)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Jaguar_Green.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Jaguar_Green.paa";
@@ -306,7 +306,7 @@ class H_Beret_Jaguar_Green: H_Beret_02 {
 
 class H_Beret_Condor_Green: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Condor (verde)";
+  displayName = "Boina [Condor] (verde)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Condor_Green.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Condor_Green.paa";
@@ -318,7 +318,7 @@ class H_Beret_Condor_Green: H_Beret_02 {
 
 class H_Beret_Salamandra_Green: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Salamandra (verde)";
+  displayName = "Boina [Salamandra] (verde)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Salamandra_Green.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Salamandra_Green.paa";
@@ -330,7 +330,7 @@ class H_Beret_Salamandra_Green: H_Beret_02 {
 
 class H_Beret_Anaconda_Green: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Anaconda (verde)";
+  displayName = "Boina [Anaconda] (verde)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Anaconda_Green.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Anaconda_Green.paa";
@@ -342,7 +342,7 @@ class H_Beret_Anaconda_Green: H_Beret_02 {
 
 class H_Beret_Quetzal_Green: H_Beret_02 {
   author = "hozlucas28";
-  displayName = "Boina - Quetzal (verde)";
+  displayName = "Boina [Quetzal] (verde)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_Beret_Quetzal_Green.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_Beret_Quetzal_Green.paa";
@@ -393,7 +393,7 @@ class H_HelmetB_Camo_Tropical: H_HelmetB_camo {
 
 class H_HelmetSpecB_FCLA: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - FCLA";
+  displayName = "Casco de combate mejorado [FCLA]";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_FCLA.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_FCLA.paa";
@@ -405,7 +405,7 @@ class H_HelmetSpecB_FCLA: H_HelmetSpecB {
 
 class H_HelmetSpecB_Takana: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Takana";
+  displayName = "Casco de combate mejorado [Takana]";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Takana.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Takana.paa";
@@ -417,7 +417,7 @@ class H_HelmetSpecB_Takana: H_HelmetSpecB {
 
 class H_HelmetSpecB_Jaguar: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Jaguar";
+  displayName = "Casco de combate mejorado [Jaguar]";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Jaguar.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Jaguar.paa";
@@ -429,7 +429,7 @@ class H_HelmetSpecB_Jaguar: H_HelmetSpecB {
 
 class H_HelmetSpecB_Condor: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Condor";
+  displayName = "Casco de combate mejorado [Condor]";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Condor.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Condor.paa";
@@ -441,7 +441,7 @@ class H_HelmetSpecB_Condor: H_HelmetSpecB {
 
 class H_HelmetSpecB_Salamandra: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Salamandra";
+  displayName = "Casco de combate mejorado [Salamandra]";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Salamandra.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Salamandra.paa";
@@ -453,7 +453,7 @@ class H_HelmetSpecB_Salamandra: H_HelmetSpecB {
 
 class H_HelmetSpecB_Anaconda: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Anaconda";
+  displayName = "Casco de combate mejorado [Anaconda]";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Anaconda.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Anaconda.paa";
@@ -465,7 +465,7 @@ class H_HelmetSpecB_Anaconda: H_HelmetSpecB {
 
 class H_HelmetSpecB_Quetzal: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Quetzal";
+  displayName = "Casco de combate mejorado [Quetzal]";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Quetzal.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Quetzal.paa";
@@ -480,7 +480,7 @@ class H_HelmetSpecB_Quetzal: H_HelmetSpecB {
 
 class H_HelmetSpecB_FCLA_Snake: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - FCLA (piel de serpiente)";
+  displayName = "Casco de combate mejorado [FCLA] (piel de serpiente)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_FCLA_Snake.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_FCLA_Snake.paa";
@@ -492,7 +492,7 @@ class H_HelmetSpecB_FCLA_Snake: H_HelmetSpecB {
 
 class H_HelmetSpecB_Takana_Snake: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Takana (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Takana] (piel de serpiente)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Takana_Snake.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Takana_Snake.paa";
@@ -504,7 +504,7 @@ class H_HelmetSpecB_Takana_Snake: H_HelmetSpecB {
 
 class H_HelmetSpecB_Jaguar_Snake: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Jaguar (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Jaguar] (piel de serpiente)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Jaguar_Snake.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Jaguar_Snake.paa";
@@ -516,7 +516,7 @@ class H_HelmetSpecB_Jaguar_Snake: H_HelmetSpecB {
 
 class H_HelmetSpecB_Condor_Snake: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Condor (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Condor] (piel de serpiente)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Condor_Snake.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Condor_Snake.paa";
@@ -528,7 +528,7 @@ class H_HelmetSpecB_Condor_Snake: H_HelmetSpecB {
 
 class H_HelmetSpecB_Salamandra_Snake: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Salamandra (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Salamandra] (piel de serpiente)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Salamandra_Snake.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Salamandra_Snake.paa";
@@ -540,7 +540,7 @@ class H_HelmetSpecB_Salamandra_Snake: H_HelmetSpecB {
 
 class H_HelmetSpecB_Anaconda_Snake: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Anaconda (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Anaconda] (piel de serpiente)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Anaconda_Snake.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Anaconda_Snake.paa";
@@ -552,7 +552,7 @@ class H_HelmetSpecB_Anaconda_Snake: H_HelmetSpecB {
 
 class H_HelmetSpecB_Quetzal_Snake: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Quetzal (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Quetzal] (piel de serpiente)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Quetzal_Snake.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Quetzal_Snake.paa";
@@ -567,7 +567,7 @@ class H_HelmetSpecB_Quetzal_Snake: H_HelmetSpecB {
 
 class H_HelmetSpecB_FCLA_Tropical: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - FCLA (tropical)";
+  displayName = "Casco de combate mejorado [FCLA] (tropical)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_FCLA_Tropical.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_FCLA_Tropical.paa";
@@ -579,7 +579,7 @@ class H_HelmetSpecB_FCLA_Tropical: H_HelmetSpecB {
 
 class H_HelmetSpecB_Takana_Tropical: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Takana (tropical)";
+  displayName = "Casco de combate mejorado [Takana] (tropical)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Takana_Tropical.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Takana_Tropical.paa";
@@ -591,7 +591,7 @@ class H_HelmetSpecB_Takana_Tropical: H_HelmetSpecB {
 
 class H_HelmetSpecB_Jaguar_Tropical: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Jaguar (tropical)";
+  displayName = "Casco de combate mejorado [Jaguar] (tropical)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Jaguar_Tropical.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Jaguar_Tropical.paa";
@@ -603,7 +603,7 @@ class H_HelmetSpecB_Jaguar_Tropical: H_HelmetSpecB {
 
 class H_HelmetSpecB_Condor_Tropical: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Condor (tropical)";
+  displayName = "Casco de combate mejorado [Condor] (tropical)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Condor_Tropical.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Condor_Tropical.paa";
@@ -615,7 +615,7 @@ class H_HelmetSpecB_Condor_Tropical: H_HelmetSpecB {
 
 class H_HelmetSpecB_Salamandra_Tropical: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Salamandra (tropical)";
+  displayName = "Casco de combate mejorado [Salamandra] (tropical)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Salamandra_Tropical.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Salamandra_Tropical.paa";
@@ -627,7 +627,7 @@ class H_HelmetSpecB_Salamandra_Tropical: H_HelmetSpecB {
 
 class H_HelmetSpecB_Anaconda_Tropical: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Anaconda (tropical)";
+  displayName = "Casco de combate mejorado [Anaconda] (tropical)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Anaconda_Tropical.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Anaconda_Tropical.paa";
@@ -639,7 +639,7 @@ class H_HelmetSpecB_Anaconda_Tropical: H_HelmetSpecB {
 
 class H_HelmetSpecB_Quetzal_Tropical: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Quetzal (tropical)";
+  displayName = "Casco de combate mejorado [Quetzal] (tropical)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Quetzal_Tropical.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Quetzal_Tropical.paa";
@@ -654,7 +654,7 @@ class H_HelmetSpecB_Quetzal_Tropical: H_HelmetSpecB {
 
 class H_HelmetSpecB_Medic: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Médico";
+  displayName = "Casco de combate mejorado [Médico]";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Medic.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Medic.paa";
@@ -666,7 +666,7 @@ class H_HelmetSpecB_Medic: H_HelmetSpecB {
 
 class H_HelmetSpecB_Medic_Snake: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Médico (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Médico] (piel de serpiente)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Medic_Snake.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Medic_Snake.paa";
@@ -678,7 +678,7 @@ class H_HelmetSpecB_Medic_Snake: H_HelmetSpecB {
 
 class H_HelmetSpecB_Medic_Tropical: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Médico (tropical)";
+  displayName = "Casco de combate mejorado [Médico] (tropical)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Medic_Tropical.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Medic_Tropical.paa";
@@ -693,7 +693,7 @@ class H_HelmetSpecB_Medic_Tropical: H_HelmetSpecB {
 
 class H_PilotHelmetHeli_B_Quetzal: H_PilotHelmetHeli_B {
   author = "hozlucas28";
-  displayName = "Casco de piloto de helicóptero - Quetzal [OTAN]";
+  displayName = "Casco de piloto de helicóptero [Quetzal] [OTAN]";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_PilotHelmetHeli_B_Quetzal.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_PilotHelmetHeli_B_Quetzal.paa";
@@ -708,7 +708,7 @@ class H_PilotHelmetHeli_B_Quetzal: H_PilotHelmetHeli_B {
 
 class H_CrewHelmetHeli_B_Quetzal: H_CrewHelmetHeli_B {
   author = "hozlucas28";
-  displayName = "Casco de tripulación de helicóptero - Quetzal [OTAN]";
+  displayName = "Casco de tripulación de helicóptero [Quetzal] [OTAN]";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_CrewHelmetHeli_B_Quetzal.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_CrewHelmetHeli_B_Quetzal.paa";

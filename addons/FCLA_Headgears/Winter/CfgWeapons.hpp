@@ -71,7 +71,7 @@ class H_HelmetIA_Winter_v4: H_HelmetIA {
 
 
 
-/* ----------------------- CASCOS DE COMBATE LIGERO ------------------------ */
+/* ------------------------ CASCO DE COMBATE LIGERO ------------------------ */
 
 class H_HelmetB_Light_Winter_v1: H_HelmetB_light {
   author = "hozlucas28";
@@ -86,7 +86,7 @@ class H_HelmetB_Light_Winter_v1: H_HelmetB_light {
 
 
 
-/* ---------------------- CASCOS DE COMBATE MEJORADOS ---------------------- */
+/* ----------------------- CASCO DE COMBATE MEJORADO ----------------------- */
 
 class H_HelmetSpecB_Winter_v2: H_HelmetSpecB {
   author = "hozlucas28";
@@ -105,7 +105,7 @@ class H_HelmetSpecB_Winter_v2: H_HelmetSpecB {
 
 class H_HelmetSpecB_FCLA_Winter_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - FCLA (invierno v2)";
+  displayName = "Casco de combate mejorado [FCLA] (invierno v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Winter\data\H_HelmetSpecB_FCLA_Winter_v2.paa"};
   picture = "\FCLA_Headgears\Winter\data\pictures\H_HelmetSpecB_FCLA_Winter_v2.paa";
@@ -117,7 +117,7 @@ class H_HelmetSpecB_FCLA_Winter_v2: H_HelmetSpecB {
 
 class H_HelmetSpecB_Takana_Winter_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Takana (invierno v2)";
+  displayName = "Casco de combate mejorado [Takana] (invierno v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Winter\data\H_HelmetSpecB_Takana_Winter_v2.paa"};
   picture = "\FCLA_Headgears\Winter\data\pictures\H_HelmetSpecB_Takana_Winter_v2.paa";
@@ -128,7 +128,7 @@ class H_HelmetSpecB_Takana_Winter_v2: H_HelmetSpecB {
 
 
 class H_HelmetSpecB_Jaguar_Winter_v2: H_HelmetSpecB {
-  displayName = "Casco de combate mejorado - Jaguar (invierno v2)";
+  displayName = "Casco de combate mejorado [Jaguar] (invierno v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Winter\data\H_HelmetSpecB_Jaguar_Winter_v2.paa"};
   picture = "\FCLA_Headgears\Winter\data\pictures\H_HelmetSpecB_Jaguar_Winter_v2.paa";
@@ -140,7 +140,7 @@ class H_HelmetSpecB_Jaguar_Winter_v2: H_HelmetSpecB {
 
 class H_HelmetSpecB_Condor_Winter_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Condor (invierno v2)";
+  displayName = "Casco de combate mejorado [Condor] (invierno v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Winter\data\H_HelmetSpecB_Condor_Winter_v2.paa"};
   picture = "\FCLA_Headgears\Winter\data\pictures\H_HelmetSpecB_Condor_Winter_v2.paa";
@@ -152,7 +152,7 @@ class H_HelmetSpecB_Condor_Winter_v2: H_HelmetSpecB {
 
 class H_HelmetSpecB_Salamandra_Winter_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Salamandra (invierno v2)";
+  displayName = "Casco de combate mejorado [Salamandra] (invierno v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Winter\data\H_HelmetSpecB_Salamandra_Winter_v2.paa"};
   picture = "\FCLA_Headgears\Winter\data\pictures\H_HelmetSpecB_Salamandra_Winter_v2.paa";
@@ -164,7 +164,7 @@ class H_HelmetSpecB_Salamandra_Winter_v2: H_HelmetSpecB {
 
 class H_HelmetSpecB_Anaconda_Winter_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Anaconda (invierno v2)";
+  displayName = "Casco de combate mejorado [Anaconda] (invierno v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Winter\data\H_HelmetSpecB_Anaconda_Winter_v2.paa"};
   picture = "\FCLA_Headgears\Winter\data\pictures\H_HelmetSpecB_Anaconda_Winter_v2.paa";
@@ -175,7 +175,7 @@ class H_HelmetSpecB_Anaconda_Winter_v2: H_HelmetSpecB {
 
 
 class H_HelmetSpecB_Quetzal_Winter_v2: H_HelmetSpecB {
-  displayName = "Casco de combate mejorado - Quetzal (invierno v2)";
+  displayName = "Casco de combate mejorado [Quetzal] (invierno v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Winter\data\H_HelmetSpecB_Quetzal_Winter_v2.paa"};
   picture = "\FCLA_Headgears\Winter\data\pictures\H_HelmetSpecB_Quetzal_Winter_v2.paa";
@@ -186,11 +186,11 @@ class H_HelmetSpecB_Quetzal_Winter_v2: H_HelmetSpecB {
 
 
 
-/* ----------------- CASCOS DE COMBATE MEJORADOS (MÉDICO) ------------------ */
+/* ------------------ CASCO DE COMBATE MEJORADO (MÉDICO) ------------------- */
 
 class H_HelmetSpecB_Medic_Winter_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Médico (invierno v2)";
+  displayName = "Casco de combate mejorado [Médico] (invierno v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Winter\data\H_HelmetSpecB_Medic_Winter_v2.paa"};
   picture = "\FCLA_Headgears\Winter\data\pictures\H_HelmetSpecB_Medic_Winter_v2.paa";

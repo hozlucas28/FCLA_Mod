@@ -5,7 +5,7 @@
 
 
 
-/* --------------------------- CASCOS DE COMBATE --------------------------- */
+/* --------------------------- CASCO DE COMBATE ---------------------------- */
 
 class Item_H_HelmetB_Digital: Headgear_Base_F {
   author = "hozlucas28";
@@ -72,7 +72,7 @@ class Item_H_HelmetB_Camo_Digital: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_FCLA_Digital: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - FCLA (digital)";
+  displayName = "Casco de combate mejorado [FCLA] (digital)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -91,7 +91,7 @@ class Item_H_HelmetSpecB_FCLA_Digital: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Takana_Digital: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Takana (digital)";
+  displayName = "Casco de combate mejorado [Takana] (digital)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -110,7 +110,7 @@ class Item_H_HelmetSpecB_Takana_Digital: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Jaguar_Digital: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Jaguar (digital)";
+  displayName = "Casco de combate mejorado [Jaguar] (digital)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -129,7 +129,7 @@ class Item_H_HelmetSpecB_Jaguar_Digital: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Condor_Digital: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Condor (digital)";
+  displayName = "Casco de combate mejorado [Condor] (digital)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -148,7 +148,7 @@ class Item_H_HelmetSpecB_Condor_Digital: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Salamandra_Digital: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Salamandra (digital)";
+  displayName = "Casco de combate mejorado [Salamandra] (digital)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -167,7 +167,7 @@ class Item_H_HelmetSpecB_Salamandra_Digital: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Anaconda_Digital: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Anaconda (digital)";
+  displayName = "Casco de combate mejorado [Anaconda] (digital)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -186,7 +186,7 @@ class Item_H_HelmetSpecB_Anaconda_Digital: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Quetzal_Digital: Headgear_Base_F {
   author = "hozlucas28";
-displayName = "Casco de combate mejorado - Quetzal (digital)";
+displayName = "Casco de combate mejorado [Quetzal] (digital)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -204,11 +204,11 @@ displayName = "Casco de combate mejorado - Quetzal (digital)";
 
 
 
-/* ----------------- CASCOS DE COMBATE MEJORADOS (MÉDICO) ------------------ */
+/* ------------------ CASCO DE COMBATE MEJORADO (MÉDICO) ------------------- */
 
 class Item_H_HelmetSpecB_Medic_Digital: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Médico (digital)";
+  displayName = "Casco de combate mejorado [Médico] (digital)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";

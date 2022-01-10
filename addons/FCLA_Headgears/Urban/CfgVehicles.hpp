@@ -106,7 +106,7 @@ class Item_H_HelmetIA_Urban_v4: Headgear_Base_F {
 
 
 
-/* ----------------------- CASCOS DE COMBATE LIGERO ------------------------ */
+/* ------------------------ CASCO DE COMBATE LIGERO ------------------------ */
 
 class Item_H_HelmetB_Light_Urban_v1: Headgear_Base_F {
   author = "hozlucas28";
@@ -128,7 +128,7 @@ class Item_H_HelmetB_Light_Urban_v1: Headgear_Base_F {
 
 
 
-/* ---------------------- CASCOS DE COMBATE MEJORADOS ---------------------- */
+/* ----------------------- CASCO DE COMBATE MEJORADO ----------------------- */
 
 class Item_H_HelmetSpecB_Urban_v2: Headgear_Base_F {
   author = "hozlucas28";
@@ -154,7 +154,7 @@ class Item_H_HelmetSpecB_Urban_v2: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_FCLA_Urban_v2: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - FCLA (urbano v2)";
+  displayName = "Casco de combate mejorado [FCLA] (urbano v2)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -173,7 +173,7 @@ class Item_H_HelmetSpecB_FCLA_Urban_v2: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Takana_Urban_v2: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Takana (urbano v2)";
+  displayName = "Casco de combate mejorado [Takana] (urbano v2)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -192,7 +192,7 @@ class Item_H_HelmetSpecB_Takana_Urban_v2: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Jaguar_Urban_v2: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Jaguar (urbano v2)";
+  displayName = "Casco de combate mejorado [Jaguar] (urbano v2)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -211,7 +211,7 @@ class Item_H_HelmetSpecB_Jaguar_Urban_v2: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Condor_Urban_v2: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Condor (urbano v2)";
+  displayName = "Casco de combate mejorado [Condor] (urbano v2)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -230,7 +230,7 @@ class Item_H_HelmetSpecB_Condor_Urban_v2: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Salamandra_Urban_v2: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Salamandra (urbano v2)";
+  displayName = "Casco de combate mejorado [Salamandra] (urbano v2)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -249,7 +249,7 @@ class Item_H_HelmetSpecB_Salamandra_Urban_v2: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Anaconda_Urban_v2: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Anaconda (urbano v2)";
+  displayName = "Casco de combate mejorado [Anaconda] (urbano v2)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -268,7 +268,7 @@ class Item_H_HelmetSpecB_Anaconda_Urban_v2: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Quetzal_Urban_v2: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Quetzal (urbano v2)";
+  displayName = "Casco de combate mejorado [Quetzal] (urbano v2)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -286,11 +286,11 @@ class Item_H_HelmetSpecB_Quetzal_Urban_v2: Headgear_Base_F {
 
 
 
-/* ----------------- CASCOS DE COMBATE MEJORADOS (MÉDICO) ------------------ */
+/* ------------------ CASCO DE COMBATE MEJORADO (MÉDICO) ------------------- */
 
 class Item_H_HelmetSpecB_Medic_Urban_v2: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Médico (urbano v2)";
+  displayName = "Casco de combate mejorado [Médico] (urbano v2)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";

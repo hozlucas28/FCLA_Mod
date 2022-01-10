@@ -9,7 +9,7 @@
 
 class Item_H_Beret_FCLA_Black: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - FCLA (negra)";
+  displayName = "Boina [FCLA] (negra)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -28,7 +28,7 @@ class Item_H_Beret_FCLA_Black: Headgear_Base_F {
 
 class Item_H_Beret_Takana_Black: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Takana (negra)";
+  displayName = "Boina [Takana] (negra)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -47,7 +47,7 @@ class Item_H_Beret_Takana_Black: Headgear_Base_F {
 
 class Item_H_Beret_Jaguar_Black: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Jaguar (negra)";
+  displayName = "Boina [Jaguar] (negra)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -66,7 +66,7 @@ class Item_H_Beret_Jaguar_Black: Headgear_Base_F {
 
 class Item_H_Beret_Condor_Black: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Condor (negra)";
+  displayName = "Boina [Condor] (negra)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -85,7 +85,7 @@ class Item_H_Beret_Condor_Black: Headgear_Base_F {
 
 class Item_H_Beret_Salamandra_Black: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Salamandra (negra)";
+  displayName = "Boina [Salamandra] (negra)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -104,7 +104,7 @@ class Item_H_Beret_Salamandra_Black: Headgear_Base_F {
 
 class Item_H_Beret_Anaconda_Black: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Anaconda (negra)";
+  displayName = "Boina [Anaconda] (negra)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -123,7 +123,7 @@ class Item_H_Beret_Anaconda_Black: Headgear_Base_F {
 
 class Item_H_Beret_Quetzal_Black: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Quetzal (negra)";
+  displayName = "Boina [Quetzal] (negra)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -145,7 +145,7 @@ class Item_H_Beret_Quetzal_Black: Headgear_Base_F {
 
 class Item_H_Beret_FCLA_Blue: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - FCLA (azul)";
+  displayName = "Boina [FCLA] (azul)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -164,7 +164,7 @@ class Item_H_Beret_FCLA_Blue: Headgear_Base_F {
 
 class Item_H_Beret_Takana_Blue: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Takana (azul)";
+  displayName = "Boina [Takana] (azul)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -183,7 +183,7 @@ class Item_H_Beret_Takana_Blue: Headgear_Base_F {
 
 class Item_H_Beret_Jaguar_Blue: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Jaguar (azul)";
+  displayName = "Boina [Jaguar] (azul)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -202,7 +202,7 @@ class Item_H_Beret_Jaguar_Blue: Headgear_Base_F {
 
 class Item_H_Beret_Condor_Blue: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Condor (azul)";
+  displayName = "Boina [Condor] (azul)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -221,7 +221,7 @@ class Item_H_Beret_Condor_Blue: Headgear_Base_F {
 
 class Item_H_Beret_Salamandra_Blue: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Salamandra (azul)";
+  displayName = "Boina [Salamandra] (azul)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -240,7 +240,7 @@ class Item_H_Beret_Salamandra_Blue: Headgear_Base_F {
 
 class Item_H_Beret_Anaconda_Blue: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Anaconda (azul)";
+  displayName = "Boina [Anaconda] (azul)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -259,7 +259,7 @@ class Item_H_Beret_Anaconda_Blue: Headgear_Base_F {
 
 class Item_H_Beret_Quetzal_Blue: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Quetzal (azul)";
+  displayName = "Boina [Quetzal] (azul)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -281,7 +281,7 @@ class Item_H_Beret_Quetzal_Blue: Headgear_Base_F {
 
 class Item_H_Beret_FCLA_Red: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - FCLA (roja)";
+  displayName = "Boina [FCLA] (roja)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -300,7 +300,7 @@ class Item_H_Beret_FCLA_Red: Headgear_Base_F {
 
 class Item_H_Beret_Takana_Red: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Takana (roja)";
+  displayName = "Boina [Takana] (roja)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -319,7 +319,7 @@ class Item_H_Beret_Takana_Red: Headgear_Base_F {
 
 class Item_H_Beret_Jaguar_Red: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Jaguar (roja)";
+  displayName = "Boina [Jaguar] (roja)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -338,7 +338,7 @@ class Item_H_Beret_Jaguar_Red: Headgear_Base_F {
 
 class Item_H_Beret_Condor_Red: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Condor (roja)";
+  displayName = "Boina [Condor] (roja)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -357,7 +357,7 @@ class Item_H_Beret_Condor_Red: Headgear_Base_F {
 
 class Item_H_Beret_Salamandra_Red: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Salamandra (roja)";
+  displayName = "Boina [Salamandra] (roja)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -376,7 +376,7 @@ class Item_H_Beret_Salamandra_Red: Headgear_Base_F {
 
 class Item_H_Beret_Anaconda_Red: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Anaconda (roja)";
+  displayName = "Boina [Anaconda] (roja)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -395,7 +395,7 @@ class Item_H_Beret_Anaconda_Red: Headgear_Base_F {
 
 class Item_H_Beret_Quetzal_Red: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Quetzal (roja)";
+  displayName = "Boina [Quetzal] (roja)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -417,7 +417,7 @@ class Item_H_Beret_Quetzal_Red: Headgear_Base_F {
 
 class Item_H_Beret_FCLA_Green: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - FCLA (verde)";
+  displayName = "Boina [FCLA] (verde)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -436,7 +436,7 @@ class Item_H_Beret_FCLA_Green: Headgear_Base_F {
 
 class Item_H_Beret_Takana_Green: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Takana (verde)";
+  displayName = "Boina [Takana] (verde)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -455,7 +455,7 @@ class Item_H_Beret_Takana_Green: Headgear_Base_F {
 
 class Item_H_Beret_Jaguar_Green: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Jaguar (verde)";
+  displayName = "Boina [Jaguar] (verde)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -474,7 +474,7 @@ class Item_H_Beret_Jaguar_Green: Headgear_Base_F {
 
 class Item_H_Beret_Condor_Green: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Condor (verde)";
+  displayName = "Boina [Condor] (verde)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -493,7 +493,7 @@ class Item_H_Beret_Condor_Green: Headgear_Base_F {
 
 class Item_H_Beret_Salamandra_Green: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Salamandra (verde)";
+  displayName = "Boina [Salamandra] (verde)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -512,7 +512,7 @@ class Item_H_Beret_Salamandra_Green: Headgear_Base_F {
 
 class Item_H_Beret_Anaconda_Green: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Anaconda (verde)";
+  displayName = "Boina [Anaconda] (verde)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -531,7 +531,7 @@ class Item_H_Beret_Anaconda_Green: Headgear_Base_F {
 
 class Item_H_Beret_Quetzal_Green: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Boina - Quetzal (verde)";
+  displayName = "Boina [Quetzal] (verde)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Hats";
@@ -613,7 +613,7 @@ class Item_H_HelmetB_Camo_Tropical: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_FCLA: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - FCLA";
+  displayName = "Casco de combate mejorado [FCLA]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -632,7 +632,7 @@ class Item_H_HelmetSpecB_FCLA: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Takana: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Takana";
+  displayName = "Casco de combate mejorado [Takana]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -651,7 +651,7 @@ class Item_H_HelmetSpecB_Takana: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Jaguar: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Jaguar";
+  displayName = "Casco de combate mejorado [Jaguar]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -670,7 +670,7 @@ class Item_H_HelmetSpecB_Jaguar: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Condor: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Condor";
+  displayName = "Casco de combate mejorado [Condor]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -689,7 +689,7 @@ class Item_H_HelmetSpecB_Condor: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Salamandra: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Salamandra";
+  displayName = "Casco de combate mejorado [Salamandra]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -708,7 +708,7 @@ class Item_H_HelmetSpecB_Salamandra: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Anaconda: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Anaconda";
+  displayName = "Casco de combate mejorado [Anaconda]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -727,7 +727,7 @@ class Item_H_HelmetSpecB_Anaconda: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Quetzal: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Quetzal";
+  displayName = "Casco de combate mejorado [Quetzal]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -749,7 +749,7 @@ class Item_H_HelmetSpecB_Quetzal: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_FCLA_Snake: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - FCLA (piel de serpiente)";
+  displayName = "Casco de combate mejorado [FCLA] (piel de serpiente)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -768,7 +768,7 @@ class Item_H_HelmetSpecB_FCLA_Snake: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Takana_Snake: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Takana (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Takana] (piel de serpiente)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -787,7 +787,7 @@ class Item_H_HelmetSpecB_Takana_Snake: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Jaguar_Snake: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Jaguar (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Jaguar] (piel de serpiente)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -806,7 +806,7 @@ class Item_H_HelmetSpecB_Jaguar_Snake: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Condor_Snake: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Condor (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Condor] (piel de serpiente)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -825,7 +825,7 @@ class Item_H_HelmetSpecB_Condor_Snake: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Salamandra_Snake: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Salamandra (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Salamandra] (piel de serpiente)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -844,7 +844,7 @@ class Item_H_HelmetSpecB_Salamandra_Snake: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Anaconda_Snake: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Anaconda (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Anaconda] (piel de serpiente)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -863,7 +863,7 @@ class Item_H_HelmetSpecB_Anaconda_Snake: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Quetzal_Snake: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Quetzal (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Quetzal] (piel de serpiente)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -885,7 +885,7 @@ class Item_H_HelmetSpecB_Quetzal_Snake: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_FCLA_Tropical: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - FCLA (tropical)";
+  displayName = "Casco de combate mejorado [FCLA] (tropical)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -904,7 +904,7 @@ class Item_H_HelmetSpecB_FCLA_Tropical: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Takana_Tropical: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Takana (tropical)";
+  displayName = "Casco de combate mejorado [Takana] (tropical)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -923,7 +923,7 @@ class Item_H_HelmetSpecB_Takana_Tropical: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Jaguar_Tropical: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Jaguar (tropical)";
+  displayName = "Casco de combate mejorado [Jaguar] (tropical)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -942,7 +942,7 @@ class Item_H_HelmetSpecB_Jaguar_Tropical: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Condor_Tropical: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Condor (tropical)";
+  displayName = "Casco de combate mejorado [Condor] (tropical)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -961,7 +961,7 @@ class Item_H_HelmetSpecB_Condor_Tropical: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Salamandra_Tropical: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Salamandra (tropical)";
+  displayName = "Casco de combate mejorado [Salamandra] (tropical)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -980,7 +980,7 @@ class Item_H_HelmetSpecB_Salamandra_Tropical: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Anaconda_Tropical: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Anaconda (tropical)";
+  displayName = "Casco de combate mejorado [Anaconda] (tropical)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -999,7 +999,7 @@ class Item_H_HelmetSpecB_Anaconda_Tropical: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Quetzal_Tropical: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Quetzal (tropical)";
+  displayName = "Casco de combate mejorado [Quetzal] (tropical)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -1021,7 +1021,7 @@ class Item_H_HelmetSpecB_Quetzal_Tropical: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Medic: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Médico";
+  displayName = "Casco de combate mejorado [Médico]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -1040,7 +1040,7 @@ class Item_H_HelmetSpecB_Medic: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Medic_Snake: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Médico (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Médico] (piel de serpiente)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -1059,7 +1059,7 @@ class Item_H_HelmetSpecB_Medic_Snake: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Medic_Tropical: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Médico (tropical)";
+  displayName = "Casco de combate mejorado [Médico] (tropical)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -1081,7 +1081,7 @@ class Item_H_HelmetSpecB_Medic_Tropical: Headgear_Base_F {
 
 class Item_H_PilotHelmetHeli_B_Quetzal: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de piloto de helicóptero - Quetzal [OTAN]";
+  displayName = "Casco de piloto de helicóptero [Quetzal] [OTAN]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -1103,7 +1103,7 @@ class Item_H_PilotHelmetHeli_B_Quetzal: Headgear_Base_F {
 
 class Item_H_CrewHelmetHeli_B_Quetzal: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de tripulación de helicóptero - Quetzal [OTAN]";
+  displayName = "Casco de tripulación de helicóptero [Quetzal] [OTAN]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";

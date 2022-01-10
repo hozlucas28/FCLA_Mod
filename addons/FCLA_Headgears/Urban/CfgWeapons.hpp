@@ -71,7 +71,7 @@ class H_HelmetIA_Urban_v4: H_HelmetIA {
 
 
 
-/* ----------------------- CASCOS DE COMBATE LIGERO ------------------------ */
+/* ------------------------ CASCO DE COMBATE LIGERO ------------------------ */
 
 class H_HelmetB_Light_Urban_v1: H_HelmetB_light {
   author = "hozlucas28";
@@ -86,7 +86,7 @@ class H_HelmetB_Light_Urban_v1: H_HelmetB_light {
 
 
 
-/* ---------------------- CASCOS DE COMBATE MEJORADOS ---------------------- */
+/* ----------------------- CASCO DE COMBATE MEJORADO ----------------------- */
 
 class H_HelmetSpecB_Urban_v2: H_HelmetSpecB {
   author = "hozlucas28";
@@ -105,7 +105,7 @@ class H_HelmetSpecB_Urban_v2: H_HelmetSpecB {
 
 class H_HelmetSpecB_FCLA_Urban_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - FCLA (urbano v2)";
+  displayName = "Casco de combate mejorado [FCLA] (urbano v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Urban\data\H_HelmetSpecB_FCLA_Urban_v2.paa"};
   picture = "\FCLA_Headgears\Urban\data\pictures\H_HelmetSpecB_FCLA_Urban_v2.paa";
@@ -117,7 +117,7 @@ class H_HelmetSpecB_FCLA_Urban_v2: H_HelmetSpecB {
 
 class H_HelmetSpecB_Takana_Urban_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Takana (urbano v2)";
+  displayName = "Casco de combate mejorado [Takana] (urbano v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Urban\data\H_HelmetSpecB_Takana_Urban_v2.paa"};
   picture = "\FCLA_Headgears\Urban\data\pictures\H_HelmetSpecB_Takana_Urban_v2.paa";
@@ -129,7 +129,7 @@ class H_HelmetSpecB_Takana_Urban_v2: H_HelmetSpecB {
 
 class H_HelmetSpecB_Jaguar_Urban_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Jaguar (urbano v2)";
+  displayName = "Casco de combate mejorado [Jaguar] (urbano v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Urban\data\H_HelmetSpecB_Jaguar_Urban_v2.paa"};
   picture = "\FCLA_Headgears\Urban\data\pictures\H_HelmetSpecB_Jaguar_Urban_v2.paa";
@@ -141,7 +141,7 @@ class H_HelmetSpecB_Jaguar_Urban_v2: H_HelmetSpecB {
 
 class H_HelmetSpecB_Condor_Urban_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Condor (urbano v2)";
+  displayName = "Casco de combate mejorado [Condor] (urbano v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Urban\data\H_HelmetSpecB_Condor_Urban_v2.paa"};
   picture = "\FCLA_Headgears\Urban\data\pictures\H_HelmetSpecB_Condor_Urban_v2.paa";
@@ -153,7 +153,7 @@ class H_HelmetSpecB_Condor_Urban_v2: H_HelmetSpecB {
 
 class H_HelmetSpecB_Salamandra_Urban_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Salamandra (urbano v2)";
+  displayName = "Casco de combate mejorado [Salamandra] (urbano v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Urban\data\H_HelmetSpecB_Salamandra_Urban_v2.paa"};
   picture = "\FCLA_Headgears\Urban\data\pictures\H_HelmetSpecB_Salamandra_Urban_v2.paa";
@@ -165,7 +165,7 @@ class H_HelmetSpecB_Salamandra_Urban_v2: H_HelmetSpecB {
 
 class H_HelmetSpecB_Anaconda_Urban_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Anaconda (urbano v2)";
+  displayName = "Casco de combate mejorado [Anaconda] (urbano v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Urban\data\H_HelmetSpecB_Anaconda_Urban_v2.paa"};
   picture = "\FCLA_Headgears\Urban\data\pictures\H_HelmetSpecB_Anaconda_Urban_v2.paa";
@@ -177,7 +177,7 @@ class H_HelmetSpecB_Anaconda_Urban_v2: H_HelmetSpecB {
 
 class H_HelmetSpecB_Quetzal_Urban_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Quetzal (urbano v2)";
+  displayName = "Casco de combate mejorado [Quetzal] (urbano v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Urban\data\H_HelmetSpecB_Quetzal_Urban_v2.paa"};
   picture = "\FCLA_Headgears\Urban\data\pictures\H_HelmetSpecB_Quetzal_Urban_v2.paa";
@@ -188,11 +188,11 @@ class H_HelmetSpecB_Quetzal_Urban_v2: H_HelmetSpecB {
 
 
 
-/* ----------------- CASCOS DE COMBATE MEJORADOS (MÉDICO) ------------------ */
+/* ------------------ CASCO DE COMBATE MEJORADO (MÉDICO) ------------------- */
 
 class H_HelmetSpecB_Medic_Urban_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Médico (urbano v2)";
+  displayName = "Casco de combate mejorado [Médico] (urbano v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Urban\data\H_HelmetSpecB_Medic_Urban_v2.paa"};
   picture = "\FCLA_Headgears\Urban\data\pictures\H_HelmetSpecB_Medic_Urban_v2.paa";

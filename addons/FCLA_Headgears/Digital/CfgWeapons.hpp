@@ -50,7 +50,7 @@ class H_HelmetB_Camo_Digital: H_HelmetB_camo {
 
 class H_HelmetSpecB_FCLA_Digital: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - FCLA (digital)";
+  displayName = "Casco de combate mejorado [FCLA] (digital)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Digital\data\H_HelmetSpecB_FCLA_Digital.paa"};
   picture = "\FCLA_Headgears\Digital\data\pictures\H_HelmetSpecB_FCLA_Digital.paa";
@@ -62,7 +62,7 @@ class H_HelmetSpecB_FCLA_Digital: H_HelmetSpecB {
 
 class H_HelmetSpecB_Takana_Digital: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Takana (digital)";
+  displayName = "Casco de combate mejorado [Takana] (digital)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Digital\data\H_HelmetSpecB_Takana_Digital.paa"};
   picture = "\FCLA_Headgears\Digital\data\pictures\H_HelmetSpecB_Takana_Digital.paa";
@@ -74,7 +74,7 @@ class H_HelmetSpecB_Takana_Digital: H_HelmetSpecB {
 
 class H_HelmetSpecB_Jaguar_Digital: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Jaguar (digital)";
+  displayName = "Casco de combate mejorado [Jaguar] (digital)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Digital\data\H_HelmetSpecB_Jaguar_Digital.paa"};
   picture = "\FCLA_Headgears\Digital\data\pictures\H_HelmetSpecB_Jaguar_Digital.paa";
@@ -86,7 +86,7 @@ class H_HelmetSpecB_Jaguar_Digital: H_HelmetSpecB {
 
 class H_HelmetSpecB_Condor_Digital: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Condor (digital)";
+  displayName = "Casco de combate mejorado [Condor] (digital)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Digital\data\H_HelmetSpecB_Condor_Digital.paa"};
   picture = "\FCLA_Headgears\Digital\data\pictures\H_HelmetSpecB_Condor_Digital.paa";
@@ -98,7 +98,7 @@ class H_HelmetSpecB_Condor_Digital: H_HelmetSpecB {
 
 class H_HelmetSpecB_Salamandra_Digital: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Salamandra (digital)";
+  displayName = "Casco de combate mejorado [Salamandra] (digital)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Digital\data\H_HelmetSpecB_Salamandra_Digital.paa"};
   picture = "\FCLA_Headgears\Digital\data\pictures\H_HelmetSpecB_Salamandra_Digital.paa";
@@ -110,7 +110,7 @@ class H_HelmetSpecB_Salamandra_Digital: H_HelmetSpecB {
 
 class H_HelmetSpecB_Anaconda_Digital: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Anaconda (digital)";
+  displayName = "Casco de combate mejorado [Anaconda] (digital)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Digital\data\H_HelmetSpecB_Anaconda_Digital.paa"};
   picture = "\FCLA_Headgears\Digital\data\pictures\H_HelmetSpecB_Anaconda_Digital.paa";
@@ -122,7 +122,7 @@ class H_HelmetSpecB_Anaconda_Digital: H_HelmetSpecB {
 
 class H_HelmetSpecB_Quetzal_Digital: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Quetzal (digital)";
+  displayName = "Casco de combate mejorado [Quetzal] (digital)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Digital\data\H_HelmetSpecB_Quetzal_Digital.paa"};
   picture = "\FCLA_Headgears\Digital\data\pictures\H_HelmetSpecB_Quetzal_Digital.paa";
@@ -137,7 +137,7 @@ class H_HelmetSpecB_Quetzal_Digital: H_HelmetSpecB {
 
 class H_HelmetSpecB_Medic_Digital: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado - Médico (digital)";
+  displayName = "Casco de combate mejorado [Médico] (digital)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Digital\data\H_HelmetSpecB_Medic_Digital.paa"};
   picture = "\FCLA_Headgears\Digital\data\pictures\H_HelmetSpecB_Medic_Digital.paa";

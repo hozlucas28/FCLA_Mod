@@ -5,7 +5,7 @@
 
 
 
-/* -------------------------------- PETATES -------------------------------- */
+/* -------------------------------- PETATE --------------------------------- */
 
 class B_Kitbag_Digital: B_Kitbag_cbr {
   author = "hozlucas28";
@@ -19,11 +19,11 @@ class B_Kitbag_Digital: B_Kitbag_cbr {
 
 
 
-/* --------------------------- PETATES (MÉDICO) ---------------------------- */
+/* ---------------------------- PETATE (MÉDICO) ---------------------------- */
 
 class B_Kitbag_Medic_Digital: B_Kitbag_cbr {
   author = "hozlucas28";
-  displayName = "Petate - Médico (digital)";
+  displayName = "Petate [Médico] (digital)";
   hiddenSelectionsTextures[] = {"\FCLA_Backpacks\Digital\data\B_Kitbag_Medic_Digital.paa"};
   picture = "\FCLA_Backpacks\Digital\data\pictures\B_Kitbag_Medic_Digital.paa";
   scope = 2;

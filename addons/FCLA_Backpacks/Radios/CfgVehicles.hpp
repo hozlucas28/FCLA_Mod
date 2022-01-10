@@ -5,7 +5,7 @@
 
 
 
-/* ----------------------- OCULTAR BUGUEADAS - TFAR ------------------------ */
+/* ------------------------------ EXISTENTES ------------------------------- */
 
 class TF_rt1523g: TFAR_Bag_Base {
   scope = 1;
@@ -58,9 +58,6 @@ class TF_Bussole: TFAR_Bag_Base {
   scopeCurator = 1;
 };
 
-
-
-/* ---------------------- MODIFICAR "PICTURES" - TFAR ---------------------- */
 
 class B_FCLA_TFAR_rt1523g: TF_rt1523g {
   author = "hozlucas28";
@@ -195,7 +192,7 @@ class TF_rt1523g_Sage: TF_rt1523g {picture = "\FCLA_Backpacks\Radios\data\pictur
 
 
 
-/* ----------------------- PEQUEÑAS (CUSTOM) - TFAR ------------------------ */
+/* ------------------------------- PEQUEÑAS -------------------------------- */
 
 class B_FCLA_TFAR_Small_rt1523g_Black: tf_rt1523g {
   author = "hozlucas28";
@@ -286,7 +283,7 @@ class B_FCLA_TFAR_Small_rt1523g_RHS_UCP: tf_rt1523g {
 
 
 
-/* ------------------------ GRANDES (CUSTOM) - TFAR ------------------------ */
+/* -------------------------------- GRANDES -------------------------------- */
 
 class B_FCLA_TFAR_Big_rt1523g_Black: tf_rt1523g_big {
   author = "hozlucas28";
