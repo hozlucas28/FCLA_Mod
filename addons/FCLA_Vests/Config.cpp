@@ -4,76 +4,34 @@
 |********************************************************************************/
 
 class CfgPatches {
-	class FCLA_Vests {
-		units[] = {};
-		weapons[] = {};
+	class FCLA_Vests	{
 		requiredAddons[] = {};
-		version = "2.0";
+		#include "\FCLA_Vests\units.hpp"
+		#include "\FCLA_Vests\weapons.hpp"
 		author = "hozlucas28";
+		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
+		requiredVersion = 2.0;
 	};
 };
 
 
 
-
-
 /********************************************************************************|
-|                                    FUNCIONES                                   |
-|********************************************************************************/
-
-class CfgFunctions {
-	class FCLA_Vests {
-		class Suicide_Vest {
-		  file = "\FCLA_Vests\functions";
-		  class initExplosiveVest {};
-		};
-	};
-};
-
-
-
-
-
-/********************************************************************************|
-|                                    SONIDOS                                     |
-|********************************************************************************/
-
-class CfgSounds {
-	#include "\FCLA_Vests\CfgSounds.hpp"
-};
-
-
-
-
-
-/********************************************************************************|
-|                                    VEHÍCULOS                                   |
+|                                   VEHÍCULOS                                    |
 |********************************************************************************/
 
 class CfgVehicles {
-	class Man;
-	class CAManBase: Man {
-		class UserActions {
-			class Activate_Suicide_Vest {
-				userActionID = 50;
-	      displayName = "<t size='1.2' color='#FF0000'>Detonar chaleco bomba</t>";
-	      displayNameDefault = "";
-	      radius = 10;
-	      priority = 10;
-	      position = "camera";
-	      showWindow = 1;
-				hideOnUse = 1;
-	      onlyForPlayer = 0;
-	      shortcut = "";
-	      condition = "(alive this) && ((vest this == 'Suicide_Vest') || (vest this == 'Suicide_Vest_Green') || (vest this == 'Suicide_Vest_Grey')) && !(this getVariable ['ace_captives_isSurrendering', false]) && !(this getVariable ['ace_captives_isHandcuffed', false]);";
-	      statement = "[this] spawn FCLA_Vests_fnc_initExplosiveVest;";
-			};
-		};
-	};
+	class All {};
+	class Static: All {};
+	class Building: Static {};
+	class Strategic: Building {};
+	class ReammoBox: Strategic {};
+	class WeaponHolder: ReammoBox {};
+	class Vest_Base_F: WeaponHolder {};
+
+	#include "\FCLA_Vests\Digital\CfgVehicles.hpp"
 };
-
-
 
 
 
@@ -82,23 +40,15 @@ class CfgVehicles {
 |********************************************************************************/
 
 class CfgWeapons {
-	class V_HarnessOGL_brn;
-	class V_HarnessOGL_ghex_F;
-	class V_HarnessOGL_gry;
-	class V_PlateCarrier1_rgr;
-	class V_PlateCarrier2_rgr;
-	class V_PlateCarrier_Kerry;
-	class V_PlateCarrierGL_rgr;
-	class V_PlateCarrierSpec_rgr;
-	class V_EOD_olive_F;
-	class VestItem;
+	class Default {};
+	class ItemCore: Default {};
+	class InventoryItem_Base_F {};
+	class Vest_NoCamo_Base: ItemCore {};
+	class VestItem: InventoryItem_Base_F {};
+	class V_PlateCarrier1_rgr: Vest_NoCamo_Base {};
+	class V_PlateCarrier2_rgr: V_PlateCarrier1_rgr {};
+	class V_PlateCarrier_Kerry: V_PlateCarrier1_rgr {};
+	class V_PlateCarrier2_rgr_noflag_F: V_PlateCarrier2_rgr {};
 
-	#include "\FCLA_Vests\CfgWeapons.hpp"
-	#include "\FCLA_Vests\Anaconda\CfgWeapons.hpp"
-	#include "\FCLA_Vests\Condor\CfgWeapons.hpp"
-	#include "\FCLA_Vests\FCLA\CfgWeapons.hpp"
-	#include "\FCLA_Vests\Jaguar\CfgWeapons.hpp"
-	#include "\FCLA_Vests\Quetzal\CfgWeapons.hpp"
-	#include "\FCLA_Vests\Salamandra\CfgWeapons.hpp"
-	#include "\FCLA_Vests\Takana\CfgWeapons.hpp"
+	#include "\FCLA_Vests\Digital\CfgWeapons.hpp"
 };
