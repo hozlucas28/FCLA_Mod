@@ -32,6 +32,7 @@ class CfgVehicles {
 
 	#include "\FCLA_Vests\Digital\CfgVehicles.hpp"
 	#include "\FCLA_Vests\Marine\CfgVehicles.hpp"
+	#include "\FCLA_Vests\Urban\CfgVehicles.hpp"
 };
 
 
@@ -53,4 +54,5 @@ class CfgWeapons {
 
 	#include "\FCLA_Vests\Digital\CfgWeapons.hpp"
 	#include "\FCLA_Vests\Marine\CfgWeapons.hpp"
+	#include "\FCLA_Vests\Urban\CfgWeapons.hpp"
 };
