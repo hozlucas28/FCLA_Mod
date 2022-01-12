@@ -34,6 +34,7 @@ class CfgVehicles {
 	#include "\FCLA_Vests\Marine\CfgVehicles.hpp"
 	#include "\FCLA_Vests\Urban\CfgVehicles.hpp"
 	#include "\FCLA_Vests\Vanilla\CfgVehicles.hpp"
+	#include "\FCLA_Vests\Winter\CfgVehicles.hpp"
 };
 
 
@@ -62,4 +63,5 @@ class CfgWeapons {
 	#include "\FCLA_Vests\Marine\CfgWeapons.hpp"
 	#include "\FCLA_Vests\Urban\CfgWeapons.hpp"
 	#include "\FCLA_Vests\Vanilla\CfgWeapons.hpp"
+	#include "\FCLA_Vests\Winter\CfgWeapons.hpp"
 };
