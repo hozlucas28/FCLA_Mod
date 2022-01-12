@@ -5,7 +5,7 @@
 
 
 
-/* --------------------------- CARTUCHERA LIGERA --------------------------- */
+/* -------------------------- CARTUCHERAS LIGERAS -------------------------- */
 
 class V_PlateCarrier_Urban_v1: V_PlateCarrier_Kerry {
   author = "hozlucas28";
@@ -64,7 +64,7 @@ class V_PlateCarrier_Urban_v4: V_PlateCarrier_Urban_v1 {
 
 
 
-/* ------------------------------ CARTUCHERA ------------------------------- */
+/* ------------------------------ CARTUCHERAS ------------------------------ */
 
 class V_PlateCarrier2_Urban_v1: V_PlateCarrier2_rgr {
   author = "hozlucas28";

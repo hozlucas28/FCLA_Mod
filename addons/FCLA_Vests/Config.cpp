@@ -46,12 +46,17 @@ class CfgWeapons {
 	class Default {};
 	class ItemCore: Default {};
 	class InventoryItem_Base_F {};
+	class Vest_Camo_Base: ItemCore {};
 	class Vest_NoCamo_Base: ItemCore {};
+	class V_EOD_base_F: Vest_Camo_Base {};
 	class VestItem: InventoryItem_Base_F {};
 	class V_PlateCarrier1_rgr: Vest_NoCamo_Base {};
+	class V_PlateCarrierGL_rgr: Vest_NoCamo_Base {};
 	class V_PlateCarrier2_rgr: V_PlateCarrier1_rgr {};
+	class V_PlateCarrierSpec_rgr: Vest_NoCamo_Base {};
 	class V_PlateCarrier_Kerry: V_PlateCarrier1_rgr {};
 	class V_PlateCarrier2_rgr_noflag_F: V_PlateCarrier2_rgr {};
+	class V_EOD_olive_F: V_EOD_base_F {};
 
 	#include "\FCLA_Vests\Digital\CfgWeapons.hpp"
 	#include "\FCLA_Vests\Marine\CfgWeapons.hpp"

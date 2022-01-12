@@ -5,7 +5,7 @@
 
 
 
-/* --------------------------- CARTUCHERA LIGERA --------------------------- */
+/* -------------------------- CARTUCHERAS LIGERA --------------------------- */
 
 class Item_V_PlateCarrier_Urban_v1: Vest_Base_F {
   author = "hozlucas28";
@@ -84,7 +84,7 @@ class Item_V_PlateCarrier_Urban_v4: Vest_Base_F {
 
 
 
-/* ------------------------------ CARTUCHERA ------------------------------- */
+/* ------------------------------ CARTUCHERAS ------------------------------ */
 
 class Item_V_PlateCarrier2_Urban_v1: Vest_Base_F {
   author = "hozlucas28";
