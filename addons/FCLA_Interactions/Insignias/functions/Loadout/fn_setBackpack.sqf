@@ -11,7 +11,7 @@
 //Variables de referencia.
 params ["_unit", "_insignia"];
 _getPlatoon = [_insignia, (_insignia find "_") + 1, 100] call CBA_fnc_substring;
-_platoon = if ((_getPlatoon == "Unassigned") || (_getPlatoon == "Common")) then {"FCLA"} else {_getPlatoon};
+_platoon = if ((_getPlatoon == "Unassigned") || (_getPlatoon == "Common")) then {"FCLA";} else {_getPlatoon;};
 _currentBackpack = backpack _unit;
 _itemsInBackpack = backpackItems _unit;
 _backpackContainer = backpackContainer _unit;
@@ -69,7 +69,7 @@ _backpackWithInsignia = switch (true) do {
 
 //Colocar mochila.
 if (_currentBackpack == "B_CombinationUnitRespirator_01_F") exitWith {_backpackContainer setObjectTextureGlobal [4, "\FCLA_Interactions\Insignias\data\" + _platoon + ".paa"];};
-if (!(isClass (configFile >> "CfgVehicles" >> _backpackWithInsignia))) exitWith {};
+if ((_currentBackpack == _backpackWithInsignia) || !(isClass (configFile >> "CfgVehicles" >> _backpackWithInsignia))) exitWith {};
 removeBackpack _unit;
 _unit addBackpack _backpackWithInsignia;
 {_unit addItemToBackpack _x} forEach _itemsInBackpack;

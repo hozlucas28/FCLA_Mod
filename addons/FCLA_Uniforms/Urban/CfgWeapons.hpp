@@ -124,7 +124,7 @@ class U_B_CombatUniform_Urban_Vest_v2: U_B_CombatUniform_mcam_vest {
 };
 
 
-class U_B_CombatUniform_Urban_Vest_v3: U_B_CombatUniform_mcam_vest {
+class U_B_CombatUniform_Urban_Vest_v3: U_I_CombatUniform_shortsleeve {
   author = "hozlucas28";
   displayName = "Traje de reconocimiento (urbano v3)";
   picture = "\FCLA_Uniforms\Urban\data\pictures\U_B_CombatUniform_Urban_Vest_v3.paa";
@@ -143,7 +143,7 @@ class U_B_CombatUniform_Urban_Vest_v3: U_B_CombatUniform_mcam_vest {
 };
 
 
-class U_B_CombatUniform_Urban_Vest_v4: U_B_CombatUniform_mcam_vest {
+class U_B_CombatUniform_Urban_Vest_v4: U_I_CombatUniform_shortsleeve {
   author = "hozlucas28";
   displayName = "Traje de reconocimiento (urbano v4)";
   picture = "\FCLA_Uniforms\Urban\data\pictures\U_B_CombatUniform_Urban_Vest_v4.paa";

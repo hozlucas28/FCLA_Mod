@@ -11,7 +11,7 @@
 //Variables de referencia.
 params ["_unit", "_insignia"];
 _getPlatoon = [_insignia, (_insignia find "_") + 1, 100] call CBA_fnc_substring;
-_platoon = if ((_getPlatoon == "Unassigned") || (_getPlatoon == "Common")) then {"FCLA"} else {_getPlatoon};
+_platoon = if ((_getPlatoon == "Unassigned") || (_getPlatoon == "Common")) then {"FCLA";} else {_getPlatoon;};
 _currentHeadgear = headgear _unit;
 
 
@@ -50,6 +50,6 @@ _headgearWithInsignia = switch (true) do {
 
 
 //Colocar casco.
-if (!(isClass (configFile >> "CfgWeapons" >> _headgearWithInsignia))) exitWith {};
+if ((_currentHeadgear == _headgearWithInsignia) || (!(isClass (configFile >> "CfgWeapons" >> _headgearWithInsignia)))) exitWith {};
 removeHeadgear _unit;
 _unit addHeadgear _headgearWithInsignia;
