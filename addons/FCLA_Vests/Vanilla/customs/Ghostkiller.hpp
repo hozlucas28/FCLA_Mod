@@ -13,9 +13,9 @@ class V_PlateCarrier_FCLA_Ghostkiller_Black: V_PlateCarrier_FCLA_Black {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_FCLA_Black.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_FCLA_Ghostkiller_Black.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -25,9 +25,9 @@ class V_PlateCarrier_Takana_Ghostkiller_Black: V_PlateCarrier_FCLA_Black {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Takana_Black.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Takana_Ghostkiller_Black.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -37,9 +37,9 @@ class V_PlateCarrier_Jaguar_Ghostkiller_Black: V_PlateCarrier_FCLA_Black {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Jaguar_Black.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Jaguar_Ghostkiller_Black.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -49,9 +49,9 @@ class V_PlateCarrier_Condor_Ghostkiller_Black: V_PlateCarrier_FCLA_Black {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Condor_Black.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Condor_Ghostkiller_Black.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -61,9 +61,9 @@ class V_PlateCarrier_Salamandra_Ghostkiller_Black: V_PlateCarrier_FCLA_Black {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Salamandra_Black.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Salamandra_Ghostkiller_Black.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -73,9 +73,9 @@ class V_PlateCarrier_Anaconda_Ghostkiller_Black: V_PlateCarrier_FCLA_Black {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Anaconda_Black.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Anaconda_Ghostkiller_Black.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -85,9 +85,9 @@ class V_PlateCarrier_Quetzal_Ghostkiller_Black: V_PlateCarrier_FCLA_Black {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Quetzal_Black.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Quetzal_Ghostkiller_Black.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -100,9 +100,9 @@ class V_PlateCarrier_FCLA_Ghostkiller_Green: V_PlateCarrier_FCLA_Green {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_FCLA_Green.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_FCLA_Ghostkiller_Green.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -112,9 +112,9 @@ class V_PlateCarrier_Takana_Ghostkiller_Green: V_PlateCarrier_FCLA_Green {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Takana_Green.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Takana_Ghostkiller_Green.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -124,9 +124,9 @@ class V_PlateCarrier_Jaguar_Ghostkiller_Green: V_PlateCarrier_FCLA_Green {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Jaguar_Green.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Jaguar_Ghostkiller_Green.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -136,9 +136,9 @@ class V_PlateCarrier_Condor_Ghostkiller_Green: V_PlateCarrier_FCLA_Green {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Condor_Green.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Condor_Ghostkiller_Green.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -148,9 +148,9 @@ class V_PlateCarrier_Salamandra_Ghostkiller_Green: V_PlateCarrier_FCLA_Green {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Salamandra_Green.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Salamandra_Ghostkiller_Green.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -160,9 +160,9 @@ class V_PlateCarrier_Anaconda_Ghostkiller_Green: V_PlateCarrier_FCLA_Green {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Anaconda_Green.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Anaconda_Ghostkiller_Green.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -172,9 +172,9 @@ class V_PlateCarrier_Quetzal_Ghostkiller_Green: V_PlateCarrier_FCLA_Green {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Quetzal_Green.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Quetzal_Ghostkiller_Green.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -187,9 +187,9 @@ class V_PlateCarrier_FCLA_Ghostkiller_Tropical: V_PlateCarrier_FCLA_Tropical {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_FCLA_Tropical.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_FCLA_Ghostkiller_Tropical.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -199,9 +199,9 @@ class V_PlateCarrier_Takana_Ghostkiller_Tropical: V_PlateCarrier_FCLA_Tropical {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Takana_Tropical.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Takana_Ghostkiller_Tropical.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -211,9 +211,9 @@ class V_PlateCarrier_Jaguar_Ghostkiller_Tropical: V_PlateCarrier_FCLA_Tropical {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Jaguar_Tropical.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Jaguar_Ghostkiller_Tropical.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -223,9 +223,9 @@ class V_PlateCarrier_Condor_Ghostkiller_Tropical: V_PlateCarrier_FCLA_Tropical {
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Condor_Tropical.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Condor_Ghostkiller_Tropical.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -235,9 +235,9 @@ class V_PlateCarrier_Salamandra_Ghostkiller_Tropical: V_PlateCarrier_FCLA_Tropic
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Salamandra_Tropical.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Salamandra_Ghostkiller_Tropical.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -247,9 +247,9 @@ class V_PlateCarrier_Anaconda_Ghostkiller_Tropical: V_PlateCarrier_FCLA_Tropical
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Anaconda_Tropical.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Anaconda_Ghostkiller_Tropical.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -259,7 +259,7 @@ class V_PlateCarrier_Quetzal_Ghostkiller_Tropical: V_PlateCarrier_FCLA_Tropical 
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrier_Quetzal_Tropical.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrier_Quetzal_Ghostkiller_Tropical.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };

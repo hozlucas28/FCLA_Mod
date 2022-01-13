@@ -9,9 +9,9 @@ class V_PlateCarrier_FCLA_Mario_Digital: V_PlateCarrier_FCLA_Digital {
   picture = "\FCLA_Vests\Digital\data\pictures\V_PlateCarrier_FCLA_Digital.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Digital\data\V_PlateCarrier_FCLA_Mario_Digital.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -21,9 +21,9 @@ class V_PlateCarrier_Takana_Mario_Digital: V_PlateCarrier_FCLA_Digital {
   picture = "\FCLA_Vests\Digital\data\pictures\V_PlateCarrier_Takana_Digital.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Digital\data\V_PlateCarrier_Takana_Mario_Digital.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -33,9 +33,9 @@ class V_PlateCarrier_Jaguar_Mario_Digital: V_PlateCarrier_FCLA_Digital {
   picture = "\FCLA_Vests\Digital\data\pictures\V_PlateCarrier_Jaguar_Digital.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Digital\data\V_PlateCarrier_Jaguar_Mario_Digital.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -45,9 +45,9 @@ class V_PlateCarrier_Condor_Mario_Digital: V_PlateCarrier_FCLA_Digital {
   picture = "\FCLA_Vests\Digital\data\pictures\V_PlateCarrier_Condor_Digital.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Digital\data\V_PlateCarrier_Condor_Mario_Digital.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -57,9 +57,9 @@ class V_PlateCarrier_Salamandra_Mario_Digital: V_PlateCarrier_FCLA_Digital {
   picture = "\FCLA_Vests\Digital\data\pictures\V_PlateCarrier_Salamandra_Digital.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Digital\data\V_PlateCarrier_Salamandra_Mario_Digital.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -69,9 +69,9 @@ class V_PlateCarrier_Anaconda_Mario_Digital: V_PlateCarrier_FCLA_Digital {
   picture = "\FCLA_Vests\Digital\data\pictures\V_PlateCarrier_Anaconda_Digital.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Digital\data\V_PlateCarrier_Anaconda_Mario_Digital.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
 
 
@@ -81,7 +81,7 @@ class V_PlateCarrier_Quetzal_Mario_Digital: V_PlateCarrier_FCLA_Digital {
   picture = "\FCLA_Vests\Digital\data\pictures\V_PlateCarrier_Quetzal_Digital.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Digital\data\V_PlateCarrier_Quetzal_Mario_Digital.paa"};
-  scope = 2;
-  scopeArsenal = 2;
-  scopeCurator = 2;
+  scope = 1;
+  scopeArsenal = 1;
+  scopeCurator = 1;
 };
