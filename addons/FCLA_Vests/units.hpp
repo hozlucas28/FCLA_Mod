@@ -5,7 +5,7 @@
 
 units[] = {
   "Item_V_PlateCarrier_Digital", "Item_V_PlateCarrier2_Digital", "Item_V_PlateCarrier_FCLA_Digital",
-  "Item_V_PlateCarrier_Takana_Digital", "Item_V_PlateCarrier_Jaguar_Digital", "Item_V_PlateCarrier_Condor_Digital", 
+  "Item_V_PlateCarrier_Takana_Digital", "Item_V_PlateCarrier_Jaguar_Digital", "Item_V_PlateCarrier_Condor_Digital",
   "Item_V_PlateCarrier_Salamandra_Digital", "Item_V_PlateCarrier_Anaconda_Digital", "Item_V_PlateCarrier_Quetzal_Digital",
   "Item_V_PlateCarrier2_FCLA_Digital", "Item_V_PlateCarrier2_Takana_Digital", "Item_V_PlateCarrier2_Jaguar_Digital",
   "Item_V_PlateCarrier2_Condor_Digital", "Item_V_PlateCarrier2_Salamandra_Digital", "Item_V_PlateCarrier2_Anaconda_Digital",
@@ -64,6 +64,9 @@ units[] = {
   "Item_V_PlateCarrierGL_Anaconda_Tropical", "Item_V_PlateCarrierGL_Quetzal_Tropical", "Item_V_PlateCarrierSpec_FCLA_Black",
   "Item_V_PlateCarrierSpec_Takana_Black", "Item_V_PlateCarrierSpec_Jaguar_Black", "Item_V_PlateCarrierSpec_Condor_Black",
   "Item_V_PlateCarrierSpec_Salamandra_Black", "Item_V_PlateCarrierSpec_Anaconda_Black", "Item_V_PlateCarrierSpec_Quetzal_Black",
+  "Item_V_PlateCarrierSpec_FCLA_MTP", "Item_V_PlateCarrierSpec_Takana_MTP",
+  "Item_V_PlateCarrierSpec_Jaguar_MTP", "Item_V_PlateCarrierSpec_Condor_MTP",
+  "Item_V_PlateCarrierSpec_Salamandra_MTP", "Item_V_PlateCarrierSpec_Anaconda_MTP", "Item_V_PlateCarrierSpec_Quetzal_MTP",
   "Item_V_PlateCarrierSpec_FCLA_Green", "Item_V_PlateCarrierSpec_Takana_Green", "Item_V_PlateCarrierSpec_Jaguar_Green",
   "Item_V_PlateCarrierSpec_Condor_Green", "Item_V_PlateCarrierSpec_Salamandra_Green", "Item_V_PlateCarrierSpec_Anaconda_Green",
   "Item_V_PlateCarrierSpec_Quetzal_Green", "Item_V_PlateCarrierSpec_FCLA_Tropical", "Item_V_PlateCarrierSpec_Takana_Tropical",

@@ -1075,7 +1075,7 @@ class V_PlateCarrierSpec_FCLA_Black: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Takana_Black: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Takana_Black: V_PlateCarrierSpec_FCLA_Black {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Takana] (negra)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Takana_Black.paa";
@@ -1087,7 +1087,7 @@ class V_PlateCarrierSpec_Takana_Black: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Jaguar_Black: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Jaguar_Black: V_PlateCarrierSpec_FCLA_Black {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Jaguar] (negra)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Jaguar_Black.paa";
@@ -1099,7 +1099,7 @@ class V_PlateCarrierSpec_Jaguar_Black: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Condor_Black: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Condor_Black: V_PlateCarrierSpec_FCLA_Black {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Condor] (negra)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Condor_Black.paa";
@@ -1111,7 +1111,7 @@ class V_PlateCarrierSpec_Condor_Black: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Salamandra_Black: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Salamandra_Black: V_PlateCarrierSpec_FCLA_Black {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Salamandra] (negra)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Salamandra_Black.paa";
@@ -1123,7 +1123,7 @@ class V_PlateCarrierSpec_Salamandra_Black: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Anaconda_Black: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Anaconda_Black: V_PlateCarrierSpec_FCLA_Black {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Anaconda] (negra)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Anaconda_Black.paa";
@@ -1135,12 +1135,107 @@ class V_PlateCarrierSpec_Anaconda_Black: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Quetzal_Black: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Quetzal_Black: V_PlateCarrierSpec_FCLA_Black {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Quetzal] (negra)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Quetzal_Black.paa";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrierSpec_Quetzal_Black.paa"};
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+};
+
+
+
+/* ----------- EQUIPO ESPECIAL DE PORTAAVIONES (PELOTONES - MTP) ----------- */
+
+class V_PlateCarrierSpec_FCLA_MTP: V_PlateCarrierSpec_rgr {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [FCLA] (MTP)";
+  picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_FCLA_MTP.paa";
+  hiddenSelections[] = {"camo"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrierSpec_FCLA_MTP.paa"};
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+
+  class ItemInfo: VestItem {
+    uniformType = "Default";
+    uniformModel = "\a3\characters_f\blufor\equip_b_carrier_spec_rig.p3d";
+    hiddenSelections[] = {"camo"};
+    overlaySelectionsInfo[] = {"Ghillie_hide"};
+    containerClass = "Supply100";
+  };
+};
+
+
+class V_PlateCarrierSpec_Takana_MTP: V_PlateCarrierSpec_FCLA_MTP {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [Takana] (MTP)";
+  picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Takana_MTP.paa";
+  hiddenSelections[] = {"camo"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrierSpec_Takana_MTP.paa"};
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+};
+
+
+class V_PlateCarrierSpec_Jaguar_MTP: V_PlateCarrierSpec_FCLA_MTP {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [Jaguar] (MTP)";
+  picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Jaguar_MTP.paa";
+  hiddenSelections[] = {"camo"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrierSpec_Jaguar_MTP.paa"};
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+};
+
+
+class V_PlateCarrierSpec_Condor_MTP: V_PlateCarrierSpec_FCLA_MTP {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [Condor] (MTP)";
+  picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Condor_MTP.paa";
+  hiddenSelections[] = {"camo"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrierSpec_Condor_MTP.paa"};
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+};
+
+
+class V_PlateCarrierSpec_Salamandra_MTP: V_PlateCarrierSpec_FCLA_MTP {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [Salamandra] (MTP)";
+  picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Salamandra_MTP.paa";
+  hiddenSelections[] = {"camo"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrierSpec_Salamandra_MTP.paa"};
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+};
+
+
+class V_PlateCarrierSpec_Anaconda_MTP: V_PlateCarrierSpec_FCLA_MTP {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [Anaconda] (MTP)";
+  picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Anaconda_MTP.paa";
+  hiddenSelections[] = {"camo"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrierSpec_Anaconda_MTP.paa"};
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+};
+
+
+class V_PlateCarrierSpec_Quetzal_MTP: V_PlateCarrierSpec_FCLA_MTP {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [Quetzal] (MTP)";
+  picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Quetzal_MTP.paa";
+  hiddenSelections[] = {"camo"};
+  hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_PlateCarrierSpec_Quetzal_MTP.paa"};
   scope = 2;
   scopeArsenal = 2;
   scopeCurator = 2;
@@ -1170,7 +1265,7 @@ class V_PlateCarrierSpec_FCLA_Green: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Takana_Green: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Takana_Green: V_PlateCarrierSpec_FCLA_Green {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Takana] (verde)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Takana_Green.paa";
@@ -1182,7 +1277,7 @@ class V_PlateCarrierSpec_Takana_Green: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Jaguar_Green: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Jaguar_Green: V_PlateCarrierSpec_FCLA_Green {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Jaguar] (verde)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Jaguar_Green.paa";
@@ -1194,7 +1289,7 @@ class V_PlateCarrierSpec_Jaguar_Green: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Condor_Green: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Condor_Green: V_PlateCarrierSpec_FCLA_Green {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Condor] (verde)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Condor_Green.paa";
@@ -1206,7 +1301,7 @@ class V_PlateCarrierSpec_Condor_Green: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Salamandra_Green: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Salamandra_Green: V_PlateCarrierSpec_FCLA_Green {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Salamandra] (verde)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Salamandra_Green.paa";
@@ -1218,7 +1313,7 @@ class V_PlateCarrierSpec_Salamandra_Green: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Anaconda_Green: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Anaconda_Green: V_PlateCarrierSpec_FCLA_Green {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Anaconda] (verde)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Anaconda_Green.paa";
@@ -1230,7 +1325,7 @@ class V_PlateCarrierSpec_Anaconda_Green: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Quetzal_Green: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Quetzal_Green: V_PlateCarrierSpec_FCLA_Green {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Quetzal] (verde)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Quetzal_Green.paa";
@@ -1265,7 +1360,7 @@ class V_PlateCarrierSpec_FCLA_Tropical: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Takana_Tropical: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Takana_Tropical: V_PlateCarrierSpec_FCLA_Tropical {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Takana] (tropical)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Takana_Tropical.paa";
@@ -1277,7 +1372,7 @@ class V_PlateCarrierSpec_Takana_Tropical: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Jaguar_Tropical: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Jaguar_Tropical: V_PlateCarrierSpec_FCLA_Tropical {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Jaguar] (tropical)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Jaguar_Tropical.paa";
@@ -1289,7 +1384,7 @@ class V_PlateCarrierSpec_Jaguar_Tropical: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Condor_Tropical: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Condor_Tropical: V_PlateCarrierSpec_FCLA_Tropical {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Condor] (tropical)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Condor_Tropical.paa";
@@ -1301,7 +1396,7 @@ class V_PlateCarrierSpec_Condor_Tropical: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Salamandra_Tropical: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Salamandra_Tropical: V_PlateCarrierSpec_FCLA_Tropical {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Salamandra] (tropical)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Salamandra_Tropical.paa";
@@ -1313,7 +1408,7 @@ class V_PlateCarrierSpec_Salamandra_Tropical: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Anaconda_Tropical: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Anaconda_Tropical: V_PlateCarrierSpec_FCLA_Tropical {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Anaconda] (tropical)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Anaconda_Tropical.paa";
@@ -1325,7 +1420,7 @@ class V_PlateCarrierSpec_Anaconda_Tropical: V_PlateCarrierSpec_rgr {
 };
 
 
-class V_PlateCarrierSpec_Quetzal_Tropical: V_PlateCarrierSpec_rgr {
+class V_PlateCarrierSpec_Quetzal_Tropical: V_PlateCarrierSpec_FCLA_Tropical {
   author = "hozlucas28";
   displayName = "Equipo especial de portaaviones [Quetzal] (tropical)";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_PlateCarrierSpec_Quetzal_Tropical.paa";

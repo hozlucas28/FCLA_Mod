@@ -1637,6 +1637,142 @@ class Item_V_PlateCarrierSpec_Quetzal_Black: Vest_Base_F {
 
 
 
+/* ----------- EQUIPO ESPECIAL DE PORTAAVIONES (PELOTONES - MTP) ----------- */
+
+class Item_V_PlateCarrierSpec_FCLA_MTP: Vest_Base_F {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [FCLA] (MTP)";
+  vehicleClass = "ItemsVests";
+  editorCategory = "EdCat_Equipment";
+  editorSubcategory = "EdSubcat_Vests";
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+
+  class TransportItems {
+    class V_PlateCarrierSpec_FCLA_MTP {
+      name = "V_PlateCarrierSpec_FCLA_MTP";
+      count = 1;
+    };
+  };
+};
+
+
+class Item_V_PlateCarrierSpec_Takana_MTP: Vest_Base_F {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [Takana] (MTP)";
+  vehicleClass = "ItemsVests";
+  editorCategory = "EdCat_Equipment";
+  editorSubcategory = "EdSubcat_Vests";
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+
+  class TransportItems {
+    class V_PlateCarrierSpec_Takana_MTP {
+      name = "V_PlateCarrierSpec_Takana_MTP";
+      count = 1;
+    };
+  };
+};
+
+
+class Item_V_PlateCarrierSpec_Jaguar_MTP: Vest_Base_F {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [Jaguar] (MTP)";
+  vehicleClass = "ItemsVests";
+  editorCategory = "EdCat_Equipment";
+  editorSubcategory = "EdSubcat_Vests";
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+
+  class TransportItems {
+    class V_PlateCarrierSpec_Jaguar_MTP {
+      name = "V_PlateCarrierSpec_Jaguar_MTP";
+      count = 1;
+    };
+  };
+};
+
+
+class Item_V_PlateCarrierSpec_Condor_MTP: Vest_Base_F {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [Condor] (MTP)";
+  vehicleClass = "ItemsVests";
+  editorCategory = "EdCat_Equipment";
+  editorSubcategory = "EdSubcat_Vests";
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+
+  class TransportItems {
+    class V_PlateCarrierSpec_Condor_MTP {
+      name = "V_PlateCarrierSpec_Condor_MTP";
+      count = 1;
+    };
+  };
+};
+
+
+class Item_V_PlateCarrierSpec_Salamandra_MTP: Vest_Base_F {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [Salamandra] (MTP)";
+  vehicleClass = "ItemsVests";
+  editorCategory = "EdCat_Equipment";
+  editorSubcategory = "EdSubcat_Vests";
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+
+  class TransportItems {
+    class V_PlateCarrierSpec_Salamandra_MTP {
+      name = "V_PlateCarrierSpec_Salamandra_MTP";
+      count = 1;
+    };
+  };
+};
+
+
+class Item_V_PlateCarrierSpec_Anaconda_MTP: Vest_Base_F {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [Anaconda] (MTP)";
+  vehicleClass = "ItemsVests";
+  editorCategory = "EdCat_Equipment";
+  editorSubcategory = "EdSubcat_Vests";
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+
+  class TransportItems {
+    class V_PlateCarrierSpec_Anaconda_MTP {
+      name = "V_PlateCarrierSpec_Anaconda_MTP";
+      count = 1;
+    };
+  };
+};
+
+
+class Item_V_PlateCarrierSpec_Quetzal_MTP: Vest_Base_F {
+  author = "hozlucas28";
+  displayName = "Equipo especial de portaaviones [Quetzal] (MTP)";
+  vehicleClass = "ItemsVests";
+  editorCategory = "EdCat_Equipment";
+  editorSubcategory = "EdSubcat_Vests";
+  scope = 2;
+  scopeArsenal = 2;
+  scopeCurator = 2;
+
+  class TransportItems {
+    class V_PlateCarrierSpec_Quetzal_MTP {
+      name = "V_PlateCarrierSpec_Quetzal_MTP";
+      count = 1;
+    };
+  };
+};
+
+
+
 /* ---------- EQUIPO ESPECIAL DE PORTAAVIONES (PELOTONES - VERDE) ---------- */
 
 class Item_V_PlateCarrierSpec_FCLA_Green: Vest_Base_F {
