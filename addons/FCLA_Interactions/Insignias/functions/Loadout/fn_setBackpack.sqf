@@ -41,7 +41,7 @@ _winterV1Kitbag = ["B_Kitbag_Winter_v1", "B_Kitbag_Medic_Winter_v1"];
 _marineAssaultPacks = ["B_AssaultPack_Marine", "B_AssaultPack_Medic_Marine"];
 
 
-//Obtener mochila con la insignia.
+//Obtener mochila con insignia.
 _backpackWithInsignia = switch (true) do {
 	case (_currentBackpack in _commonAssaultPacksWithNameTag): {"B_AssaultPack_" + _platoon + "_Green";};
 	case (_currentBackpack in _MTPAssaultPacks): {"B_AssaultPack_" + _platoon + "_MTP";};

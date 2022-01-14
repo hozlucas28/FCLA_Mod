@@ -98,13 +98,13 @@ missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introduct
 			waitUntil {scriptDone _videoStatus};
 			if (isGameFocused) then {playsound "FCLA_Introduction";};
 
-			Sleep 3;
+			sleep 3;
 			[
 			 "<img size='10' image='\FCLA_Common\data\FCLA_Squads.jpg'/>",
 			 safeZoneX + 0.71, safeZoneY + safeZoneH - 1.5, 4, 4, 0, 789
 			] spawn bis_fnc_dynamicText;
 
-			Sleep 10;
+			sleep 10;
 			[[
 				[_title, "<t align='center' size='1.75' font='PuristaBold'>%1</t><br/>"],
 				["(" + _subtitle + ")", "<t align='center' size='1' font='PuristaSemibold'>%1</t>"]
@@ -154,13 +154,13 @@ missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introduct
 			waitUntil {scriptDone _videoStatus};
 			if (isGameFocused) then {playsound "FCLA_Introduction";};
 
-			Sleep 3;
+			sleep 3;
 			[
 			 "<img size='10' image='\FCLA_Common\data\FCLA_Squads.jpg'/>",
 			 safeZoneX + 0.71, safeZoneY + safeZoneH - 1.5, 4, 4, 0, 789
 			] spawn bis_fnc_dynamicText;
 
-			Sleep 10;
+			sleep 10;
 			[[
 			  [_title, "<t align='center' size='1.75' font='PuristaBold'>%1</t><br/>"],
 			  ["(" + _subtitle + ")", "<t align='center' size='1' font='PuristaSemibold'>%1</t>"]

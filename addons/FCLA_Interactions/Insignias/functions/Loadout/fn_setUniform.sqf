@@ -39,7 +39,7 @@ _reconMarineUniforms = ["U_B_CombatUniform_Marine_Vest_v1", "U_B_CombatUniform_F
 _helicopterPilotsUniforms = ["U_B_HeliPilotCoveralls", "U_B_HeliPilotCoveralls_FCLA", "U_B_HeliPilotCoveralls_Quetzal"];
 
 
-//Obtener uniforme con la insignia.
+//Obtener uniforme con insignia.
 _uniformWithInsignia = switch (true) do {
 	case (_currentUniform in _helicopterPilotsUniforms): {"U_B_HeliPilotCoveralls_" + _platoon;};
 	case (_currentUniform in _MTPUniforms): {"U_B_CombatUniform_" + _platoon + "_mcam";};
