@@ -7,6 +7,14 @@
 
 /* ------------------------------ NATURALEZA ------------------------------- */
 
+class FCLA_Night_Owl {
+	name = "FCLA - Búho";
+	sound[] = {"\FCLA_Sounds\sounds\Night_Owl.ogg", "db+15", 1};
+	titles[] = {};
+  duration = 8;
+};
+
+
 class FCLA_Night_Crickets {
 	name = "FCLA - Grillos";
 	sound[] = {"\FCLA_Sounds\sounds\Night_Crickets.ogg", "db+15", 1};
@@ -235,7 +243,7 @@ class FCLA_Nuclear_Alarm {
 
 class FCLA_Music_Radio {
 	name = "FCLA - Radio (música)";
-	sound[] = {"\FCLA_Sounds\sounds\Music_Radio.ogg", "db+20", 1};
+	sound[] = {"\FCLA_Sounds\sounds\Music_Radio.ogg", "db+30", 1};
 	titles[] = {};
   duration = 78;
 };

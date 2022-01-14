@@ -40,6 +40,11 @@ class FCLA_Module_Play_Sound: Module_F {
 					value = "FCLA_SFX_Flies";
 				};
 
+        class Owl {
+					name = "FCLA - Búho";
+					value = "FCLA_SFX_Night_Owl";
+				};
+
         class Night_Crickets {
 					name = "FCLA - Grillos";
 					value = "FCLA_SFX_Night_Crickets";
@@ -175,6 +180,11 @@ class FCLA_Module_Play_Sound: Module_F {
 					value = "FCLA_SFX_Nuclear_Alarm";
 				};
 
+        class Music_Radio {
+					name = "FCLA - Radio (música)";
+					value = "FCLA_SFX_Music_Radio";
+				};
+
         class Arab_Music_Radio {
 					name = "FCLA - Radio (música árabe)";
 					value = "FCLA_SFX_Arab_Music_Radio";
@@ -235,6 +245,17 @@ class FCLA_Module_Play_Sound: Module_F {
 					value = "FCLA_SFX_Speaker_Curfew";
 				};
 
+        class Radio_Static {
+					name = "FCLA - Radio (estática)";
+					value = "FCLA_SFX_Radio_Static";
+				};
+
+        class Radio_Morse_Code {
+					name = "FCLA - Radio (código morse)";
+					value = "FCLA_SFX_Radio_Morse_Code";
+				};
+
+
         class Battlefield_Sniper_Suppression {
 					name = "FCLA - Supresión de francotirador";
 					value = "FCLA_SFX_Battlefield_Sniper_Suppression";
@@ -268,6 +289,11 @@ class FCLA_Module_Play_Sound: Module_F {
         class Battlefield_Fire_Fight_Urban {
 					name = "FCLA - Campo de batalla (urbano)";
 					value = "FCLA_SFX_Battlefield_Fire_Fight_Urban";
+				};
+
+        class Jet_Flying {
+					name = "FCLA - Caza sobrevolando";
+					value = "FCLA_SFX_Jet_Flying";
 				};
 
         class IED_Ring {

@@ -17,6 +17,16 @@ class FCLA_SFX_Flies {
 };
 
 
+class FCLA_SFX_Night_Owl {
+	name = "FCLA - Búho";
+	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Nature\Night_Owl.ogg", 8, 1, 500, 1, 1, 1, 0};
+	sounds[] = {"sound"};
+	titles[] = {};
+	duration = 8;
+};
+
+
 class FCLA_SFX_Night_Crickets {
 	name = "FCLA - Grillos";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
@@ -236,7 +246,7 @@ class FCLA_SFX_Shooting_Range_Alarm {
 class FCLA_SFX_Alarm {
 	name = "FCLA - Alarma";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
-	sound[] = {"\FCLA_Sounds\SFX\data\Alarms\Alarm.ogg", 9, 1, 400, 1, 0, 0, 0};
+	sound[] = {"\FCLA_Sounds\SFX\data\Alarms\Alarm.ogg", 9, 1, 1000, 1, 0, 0, 0};
 	sounds[] = {"sound"};
 	titles[] = {};
 	duration = 44;

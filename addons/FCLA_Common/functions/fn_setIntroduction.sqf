@@ -82,9 +82,16 @@ missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introduct
 			if ((_title == "") || (_subtitle == "")) exitWith {
 				_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
 				waitUntil {scriptDone _videoStatus};
-				cutText ["", "BLACK IN", 5, true, false];
+				cutText ["", "BLACK IN", 3, true, false];
 				[false] call ACE_Common_fnc_disableUserInput;
 				player setVariable ["FCLA_Playing_Introduction", nil, true];
+				[{
+					"dynamicBlur" ppEffectEnable true;
+					"dynamicBlur" ppEffectAdjust [7];
+					"dynamicBlur" ppEffectCommit 0;
+					"dynamicBlur" ppEffectAdjust [0];
+					"dynamicBlur" ppEffectCommit 5;
+				}, [], 0.1] call CBA_fnc_waitAndExecute;
 			};
 
 			_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
@@ -104,8 +111,15 @@ missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introduct
 			]] spawn BIS_fnc_typeText;
 
 			sleep 5;
-			cutText ["", "BLACK IN", 5, true, false];
+			cutText ["", "BLACK IN", 3, true, false];
 			[false] call ACE_Common_fnc_disableUserInput;
+			[{
+				"dynamicBlur" ppEffectEnable true;
+				"dynamicBlur" ppEffectAdjust [7];
+				"dynamicBlur" ppEffectCommit 0;
+				"dynamicBlur" ppEffectAdjust [0];
+				"dynamicBlur" ppEffectCommit 5;
+			}, [], 0.1] call CBA_fnc_waitAndExecute;
 
 			_introductionPlayedPlayers pushBack _playerUID;
 			player setVariable ["FCLA_Playing_Introduction", nil, true];
@@ -124,9 +138,16 @@ missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introduct
 			if ((_title == "") || (_subtitle == "")) exitWith {
 				_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
 				waitUntil {scriptDone _videoStatus};
-				cutText ["", "BLACK IN", 5, true, false];
+				cutText ["", "BLACK IN", 3, true, false];
 				[false] call ACE_Common_fnc_disableUserInput;
 				player setVariable ["FCLA_Playing_Introduction", nil, true];
+				[{
+					"dynamicBlur" ppEffectEnable true;
+					"dynamicBlur" ppEffectAdjust [7];
+					"dynamicBlur" ppEffectCommit 0;
+					"dynamicBlur" ppEffectAdjust [0];
+					"dynamicBlur" ppEffectCommit 5;
+				}, [], 0.1] call CBA_fnc_waitAndExecute;
 			};
 
 			_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
@@ -146,9 +167,16 @@ missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introduct
 			]] spawn BIS_fnc_typeText;
 
 			sleep 5;
-			cutText ["", "BLACK IN", 5, true, false];
+			cutText ["", "BLACK IN", 3, true, false];
 			[false] call ACE_Common_fnc_disableUserInput;
 			player setVariable ["FCLA_Playing_Introduction", nil, true];
+			[{
+				"dynamicBlur" ppEffectEnable true;
+				"dynamicBlur" ppEffectAdjust [7];
+				"dynamicBlur" ppEffectCommit 0;
+				"dynamicBlur" ppEffectAdjust [0];
+				"dynamicBlur" ppEffectCommit 5;
+			}, [], 0.1] call CBA_fnc_waitAndExecute;
 		};
 	};
 }] call CBA_fnc_addEventHandler;

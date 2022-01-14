@@ -17,6 +17,16 @@ class FCLA_SFX_Flies: Sound {
 };
 
 
+class FCLA_SFX_Night_Owl: Sound {
+	_generalMacro = "FCLA_SFX_Night_Owl";
+	author = "hozlucas28";
+	displayName = "FCLA - Búho";
+	sound = "FCLA_SFX_Night_Owl";
+	scope = 2;
+  scopeCurator = 2;
+};
+
+
 class FCLA_SFX_Night_Crickets: Sound {
 	_generalMacro = "FCLA_SFX_Night_Crickets";
 	author = "hozlucas28";
@@ -607,16 +617,6 @@ class FCLA_SFX_Attempt_Start_Vehicle: Sound {
 	author = "hozlucas28";
 	displayName = "FCLA - Intento de encender vehículo";
 	sound = "FCLA_SFX_Attempt_Start_Vehicle";
-	scope = 2;
-  scopeCurator = 2;
-};
-
-
-class FCLA_SFX_Spaceship_Breaking_in_Atmosphere: Sound {
-	_generalMacro = "FCLA_SFX_Spaceship_Breaking_in_Atmosphere";
-	author = "hozlucas28";
-	displayName = "FCLA - Nave alienígena arribando (atmósfera)";
-	sound = "FCLA_SFX_Spaceship_Breaking_in_Atmosphere";
 	scope = 2;
   scopeCurator = 2;
 };
