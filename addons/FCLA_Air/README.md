@@ -1,4 +1,4 @@
-ace_advanced_ballistics
+FCLA Air
 ===============
 
-The Advanced Ballistics module introduces advanced external- and internal ballistics to the game.
+Addon with new/modified aircrafts of the game.
