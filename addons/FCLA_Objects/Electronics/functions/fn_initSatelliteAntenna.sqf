@@ -20,10 +20,7 @@ params ["_antenna"];
   _entitiesAffected = _args getVariable ["FCLA_Entities_Affected", []];
   _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", 1];
   if (_isNotAlive) exitWith {
-    {
-      _x setVariable ["tf_sendingDistanceMultiplicator", _normalRadioRange, true];
-      _x setVariable ["tf_receivingDistanceMultiplicator", _normalRadioRange, true];
-    } forEach (_unitsInArea + _unitsNotInArea);
+    {_x setVariable ["tf_sendingDistanceMultiplicator", _normalRadioRange, true];} forEach (_unitsInArea + _unitsNotInArea);
     [_handle] call CBA_fnc_removePerFrameHandler;
   };
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
@@ -31,14 +28,12 @@ params ["_antenna"];
   {
     _affectedRadioRange = linearConversion [2.5, 1.75, _x distance _args, _normalRadioRange, _normalRadioRange * 5, true];
     _x setVariable ["tf_sendingDistanceMultiplicator", _affectedRadioRange, true];
-    _x setVariable ["tf_receivingDistanceMultiplicator", _affectedRadioRange, true];
     if (!(_x in _entitiesAffected)) then {_entitiesAffected pushBack _x;};
   } forEach _unitsInArea;
 
   {
     if (_x in _entitiesAffected) then {
       _x setVariable ["tf_sendingDistanceMultiplicator", _normalRadioRange, true];
-      _x setVariable ["tf_receivingDistanceMultiplicator", _normalRadioRange, true];
       _entitiesAffected = _entitiesAffected - [_x];
     };
   } forEach _unitsNotInArea;
