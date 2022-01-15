@@ -1,1 +1,1 @@
-Addon with new/modified aircrafts of the game.
+**Addon with new/modified aircrafts of the game.**
