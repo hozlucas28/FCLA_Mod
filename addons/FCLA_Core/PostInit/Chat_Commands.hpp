@@ -35,11 +35,11 @@
   [[west, east, resistance, civilian]] call ACE_Spectator_fnc_updateSides;
   [0, true, _cameraVision, getPosATL _player, getDir _player] call ACE_Spectator_fnc_setCameraAttributes;
   [format ["Mod FCLA - %1 entro al modo cámara.", name _player]] call ACE_Common_fnc_serverLog;
-  ["FCLA_System_Chat", [format ["%1 entro al modo cámara.", name _player]]] call CBA_fnc_globalEvent;
+  ["FCLA_System_Chat", [format ["%1 entro al modo cámara.", [_player] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;
 
   [{!(_this in (call ACE_Spectator_fnc_players))}, {
     [format ["Mod FCLA - %1 salio del modo cámara.", name _this]] call ACE_Common_fnc_serverLog;
-    ["FCLA_System_Chat", [format ["%1 salio del modo cámara.", name _this]]] call CBA_fnc_globalEvent;
+    ["FCLA_System_Chat", [format ["%1 salio del modo cámara.", [_this] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;
   }, _player] call CBA_fnc_waitUntilAndExecute;
 }, "all"] call CBA_fnc_registerChatCommand;
 
@@ -72,15 +72,15 @@
     case "TRUE": {
       [_player] call ZEN_Common_fnc_createZeus;
       [_player] spawn FCLA_Interactions_fnc_statementSelfInsignias;
-      [format ["Mod FCLA - %1 [%2] obtuvo Zeus a travez del comando de chat.", name _player, getPlayerUID player]] call ACE_Common_fnc_serverLog;
-      if (!ACE_Zeus_zeusAscension) then {["FCLA_System_Chat", [format ["%1 obtuvo Zeus a travez del comando de chat.", name _player]]] call CBA_fnc_globalEvent;};
+      [format ["Mod FCLA - %1 [%2] obtuvo Zeus a travez del comando de chat.", name _player, getPlayerUID _player]] call ACE_Common_fnc_serverLog;
+      if (!ACE_Zeus_zeusAscension) then {["FCLA_System_Chat", [format ["%1 obtuvo Zeus a travez del comando de chat.", [_player] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;};
     };
 
     case "FALSE": {
       deleteVehicle (getAssignedCuratorLogic _player);
       [_player] spawn FCLA_Interactions_fnc_statementSelfInsignias;
-      [format ["Mod FCLA - %1 [%2] solto el Zeus a travez del comando de chat.", name _player, getPlayerUID player]] call ACE_Common_fnc_serverLog;
-      ["FCLA_System_Chat", [format ["%1 solto el Zeus a travez del comando de chat.", name _player]]] call CBA_fnc_globalEvent;
+      [format ["Mod FCLA - %1 [%2] solto el Zeus a travez del comando de chat.", name _player, getPlayerUID _player]] call ACE_Common_fnc_serverLog;
+      ["FCLA_System_Chat", [format ["%1 solto el Zeus a travez del comando de chat.", [_player] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;
     };
   };
 }, "all"] call CBA_fnc_registerChatCommand;

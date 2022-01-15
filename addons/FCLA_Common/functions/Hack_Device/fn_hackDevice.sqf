@@ -210,7 +210,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
         [{
           params ["_target", "_caller", "_actionId", "_ctrlHackingLines"];
           _ctrlHackingLines ctrlShow true;
-          _ctrlHackingLines ctrlSetStructuredText parseText format [loadFile "\FCLA_Common\functions\Hack_Device\codes\Hack_Completed.txt", name _caller, "%"];
+          _ctrlHackingLines ctrlSetStructuredText parseText format [loadFile "\FCLA_Common\functions\Hack_Device\codes\Hack_Completed.txt", [_caller] call FCLA_Common_fnc_getCleanName, "%"];
         }, _this, 1] call CBA_fnc_waitAndExecute;
       }, [_target, _caller, _actionId, _ctrlHackingLines, _ctrlEndingVideo], 10] call CBA_fnc_waitAndExecute;
     };
