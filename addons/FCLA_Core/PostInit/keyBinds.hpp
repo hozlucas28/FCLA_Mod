@@ -5,25 +5,6 @@
 
 
 
-/* -------------------------- DISTANCIA DE VISIÓN -------------------------- */
-
-[
-	["FCLA", "• General"], "FCLA_Open_VD_Key",
-	["Abrir configuración de distancia de visión"],
-	{
-		_player = call CBA_fnc_currentUnit;
-		if (!alive _player) exitWith {};
-		[] call FCLA_Video_Settings_fnc_openDialogVD;
-	},
-	{},
-  [DIK_BACKSLASH, [false, true, false]],
-  false,
-	0,
-	false
-] call CBA_fnc_addKeybind;
-
-
-
 /* ----------------------------- PATEAR PUERTA ----------------------------- */
 
 [

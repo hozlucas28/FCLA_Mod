@@ -257,7 +257,7 @@ class FCLA_Module_ACE_Zeus_Action: Module_F {
 		};
 
     class FCLA_Parent_Path: Edit {
-      tooltip = "Determina en que acción padre se colocara la acción que queremos crear.\n• Por ejemplo: ['ACE_ZeusActions'];";
+      tooltip = "Determina en que acción padre se colocara la acción que queremos crear.\n• Por ejemplo: ['ACE_ZeusActions']";
       typeName = "STRING";
       property = "FCLA_Parent_Path";
       displayName = "Padres";
