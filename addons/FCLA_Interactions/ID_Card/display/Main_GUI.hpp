@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Define los classnames para la visualización de la identificación.
+ * Define los classnames del GUI.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

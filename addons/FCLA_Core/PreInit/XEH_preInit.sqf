@@ -17,7 +17,6 @@
 #include "\FCLA_Core\PreInit\Addon_Options\FCLA_Development.hpp"
 #include "\FCLA_Core\PreInit\Addon_Options\FCLA_Effects.hpp"
 #include "\FCLA_Core\PreInit\Addon_Options\FCLA_Immersions.hpp"
-#include "\FCLA_Core\PreInit\Addon_Options\FCLA_Video_Settings.hpp"
 #undef LOCAL
 #undef GLOBAL
 ["FCLA_Core.pbo - PreInit completado.\n\n"] call ACE_Common_fnc_serverLog;

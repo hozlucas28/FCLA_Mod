@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Define los classnames para colocar la información en la identificación.
+ * Define la estructura del GUI.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
