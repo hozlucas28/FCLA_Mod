@@ -14,7 +14,7 @@ params [
         ["_header", "", [""], 0],
         ["_text", "", [""], 0]
        ];
-if ((_errorID == "") || (_header == "") || (_text == "") || (_forceDeactivation)) exitWith {};
+if ((_errorID == "") || (_header == "") || (_text == "")) exitWith {};
 
 
 

@@ -9,7 +9,7 @@
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.
-params ["_unit", "_insignia"];
+params ["_unit", ["_insignia", (_this select 0) getVariable ["FCLA_Insignia", FCLA_Default_Patche]]];
 _getPlatoon = [_insignia, (_insignia find "_") + 1, 100] call CBA_fnc_substring;
 _platoon = if ((_getPlatoon == "Unassigned") || (_getPlatoon == "Common")) then {"FCLA";} else {_getPlatoon;};
 _currentHeadgear = headgear _unit;
@@ -35,8 +35,8 @@ _helicopterCrewHelmets = ["H_CrewHelmetHeli_B", "H_CrewHelmetHeli_B_Quetzal"];
 _headgearWithInsignia = switch (true) do {
 	case (_currentHeadgear in _blackBerets): {"H_Beret_" + _platoon + "_Black";};
 	case (_currentHeadgear in _blueBerets): {"H_Beret_" + _platoon + "_Blue";};
-	case (_currentHeadgear in _redBerets): {"H_Beret_" + _platoon + "_Green";};
-	case (_currentHeadgear in _greenBerets): {"H_Beret_" + _platoon + "_Red";};
+	case (_currentHeadgear in _redBerets): {"H_Beret_" + _platoon + "_Red";};
+	case (_currentHeadgear in _greenBerets): {"H_Beret_" + _platoon + "_Green";};
 	case (_currentHeadgear in _improvedCommonCombatHelmets): {"H_HelmetSpecB_" + _platoon;};
 	case (_currentHeadgear in _improvedSnakeCombatHelmets): {"H_HelmetSpecB_" + _platoon + "_Snake";};
 	case (_currentHeadgear in _improvedTropicalCombatHelmets): {"H_HelmetSpecB_" + _platoon + "_Tropical";};

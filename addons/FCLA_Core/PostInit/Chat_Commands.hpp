@@ -10,7 +10,7 @@
 ["Camera", {
   params ["_value"];
   _player = player;
-  _inUAV = ([_player] call ace_common_fnc_getUavControlPosition) != "";
+  _inUAV = ([_player] call ACE_Common_fnc_getUavControlPosition) != "";
   _isOnMap = visibleMap;
   _inCurator = !isNull findDisplay 312;
   _isNotAlive = !(alive _player);
@@ -34,12 +34,12 @@
   [allUnits, [_player]] call ACE_Spectator_fnc_updateUnits;
   [[west, east, resistance, civilian]] call ACE_Spectator_fnc_updateSides;
   [0, true, _cameraVision, getPosATL _player, getDir _player] call ACE_Spectator_fnc_setCameraAttributes;
-  [format ["Mod FCLA - %1 entro al modo cámara.", name _player]] call ACE_Common_fnc_serverLog;
-  ["FCLA_System_Chat", [format ["%1 entro al modo cámara.", [_player] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;
+  [format ["Mod FCLA - %1 [%2] entro al modo cámara.", name _player, getPlayerUID _player]] call ACE_Common_fnc_serverLog;
+  [{["FCLA_System_Chat", [format ["• Sistema: %1 entro al modo cámara.", [_this] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;}, _player, 0.1] call CBA_fnc_waitAndExecute;
 
   [{!(_this in (call ACE_Spectator_fnc_players))}, {
-    [format ["Mod FCLA - %1 salio del modo cámara.", name _this]] call ACE_Common_fnc_serverLog;
-    ["FCLA_System_Chat", [format ["%1 salio del modo cámara.", [_this] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;
+    [format ["Mod FCLA - %1 [%2] salio del modo cámara.", name _this, getPlayerUID _this]] call ACE_Common_fnc_serverLog;
+    ["FCLA_System_Chat", [format ["• Sistema: %1 salio del modo cámara.", [_this] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;
   }, _player] call CBA_fnc_waitUntilAndExecute;
 }, "all"] call CBA_fnc_registerChatCommand;
 
@@ -49,9 +49,10 @@
 
 ["Zeus", {
   params ["_value"];
+  _value = toUpper _value;
   _player = player;
   _playerUID = getPlayerUID _player;
-  _inUAV = ([_player] call ace_common_fnc_getUavControlPosition) != "";
+  _inUAV = ([_player] call ACE_Common_fnc_getUavControlPosition) != "";
   _isOnMap = visibleMap;
   _isAdmin = [] call FCLA_Common_fnc_isAdmin;
   _isCurator = [_player] call FCLA_Common_fnc_isCurator;
@@ -62,25 +63,27 @@
   if (_inUAV) exitWith {[{["FCLA_System_Chat", ["No puedes utilizar este comando si estas utilizando un dron."]] call CBA_fnc_localEvent;}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_isOnMap) exitWith {[{["FCLA_System_Chat", ["No puedes utilizar este comando si el mapa esta abierto."]] call CBA_fnc_localEvent;}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_isAdmin) exitWith {[{["FCLA_System_Chat", ["Por razones de seguridad al ser un administrador, no puedes utilizar este comando."]] call CBA_fnc_localEvent;}, [], 0.1] call CBA_fnc_waitAndExecute;};
-  if (_isCurator) exitWith {[{["FCLA_System_Chat", ["Ya posees Zeus."]] call CBA_fnc_localEvent;}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_isNotAlive) exitWith {[{["FCLA_System_Chat", ["Debes estar vivo para utilizar este comando."]] call CBA_fnc_localEvent;}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_inCameraMode) exitWith {[{["FCLA_System_Chat", ["No puedes utilizar este comando si te encuentras en el modo cámara."]] call CBA_fnc_localEvent;}, [], 0.1] call CBA_fnc_waitAndExecute;};
+  if ((_value == "TRUE") && (_isCurator)) exitWith {[{["FCLA_System_Chat", ["Ya posees Zeus."]] call CBA_fnc_localEvent;}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if ((FCLA_Mission_Type != "Training") && (_isNotAuthorized)) exitWith {[{["FCLA_System_Chat", ["No puedes utilizar este comando, salvo que seas editor oficial, parte de 'Mando' o instructor."]] call CBA_fnc_localEvent;}, [], 0.1] call CBA_fnc_waitAndExecute;};
   if (_currentControledUnit != _player) exitWith {[{["FCLA_System_Chat", ["No puedes utilizar este comando si estas controlando a una unidad."]] call CBA_fnc_localEvent;}, [], 0.1] call CBA_fnc_waitAndExecute;};
 
-  switch (toUpper _value) do {
+  switch (_value) do {
     case "TRUE": {
-      [_player] call ZEN_Common_fnc_createZeus;
+      ACE_Zeus_Zeus = objNull;
+      ["ACE_Zeus_createZeus", _player] call CBA_fnc_serverEvent;
       [_player] spawn FCLA_Interactions_fnc_statementSelfInsignias;
       [format ["Mod FCLA - %1 [%2] obtuvo Zeus a travez del comando de chat.", name _player, getPlayerUID _player]] call ACE_Common_fnc_serverLog;
-      if (!ACE_Zeus_zeusAscension) then {["FCLA_System_Chat", [format ["%1 obtuvo Zeus a travez del comando de chat.", [_player] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;};
+      [{["FCLA_System_Chat", [format ["• Sistema: %1 obtuvo Zeus a travez del comando de chat.", [_this] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;}, _player, 0.1] call CBA_fnc_waitAndExecute;
     };
 
     case "FALSE": {
-      deleteVehicle (getAssignedCuratorLogic _player);
+      deleteVehicle ACE_Zeus_Zeus;
+      ACE_Zeus_Zeus = nil;
       [_player] spawn FCLA_Interactions_fnc_statementSelfInsignias;
       [format ["Mod FCLA - %1 [%2] solto el Zeus a travez del comando de chat.", name _player, getPlayerUID _player]] call ACE_Common_fnc_serverLog;
-      ["FCLA_System_Chat", [format ["%1 solto el Zeus a travez del comando de chat.", [_player] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;
+      [{["FCLA_System_Chat", [format ["• Sistema: %1 solto el Zeus a travez del comando de chat.", [_this] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;}, _player, 0.1] call CBA_fnc_waitAndExecute;
     };
   };
 }, "all"] call CBA_fnc_registerChatCommand;

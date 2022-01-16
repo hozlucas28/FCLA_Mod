@@ -6,7 +6,7 @@
 class CfgPatches {
 	class FCLA_Core {
 		units[] = {};
-		requiredAddons[] = {};
+		requiredAddons[] = {"A3_Air_F", "A3_Air_F_Beta", "A3_Weapons_F_Ammoboxes", "A3_Air_F_Beta_Parachute_01", "A3_Data_F"};
 		author = "hozlucas28";
 		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";

@@ -9,7 +9,7 @@
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.
-params ["_unit", "_insignia"];
+params ["_unit", ["_insignia", (_this select 0) getVariable ["FCLA_Insignia", FCLA_Default_Patche]]];
 if (_unit getVariable ['FCLA_Disable_Insignias', false]) exitWith {};
 
 

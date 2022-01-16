@@ -24,7 +24,7 @@ if ((_backpackContainer getVariable ["FCLA_Backpack_Oxygen", FCLA_CBRN_Initial_B
 
 
 //Colocar manguera.
-[_player] call BIN_fnc_CBRNHoseInit;
+[_player] remoteExec ["BIN_fnc_CBRNHoseInit", 0, true];
 _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
 [_player, "FCLA_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 [_player, "quick_view", "%1 activo el suministro de oxígeno", [name _player]] call ACE_Medical_Treatment_fnc_addToLog;
