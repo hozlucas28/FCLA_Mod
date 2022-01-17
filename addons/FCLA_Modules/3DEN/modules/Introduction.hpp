@@ -22,6 +22,7 @@ class FCLA_Module_Introduction: Module_F {
   canSetAreaShape = HAS_NOT_SETTABLE_SHAPE;
   canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
 	isTriggerActivated = CAN_NOT_ACTIVATED_BY_TRIGGER;
+  functionPriority = 1;
   scope = 2;
   scopeCurator = 0;
 

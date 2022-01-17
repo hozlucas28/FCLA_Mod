@@ -4,8 +4,7 @@
 |***************************************************************************/
 
 #define SERVER 0
-#define GLOBAL 2
-//#define GLOBAL 1
+#define GLOBAL 1
 #define GLOBAL_JIP 2
 #define REPEATABLE 0
 #define RUN_IN_3DEN 1

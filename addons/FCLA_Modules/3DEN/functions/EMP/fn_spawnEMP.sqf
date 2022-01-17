@@ -78,8 +78,10 @@ _this spawn {
       _x disableTIEquipment true;
       _x disableNVGEquipment true;
       _x setHitPointDamage ["hitGun", 1];
+      _x setHitPointDamage ["hitcomgun", 1];
       _x setHitPointDamage ["hitEngine", 1];
       _x setHitPointDamage ["hitTurret", 1];
+      _x setHitPointDamage ["hitcomturret", 1];
     };
   } forEach _nearVehicles;
 

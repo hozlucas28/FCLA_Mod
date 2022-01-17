@@ -23,6 +23,7 @@ class FCLA_Module_Jammer: Module_F {
   canSetAreaShape = HAS_NOT_SETTABLE_SHAPE;
   canSetAreaHeight = HAS_SETTABLE_AREA_HEIGHT;
 	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
+  functionPriority = 1;
   scope = 2;
   scopeCurator = 0;
 
