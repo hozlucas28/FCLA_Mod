@@ -13,6 +13,11 @@
 
 
 
+//PARA BORRAR MÓDULO SIN BUGS.
+[{!isNull findDisplay 46}, {deleteVehicle _this;}, _module] call CBA_fnc_waitUntilAndExecute;
+
+
+
 //ESTE EJEMPLO FUNCIONA.
 private _moduleGroup = createGroup sideLogic;
 private _customVehicle = cursorObject;
