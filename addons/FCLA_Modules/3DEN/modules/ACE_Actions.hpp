@@ -26,7 +26,7 @@ class FCLA_Module_ACE_Class_Action: Module_F {
   isDisposable = UNREPEATABLE;
   canSetAreaShape = HAS_NOT_SETTABLE_SHAPE;
   canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
-	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
+	//isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
   scope = 2;
   scopeCurator = 0;
 
@@ -123,7 +123,7 @@ class FCLA_Module_ACE_Object_Action: Module_F {
   canSetArea = HAS_NOT_SETTABLE_AREA;
   isDisposable = UNREPEATABLE;
   canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
-	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
+	//isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
   scope = 2;
 
 
@@ -219,7 +219,7 @@ class FCLA_Module_ACE_Zeus_Action: Module_F {
   canSetArea = HAS_NOT_SETTABLE_AREA;
   isDisposable = UNREPEATABLE;
   canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
-	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
+	//isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
   scope = 2;
 
 

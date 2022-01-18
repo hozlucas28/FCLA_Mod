@@ -43,7 +43,3 @@ _associatedObject = if ((_findedEntity > -1) && (_numberOfCompatibleSynchronized
 //Crear y asociar acción.
 _actionCreated = [_name, _name, _icon, [_statement] call FCLA_Common_fnc_stringToCode, [_condition] call FCLA_Common_fnc_stringToCode, {}, [], {[0, 0, 0]}, 2, [false, false, false, false, false], {}] call ACE_Interact_Menu_fnc_createAction;
 [_associatedObject, _typeOfAction, _parentPath, _actionCreated] call ACE_Interact_menu_fnc_addActionToObject;
-
-
-//Eliminar módulo.
-deleteVehicle _module;

@@ -14,10 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
-_assignedEntity = _module getVariable ["FCLA_Assigned_Entity", objNull];
-_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
-_forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
-if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
+if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 
 
 
@@ -31,14 +28,13 @@ _moduleArea = _module getVariable ["objectArea", [0, 0, 0, false, -1]];
 _repeatable = _module getVariable ["FCLA_Repeatable", false];
 _needLongRadio = _module getVariable ["FCLA_Need_Long_Radio", false];
 _needShortRadio = _module getVariable ["FCLA_Need_Short_Radio", false];
-_numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count _synchronizedObjects;
+_compatibleSynchronizedObjects = _synchronizedObjects select {!(_x isKindOf "EmptyDetector")};
 if ((_emitter == "") || (_subtitle == "") || (_timeToHide <= 0)) exitWith {["¡Error! El/Un módulo 'Mostrar subtítulo' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
 
 //Generar subtítulo.
-_findedEntity = _synchronizedObjects findIf {!(_x isKindOf "EmptyDetector")};
-_emitterObject = if ((_findedEntity > -1) && (_numberOfCompatibleSynchronizedObjects == 1)) then {_synchronizedObjects select _findedEntity;} else {_module;};
+_emitterObject = if ((count _compatibleSynchronizedObjects) == 1) then {_compatibleSynchronizedObjects select 0;} else {_module;};
 if (_module != _emitterObject) then {_module attachTo [_emitterObject, [0, 0, 0]];};
 
 if (({_x <= 0} count [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4]) >= 3) exitWith {
@@ -73,9 +69,4 @@ _trigger setTriggerActivation ["ANY", "PRESENT", _repeatable];
 _trigger setTriggerArea _moduleArea;
 _trigger setTriggerStatements [[_Condition] call ACE_Common_fnc_codeToString, [_StatementOnActivation] call ACE_Common_fnc_codeToString, [_StatementOnDeactivation] call ACE_Common_fnc_codeToString];
 _trigger setVariable ["FCLA_Subtitle_Attributes", [_emitterObject, [[_emitter, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _side, _moduleArea]], true];
-[{!alive (_this select 1)}, {{deleteVehicle _x;} forEach _this;}, [_module, _emitterObject, _trigger]] call CBA_fnc_waitUntilAndExecute;
-
-
-//Agregar a objetos editables.
-_curatorLogic = getAssignedCuratorLogic _assignedCurator;
-_curatorLogic addCuratorEditableObjects [[_module], false];
+[{(!alive (_this select 1)) || (!alive (_this select 2))}, {{deleteVehicle _x;} forEach _this;}, [_module, _emitterObject, _trigger]] call CBA_fnc_waitUntilAndExecute;

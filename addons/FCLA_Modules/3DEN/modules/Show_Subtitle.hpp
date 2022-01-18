@@ -21,7 +21,7 @@ class FCLA_Module_Show_Subtitle: Module_F {
   isDisposable = REPEATABLE;
   canSetAreaShape = HAS_SETTABLE_SHAPE;
   canSetAreaHeight = HAS_SETTABLE_AREA_HEIGHT;
-	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
+	//isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
   scope = 2;
   scopeCurator = 0;
 

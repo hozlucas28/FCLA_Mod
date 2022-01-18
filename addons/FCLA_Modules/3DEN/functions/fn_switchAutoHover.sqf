@@ -7,39 +7,6 @@
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
-/*
-[{time > 0}, {
-  //Variables de referencia.
-  params [
-          ["_module", objNull, [objNull], 0],
-          ["_synchronizedObjects", [], [[]], []],
-          ["_isActivated", true, [true], 0]
-         ];
-  if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
-
-
-
-  //Verificar argumentos.
-  _allLogics = allMissionObjects "Logic";
-  _moreThanOne = ("FCLA_Module_Auto_Hover" countType _allLogics) > 1;
-  _allAirVehicles = vehicles select {_x isKindOf "Air"};
-  _disableAutoHover = _module getVariable ["FCLA_Auto_Hover", "Activated"];
-  if (_moreThanOne) exitWith {["FCLA_Module_Auto_Hover", "• MÓDULO: PROPULSIÓN AUTOMÁTICA", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Propulsión automática' han sido desactivados."] spawn FCLA_Modules_fnc_reportError3DEN;};
-
-
-
-  //Activar/Desactivar propulsión automática.
-  missionNamespace setVariable ["FCLA_Auto_Hover", _disableAutoHover];
-  {(driver _x) action ["AutoHoverCancel", _x];} forEach _allAirVehicles;
-  [str _disableAutoHover] call ACE_Common_fnc_serverLog;
-  systemChat str _disableAutoHover;
-
-  //Eliminar módulo.
-  deleteVehicle _module;
-}, _this] call CBA_fnc_waitUntilAndExecute;
-*/
-
-
 
 //Variables de referencia.
 params [
@@ -63,8 +30,3 @@ if (_moreThanOne) exitWith {["FCLA_Module_Auto_Hover", "• MÓDULO: PROPULSIÓN
 //Activar/Desactivar propulsión automática.
 missionNamespace setVariable ["FCLA_Auto_Hover", _disableAutoHover];
 {(driver _x) action ["AutoHoverCancel", _x];} forEach _allAirVehicles;
-[str _disableAutoHover] call ACE_Common_fnc_serverLog;
-systemChat str _disableAutoHover;
-
-//Eliminar módulo.
-//deleteVehicle _module;
