@@ -34,6 +34,7 @@ _acceptedTraits = ["MEDIC", "DOCTOR", "ENGINNER", "ADVANCED ENGINNER", "EOD"];
 if ((isNull _unit) || !(_trait in _acceptedTraits)) exitWith {false};
 
 
+
 //Asignar característica.
 switch (_trait) do {
   case "MEDIC": {_unit setVariable ["ACE_Medical_medicClass", 1, true];};

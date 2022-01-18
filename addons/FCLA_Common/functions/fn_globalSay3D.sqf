@@ -48,6 +48,7 @@ _isSourcePlayingSound = _source getVariable ["FCLA_Playing_Sound", false];
 if ((isNull _source) || (_maxDistance <= 0) || ((ceil _soundTime) <= 0) || (_soundNotExist) || (_isSourcePlayingSound)) exitWith {false};
 
 
+
 //Reproducir sonido.
 _soundObj = createAgent ["VirtualAISquad", getPos _source, [], 0, "CAN_COLLIDE"];
 _soundObj attachTo [_source, [0, 0, 0]];

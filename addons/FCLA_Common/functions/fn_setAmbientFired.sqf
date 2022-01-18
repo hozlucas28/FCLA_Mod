@@ -55,7 +55,13 @@ if ((_minimumShots <= 0) || (_maximumShots <= 0) || (_minimumDelay <= 0) || (_ma
 
 [_vehicle, _turretType, _ammoType, _minimumShots, _maximumShots, _minimumDelay, _maximumDelay] spawn {
 	params ["_vehicle", "_turretType", "_ammoType", "_minimumShots", "_maximumShots", "_minimumDelay", "_maximumDelay"];
+
+	//Atributos iniciales.
+	_aliveCrew = (crew _vehicle) select {alive _x};
+	_vehicleGroup = group (selectRandom _aliveCrew);
+	_vehicleGroup setBehaviour "AWARE";
 	_vehicle setVariable ["FCLA_Ambient_Fire", true, true];
+
 
 	//Definir condiciones.
 	_conditions = {

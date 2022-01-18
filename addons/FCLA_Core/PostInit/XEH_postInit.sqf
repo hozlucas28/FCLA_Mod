@@ -11,8 +11,6 @@
 
 //Inclusiones.
 disableSerialization;
-["FCLA_Core.pbo - PostInit cargando..."] call ACE_Common_fnc_serverLog;
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 #include "\FCLA_Core\PostInit\Chat_Commands.hpp"
 #include "\FCLA_Core\PostInit\keyBinds.hpp"
-["FCLA_Core.pbo - PostInit completado."] call ACE_Common_fnc_serverLog;

@@ -35,6 +35,7 @@ _acceptedDLCs = ["ZEUS", "JETS", "APEX", "KARTS", "TANKS", "MALDEN", "CONTACT", 
 if (!(_DLC in _acceptedDLCs)) exitWith {false};
 
 
+
 //Verificar si es propietario.
 _ownedDLCs = getDLCs 1;
 switch (toUpper _DLC) do {

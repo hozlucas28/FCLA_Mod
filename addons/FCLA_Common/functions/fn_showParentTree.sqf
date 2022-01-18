@@ -37,6 +37,7 @@ _classnameNotExist = !(isClass _configOfClassname);
 if (_classnameNotExist) exitWith {false};
 
 
+
 //Definir arbol.
 _parents = [];
 while {!isNull _configOfClassname} do {

@@ -1,56 +1,27 @@
-13:42:05 Matrícula VERDADERO
-13:42:05 Subtítulo VERDADERO
-13:44:04 Señal de humo VERDADERO
-13:44:04 Señal de humo FALSO
-
 
 
 
 //LOS ZEUS FUNCIONAN SIN EL CREATE AGENT
-//General macro
 //PROBAR MODO SCRIPT
 //CfgRemoteExec
+//ERROR EN CONFIGURACION CBRN
+//ERROR EN PORTAR Y ARRASTRE
+//obtener vehículos a los aplicar con selectIf
+//REPETIBLE NO ESTA DEFINIDO EN LOS MODULOS ACE (MOD)
+//21:01:43 File FCLA_Common\CfgFunctions.hpp, line 3: '/CfgFunctions/FCLA_Common/FCLA_Common_Functions/EventHandlers.file': Missing ';' at the end of line
 
 
 
 
-
-
-
-_module = createAgent ["FCLA_Module_Ambient_Fired", getPos anti, [], 0, "CAN_COLLIDE"];
-_module synchronizeObjectsAdd [anti];
-_module setVariable ["FCLA_Ammo", "680Rnd_35mm_AA_shells_Tracer_Red", true];
-_module setVariable ["FCLA_Weapon", "autocannon_35mm", true];
-_module setVariable ["FCLA_Assigned_Curator", player, true];
-_module setVariable ["FCLA_Assigned_Entity", anti, true];
-_module setVariable ["FCLA_Minimum_Shots", 10, true];
-_module setVariable ["FCLA_Maximum_Shots", 20, true];
-_module setVariable ["FCLA_Minimum_Delay", 4, true];
-_module setVariable ["FCLA_Maximum_Delay", 8, true];
-["EL VEHÍCULO COMENZARA A REALIZAR DISPAROS AMBIENTALES"] call ZEN_Common_fnc_showMessage;
-
-
-
-
+//ESTE EJEMPLO FUNCIONA.
 private _moduleGroup = createGroup sideLogic;
-FCLA_Vehicle_Custom = anti2;
-"FCLA_Module_Ambient_Fired" createUnit [
+private _customVehicle = cursorObject;
+"FCLA_Module_Plate_Number" createUnit [
 	getPosATL player,
 	_moduleGroup,
 	"
-  [{
-
-  }, this, 1] call CBA_fnc_waitAndExecute;
+   this synchronizeObjectsAdd [_customVehicle];
+   this setVariable ['FCLA_New_Plate_Number', 'JA JA JA', true];
    this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-   this synchronizeObjectsAdd [FCLA_Vehicle_Custom];
-   this setVariable ['FCLA_Ammo', '680Rnd_35mm_AA_shells_Tracer_Red', true];
-   this setVariable ['FCLA_Weapon', 'autocannon_35mm', true];
-   this setVariable ['FCLA_Assigned_Curator', player, true];
-   this setVariable ['FCLA_Assigned_Entity', FCLA_Vehicle_Custom, true];
-   this setVariable ['FCLA_Minimum_Shots', 10, true];
-   this setVariable ['FCLA_Maximum_Shots', 20, true];
-   this setVariable ['FCLA_Minimum_Delay', 4, true];
-   this setVariable ['FCLA_Maximum_Delay', 8, true];
-   FCLA_Vehicle_Custom = nil;
   "
 ];

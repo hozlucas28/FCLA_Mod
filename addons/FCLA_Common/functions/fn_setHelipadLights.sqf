@@ -40,6 +40,7 @@ _compatibleColorOfLights = ["YELLOW", "RED", "GREEN"];
 if ((isNull _helipad) || !((typeOf _helipad) in _compatiblehelipads) || (_numberOfLights <= 0) || !(_colorOfLights in _compatibleColorOfLights)) exitWith {false};
 
 
+
 //Definir variables locales.
 _helipadPos = getPos _helipad;
 _spaceBetweenLights	= 360/_numberOfLights;

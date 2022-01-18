@@ -35,6 +35,7 @@ _acceptedTraits = ["MEDIC", "DOCTOR", "ENGINNER", "ADVANCED ENGINNER", "EOD"];
 if ((isNull _unit) || !(_trait in _acceptedTraits)) exitWith {false};
 
 
+
 //Verificar si cumple con la característica.
 switch (_trait) do {
   case "MEDIC": {(_unit getVariable ["ACE_Medical_medicClass", 0]) == 1};

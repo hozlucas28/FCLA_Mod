@@ -35,6 +35,7 @@ _ctrl = _emitter getVariable "FCLA_Subtitles_ctrl";
 if ((isNull _emitter) || (isNil "_ctrl")) exitWith {false};
 
 
+
 //Ocultar subtítulos.
 _ctrl ctrlSetFade 1;
 _ctrl ctrlCommit 0.5;

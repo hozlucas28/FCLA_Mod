@@ -10,6 +10,6 @@
 
 ["KeyDown", {
 	params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
-  _disableAutoHover = missionNamespace getVariable ["FCLA_Disable_Auto_Hover", false];
-	if ((_disableAutoHover) && ((_key in (actionKeys "AutoHover")) || (_key in (actionKeys "AutoHoverCancel")))) then {true;} else {false;};
+  _disableAutoHover = toUpper (missionNamespace getVariable ["FCLA_Auto_Hover", "Activated"]);
+	if ((_disableAutoHover == "DEACTIVATED") && ((_key in (actionKeys "AutoHover")) || (_key in (actionKeys "AutoHoverCancel")))) then {true;} else {false;};
 }] call CBA_fnc_addDisplayHandler;

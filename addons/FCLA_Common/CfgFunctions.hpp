@@ -5,7 +5,7 @@
 
 class FCLA_Common_Functions {
   class EventHandlers {
-    file = "\FCLA_Common\functions\CBA_EventHandlers\fn_setEventHandlers.sqf"
+    file = "\FCLA_Common\functions\CBA_EventHandlers\fn_setEventHandlers.sqf";
     postInit = 1;
   };
 

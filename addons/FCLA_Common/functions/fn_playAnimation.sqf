@@ -52,6 +52,7 @@ _acceptedTypesOfReproduction = ["PLAYACTION", "PLAYACTIONNOW", "PLAYMOVE", "PLAY
 if ((isNull _unit) || !(_typeOfReproduction in _acceptedTypesOfReproduction) || (_inVehicle) || ((!_forceReproduction) && (_isUnitPlayingAnimation))) exitWith {false};
 
 
+
 //Reproducir animación.
 _unit setVariable ["FCLA_Playing_Animation", true, true];
 switch (_typeOfReproduction) do {

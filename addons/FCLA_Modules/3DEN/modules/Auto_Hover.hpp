@@ -15,35 +15,34 @@ class FCLA_Module_Auto_Hover: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Auto_Hover.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_switchAutoHover3DEN";
-  is3DEN = NOT_RUN_IN_3DEN;
-	isGlobal = GLOBAL;
-  canSetArea = HAS_NOT_SETTABLE_AREA;
-  isDisposable = UNREPEATABLE;
-  canSetAreaShape = HAS_NOT_SETTABLE_SHAPE;
-  canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
-	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
-  functionPriority = 1;
+  //is3DEN = NOT_RUN_IN_3DEN;
+	isGlobal = 1; //GLOBAL
+  //canSetArea = HAS_NOT_SETTABLE_AREA;
+  //isDisposable = UNREPEATABLE;
+  //canSetAreaShape = HAS_NOT_SETTABLE_SHAPE;
+  //canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
+	isTriggerActivated = 0; //CAN_ACTIVATED_BY_TRIGGER
   scope = 2;
   scopeCurator = 0;
 
 
 	class Attributes: AttributesBase {
-    class FCLA_Disable_Auto_Hover: Combo {
+    class FCLA_Auto_Hover: Combo {
       tooltip = "";
       typeName = "STRING";
-      property = "FCLA_Disable_Auto_Hover";
+      property = "FCLA_Auto_Hover";
       displayName = "Propulsión automática";
-      defaultValue = """DEACTIVATED""";
+      defaultValue = """Activated""";
 
      class Values {
        class Activated {
          name = "Activada";
-         value = "ACTIVATED";
+         value = "Activated";
        };
 
        class Deactivated {
          name = "Desactivada";
-         value = "DEACTIVATED";
+         value = "Deactivated";
        };
      };
    };
