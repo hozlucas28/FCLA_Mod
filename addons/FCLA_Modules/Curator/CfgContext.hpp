@@ -8,7 +8,8 @@ class ZEN_Context_Menu_Actions {
     icon = "\FCLA_Modules\Curator\data\Attach.paa";
     priority = 25;
     statement = "[_hoveredEntity] spawn FCLA_Modules_fnc_attachAndDetachCurator;";
-    condition = "(_hoveredEntity isEqualType objNull) && (isNull attachedTo player) && (alive _hoveredEntity) && (_hoveredEntity != player)";
+    //condition = "(_hoveredEntity isEqualType objNull) && (isNull attachedTo player) && (_hoveredEntity != player)";
+    condition = "if (!(_hoveredEntity isEqualType objNull)) exitWith {false}; (isNull attachedTo player) && (alive _hoveredEntity) && (_hoveredEntity != player)";
     displayName = "Pegarse";
   };
 

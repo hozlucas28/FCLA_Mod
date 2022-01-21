@@ -14,16 +14,14 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
-_assignedEntity = _module getVariable ["FCLA_Assigned_Entity", objNull];
-_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
-_forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
-if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
+if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 
 
 
 //Generar señal de humo.
 _modulePos = getPosATL _module;
 _smokeColor = toUpper (_module getVariable ["FCLA_Color", "white"]);
+/*
 _newColorSelected = switch (_smokeColor) do {
   case "RED": {[1, 0.253, 0, 1];};
   case "BLUE": {[0.266, 0.537, 1, 1];};
@@ -61,7 +59,9 @@ _soundSourceTwo = createAgent ["VirtualAISquad", _modulePos, [], 0, "CAN_COLLIDE
   _particleObj setParticleParams [["\A3\data_f\ParticleEffects\Universal\Universal_02.p3d", 8, 0, 40, 0], "", "Billboard", 1, FCLA_Smoke_Signal_Time, [0, 0, 0], [0, 0, 0], 5, 10.2, 8, 0.05, [5, 20], [[_newColorSelected select 0, _newColorSelected select 1, _newColorSelected select 2, 1], [_newColorSelected select 0, _newColorSelected select 1, _newColorSelected select 2, 0.5], [_newColorSelected select 0, _newColorSelected select 1, _newColorSelected select 2, 0.3], [_newColorSelected select 0, _newColorSelected select 1, _newColorSelected select 2, 0]], [0.3], 0, 0, "", "", _modulePos];
   [{deleteVehicle _this;}, _particleObj, 0.1] call CBA_fnc_waitAndExecute;
 }, [_modulePos, _newColorSelected], 0.2] call CBA_fnc_waitAndExecute;
+*/
 
+["FCLA_Smoke_Signal", [_modulePos, _smokeColor]] call CBA_fnc_globalEvent;
 
 //Eliminar módulo.
 deleteVehicle _module;

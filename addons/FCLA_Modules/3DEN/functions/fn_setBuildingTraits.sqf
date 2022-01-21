@@ -15,13 +15,14 @@
                          ["_isCuratorPlaced", false, [true], 0]
                         ];
 _mode = _this select 0;
-_assignedEntity = _module getVariable ["FCLA_Assigned_Entity", objNull];
+if (((_mode != "init") && (_mode != "dragged3DEN") && (_mode != "attributesChanged3DEN")) || (isNull _module) || (!_isActivated)) exitWith {};
+
+
+
+//Argumentos
 _notifyBuilding = _module getVariable ["FCLA_Notify_Building", false];
-_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
 _isRepairFacility = _module getVariable ["FCLA_isRepair_Facility", false];
 _isMedicalFacility = _module getVariable ["FCLA_isMedical_Facility", false];
-_forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
-if (((_mode != "init") && (_mode != "dragged3DEN") && (_mode != "attributesChanged3DEN")) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
 
 
 

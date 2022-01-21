@@ -14,10 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
-_assignedEntity = _module getVariable ["FCLA_Assigned_Entity", objNull];
-_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
-_forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
-if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
+if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 
 
 
@@ -36,5 +33,11 @@ _parentPath = parseSimpleArray ([_parentPath, """", "'"] call CBA_fnc_replace);
 
 
 //Crear y asociar acción.
-_actionCreated = [_name, _name, _icon, [_statement] call FCLA_Common_fnc_stringToCode, [_condition] call FCLA_Common_fnc_stringToCode, {}, [], {[0, 0, 0]}, 2, [false, false, false, false, false], {}] call ACE_Interact_Menu_fnc_createAction;
-[_parentPath, _actionCreated] call ACE_Interact_Menu_fnc_addActionToZeus;
+["FCLA_ACE_Zeus_Action", [
+ [_name, _icon, _statement, _condition],
+ [_parentPath]
+]] call CBA_fnc_globalEventJIP;
+
+
+//Eliminar módulo.
+deleteVehicle _module;

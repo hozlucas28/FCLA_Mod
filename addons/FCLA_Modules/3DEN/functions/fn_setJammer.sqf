@@ -14,10 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
-_assignedEntity = _module getVariable ["FCLA_Assigned_Entity", objNull];
-_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
-_forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
-if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
+if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 
 
 
@@ -27,14 +24,15 @@ _moduleArea = _module getVariable ["objectArea", [0, 0, 0, false, -1]];
 _canBeDisabled = _module getVariable ["FCLA_Deactivatable", false];
 _affectVehicles = _module getVariable ["FCLA_Affect_Vehicles", false];
 _needHackingDevice = _module getVariable ["FCLA_Need_Hacking_Device", false];
-_numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count _synchronizedObjects;
+_compatibleSynchronizedObjects = _synchronizedObjects select {!(_x isKindOf "EmptyDetector")};
+_numberOfCompatibleSynchronizedObjects = count _compatibleSynchronizedObjects;
 _jammerMaxRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1]) <= 0) then {worldSize * 2;} else {selectMax [_moduleArea select 0, _moduleArea select 1];};
 
 
 
 //Pegar módulo.
-_findedEntity = _synchronizedObjects findIf {!(_x isKindOf "EmptyDetector")};
-_jammerSource = if ((_findedEntity > -1) && (_numberOfCompatibleSynchronizedObjects == 1)) then {_synchronizedObjects select _findedEntity;} else {_module;};
+_findedEntity = if (_numberOfCompatibleSynchronizedObjects == 1) then {0;} else {-1;};
+_jammerSource = if (_findedEntity > -1) then {_compatibleSynchronizedObjects select _findedEntity;} else {_module;};
 if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];};
 
 
@@ -97,11 +95,6 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
   };
   _jammerSource setVariable ["FCLA_Entities_Affected", _entitiesAffected, true];
 }, 0.5, [_module, _moduleArea, _jammerSource, _jammerMaxRad, (25 * _jammerMaxRad) / 100, _canBeDisabled, _affectVehicles]] call CBA_fnc_addPerFrameHandler;
-
-
-//Agregar a objetos editables.
-_curatorLogic = getAssignedCuratorLogic _assignedCurator;
-_curatorLogic addCuratorEditableObjects [[_module], false];
 
 
 //Acción para desactivar.

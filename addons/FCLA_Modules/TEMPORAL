@@ -1,20 +1,17 @@
 
-
-
-//LOS ZEUS FUNCIONAN SIN EL CREATE AGENT
-//PROBAR MODO SCRIPT
-//CfgRemoteExec
 //ERROR EN CONFIGURACION CBRN
-//ERROR EN PORTAR Y ARRASTRE
-//obtener vehículos a los aplicar con selectIf
-//REPETIBLE NO ESTA DEFINIDO EN LOS MODULOS ACE (MOD)
-//21:01:43 File FCLA_Common\CfgFunctions.hpp, line 3: '/CfgFunctions/FCLA_Common/FCLA_Common_Functions/EventHandlers.file': Missing ';' at the end of line
+//["FCLA (server log): Acción " + str _return] call ACE_Common_fnc_serverLog;
+//#login @rm@3FCLA
+//Esperar a que inicie mision y repetir función?
 
+//Al desactivarse el trigger de los subtitulos estos no se esconden. SERVER DEDICADO
+//Señal de humo se escucha pero no se genera. [  ]
+///Jammer baja mucho los fps?
 
-
-
-//PARA BORRAR MÓDULO SIN BUGS.
-[{!isNull findDisplay 46}, {deleteVehicle _this;}, _module] call CBA_fnc_waitUntilAndExecute;
+getNumber (configFile >> "CfgVehicles" >> typeOf test >> "isGlobal")
+//SOLUCIONA LOS ERRORES DEL LOS MODULOS.
+[{!isNull findDisplay 46}, {
+}, _this] call CBA_fnc_waitUntilAndExecute;
 
 
 

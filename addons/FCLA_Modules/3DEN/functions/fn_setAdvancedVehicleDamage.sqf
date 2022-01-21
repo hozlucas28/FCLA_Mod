@@ -15,28 +15,21 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
-_assignedEntity = _module getVariable ["FCLA_Assigned_Entity", objNull];
-_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
-_forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
-if ((is3DEN) || (isNull _module) || (_synchronizedObjects isEqualTo []) || (!_isActivated) || (_forceDeactivation)) exitWith {};
+if ((is3DEN) || (isNull _module) || (_synchronizedObjects isEqualTo []) || (!_isActivated)) exitWith {};
 
 
 
 //Verificar argumentos.
 _damageItemsState = _module getVariable ["FCLA_Damage_Items", false];
 _damageWeaponsState = _module getVariable ["FCLA_Damage_Weapons", false];
-_areNotCompatibleSynchronizedObjects = ({_x in vehicles} count _synchronizedObjects) <= 0;
+_compatibleSynchronizedObjects = _synchronizedObjects select {_x in vehicles};
 if (ACE_Vehicle_Damage_Enabled) exitWith {["FCLA_Module_Advanced_Vehicle_Damage", "• MÓDULO: ASIGNAR DAV", "¡El addon option: Daño avanzado de vehículo (ACE), debe estar desactivado!"] spawn FCLA_Modules_fnc_reportError3DEN;};
-if (_areNotCompatibleSynchronizedObjects) exitWith {["¡Error! El/Un módulo 'Asignar DAV' no se pudo inicializar con éxito."] call BIS_fnc_error;};
+if ((count _compatibleSynchronizedObjects) <= 0) exitWith {["¡Error! El/Un módulo 'Asignar DAV' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
 
 //Evitar daño fatal al vehículo.
-{
-  if ((_x in vehicles) && !(_x isKindOf "EmptyDetector")) then {
-    [_x, _damageWeaponsState, _damageItemsState] call FCLA_Common_fnc_setAdvancedVehicleDamage;
-  };
-} forEach _synchronizedObjects;
+{[_x, _damageWeaponsState, _damageItemsState] call FCLA_Common_fnc_setAdvancedVehicleDamage;} forEach _compatibleSynchronizedObjects;
 
 
 //Eliminar módulo.

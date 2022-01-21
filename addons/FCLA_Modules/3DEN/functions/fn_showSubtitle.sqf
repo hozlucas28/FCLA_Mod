@@ -41,7 +41,7 @@ if (({_x <= 0} count [_moduleArea select 0, _moduleArea select 1, _moduleArea se
   [{
     params ["_module", "_emitterObject", "_line", "_color", "_timeToHide", "_conditions"];
     [{deleteVehicle _this;}, _module, _timeToHide + 1] call CBA_fnc_waitAndExecute;
-    ["FCLA_Show_Subtitles", [_emitterObject, _line, _color, _timeToHide, _conditions]] call CBA_fnc_localEvent;
+    [_emitterObject, _line, _color, _timeToHide, _conditions] call FCLA_Common_fnc_showSubtitles;
   }, [_module, _emitterObject, [[_emitter, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _side, -1]], 0.1] call CBA_fnc_waitAndExecute;
 };
 
@@ -53,13 +53,13 @@ _Condition = {
 _StatementOnActivation = {
   _player = call CBA_fnc_currentUnit;
   _arguments = thisTrigger getVariable ["FCLA_Subtitle_Attributes", []];
-  ["FCLA_Show_Subtitles", _arguments, _player] call CBA_fnc_targetEvent;
+  _arguments call FCLA_Common_fnc_showSubtitles;
 };
 
 _StatementOnDeactivation = {
   _player = call CBA_fnc_currentUnit;
   _arguments = thisTrigger getVariable ["FCLA_Subtitle_Attributes", []];
-  ["FCLA_Hide_Subtitles", [_arguments select 0], _player] call CBA_fnc_targetEvent;
+  [_arguments select 0] call FCLA_Common_fnc_showSubtitles;
 };
 
 _trigger = createTrigger ["EmptyDetector", getpos _emitterObject, false];

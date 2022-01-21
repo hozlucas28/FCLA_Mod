@@ -14,10 +14,7 @@ params [
         ["_synchronizedObjects", [], [[]], []],
         ["_isActivated", true, [true], 0]
        ];
-_assignedEntity = _module getVariable ["FCLA_Assigned_Entity", objNull];
-_assignedCurator = _module getVariable ["FCLA_Assigned_Curator", objNull];
-_forceDeactivation = _module getVariable ["FCLA_Force_Deactivation", false];
-if ((is3DEN) || (isNull _module) || (!_isActivated) || (_forceDeactivation)) exitWith {};
+if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 
 
 
@@ -28,14 +25,15 @@ _soundClass = _module getVariable ["FCLA_Classname_Sound", ""];
 _moduleArea = _module getVariable ["objectArea", [0, 0, 0, false, -1]];
 _maxDistance = selectMax [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4];
 _soundDuration = ceil (getNumber (configFile >> "CfgSounds" >> _soundClass >> "duration"));
-_numberOfCompatibleSynchronizedObjects = {!(_x isKindOf "EmptyDetector")} count _synchronizedObjects;
+_compatibleSynchronizedObjects = _synchronizedObjects select {!(_x isKindOf "EmptyDetector")};
+_numberOfCompatibleSynchronizedObjects = count _compatibleSynchronizedObjects;
 if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {["¡Error! El/Un módulo 'Reproducir sonido (personalizado)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
 
 //Reproducir sonido.
-_findedEntity = _synchronizedObjects findIf {!(_x isKindOf "EmptyDetector")};
-_soundSource = if ((_findedEntity > -1) && (_numberOfCompatibleSynchronizedObjects == 1)) then {_synchronizedObjects select _findedEntity;} else {_module;};
+_findedEntity = if (_numberOfCompatibleSynchronizedObjects == 1) then {0;} else {-1;};
+_soundSource = if (_findedEntity > -1) then {_compatibleSynchronizedObjects select _findedEntity;} else {_module;};
 [{
   params ["_soundSource", "_loopSound", "_soundClass", "_maxDistance", "_soundDuration"];
   if (_loopSound) then {
@@ -50,11 +48,6 @@ _soundSource = if ((_findedEntity > -1) && (_numberOfCompatibleSynchronizedObjec
     [_soundSource, _soundClass, _soundDuration, _maxDistance, _deleteSource] call FCLA_Common_fnc_globalSay3D;
   };
 }, [_soundSource, _loopSound, _soundClass, _maxDistance, _soundDuration], 0.1] call CBA_fnc_waitAndExecute;
-
-
-//Agregar a objetos editables.
-_curatorLogic = getAssignedCuratorLogic _assignedCurator;
-_curatorLogic addCuratorEditableObjects [[_module], false];
 
 
 //Eliminar módulo.

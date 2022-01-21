@@ -16,15 +16,14 @@ class FCLA_Module_Jammer: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Jammer.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setJammer3DEN";
-  is3DEN = NOT_RUN_IN_3DEN;
-	isGlobal = GLOBAL;
-  canSetArea = HAS_SETTABLE_AREA;
-  isDisposable = UNREPEATABLE;
-  canSetAreaShape = HAS_NOT_SETTABLE_SHAPE;
-  canSetAreaHeight = HAS_SETTABLE_AREA_HEIGHT;
-	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
+  is3DEN = 0;
+	isGlobal = 1;
+  canSetArea = 1;
+  isDisposable = 1;
+  canSetAreaShape = 0;
+  canSetAreaHeight = 1;
+	isTriggerActivated = 1;
   scope = 2;
-  scopeCurator = 0;
 
 
 	class Attributes: AttributesBase {

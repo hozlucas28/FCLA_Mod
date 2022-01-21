@@ -15,15 +15,14 @@ class FCLA_Module_Smoke_Signal: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Smoke.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_spawnSmokeSignal3DEN";
-  is3DEN = NOT_RUN_IN_3DEN;
-	isGlobal = GLOBAL;
-  canSetArea = HAS_NOT_SETTABLE_AREA;
-  isDisposable = UNREPEATABLE;
-  canSetAreaShape = HAS_NOT_SETTABLE_SHAPE;
-  canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
-	isTriggerActivated = CAN_ACTIVATED_BY_TRIGGER;
+  is3DEN = 0;
+	isGlobal = 0;
+  canSetArea = 0;
+  isDisposable = 1;
+  canSetAreaShape = 0;
+  canSetAreaHeight = 0;
+	isTriggerActivated = 1;
   scope = 2;
-  scopeCurator = 0;
 
 
 	class Attributes: AttributesBase {

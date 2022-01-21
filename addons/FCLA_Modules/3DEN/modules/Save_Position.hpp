@@ -17,15 +17,14 @@ class FCLA_Module_Save_Position: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Save.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_savePosition3DEN";
-  is3DEN = NOT_RUN_IN_3DEN;
-	isGlobal = GLOBAL;
-  canSetArea = HAS_NOT_SETTABLE_AREA;
-  isDisposable = UNREPEATABLE;
-  canSetAreaShape = HAS_NOT_SETTABLE_SHAPE;
-  canSetAreaHeight = HAS_NOT_SETTABLE_AREA_HEIGHT;
-	isTriggerActivated = CAN_NOT_ACTIVATED_BY_TRIGGER;
+  is3DEN = 0;
+	isGlobal = 1;
+  canSetArea = 0;
+  isDisposable = 1;
+  canSetAreaShape = 0;
+  canSetAreaHeight = 0;
+	isTriggerActivated = 0;
   scope = 2;
-  scopeCurator = 0;
 
 
 	class Attributes: AttributesBase {
