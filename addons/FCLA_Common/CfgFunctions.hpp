@@ -13,6 +13,7 @@ class FCLA_Common_Functions {
   class checkUnitTrait {file = "\FCLA_Common\functions\fn_checkUnitTrait.sqf";};
   class checkSightVisionModes {file = "\FCLA_Common\functions\fn_checkSightVisionModes.sqf";};
   class createLoadout {file = "\FCLA_Common\functions\fn_createLoadout.sqf";};
+  class errorMessage {file = "\FCLA_Common\functions\fn_errorMessage.sqf";};
   class getCleanName {file = "\FCLA_Common\functions\fn_getCleanName.sqf";};
   class getDoorInfo {file = "\FCLA_Common\functions\fn_getDoorInfo.sqf";};
   class getItemContainer {file = "\FCLA_Common\functions\fn_getItemContainer.sqf";};

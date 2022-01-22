@@ -23,7 +23,7 @@ if ((is3DEN) || (isNull _module) || (_synchronizedObjects isEqualTo []) || (!_is
 _damageItemsState = _module getVariable ["FCLA_Damage_Items", false];
 _damageWeaponsState = _module getVariable ["FCLA_Damage_Weapons", false];
 _compatibleSynchronizedObjects = _synchronizedObjects select {_x in vehicles};
-if (ACE_Vehicle_Damage_Enabled) exitWith {["FCLA_Module_Advanced_Vehicle_Damage", "• MÓDULO: ASIGNAR DAV", "¡El addon option: Daño avanzado de vehículo (ACE), debe estar desactivado!"] spawn FCLA_Modules_fnc_reportError3DEN;};
+if (ACE_Vehicle_Damage_Enabled) exitWith {["FCLA_Module_Advanced_Vehicle_Damage", "• MÓDULO: ASIGNAR DAV", "¡El addon option: Daño avanzado de vehículo (ACE), debe estar desactivado!"] spawn FCLA_Common_fnc_errorMessage;};
 if ((count _compatibleSynchronizedObjects) <= 0) exitWith {["¡Error! El/Un módulo 'Asignar DAV' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 

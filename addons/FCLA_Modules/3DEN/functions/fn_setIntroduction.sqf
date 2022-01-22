@@ -26,7 +26,7 @@ _subtitle = _module getVariable ["FCLA_Subtitle", ""];
 _showOnReconnect = toUpper (_module getVariable ["FCLA_Show_On_Reconnect", "None"]);
 _introductoryVideo = _module getVariable ["FCLA_Introductory_Video", ""];
 _acceptedDecisions = ["NONE", "TITLE_AND_SUBTITLE", "VIDEO", "ALL"];
-if (_moreThanOne) exitWith {["FCLA_Module_Introduction", "• MÓDULO: INTRODUCCIÓN", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Introducción' han sido desactivados."] spawn FCLA_Modules_fnc_reportError3DEN;};
+if (_moreThanOne) exitWith {["FCLA_Module_Introduction", "• MÓDULO: INTRODUCCIÓN", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Introducción' han sido desactivados."] spawn FCLA_Common_fnc_errorMessage;};
 if (((_title == "") && (_subtitle == "") && (_introductoryVideo == "")) || !(_showOnReconnect in _acceptedDecisions)) exitWith {["¡Error! El módulo 'Introducción' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 

@@ -23,7 +23,7 @@ _allLogics = allMissionObjects "Logic";
 _moreThanOne = ("FCLA_Module_Auto_Hover" countType _allLogics) > 1;
 _allAirVehicles = vehicles select {_x isKindOf "Air"};
 _disableAutoHover = _module getVariable ["FCLA_Auto_Hover", "Activated"];
-if (_moreThanOne) exitWith {["FCLA_Module_Auto_Hover", "• MÓDULO: PROPULSIÓN AUTOMÁTICA", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Propulsión automática' han sido desactivados."] spawn FCLA_Modules_fnc_reportError3DEN;};
+if (_moreThanOne) exitWith {["FCLA_Module_Auto_Hover", "• MÓDULO: PROPULSIÓN AUTOMÁTICA", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Propulsión automática' han sido desactivados."] spawn FCLA_Common_fnc_errorMessage;};
 
 
 

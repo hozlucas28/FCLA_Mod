@@ -26,7 +26,7 @@ _EODState = _module getVariable ["FCLA_EOD_State", false];
 _doctorState = _module getVariable ["FCLA_Doctor_State", false];
 _advancedEnginnerState = _module getVariable ["FCLA_Advanced_Enginner_State", false];
 _compatibleSynchronizedObjects = _synchronizedObjects select {_x in allUnits};
-if (!FCLA_ID_Card_Allowed) then {["FCLA_Module_ID", "• MÓDULO: MODIFICAR ID", "¡Las identificaciones se encuentran desactivadas por medio del addon option: FCLA Interacciones!"] spawn FCLA_Modules_fnc_reportError3DEN;};
+if (!FCLA_ID_Card_Allowed) then {["FCLA_Module_ID", "• MÓDULO: MODIFICAR ID", "¡Las identificaciones se encuentran desactivadas por medio del addon option: FCLA Interacciones!"] spawn FCLA_Common_fnc_errorMessage;};
 if ((_newAge == "") || (_newName == "") || (_newPlaceOfBirth == "") || ((count _compatibleSynchronizedObjects) <= 0)) exitWith {["¡Error! El/Un módulo 'Modificar ID' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 

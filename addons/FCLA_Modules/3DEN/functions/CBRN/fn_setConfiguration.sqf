@@ -27,7 +27,7 @@ _compatibleOxygenMasks = _module getVariable ["FCLA_Oxygen_Masks", []];
 _compatibleNRBQUniforms = _module getVariable ["FCLA_NRBQ_Uniforms", []];
 _compatibleChemicalDetectors = _module getVariable ["FCLA_Chemical_Detectors", []];
 _compatibleBackpacksWithOxygen = _module getVariable ["FCLA_Backpacks_With_Oxygen", []];
-if (_moreThanOne) exitWith {["FCLA_Module_CBRN_Configuration", "• MÓDULO: CONFIGURACIÓN (CBRN)", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Configuración (CBRN)' han sido desactivados."] spawn FCLA_Modules_fnc_reportError3DEN;};
+if (_moreThanOne) exitWith {["FCLA_Module_CBRN_Configuration", "• MÓDULO: CONFIGURACIÓN (CBRN)", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Configuración (CBRN)' han sido desactivados."] spawn FCLA_Common_fnc_errorMessage;};
 if ((_compatibleOxygenMasks isEqualTo []) && (_compatibleNRBQUniforms isEqualTo []) && (_compatibleChemicalDetectors isEqualTo []) && (_compatibleBackpacksWithOxygen isEqualTo [])) exitWith {["¡Error! El/Un módulo 'Configuración (CBRN)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 

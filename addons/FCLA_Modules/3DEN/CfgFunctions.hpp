@@ -27,7 +27,6 @@ class 3DEN {
   class hackDevice3DEN {file = "\FCLA_Modules\3DEN\functions\fn_hackDevice.sqf";};
   class playCustomSound3DEN {file = "\FCLA_Modules\3DEN\functions\fn_playCustomSound.sqf";};
   class playSound3DEN {file = "\FCLA_Modules\3DEN\functions\fn_playSound.sqf";};
-  class reportError3DEN {file = "\FCLA_Modules\3DEN\functions\fn_reportError.sqf";};
   class saveLastLoadout3DEN {file = "\FCLA_Modules\3DEN\functions\fn_saveLastLoadout.sqf";};
   class setAdvancedVehicleDamage3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setAdvancedVehicleDamage.sqf";};
   class setAmbientFired3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setAmbientFired.sqf";};

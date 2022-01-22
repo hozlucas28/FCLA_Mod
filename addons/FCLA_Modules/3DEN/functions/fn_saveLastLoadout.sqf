@@ -25,7 +25,7 @@ if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 _allLogics = allMissionObjects "Logic";
 _moreThanOne = ("FCLA_Module_Save_Loadout" countType _allLogics) > 1;
 _missionID = _module getVariable ["FCLA_Mission_ID", false];
-if (_moreThanOne) exitWith {["FCLA_Module_Save_Loadout", "• MÓDULO: GUARDAR ULTIMO EQUIPAMIENTO", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Guardar ultimo equipamiento' han sido desactivados."] spawn FCLA_Modules_fnc_reportError3DEN;};
+if (_moreThanOne) exitWith {["FCLA_Module_Save_Loadout", "• MÓDULO: GUARDAR ULTIMO EQUIPAMIENTO", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Guardar ultimo equipamiento' han sido desactivados."] spawn FCLA_Common_fnc_errorMessage;};
 if (_missionID == "") exitWith {["¡Error! El módulo 'Guardar ultima ubicación' no se pudo inicializar con éxito."] call BIS_fnc_error;};
 
 
