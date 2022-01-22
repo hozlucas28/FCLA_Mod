@@ -1,29 +1,35 @@
 
-//ERROR EN CONFIGURACION CBRN
-//["FCLA (server log): Acción " + str _return] call ACE_Common_fnc_serverLog;
-//#login @rm@3FCLA
-//Esperar a que inicie mision y repetir función?
 
-//Al desactivarse el trigger de los subtitulos estos no se esconden. SERVER DEDICADO
-//Señal de humo se escucha pero no se genera. [  ]
-///Jammer baja mucho los fps?
+/* ================================ ERRORES ================================ //
 
-getNumber (configFile >> "CfgVehicles" >> typeOf test >> "isGlobal")
-//SOLUCIONA LOS ERRORES DEL LOS MODULOS.
-[{!isNull findDisplay 46}, {
-}, _this] call CBA_fnc_waitUntilAndExecute;
+[GENERAL] CONFIGURACIÓN CBRN.
+[SERVIDOR DEDICADO] Al desactivarse el trigger de los subtitulos estos no se esconden.
+
+// ========================================================================= */
 
 
 
-//ESTE EJEMPLO FUNCIONA.
-private _moduleGroup = createGroup sideLogic;
-private _customVehicle = cursorObject;
-"FCLA_Module_Plate_Number" createUnit [
-	getPosATL player,
-	_moduleGroup,
-	"
-   this synchronizeObjectsAdd [_customVehicle];
-   this setVariable ['FCLA_New_Plate_Number', 'JA JA JA', true];
-   this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-  "
-];
+/* ================================ REVISAR ================================ //
+
+[  ] ¿El Jammer baja mucho los fps?
+
+// ========================================================================= */
+
+
+
+// ============================ SCRIPTS UTILES ============================= //
+
+//Reportar devoluciones en el Log.
+[format ["FCLA (log): %1", _example]] call ACE_Common_fnc_serverLog;
+
+
+//Crear módulo 3DEN.
+private "_attachedObject";
+_moduleGroup = createGroup [sideLogic, true];
+"FCLA_Module_Plate_Number" createUnit [_position, _moduleGroup, "
+	this setVariable ['FCLA_New_Plate_Number', 'JA JA JA 123', true];
+	this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+	this synchronizeObjectsAdd [_attachedObject];
+"];
+
+// ========================================================================= //

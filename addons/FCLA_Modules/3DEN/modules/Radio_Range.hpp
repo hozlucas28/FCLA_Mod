@@ -17,7 +17,7 @@ class FCLA_Module_Radio_Range: Module_F {
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_changeRadioRange3DEN";
   is3DEN = 0;
-	isGlobal = 2;
+	isGlobal = 0;
   canSetArea = 0;
   isDisposable = 1;
   canSetAreaShape = 0;

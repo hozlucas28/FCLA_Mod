@@ -4,6 +4,11 @@
 |********************************************************************************/
 
 class 3DEN {
+  class EventHandlers {
+    file = "\FCLA_Modules\3DEN\functions\CBA_EventHandlers\fn_setEventHandlers.sqf";
+    postInit = 1;
+  };
+
   class createACEClassnameAction3DEN {file = "\FCLA_Modules\3DEN\functions\ACE_Actions\fn_classnameAction.sqf";};
   class createACEObjectAction3DEN {file = "\FCLA_Modules\3DEN\functions\ACE_Actions\fn_objectAction.sqf";};
   class createACEZeusAction3DEN {file = "\FCLA_Modules\3DEN\functions\ACE_Actions\fn_zeusAction.sqf";};
