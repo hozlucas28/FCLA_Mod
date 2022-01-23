@@ -9,10 +9,10 @@ class Enhanced_Sounds {
 		postInit = 1;
 	};
 
+	class putESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_Put.sqf";};
+	class takeESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_Take.sqf";};
 	class killedESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_Killed.sqf";};
 	class hitPartESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_hitPart.sqf";};
 	class inventoryClosedESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_inventoryClosed.sqf";};
 	class inventoryOpenedESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_inventoryOpened.sqf";};
-	class putESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_Put.sqf";};
-	class takeESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_Take.sqf";};
 };

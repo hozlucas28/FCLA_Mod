@@ -9,6 +9,6 @@ class TFAR_Animations {
     postInit = 1;
   };
 
-  class radioOnHandTFAR {file = "\FCLA_Immersions\TFAR_Animations\functions\fn_radioOnHand.sqf";};
   class waitUntilTFAR {file = "\FCLA_Immersions\TFAR_Animations\functions\fn_waitUntil.sqf";};
+  class radioOnHandTFAR {file = "\FCLA_Immersions\TFAR_Animations\functions\fn_radioOnHand.sqf";};
 };

@@ -124,15 +124,22 @@
      _fractureRightLeg = if (_fractureRightLeg == 0) then {true;} else {false;};
      _forceUnconsciousness = if (_forceUnconsciousness == 0) then {true;} else {false;};
 
-     _module = createAgent ["FCLA_Create_Injuries", _position, [], 0, "CAN_COLLIDE"];
-     _module synchronizeObjectsAdd [_attachedObject];
-     _module setVariable ["FCLA_Type_Of_Injury", toLower _typeOfInjury, true];
-     _module setVariable ["FCLA_Level_Of_Injury", round _levelOfInjury, true];
-     _module setVariable ["FCLA_Fracture_Left_Arm", _fractureLeftArm, true];
-     _module setVariable ["FCLA_Fracture_Left_Leg", _fractureLeftLeg, true];
-     _module setVariable ["FCLA_Fracture_Right_Arm", _fractureRightArm, true];
-     _module setVariable ["FCLA_Fracture_Right_Leg", _fractureRightLeg, true];
-     _module setVariable ["FCLA_Force_Unconsciousness", _forceUnconsciousness, true];
+     private ["_position", "_attachedObject", "_forceUnconsciousness", "_fractureRightArm", "_fractureLeftArm", "_fractureRightLeg", "_fractureLeftLeg"];
+     private _moduleGroup = createGroup [sideLogic, true];
+     private _typeOfInjury = toLower _typeOfInjury;
+     private _levelOfInjury = round _levelOfInjury;
+     "FCLA_Create_Injuries" createUnit [_position, _moduleGroup, "
+     	 this setPos _position;
+     	 this setVariable ['FCLA_Type_Of_Injury', _typeOfInjury, true];
+     	 this setVariable ['FCLA_Level_Of_Injury', _levelOfInjury, true];
+     	 this setVariable ['FCLA_Fracture_Left_Arm', _fractureLeftArm, true];
+     	 this setVariable ['FCLA_Fracture_Left_Leg', _fractureLeftLeg, true];
+     	 this setVariable ['FCLA_Fracture_Right_Arm', _fractureRightArm, true];
+     	 this setVariable ['FCLA_Fracture_Right_Leg', _fractureRightLeg, true];
+       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+     	 this setVariable ['FCLA_Force_Unconsciousness', _forceUnconsciousness, true];
+     	 this synchronizeObjectsAdd [_attachedObject];
+     "];
      ["LESIONES PROVOCADAS CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-   }, {}, [_position, _attachedObject]] call ZEN_Dialog_fnc_Create;
+   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Medical_Cross.paa"] call ZEN_Custom_Modules_fnc_Register;

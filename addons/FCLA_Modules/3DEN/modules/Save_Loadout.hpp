@@ -18,12 +18,8 @@ class FCLA_Module_Save_Loadout: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Save.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_saveLastLoadout3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 0;
   scope = 2;
 
@@ -40,6 +36,11 @@ class FCLA_Module_Save_Loadout: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Permite guardar el equipamiento que tenian por ultima vez los jugadores, para asi equiparlos con los mismos en la proxima misión que contenga la misma ID.<br/><br/>• Se recomienda que la ID sea su nombre de steam, la fecha de inicio y fin de campaña.<br/>• Si la ID habia sido utilizada en una misión anterior se le colocara el equipamiento guardado de esa misión."};
+		description[] =	{
+      "Permite guardar el equipamiento que tenian por ultima vez los jugadores, para asi equiparlos con los mismos en la proxima misión que contenga la misma ID.",
+      "",
+      "• Se recomienda que la ID sea su nombre de steam, la fecha de inicio y fin de campaña.",
+      "• Si la ID habia sido utilizada en una misión anterior se le colocara el equipamiento guardado de esa misión."
+    };
 	};
 };

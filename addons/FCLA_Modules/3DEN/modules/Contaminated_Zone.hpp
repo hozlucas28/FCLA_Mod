@@ -15,7 +15,6 @@ class FCLA_Module_CBRN_Contaminated_Zone: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Contaminated_Zone.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setCBRNContaminatedZone3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
   canSetArea = 1;
   isDisposable = 1;
@@ -58,12 +57,17 @@ class FCLA_Module_CBRN_Contaminated_Zone: Module_F {
 		class ModuleDescription: ModuleDescription {};
 	};
 
-	class ModuleDescription: ModuleDescription {
-		description[] =	{"Crea áreas contaminadas donde se tendra que utilizar un equipamiento correcto, que puede ser definido por el módulo: 'Configuración CBRN'.<br/><br/>• Si colocas -1, en los tamaños de la zona, todo el mapa se vera afectado."};
-	};
-
   class AttributeValues {
     isRectangle = 0;
     size3[] = {50, 50, 50};
   };
+
+	class ModuleDescription: ModuleDescription {
+    sync[] = {"EmptyDetector"};
+		description[] =	{
+      "Crea áreas contaminadas donde se tendra que utilizar un equipamiento correcto, que puede ser definido por el módulo: 'Configuración CBRN'.",
+      "",
+      "• Si colocas -1, en los tamaños de la zona, todo el mapa se vera afectado."
+    };
+	};
 };

@@ -28,7 +28,7 @@ _typeOfAction = _module getVariable ["FCLA_Type_Of_Action", -1];
 _associatedClassname = _module getVariable ["FCLA_Associated_Classname", ""];
 _compatibleSynchronizedObjects = _synchronizedObjects select {!(_x isKindOf "EmptyDetector")};
 _numberOfCompatibleSynchronizedObjects = count _compatibleSynchronizedObjects;
-if ((_name == "") || (_condition == "") || (_statement == "") || (_typeOfAction <= -1) || ((_associatedClassname == "") && (_numberOfCompatibleSynchronizedObjects <= 0))) exitWith {["¡Error! El/Un módulo 'Crear acción (ACE - classname)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
+if ((_name == "") || (_condition == "") || (_statement == "") || (_typeOfAction <= -1) || ((_associatedClassname == "") && (_numberOfCompatibleSynchronizedObjects <= 0))) exitWith {["FCLA_Module_ACE_Class_Action", "• MÓDULO: CREAR ACCIÓN (ACE - CLASSNAME)", "¡Error! El/Un módulo 'Crear acción (ACE - classname)' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
 
 
 

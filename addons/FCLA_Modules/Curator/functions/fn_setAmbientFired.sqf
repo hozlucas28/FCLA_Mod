@@ -99,16 +99,23 @@
       (_this select 1) params ["_position", "_attachedObject", "_weapon"];
       (_this select 0) params ["_magazine", "_minimumShots", "_maximumShots", "_minimumDelay", "_maximumDelay"];
 
-      _module = createAgent ["FCLA_Module_Ambient_Fired", _position, [], 0, "CAN_COLLIDE"];
-      _module synchronizeObjectsAdd [_attachedObject];
-      _module setVariable ["FCLA_Ammo", _magazine, true];
-      _module setVariable ["FCLA_Weapon", _weapon, true];
-      _module setVariable ["FCLA_Assigned_Curator", player, true];
-      _module setVariable ["FCLA_Assigned_Entity", _attachedObject, true];
-      _module setVariable ["FCLA_Minimum_Shots", round _minimumShots, true];
-      _module setVariable ["FCLA_Maximum_Shots", round _maximumShots, true];
-      _module setVariable ["FCLA_Minimum_Delay", round _minimumDelay, true];
-      _module setVariable ["FCLA_Maximum_Delay", round _maximumDelay, true];
+      private ["_attachedObject", "_magazine", "_weapon"];
+      private _moduleGroup = createGroup [sideLogic, true];
+      private _minimumShots = round _minimumShots;
+      private _maximumShots = round _maximumShots;
+      private _minimumDelay = round _minimumDelay;
+      private _maximumDelay = round _maximumDelay;
+      "FCLA_Module_Ambient_Fired" createUnit [_position, _moduleGroup, "
+      	this attachTo [_attachedObject, [0, 0, 0]];
+        this setVariable ['FCLA_Ammo', _magazine, true];
+        this setVariable ['FCLA_Weapon', _weapon, true];
+        this setVariable ['FCLA_Minimum_Shots', _minimumShots, true];
+        this setVariable ['FCLA_Maximum_Shots', _maximumShots, true];
+        this setVariable ['FCLA_Minimum_Delay', _minimumDelay, true];
+        this setVariable ['FCLA_Maximum_Delay', _maximumDelay, true];
+        this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+      	this synchronizeObjectsAdd [_attachedObject];
+      "];
       ["EL VEHÍCULO COMENZARA A REALIZAR DISPAROS AMBIENTALES"] call ZEN_Common_fnc_showMessage;
     }, {}, [_position, _attachedObject, _weaponSelected]] call ZEN_Dialog_fnc_Create;
   }, {}, [_position, _attachedObject, _vehicleName, _vehicleWeapons, _vehicleWeaponsNames]] call ZEN_Dialog_fnc_Create;

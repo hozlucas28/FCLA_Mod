@@ -16,12 +16,8 @@ class FCLA_Module_Drag_And_Carry: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Edit_Object.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setDragAndCarry3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -86,6 +82,7 @@ class FCLA_Module_Drag_And_Carry: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
+    sync[] = {"AnyStaticObject", "EmptyDetector"};
 		description[] =	{"Modifica las propiedades de los objetos sincronizados al módulo para que estos puedan ser arrastrados y/o portados."};
 	};
 };

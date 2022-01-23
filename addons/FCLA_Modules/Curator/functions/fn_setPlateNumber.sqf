@@ -30,10 +30,15 @@
   {
     (_this select 0) params ["_newPlateNumber"];
     (_this select 1) params ["_position", "_attachedObject"];
-    _module = createAgent ["FCLA_Module_Plate_Number", _position, [], 0, "CAN_COLLIDE"];
-    _module synchronizeObjectsAdd [_attachedObject];
-    _module setVariable ["FCLA_Assigned_Entity", _attachedObject, true];
-    _module setVariable ["FCLA_New_Plate_Number", _newPlateNumber, true];
+
+    private ["_position", "_attachedObject", "_newPlateNumber"];
+    private _moduleGroup = createGroup [sideLogic, true];
+    "FCLA_Module_Plate_Number" createUnit [_position, _moduleGroup, "
+      this setPos _position;
+      this setVariable ['FCLA_New_Plate_Number', _newPlateNumber, true];
+      this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+      this synchronizeObjectsAdd [_attachedObject];
+    "];
     ["MATRÍCULA MODIFICADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-  }, {}, [_position, _attachedObject]] call ZEN_Dialog_fnc_Create;
+  }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Vehicle.paa"] call ZEN_Custom_Modules_fnc_Register;

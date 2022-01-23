@@ -16,12 +16,8 @@ class FCLA_Module_Radio_Range: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Radio.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_changeRadioRange3DEN";
-  is3DEN = 0;
 	isGlobal = 0;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -38,6 +34,7 @@ class FCLA_Module_Radio_Range: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
+    sync[] = {"EmptyDetector"};
 		description[] =	{"Multiplica el alcance que tienen todas las radios de onda corta y larga, incluyendo vehículos."};
 	};
 };

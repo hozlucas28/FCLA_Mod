@@ -15,12 +15,9 @@ class FCLA_Module_EMP: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\EMP.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_initEMP3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
   canSetArea = 1;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -36,11 +33,17 @@ class FCLA_Module_EMP: Module_F {
 		class ModuleDescription: ModuleDescription {};
 	};
 
-	class ModuleDescription: ModuleDescription {
-		description[] =	{"Genera un pulso electromagnético.<br/><br/>• Se recomienda que los tamaños de la zona coincidan, si no se cumple se elegirá el que tenga mayor valor.<br/>• Si colocas -1, en los tamaños de la zona, todas las entidades del mapa seran afectadas por el PEM."};
-	};
-
   class AttributeValues {
     size3[] = {250, 250, -1};
   };
+
+	class ModuleDescription: ModuleDescription {
+    sync[] = {"EmptyDetector"};
+		description[] =	{
+      "Genera un pulso electromagnético.",
+      "",
+      "• Se recomienda que los tamaños de la zona coincidan, si no se cumple se elegirá el que tenga mayor valor.",
+      "• Si colocas -1, en los tamaños de la zona, todas las entidades del mapa seran afectadas por el PEM."
+    };
+	};
 };

@@ -63,13 +63,14 @@
     ]
 	 ],
    {
+     (_this select 1) params ["_position", "_attachedObject"];
      (_this select 0) params ["_cryState", "_voicesState", "_unwantedThoughtsState", "_involuntaryMovementsState"];
      _cryState = if (_cryState == 0) then {true;} else {false;};
      _voicesState = if (_voicesState == 0) then {true;} else {false;};
      _unwantedThoughtsState = if (_unwantedThoughtsState == 0) then {true;} else {false;};
      _involuntaryMovementsState = if (_involuntaryMovementsState == 0) then {true;} else {false;};
 
-     ["FCLA_Set_PTSD", [_this select 1, _cryState, _voicesState, _unwantedThoughtsState, _involuntaryMovementsState], _this select 1] call CBA_fnc_targetEvent;
+     ["FCLA_Set_PTSD", [_attachedObject, _cryState, _voicesState, _unwantedThoughtsState, _involuntaryMovementsState], _attachedObject] call CBA_fnc_targetEvent;
      ["LA UNIDAD SUFRIRA TRASTORNO POR ESTRÉS POSTRAUMÁTICO (TEPT)"] call ZEN_Common_fnc_showMessage;
-   }, {}, _attachedObject] call ZEN_Dialog_fnc_Create;
+   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Brain.paa"] call ZEN_Custom_Modules_fnc_Register;

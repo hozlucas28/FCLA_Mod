@@ -26,8 +26,8 @@ _moreThanOne = ("FCLA_Module_Save_Position" countType _allLogics) > 1;
 _saveLoadoutState = _module getVariable ["FCLA_Save_Loadout", false];
 _saveVehicleState = _module getVariable ["FCLA_Save_Vehicle", false];
 _savePosAndDirState = _module getVariable ["FCLA_Save_PosAndDir", false];
-if (_moreThanOne) exitWith {["FCLA_Module_Save_Position", "• MÓDULO: GUARDAR ULTIMA UBICACIÓN", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Guardar ultima ubicación' han sido desactivados."] spawn FCLA_Common_fnc_errorMessage;};
-if ((!_saveLoadoutState) && (!_saveVehicleState) && (!_savePosAndDirState)) exitWith {["¡Error! El módulo 'Guardar ultima ubicación' no se pudo inicializar con éxito."] call BIS_fnc_error;};
+if (_moreThanOne) exitWith {["FCLA_Module_Save_Position", "• MÓDULO: GUARDAR ULTIMA UBICACIÓN", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Guardar ultima ubicación' han sido desactivados."] call FCLA_Common_fnc_errorMessage;};
+if ((!_saveLoadoutState) && (!_saveVehicleState) && (!_savePosAndDirState)) exitWith {["FCLA_Module_Save_Position", "• MÓDULO: GUARDAR ULTIMA UBICACIÓN", "¡Error! El módulo 'Guardar ultima ubicación' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
 
 
 

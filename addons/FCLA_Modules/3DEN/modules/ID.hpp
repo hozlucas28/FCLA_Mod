@@ -15,12 +15,8 @@ class FCLA_Module_Set_ID: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\ID_Card.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setID3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -77,6 +73,7 @@ class FCLA_Module_Set_ID: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
+    sync[] = {"AnyBrain", "EmptyDetector"};
 		description[] =	{"Modifica las identificaciones de las unidades sincronizadas al módulo."};
 	};
 };

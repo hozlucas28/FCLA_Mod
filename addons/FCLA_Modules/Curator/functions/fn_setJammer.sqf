@@ -67,18 +67,23 @@
   {
     (_this select 1) params ["_position", "_attachedObject"];
     (_this select 0) params ["_jammerID", "_jammerRad", "_canBeDisabled", "_affectVehicles", "_needHackingDevice"];
-    _canBeDisabled = if (_canBeDisabled == 0) then {true;} else {false;};
-    _affectVehicles = if (_affectVehicles == 0) then {true;} else {false;};
-    _needHackingDevice = if (_needHackingDevice == 0) then {true;} else {false;};
 
-    _module = createAgent ["FCLA_Module_Jammer", _position, [], 0, "CAN_COLLIDE"];
-    _module synchronizeObjectsAdd [_attachedObject];
-    _module setVariable ["FCLA_Jammer_ID", _jammerID, true];
-    _module setVariable ["FCLA_Assigned_Curator", player, true];
-    _module setVariable ["FCLA_Deactivatable", _canBeDisabled, true];
-    _module setVariable ["FCLA_Affect_Vehicles", _affectVehicles, true];
-    _module setVariable ["FCLA_Need_Hacking_Device", _needHackingDevice, true];
-    _module setVariable ["objectArea", [round _jammerRad, round _jammerRad, 0, false, round _jammerRad], true];
+    private ["_position", "_attachedObject", "_jammerID"];
+    private _moduleGroup = createGroup [sideLogic, true];
+    private _jammerRad = round _jammerRad;
+    private _canBeDisabled = if (_canBeDisabled == 0) then {true;} else {false;};
+    private _affectVehicles = if (_affectVehicles == 0) then {true;} else {false;};
+    private _needHackingDevice = if (_needHackingDevice == 0) then {true;} else {false;};
+    "FCLA_Module_Jammer" createUnit [_position, _moduleGroup, "
+      this attachTo [_attachedObject, [0, 0, 0]];
+      this setVariable ['FCLA_Jammer_ID', _jammerID, true];
+      this setVariable ['FCLA_Deactivatable', _canBeDisabled, true];
+      this setVariable ['FCLA_Affect_Vehicles', _affectVehicles, true];
+      this setVariable ['FCLA_Need_Hacking_Device', _needHackingDevice, true];
+      this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+      this setVariable ['objectArea', [_jammerRad, _jammerRad, 0, false, _jammerRad], true];
+      this synchronizeObjectsAdd [_attachedObject];
+    "];
     ["JAMMER GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-  }, {}, [_position, _attachedObject]] call ZEN_Dialog_fnc_Create;
+  }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Jammer.paa"] call ZEN_Custom_Modules_fnc_Register;

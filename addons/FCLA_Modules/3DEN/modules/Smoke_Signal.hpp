@@ -15,12 +15,8 @@ class FCLA_Module_Smoke_Signal: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Smoke.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_spawnSmokeSignal3DEN";
-  is3DEN = 0;
 	isGlobal = 0;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -74,6 +70,7 @@ class FCLA_Module_Smoke_Signal: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
+    sync[] = {"EmptyDetector"};
 		description[] =	{"Genera una señal de humo en la posición del módulo."};
 	};
 };

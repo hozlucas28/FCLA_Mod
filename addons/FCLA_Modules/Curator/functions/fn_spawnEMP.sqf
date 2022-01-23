@@ -33,12 +33,18 @@
 	 ],
    {
      (_this select 0) params ["_rad", "_jammer"];
-     _jammer = if (_jammer == 0) then {true;} else {false;};
+     (_this select 1) params ["_position", "_attachedObject"];
 
-     _module = createAgent ["FCLA_Module_EMP", _this select 1, [], 0, "CAN_COLLIDE"];
-     _module setVariable ["FCLA_Jammer", _jammer, true];
-     _module setVariable ["FCLA_Assigned_Curator", player, true];
-     _module setVariable ["objectArea", [round _rad, round _rad, 0, false, round _rad], true];
+     private "_position";
+     private _rad = round _rad;
+     private _jammer = if (_jammer == 0) then {true;} else {false;};
+     private _moduleGroup = createGroup [sideLogic, true];
+     "FCLA_Module_EMP" createUnit [_position, _moduleGroup, "
+       this setPos _position;
+       this setVariable ['FCLA_Jammer', _jammer, true];
+       this setVariable ['objectArea', [_rad, _rad, 0, false, _rad], true];
+       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+     "];
      ["PULSO ELECTROMAGNÉTICO GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-   }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
+   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\EMP.paa"] call ZEN_Custom_Modules_fnc_Register;

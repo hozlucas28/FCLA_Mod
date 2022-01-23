@@ -16,12 +16,8 @@ class FCLA_Module_Advanced_Vehicle_Damage: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Vehicle.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setAdvancedVehicleDamage3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -46,6 +42,7 @@ class FCLA_Module_Advanced_Vehicle_Damage: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
+    sync[] = {"AnyVehicle", "EmptyDetector"};
 		description[] =	{"Evita que los vehículos sincronizados reciban un daño fatal, dejandolos con un daño total sin provocar su destrucción."};
 	};
 };

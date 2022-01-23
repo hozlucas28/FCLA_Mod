@@ -15,11 +15,9 @@ class FCLA_Module_Play_Custom_Sound: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Sound.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_playCustomSound3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
   canSetArea = 1;
   isDisposable = 1;
-  canSetAreaShape = 0;
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;
   scope = 2;
@@ -44,11 +42,18 @@ class FCLA_Module_Play_Custom_Sound: Module_F {
 		class ModuleDescription: ModuleDescription {};
 	};
 
-	class ModuleDescription: ModuleDescription {
-		description[] =	{"Reproduce de manera tridimensional el sonido personalizado.<br/><br/>• El tamaño de la zona define a que distancia se comenzará a oir el sonido, mientras más cerca se este del centro más fuerte se oirá.<br/>• Se recomienda que los tamaños de la zona coincidan, si no se cumple se elegirá el que tenga mayor valor.<br/>• Si el módulo esta sincronizado únicamente a una entidad (objeto, unidad, vehículo, etc.) esta sera tomada como origen del sonido. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."};
-	};
-
   class AttributeValues {
     size3[] = {100, 100, 100};
   };
+
+	class ModuleDescription: ModuleDescription {
+    sync[] = {"AnyBrain", "AnyVehicle", "EmptyDetector", "AnyStaticObject"};
+		description[] =	{
+      "Reproduce de manera tridimensional el sonido personalizado.",
+      "",
+      "• El tamaño de la zona define a que distancia se comenzará a oir el sonido, mientras más cerca se este del centro más fuerte se oirá.",
+      "• Se recomienda que los tamaños de la zona coincidan, si no se cumple se elegirá el que tenga mayor valor.",
+      "• Si el módulo esta sincronizado únicamente a una entidad (objeto, unidad, vehículo, etc.) esta sera tomada como origen del sonido. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."
+    };
+	};
 };

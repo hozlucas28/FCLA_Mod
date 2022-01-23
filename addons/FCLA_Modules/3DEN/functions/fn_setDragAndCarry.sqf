@@ -24,7 +24,7 @@ _canCarryObject = toUpper (_module getVariable ["FCLA_Can_Carry", "false"]);
 _ignoreWeightDrag = _module getVariable ["FCLA_Ignore_Weight_Drag", false];
 _ignoreWeightCarry = _module getVariable ["FCLA_Ignore_Weight_Carry", false];
 _compatibleSynchronizedObjects = _synchronizedObjects select {_x isKindOf "Thing"};
-if ((count _compatibleSynchronizedObjects) <= 0) exitWith {["¡Error! El/Un módulo 'Modificar arrastre/portar (ACE)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
+if ((count _compatibleSynchronizedObjects) <= 0) exitWith {["FCLA_Module_Drag_And_Carry", "• MÓDULO: MODIFICAR ARRASTRE/PORTAR (ACE)", "¡Error! El/Un módulo 'Modificar arrastre/portar (ACE)' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
 
 
 

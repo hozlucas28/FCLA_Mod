@@ -46,8 +46,12 @@
     ]
 	 ],
    {
-     (_this select 1) params ["_x", "_y", "_z"];
      (_this select 0) params ["_height", "_color"];
+     (_this select 1) params ["_position", "_attachedObject"];
+
+     _x = _position select 0;
+     _y = _position select 1;
+     _z = _position select 2;
      _height = [_height, 0] call BIS_fnc_cutDecimals;
      _smokePos = [_x, _y, _z + _height];
 
@@ -79,5 +83,5 @@
        [{deleteVehicle _this;}, _particleObj, 0.1] call CBA_fnc_waitAndExecute;
      }, [_smokePos, _color], 0.2] call CBA_fnc_waitAndExecute;
      ["SEÑAL DE HUMO GENERADA"] call ZEN_Common_fnc_showMessage;
-   }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
+   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Smoke.paa"] call ZEN_Custom_Modules_fnc_Register;

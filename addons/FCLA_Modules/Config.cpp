@@ -79,7 +79,15 @@ class CfgVehicles {
 		};
 
 		class ModuleDescription	{
+			class AnyAI;
 			class Anything;
+			class AnyBrain;
+			class AnyPlayer;
+			class AnyPerson;
+			class AnyVehicle;
+			class EmptyDetector;
+			class GroupModifiers;
+			class AnyStaticObject;
 		};
 	};
 	#include "\FCLA_Modules\3DEN\CfgVehicles.hpp"

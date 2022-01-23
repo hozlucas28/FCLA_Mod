@@ -15,12 +15,8 @@ class FCLA_Module_Auto_Hover: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Auto_Hover.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_switchAutoHover3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -49,6 +45,7 @@ class FCLA_Module_Auto_Hover: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
+    sync[] = {"EmptyDetector"};
 		description[] =	{"Activa/Desactiva la propulsión automática que poseen los helicópteros."};
 	};
 };

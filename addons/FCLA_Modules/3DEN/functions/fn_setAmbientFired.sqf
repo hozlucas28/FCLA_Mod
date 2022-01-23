@@ -25,7 +25,7 @@ _maximumShots = [_module getVariable ["FCLA_Maximum_Shots", 0], 0] call BIS_fnc_
 _minimumDelay = [_module getVariable ["FCLA_Minimum_Delay", 0], 0] call BIS_fnc_cutDecimals;
 _maximumDelay = [_module getVariable ["FCLA_Maximum_Delay", 0], 0] call BIS_fnc_cutDecimals;
 _compatibleSynchronizedObjects = _synchronizedObjects select {_x in vehicles};
-if ((_ammoClass == "") || (_weaponClass == "") || (_minimumShots <= 0) || (_maximumShots <= 0) || (_minimumDelay <= 0) || (_maximumDelay <= 0) || ((count _compatibleSynchronizedObjects) != 1)) exitWith {["¡Error! El/Un módulo 'Asignar disparos ambientales' no se pudo inicializar con éxito."] call BIS_fnc_error;};
+if ((_ammoClass == "") || (_weaponClass == "") || (_minimumShots <= 0) || (_maximumShots <= 0) || (_minimumDelay <= 0) || (_maximumDelay <= 0) || ((count _compatibleSynchronizedObjects) != 1)) exitWith {["FCLA_Module_Ambient_Fired", "• MÓDULO: ASIGNAR DISPAROS AMBIENTALES", "¡Error! El/Un módulo 'Asignar disparos ambientales' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
 
 
 
@@ -33,7 +33,7 @@ if ((_ammoClass == "") || (_weaponClass == "") || (_minimumShots <= 0) || (_maxi
 _vehicle = _compatibleSynchronizedObjects select 0;
 _hasNotWeapons = (count (weapons _vehicle)) <= 0;
 _hasNotMagazines = (count (magazines _vehicle)) <= 0;
-if ((_hasNotWeapons) || (_hasNotMagazines)) exitWith {["¡Error! El/Un módulo 'Asignar disparos ambientales' no se pudo inicializar porque el vehículo no posee armas y/o municiones."] call BIS_fnc_error;};
+if ((_hasNotWeapons) || (_hasNotMagazines)) exitWith {["¡Error! El/Un módulo 'Asignar disparos ambientales' no se pudo inicializar porque el vehículo no posee armas y/o municiones."] call FCLA_Common_fnc_errorMessage;};
 
 _vehicle setVariable ["FCLA_Ambient_Fire", true, true];
 [_vehicle, _weaponClass, _ammoClass, [_minimumShots, _maximumShots], [_minimumDelay, _maximumDelay]] call FCLA_Common_fnc_setAmbientFired;

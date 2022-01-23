@@ -20,12 +20,8 @@ class FCLA_Module_ACE_Class_Action: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\ACE_Interaction.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_createACEClassnameAction3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -102,7 +98,11 @@ class FCLA_Module_ACE_Class_Action: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Crea una acción ACE 3D asociada a las entidades que tengan el mismo classname.<br/>• Más información: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"};
+    sync[] = {"AnyBrain", "AnyVehicle", "EmptyDetector", "AnyStaticObject"};
+		description[] =	{
+      "Crea una acción ACE 3D asociada a las entidades que tengan el mismo classname.",
+      "• Más información: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"
+    };
 	};
 };
 
@@ -117,11 +117,8 @@ class FCLA_Module_ACE_Object_Action: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\ACE_Interaction_Object.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_createACEObjectAction3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 0;
-  canSetAreaHeight = 0;
   isTriggerActivated = 1;
   scope = 2;
 
@@ -198,7 +195,11 @@ class FCLA_Module_ACE_Object_Action: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Crea una acción ACE 3D asociada a una entidad específica.<br/>• Más información: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"};
+    sync[] = {"AnyBrain", "AnyVehicle", "EmptyDetector", "AnyStaticObject"};
+		description[] =	{
+      "Crea una acción ACE 3D asociada a una entidad específica.",
+      "• Más información: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"
+    };
 	};
 };
 
@@ -213,11 +214,8 @@ class FCLA_Module_ACE_Zeus_Action: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\ACE_Interaction_Zeus.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_createACEZeusAction3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -266,6 +264,10 @@ class FCLA_Module_ACE_Zeus_Action: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Crea una acción ACE 3D asociada a los Zeus, disponible cuando se encuentran en la cámara del Zeus.<br/>• Más información: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"};
+    sync[] = {"EmptyDetector"};
+		description[] =	{
+      "Crea una acción ACE 3D asociada a los Zeus, disponible cuando se encuentran en la cámara del Zeus.",
+      "• Más información: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"
+    };
 	};
 };

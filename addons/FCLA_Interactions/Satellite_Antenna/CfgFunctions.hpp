@@ -10,7 +10,7 @@ class Satellite_Antenna {
   };
 
   class conditionAssembleSA {file = "\FCLA_Interactions\Satellite_Antenna\functions\fn_conditionAssemble.sqf";};
-  class conditionDisassembleSA {file = "\FCLA_Interactions\Satellite_Antenna\functions\fn_conditionDisassemble.sqf";};
   class statementAssembleSA {file = "\FCLA_Interactions\Satellite_Antenna\functions\fn_statementAssemble.sqf";};
+  class conditionDisassembleSA {file = "\FCLA_Interactions\Satellite_Antenna\functions\fn_conditionDisassemble.sqf";};
   class statementDisassembleSA {file = "\FCLA_Interactions\Satellite_Antenna\functions\fn_statementDisassemble.sqf";};
 };

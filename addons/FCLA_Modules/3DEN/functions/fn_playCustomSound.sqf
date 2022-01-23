@@ -27,7 +27,7 @@ _maxDistance = selectMax [_moduleArea select 0, _moduleArea select 1, _moduleAre
 _soundDuration = ceil (getNumber (configFile >> "CfgSounds" >> _soundClass >> "duration"));
 _compatibleSynchronizedObjects = _synchronizedObjects select {!(_x isKindOf "EmptyDetector")};
 _numberOfCompatibleSynchronizedObjects = count _compatibleSynchronizedObjects;
-if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {["¡Error! El/Un módulo 'Reproducir sonido (personalizado)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
+if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {["FCLA_Module_Play_Custom_Sound", "• MÓDULO: REPRODUCIR SONIDO (PERSONALIZADO)", "¡Error! El/Un módulo 'Reproducir sonido (personalizado)' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
 
 
 

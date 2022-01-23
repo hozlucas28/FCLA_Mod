@@ -15,12 +15,8 @@ class FCLA_Module_Hack_Device: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Code.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_hackDevice3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -45,6 +41,12 @@ class FCLA_Module_Hack_Device: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Permite hackear el dispositivo sincronizado a travez de una acción.<br/><br/>• El módulo debe estar sincronizado únicamente a un objeto.<br/>• Una vez que el dispositivo es hackeado se le asociara la variable de tipo objeto 'FCLA_Hacked' con el valor 'true'."};
+    sync[] = {"AnyVehicle", "EmptyDetector", "AnyStaticObject"};
+		description[] =	{
+      "Permite hackear el dispositivo sincronizado a travez de una acción.",
+      "",
+      "• El módulo debe estar sincronizado únicamente a un objeto.",
+      "• Una vez que el dispositivo es hackeado se le asociara la variable de tipo objeto 'FCLA_Hacked' con el valor 'true'."
+    };
 	};
 };

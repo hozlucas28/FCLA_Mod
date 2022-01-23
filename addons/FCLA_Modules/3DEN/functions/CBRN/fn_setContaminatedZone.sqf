@@ -22,7 +22,7 @@ if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 _moduleArea = _module getVariable ["objectArea", [0, 0, 0, false, -1]];
 _threatLevel = _module getVariable ["FCLA_Threat_Level", 0];
 _contaminationMaxRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1]) <= 0) then {worldSize * 2;} else {selectMax [_moduleArea select 0, _moduleArea select 1];};
-if (_threatLevel <= 0) exitWith {["¡Error! El/Un módulo 'Área contaminada (CBRN)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
+if (_threatLevel <= 0) exitWith {["FCLA_Module_CBRN_Contaminated_Zone", "• MÓDULO: ZONA CONTAMINADA (CBRN)", "¡Error! El/Un módulo 'Área contaminada (CBRN)' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
 
 
 

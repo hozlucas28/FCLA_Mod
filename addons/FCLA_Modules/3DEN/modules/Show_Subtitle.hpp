@@ -15,7 +15,6 @@ class FCLA_Module_Show_Subtitle: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Chat.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_showSubtitle3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
   canSetArea = 1;
   isDisposable = 0;
@@ -171,12 +170,18 @@ class FCLA_Module_Show_Subtitle: Module_F {
 		class ModuleDescription: ModuleDescription {};
 	};
 
-	class ModuleDescription: ModuleDescription {
-		description[] =	{"Genera un mensaje a modo de subtítulo.<br/><br/>• Los tamaños del módulo determinan el área en el cual debe estar la unidad para ver el mensaje. Si todos son -1 se asumirá que la unidad esta dentro del área.<br/>• Si sincronizas únicamente una entidad (objeto, unidad, vehículo, etc.) al módulo, esta se tomara como origen/centro del área. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."};
-	};
-
   class AttributeValues {
     isRectangle = 0;
     size3[] = {5, 5, 2};
   };
+
+	class ModuleDescription: ModuleDescription {
+    sync[] = {"AnyBrain", "AnyVehicle", "EmptyDetector", "AnyStaticObject"};
+		description[] =	{
+      "Genera un mensaje a modo de subtítulo.",
+      "",
+      "• Los tamaños del módulo determinan el área en el cual debe estar la unidad para ver el mensaje. Si todos son -1 se asumirá que la unidad esta dentro del área.",
+      "• Si sincronizas únicamente una entidad (objeto, unidad, vehículo, etc.) al módulo, esta se tomara como origen/centro del área. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."
+    };
+	};
 };

@@ -37,12 +37,17 @@
    {
      (_this select 1) params ["_position", "_attachedObject"];
      (_this select 0) params ["_identificableName", "_needHackingDeviceState"];
-     _needHackingDeviceState = if (_needHackingDeviceState == 0) then {true;} else {false;};
 
-     _module = createAgent ["FCLA_Module_Hack_Device", _position, [], 0, "CAN_COLLIDE"];
-     _module synchronizeObjectsAdd [_attachedObject];
-     _module setVariable ["FCLA_Device_ID", _identificableName, true];
-     _module setVariable ["FCLA_Need_Hacking_Device", _needHackingDeviceState, true];
+     private ["_position", "_attachedObject", "_identificableName"];
+     private _moduleGroup = createGroup [sideLogic, true];
+     private _needHackingDeviceState = if (_needHackingDeviceState == 0) then {true;} else {false;};
+     "FCLA_Module_Hack_Device" createUnit [_position, _moduleGroup, "
+     	 this setPos _position;
+       this setVariable ['FCLA_Device_ID', _identificableName, true];
+       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+       this setVariable ['FCLA_Need_Hacking_Device', _needHackingDeviceState, true];
+     	 this synchronizeObjectsAdd [_attachedObject];
+     "];
      ["EL OBJETO AHORA ES HACKEABLE"] call ZEN_Common_fnc_showMessage;
-   }, {}, [_position, _attachedObject]] call ZEN_Dialog_fnc_Create;
+   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Code.paa"] call ZEN_Custom_Modules_fnc_Register;

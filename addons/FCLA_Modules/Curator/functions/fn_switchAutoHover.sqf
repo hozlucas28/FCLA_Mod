@@ -26,11 +26,18 @@
 	 ],
    {
      (_this select 0) params ["_disableAutoHover"];
-     _disableAutoHover = if (_disableAutoHover == 0) then {"ACTIVATED";} else {"DEACTIVATED";};
+     (_this select 1) params ["_position", "_attachedObject"];
 
-     _module = createAgent ["FCLA_Module_Auto_Hover", _this select 1, [], 0, "CAN_COLLIDE"];
-     _module setVariable ["FCLA_Disable_Auto_Hover", _disableAutoHover, true];
+     private "_position";
+     private _moduleGroup = createGroup [sideLogic, true];
+     private _disableAutoHover = if (_disableAutoHover == 0) then {"ACTIVATED";} else {"DEACTIVATED";};
+     "FCLA_Module_Auto_Hover" createUnit [_position, _moduleGroup, "
+       this setPos _position;
+       this setVariable ['FCLA_Disable_Auto_Hover', _disableAutoHover, true];
+       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+     "];
+
      _text = if (_disableAutoHover == "ACTIVATED") then {"LA PROPULSIÓN AUTOMÁTICA HA SIDO ACTIVADA";} else {"LA PROPULSIÓN AUTOMÁTICA HA SIDO DESACTIVADA";};
      [_text] call ZEN_Common_fnc_showMessage;
-   }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
+   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Auto_Hover.paa"] call ZEN_Custom_Modules_fnc_Register;

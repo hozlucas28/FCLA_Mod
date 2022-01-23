@@ -207,12 +207,20 @@ _this spawn {
 
   //Crear jammer.
   if (!_jammer) exitWith {deleteVehicle _module;};
-  _jammerModule = createAgent ["FCLA_Module_Jammer", _modulePos, [], 0, "CAN_COLLIDE"];
-  _jammerModule attachTo [_module, [0, 0, 0]];
-  _jammerModule setVariable ["FCLA_Jammer_ID", "", true];
-  _jammerModule setVariable ["FCLA_Deactivatable", false, true];
-  _jammerModule setVariable ["FCLA_Affect_Vehicles", true, true];
-  _jammerModule setVariable ["FCLA_Need_Hacking_Device", false, true];
-  _jammerModule setVariable ["objectArea", [_rad, _rad, 0, false, _rad], true];
-  [{(!alive (_this select 0)) || (!alive (_this select 1))}, {{deleteVehicle _x;} forEach _this;}, [_module, _jammerModule]] call CBA_fnc_waitUntilAndExecute;
+
+  private ["_module", "_rad"];
+  private _jammerModuleGroup = createGroup [sideLogic, true];
+  "FCLA_Module_Jammer" createUnit [_modulePos, _jammerModuleGroup, "
+  	this attachTo [_module, [0, 0, 0]];
+  	this setVariable ['FCLA_Jammer_ID', '', true];
+  	this setVariable ['FCLA_Deactivatable', false, true];
+  	this setVariable ['FCLA_Affect_Vehicles', true, true];
+  	this setVariable ['FCLA_Need_Hacking_Device', false, true];
+  	this setVariable ['objectArea', [_rad, _rad, 0, false, _rad], true];
+  	this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+
+    [{(!alive (_this select 0)) || (!alive (_this select 1))}, {
+      {deleteVehicle _x;} forEach _this;
+    }, [_module, this]] call CBA_fnc_waitUntilAndExecute;
+  "];
 };

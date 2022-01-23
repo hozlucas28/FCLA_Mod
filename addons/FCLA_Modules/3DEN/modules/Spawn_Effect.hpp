@@ -15,12 +15,8 @@ class FCLA_Module_Spawn_Effect: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Common.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setEffect3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -72,6 +68,7 @@ class FCLA_Module_Spawn_Effect: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
+    sync[] = {"EmptyDetector"};
 		description[] =	{"Genera el efecto seleccionado en la posición del módulo."};
 	};
 };

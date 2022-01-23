@@ -59,16 +59,20 @@
    {
      (_this select 1) params ["_position", "_attachedObject"];
      (_this select 0) params ["_canDragObject", "_canCarryObject", "_ignoreWeightDrag", "_ignoreWeightCarry"];
-     _canDragObject = if (_canDragObject == 0) then {"TRUE";} else {"FALSE";};
-     _canCarryObject = if (_canCarryObject == 0) then {"TRUE";} else {"FALSE";};
 
-     _module = createAgent ["FCLA_Module_Drag_And_Carry", _position, [], 0, "CAN_COLLIDE"];
-     _module synchronizeObjectsAdd [_attachedObject];
-     _module setVariable ["FCLA_Assigned_Entity", _attachedObject, true];
-     _module setVariable ["FCLA_Can_Drag", _canDragObject, true];
-     _module setVariable ["FCLA_Can_Carry", _canCarryObject, true];
-     _module setVariable ["FCLA_Ignore_Weight_Drag", _ignoreWeightDrag, true];
-     _module setVariable ["FCLA_Ignore_Weight_Carry", _ignoreWeightCarry, true];
+     private ["_position", "_attachedObject", "_ignoreWeightDrag", "_ignoreWeightCarry"];
+     private _moduleGroup = createGroup [sideLogic, true];
+     private _canDragObject = if (_canDragObject == 0) then {"TRUE";} else {"FALSE";};
+     private _canCarryObject = if (_canCarryObject == 0) then {"TRUE";} else {"FALSE";};
+     "FCLA_Module_Drag_And_Carry" createUnit [_position, _moduleGroup, "
+       this setPos _position;
+       this setVariable ['FCLA_Can_Drag', _canDragObject, true];
+       this setVariable ['FCLA_Can_Carry', _canCarryObject, true];
+       this setVariable ['FCLA_Ignore_Weight_Drag', _ignoreWeightDrag, true];
+       this setVariable ['FCLA_Ignore_Weight_Carry', _ignoreWeightCarry, true];
+       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+       this synchronizeObjectsAdd [_attachedObject];
+     "];
      ["PROPIEDADES DE ARRASTRE/PORTAR MODIFICADAS CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-   }, {}, [_position, _attachedObject]] call ZEN_Dialog_fnc_Create;
+   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Edit_Object.paa"] call ZEN_Custom_Modules_fnc_Register;

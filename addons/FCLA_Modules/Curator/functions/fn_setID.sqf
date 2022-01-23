@@ -84,18 +84,23 @@
   {
     (_this select 1) params ["_position", "_attachedObject"];
     (_this select 0) params ["_newName", "_newAge", "_newPlaceOfBirth", "_doctorState", "_advancedEnginnerState", "_EODState"];
-    _EODState = if (_EODState == 0) then {true;} else {false;};
-    _doctorState = if (_doctorState == 0) then {true;} else {false;};
-    _advancedEnginnerState = if (_advancedEnginnerState == 0) then {true;} else {false;};
 
-    _module = createAgent ["FCLA_Module_Set_ID", _position, [], 0, "CAN_COLLIDE"];
-    _module synchronizeObjectsAdd [_attachedObject];
-    _module setVariable ["FCLA_New_Age", _newAge, true];
-    _module setVariable ["FCLA_New_Name", _newName, true];
-    _module setVariable ["FCLA_New_Place_Of_Birth", _newPlaceOfBirth, true];
-    _module setVariable ["FCLA_EOD_State", _EODState, true];
-    _module setVariable ["FCLA_Doctor_State", _doctorState, true];
-    _module setVariable ["FCLA_Advanced_Enginner_State", _advancedEnginnerState, true];
+    private ["_position", "_attachedObject", "_newName", "_newAge", "_newPlaceOfBirth"];
+    private _moduleGroup = createGroup [sideLogic, true];
+    private _EODState = if (_EODState == 0) then {true;} else {false;};
+    private _doctorState = if (_doctorState == 0) then {true;} else {false;};
+    private _advancedEnginnerState = if (_advancedEnginnerState == 0) then {true;} else {false;};
+    "FCLA_Module_Set_ID" createUnit [_position, _moduleGroup, "
+      this setPos _position;
+      this setVariable ['FCLA_New_Age', _newAge, true];
+      this setVariable ['FCLA_New_Name', _newName, true];
+      this setVariable ['FCLA_EOD_State', _EODState, true];
+      this setVariable ['FCLA_Doctor_State', _doctorState, true];
+      this setVariable ['FCLA_New_Place_Of_Birth', _newPlaceOfBirth, true];
+      this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+      this setVariable ['FCLA_Advanced_Enginner_State', _advancedEnginnerState, true];
+      this synchronizeObjectsAdd [_attachedObject];
+    "];
     ["IDENTIFICACIÓN MODIFICADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-  }, {}, [_position, _attachedObject]] call ZEN_Dialog_fnc_Create;
+  }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\ID_Card.paa"] call ZEN_Custom_Modules_fnc_Register;

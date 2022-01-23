@@ -16,11 +16,9 @@ class FCLA_Module_Jammer: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Jammer.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setJammer3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
   canSetArea = 1;
   isDisposable = 1;
-  canSetAreaShape = 0;
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;
   scope = 2;
@@ -61,11 +59,17 @@ class FCLA_Module_Jammer: Module_F {
 		class ModuleDescription: ModuleDescription {};
 	};
 
-	class ModuleDescription: ModuleDescription {
-		description[] =	{"Bloquea/interfiere las señales de comunicación de las radios de onda corta y larga.<br/><br/>• Si colocas -1, en los tamaños de la zona, todo el mapa se vera afectado por el jammer.<br/>• Si sincronizas únicamente una entidad (objeto, unidad, vehículo, etc.) al módulo, esta se tomara como origen/centro del jammer. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."};
-	};
-
   class AttributeValues {
     size3[] = {50, 50, 50};
   };
+
+	class ModuleDescription: ModuleDescription {
+    sync[] = {"AnyVehicle", "EmptyDetector", "AnyStaticObject"};
+		description[] =	{
+      "Bloquea/interfiere las señales de comunicación de las radios de onda corta y larga.",
+      "",
+      "• Si colocas -1, en los tamaños de la zona, todo el mapa se vera afectado por el jammer.",
+      "• Si sincronizas únicamente una entidad (objeto, unidad, vehículo, etc.) al módulo, esta se tomara como origen/centro del jammer. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."
+    };
+	};
 };

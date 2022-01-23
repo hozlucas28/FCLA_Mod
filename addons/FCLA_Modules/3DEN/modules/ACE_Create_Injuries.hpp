@@ -15,12 +15,8 @@ class FCLA_Create_Injuries: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Medical_Cross.paa";
   category = "FCLA_Modules";
   function = "FCLA_Modules_fnc_createInjuries3DEN";
-  is3DEN = 0;
   isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
   isTriggerActivated = 1;
   scope = 2;
 
@@ -152,6 +148,7 @@ class FCLA_Create_Injuries: Module_F {
  };
 
  class ModuleDescription: ModuleDescription {
+   sync[] = {"AnyBrain", "EmptyDetector"};
    description[] =	{"Permite provocarle lesiones a las unidades sincronizadas al módulo."};
  };
 };

@@ -17,10 +17,7 @@ class FCLA_Module_Building_Traits: Module_F {
 	function = "FCLA_Modules_fnc_setBuildingTraits3DEN";
   is3DEN = 1;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -53,6 +50,7 @@ class FCLA_Module_Building_Traits: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
+    sync[] = {"EmptyDetector"};
 		description[] =	{"Permite asignar los rasgos centro médico y/o instalación de reparación a una construcción del mapa, es decir, una construcción que no fue colocada por el editor."};
 	};
 };

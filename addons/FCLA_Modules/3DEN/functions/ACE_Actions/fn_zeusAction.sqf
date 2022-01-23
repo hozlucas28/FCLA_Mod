@@ -24,7 +24,7 @@ _icon = _module getVariable ["FCLA_Icon", ""];
 _condition = _module getVariable ["FCLA_Condition", ""];
 _statement = _module getVariable ["FCLA_Statement", ""];
 _parentPath = _module getVariable ["FCLA_Parent_Path", []];
-if ((_name == "") || (_condition == "") || (_statement == "")) exitWith {["¡Error! El/Un módulo 'Crear acción (ACE - Zeus)' no se pudo inicializar con éxito."] call BIS_fnc_error;};
+if ((_name == "") || (_condition == "") || (_statement == "")) exitWith {["FCLA_Module_ACE_Zeus_Action", "• MÓDULO: CREAR ACCIÓN (ACE - ZEUS)", "¡Error! El/Un módulo 'Crear acción (ACE - Zeus)' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
 
 
 

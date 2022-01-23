@@ -57,14 +57,20 @@
    {
      (_this select 1) params ["_position", "_attachedObject"];
      (_this select 0) params ["_hasRadio", "_radioSideSelected"];
-     _hasRadio = if (_hasRadio == 0) then {true;} else {false;};
 
-     _module = createAgent ["FCLA_Module_Radio", _position, [], 0, "CAN_COLLIDE"];
-     _module synchronizeObjectsAdd [_attachedObject];
-     _module setVariable ["FCLA_Has_Radio", _hasRadio, true];
-     _module setVariable ["FCLA_Assigned_Entity", _attachedObject, true];
-     _module setVariable ["FCLA_Radio_Side", toLower _radioSideSelected, true];
+     private ["_position", "_attachedObject"];
+     private _moduleGroup = createGroup [sideLogic, true];
+     private _hasRadio = if (_hasRadio == 0) then {true;} else {false;};
+     private _radioSideSelected = toLower _radioSideSelected;
+     "FCLA_Module_Radio" createUnit [_position, _moduleGroup, "
+       this setPos _position;
+       this setVariable ['FCLA_Has_Radio', _hasRadio, true];
+       this setVariable ['FCLA_Radio_Side', _radioSideSelected, true];
+       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+       this synchronizeObjectsAdd [_attachedObject];
+     "];
+
      _text = if (_hasRadio) then {"RADIO AÑADIDA AL VEHÍCULO CON ÉXITO";} else {"SE HA ELIMINADO LA RADIO DEL VEHÍCULO";};
      [_text] call ZEN_Common_fnc_showMessage;
-   }, {}, [_position, _attachedObject]] call ZEN_Dialog_fnc_Create;
+   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Radio.paa"] call ZEN_Custom_Modules_fnc_Register;

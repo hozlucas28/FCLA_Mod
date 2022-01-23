@@ -22,7 +22,7 @@ if ((is3DEN) || (isNull _module) || (_synchronizedObjects isEqualTo []) || (!_is
 _deviceID = _module getVariable ["FCLA_Device_ID", ""];
 _needHackingDevice = _module getVariable ["FCLA_Need_Hacking_Device", false];
 _compatibleSynchronizedObjects = _synchronizedObjects select {!(_x in allUnits) && !(_x isKindOf "EmptyDetector")};
-if ((count _compatibleSynchronizedObjects) != 1) exitWith {["¡Error! El/Un módulo 'Dispositivo hackeable' no se pudo inicializar con éxito."] call BIS_fnc_error;};
+if ((count _compatibleSynchronizedObjects) != 1) exitWith {["FCLA_Module_Hack_Device", "• MÓDULO: DISPOSITIVO HACKEABLE", "¡Error! El/Un módulo 'Dispositivo hackeable' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
 
 
 

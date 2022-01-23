@@ -43,19 +43,26 @@
 	 ],
    {
      (_this select 0) params ["_selectedEffect", "_delay"];
-     _selectedEffect = toUpper _selectedEffect;
+     (_this select 1) params ["_position", "_attachedObject"];
+
      _effectName = switch (_selectedEffect) do {
-       case "FIRE": {"FUEGO";};
-       case "SMOKE": {"HUMO";};
-       case "SPARKS": {"CHISPAS";};
-       case "WIND_GUST": {"RÁFAGA DE VIENTO";};
-       case "FIREFLIES": {"LUCIÉRNAGAS";};
+       case "Fire": {"FUEGO";};
+       case "Smoke": {"HUMO";};
+       case "Sparks": {"CHISPAS";};
+       case "Wind_gust": {"RÁFAGA DE VIENTO";};
+       case "Fireflies": {"LUCIÉRNAGAS";};
      };
 
-     _module = createAgent ["FCLA_Module_Spawn_Effect", _this select 1, [], 0, "CAN_COLLIDE"];
-     _module setVariable ["FCLA_Delay", round _delay, true];
-     _module setVariable ["FCLA_Effect", _selectedEffect, true];
-     _module setVariable ["FCLA_Assigned_Curator", player, true];
+     private "_position";
+     private _moduleGroup = createGroup [sideLogic, true];
+     private _delay = round _delay;
+     private _selectedEffect = toUpper _selectedEffect;
+     "FCLA_Module_Spawn_Effect" createUnit [_position, _moduleGroup, "
+       this setPos _position;
+       this setVariable ['FCLA_Delay', _delay, true];
+       this setVariable ['FCLA_Effect', _selectedEffect, true];
+       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+     "];
      ["EL EFECTO " + _effectName + " SE HA GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
-   }, {}, _this select 0] call ZEN_Dialog_fnc_Create;
-}, nil] call ZEN_Custom_Modules_fnc_Register;
+   }, {}, _this] call ZEN_Dialog_fnc_Create;
+}, ""] call ZEN_Custom_Modules_fnc_Register;

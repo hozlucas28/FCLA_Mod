@@ -15,12 +15,8 @@ class FCLA_Module_Introduction: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Tag.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setIntroduction3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 0;
   scope = 2;
 
@@ -83,6 +79,10 @@ class FCLA_Module_Introduction: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Reproduce una introducción animada al comienzo del escenario.<br/><br/>• Si el título y/o subtítulo no son definidos únicamente se mostrara el video introductorio, el cual es opcional."};
+		description[] =	{
+      "Reproduce una introducción animada al comienzo del escenario.",
+      "",
+      "• Si el título y/o subtítulo no son definidos únicamente se mostrara el video introductorio, el cual es opcional."
+    };
 	};
 };

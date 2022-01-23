@@ -15,12 +15,8 @@ class FCLA_Module_Plate_Number: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Vehicle.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setPlateNumber3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -37,6 +33,7 @@ class FCLA_Module_Plate_Number: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
+    sync[] = {"AnyVehicle", "EmptyDetector"};
 		description[] =	{"Modifica las matrículas de los vehículos sincronizados al módulo."};
 	};
 };

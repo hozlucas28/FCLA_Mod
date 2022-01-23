@@ -28,10 +28,11 @@
 	 ],
    {
      (_this select 0) params ["_isPromotionDay"];
+     (_this select 1) params ["_position", "_attachedObject"];
      _isPromotionDay = if (_isPromotionDay == 0) then {true;} else {false;};
 
      missionNamespace setVariable ["FCLA_isPromotionDay", _isPromotionDay];
      _text = if (_isPromotionDay) then {"DÍA DE ASCENSOS ACTIVADO";} else {"DÍA DE ASCENSOS DESACTIVADO";};
      [_text] call ZEN_Common_fnc_showMessage;
-   }, {}, nil] call ZEN_Dialog_fnc_Create;
+   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Elegant_Person.paa"] call ZEN_Custom_Modules_fnc_Register;

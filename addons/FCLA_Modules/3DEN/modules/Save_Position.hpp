@@ -17,12 +17,8 @@ class FCLA_Module_Save_Position: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Save.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_savePosition3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 0;
   scope = 2;
 

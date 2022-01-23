@@ -15,12 +15,8 @@ class FCLA_Module_Ambient_Fired: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Tracers.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setAmbientFired3DEN";
-  is3DEN = 0;
 	isGlobal = 1;
-  canSetArea = 0;
   isDisposable = 1;
-  canSetAreaShape = 0;
-  canSetAreaHeight = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -77,6 +73,12 @@ class FCLA_Module_Ambient_Fired: Module_F {
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Permite forzar los vehículos sincronizados al módulo a disparar hacia el cielo.<br/><br/>• El módulo solo puede estar sincronizado a un único vehículo.<br/>• Si desea detener los disparos ambientales bastará con borrar el módulo correspondiente."};
+    sync[] = {"AnyVehicle", "EmptyDetector"};
+		description[] =	{
+      "Permite forzar los vehículos sincronizados al módulo a disparar hacia el cielo.",
+      "",
+      "• El módulo solo puede estar sincronizado a un único vehículo.",
+      "• Si desea detener los disparos ambientales bastará con borrar el módulo correspondiente."
+    };
 	};
 };
