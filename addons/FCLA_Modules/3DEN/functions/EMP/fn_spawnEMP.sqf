@@ -10,8 +10,8 @@
 
 _this spawn {
   params ["_module", "_rad", "_jammer"];
-  _rad = if (_rad <= 0) then {worldSize;} else {_rad;};
-  _modulePos = getPos _module;
+  private _rad = if (_rad <= 0) then {worldSize;} else {_rad;};
+  private _modulePos = getPos _module;
   _nearUnits = _modulePos nearEntities [["CAManBase"], _rad];
   _nearVehicles = _modulePos nearEntities [["Satellite_Antenna_RF_3080", "LandVehicle", "Air", "Ship"], _rad];
   _nearStaticWeapons = (_modulePos nearEntities [["StaticWeapon"], _rad]) select {_x in allUnitsUAV};
@@ -205,22 +205,20 @@ _this spawn {
   } forEach _nearUnits;
 
 
-  //Crear jammer.
-  if (!_jammer) exitWith {deleteVehicle _module;};
+  //Eliminar módulo.
+  deleteVehicle _module;
 
-  private ["_module", "_rad"];
+
+  //Crear jammer.
+  if (!_jammer) exitWith {};
   private _jammerModuleGroup = createGroup [sideLogic, true];
   "FCLA_Module_Jammer" createUnit [_modulePos, _jammerModuleGroup, "
-  	this attachTo [_module, [0, 0, 0]];
+  	this setPos _modulePos;
   	this setVariable ['FCLA_Jammer_ID', '', true];
   	this setVariable ['FCLA_Deactivatable', false, true];
   	this setVariable ['FCLA_Affect_Vehicles', true, true];
   	this setVariable ['FCLA_Need_Hacking_Device', false, true];
   	this setVariable ['objectArea', [_rad, _rad, 0, false, _rad], true];
   	this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-
-    [{(!alive (_this select 0)) || (!alive (_this select 1))}, {
-      {deleteVehicle _x;} forEach _this;
-    }, [_module, this]] call CBA_fnc_waitUntilAndExecute;
   "];
 };

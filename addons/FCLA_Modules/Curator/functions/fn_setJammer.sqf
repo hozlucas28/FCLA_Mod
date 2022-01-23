@@ -84,6 +84,10 @@
       this setVariable ['objectArea', [_jammerRad, _jammerRad, 0, false, _jammerRad], true];
       this synchronizeObjectsAdd [_attachedObject];
     "];
+
+    _module = nearestObject [_position, "FCLA_Module_Jammer"];
+    _curatorLogic = getAssignedCuratorLogic player;
+    _curatorLogic addCuratorEditableObjects [[_module], false];
     ["JAMMER GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Jammer.paa"] call ZEN_Custom_Modules_fnc_Register;

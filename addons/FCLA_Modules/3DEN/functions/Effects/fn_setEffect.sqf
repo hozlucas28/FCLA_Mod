@@ -30,14 +30,14 @@ if ((_selectedEffect in ["SPARKS", "WIND_GUST"]) && (_delayEffect <= 0)) exitWit
 switch (_selectedEffect) do {
   case "FIRE": {
     _effectObj = createVehicle ["test_EmptyObjectForFireBig", _modulePos, [], 0, "CAN_COLLIDE"];
-    [_effectObj, attachedTo _module] call BIS_fnc_attachToRelative;
-    deleteVehicle _module;
+    _effectObj attachTo [_module, [0, 0, 1]];
+    [{(!alive (_this select 0)) || (!alive (_this select 1))}, {{deleteVehicle _x} forEach _this;}, [_module, _effectObj]] call CBA_fnc_waitUntilAndExecute;
   };
 
   case "SMOKE": {
     _effectObj = createVehicle ["test_EmptyObjectForSmoke", _modulePos, [], 0, "CAN_COLLIDE"];
-    [_effectObj, attachedTo _module] call BIS_fnc_attachToRelative;
-    deleteVehicle _module;
+    _effectObj attachTo [_module, [0, 0, 1]];
+    [{(!alive (_this select 0)) || (!alive (_this select 1))}, {{deleteVehicle _x} forEach _this;}, [_module, _effectObj]] call CBA_fnc_waitUntilAndExecute;
   };
 
   case "SPARKS": {[_module, _delayEffect] spawn FCLA_Modules_fnc_spawnSparks3DEN;};

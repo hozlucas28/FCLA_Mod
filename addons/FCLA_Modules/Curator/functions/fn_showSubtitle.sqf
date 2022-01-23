@@ -135,6 +135,10 @@
        this setVariable ['objectArea', [_distanceToShow, _distanceToShow, 0, false, _distanceToShow], true];
        this synchronizeObjectsAdd [_attachedObject];
      "];
+
+     _module = nearestObject [_position, "FCLA_Module_Show_Subtitle"];
+     _curatorLogic = getAssignedCuratorLogic player;
+     _curatorLogic addCuratorEditableObjects [[_module], false];
      ["SUBTÍTULO MOSTRADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Chat.paa"] call ZEN_Custom_Modules_fnc_Register;

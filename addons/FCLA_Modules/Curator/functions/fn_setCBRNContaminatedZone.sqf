@@ -52,6 +52,10 @@
       this setVariable ['objectArea', [_rad, _rad, 0, false, _rad], true];
       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
     "];
+
+    _module = nearestObject [_position, "FCLA_Module_CBRN_Contaminated_Zone"];
+    _curatorLogic = getAssignedCuratorLogic player;
+    _curatorLogic addCuratorEditableObjects [[_module], false];
     ["ZONA CONTAMINADA GENERADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Contaminated_Zone.paa"] call ZEN_Custom_Modules_fnc_Register;

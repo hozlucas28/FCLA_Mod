@@ -116,6 +116,10 @@
         this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
       	this synchronizeObjectsAdd [_attachedObject];
       "];
+
+      _module = nearestObject [_position, "FCLA_Module_Ambient_Fired"];
+      _curatorLogic = getAssignedCuratorLogic player;
+      _curatorLogic addCuratorEditableObjects [[_module], false];
       ["EL VEHÍCULO COMENZARA A REALIZAR DISPAROS AMBIENTALES"] call ZEN_Common_fnc_showMessage;
     }, {}, [_position, _attachedObject, _weaponSelected]] call ZEN_Dialog_fnc_Create;
   }, {}, [_position, _attachedObject, _vehicleName, _vehicleWeapons, _vehicleWeaponsNames]] call ZEN_Dialog_fnc_Create;

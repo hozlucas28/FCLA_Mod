@@ -63,6 +63,10 @@
        this setVariable ['FCLA_Effect', _selectedEffect, true];
        this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
      "];
+
+     _module = nearestObject [_position, "FCLA_Module_Spawn_Effect"];
+     _curatorLogic = getAssignedCuratorLogic player;
+     _curatorLogic addCuratorEditableObjects [[_module], false];
      ["EL EFECTO " + _effectName + " SE HA GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, ""] call ZEN_Custom_Modules_fnc_Register;
