@@ -6,7 +6,7 @@
 class Night_Vision_Battery {
   class setPlayerEventHandlersNVB {
     file = "\FCLA_Interactions\Night_Vision_Battery\functions\CBA_EventHandlers\fn_setPlayerEventHandlers.sqf";
-    postInit = 1;
+    clientInit = 1;
   };
 
   class conditionRechargeNVB {file = "\FCLA_Interactions\Night_Vision_Battery\functions\fn_conditionRecharge.sqf";};

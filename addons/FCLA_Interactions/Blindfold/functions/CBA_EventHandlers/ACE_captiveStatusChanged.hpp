@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un controlador de evento para el uso de las funciones "Bandage".
+ * Le devuelve los anteojos a la unidad al liberarse, si tiene los ojos vendados.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

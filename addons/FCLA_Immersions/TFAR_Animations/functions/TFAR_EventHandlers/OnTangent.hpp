@@ -3,8 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Asigna un controlador de evento del tipo 'TFAR_fnc_addEventHandler', que
- * se ejecutara cuando se transmita por radio.
+ * Inicia/Detiene la animación al transmitir por radio.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

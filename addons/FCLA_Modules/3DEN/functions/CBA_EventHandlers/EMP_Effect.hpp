@@ -3,16 +3,12 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea controladores de eventos que se utilizan en el addon "FCLA Modules".
+ * Genera un efecto visual simulando un pulso electromagnético.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-
-
-/* -------------------------- EFECTO VISUAL (PEM) -------------------------- */
-
-["FCLA_EMP", {
+["FCLA_EMP_Visual_Effect", {
   _this spawn {
     params ["_logic", "_rad"];
     _player = call CBA_fnc_currentUnit;

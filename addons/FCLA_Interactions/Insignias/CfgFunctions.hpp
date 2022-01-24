@@ -6,7 +6,7 @@
 class Patches {
   class setPlayerEventHandlerInsignias {
     file = "\FCLA_Interactions\Insignias\functions\CBA_EventHandlers\fn_setPlayerEventHandler.sqf";
-    postInit = 1;
+    clientInit = 1;
   };
 
   class setVestInsignias {file = "\FCLA_Interactions\Insignias\functions\Loadout\fn_setVest.sqf";};

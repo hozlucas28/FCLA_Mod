@@ -4,11 +4,6 @@
 |********************************************************************************/
 
 class FCLA_Common_Functions {
-  class EventHandlers {
-    file = "\FCLA_Common\functions\CBA_EventHandlers\fn_setEventHandlers.sqf";
-    postInit = 1;
-  };
-
   class isAdmin {file = "\FCLA_Common\functions\fn_isAdmin.sqf";};
   class setPTSD {file = "\FCLA_Common\functions\fn_setPTSD.sqf";};
   class isCurator {file = "\FCLA_Common\functions\fn_isCurator.sqf";};

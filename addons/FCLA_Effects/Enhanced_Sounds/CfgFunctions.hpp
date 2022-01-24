@@ -6,7 +6,7 @@
 class Enhanced_Sounds {
 	class setPlayerEventHandlersES {
 		file = "\FCLA_Effects\Enhanced_Sounds\functions\CBA_EventHandlers\fn_setPlayerEventHandlers.sqf";
-		postInit = 1;
+		clientInit = 1;
 	};
 
 	class putESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_Put.sqf";};

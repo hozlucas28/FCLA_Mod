@@ -61,7 +61,9 @@ _soundSourceTwo = createAgent ["VirtualAISquad", _modulePos, [], 0, "CAN_COLLIDE
 }, [_modulePos, _newColorSelected], 0.2] call CBA_fnc_waitAndExecute;
 */
 
-["FCLA_Smoke_Signal", [_modulePos, _smokeColor]] call CBA_fnc_globalEvent;
+//["FCLA_Smoke_Signal", [_modulePos, _smokeColor]] call CBA_fnc_globalEvent; //FUNCIONA PERO SE DUPLICA
+["FCLA_Smoke_Signal", [_modulePos, _smokeColor]] call CBA_fnc_remoteEvent; //FUNCIONA PERO NO EN SP
+//["FCLA_Smoke_Signal", [_modulePos, _smokeColor], [allPlayers]] call CBA_fnc_targetEvent; //PROBAR
 
 //Eliminar módulo.
 deleteVehicle _module;

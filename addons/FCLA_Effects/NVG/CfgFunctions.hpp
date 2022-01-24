@@ -6,7 +6,7 @@
 class NVG {
   class setPlayerEventHandlersNVG {
 		file = "\FCLA_Effects\NVG\functions\CBA_EventHandlers\fn_setPlayerEventHandler.sqf";
-		postInit = 1;
+		clientInit = 1;
 	};
 
   class respawnNVGEH {file = "\FCLA_Effects\NVG\functions\BIS_EventHandlers\fn_Respawn.sqf";};

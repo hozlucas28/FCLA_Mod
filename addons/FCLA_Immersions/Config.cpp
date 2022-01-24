@@ -22,8 +22,11 @@ class CfgPatches {
 
 class CfgFunctions {
 	class FCLA_Immersions {
+		class FCLA_Immersions {
+			class XEHpostInit {file = "\FCLA_Immersions\XEH_postInit.sqf";};
+		};
+
 		#include "\FCLA_Immersions\Kick_Door\CfgFunction.hpp"
-		#include "\FCLA_Immersions\Auto_Hover\CfgFunction.hpp"
 		#include "\FCLA_Immersions\Turbulences\CfgFunctions.hpp"
 		#include "\FCLA_Immersions\Building_Stairs\CfgFunctions.hpp"
 		#include "\FCLA_Immersions\TFAR_Animations\CfgFunctions.hpp"
@@ -131,5 +134,11 @@ class CfgWeapons {
 class Extended_Killed_Eventhandlers {
 	class Air {
 		init = "_this spawn FCLA_Immersions_fnc_killedNABEH;";
+	};
+};
+
+class Extended_PostInit_EventHandlers {
+	class FCLA_Immersions {
+		init = "call FCLA_Immersions_fnc_XEHpostInit;";
 	};
 };

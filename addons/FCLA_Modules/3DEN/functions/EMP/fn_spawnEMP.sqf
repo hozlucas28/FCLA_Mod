@@ -15,7 +15,7 @@ _this spawn {
   _nearUnits = _modulePos nearEntities [["CAManBase"], _rad];
   _nearVehicles = _modulePos nearEntities [["Satellite_Antenna_RF_3080", "LandVehicle", "Air", "Ship"], _rad];
   _nearStaticWeapons = (_modulePos nearEntities [["StaticWeapon"], _rad]) select {_x in allUnitsUAV};
-  ["FCLA_EMP", [_module, _rad], allPlayers] call CBA_fnc_targetEvent;
+  ["FCLA_EMP_Visual_Effect", [_module, _rad], allPlayers] call CBA_fnc_targetEvent;
 
 
   _particleObjOne = createVehicle ["#particlesource", _modulePos, [], 0, "CAN_COLLIDE"];

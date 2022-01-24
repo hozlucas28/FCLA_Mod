@@ -32,7 +32,7 @@ if (_engineState) then {
       [_handle] call CBA_fnc_removePerFrameHandler;
     };
 
-    if (!isTouchingGround _plane) then {["FCLA_Plane_Shake", [_plane, _speed]] call CBA_fnc_globalEvent;};
+    if (!isTouchingGround _plane) then {["FCLA_Plane_Camera_Shake", [_plane, _speed]] call CBA_fnc_globalEvent;};
     if ((_speed >= 150) && ((_enginePower) >= 25)) then {[_plane, _engineOne, _engineTwo, _pos, _speed, _posASL, _posATL, _posASLW, _velocity] Spawn FCLA_Effects_fnc_groundSmokePlanes;};
   }, 0, [_plane, _engineOne, _engineTwo]] call CBA_fnc_addPerFrameHandler;
   _plane setVariable ["FCLA_Planes_perFrameHandler_ID", _handle, true];

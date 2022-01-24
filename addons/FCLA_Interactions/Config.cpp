@@ -31,6 +31,10 @@ class CfgPatches {
 
 class CfgFunctions {
 	class FCLA_Interactions {
+		class FCLA_Interactions {
+			class XEHpostInit {file = "\FCLA_Interactions\XEH_postInit.sqf";};
+		};
+
 		#include "\FCLA_Interactions\CBRN\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\ID_Card\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Blindfold\CfgFunctions.hpp"
@@ -158,12 +162,6 @@ class CfgVehicles {
 |                            CONTROLADORES DE EVENTOS                            |
 |********************************************************************************/
 
-class Extended_FiredBIS_Eventhandlers {
-	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Interactions_fnc_firedSSEH;};";
-	};
-};
-
 class Extended_Killed_Eventhandlers {
 	class CAManBase {
 		init = "if (!is3DEN) then {_this spawn FCLA_Interactions_fnc_killedCBRNEH;};";
@@ -173,5 +171,17 @@ class Extended_Killed_Eventhandlers {
 class Extended_Respawn_Eventhandlers {
 	class CAManBase {
 		init = "if (!is3DEN) then {_this spawn FCLA_Interactions_fnc_respawnBlindfoldEH; _this spawn FCLA_Interactions_fnc_respawnCBRNEH;};";
+	};
+};
+
+class Extended_PostInit_EventHandlers {
+	class FCLA_Interactions {
+		init = "call FCLA_Interactions_fnc_XEHpostInit;";
+	};
+};
+
+class Extended_FiredBIS_Eventhandlers {
+	class CAManBase {
+		init = "if (!is3DEN) then {_this spawn FCLA_Interactions_fnc_firedSSEH;};";
 	};
 };

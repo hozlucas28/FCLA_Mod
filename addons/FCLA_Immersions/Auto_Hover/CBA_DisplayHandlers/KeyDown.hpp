@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Permite desactivar la propulsión automática que poseen los helicópteros.
+ * Activa/Desactiva la propulsión automática que poseen los helicópteros.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

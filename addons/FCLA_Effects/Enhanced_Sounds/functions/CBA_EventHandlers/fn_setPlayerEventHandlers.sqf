@@ -40,6 +40,7 @@
 
 
 //Al cambiar el modo de visión.
+/*
 ["visionMode", {
   params ["_unit", "_newVisionMode"];
   _vehicle = vehicle _unit;
@@ -59,3 +60,4 @@
     playSound "FCLA_Vision_Mode_Changed";
   };
 }, false] call CBA_fnc_addPlayerEventHandler;
+*/

@@ -109,6 +109,11 @@ class Custom_Land_Photos_V1_F: Land_Photos_V1_F {
         	name = "N° 14";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_14.paa";
         };
+
+        class Texture_15 {
+        	name = "N° 15";
+        	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_15.paa";
+        };
 			};
 		};
 	};

@@ -3,8 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Asigna un eventhandler del tipo 'addDisplayHandler' para que
- * se cancele la animación 'posición táctica (arriba/abajo)' cuando se
+ * Cancele la animación 'posición táctica (arriba/abajo)' cuando se
  * preciona el click derecho/izquierdo del mouse.
  *
  * Public: [No]

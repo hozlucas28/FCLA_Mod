@@ -44,9 +44,12 @@ class CfgFactionClasses {
 
 class CfgFunctions {
 	class FCLA_Modules {
+		class FCLA_Modules {
+			class XEHpostInit {file = "\FCLA_Modules\XEH_postInit.sqf";};
+		};
+
 		#include "\FCLA_Modules\3DEN\CfgFunctions.hpp"
 		#include "\FCLA_Modules\Curator\CfgFunctions.hpp"
-		#include "\FCLA_Modules\EventHandlers\CfgFunction.hpp"
 	};
 };
 
@@ -91,4 +94,16 @@ class CfgVehicles {
 		};
 	};
 	#include "\FCLA_Modules\3DEN\CfgVehicles.hpp"
+};
+
+
+
+/********************************************************************************|
+|                            CONTROLADORES DE EVENTOS                            |
+|********************************************************************************/
+
+class Extended_PostInit_EventHandlers {
+	class FCLA_Modules {
+		init = "call FCLA_Modules_fnc_XEHpostInit;";
+	};
 };

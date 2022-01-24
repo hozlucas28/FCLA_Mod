@@ -4,11 +4,6 @@
 |********************************************************************************/
 
 class 3DEN {
-  class EventHandlers {
-    file = "\FCLA_Modules\3DEN\functions\CBA_EventHandlers\fn_setEventHandlers.sqf";
-    postInit = 1;
-  };
-
   class setID3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setID.sqf";};
   class initEMP3DEN {file = "\FCLA_Modules\3DEN\functions\EMP\fn_initEMP.sqf";};
   class spawnEMP3DEN {file = "\FCLA_Modules\3DEN\functions\EMP\fn_spawnEMP.sqf";};

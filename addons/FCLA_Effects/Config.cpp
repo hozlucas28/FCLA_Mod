@@ -41,6 +41,10 @@ class CfgCoreData {
 
 class CfgFunctions {
 	class FCLA_Effects {
+		class FCLA_Effects {
+			class XEHpostInit {file = "\FCLA_Effects\XEH_postInit.sqf";};
+		};
+
 		#include "\FCLA_Effects\NVG\CfgFunctions.hpp"
 		#include "\FCLA_Effects\Planes\CfgFunctions.hpp"
 		#include "\FCLA_Effects\Enhanced_Sounds\CfgFunctions.hpp"
@@ -98,15 +102,45 @@ class CfgVehicles {
 |                            CONTROLADORES DE EVENTOS                            |
 |********************************************************************************/
 
+class Extended_Put_EventHandlers {
+	class CAManBase {
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_putESEH;};";
+	};
+};
+
+class Extended_Take_EventHandlers {
+	class CAManBase {
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_takeESEH;};";
+	};
+};
+
 class Extended_Engine_EventHandlers {
 	class Plane {
 		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_enginePlanes;};";
 	};
 };
 
+class Extended_Killed_Eventhandlers {
+	class CAManBase {
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_killedESEH;};";
+	};
+};
+
 class Extended_HitPart_EventHandlers {
 	class CAManBase {
 		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_hitPartESEH;};";
+	};
+};
+
+class Extended_Respawn_Eventhandlers {
+	class CAManBase {
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_respawnNVGEH;};";
+	};
+};
+
+class Extended_PostInit_EventHandlers {
+	class FCLA_Effects {
+		init = "call FCLA_Effects_fnc_XEHpostInit;";
 	};
 };
 
@@ -119,29 +153,5 @@ class Extended_InventoryClosed_EventHandlers {
 class Extended_InventoryOpened_EventHandlers {
 	class CAManBase {
 		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryOpenedESEH;};";
-	};
-};
-
-class Extended_Killed_Eventhandlers {
-	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_killedESEH;};";
-	};
-};
-
-class Extended_Put_EventHandlers {
-	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_putESEH;};";
-	};
-};
-
-class Extended_Respawn_Eventhandlers {
-	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_respawnNVGEH;};";
-	};
-};
-
-class Extended_Take_EventHandlers {
-	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_takeESEH;};";
 	};
 };
