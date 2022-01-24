@@ -104,13 +104,13 @@ class CfgVehicles {
 
 class Extended_Put_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_putESEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_putES;};";
 	};
 };
 
 class Extended_Take_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_takeESEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_takeES;};";
 	};
 };
 
@@ -122,19 +122,19 @@ class Extended_Engine_EventHandlers {
 
 class Extended_Killed_Eventhandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_killedESEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_killedES;};";
 	};
 };
 
 class Extended_HitPart_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_hitPartESEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_hitPartES;};";
 	};
 };
 
 class Extended_Respawn_Eventhandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_respawnNVGEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_respawnNVG;};";
 	};
 };
 
@@ -146,12 +146,12 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_InventoryClosed_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryClosedESEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryClosedES;};";
 	};
 };
 
 class Extended_InventoryOpened_EventHandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryOpenedESEH;};";
+		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryOpenedES;};";
 	};
 };

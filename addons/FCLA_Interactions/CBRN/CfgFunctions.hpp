@@ -9,11 +9,6 @@ class CBRN {
     clientInit = 1;
   };
 
-  class setPlayerEventHandlerCBRN {
-    file = "\FCLA_Interactions\CBRN\functions\CBA_EventHandlers\fn_setPlayerEventHandler.sqf";
-    clientInit = 1;
-  };
-
   class addActionRechargeOxygenCBRN {
     file = "\FCLA_Interactions\CBRN\functions\Oxygen_Tanks\fn_addAction.sqf";
     postInit = 1;

@@ -4,15 +4,10 @@
 |********************************************************************************/
 
 class Enhanced_Sounds {
-	class setPlayerEventHandlersES {
-		file = "\FCLA_Effects\Enhanced_Sounds\functions\CBA_EventHandlers\fn_setPlayerEventHandlers.sqf";
-		clientInit = 1;
-	};
-
-	class putESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_Put.sqf";};
-	class takeESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_Take.sqf";};
-	class killedESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_Killed.sqf";};
-	class hitPartESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_hitPart.sqf";};
-	class inventoryClosedESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_inventoryClosed.sqf";};
-	class inventoryOpenedESEH {file = "\FCLA_Effects\Enhanced_Sounds\functions\BIS_EventHandlers\fn_inventoryOpened.sqf";};
+	class putES {file = "\FCLA_Effects\Enhanced_Sounds\functions\fn_Put.sqf";};
+	class takeES {file = "\FCLA_Effects\Enhanced_Sounds\functions\fn_Take.sqf";};
+	class killedES {file = "\FCLA_Effects\Enhanced_Sounds\functions\fn_Killed.sqf";};
+	class hitPartES {file = "\FCLA_Effects\Enhanced_Sounds\functions\fn_hitPart.sqf";};
+	class inventoryClosedES {file = "\FCLA_Effects\Enhanced_Sounds\functions\fn_inventoryClosed.sqf";};
+	class inventoryOpenedES {file = "\FCLA_Effects\Enhanced_Sounds\functions\fn_inventoryOpened.sqf";};
 };

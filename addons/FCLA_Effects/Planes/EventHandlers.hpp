@@ -1,13 +1,9 @@
 
-/* ----------------------------------------------------------------------------
- * Author: hozlucas28
- *
- * Description:
- * Provoca que la camara tiemble cuando una aeronave pasa cerca.
- *
- * Public: [No]
----------------------------------------------------------------------------- */
+/********************************************************************************|
+|                     CONTROLADORES DE EVENTOS - "AERONAVES"                     |
+|********************************************************************************/
 
+//Provoca que la camara tiemble cuando una aeronave pasa cerca.
 ["FCLA_Plane_Camera_Shake", {
   params ["_plane", "_planeSpeed"];
   _unit = call CBA_fnc_currentUnit;

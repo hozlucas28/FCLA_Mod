@@ -1,15 +1,9 @@
 
-/* ----------------------------------------------------------------------------
- * Author: hozlucas28
- *
- * Description:
- * Asigna controladores de eventos del tipo 'addPlayerEventHandler' para que se
- * consuma la batería de la visión nocturna.
- *
- * Public: [No]
----------------------------------------------------------------------------- */
+/********************************************************************************|
+|    CONTROLADORES DE EVENTOS (JUGADORES) - "BATERÍA PARA LA VISIÓN NOCTURNA"    |
+|********************************************************************************/
 
-//Al cambiar el modo de visión.
+//Inicia/Detiene el consumo de batería en la visión nocturna.
 ["visionMode", {
   params ["_player", "_newVisionMode", "_oldVisionMode"];
   if ([_player] call FCLA_Interactions_fnc_conditionStartConsumeNVB) exitWith {[_player] spawn FCLA_Interactions_fnc_statementStartConsumeNVB;};
@@ -17,8 +11,7 @@
 }, false] call CBA_fnc_addPlayerEventHandler;
 
 
-
-//Al cambiar cámara (Zeus, arsenal, etc.).
+//Inicia/Detiene el consumo de batería en la visión nocturna.
 ["featureCamera", {
   params ["_player", "_newCamera"];
   if ((_newCamera == "") && ([_player] call FCLA_Interactions_fnc_conditionStartConsumeNVB)) exitWith {[_player] spawn FCLA_Interactions_fnc_statementStartConsumeNVB;};

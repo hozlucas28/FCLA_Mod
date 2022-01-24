@@ -1,13 +1,9 @@
 
-/* ----------------------------------------------------------------------------
- * Author: hozlucas28
- *
- * Description:
- * Activa/Desactiva la propulsión automática que poseen los helicópteros.
- *
- * Public: [No]
----------------------------------------------------------------------------- */
+/********************************************************************************|
+|              CONTROLADORES DE PANTALLA - "PROPULSIÓN AUTOMÁTICA"               |
+|********************************************************************************/
 
+//Activa/Desactiva la propulsión automática.
 ["KeyDown", {
 	params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
 	_player = call CBA_fnc_currentUnit;

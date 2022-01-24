@@ -1,14 +1,9 @@
 
-/* ----------------------------------------------------------------------------
- * Author: hozlucas28
- *
- * Description:
- * Cancele la animación 'posición táctica (arriba/abajo)' cuando se
- * preciona el click derecho/izquierdo del mouse.
- *
- * Public: [No]
----------------------------------------------------------------------------- */
+/********************************************************************************|
+|              CONTROLADORES DE PANTALLA - "ANIMACIONES MEJORADAS"               |
+|********************************************************************************/
 
+//Cancela la posición táctica.
 ["MouseButtonDown", {
   _player = call CBA_fnc_currentUnit;
   _tacticalPositionValues = _player getVariable ["FCLA_Tactical_Position", [false, false]];

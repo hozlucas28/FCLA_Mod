@@ -1,14 +1,9 @@
 
-/* ----------------------------------------------------------------------------
- * Author: hozlucas28
- *
- * Description:
- * Asigna un controlador de evento del tipo 'addPlayerEventHandler' para
- * colocarle la insignia al jugador.
- *
- * Public: [No]
----------------------------------------------------------------------------- */
+/********************************************************************************|
+|               CONTROLADORES DE EVENTOS (JUGADORES) - "INSIGNIAS"               |
+|********************************************************************************/
 
+//Le coloca la insignia al jugador.
 ["loadout", {
   params ["_unit", "_newUnitLoadout", "_oldUnitLoadout"];
   if (!([_unit, true] call ACE_common_fnc_isPlayer)) exitWith {};

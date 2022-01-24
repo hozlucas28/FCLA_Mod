@@ -1,13 +1,9 @@
 
-/* ----------------------------------------------------------------------------
- * Author: hozlucas28
- *
- * Description:
- * Le devuelve los anteojos a la unidad al liberarse, si tiene los ojos vendados.
- *
- * Public: [No]
----------------------------------------------------------------------------- */
+/********************************************************************************|
+|                       CONTROLADORES DE EVENTOS - "VENDA"                       |
+|********************************************************************************/
 
+//Devuelve los anteojos a la unidad cuando es liberada.
 ["ACE_captiveStatusChanged", {
 	params ["_unit", "_state"];
 	_savedGoggles = _unit getVariable ["FCLA_Saved_Goggles", ""];

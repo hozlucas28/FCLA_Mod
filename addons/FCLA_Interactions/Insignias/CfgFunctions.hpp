@@ -4,11 +4,6 @@
 |********************************************************************************/
 
 class Patches {
-  class setPlayerEventHandlerInsignias {
-    file = "\FCLA_Interactions\Insignias\functions\CBA_EventHandlers\fn_setPlayerEventHandler.sqf";
-    clientInit = 1;
-  };
-
   class setVestInsignias {file = "\FCLA_Interactions\Insignias\functions\Loadout\fn_setVest.sqf";};
   class setUniformInsignias {file = "\FCLA_Interactions\Insignias\functions\Loadout\fn_setUniform.sqf";};
   class setBackpackInsignias {file = "\FCLA_Interactions\Insignias\functions\Loadout\fn_setBackpack.sqf";};

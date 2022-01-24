@@ -1,15 +1,9 @@
 
-/* ----------------------------------------------------------------------------
- * Author: hozlucas28
- *
- * Description:
- * Asigna un controlador de evento del tipo 'addPlayerEventHandler' para
- * remplazar un item si este cumple con la condición. Se revisara cada vez que
- * se modifique el inventario.
- *
- * Public: [No]
----------------------------------------------------------------------------- */
+/********************************************************************************|
+|                 CONTROLADORES DE EVENTOS (JUGADORES) - "VENDA"                 |
+|********************************************************************************/
 
+//Remplazar la venda por el item correspondiente.
 ["loadout", {
   params ["_unit", "_newUnitLoadout", "_oldUnitLoadout"];
   _unitItems = items _unit;

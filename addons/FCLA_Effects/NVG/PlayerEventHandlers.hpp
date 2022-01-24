@@ -1,15 +1,9 @@
 
-/* ----------------------------------------------------------------------------
- * Author: hozlucas28
- *
- * Description:
- * Asigna dos controladores de eventos del tipo 'addPlayerEventHandler', que
- * modifican el color de la visión nocturna.
- *
- * Public: [No]
----------------------------------------------------------------------------- */
+/********************************************************************************|
+|                  CONTROLADORES DE EVENTOS (JUGADORES) - "NVG"                  |
+|********************************************************************************/
 
-//Al cambiar el modo de visión.
+//Modifica el color de la visión nocturna.
 ["visionMode", {
   params ["_unit", "_newVisionMode"];
   if ((!FCLA_Modify_Color_NVG) || (_newVisionMode != 1)) exitWith {[_unit, false] spawn FCLA_Effects_fnc_switchEffectNVG;};
@@ -17,8 +11,7 @@
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 
-
-//Al cambiar cámara (Zeus, arsenal, etc.).
+//Modifica el color de la visión nocturna.
 ["featureCamera", {
   params ["_unit", "_newCameraMode"];
   _visionMode = currentVisionMode _unit;

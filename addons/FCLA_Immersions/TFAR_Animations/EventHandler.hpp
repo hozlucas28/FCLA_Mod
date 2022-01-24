@@ -1,13 +1,9 @@
 
-/* ----------------------------------------------------------------------------
- * Author: hozlucas28
- *
- * Description:
- * Inicia/Detiene la animación al transmitir por radio.
- *
- * Public: [No]
----------------------------------------------------------------------------- */
+/********************************************************************************|
+|                 CONTROLADORES DE EVENTOS - "ANIMACIONES TFAR"                  |
+|********************************************************************************/
 
+//Inicia/Detiene la animación al transmitir por radio.
 ["FCLA_TFAR_Animations", "OnTangent", {
   params ["_unit", "_currentRadio", "_transceiver", "_hasAdditionalChannel", "_buttonDown"];
   _vehicle = vehicle _unit;

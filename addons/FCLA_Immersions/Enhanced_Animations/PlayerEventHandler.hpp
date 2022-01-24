@@ -1,14 +1,9 @@
 
-/* ----------------------------------------------------------------------------
- * Author: hozlucas28
- *
- * Description:
- * Asigna un eventhandler del tipo 'addPlayerEventHandler' para que se
- * reproduzca una animación al activar/desactivar la visión nocturna/térmica.
- *
- * Public: [No]
----------------------------------------------------------------------------- */
+/********************************************************************************|
+|         CONTROLADORES DE EVENTOS (JUGADORES) - "ANIMACIONES MEJORADAS"         |
+|********************************************************************************/
 
+//Reproduce una animación al activar/desactivar la visión nocturna/térmica.
 ["visionMode", {
   params ["_unit"];
   _hasNotNVG = (hmd _unit) == "";
