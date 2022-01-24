@@ -11,6 +11,7 @@
 [{
   _player = call CBA_fnc_currentUnit;
   _currentWeapon = currentWeapon _player;
+  _currentGesture = gestureState _player;
   _currentPrimaryWeapon = primaryWeapon _player;
   _tacticalPositionValues = _player getVariable ["FCLA_Tactical_Position", [false, false]];
   _isProne = stance _player == "PRONE";
@@ -35,7 +36,7 @@
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
   _inertia = getNumber (ConfigFile >> "CfgWeapons" >> _currentWeapon >> "inertia");
-  _distance = 0.505 + (_inertia min 0.85);
+  _distance = 0.2 + (_inertia min 0.85); //0.505
 
   _playerEyePos = eyePos _player;
   _playerVectorDir = vectorDir _player;
@@ -60,10 +61,10 @@
       if (_obstacle in _nearestFoliage) then {_pass = false;};
     };
 
-    if (_pass) then {
+    if ((_pass) && !(_currentGesture in ["fcla_tactical_position_up_v1", "fcla_tactical_position_up_v2"])) then {
+      _player setVariable ["FCLA_Tactical_Position", [_tacticalPositionValues select 0, true], true];
       _randomAnimation = selectRandom ["FCLA_Tactical_Position_Up_v1", "FCLA_Tactical_Position_Up_v2"];
       [_player, _randomAnimation] call ACE_Common_fnc_doGesture;
-      _player setVariable ["FCLA_Tactical_Position", [_tacticalPositionValues select 0, true], true];
 
       [{
         _currentWeapon = currentWeapon _this;
