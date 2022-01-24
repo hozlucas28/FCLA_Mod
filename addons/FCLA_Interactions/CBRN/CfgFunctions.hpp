@@ -6,7 +6,7 @@
 class CBRN {
   class itemContextMenuMaskCBRN {
     file = "\FCLA_Interactions\CBRN\functions\Mask\fn_itemContextMenu.sqf";
-    clientInit = 1;
+    postInit = 1;
   };
 
   class addActionRechargeOxygenCBRN {
@@ -16,12 +16,12 @@ class CBRN {
 
   class itemContextMenuBackpackCBRN {
     file = "\FCLA_Interactions\CBRN\functions\Backpack\fn_itemContextMenu.sqf";
-    clientInit = 1;
+    postInit = 1;
   };
 
   class itemContextMenuChemicalDetectorCBRN {
     file = "\FCLA_Interactions\CBRN\functions\Chemical_Detector\fn_itemContextMenu.sqf";
-    clientInit = 1;
+    postInit = 1;
   };
 
   class killedCBRNEH {file = "\FCLA_Interactions\CBRN\functions\BIS_EventHandlers\fn_Killed.sqf";};

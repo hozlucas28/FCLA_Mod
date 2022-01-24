@@ -20,7 +20,7 @@
  *
  * Example:
  *             //Opcional sin definir.
- *             [player, "FCLA_Tactical_Position_Up", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+ *             [player, "FCLA_Tactical_Position_Up_v1", "playActionNow"] call FCLA_Common_fnc_playAnimation;
  *
  *             //Opcional definido.
  *             [player, "FCLA_Tactical_Position_Down", "playActionNow", true] call FCLA_Common_fnc_playAnimation;

@@ -6,7 +6,7 @@
 class Smoke_Signal {
   class itemContextMenuSS {
     file = "\FCLA_Interactions\Smoke_Signal\functions\fn_itemContextMenu.sqf";
-    clientInit = 1; 
+    postInit = 1; 
   };
 
   class firedSSEH {file = "\FCLA_Interactions\Smoke_Signal\functions\BIS_EventHandlers\fn_Fired.sqf";};

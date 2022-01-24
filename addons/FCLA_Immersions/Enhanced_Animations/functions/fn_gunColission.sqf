@@ -61,8 +61,9 @@
     };
 
     if (_pass) then {
+      _randomAnimation = selectRandom ["FCLA_Tactical_Position_Up_v1", "FCLA_Tactical_Position_Up_v2"];
+      [_player, _randomAnimation] call ACE_Common_fnc_doGesture;
       _player setVariable ["FCLA_Tactical_Position", [_tacticalPositionValues select 0, true], true];
-      [_player, "FCLA_Tactical_Position_Up"] call ACE_Common_fnc_doGesture;
 
       [{
         _currentWeapon = currentWeapon _this;
