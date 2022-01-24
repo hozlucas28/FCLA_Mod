@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                              "FCLA - INMERSIONES"                              |
+|                               "FCLA INMERSIONES"                               |
 |********************************************************************************/
 
 
@@ -86,7 +86,7 @@
 	"FCLA_Radio_Animations_Headgears_Headsets", "EDITBOX",
 	["Auriculares", "Determina los classnames de cascos/anteojos para así hacer uso de la animación 'Auricular' al momento de transmitir.\nColoca '[headgear player, goggles player]' para permitir todos los tipos de cascos y anteojos."],
 	["FCLA Inmersiones", "Radios"],
-	#include "\FCLA_Core\PreInit\Addon_Options\includes\Headgears_and_Headsets.hpp",
+	#include "\FCLA_Core\PreInit\includes\Headgears_and_Headsets.hpp",
 	GLOBAL,
 	{FCLA_Radio_Animations_Headgears_Headsets = parseSimpleArray ([_this, """", "'"] call CBA_fnc_replace);},
 	false
@@ -97,7 +97,7 @@
 	"FCLA_Radio_Animations_Vests", "EDITBOX",
 	["Chalecos con radio", "Determina los classnames de chalecos para así hacer uso de la animación 'Chaleco' al momento de transmitir.\nColoca '[vest player]' para permitir todos los tipos de chalecos."],
 	["FCLA Inmersiones", "Radios"],
-	#include "\FCLA_Core\PreInit\Addon_Options\includes\Vests_with_Radios.hpp",
+	#include "\FCLA_Core\PreInit\includes\Vests_with_Radios.hpp",
 	GLOBAL,
 	{FCLA_Radio_Animations_Vests = parseSimpleArray ([_this, """", "'"] call CBA_fnc_replace);},
 	false

@@ -32,7 +32,7 @@ class CfgPatches {
 class CfgFunctions {
 	class FCLA_Interactions {
 		class FCLA_Interactions {
-			class XEHpostInit {file = "\FCLA_Interactions\XEH_postInit.sqf";};
+			class XEHPostInit {file = "\FCLA_Interactions\XEH_postInit.sqf";};
 		};
 
 		#include "\FCLA_Interactions\CBRN\CfgFunctions.hpp"
@@ -176,7 +176,7 @@ class Extended_Respawn_Eventhandlers {
 
 class Extended_PostInit_EventHandlers {
 	class FCLA_Interactions {
-		init = "call FCLA_Interactions_fnc_XEHpostInit;";
+		init = "call FCLA_Interactions_fnc_XEHPostInit;";
 	};
 };
 

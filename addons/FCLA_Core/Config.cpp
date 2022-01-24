@@ -22,6 +22,11 @@ class CfgPatches {
 
 class CfgFunctions {
 	class FCLA_Core {
+		class FCLA_Core {
+			class XEHPreInit {file = "\FCLA_Core\XEH_preInit.sqf";};
+			class XEHPostInit {file = "\FCLA_Core\XEH_postInit.sqf";};
+		};
+
 		#include "\FCLA_Core\Arsenal_Search\CfgFunction.hpp"
 	};
 };
@@ -155,9 +160,13 @@ class CfgWeapons {
 |********************************************************************************/
 
 class Extended_PreInit_EventHandlers {
-	init = "[] spawn compile preprocessFileLineNumbers '\FCLA_Core\PreInit\XEH_preInit.sqf';";
+	class FCLA_Core {
+		init = "call FCLA_Core_fnc_XEHPreInit;";
+	};
 };
 
 class Extended_PostInit_EventHandlers {
-	init = "[] spawn compile preprocessFileLineNumbers '\FCLA_Core\PostInit\XEH_postInit.sqf';";
+	class FCLA_Core {
+		init = "call FCLA_Core_fnc_XEHPostInit;";
+	};
 };

@@ -42,7 +42,7 @@ class CfgCoreData {
 class CfgFunctions {
 	class FCLA_Effects {
 		class FCLA_Effects {
-			class XEHpostInit {file = "\FCLA_Effects\XEH_postInit.sqf";};
+			class XEHPostInit {file = "\FCLA_Effects\XEH_postInit.sqf";};
 		};
 
 		#include "\FCLA_Effects\NVG\CfgFunctions.hpp"
@@ -140,7 +140,7 @@ class Extended_Respawn_Eventhandlers {
 
 class Extended_PostInit_EventHandlers {
 	class FCLA_Effects {
-		init = "call FCLA_Effects_fnc_XEHpostInit;";
+		init = "call FCLA_Effects_fnc_XEHPostInit;";
 	};
 };
 

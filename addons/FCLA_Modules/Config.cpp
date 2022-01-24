@@ -45,7 +45,7 @@ class CfgFactionClasses {
 class CfgFunctions {
 	class FCLA_Modules {
 		class FCLA_Modules {
-			class XEHpostInit {file = "\FCLA_Modules\XEH_postInit.sqf";};
+			class XEHPostInit {file = "\FCLA_Modules\XEH_postInit.sqf";};
 		};
 
 		#include "\FCLA_Modules\3DEN\CfgFunctions.hpp"
@@ -104,6 +104,6 @@ class CfgVehicles {
 
 class Extended_PostInit_EventHandlers {
 	class FCLA_Modules {
-		init = "call FCLA_Modules_fnc_XEHpostInit;";
+		init = "call FCLA_Modules_fnc_XEHPostInit;";
 	};
 };

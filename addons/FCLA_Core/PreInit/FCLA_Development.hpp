@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                              "FCLA - DESARROLLO"                               |
+|                               "FCLA DESARROLLO"                                |
 |********************************************************************************/
 
 
@@ -72,7 +72,7 @@
 	"FCLA_Commanders_UIDs", "EDITBOX",
 	["Mandos", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
-	#include "\FCLA_Core\PreInit\Addon_Options\includes\Commanders.hpp",
+	#include "\FCLA_Core\PreInit\includes\Commanders.hpp",
 	GLOBAL,
 	{FCLA_Commanders_UIDs = parseSimpleArray ([_this, """", "'"] call CBA_fnc_replace);},
 	false
@@ -83,7 +83,7 @@
 	"FCLA_Editors_UIDs", "EDITBOX",
 	["Editores", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
-	#include "\FCLA_Core\PreInit\Addon_Options\includes\Editors.hpp",
+	#include "\FCLA_Core\PreInit\includes\Editors.hpp",
 	GLOBAL,
 	{FCLA_Editors_UIDs = parseSimpleArray ([_this, """", "'"] call CBA_fnc_replace);},
 	false
@@ -94,7 +94,7 @@
 	"FCLA_Instructors_UIDs", "EDITBOX",
 	["Instructores", "Si no sabes que es esto, no lo modifiques."],
 	["FCLA Desarrollo", "UIDs"],
-	#include "\FCLA_Core\PreInit\Addon_Options\includes\Instructors.hpp",
+	#include "\FCLA_Core\PreInit\includes\Instructors.hpp",
 	GLOBAL,
 	{FCLA_Instructors_UIDs = parseSimpleArray ([_this, """", "'"] call CBA_fnc_replace);},
 	false

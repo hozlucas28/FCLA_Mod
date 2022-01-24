@@ -23,7 +23,7 @@ class CfgPatches {
 class CfgFunctions {
 	class FCLA_Immersions {
 		class FCLA_Immersions {
-			class XEHpostInit {file = "\FCLA_Immersions\XEH_postInit.sqf";};
+			class XEHPostInit {file = "\FCLA_Immersions\XEH_postInit.sqf";};
 		};
 
 		#include "\FCLA_Immersions\Kick_Door\CfgFunction.hpp"
@@ -139,6 +139,6 @@ class Extended_Killed_Eventhandlers {
 
 class Extended_PostInit_EventHandlers {
 	class FCLA_Immersions {
-		init = "call FCLA_Immersions_fnc_XEHpostInit;";
+		init = "call FCLA_Immersions_fnc_XEHPostInit;";
 	};
 };

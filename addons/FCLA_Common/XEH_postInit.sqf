@@ -1,9 +1,9 @@
 
 /********************************************************************************|
-|                      CONTROLADORES DE EVENTOS - POST INIT                      |
+|                                   POST INIT                                    |
 |********************************************************************************/
 
-["[FCLA] (common): Event handlers cargando..."] call ACE_Common_fnc_serverLog;
+["[FCLA] (common): postInit cargando..."] call ACE_Common_fnc_serverLog;
 #include "\FCLA_Common\EventHandlers\PTSD.hpp"
 #include "\FCLA_Common\EventHandlers\Hint.hpp"
 #include "\FCLA_Common\EventHandlers\TEMPORAL.hpp"
@@ -21,5 +21,5 @@
 #include "\FCLA_Common\EventHandlers\Radio_Frequencies.hpp"
 #include "\FCLA_Common\EventHandlers\Change_Radio_Range.hpp"
 #include "\FCLA_Common\EventHandlers\ACE_Classname_Action.hpp"
-["[FCLA] (common): Event handlers cargados."] call ACE_Common_fnc_serverLog;
+["[FCLA] (common): postInit cargado."] call ACE_Common_fnc_serverLog;
 true
