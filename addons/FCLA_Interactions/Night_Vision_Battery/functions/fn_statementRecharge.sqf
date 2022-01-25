@@ -28,13 +28,13 @@ _statementOnFinish = {
 
   if (_lastBattery <= 0) then {
     if (isNull objectParent _player) then {
-      [_unit, "FCLA_Vision_Mode_Changed", nil, 200, false] call FCLA_Common_fnc_globalSay3D;
+      [_unit, "FCLA_Vision_Mode_Changed", 2, 200, false] call FCLA_Common_fnc_globalSay3D;
     } else {
       playSound "FCLA_Vision_Mode_Changed";
     };
   };
 };
- 
+
 _statementOnFailure = {
   (_this select 0) params ["_player"];
   [_player, "", 2] call ACE_Common_fnc_doAnimation;

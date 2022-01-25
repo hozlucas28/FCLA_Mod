@@ -63,7 +63,7 @@ _handle = [{
 
 
   //Llorar y escuchar voces.
-  if (_cry) then {[_unit, "FCLA_Man_Crying"] call FCLA_Common_fnc_globalSay3D;};
+  if (_cry) then {[_unit, "FCLA_Man_Crying", 35, 100, false] call FCLA_Common_fnc_globalSay3D;};
   if (_voices) then {playSound "FCLA_Whispers_Fear_8D";};
 
 

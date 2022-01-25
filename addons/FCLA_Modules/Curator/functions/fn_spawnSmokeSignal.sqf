@@ -70,8 +70,8 @@
 
      _soundSourceOne = createAgent ["VirtualAISquad", _smokePos, [], 0, "CAN_COLLIDE"];
      _soundSourceTwo = createAgent ["VirtualAISquad", _smokePos, [], 0, "CAN_COLLIDE"];
-     [_soundSourceOne, "FCLA_Smoke_Explosion", nil, 2000, true] call FCLA_Common_fnc_globalSay3D;
-     [_soundSourceTwo, "FCLA_Smoke_Explosion_Echo", nil, 3000, true] call FCLA_Common_fnc_globalSay3D;
+     [_soundSourceOne, "FCLA_Smoke_Explosion", 4, 2000, true] call FCLA_Common_fnc_globalSay3D;
+     [_soundSourceTwo, "FCLA_Smoke_Explosion_Echo", 3, 3000, true] call FCLA_Common_fnc_globalSay3D;
 
      [{
        params ["_smokePos", "_color"];

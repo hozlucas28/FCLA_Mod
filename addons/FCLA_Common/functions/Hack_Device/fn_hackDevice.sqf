@@ -129,7 +129,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
       (_this select 0) ctrlCommit 1;
       [{_this ctrlShow true; ctrlSetFocus _this;}, _this select 1, 1] call CBA_fnc_waitAndExecute;
     }, [_ctrlIntroductoryVideo, _ctrlBoxToWrite], 10] call CBA_fnc_waitAndExecute;
-    [_caller, "FCLA_Hacking_Initialized", nil, 25] call FCLA_Common_fnc_globalSay3D;
+    [_caller, "FCLA_Hacking_Initialized", 12, 25, false] call FCLA_Common_fnc_globalSay3D;
 
 
     //Bloquear movilidad y posicionar laptop.
@@ -201,7 +201,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
       _ctrlHackingLines ctrlShow false;
       _target setVariable ["FCLA_Hacked", true, true];
       _ctrlEndingVideo ctrlSetText "\FCLA_Data\Videos\Hacking_Initialized_Without_Sound.ogv";
-      [_caller, "FCLA_Hacking_Initialized", nil, 25] call FCLA_Common_fnc_globalSay3D;
+      [_caller, "FCLA_Hacking_Initialized", 12, 25, false] call FCLA_Common_fnc_globalSay3D;
       [_target, _actionId] remoteExec ["BIS_fnc_holdActionRemove", 0, true];
 
       [{
