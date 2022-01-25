@@ -3,7 +3,11 @@
 |                                   POST INIT                                    |
 |********************************************************************************/
 
-["[FCLA] (modules): postInit cargando..."] call ACE_Common_fnc_serverLog;
+#define DEBUG true
 #include "\FCLA_Modules\3DEN\EventHandlers\EMP_Effect.hpp"
-["[FCLA] (modules): postInit cargado."] call ACE_Common_fnc_serverLog;
+#include "\FCLA_Modules\3DEN\EventHandlers\Smoke_Signal.hpp"
+#include "\FCLA_Modules\3DEN\EventHandlers\ACE_Zeus_Action.hpp"
+#include "\FCLA_Modules\3DEN\EventHandlers\ACE_Object_Action.hpp"
+#include "\FCLA_Modules\3DEN\EventHandlers\ACE_Classname_Action.hpp"
+#undef DEBUG
 true

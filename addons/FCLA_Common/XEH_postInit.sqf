@@ -3,10 +3,8 @@
 |                                   POST INIT                                    |
 |********************************************************************************/
 
-["[FCLA] (common): postInit cargando..."] call ACE_Common_fnc_serverLog;
 #include "\FCLA_Common\EventHandlers\PTSD.hpp"
 #include "\FCLA_Common\EventHandlers\Hint.hpp"
-#include "\FCLA_Common\EventHandlers\TEMPORAL.hpp"
 #include "\FCLA_Common\EventHandlers\Shellshock.hpp"
 #include "\FCLA_Common\EventHandlers\Random_Lip.hpp"
 #include "\FCLA_Common\EventHandlers\Hint_Silent.hpp"
@@ -18,5 +16,4 @@
 #include "\FCLA_Common\EventHandlers\Show_Subtitles.hpp"
 #include "\FCLA_Common\EventHandlers\Radio_Frequencies.hpp"
 #include "\FCLA_Common\EventHandlers\Change_Radio_Range.hpp"
-["[FCLA] (common): postInit cargado."] call ACE_Common_fnc_serverLog;
 true
