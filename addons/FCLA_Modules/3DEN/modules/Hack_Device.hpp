@@ -16,7 +16,7 @@ class FCLA_Module_Hack_Device: Module_F {
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_hackDevice3DEN";
 	isGlobal = 1;
-  isDisposable = 1;
+  isDisposable = 0;
 	isTriggerActivated = 1;
   scope = 2;
 

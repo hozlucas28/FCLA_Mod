@@ -167,6 +167,6 @@ class Extended_PreInit_EventHandlers {
 
 class Extended_PostInit_EventHandlers {
 	class FCLA_Core {
-		serverInit = "call FCLA_Core_fnc_XEHPostInit;";
+		postInit = "call FCLA_Core_fnc_XEHPostInit;";
 	};
 };

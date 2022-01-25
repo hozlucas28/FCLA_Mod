@@ -18,7 +18,7 @@ if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 
 
 
-//Obtener argumentos.
+//Verificar argumentos.
 _modulePos = getPosATL _module;
 _smokeColor = toUpper (_module getVariable ["FCLA_Color", "white"]);
 _smokeColor = switch (_smokeColor) do {
@@ -32,6 +32,7 @@ _smokeColor = switch (_smokeColor) do {
 };
 
 
+
 //Generar señal de humo.
-["FCLA_Smoke_Signal", [_module, _modulePos, _smokeColor]] call CBA_fnc_remoteEvent;
-//["FCLA_Smoke_Signal", [_module, _modulePos, _smokeColor]] call CBA_fnc_globalEvent;
+_jipID = ["FCLA_Smoke_Signal", [_module, _modulePos, _smokeColor]] call CBA_fnc_globalEventJIP;
+[_jipID, _module] call CBA_fnc_removeGlobalEventJIP;

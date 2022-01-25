@@ -16,7 +16,7 @@ class FCLA_Module_Ambient_Fired: Module_F {
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setAmbientFired3DEN";
 	isGlobal = 1;
-  isDisposable = 1;
+  isDisposable = 0;
 	isTriggerActivated = 1;
   scope = 2;
 

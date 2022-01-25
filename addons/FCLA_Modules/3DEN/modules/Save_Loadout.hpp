@@ -19,7 +19,7 @@ class FCLA_Module_Save_Loadout: Module_F {
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_saveLastLoadout3DEN";
 	isGlobal = 1;
-  isDisposable = 1;
+  isDisposable = 0;
 	isTriggerActivated = 0;
   scope = 2;
 

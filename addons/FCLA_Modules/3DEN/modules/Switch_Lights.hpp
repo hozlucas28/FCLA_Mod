@@ -17,7 +17,7 @@ class FCLA_Module_Switch_Lights: Module_F {
 	function = "FCLA_Modules_fnc_switchLights3DEN";
 	isGlobal = 1;
   canSetArea = 1;
-  isDisposable = 1;
+  isDisposable = 0;
   canSetAreaShape = 1;
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;

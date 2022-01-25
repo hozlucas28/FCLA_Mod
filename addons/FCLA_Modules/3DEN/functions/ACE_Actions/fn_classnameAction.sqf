@@ -40,7 +40,7 @@ _associatedClassname = if ((_findedEntity > -1) && (_numberOfCompatibleSynchroni
 
 //Crear y asociar acción.
 ["FCLA_ACE_Classname_Action", [
- [_name, _icon, _statement, _condition],
+ [_module, _name, _icon, _statement, _condition],
  [_associatedClassname, _typeOfAction, _parentPath]
 ]] call CBA_fnc_globalEventJIP;
 

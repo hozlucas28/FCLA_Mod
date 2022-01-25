@@ -17,7 +17,7 @@ class FCLA_Module_Play_Custom_Sound: Module_F {
 	function = "FCLA_Modules_fnc_playCustomSound3DEN";
 	isGlobal = 1;
   canSetArea = 1;
-  isDisposable = 1;
+  isDisposable = 0;
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;
   scope = 2;

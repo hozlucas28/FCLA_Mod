@@ -40,7 +40,7 @@ _associatedObject = if ((_findedEntity > -1) && (_numberOfCompatibleSynchronized
 
 //Crear y asociar acción.
 ["FCLA_ACE_Object_Action", [
- [_name, _icon, _statement, _condition],
+ [_module, _name, _icon, _statement, _condition],
  [_associatedObject, _typeOfAction, _parentPath]
 ]] call CBA_fnc_globalEventJIP;
 

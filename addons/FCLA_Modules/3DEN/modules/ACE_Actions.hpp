@@ -20,8 +20,8 @@ class FCLA_Module_ACE_Class_Action: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\ACE_Interaction.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_createACEClassnameAction3DEN";
-	isGlobal = 1;
-  isDisposable = 1;
+	isGlobal = 0;
+  isDisposable = 0;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -117,7 +117,7 @@ class FCLA_Module_ACE_Object_Action: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\ACE_Interaction_Object.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_createACEObjectAction3DEN";
-	isGlobal = 1;
+	isGlobal = 0;
   isDisposable = 0;
   isTriggerActivated = 1;
   scope = 2;
@@ -214,8 +214,8 @@ class FCLA_Module_ACE_Zeus_Action: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\ACE_Interaction_Zeus.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_createACEZeusAction3DEN";
-	isGlobal = 1;
-  isDisposable = 1;
+	isGlobal = 0;
+  isDisposable = 0;
 	isTriggerActivated = 1;
   scope = 2;
 

@@ -17,7 +17,7 @@ class FCLA_Module_CBRN_Contaminated_Zone: Module_F {
 	function = "FCLA_Modules_fnc_setCBRNContaminatedZone3DEN";
 	isGlobal = 1;
   canSetArea = 1;
-  isDisposable = 1;
+  isDisposable = 0;
   canSetAreaShape = 1;
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;

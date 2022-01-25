@@ -16,7 +16,7 @@ class FCLA_Module_Introduction: Module_F {
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setIntroduction3DEN";
 	isGlobal = 0;
-  isDisposable = 1;
+  isDisposable = 0;
 	isTriggerActivated = 0;
   scope = 2;
 
