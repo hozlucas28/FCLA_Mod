@@ -7,7 +7,7 @@
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
-
+	
 _this spawn {
 	params ["_logic", "_delayEffect"];
 	while {alive _logic} do {

@@ -7,7 +7,7 @@
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
-
+	
 _this spawn {
 	params ["_logic", "_delayEffect"];
 	while {alive _logic} do {
@@ -50,9 +50,7 @@ _this spawn {
 		_trigger setTriggerArea [15, 15, 0, false, 5];
 		_trigger setTriggerStatements [[_Condition] call ACE_Common_fnc_codeToString, [_StatementOnActivation] call ACE_Common_fnc_codeToString, ""];
 		_trigger setVariable ["FCLA_Wind_Gust_Attributes", _soundDuration, true];
-		[{(!alive (_this select 0)) || (!alive (_this select 1)) || (!alive (_this select 2))}, {
-			deleteVehicle (_this select 3);
-		}, [_logic, _particleObjOne, _particleObjTwo, _trigger]] call CBA_fnc_waitUntilAndExecute;
+		[{(!alive (_this select 0)) || (!alive (_this select 1)) || (!alive (_this select 2))}, {deleteVehicle (_this select 3);}, [_logic, _particleObjOne, _particleObjTwo, _trigger]] call CBA_fnc_waitUntilAndExecute;
 
 		sleep (_soundDuration - 2);
 		deleteVehicle _particleObjTwo;
