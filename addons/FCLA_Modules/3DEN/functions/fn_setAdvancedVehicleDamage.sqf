@@ -34,3 +34,7 @@ if ((count _compatibleSynchronizedObjects) <= 0) exitWith {["FCLA_Module_Advance
 
 //Eliminar módulo.
 deleteVehicle _module;
+
+//["FCLA_Advanced_Vehicle_Damage", [_compatibleSynchronizedObjects, _damageWeaponsState, _damageItemsState]] call CBA_fnc_globalEvent;
+//_jipID = ["FCLA_Advanced_Vehicle_Damage", [_module, _compatibleSynchronizedObjects, _damageWeaponsState, _damageItemsState]] call CBA_fnc_globalEventJIP;
+//[_jipID, _module] call CBA_fnc_removeGlobalEventJIP;

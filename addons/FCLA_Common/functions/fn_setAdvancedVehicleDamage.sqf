@@ -34,7 +34,8 @@ params [
         ["_dammageWeapons", false, [true], 0],
         ["_dammageItems", false, [true], 0]
        ];
-if ((isNull _vehicle) || !(_vehicle in vehicles) || (ACE_Vehicle_Damage_Enabled)) exitWith {false};
+_EventHandlerID = _vehicle getVariable ["FCLA_Advanced_Vehicle_Damage_ID", -1];
+if ((ACE_Vehicle_Damage_Enabled) || (isNull _vehicle) || !(_vehicle in vehicles) || (_EventHandlerID != -1)) exitWith {false};
 
 
 

@@ -15,7 +15,7 @@ class FCLA_Module_Hack_Device: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Code.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_hackDevice3DEN";
-	isGlobal = 1;
+	isGlobal = 0;
   isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;

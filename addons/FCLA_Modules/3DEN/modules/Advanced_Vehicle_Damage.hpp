@@ -16,7 +16,7 @@ class FCLA_Module_Advanced_Vehicle_Damage: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Vehicle.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setAdvancedVehicleDamage3DEN";
-	isGlobal = 1;
+	isGlobal = 0;
   isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;

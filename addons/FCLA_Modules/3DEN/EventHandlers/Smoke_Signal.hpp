@@ -11,6 +11,7 @@
 ["FCLA_Smoke_Signal", {
   params ["_logic", "_logicPos", "_smokeColor"];
   _lightObj = "#lightpoint" createVehicleLocal _logicPos;
+  _lightObj attachTo [_logic, [0, 0, 0]];
   _lightObj setLightBrightness 2;
   _lightObj setLightDayLight true;
   _lightObj setLightColor [1, 1, 1];
@@ -32,6 +33,7 @@
   [{
     params ["_logicPos", "_smokeColor"];
     _particleObj = "#particlesource" createVehicleLocal _logicPos;
+    _particleObj attachTo [_logic, [0, 0, 0]];
     _particleObj setDropInterval 0.01;
     _particleObj setParticleCircle [0, [0, 0, 0]];
     _particleObj setParticleRandom [1, [1, 1, 1], [0.5, 0.5, 0.5], 1, 0, [0, 0, 0, 0], 0, 0];
@@ -41,5 +43,5 @@
   [{{deleteVehicle _x;} forEach _this;}, [_logic, _soundSourceOne, _soundSourceTwo], 4] call CBA_fnc_waitAndExecute;
 
   if (!DEBUG) exitWith {};
-  ["[FCLA] (modules): Módulo 'Smoke Signal' ejecutado con éxito."] call ACE_Common_fnc_serverLog;
+  ["[FCLA] (modules): Módulo 'Smoke Signal' ejecutado."] call ACE_Common_fnc_serverLog;
 }] call CBA_fnc_addEventHandler;

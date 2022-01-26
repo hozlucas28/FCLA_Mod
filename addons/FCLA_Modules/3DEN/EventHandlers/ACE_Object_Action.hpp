@@ -15,5 +15,5 @@
   [_associatedObject, _typeOfAction, _parentPath, _actionCreated] call ACE_Interact_menu_fnc_addActionToObject;
 
   if (!DEBUG) exitWith {};
-  ["[FCLA] (modules): Módulo 'ACE Object Action' ejecutado con éxito."] call ACE_Common_fnc_serverLog;
+  ["[FCLA] (modules): Módulo 'ACE Object Action' ejecutado."] call ACE_Common_fnc_serverLog;
 }] call CBA_fnc_addEventHandler;

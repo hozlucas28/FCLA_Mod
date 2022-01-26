@@ -19,7 +19,6 @@ if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 
 
 //Verificar argumentos.
-_modulePos = getPos _module;
 _delayEffect = ceil (_module getVariable ["FCLA_Delay", 0]);
 _selectedEffect = toUpper (_module getVariable ["FCLA_Effect", "sparks"]);
 if ((_selectedEffect in ["SPARKS", "WIND_GUST"]) && (_delayEffect <= 0)) exitWith {["FCLA_Module_Spawn_Effect", "• MÓDULO: GENERAR EFECTO", "¡Error! El/Un módulo 'Generar efecto' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
@@ -27,20 +26,5 @@ if ((_selectedEffect in ["SPARKS", "WIND_GUST"]) && (_delayEffect <= 0)) exitWit
 
 
 //Generar efecto.
-switch (_selectedEffect) do {
-  case "FIRE": {
-    _effectObj = createVehicle ["test_EmptyObjectForFireBig", _modulePos, [], 0, "CAN_COLLIDE"];
-    _effectObj attachTo [_module, [0, 0, 1]];
-    [{(!alive (_this select 0)) || (!alive (_this select 1))}, {{deleteVehicle _x} forEach _this;}, [_module, _effectObj]] call CBA_fnc_waitUntilAndExecute;
-  };
-
-  case "SMOKE": {
-    _effectObj = createVehicle ["test_EmptyObjectForSmoke", _modulePos, [], 0, "CAN_COLLIDE"];
-    _effectObj attachTo [_module, [0, 0, 1]];
-    [{(!alive (_this select 0)) || (!alive (_this select 1))}, {{deleteVehicle _x} forEach _this;}, [_module, _effectObj]] call CBA_fnc_waitUntilAndExecute;
-  };
-
-  case "SPARKS": {[_module, _delayEffect] spawn FCLA_Modules_fnc_spawnSparks3DEN;};
-  case "FIREFLIES": {[_module] spawn FCLA_Modules_fnc_spawnFireflies3DEN;};
-  case "WIND_GUST": {[_module, _delayEffect] spawn FCLA_Modules_fnc_spawnWindGust3DEN;};
-};
+_jipID = ["FCLA_Spawn_Effect", [_module, _selectedEffect, _delayEffect]] call CBA_fnc_globalEventJIP;
+[_jipID, _module] call CBA_fnc_removeGlobalEventJIP;

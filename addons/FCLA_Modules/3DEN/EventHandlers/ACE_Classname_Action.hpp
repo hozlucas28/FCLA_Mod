@@ -15,5 +15,5 @@
   [_associatedClassname, _typeOfAction, _parentPath, _actionCreated, false] call ACE_Interact_Menu_fnc_addActionToClass;
 
   if (!DEBUG) exitWith {};
-  ["[FCLA] (modules): Módulo 'ACE Classname Action' ejecutado con éxito."] call ACE_Common_fnc_serverLog;
+  ["[FCLA] (modules): Módulo 'ACE Classname Action' ejecutado."] call ACE_Common_fnc_serverLog;
 }] call CBA_fnc_addEventHandler;

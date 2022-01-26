@@ -15,7 +15,7 @@ class FCLA_Module_Spawn_Effect: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Common.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setEffect3DEN";
-	isGlobal = 1;
+	isGlobal = 0;
   isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;

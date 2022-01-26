@@ -33,8 +33,9 @@ params [
 
 
 //Verificar argumentos.
+_inMultiplayer = serverName != "";
 _reportedErrors = missionNamespace getVariable ["FCLA_Reported_Errors", []];
-if ((_ID == "") || (_header == "") || (_text == "") || (_ID in _reportedErrors)) exitWith {false};
+if ((_ID == "") || (_header == "") || (_text == "") || (_inMultiplayer) || (_ID in _reportedErrors)) exitWith {false};
 
 
 

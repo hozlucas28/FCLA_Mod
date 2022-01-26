@@ -56,7 +56,7 @@ if (((_title == "") && (_subtitle == "") && (_introductoryVideo == "")) || !(_sh
 missionNamespace setVariable ["FCLA_Introduction_Title", _title];
 missionNamespace setVariable ["FCLA_Introduction_Subtitle", _subtitle];
 missionNamespace setVariable ["FCLA_Show_On_Reconnect", _showOnReconnect];
-missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introductoryVideo];
+missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 
 
 //Reproducir introducción.
@@ -64,7 +64,7 @@ missionNamespace setVariable ["FCLA_Introduction_Introductory_Video", _introduct
   _title = missionNamespace getVariable ["FCLA_Introduction_Title", ""];
   _subtitle = missionNamespace getVariable ["FCLA_Introduction_Subtitle", ""];
 	_showOnReconnect = missionNamespace getVariable ["FCLA_Show_On_Reconnect", "NONE"];
-	_introductoryVideo = missionNamespace getVariable ["FCLA_Introduction_Introductory_Video", ""];
+	_introductoryVideo = missionNamespace getVariable ["FCLA_Introductory_Video", ""];
 
 
 	[_title, _subtitle, _introductoryVideo, _showOnReconnect] Spawn {

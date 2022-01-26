@@ -15,5 +15,5 @@
   [_parentPath, _actionCreated] call ACE_Interact_Menu_fnc_addActionToZeus;
 
   if (!DEBUG) exitWith {};
-  ["[FCLA] (modules): Módulo 'ACE Zeus Action' ejecutado con éxito."] call ACE_Common_fnc_serverLog;
+  ["[FCLA] (modules): Módulo 'ACE Zeus Action' ejecutado."] call ACE_Common_fnc_serverLog;
 }] call CBA_fnc_addEventHandler;
