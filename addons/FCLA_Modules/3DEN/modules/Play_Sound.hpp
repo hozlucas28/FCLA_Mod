@@ -16,7 +16,7 @@ class FCLA_Module_Play_Sound: Module_F {
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_playSound3DEN";
 	isGlobal = 1;
-  isDisposable = 0;
+  isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
 

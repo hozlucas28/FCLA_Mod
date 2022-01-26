@@ -17,7 +17,7 @@ class FCLA_Module_Building_Traits: Module_F {
 	function = "FCLA_Modules_fnc_setBuildingTraits3DEN";
   is3DEN = 1;
 	isGlobal = 1;
-  isDisposable = 0;
+  isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
 

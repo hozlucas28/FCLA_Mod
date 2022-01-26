@@ -18,7 +18,7 @@ class FCLA_Module_CBRN_Configuration: Module_F {
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setCBRNConfiguration3DEN";
 	isGlobal = 1;
-  isDisposable = 0;
+  isDisposable = 1;
 	isTriggerActivated = 0;
   scope = 2;
 

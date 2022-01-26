@@ -17,7 +17,7 @@ class FCLA_Module_Drag_And_Carry: Module_F {
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setDragAndCarry3DEN";
 	isGlobal = 1;
-  isDisposable = 0;
+  isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
 

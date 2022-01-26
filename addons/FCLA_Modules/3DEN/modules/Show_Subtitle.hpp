@@ -17,7 +17,7 @@ class FCLA_Module_Show_Subtitle: Module_F {
 	function = "FCLA_Modules_fnc_showSubtitle3DEN";
 	isGlobal = 1;
   canSetArea = 1;
-  isDisposable = 0;
+  isDisposable = 1;
   canSetAreaShape = 1;
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;

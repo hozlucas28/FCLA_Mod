@@ -18,7 +18,7 @@ class FCLA_Module_Jammer: Module_F {
 	function = "FCLA_Modules_fnc_setJammer3DEN";
 	isGlobal = 1;
   canSetArea = 1;
-  isDisposable = 0;
+  isDisposable = 1;
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;
   scope = 2;

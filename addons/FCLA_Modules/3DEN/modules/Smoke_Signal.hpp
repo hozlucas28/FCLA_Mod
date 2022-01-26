@@ -16,7 +16,7 @@ class FCLA_Module_Smoke_Signal: Module_F {
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_spawnSmokeSignal3DEN";
 	isGlobal = 0;
-  isDisposable = 0;
+  isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
 

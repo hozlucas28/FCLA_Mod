@@ -17,7 +17,7 @@ class FCLA_Module_EMP: Module_F {
 	function = "FCLA_Modules_fnc_initEMP3DEN";
 	isGlobal = 1;
   canSetArea = 1;
-  isDisposable = 0;
+  isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
 

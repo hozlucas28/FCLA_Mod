@@ -21,7 +21,7 @@ class FCLA_Module_ACE_Class_Action: Module_F {
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_createACEClassnameAction3DEN";
 	isGlobal = 0;
-  isDisposable = 0;
+  isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
 
@@ -118,7 +118,7 @@ class FCLA_Module_ACE_Object_Action: Module_F {
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_createACEObjectAction3DEN";
 	isGlobal = 0;
-  isDisposable = 0;
+  isDisposable = 1;
   isTriggerActivated = 1;
   scope = 2;
 
@@ -215,7 +215,7 @@ class FCLA_Module_ACE_Zeus_Action: Module_F {
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_createACEZeusAction3DEN";
 	isGlobal = 0;
-  isDisposable = 0;
+  isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
 
