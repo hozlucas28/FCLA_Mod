@@ -7,6 +7,7 @@
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
+
 //Variables de referencia.
 params [
         ["_module", objNull, [objNull], 0],
@@ -34,8 +35,6 @@ _vehicle = _compatibleSynchronizedObjects select 0;
 _hasNotWeapons = (count (weapons _vehicle)) <= 0;
 _hasNotMagazines = (count (magazines _vehicle)) <= 0;
 if ((_hasNotWeapons) || (_hasNotMagazines)) exitWith {["¡Error! El/Un módulo 'Asignar disparos ambientales' no se pudo inicializar porque el vehículo no posee armas y/o municiones."] call FCLA_Common_fnc_errorMessage;};
-
-_vehicle setVariable ["FCLA_Ambient_Fire", true, true];
 [_vehicle, _weaponClass, _ammoClass, [_minimumShots, _maximumShots], [_minimumDelay, _maximumDelay]] call FCLA_Common_fnc_setAmbientFired;
 
 
