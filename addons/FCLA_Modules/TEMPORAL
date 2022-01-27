@@ -3,9 +3,6 @@
 /* ================================ ERRORES ================================ //
 
 [GENERAL] CONFIGURACIÓN CBRN.
-[SERVIDOR DEDICADO] Al desactivarse el trigger de los subtitulos estos no se esconden.
-[SERVIDOR DEDICADO] Los subtítulos se esconden muy rapido.
-[SERVIDOR DEDICADO] Efectos especiales no se generan correctamente.
 
 // ========================================================================= */
 
@@ -35,5 +32,3 @@ _moduleGroup = createGroup [sideLogic, true];
 "];
 
 // ========================================================================= //
-
-FCLA_Module_Show_Subtitle [  ]

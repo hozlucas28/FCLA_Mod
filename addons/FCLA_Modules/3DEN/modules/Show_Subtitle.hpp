@@ -15,7 +15,7 @@ class FCLA_Module_Show_Subtitle: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Chat.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_showSubtitle3DEN";
-	isGlobal = 1;
+	isGlobal = 0;
   canSetArea = 1;
   isDisposable = 1;
   canSetAreaShape = 1;
