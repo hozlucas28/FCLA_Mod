@@ -25,5 +25,5 @@
           ["_moveLip", true, [true], 0]
          ];
   if (isNull _emitter) exitWith {};
-  _unit setRandomLip _moveLip;
+  _emitter setRandomLip _moveLip;
 }] call CBA_fnc_addEventHandler;

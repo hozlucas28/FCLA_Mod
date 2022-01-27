@@ -31,25 +31,17 @@ if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {["FCLA_Module_Play_S
 //Reproducir sonido.
 _findedEntity = if (_numberOfCompatibleSynchronizedObjects == 1) then {0;} else {-1;};
 _soundSource = if (_findedEntity > -1) then {_compatibleSynchronizedObjects select _findedEntity;} else {_module;};
-
-private ["_module", "_soundSource", "_loopSound", "_soundClass", "_soundDuration"];
-private _soundModuleGroup = createGroup [sideLogic, true];
-"ModuleSound_F" createUnit [getPos _soundSource, _soundModuleGroup, "
-  this attachTo [_soundSource, [0, 0, 0]];
-  this setVariable ['RSCAttributeSound', _soundClass, true];
-  this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
+[{time > 0},
+{
+  params ["_module", "_synchronizedObjects", "_isActivated", "_soundClass", "_soundDuration", "_loopSound", "_soundSource"];
+  _module attachTo [_soundSource, [0, 0, 0]];
+  _module setVariable ["RscAttributeSound", _soundClass, true];
+  [_module, _synchronizedObjects, _isActivated] spawn BIS_fnc_moduleSFX;
 
   [{(!alive (_this select 0)) || (!alive (_this select 1))}, {
-    {deleteVehicle _x} forEach _this;
-  }, [_soundSource, this]] call CBA_fnc_waitUntilAndExecute;
+    deleteVehicle (_this select 1);
+  }, [_soundSource, _module]] call CBA_fnc_waitUntilAndExecute;
 
   if (_loopSound) exitWith {};
-  [{
-    deleteVehicle (_this select 2);
-    if ((_this select 0) == (_this select 1)) then {deleteVehicle (_this select 0)};
-  }, [_module, _soundSource, this], _soundDuration] call CBA_fnc_waitAndExecute;
-"];
-
-
-//Eliminar módulo.
-if (_module != _soundSource) then {deleteVehicle _module;};
+  [{deleteVehicle _this;}, _module, _soundDuration] call CBA_fnc_waitAndExecute;
+}, [_module, _synchronizedObjects, _isActivated, _soundClass, _soundDuration, _loopSound, _soundSource]] call CBA_fnc_waitUntilAndExecute;

@@ -34,8 +34,9 @@ if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {["FCLA_Module_Play_C
 //Reproducir sonido.
 _findedEntity = if (_numberOfCompatibleSynchronizedObjects == 1) then {0;} else {-1;};
 _soundSource = if (_findedEntity > -1) then {_compatibleSynchronizedObjects select _findedEntity;} else {_module;};
-[{
-  params ["_soundSource", "_loopSound", "_soundClass", "_maxDistance", "_soundDuration"];
+[{time > 0},
+{
+  params ["_module", "_soundSource", "_loopSound", "_soundClass", "_maxDistance", "_soundDuration"];
   if (_loopSound) then {
     [{
       _isNotAlive = !alive (_args select 0);
@@ -44,10 +45,10 @@ _soundSource = if (_findedEntity > -1) then {_compatibleSynchronizedObjects sele
       _args call FCLA_Common_fnc_globalSay3D;
     }, 0.5, [_soundSource, _soundClass, _soundDuration, _maxDistance, false]] call CBA_fnc_addPerFrameHandler;
   } else {
-    _deleteSource = if (_soundSource isKindOf "VirtualAISquad") then {true;} else {false;};
+    _deleteSource = if (_soundSource == _module) then {true;} else {false;};
     [_soundSource, _soundClass, _soundDuration, _maxDistance, _deleteSource] call FCLA_Common_fnc_globalSay3D;
   };
-}, [_soundSource, _loopSound, _soundClass, _maxDistance, _soundDuration], 0.1] call CBA_fnc_waitAndExecute;
+}, [_module, _soundSource, _loopSound, _soundClass, _maxDistance, _soundDuration]] call CBA_fnc_waitUntilAndExecute;
 
 
 //Eliminar módulo.

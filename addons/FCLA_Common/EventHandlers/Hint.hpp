@@ -18,8 +18,6 @@
 ---------------------------------------------------------------------------- */
 
 ["FCLA_Hint", {
-  //params [["_text", "", [""], 0]];
-  //if (_text == "") exitWith {};
   params ["_text"];
   hint _text;
 }] call CBA_fnc_addEventHandler;
