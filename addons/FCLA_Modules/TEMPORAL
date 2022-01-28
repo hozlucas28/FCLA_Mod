@@ -2,12 +2,11 @@
 
 /* ================================ ERRORES ================================ //
 
-
+[  ] Mostrar al reconectar de la introducción parece que no va.
+[  ] Vehicles en area del jammer que se genera con el EMP.
 
 /* ================================ REVISAR ================================ //
 
-[  ] ¿El Jammer baja mucho los fps?
-[  ] Testear módulo guardar equipamiento.
 
 
 // ============================ SCRIPTS UTILES ============================= //
@@ -26,6 +25,3 @@ _moduleGroup = createGroup [sideLogic, true];
 "];
 
 // ========================================================================= //
-
-FCLA_Module_Save_Position [  ]
-FCLA_Module_Introduction [  ]

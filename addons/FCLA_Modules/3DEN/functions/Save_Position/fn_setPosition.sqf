@@ -9,8 +9,8 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-(this select 0) params ["_savedPosAndDir", "_savedLoadout", "_savedVehicle"];
-(this select 1) params ["_savePosAndDirState", "_saveLoadoutState", "_saveVehicleState"];
+(_this select 0) params ["_savedPosAndDir", "_savedLoadout", "_savedVehicle"];
+(_this select 1) params ["_savePosAndDirState", "_saveLoadoutState", "_saveVehicleState"];
 
 
 

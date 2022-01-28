@@ -15,7 +15,7 @@ class FCLA_Module_CBRN_Contaminated_Zone: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Contaminated_Zone.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setCBRNContaminatedZone3DEN";
-	isGlobal = 1;
+	isGlobal = 0;
   canSetArea = 1;
   isDisposable = 1;
   canSetAreaShape = 1;

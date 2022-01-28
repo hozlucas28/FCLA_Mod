@@ -78,6 +78,7 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 			cutText ["", "BLACK FADED", 3600, true, false];
 			player setVariable ["FCLA_Playing_Introduction", true, true];
 			[{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
+			["FCLA (log): ENTRO 1"] call ACE_Common_fnc_serverLog;
 
 			if ((_title == "") || (_subtitle == "")) exitWith {
 				_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
@@ -95,6 +96,7 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 			};
 
 			_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
+			[format ["FCLA (log): %1", _introductoryVideo]] call ACE_Common_fnc_serverLog;
 			waitUntil {scriptDone _videoStatus};
 			if (isGameFocused) then {playsound "FCLA_Introduction";};
 
@@ -127,13 +129,14 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 		} else {
 			_title = if (_showOnReconnect in ["TITLE_AND_SUBTITLE", "ALL"]) then {_title;} else {"";};
 		  _subtitle = if (_showOnReconnect in ["TITLE_AND_SUBTITLE", "ALL"]) then {_subtitle;} else {"";};
-			_introductoryVideo = if (_showOnReconnect in ["VIDEO", "ALL"]) then {_introductoryVideo} else {"";};
+			_introductoryVideo = if (_showOnReconnect in ["VIDEO", "ALL"]) then {_introductoryVideo;} else {"";};
 			if (_showOnReconnect == "NONE") exitWith {};
 
 			player action ["WeaponOnBack", player];
 			cutText ["", "BLACK FADED", 3600, true, false];
 			player setVariable ["FCLA_Playing_Introduction", true, true];
 			[{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
+			["FCLA (log): ENTRO 2"] call ACE_Common_fnc_serverLog;
 
 			if ((_title == "") || (_subtitle == "")) exitWith {
 				_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
@@ -151,6 +154,7 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 			};
 
 			_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
+			[format ["FCLA (log): %1", _introductoryVideo]] call ACE_Common_fnc_serverLog;
 			waitUntil {scriptDone _videoStatus};
 			if (isGameFocused) then {playsound "FCLA_Introduction";};
 

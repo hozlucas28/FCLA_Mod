@@ -33,3 +33,4 @@ if (((_title == "") && (_subtitle == "") && (_introductoryVideo == "")) || !(_sh
 
 //Reproducir introducción.
 [_title, _subtitle, _introductoryVideo, _showOnReconnect] call FCLA_Common_fnc_setIntroduction;
+["[FCLA] (modules): Módulo 'Introduction' ejecutado."] call ACE_Common_fnc_serverLog;

@@ -22,7 +22,6 @@
 #include "\FCLA_Modules\3DEN\modules\Play_Sound.hpp"
 #include "\FCLA_Modules\3DEN\modules\Radio_Range.hpp"
 #include "\FCLA_Modules\3DEN\modules\Radio.hpp"
-#include "\FCLA_Modules\3DEN\modules\Save_Loadout.hpp"
 #include "\FCLA_Modules\3DEN\modules\Save_Position.hpp"
 #include "\FCLA_Modules\3DEN\modules\Show_Subtitle.hpp"
 #include "\FCLA_Modules\3DEN\modules\Smoke_Signal.hpp"

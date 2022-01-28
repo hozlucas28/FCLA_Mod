@@ -15,7 +15,7 @@ class FCLA_Module_Introduction: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Tag.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setIntroduction3DEN";
-	isGlobal = 0;
+	isGlobal = 1;
   isDisposable = 1;
 	isTriggerActivated = 0;
   scope = 2;

@@ -70,6 +70,7 @@ if (_threatLevel <= 0) exitWith {["FCLA_Module_CBRN_Contaminated_Zone", "• MÓ
     };
 
     _levelOfInjury = (linearConversion [_contaminationMaxRad, _quarterOfContaminationMaxRad, _x distance _module, 0, _threatLevel * 4, true]) / 25;
+    [format ["FCLA (log): %1 --- %2", _levelOfInjury, _hasRequiredEquipment]] call ACE_Common_fnc_serverLog;
     if ((_isHidden) || (_isInvulnerable) || (_hasRequiredEquipment) || (_levelOfInjury <= 0)) exitWith {};
 
     [_player, _levelOfInjury] call ACE_Medical_fnc_adjustPainLevel;

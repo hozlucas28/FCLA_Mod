@@ -22,7 +22,6 @@ class 3DEN {
   class createInjuries3DEN {file = "\FCLA_Modules\3DEN\functions\fn_createInjuries.sqf";};
   class setPlateNumber3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setPlateNumber.sqf";};
   class playCustomSound3DEN {file = "\FCLA_Modules\3DEN\functions\fn_playCustomSound.sqf";};
-  class saveLastLoadout3DEN {file = "\FCLA_Modules\3DEN\functions\fn_saveLastLoadout.sqf";};
   class setAmbientFired3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setAmbientFired.sqf";};
   class setDragAndCarry3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setDragAndCarry.sqf";};
   class setIntroduction3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setIntroduction.sqf";};
