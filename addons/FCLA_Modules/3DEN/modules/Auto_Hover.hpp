@@ -17,7 +17,7 @@ class FCLA_Module_Auto_Hover: Module_F {
 	function = "FCLA_Modules_fnc_switchAutoHover3DEN";
 	isGlobal = 1;
   isDisposable = 1;
-	isTriggerActivated = 1;
+	isTriggerActivated = 0;
   scope = 2;
 
 
