@@ -73,3 +73,9 @@ class FCLA_Module_Jammer: Module_F {
     };
 	};
 };
+
+
+class FCLA_Module_Jammer_Empty: FCLA_Module_Jammer {
+  function = "";
+  scope = 1;
+};

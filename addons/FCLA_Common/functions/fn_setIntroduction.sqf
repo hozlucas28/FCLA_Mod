@@ -77,6 +77,7 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 			player action ["WeaponOnBack", player];
 			cutText ["", "BLACK FADED", 3600, true, false];
 			player setVariable ["FCLA_Playing_Introduction", true, true];
+			["ZEN_Common_hideObjectGlobal", [player, true]] call CBA_fnc_serverEvent;
 			[{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
 			["FCLA (log): ENTRO 1"] call ACE_Common_fnc_serverLog;
 
@@ -86,6 +87,8 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 				cutText ["", "BLACK IN", 3, true, false];
 				[false] call ACE_Common_fnc_disableUserInput;
 				player setVariable ["FCLA_Playing_Introduction", nil, true];
+				["ZEN_Common_hideObjectGlobal", [player, false]] call CBA_fnc_serverEvent;
+
 				[{
 					"dynamicBlur" ppEffectEnable true;
 					"dynamicBlur" ppEffectAdjust [7];
@@ -115,6 +118,8 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 			sleep 5;
 			cutText ["", "BLACK IN", 3, true, false];
 			[false] call ACE_Common_fnc_disableUserInput;
+			["ZEN_Common_hideObjectGlobal", [player, false]] call CBA_fnc_serverEvent;
+
 			[{
 				"dynamicBlur" ppEffectEnable true;
 				"dynamicBlur" ppEffectAdjust [7];
@@ -135,6 +140,7 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 			player action ["WeaponOnBack", player];
 			cutText ["", "BLACK FADED", 3600, true, false];
 			player setVariable ["FCLA_Playing_Introduction", true, true];
+			["ZEN_Common_hideObjectGlobal", [player, true]] call CBA_fnc_serverEvent;
 			[{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
 			["FCLA (log): ENTRO 2"] call ACE_Common_fnc_serverLog;
 
@@ -144,6 +150,8 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 				cutText ["", "BLACK IN", 3, true, false];
 				[false] call ACE_Common_fnc_disableUserInput;
 				player setVariable ["FCLA_Playing_Introduction", nil, true];
+				["ZEN_Common_hideObjectGlobal", [player, false]] call CBA_fnc_serverEvent;
+
 				[{
 					"dynamicBlur" ppEffectEnable true;
 					"dynamicBlur" ppEffectAdjust [7];
@@ -174,6 +182,8 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 			cutText ["", "BLACK IN", 3, true, false];
 			[false] call ACE_Common_fnc_disableUserInput;
 			player setVariable ["FCLA_Playing_Introduction", nil, true];
+			["ZEN_Common_hideObjectGlobal", [player, false]] call CBA_fnc_serverEvent;
+
 			[{
 				"dynamicBlur" ppEffectEnable true;
 				"dynamicBlur" ppEffectAdjust [7];

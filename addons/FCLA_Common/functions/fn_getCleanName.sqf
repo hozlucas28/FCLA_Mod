@@ -19,6 +19,7 @@
 
 //Variable de referencia.
 params [["_unit", objNull, [objNull, teamMemberNull], 0]];
+if (isNull _unit) exitWith {""};
 
 
 

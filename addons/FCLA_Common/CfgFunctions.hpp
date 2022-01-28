@@ -12,6 +12,7 @@ class FCLA_Common_Functions {
   class nearPlayer {file = "\FCLA_Common\functions\fn_nearPlayer.sqf";};
   class Shellshock {file = "\FCLA_Common\functions\fn_Shellshock.sqf";};
   class getDoorInfo {file = "\FCLA_Common\functions\fn_getDoorInfo.sqf";};
+  class getRankName {file = "\FCLA_Common\functions\fn_getRankName.sqf";};
   class globalSay3D {file = "\FCLA_Common\functions\fn_globalSay3D.sqf";};
   class getCleanName {file = "\FCLA_Common\functions\fn_getCleanName.sqf";};
   class errorMessage {file = "\FCLA_Common\functions\fn_errorMessage.sqf";};

@@ -10,8 +10,8 @@
 
 _this spawn {
   params ["_module", "_rad", "_jammer"];
-  private _rad = if (_rad <= 0) then {worldSize;} else {_rad;};
-  private _modulePos = getPos _module;
+  _rad = if (_rad <= 0) then {worldSize;} else {_rad;};
+  _modulePos = getPos _module;
   _nearUnits = _modulePos nearEntities [["CAManBase"], _rad];
   _nearVehicles = _modulePos nearEntities [["Satellite_Antenna_RF_3080", "LandVehicle", "Air", "Ship"], _rad];
   _nearStaticWeapons = (_modulePos nearEntities [["StaticWeapon"], _rad]) select {_x in allUnitsUAV};
@@ -211,14 +211,11 @@ _this spawn {
 
   //Crear jammer.
   if (!_jammer) exitWith {};
-  private _jammerModuleGroup = createGroup [sideLogic, true];
-  "FCLA_Module_Jammer" createUnit [_modulePos, _jammerModuleGroup, "
-  	this setPos _modulePos;
-  	this setVariable ['FCLA_Jammer_ID', '', true];
-  	this setVariable ['FCLA_Deactivatable', false, true];
-  	this setVariable ['FCLA_Affect_Vehicles', true, true];
-  	this setVariable ['FCLA_Need_Hacking_Device', false, true];
-  	this setVariable ['objectArea', [_rad, _rad, 0, false, _rad], true];
-  	this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-  "];
+  _jammerModule = createAgent ["FCLA_Module_Jammer_Empty", _modulePos, [], 0, "CAN_COLLIDE"];
+  _jammerModule setVariable ["FCLA_Jammer_ID", "", true];
+  _jammerModule setVariable ["FCLA_Deactivatable", false, true];
+  _jammerModule setVariable ["FCLA_Affect_Vehicles", true, true];
+  _jammerModule setVariable ["FCLA_Need_Hacking_Device", false, true];
+  _jammerModule setVariable ["objectArea", [_rad, _rad, 0, false, _rad], true];
+  [_jammerModule, [], true] call FCLA_Modules_fnc_setJammer3DEN;
 };

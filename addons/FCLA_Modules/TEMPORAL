@@ -7,7 +7,7 @@
 
 /* ================================ REVISAR ================================ //
 
-
+[  ] Probar: [player, true] call TFAR_fnc_forceSpectator; //Para mutear.
 
 // ============================ SCRIPTS UTILES ============================= //
 

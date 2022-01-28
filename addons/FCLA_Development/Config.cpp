@@ -22,6 +22,7 @@ class CfgPatches {
 
 class CfgFunctions {
 	class FCLA_Development {
+		#include "\FCLA_Development\Ranks\CfgFunction.hpp"
 		#include "\FCLA_Development\Donations\CfgFunction.hpp"
 		#include "\FCLA_Development\Watermarks\CfgFunction.hpp"
 	};
