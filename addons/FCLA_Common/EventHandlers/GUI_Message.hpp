@@ -22,6 +22,7 @@
             ["_text", "", [""], 0]
            ];
     if ((_header == "") && (_text == "")) exitWith {};
+    waitUntil {!isNull findDisplay 46};
     [_text, _header] call BIS_fnc_guiMessage;
   };
 }] call CBA_fnc_addEventHandler;

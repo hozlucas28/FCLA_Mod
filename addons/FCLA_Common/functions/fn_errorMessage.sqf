@@ -41,6 +41,6 @@ if ((_ID == "") || (_header == "") || (_text == "") || (_inMultiplayer) || (_ID 
 
 //Reportar y almacenar.
 _reportedErrors pushBack _ID;
-["FCLA_GUI_Message", [_header, _text]] call CBA_fnc_globalEvent;
+["FCLA_GUI_Message", [_header, _text]] call CBA_fnc_globalEventJIP;
 missionNamespace setVariable ["FCLA_Reported_Errors", _reportedErrors];
 true
