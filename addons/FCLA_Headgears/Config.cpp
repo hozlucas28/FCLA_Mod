@@ -18,6 +18,20 @@ class CfgPatches {
 
 
 /********************************************************************************|
+|                                    FUNCIONES                                   |
+|********************************************************************************/
+
+class CfgFunctions {
+	class FCLA_Headgears {
+		class FCLA_Headgears {
+			class XEHPreInit {file = "\FCLA_Headgears\XEH_preInit.sqf";};
+		};
+	};
+};
+
+
+
+/********************************************************************************|
 |                                   VEHÍCULOS                                    |
 |********************************************************************************/
 
@@ -72,4 +86,16 @@ class CfgWeapons {
 	#include "\FCLA_Headgears\Winter\CfgWeapons.hpp"
 	#include "\FCLA_Headgears\Digital\CfgWeapons.hpp"
 	#include "\FCLA_Headgears\Vanilla\CfgWeapons.hpp"
+};
+
+
+
+/********************************************************************************|
+|                            CONTROLADORES DE EVENTOS                            |
+|********************************************************************************/
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Headgears {
+		init = "call FCLA_Headgears_fnc_XEHPreInit;";
+	};
 };

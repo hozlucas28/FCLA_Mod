@@ -30,8 +30,8 @@
           ["_multiplier", 1, [0], 0]
          ];
   if (_unitsAndVehicles isEqualTo []) exitWith {};
-  
-  missionNamespace setVariable ["FCLA_TFAR_Multiplicator", _multiplier, true];
+
+  ["FCLA_TFAR_Multiplicator", _multiplier] call CBA_fnc_publicVariable;
   {
     if (_x in vehicles) then {_x setVariable ["tf_range", _multiplier, true];};
     if (_x in allUnits) then {

@@ -10,7 +10,7 @@
 
 //Variables de referencia.
 params ["_unit", "_item"];
-_compatibleChemicalDetectors = missionNamespace getVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", ["ChemicalDetector_01_watch_F", "tf_microdagr"]];
+_compatibleChemicalDetectors = if (isNil "FCLA_CBRN_Compatible_Chemical_Detectors") then {["ChemicalDetector_01_watch_F", "tf_microdagr"];} else {FCLA_CBRN_Compatible_Chemical_Detectors;};
 
 
 _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;

@@ -22,6 +22,10 @@ class CfgPatches {
 
 class CfgFunctions {
 	class FCLA_Objects {
+		class FCLA_Objects {
+			class XEHPreInit {file = "\FCLA_Objects\XEH_preInit.sqf";};
+		};
+
 		#include "\FCLA_Objects\Electronics\CfgFunction.hpp"
 	};
 };
@@ -187,6 +191,12 @@ class CfgVehicles {
 class Extended_Killed_Eventhandlers {
 	class Satellite_Antenna_RF_3080 {
 		init = "_this spawn {sleep 5; deleteVehicle (_this select 0);};";
+	};
+};
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Objects {
+		init = "call FCLA_Objects_fnc_XEHPreInit;";
 	};
 };
 

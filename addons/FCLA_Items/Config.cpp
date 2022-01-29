@@ -33,6 +33,10 @@ class CfgPatches {
 
 class CfgFunctions {
 	class FCLA_Items {
+		class FCLA_Items {
+			class XEHPreInit {file = "\FCLA_Items\XEH_preInit.sqf";};
+		};
+
 		#include "\FCLA_Items\Flare_Trip_Mine\CfgFunction.hpp"
 	};
 };
@@ -164,4 +168,16 @@ class CfgGlasses {
 
 	#include "\FCLA_Items\Masks\CfgGlasses.hpp"
 	#include "\FCLA_Items\Blindfolds\CfgGlasses.hpp"
+};
+
+
+
+/********************************************************************************|
+|                            CONTROLADORES DE EVENTOS                            |
+|********************************************************************************/
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Items {
+		init = "call FCLA_Items_fnc_XEHPreInit;";
+	};
 };

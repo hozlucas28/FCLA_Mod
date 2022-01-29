@@ -17,6 +17,20 @@ class CfgPatches {
 
 
 /********************************************************************************|
+|                                    FUNCIONES                                   |
+|********************************************************************************/
+
+class CfgFunctions {
+	class FCLA_Sounds {
+		class FCLA_Sounds {
+			class XEHPreInit {file = "\FCLA_Sounds\XEH_preInit.sqf";};
+		};
+	};
+};
+
+
+
+/********************************************************************************|
 |                                    SONIDOS                                     |
 |********************************************************************************/
 
@@ -44,4 +58,16 @@ class CfgVehicles {
 	class All;
 	class Sound: All {};
 	#include "\FCLA_Sounds\SFX\CfgVehicles.hpp"
+};
+
+
+
+/********************************************************************************|
+|                            CONTROLADORES DE EVENTOS                            |
+|********************************************************************************/
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Sounds {
+		init = "call FCLA_Sounds_fnc_XEHPreInit;";
+	};
 };

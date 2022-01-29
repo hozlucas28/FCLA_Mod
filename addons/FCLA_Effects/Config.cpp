@@ -42,6 +42,7 @@ class CfgCoreData {
 class CfgFunctions {
 	class FCLA_Effects {
 		class FCLA_Effects {
+			class XEHPreInit {file = "\FCLA_Effects\XEH_preInit.sqf";};
 			class XEHPostInit {file = "\FCLA_Effects\XEH_postInit.sqf";};
 		};
 
@@ -135,6 +136,12 @@ class Extended_HitPart_EventHandlers {
 class Extended_Respawn_Eventhandlers {
 	class CAManBase {
 		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_respawnNVG;};";
+	};
+};
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Effects {
+		init = "call FCLA_Effects_fnc_XEHPreInit;";
 	};
 };
 

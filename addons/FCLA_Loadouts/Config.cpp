@@ -13,3 +13,29 @@ class CfgPatches {
 		requiredVersion = 2.0;
 	};
 };
+
+
+
+/********************************************************************************|
+|                                    FUNCIONES                                   |
+|********************************************************************************/
+
+class CfgFunctions {
+	class FCLA_Loadouts {
+		class FCLA_Loadouts {
+			class XEHPreInit {file = "\FCLA_Loadouts\XEH_preInit.sqf";};
+		};
+	};
+};
+
+
+
+/********************************************************************************|
+|                            CONTROLADORES DE EVENTOS                            |
+|********************************************************************************/
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Loadouts {
+		init = "call FCLA_Loadouts_fnc_XEHPreInit;";
+	};
+};

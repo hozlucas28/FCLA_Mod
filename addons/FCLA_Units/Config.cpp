@@ -17,6 +17,20 @@ class CfgPatches {
 
 
 /********************************************************************************|
+|                                    FUNCIONES                                   |
+|********************************************************************************/
+
+class CfgFunctions {
+	class FCLA_Units {
+		class FCLA_Units {
+			class XEHPreInit {file = "\FCLA_Units\XEH_preInit.sqf";};
+		};
+	};
+};
+
+
+
+/********************************************************************************|
 |                                    VEHÍCULOS                                   |
 |********************************************************************************/
 
@@ -34,4 +48,16 @@ class CfgVehicles {
 	class O_T_Pilot_F: O_Pilot_F {};
 	class O_crew_F: O_Soldier_base_F {};
 	#include "\FCLA_Units\OPFOR\CfgVehicles.hpp"
+};
+
+
+
+/********************************************************************************|
+|                            CONTROLADORES DE EVENTOS                            |
+|********************************************************************************/
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Units {
+		init = "call FCLA_Units_fnc_XEHPreInit;";
+	};
 };

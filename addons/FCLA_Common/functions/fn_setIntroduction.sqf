@@ -53,25 +53,18 @@ if (((_title == "") && (_subtitle == "") && (_introductoryVideo == "")) || !(_sh
 
 
 //Guardar argumentos en variables asociados a la misión.
-missionNamespace setVariable ["FCLA_Introduction_Title", _title];
-missionNamespace setVariable ["FCLA_Introduction_Subtitle", _subtitle];
-missionNamespace setVariable ["FCLA_Show_On_Reconnect", _showOnReconnect];
-missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
+if (isNil "FCLA_Show_On_Reconnect") then {["FCLA_Show_On_Reconnect", _showOnReconnect] call CBA_fnc_publicVariable;} else {FCLA_Show_On_Reconnect;};
+if (isNil "FCLA_Introductory_Video") then {["FCLA_Introductory_Video", _introductoryVideo] call CBA_fnc_publicVariable;} else {FCLA_Introductory_Video;};
+if (isNil "FCLA_Introduction_Title") then {["FCLA_Introduction_Title", _title] call CBA_fnc_publicVariable;} else {FCLA_Introduction_Title;};
+if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _subtitle] call CBA_fnc_publicVariable;} else {FCLA_Introduction_Subtitle;};
 
 
 //Reproducir introducción.
 ["CBA_loadingScreenDone", {
-  _title = missionNamespace getVariable ["FCLA_Introduction_Title", ""];
-  _subtitle = missionNamespace getVariable ["FCLA_Introduction_Subtitle", ""];
-	_showOnReconnect = missionNamespace getVariable ["FCLA_Show_On_Reconnect", "NONE"];
-	_introductoryVideo = missionNamespace getVariable ["FCLA_Introductory_Video", ""];
-
-
-	[_title, _subtitle, _introductoryVideo, _showOnReconnect] Spawn {
-		params ["_title", "_subtitle", "_introductoryVideo", "_showOnReconnect"];
+	[] Spawn {
 		_playerUID = getPlayerUID player;
-		_introductionPlayedPlayers = missionNamespace getVariable ["FCLA_Introduction_Players", []];
-		_findedUID = _introductionPlayedPlayers find _playerUID;
+		_playedIntroductionPlayers = if (isNil "FCLA_Played_Introduction_Players") then {[];} else {FCLA_Played_Introduction_Players;};
+		_findedUID = _playedIntroductionPlayers find _playerUID;
 
 		if (_findedUID <= -1) then {
 			player action ["WeaponOnBack", player];
@@ -80,8 +73,8 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 			[{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
 			["FCLA (log): ENTRO 1"] call ACE_Common_fnc_serverLog;
 
-			if ((_title == "") || (_subtitle == "")) exitWith {
-				_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
+			if ((FCLA_Introduction_Title == "") || (FCLA_Introduction_Subtitle == "")) exitWith {
+				_videoStatus = [FCLA_Introductory_Video] spawn BIS_fnc_playVideo;
 				waitUntil {scriptDone _videoStatus};
 				cutText ["", "BLACK IN", 3, true, false];
 				[false] call ACE_Common_fnc_disableUserInput;
@@ -96,10 +89,10 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 				}, [], 0.1] call CBA_fnc_waitAndExecute;
 			};
 
-			_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
-			[format ["FCLA (log): %1", _introductoryVideo]] call ACE_Common_fnc_serverLog;
+			_videoStatus = [FCLA_Introductory_Video] spawn BIS_fnc_playVideo;
+			[format ["FCLA (log): %1", FCLA_Introductory_Video]] call ACE_Common_fnc_serverLog;
 			waitUntil {scriptDone _videoStatus};
-			if (isGameFocused) then {playsound "FCLA_Introduction";};
+			playsound "FCLA_Introduction";
 
 			sleep 3;
 			[
@@ -109,8 +102,8 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 
 			sleep 10;
 			[[
-				[_title, "<t align='center' size='1.75' font='PuristaBold'>%1</t><br/>"],
-				["(" + _subtitle + ")", "<t align='center' size='1' font='PuristaSemibold'>%1</t>"]
+				[FCLA_Introduction_Title, "<t align='center' size='1.75' font='PuristaBold'>%1</t><br/>"],
+				["(" + FCLA_Introduction_Subtitle + ")", "<t align='center' size='1' font='PuristaSemibold'>%1</t>"]
 			]] spawn BIS_fnc_typeText;
 
 			sleep 5;
@@ -125,14 +118,14 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 				"dynamicBlur" ppEffectCommit 5;
 			}, [], 0.1] call CBA_fnc_waitAndExecute;
 
-			_introductionPlayedPlayers pushBack _playerUID;
+			_playedIntroductionPlayers pushBack _playerUID;
 			player setVariable ["FCLA_Playing_Introduction", nil, true];
-			missionNamespace setVariable ["FCLA_Introduction_Players", _introductionPlayedPlayers];
+			["FCLA_Played_Introduction_Players", _playedIntroductionPlayers] call CBA_fnc_publicVariable;
 		} else {
-			_title = if (_showOnReconnect in ["TITLE_AND_SUBTITLE", "ALL"]) then {_title;} else {"";};
-		  _subtitle = if (_showOnReconnect in ["TITLE_AND_SUBTITLE", "ALL"]) then {_subtitle;} else {"";};
-			_introductoryVideo = if (_showOnReconnect in ["VIDEO", "ALL"]) then {_introductoryVideo;} else {"";};
-			if (_showOnReconnect == "NONE") exitWith {};
+			_title = if (FCLA_Show_On_Reconnect in ["TITLE_AND_SUBTITLE", "ALL"]) then {FCLA_Introduction_Title;} else {"";};
+		  _subtitle = if (FCLA_Show_On_Reconnect in ["TITLE_AND_SUBTITLE", "ALL"]) then {FCLA_Introduction_Subtitle;} else {"";};
+			_introductoryVideo = if (FCLA_Show_On_Reconnect in ["VIDEO", "ALL"]) then {FCLA_Introductory_Video;} else {"";};
+			if (FCLA_Show_On_Reconnect == "NONE") exitWith {};
 
 			player action ["WeaponOnBack", player];
 			cutText ["", "BLACK FADED", 3600, true, false];
@@ -159,7 +152,7 @@ missionNamespace setVariable ["FCLA_Introductory_Video", _introductoryVideo];
 			_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
 			[format ["FCLA (log): %1", _introductoryVideo]] call ACE_Common_fnc_serverLog;
 			waitUntil {scriptDone _videoStatus};
-			if (isGameFocused) then {playsound "FCLA_Introduction";};
+			playsound "FCLA_Introduction";
 
 			sleep 3;
 			[

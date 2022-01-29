@@ -18,6 +18,20 @@ class CfgPatches {
 
 
 /********************************************************************************|
+|                                    FUNCIONES                                   |
+|********************************************************************************/
+
+class CfgFunctions {
+	class FCLA_Vests {
+		class FCLA_Vests {
+			class XEHPreInit {file = "\FCLA_Vests\XEH_preInit.sqf";};
+		};
+	};
+};
+
+
+
+/********************************************************************************|
 |                                   VEHÍCULOS                                    |
 |********************************************************************************/
 
@@ -64,4 +78,16 @@ class CfgWeapons {
 	#include "\FCLA_Vests\Urban\CfgWeapons.hpp"
 	#include "\FCLA_Vests\Vanilla\CfgWeapons.hpp"
 	#include "\FCLA_Vests\Winter\CfgWeapons.hpp"
+};
+
+
+
+/********************************************************************************|
+|                            CONTROLADORES DE EVENTOS                            |
+|********************************************************************************/
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Vests {
+		init = "call FCLA_Vests_fnc_XEHPreInit;";
+	};
 };

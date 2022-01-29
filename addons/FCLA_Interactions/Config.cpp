@@ -32,6 +32,7 @@ class CfgPatches {
 class CfgFunctions {
 	class FCLA_Interactions {
 		class FCLA_Interactions {
+			class XEHPreInit {file = "\FCLA_Interactions\XEH_preInit.sqf";};
 			class XEHPostInit {file = "\FCLA_Interactions\XEH_postInit.sqf";};
 		};
 
@@ -171,6 +172,12 @@ class Extended_Killed_Eventhandlers {
 class Extended_Respawn_Eventhandlers {
 	class CAManBase {
 		init = "if (!is3DEN) then {_this spawn FCLA_Interactions_fnc_respawnBlindfoldEH; _this spawn FCLA_Interactions_fnc_respawnCBRNEH;};";
+	};
+};
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Interactions {
+		init = "call FCLA_Interactions_fnc_XEHPreInit;";
 	};
 };
 

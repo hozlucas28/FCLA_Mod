@@ -23,6 +23,7 @@ class CfgPatches {
 class CfgFunctions {
 	class FCLA_Immersions {
 		class FCLA_Immersions {
+			class XEHPreInit {file = "\FCLA_Immersions\XEH_preInit.sqf";};
 			class XEHPostInit {file = "\FCLA_Immersions\XEH_postInit.sqf";};
 		};
 
@@ -134,6 +135,12 @@ class CfgWeapons {
 class Extended_Killed_Eventhandlers {
 	class Air {
 		init = "_this spawn FCLA_Immersions_fnc_killedNABEH;";
+	};
+};
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Immersions {
+		init = "call FCLA_Immersions_fnc_XEHPreInit;";
 	};
 };
 

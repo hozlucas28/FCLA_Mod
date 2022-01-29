@@ -23,6 +23,7 @@ class CfgPatches {
 class CfgFunctions {
 	class FCLA_Common {
 		class FCLA_Common {
+			class XEHPreInit {file = "\FCLA_Common\XEH_preInit.sqf";};
 			class XEHPostInit {file = "\FCLA_Common\XEH_postInit.sqf";};
 		};
 
@@ -45,6 +46,12 @@ class CfgSounds {
 /********************************************************************************|
 |                            CONTROLADORES DE EVENTOS                            |
 |********************************************************************************/
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Common {
+		init = "call FCLA_Common_fnc_XEHPreInit;";
+	};
+};
 
 class Extended_PostInit_EventHandlers {
 	class FCLA_Common {

@@ -34,7 +34,7 @@ params [
 
 //Verificar argumentos.
 _inMultiplayer = serverName != "";
-_reportedErrors = missionNamespace getVariable ["FCLA_Reported_Errors", []];
+_reportedErrors = if (isNil "FCLA_Reported_Errors") then {["FCLA_Reported_Errors", []] call CBA_fnc_publicVariable;} else {FCLA_Reported_Errors;};
 if ((_ID == "") || (_header == "") || (_text == "") || (_inMultiplayer) || (_ID in _reportedErrors)) exitWith {false};
 
 
@@ -42,5 +42,5 @@ if ((_ID == "") || (_header == "") || (_text == "") || (_inMultiplayer) || (_ID 
 //Reportar y almacenar.
 _reportedErrors pushBack _ID;
 ["FCLA_GUI_Message", [_header, _text]] call CBA_fnc_globalEventJIP;
-missionNamespace setVariable ["FCLA_Reported_Errors", _reportedErrors];
+["FCLA_Reported_Errors", _reportedErrors] call CBA_fnc_publicVariable;
 true

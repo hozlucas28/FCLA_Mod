@@ -17,6 +17,20 @@ class CfgPatches {
 
 
 /********************************************************************************|
+|                                    FUNCIONES                                   |
+|********************************************************************************/
+
+class CfgFunctions {
+	class FCLA_Land {
+		class FCLA_Land {
+			class XEHPreInit {file = "\FCLA_Land\XEH_preInit.sqf";};
+		};
+	};
+};
+
+
+
+/********************************************************************************|
 |                                    VEHÍCULOS                                   |
 |********************************************************************************/
 
@@ -112,4 +126,16 @@ class CfgVehicles {
 	#include "\FCLA_Land\BLUFOR\CfgVehicles.hpp"
 	#include "\FCLA_Land\CIVILIAN\CfgVehicles.hpp"
 	#include "\FCLA_Land\INDEPENDENT\CfgVehicles.hpp"
+};
+
+
+
+/********************************************************************************|
+|                            CONTROLADORES DE EVENTOS                            |
+|********************************************************************************/
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Land {
+		init = "call FCLA_Land_fnc_XEHPreInit;";
+	};
 };

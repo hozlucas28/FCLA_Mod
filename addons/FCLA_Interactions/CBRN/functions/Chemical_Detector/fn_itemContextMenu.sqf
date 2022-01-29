@@ -55,7 +55,7 @@ _Statement = {
 
 _conditionToEnable = {
   params ["_unit", "_container", "_item"];
-  _compatibleChemicalDetectors = missionNamespace getVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", ["ChemicalDetector_01_watch_F", "tf_microdagr"]];
+  _compatibleChemicalDetectors = if (isNil "FCLA_CBRN_Compatible_Chemical_Detectors") then {["ChemicalDetector_01_watch_F", "tf_microdagr"];} else {FCLA_CBRN_Compatible_Chemical_Detectors;};
 
   _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
   _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 2];
@@ -67,7 +67,7 @@ _conditionToEnable = {
 
 _conditionToShow = {
   params ["_unit", "_container", "_item"];
-  _compatibleChemicalDetectors = missionNamespace getVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", ["ChemicalDetector_01_watch_F", "tf_microdagr"]];
+  _compatibleChemicalDetectors = if (isNil "FCLA_CBRN_Compatible_Chemical_Detectors") then {["ChemicalDetector_01_watch_F", "tf_microdagr"];} else {FCLA_CBRN_Compatible_Chemical_Detectors;};
 
   _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
   _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 2];
@@ -90,7 +90,7 @@ _Statement = {
 
 _conditionToEnable = {
   params ["_unit", "_container", "_item"];
-  _compatibleChemicalDetectors = missionNamespace getVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", ["ChemicalDetector_01_watch_F", "tf_microdagr"]];
+  _compatibleChemicalDetectors = if (isNil "FCLA_CBRN_Compatible_Chemical_Detectors") then {["ChemicalDetector_01_watch_F", "tf_microdagr"];} else {FCLA_CBRN_Compatible_Chemical_Detectors;};
 
   _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
   _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 2];
@@ -102,7 +102,7 @@ _conditionToEnable = {
 
 _conditionToShow = {
   params ["_unit", "_container", "_item"];
-  _compatibleChemicalDetectors = missionNamespace getVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", ["ChemicalDetector_01_watch_F", "tf_microdagr"]];
+  _compatibleChemicalDetectors = if (isNil "FCLA_CBRN_Compatible_Chemical_Detectors") then {["ChemicalDetector_01_watch_F", "tf_microdagr"];} else {FCLA_CBRN_Compatible_Chemical_Detectors;};
 
   _isPlayer = [_unit, true] call ACE_common_fnc_isPlayer;
   _currentVolume = _unit getVariable ["FCLA_Chemical_Detector_Volume", 2];

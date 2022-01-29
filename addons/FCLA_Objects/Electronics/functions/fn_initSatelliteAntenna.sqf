@@ -18,7 +18,7 @@ params ["_antenna"];
   _unitsInArea = allUnits select {_x inArea [_args, 2.5, 2.5, 0, false, 2]};
   _unitsNotInArea = allUnits select {!(_x in _unitsInArea)};
   _entitiesAffected = _args getVariable ["FCLA_Entities_Affected", []];
-  _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", 1];
+  _normalRadioRange = if (isNil "FCLA_TFAR_Multiplicator") then {1;} else {FCLA_TFAR_Multiplicator;};
   if (_isNotAlive) exitWith {
     {_x setVariable ["tf_sendingDistanceMultiplicator", _normalRadioRange, true];} forEach (_unitsInArea + _unitsNotInArea);
     [_handle] call CBA_fnc_removePerFrameHandler;

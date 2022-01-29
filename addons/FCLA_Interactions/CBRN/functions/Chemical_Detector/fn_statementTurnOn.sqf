@@ -17,7 +17,7 @@ _player setVariable ["FCLA_Chemical_Detector_Activated", true, true];
 //Mostrar interfaz.
 [{
   _args params ["_player", "_item", "_lastTimeUpdated"];
-  _compatibleChemicalDetectors = missionNamespace getVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", ["ChemicalDetector_01_watch_F", "tf_microdagr"]];
+  _compatibleChemicalDetectors = if (isNil "FCLA_CBRN_Compatible_Chemical_Detectors") then {["ChemicalDetector_01_watch_F", "tf_microdagr"];} else {FCLA_CBRN_Compatible_Chemical_Detectors;};
   _isSwimming = [_player] call ACE_Common_fnc_isSwimming;
   _isNotAlive = !alive _player;
   _isDesactivated = !(_player getVariable ["FCLA_Chemical_Detector_Activated", false]);
@@ -100,7 +100,7 @@ _player setVariable ["FCLA_Chemical_Detector_Activated", true, true];
 //Reproducir sonido.
 [{
   _args params ["_player", "_item", "_lastTimeUpdated"];
-  _compatibleChemicalDetectors = missionNamespace getVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", ["ChemicalDetector_01_watch_F", "tf_microdagr"]];
+  _compatibleChemicalDetectors = if (isNil "FCLA_CBRN_Compatible_Chemical_Detectors") then {["ChemicalDetector_01_watch_F", "tf_microdagr"];} else {FCLA_CBRN_Compatible_Chemical_Detectors;};
   _controlledUnit = call CBA_fnc_currentUnit;
   _inCurator = !isNull findDisplay 312;
   _isSwimming = [_player] call ACE_Common_fnc_isSwimming;

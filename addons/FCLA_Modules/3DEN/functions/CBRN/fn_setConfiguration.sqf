@@ -41,9 +41,9 @@ _compatibleBackpacksWithOxygen = parseSimpleArray ([_compatibleBackpacksWithOxyg
 
 //Establecer configuración.
 [{time > 0}, {
-  missionNamespace setVariable ["FCLA_CBRN_Compatible_Oxygen_Masks", _this select 1];
-  missionNamespace setVariable ["FCLA_CBRN_Compatible_NRBQ_Uniforms", _this select 2];
-  missionNamespace setVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", _this select 3];
-  missionNamespace setVariable ["FCLA_CBRN_Compatible_Backpacks_With_Oxygen", _this select 4];
+  ["FCLA_CBRN_Compatible_Oxygen_Masks", _this select 1] call CBA_fnc_publicVariable;
+  ["FCLA_CBRN_Compatible_NRBQ_Uniforms", _this select 2] call CBA_fnc_publicVariable;
+  ["FCLA_CBRN_Compatible_Chemical_Detectors", _this select 3] call CBA_fnc_publicVariable;
+  ["FCLA_CBRN_Compatible_Backpacks_With_Oxygen", _this select 4] call CBA_fnc_publicVariable;
   deleteVehicle (_this select 0);
 }, [_module, _compatibleOxygenMasks, _compatibleNRBQUniforms, _compatibleChemicalDetectors, _compatibleBackpacksWithOxygen]] call CBA_fnc_waitUntilAndExecute;

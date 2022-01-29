@@ -46,7 +46,7 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
   _unitsNotInArea = allUnits select {(isObjectHidden _x) || !(_x in _unitsInArea)};
   _vehiclesNotInArea = vehicles select {!(_x in _vehiclesInArea)};
   _entitiesAffected = _jammerSource getVariable ["FCLA_Entities_Affected", []];
-  _normalRadioRange = missionNamespace getVariable ["FCLA_TFAR_Multiplicator", 1];
+  _normalRadioRange = if (isNil "FCLA_TFAR_Multiplicator") then {1;} else {FCLA_TFAR_Multiplicator;};
   if ((_areNotAlive) || (_isDesactivated)) exitWith {
     deleteVehicle _module;
     {

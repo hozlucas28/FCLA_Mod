@@ -9,7 +9,9 @@
 ---------------------------------------------------------------------------- */
 
 ["FCLA", "Ascensos", {
-  _defaultValue = if (missionNamespace getVariable ["FCLA_isPromotionDay", false]) then {0;} else {1;};
+  _defaultValue = if (isNil "FCLA_isPromotionDay") then {1;} else {
+    if (FCLA_isPromotionDay) then {0;} else {1;};
+  };
   if (FCLA_Mission_Type != "Training") exitWith {["¡SE REQUIERE ESTAR EN UN MAPA DE ENTRENAMIENTO!"] call ZEN_Common_fnc_showMessage;};
 
 
@@ -31,7 +33,7 @@
      (_this select 1) params ["_position", "_attachedObject"];
      _isPromotionDay = if (_isPromotionDay == 0) then {true;} else {false;};
 
-     missionNamespace setVariable ["FCLA_isPromotionDay", _isPromotionDay];
+     ["FCLA_isPromotionDay", _isPromotionDay] call CBA_fnc_publicVariable;
      _text = if (_isPromotionDay) then {"DÍA DE ASCENSOS ACTIVADO";} else {"DÍA DE ASCENSOS DESACTIVADO";};
      [_text] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;

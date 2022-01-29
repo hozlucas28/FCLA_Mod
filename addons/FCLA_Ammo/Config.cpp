@@ -18,6 +18,20 @@ class CfgPatches {
 
 
 /********************************************************************************|
+|                                    FUNCIONES                                   |
+|********************************************************************************/
+
+class CfgFunctions {
+	class FCLA_Ammo {
+		class FCLA_Ammo {
+			class XEHPreInit {file = "\FCLA_Ammo\XEH_preInit.sqf";};
+		};
+	};
+};
+
+
+
+/********************************************************************************|
 |                                   MUNICIONES                                   |
 |********************************************************************************/
 
@@ -57,4 +71,16 @@ class CfgMagazines {
 
 class CfgMagazineWells {
 	#include "\FCLA_Ammo\Launcher\CfgMagazineWells.hpp"
+};
+
+
+
+/********************************************************************************|
+|                            CONTROLADORES DE EVENTOS                            |
+|********************************************************************************/
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Ammo {
+		init = "call FCLA_Ammo_fnc_XEHPreInit;";
+	};
 };

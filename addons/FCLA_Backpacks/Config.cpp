@@ -17,6 +17,20 @@ class CfgPatches {
 
 
 /********************************************************************************|
+|                                    FUNCIONES                                   |
+|********************************************************************************/
+
+class CfgFunctions {
+	class FCLA_Backpacks {
+		class FCLA_Backpacks {
+			class XEHPreInit {file = "\FCLA_Backpacks\XEH_preInit.sqf";};
+		};
+	};
+};
+
+
+
+/********************************************************************************|
 |                                   VEHÍCULOS                                    |
 |********************************************************************************/
 
@@ -45,4 +59,16 @@ class CfgVehicles {
 	#include "\FCLA_Backpacks\Radios\CfgVehicles.hpp"
 	#include "\FCLA_Backpacks\Digital\CfgVehicles.hpp"
 	#include "\FCLA_Backpacks\Vanilla\CfgVehicles.hpp"
+};
+
+
+
+/********************************************************************************|
+|                            CONTROLADORES DE EVENTOS                            |
+|********************************************************************************/
+
+class Extended_PreInit_EventHandlers {
+	class FCLA_Backpacks {
+		init = "call FCLA_Backpacks_fnc_XEHPreInit;";
+	};
 };
