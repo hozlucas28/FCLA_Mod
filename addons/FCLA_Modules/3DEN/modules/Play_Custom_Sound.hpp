@@ -57,3 +57,9 @@ class FCLA_Module_Play_Custom_Sound: Module_F {
     };
 	};
 };
+
+
+class FCLA_Module_Play_Custom_Sound_Empty: FCLA_Module_Play_Custom_Sound {
+  function = "";
+  scope = 1;
+};

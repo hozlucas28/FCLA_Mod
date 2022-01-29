@@ -6,7 +6,7 @@
 class Curator {
   class setIDCurator {
     file = "\FCLA_Modules\Curator\functions\fn_setID.sqf";
-    postInit = 1; 
+    postInit = 1;
   };
 
   class setPTSDCurator {
@@ -21,11 +21,6 @@ class Curator {
 
   class setRadioCurator {
     file = "\FCLA_Modules\Curator\functions\fn_setRadio.sqf";
-    postInit = 1;
-  };
-
-  class setEffectCurator {
-    file = "\FCLA_Modules\Curator\functions\fn_spawnEffect.sqf";
     postInit = 1;
   };
 

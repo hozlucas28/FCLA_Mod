@@ -67,25 +67,20 @@
   {
     (_this select 1) params ["_position", "_attachedObject"];
     (_this select 0) params ["_jammerID", "_jammerRad", "_canBeDisabled", "_affectVehicles", "_needHackingDevice"];
+    _jammerRad = round _jammerRad;
+    _canBeDisabled = if (_canBeDisabled == 0) then {true;} else {false;};
+    _affectVehicles = if (_affectVehicles == 0) then {true;} else {false;};
+    _needHackingDevice = if (_needHackingDevice == 0) then {true;} else {false;};
 
-    private ["_position", "_attachedObject", "_jammerID"];
-    private _moduleGroup = createGroup [sideLogic, true];
-    private _jammerRad = round _jammerRad;
-    private _canBeDisabled = if (_canBeDisabled == 0) then {true;} else {false;};
-    private _affectVehicles = if (_affectVehicles == 0) then {true;} else {false;};
-    private _needHackingDevice = if (_needHackingDevice == 0) then {true;} else {false;};
-    "FCLA_Module_Jammer" createUnit [_position, _moduleGroup, "
-      this attachTo [_attachedObject, [0, 0, 0]];
-      this setVariable ['FCLA_Jammer_ID', _jammerID, true];
-      this setVariable ['FCLA_Deactivatable', _canBeDisabled, true];
-      this setVariable ['FCLA_Affect_Vehicles', _affectVehicles, true];
-      this setVariable ['FCLA_Need_Hacking_Device', _needHackingDevice, true];
-      this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-      this setVariable ['objectArea', [_jammerRad, _jammerRad, 0, false, _jammerRad], true];
-      this synchronizeObjectsAdd [_attachedObject];
-    "];
+    _module = createAgent ["FCLA_Module_Jammer_Empty", _position, [], 0, "CAN_COLLIDE"];
+    _module setVariable ['FCLA_Jammer_ID', _jammerID, true];
+    _module setVariable ['FCLA_Deactivatable', _canBeDisabled, true];
+    _module setVariable ['FCLA_Affect_Vehicles', _affectVehicles, true];
+    _module setVariable ['FCLA_Need_Hacking_Device', _needHackingDevice, true];
+    _module setVariable ['objectArea', [_jammerRad, _jammerRad, 0, false, _jammerRad], true];
+    _module synchronizeObjectsAdd [_attachedObject];
+    [_module, [_attachedObject], true] call FCLA_Modules_fnc_setJammer3DEN;
 
-    _module = nearestObject [_position, "FCLA_Module_Jammer"];
     _curatorLogic = getAssignedCuratorLogic player;
     _curatorLogic addCuratorEditableObjects [[_module], false];
     ["JAMMER GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;

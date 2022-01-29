@@ -44,20 +44,11 @@
    {
      (_this select 1) params ["_position", "_attachedObject"];
      (_this select 0) params ["_state", "_excludeVehicles", "_rad"];
+     _rad = round _rad;
+     _state = if (_state == 0) then {"On";} else {"Off";};
+     _excludeVehicles = if (_excludeVehicles == 0) then {true;} else {false;};
 
-     private "_position";
-     private _moduleGroup = createGroup [sideLogic, true];
-     private _rad = round _rad;
-     private _state = if (_state == 0) then {"On";} else {"Off";};
-     private _excludeVehicles = if (_excludeVehicles == 0) then {true;} else {false;};
-     "FCLA_Module_Switch_Lights" createUnit [_position, _moduleGroup, "
-       this setPos _position;
-       this setVariable ['FCLA_Lights_State', _state, true];
-       this setVariable ['FCLA_Exclude_Vehicles', _excludeVehicles, true];
-       this setVariable ['objectArea', [_rad, _rad, 0, false, _rad], true];
-       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-     "];
-
+     [_position, _rad, _state, _excludeVehicles] call FCLA_Common_fnc_switchLights;
      _text = if (_state == "On") then {"LAS LUCES FUERON ENCENDIDAS";} else {"LAS LUCES FUERON APAGADAS";};
      [_text] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;

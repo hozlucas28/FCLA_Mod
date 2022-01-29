@@ -42,18 +42,13 @@
   {
     (_this select 0) params ["_rad", "_threatLevel"];
     (_this select 1) params ["_position", "_attachedObject"];
+    _rad = round _rad;
 
-    private "_position";
-    private _rad = round _rad;
-    private _moduleGroup = createGroup [sideLogic, true];
-    "FCLA_Module_CBRN_Contaminated_Zone" createUnit [_position, _moduleGroup, "
-      this setPos _position;
-      this setVariable ['FCLA_Threat_Level', _threatLevel, true];
-      this setVariable ['objectArea', [_rad, _rad, 0, false, _rad], true];
-      this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-    "];
+    _module = createAgent ["FCLA_Module_CBRN_Contaminated_Zone_Empty", _position, [], 0, "CAN_COLLIDE"];
+    _module setVariable ['FCLA_Threat_Level', _threatLevel, true];
+    _module setVariable ['objectArea', [_rad, _rad, 0, false, _rad], true];
+    [_module, [], true] call FCLA_Modules_fnc_setCBRNContaminatedZone3DEN;
 
-    _module = nearestObject [_position, "FCLA_Module_CBRN_Contaminated_Zone"];
     _curatorLogic = getAssignedCuratorLogic player;
     _curatorLogic addCuratorEditableObjects [[_module], false];
     ["ZONA CONTAMINADA GENERADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;

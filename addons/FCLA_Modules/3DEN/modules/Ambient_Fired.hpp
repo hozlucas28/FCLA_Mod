@@ -82,3 +82,9 @@ class FCLA_Module_Ambient_Fired: Module_F {
     };
 	};
 };
+
+
+class FCLA_Module_Ambient_Fired_Empty: FCLA_Module_Ambient_Fired {
+  function = "";
+  scope = 1;
+};

@@ -59,20 +59,35 @@
    {
      (_this select 1) params ["_position", "_attachedObject"];
      (_this select 0) params ["_canDragObject", "_canCarryObject", "_ignoreWeightDrag", "_ignoreWeightCarry"];
+     (boundingCenter _attachedObject) params ["_xCenter", "_yCenter"];
+     (boundingBoxReal _attachedObject) params ["_minPos", "_maxPos", "_boundingSphereDiameter"];
+     _minPos params ["_xMin", "_yMin", "_zMin"];
+     _maxPos params ["_xMax", "_yMax", "_zMax"];
 
-     private ["_position", "_attachedObject", "_ignoreWeightDrag", "_ignoreWeightCarry"];
-     private _moduleGroup = createGroup [sideLogic, true];
-     private _canDragObject = if (_canDragObject == 0) then {"TRUE";} else {"FALSE";};
-     private _canCarryObject = if (_canCarryObject == 0) then {"TRUE";} else {"FALSE";};
-     "FCLA_Module_Drag_And_Carry" createUnit [_position, _moduleGroup, "
-       this setPos _position;
-       this setVariable ['FCLA_Can_Drag', _canDragObject, true];
-       this setVariable ['FCLA_Can_Carry', _canCarryObject, true];
-       this setVariable ['FCLA_Ignore_Weight_Drag', _ignoreWeightDrag, true];
-       this setVariable ['FCLA_Ignore_Weight_Carry', _ignoreWeightCarry, true];
-       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-       this synchronizeObjectsAdd [_attachedObject];
-     "];
+     _dX = _xMax - _xMin;
+     _dY = _yMax - _yMin;
+     _isWiderThanLonger = _dX > _dY;
+     _distance = 0.75 + ([_dY / 2, _dX / 2] select _isWiderThanLonger) + ([_yCenter, _xCenter] select _isWiderThanLonger);
+     _offset = [[0, _distance, 0], [_distance, 0, 0]] select _isWiderThanLonger;
+
+     _canDragObject = if (_canDragObject == 0) then {true;} else {false;};
+     _canCarryObject = if (_canCarryObject == 0) then {true;} else {false;};
+
+     ["FCLA_Common_Execute", [ACE_Dragging_fnc_setDraggable, [
+      _attachedObject,
+      _canDragObject,
+      [configOf _attachedObject, "ACE_Dragging_dragPosition", _offset] call BIS_fnc_returnConfigEntry,
+      [configOf _attachedObject, "ACE_Dragging_dragDirection", [0, 90] select _isWiderThanLonger] call BIS_fnc_returnConfigEntry,
+      _ignoreWeightDrag
+     ]]] call CBA_fnc_globalEventJIP;
+
+     ["FCLA_Common_Execute", [ACE_Dragging_fnc_setCarryable, [
+      _attachedObject,
+      _canCarryObject,
+      [configOf _attachedObject, "ACE_Dragging_carryPosition", _offset] call BIS_fnc_returnConfigEntry,
+      [configOf _attachedObject, "ACE_Dragging_carryDirection", [90, 0] select _isWiderThanLonger] call BIS_fnc_returnConfigEntry,
+      _ignoreWeightCarry
+     ]]] call CBA_fnc_globalEventJIP;
      ["PROPIEDADES DE ARRASTRE/PORTAR MODIFICADAS CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Edit_Object.paa"] call ZEN_Custom_Modules_fnc_Register;

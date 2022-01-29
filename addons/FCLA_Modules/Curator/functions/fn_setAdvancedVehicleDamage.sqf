@@ -48,19 +48,11 @@
 	 ],
    {
      (_this select 1) params ["_position", "_attachedObject"];
-     (_this select 0) params ["_damageWeaponsState", "_damageItemsState"];
+     (_this select 0) params ["_damageWeapons", "_damageItems"];
 
-     private ["_position", "_attachedObject"];
-     private _moduleGroup = createGroup [sideLogic, true];
-     private _damageItemsState = if (_damageItemsState == 0) then {true;} else {false;};
-     private _damageWeaponsState = if (_damageWeaponsState == 0) then {true;} else {false;};
-     "FCLA_Module_Advanced_Vehicle_Damage" createUnit [_position, _moduleGroup, "
-     	 this setPos _position;
-       this setVariable ['FCLA_Damage_Items', _damageItemsState, true];
-       this setVariable ['FCLA_Damage_Weapons', _damageWeaponsState, true];
-       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-     	 this synchronizeObjectsAdd [_attachedObject];
-     "];
+     _damageItems = if (_damageItems == 0) then {true;} else {false;};
+     _damageWeapons = if (_damageWeapons == 0) then {true;} else {false;};
+     [_attachedObject, _damageWeapons, _damageItems] call FCLA_Common_fnc_setAdvancedVehicleDamage;
      ["SE HA ACTIVADO EL DAÑO AVANZADO EN EL VEHÍCULO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Vehicle.paa"] call ZEN_Custom_Modules_fnc_Register;

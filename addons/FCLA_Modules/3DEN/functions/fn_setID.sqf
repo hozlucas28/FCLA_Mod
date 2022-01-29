@@ -33,7 +33,7 @@ if ((_newAge == "") || (_newName == "") || (_newPlaceOfBirth == "") || ((count _
 //Modificar identificación.
 {
   _dogTag = [_x] call ACE_dogTags_fnc_getDogTagData;
-  _x setName _newName;
+  [_x, _newName] remoteExec ["setName", 0, true];
   _x setVariable ["FCLA_ID", [_newName, _newAge, _newPlaceOfBirth], true];
   _x setVariable ["ACE_dogTags_dogTagData", [_newName, _dogTag select 1, _dogTag select 2], true];
   if (_EODState) then {_x setVariable ["ACE_isEOD", true, true];} else {_x setVariable ["ACE_isEOD", nil, true];};

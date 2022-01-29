@@ -71,3 +71,9 @@ class FCLA_Module_CBRN_Contaminated_Zone: Module_F {
     };
 	};
 };
+
+
+class FCLA_Module_CBRN_Contaminated_Zone_Empty: FCLA_Module_CBRN_Contaminated_Zone {
+  function = "";
+  scope = 1;
+};

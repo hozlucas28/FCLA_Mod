@@ -25,3 +25,4 @@ _moduleGroup = createGroup [sideLogic, true];
 "];
 
 // ========================================================================= //
+BIS_fnc_initModules_disableAutoActivation

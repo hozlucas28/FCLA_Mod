@@ -185,3 +185,9 @@ class FCLA_Module_Show_Subtitle: Module_F {
     };
 	};
 };
+
+
+class FCLA_Module_Show_Subtitle_Empty: FCLA_Module_Show_Subtitle {
+  function = "";
+  scope = 1;
+};

@@ -34,35 +34,25 @@
    {
      (_this select 0) params ["_rad", "_jammer"];
      (_this select 1) params ["_position", "_attachedObject"];
+     _rad = round _rad;
      _jammer = if (_jammer == 0) then {true;} else {false;};
 
-     private "_position";
-     private _rad = round _rad;
-     private _EMPModuleGroup = createGroup [sideLogic, true];
-     "FCLA_Module_EMP" createUnit [_position, _EMPModuleGroup, "
-       this setPos _position;
-       this setVariable ['FCLA_Jammer', false, true];
-       this setVariable ['objectArea', [_rad, _rad, 0, false, _rad], true];
-       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-     "];
+     _jammerModule = createAgent ["FCLA_Module_EMP_Empty", _position, [], 0, "CAN_COLLIDE"];
+     _jammerModule setVariable ['FCLA_Jammer', false, true];
+     _jammerModule setVariable ['objectArea', [_rad, _rad, 0, false, _rad], true];
+     [_jammerModule, [], true] call FCLA_Modules_fnc_initEMP3DEN;
 
      if (_jammer) then {
-       private _jammerModuleGroup = createGroup [sideLogic, true];
-       "FCLA_Module_Jammer" createUnit [_position, _jammerModuleGroup, "
-       	this setPos _position;
-       	this setVariable ['FCLA_Jammer_ID', '', true];
-       	this setVariable ['FCLA_Deactivatable', false, true];
-       	this setVariable ['FCLA_Affect_Vehicles', true, true];
-       	this setVariable ['FCLA_Need_Hacking_Device', false, true];
-       	this setVariable ['objectArea', [_rad, _rad, 0, false, _rad], true];
-       	this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-       "];
-
-       _module = nearestObject [_position, "FCLA_Module_Jammer"];
+       _jammerModule = createAgent ["FCLA_Module_Jammer_Empty", _position, [], 0, "CAN_COLLIDE"];
+       _jammerModule setVariable ['FCLA_Jammer_ID', "", true];
+       _jammerModule setVariable ['FCLA_Deactivatable', false, true];
+       _jammerModule setVariable ['FCLA_Affect_Vehicles', true, true];
+       _jammerModule setVariable ['FCLA_Need_Hacking_Device', false, true];
+       _jammerModule setVariable ['objectArea', [_rad, _rad, 0, false, _rad], true];
+       [_jammerModule, [], true] call FCLA_Modules_fnc_setJammer3DEN;
        _curatorLogic = getAssignedCuratorLogic player;
-       _curatorLogic addCuratorEditableObjects [[_module], false];
+       _curatorLogic addCuratorEditableObjects [[_jammerModule], false];
      };
-
      ["PULSO ELECTROMAGNÉTICO GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\EMP.paa"] call ZEN_Custom_Modules_fnc_Register;

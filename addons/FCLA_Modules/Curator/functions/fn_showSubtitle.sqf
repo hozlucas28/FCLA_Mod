@@ -111,34 +111,15 @@
    {
      (_this select 1) params ["_position", "_attachedObject"];
      (_this select 0) params ["_emitterName", "_subtitle", "_color", "_timeToHide", "_distanceToShow", "_needShortRadio", "_needLongRadio", "_selectedSide"];
+     _color = toUpper _color;
+     _timeToHide = round _timeToHide;
+     _repeatable = if (!isNull _attachedObject) then {true;} else {false;};
+     _selectedSide = toUpper _selectedSide;
+     _needLongRadio = if (_needLongRadio == 0) then {true;} else {false;};
+     _distanceToShow = round _distanceToShow;
+     _needShortRadio = if (_needShortRadio == 0) then {true;} else {false;};
 
-     private ["_attachedObject", "_emitterName", "_subtitle"];
-     private _moduleGroup = createGroup [sideLogic, true];
-     private _color = toUpper _color;
-     private _timeToHide = round _timeToHide;
-     private _repeatable = if (!isNull _attachedObject) then {true;} else {false;};
-     private _selectedSide = toUpper _selectedSide;
-     private _needLongRadio = if (_needLongRadio == 0) then {true;} else {false;};
-     private _distanceToShow = round _distanceToShow;
-     private _needShortRadio = if (_needShortRadio == 0) then {true;} else {false;};
-     "FCLA_Module_Show_Subtitle" createUnit [_position, _moduleGroup, "
-       this attachTo [_attachedObject, [0, 0, 0]];
-       this setVariable ['FCLA_Color', _color, true];
-       this setVariable ['FCLA_Repeatable', false, true];
-       this setVariable ['FCLA_Side', _selectedSide, true];
-       this setVariable ['FCLA_Subtitle', _subtitle, true];
-       this setVariable ['FCLA_Emitter', _emitterName, true];
-       this setVariable ['FCLA_Time_To_Hide', _timeToHide, true];
-       this setVariable ['FCLA_Need_Long_Radio', _needLongRadio, true];
-       this setVariable ['FCLA_Need_Short_Radio', _needShortRadio, true];
-       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-       this setVariable ['objectArea', [_distanceToShow, _distanceToShow, 0, false, _distanceToShow], true];
-       this synchronizeObjectsAdd [_attachedObject];
-     "];
-
-     _module = nearestObject [_position, "FCLA_Module_Show_Subtitle"];
-     _curatorLogic = getAssignedCuratorLogic player;
-     _curatorLogic addCuratorEditableObjects [[_module], false];
+     ["FCLA_Show_Subtitles", [_attachedObject, [[_emitterName, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _selectedSide, _distanceToShow]]] call CBA_fnc_globalEvent;
      ["SUBTÍTULO MOSTRADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Chat.paa"] call ZEN_Custom_Modules_fnc_Register;

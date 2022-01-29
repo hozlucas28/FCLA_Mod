@@ -55,17 +55,15 @@
   {
     (_this select 1) params ["_position", "_attachedObject"];
     (_this select 0) params ["_newCompatibleNRBQUniforms", "_newCompatibleChemicalDetectors", "_newCompatibleOxygenMasks", "_newCompatibleBackpacksWithOxygen"];
+    _newCompatibleOxygenMasks = parseSimpleArray ([_newCompatibleOxygenMasks, """", "'"] call CBA_fnc_replace);
+    _newCompatibleNRBQUniforms = parseSimpleArray ([_newCompatibleNRBQUniforms, """", "'"] call CBA_fnc_replace);
+    _newCompatibleChemicalDetectors = parseSimpleArray ([_newCompatibleChemicalDetectors, """", "'"] call CBA_fnc_replace);
+    _newCompatibleBackpacksWithOxygen = parseSimpleArray ([_newCompatibleBackpacksWithOxygen, """", "'"] call CBA_fnc_replace);
 
-    private ["_position", "_newCompatibleOxygenMasks", "_newCompatibleNRBQUniforms", "_newCompatibleChemicalDetectors", "_newCompatibleBackpacksWithOxygen"];
-    private _moduleGroup = createGroup [sideLogic, true];
-    "FCLA_Module_CBRN_Configuration" createUnit [_position, _moduleGroup, "
-      this setPos _position;
-      this setVariable ['FCLA_Oxygen_Masks', _newCompatibleOxygenMasks, true];
-      this setVariable ['FCLA_NRBQ_Uniforms', _newCompatibleNRBQUniforms, true];
-      this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-      this setVariable ['FCLA_Chemical_Detectors', _newCompatibleChemicalDetectors, true];
-      this setVariable ['FCLA_Backpacks_With_Oxygen', _newCompatibleBackpacksWithOxygen, true];
-    "];
+    missionNamespace setVariable ["FCLA_CBRN_Compatible_Oxygen_Masks", _newCompatibleOxygenMasks];
+    missionNamespace setVariable ["FCLA_CBRN_Compatible_NRBQ_Uniforms", _newCompatibleNRBQUniforms];
+    missionNamespace setVariable ["FCLA_CBRN_Compatible_Chemical_Detectors", _newCompatibleChemicalDetectors];
+    missionNamespace setVariable ["FCLA_CBRN_Compatible_Backpacks_With_Oxygen", _newCompatibleBackpacksWithOxygen];
     ["NUEVA CONFIGURACIÓN CBRN ESTABLECIDA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\CBRN.paa"] call ZEN_Custom_Modules_fnc_Register;

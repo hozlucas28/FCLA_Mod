@@ -27,16 +27,11 @@
    {
      (_this select 0) params ["_disableAutoHover"];
      (_this select 1) params ["_position", "_attachedObject"];
+     _allAirVehicles = vehicles select {_x isKindOf "Air"};
+     _disableAutoHover = if (_disableAutoHover == 0) then {"ACTIVATED";} else {"DEACTIVATED";};
 
-     private "_position";
-     private _moduleGroup = createGroup [sideLogic, true];
-     private _disableAutoHover = if (_disableAutoHover == 0) then {"ACTIVATED";} else {"DEACTIVATED";};
-     "FCLA_Module_Auto_Hover" createUnit [_position, _moduleGroup, "
-       this setPos _position;
-       this setVariable ['FCLA_Disable_Auto_Hover', _disableAutoHover, true];
-       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-     "];
-
+     missionNamespace setVariable ["FCLA_Auto_Hover", _disableAutoHover];
+     {(driver _x) action ["AutoHoverCancel", _x];} forEach _allAirVehicles;
      _text = if (_disableAutoHover == "ACTIVATED") then {"LA PROPULSIÓN AUTOMÁTICA HA SIDO ACTIVADA";} else {"LA PROPULSIÓN AUTOMÁTICA HA SIDO DESACTIVADA";};
      [_text] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
