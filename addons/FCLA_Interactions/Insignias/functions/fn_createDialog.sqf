@@ -62,22 +62,23 @@ _defaultValue = switch (toUpper _savedInsignia) do {
   case "FCLA_CBI": {0;};
   case "FCLA_CAI": {1;};
   case "FCLA_CPR": {2;};
-  case "FCLA_CAL": {3;};
-  case "FCLA_CFA": {4;};
-  case "FCLA_CMC": {5;};
-  case "FCLA_CFG": {6;};
-  case "FCLA_CEE": {7;};
-  case "FCLA_CIM": {8;};
-  case "FCLA_CTC": {9;};
-  case "FCLA_COR": {10;};
-  case "FCLA_CTS": {11;};
-  case "FCLA_CFT": {12;};
-  case "FCLA_OPVNT": {13;};
-  case "FCLA_PARA": {14;};
-  case "FCLA_CBC": {15;};
-  case "FCLA_FES": {16;};
-  case "FCLA_CPH": {17;};
-  case "FCLA_CPA": {18;};
+  case "FCLA_CPM": {3;};
+  case "FCLA_CAL": {4;};
+  case "FCLA_CFA": {5;};
+  case "FCLA_CMC": {6;};
+  case "FCLA_CFG": {7;};
+  case "FCLA_CEE": {8;};
+  case "FCLA_CIM": {9;};
+  case "FCLA_CTC": {10;};
+  case "FCLA_COR": {11;};
+  case "FCLA_CTS": {12;};
+  case "FCLA_CFT": {13;};
+  case "FCLA_OPVNT": {14;};
+  case "FCLA_PARA": {15;};
+  case "FCLA_CBC": {16;};
+  case "FCLA_FES": {17;};
+  case "FCLA_CPH": {18;};
+  case "FCLA_CPA": {19;};
   default {0;};
 };
 
@@ -87,15 +88,16 @@ _defaultValue = switch (toUpper _savedInsignia) do {
    ["COMBO", "Insignia",
     [
      [
-      "FCLA_CBI", "FCLA_CAI", "FCLA_CPR", "FCLA_CAL", "FCLA_CFA", "FCLA_CMC",
-      "FCLA_CFG", "FCLA_CEE", "FCLA_CIM", "FCLA_CTC", "FCLA_COR", "FCLA_CTS",
-      "FCLA_CFT", "FCLA_OPVNT", "FCLA_PARA", "FCLA_CBC", "FCLA_FES", "FCLA_CPH",
-      "FCLA_CPA"
+      "FCLA_CBI", "FCLA_CAI", "FCLA_CPR", "FCLA_CPM", "FCLA_CAL", "FCLA_CFA",
+      "FCLA_CMC", "FCLA_CFG", "FCLA_CEE", "FCLA_CIM", "FCLA_CTC", "FCLA_COR",
+      "FCLA_CTS", "FCLA_CFT", "FCLA_OPVNT", "FCLA_PARA", "FCLA_CBC", "FCLA_FES",
+      "FCLA_CPH", "FCLA_CPA"
      ],
      [
       ["CBI", "", "\FCLA_interactions\Insignias\data\pictures\CBI.paa"],
       ["CAI", "", "\FCLA_interactions\Insignias\data\pictures\CAI.paa"],
       ["CPR", "", "\FCLA_interactions\Insignias\data\pictures\CPR.paa"],
+      ["CPM", "", "\FCLA_interactions\Insignias\data\pictures\CPM.paa"],
       ["CAL", "", "\FCLA_interactions\Insignias\data\pictures\CAL.paa"],
       ["CFA", "", "\FCLA_interactions\Insignias\data\pictures\CFA.paa"],
       ["CMC", "", "\FCLA_interactions\Insignias\data\pictures\CMC.paa"],

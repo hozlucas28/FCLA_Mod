@@ -130,6 +130,15 @@ class FCLA_CPR {
 };
 
 
+class FCLA_CPM {
+	author = "hozlucas28";
+	displayName = "CPM";
+	texture = "\FCLA_Interactions\Insignias\data\CPM.paa";
+	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
+	textureVehicle = "";
+};
+
+
 class FCLA_CMC {
 	author = "hozlucas28";
 	displayName = "CMC";

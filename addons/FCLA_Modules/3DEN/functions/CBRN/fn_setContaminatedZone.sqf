@@ -54,29 +54,28 @@ if (_threatLevel <= 0) exitWith {["FCLA_Module_CBRN_Contaminated_Zone", "• MÓ
 
 
   {
-    _isHidden = isObjectHidden _x;
-    _isInvulnerable = !(isDamageAllowed _x);
+    _isNotHidden = !isObjectHidden _x;
+    _isVulnerable = isDamageAllowed _x;
     _backpackContainer = backpackContainer _x;
     _hasCompatibleOxygenMask = (goggles _x) in _compatibleOxygenMasks;
     _hasCompatibleNRBQUniform = (uniform _x) in _compatibleNRBQUniforms;
     _isBackpackOxygenActivated = _backpackContainer getVariable ["FCLA_Backpack_Oxygen_Activated", false];
     _hasCompatibleBackpackWithOxygen = (backpack _x) in _compatibleBackpacksWithOxygen;
 
-    _hasRequiredEquipment = switch (_threatLevel) do {
-      case 1: {_hasCompatibleOxygenMask;};
-      case 2: {(_hasCompatibleOxygenMask) && (_hasCompatibleBackpackWithOxygen) && (_isBackpackOxygenActivated);};
-      case 3: {(_hasCompatibleOxygenMask) && (_hasCompatibleBackpackWithOxygen) && (_isBackpackOxygenActivated) && (_hasCompatibleNRBQUniform);};
-      default {false;};
+    _hasNotRequiredEquipment = switch (_threatLevel) do {
+      case 1: {!_hasCompatibleOxygenMask;};
+      case 2: {(!_hasCompatibleOxygenMask) || (!_hasCompatibleBackpackWithOxygen) || (!_isBackpackOxygenActivated);};
+      case 3: {(!_hasCompatibleOxygenMask) || (!_hasCompatibleBackpackWithOxygen) || (!_isBackpackOxygenActivated) || (!_hasCompatibleNRBQUniform);};
+      default {true;};
     };
 
     _levelOfInjury = (linearConversion [_contaminationMaxRad, _quarterOfContaminationMaxRad, _x distance _module, 0, _threatLevel * 4, true]) / 25;
-    [format ["FCLA (log): %1 --- %2", _levelOfInjury, _hasRequiredEquipment]] call ACE_Common_fnc_serverLog;
-    if ((_isHidden) || (_isInvulnerable) || (_hasRequiredEquipment) || (_levelOfInjury <= 0)) exitWith {};
-
-    [_player, _levelOfInjury] call ACE_Medical_fnc_adjustPainLevel;
-    ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_x, _levelOfInjury, "Body", selectRandom ["burn", "unknown"], objNull, [], true]], _x] call CBA_fnc_targetEvent;
-    ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_x]], _x] call CBA_fnc_targetEvent;
-    if (!(_x in _playersAffected)) then {_playersAffected pushBack _x;};
+    if ((_isNotHidden) && (_isVulnerable) && (_hasNotRequiredEquipment) && (_levelOfInjury > 0)) then {
+      [_player, _levelOfInjury] call ACE_Medical_fnc_adjustPainLevel;
+      ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_x, _levelOfInjury, "Body", selectRandom ["burn", "unknown"], objNull, [], true]], _x] call CBA_fnc_targetEvent;
+      ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_x]], _x] call CBA_fnc_targetEvent;
+      if (!(_x in _playersAffected)) then {_playersAffected pushBack _x;};
+    };
   } forEach _playersInArea;
 
   {

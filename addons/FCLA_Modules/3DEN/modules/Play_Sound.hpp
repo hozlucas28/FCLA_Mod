@@ -15,7 +15,7 @@ class FCLA_Module_Play_Sound: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Sound.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_playSound3DEN";
-	isGlobal = 1;
+	isGlobal = 0; //1
   isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;

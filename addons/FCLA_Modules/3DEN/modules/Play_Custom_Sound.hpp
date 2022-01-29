@@ -15,7 +15,7 @@ class FCLA_Module_Play_Custom_Sound: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Sound.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_playCustomSound3DEN";
-	isGlobal = 1;
+	isGlobal = 0; //1
   canSetArea = 1;
   isDisposable = 1;
   canSetAreaHeight = 1;
