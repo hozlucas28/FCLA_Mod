@@ -26,6 +26,7 @@ class CBRN {
 
   class killedCBRNEH {file = "\FCLA_Interactions\CBRN\functions\BIS_EventHandlers\fn_Killed.sqf";};
   class respawnCBRNEH {file = "\FCLA_Interactions\CBRN\functions\BIS_EventHandlers\fn_Respawn.sqf";};
+  class showHoseCBRN {file = "\FCLA_Interactions\CBRN\functions\Backpack\fn_showHose.sqf";};
   class conditionCheckOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Backpack\fn_conditionCheckOxygen.sqf";};
   class statementCheckOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Backpack\fn_statementCheckOxygen.sqf";};
   class conditionActivateOxygenCBRN {file = "\FCLA_Interactions\CBRN\functions\Backpack\fn_conditionActivateOxygen.sqf";};

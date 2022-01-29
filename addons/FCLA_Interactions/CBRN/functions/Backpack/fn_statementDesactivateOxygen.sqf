@@ -12,7 +12,6 @@
 params ["_player"];
 _currentBackpack = backpack _player;
 _backpackContainer = backpackContainer _player;
-_backpacksWithFirehose = ["B_CombinationUnitRespirator_01_F", "B_SCBA_01_F"];
 _remainingBackpackOxygen = _backpackContainer getVariable ["FCLA_Backpack_Oxygen", FCLA_CBRN_Initial_Backpack_Oxygen];
 
 
@@ -25,21 +24,8 @@ if (_remainingBackpackOxygen <= 0) exitWith {
 
 
 //Quitar manguera.
+[_player, false] spawn FCLA_Interactions_fnc_showHoseCBRN;
 [_player, "FCLA_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;
-if (_currentBackpack in _backpacksWithFirehose) then {
-  switch (true) do {
-    case (_currentBackpack == (_backpacksWithFirehose select 0)): {
-      _backpackContainer setObjectTextureGlobal [1, ""];
-      _backpackContainer setObjectTextureGlobal [2, ""];
-      _backpackContainer setObjectTextureGlobal [3, ""];
-    };
-
-    case (_currentBackpack == (_backpacksWithFirehose select 1)): {
-      _backpackContainer setObjectTextureGlobal [1, ""];
-      _backpackContainer setObjectTextureGlobal [2, ""];
-    };
-  };
-};
 
 
 //Detener consumo de oxígeno.

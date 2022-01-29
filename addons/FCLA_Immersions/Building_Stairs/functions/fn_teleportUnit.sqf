@@ -44,4 +44,11 @@ _this spawn {
   [_unit, []] call ACE_Common_fnc_unhideUnit;
   [false] call ACE_Common_fnc_disableUserInput;
   _unit setVariable ["FCLA_inStairs", nil, true];
+
+
+  //Fix animación.
+  if ((gestureState _unit) in ["fcla_tactical_position_up_v1", "fcla_tactical_position_up_v2", "fcla_tactical_position_chest"]) then {
+    _unit setVariable ["FCLA_Tactical_Position", [false, false], true];
+    [_unit, "FCLA_Tactical_Position_Stop", "playActionNow"] call FCLA_Common_fnc_playAnimation;
+  };
 };

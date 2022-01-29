@@ -9,13 +9,13 @@
 ---------------------------------------------------------------------------- */
 
 _conditionToEnable = {
-  params ["_unit", "_container", "_item"];
-  [_unit, _item] call FCLA_Interactions_fnc_conditionCheckOxygenCBRN;
+  params ["_player", "_container", "_item"];
+  [_player, _item] call FCLA_Interactions_fnc_conditionCheckOxygenCBRN;
 };
 
 _conditionToShow = {
-  params ["_unit", "_container", "_item"];
-  [_unit, _item] call FCLA_Interactions_fnc_conditionCheckOxygenCBRN;
+  params ["_player", "_container", "_item"];
+  [_player, _item] call FCLA_Interactions_fnc_conditionCheckOxygenCBRN;
 };
 
 _Statement = {
