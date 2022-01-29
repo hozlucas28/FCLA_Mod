@@ -5,7 +5,7 @@
 
 class CfgPatches {
 	class FCLA_Immersions {
-		requiredAddons[] = {};
+		requiredAddons[] = {"FCLA_Core"};
 		#include "\FCLA_Immersions\units.hpp"
 		author = "hozlucas28";
 		version = "2.0";

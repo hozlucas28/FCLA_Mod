@@ -1,19 +1,14 @@
 
-/* ----------------------------------------------------------------------------
- * Author: hozlucas28
- *
- * Description:
- * Genera una explosión de humo.
- *
- * Public: [No]
----------------------------------------------------------------------------- */
+/********************************************************************************|
+|                   CONTROLADORES DE EVENTOS - "SEÑAL DE HUMO"                   |
+|********************************************************************************/
 
 ["FCLA_Smoke_Signal", {
   params ["_logic", "_logicPos", "_smokeColor"];
   if (isServer) exitWith {};
 
   _lightObj = "#lightpoint" createVehicleLocal _logicPos;
-  _lightObj attachTo [_logic, [0, 0, 0]];
+  _lightObj setPos _logicPos;
   _lightObj setLightBrightness 2;
   _lightObj setLightDayLight true;
   _lightObj setLightColor [1, 1, 1];
@@ -28,14 +23,15 @@
 
   _soundSourceOne = "VirtualAISquad" createVehicleLocal _logicPos;
   _soundSourceTwo = "VirtualAISquad" createVehicleLocal _logicPos;
+  _soundSourceOne setPos _logicPos;
+  _soundSourceTwo setPos _logicPos;
   _soundSourceOne say3D ["FCLA_Smoke_Explosion", 2000, 1, false, 0];
   _soundSourceTwo say3D ["FCLA_Smoke_Explosion_Echo", 3000, 1, false, 0];
-  {_x attachTo [_logic, [0, 0, 0]];} forEach [_soundSourceOne, _soundSourceTwo];
 
   [{
     params ["_logicPos", "_smokeColor"];
     _particleObj = "#particlesource" createVehicleLocal _logicPos;
-    _particleObj attachTo [_logic, [0, 0, 0]];
+    _particleObj setPos _logicPos;
     _particleObj setDropInterval 0.01;
     _particleObj setParticleCircle [0, [0, 0, 0]];
     _particleObj setParticleRandom [1, [1, 1, 1], [0.5, 0.5, 0.5], 1, 0, [0, 0, 0, 0], 0, 0];
@@ -43,7 +39,4 @@
     [{deleteVehicle _this;}, _particleObj, 0.1] call CBA_fnc_waitAndExecute;
   }, [_logicPos, _smokeColor], 0.2] call CBA_fnc_waitAndExecute;
   [{{deleteVehicle _x;} forEach _this;}, [_logic, _soundSourceOne, _soundSourceTwo], 4] call CBA_fnc_waitAndExecute;
-
-  if (!DEBUG) exitWith {};
-  ["[FCLA] (modules): Módulo 'Smoke Signal' ejecutado."] call ACE_Common_fnc_serverLog;
 }] call CBA_fnc_addEventHandler;
