@@ -40,7 +40,7 @@ _compatibleBackpacksWithOxygen = parseSimpleArray ([_compatibleBackpacksWithOxyg
 
 
 //Establecer configuración.
-[{time > 0}, {
+[{CBA_missionTime > 0}, {
   ["FCLA_CBRN_Compatible_Oxygen_Masks", _this select 1] call CBA_fnc_publicVariable;
   ["FCLA_CBRN_Compatible_NRBQ_Uniforms", _this select 2] call CBA_fnc_publicVariable;
   ["FCLA_CBRN_Compatible_Chemical_Detectors", _this select 3] call CBA_fnc_publicVariable;

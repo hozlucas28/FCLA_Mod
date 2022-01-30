@@ -11,7 +11,7 @@
 ["FCLA_Show_Subtitle", {
   if (isServer) exitWith {};
 
-  [{time > 0},
+  [{CBA_missionTime > 0},
   {
     params ["_module", "_emitterObject", "_emitter", "_subtitle", "_color", "_timeToHide", "_needShortRadio", "_needLongRadio", "_side", "_moduleArea", "_repeatable"];
     if (({_x <= 0} count [_moduleArea select 0, _moduleArea select 1, _moduleArea select 4]) >= 3) exitWith {

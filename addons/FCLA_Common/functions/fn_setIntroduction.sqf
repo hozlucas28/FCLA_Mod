@@ -77,8 +77,8 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 				_videoStatus = [FCLA_Introductory_Video] spawn BIS_fnc_playVideo;
 				waitUntil {scriptDone _videoStatus};
 				cutText ["", "BLACK IN", 3, true, false];
-				[false] call ACE_Common_fnc_disableUserInput;
 				player setVariable ["FCLA_Playing_Introduction", nil, true];
+				[{[false] call ACE_Common_fnc_disableUserInput;}, [], 0.2] call CBA_fnc_waitAndExecute;
 
 				[{
 					"dynamicBlur" ppEffectEnable true;
@@ -108,7 +108,7 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 
 			sleep 5;
 			cutText ["", "BLACK IN", 3, true, false];
-			[false] call ACE_Common_fnc_disableUserInput;
+			[{[false] call ACE_Common_fnc_disableUserInput;}, [], 0.2] call CBA_fnc_waitAndExecute;
 
 			[{
 				"dynamicBlur" ppEffectEnable true;
@@ -137,8 +137,8 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 				_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
 				waitUntil {scriptDone _videoStatus};
 				cutText ["", "BLACK IN", 3, true, false];
-				[false] call ACE_Common_fnc_disableUserInput;
 				player setVariable ["FCLA_Playing_Introduction", nil, true];
+				[{[false] call ACE_Common_fnc_disableUserInput;}, [], 0.2] call CBA_fnc_waitAndExecute;
 
 				[{
 					"dynamicBlur" ppEffectEnable true;
@@ -168,8 +168,8 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 
 			sleep 5;
 			cutText ["", "BLACK IN", 3, true, false];
-			[false] call ACE_Common_fnc_disableUserInput;
 			player setVariable ["FCLA_Playing_Introduction", nil, true];
+			[{[false] call ACE_Common_fnc_disableUserInput;}, [], 0.2] call CBA_fnc_waitAndExecute;
 
 			[{
 				"dynamicBlur" ppEffectEnable true;

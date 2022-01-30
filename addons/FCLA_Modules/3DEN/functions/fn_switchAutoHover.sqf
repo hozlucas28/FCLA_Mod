@@ -28,7 +28,7 @@ if (_moreThanOne) exitWith {["FCLA_Module_Auto_Hover", "• MÓDULO: PROPULSIÓN
 
 
 //Activar/Desactivar propulsión automática.
-[{time > 0}, {
+[{CBA_missionTime > 0}, {
   ["FCLA_Auto_Hover", _this select 1] call CBA_fnc_publicVariable;
   {(driver _x) action ["AutoHoverCancel", _x];} forEach (_this select 2);
   deleteVehicle (_this select 0);

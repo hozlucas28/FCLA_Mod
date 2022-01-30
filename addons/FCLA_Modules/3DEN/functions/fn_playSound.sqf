@@ -31,7 +31,7 @@ if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {["FCLA_Module_Play_S
 //Reproducir sonido.
 _findedEntity = if (_numberOfCompatibleSynchronizedObjects == 1) then {0;} else {-1;};
 _soundSource = if (_findedEntity > -1) then {_compatibleSynchronizedObjects select _findedEntity;} else {_module;};
-[{time > 0},
+[{CBA_missionTime > 0},
 {
   params ["_module", "_synchronizedObjects", "_isActivated", "_soundClass", "_soundDuration", "_loopSound", "_soundSource"];
   _module attachTo [_soundSource, [0, 0, 0]];

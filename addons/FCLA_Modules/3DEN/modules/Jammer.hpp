@@ -16,7 +16,7 @@ class FCLA_Module_Jammer: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Jammer.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setJammer3DEN";
-	isGlobal = 1;
+	isGlobal = 0; //1
   canSetArea = 1;
   isDisposable = 1;
   canSetAreaHeight = 1;
