@@ -10,7 +10,7 @@
 
 ["FCLA", "Colocar insignia", {
   params ["_position", "_attachedObject"];
-  _savedInsignia = _attachedObject getVariable ["FCLA_Insignia", FCLA_Default_Patche];
+  _savedInsignia = _attachedObject getVariable ["FCLA_Insignia", FCLA_Default_Insignia];
   _setInsigniaDisableByEditor = _attachedObject getVariable ['FCLA_Disable_Insignias', false];
   if ((isNull _attachedObject) || !(_attachedObject in allUnits)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UNA UNIDAD"] call ZEN_Common_fnc_showMessage;};
   if ((_setInsigniaDisableByEditor)) exitWith {["¡EL EDITOR A DESACTIVADO EL CAMBIO DE INSIGNIA EN ESTA UNIDAD!"] call ZEN_Common_fnc_showMessage;};

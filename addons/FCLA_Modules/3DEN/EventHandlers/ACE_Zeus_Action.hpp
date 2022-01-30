@@ -8,7 +8,7 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-["FCLA_ACE_Zeus_Action", {
+["FCLA_Module_ACE_Zeus_Action", {
   (_this select 1) params ["_parentPath"];
   (_this select 0) params ["_logic", "_name", "_icon", "_statement", "_condition"];
   if (isServer) exitWith {};

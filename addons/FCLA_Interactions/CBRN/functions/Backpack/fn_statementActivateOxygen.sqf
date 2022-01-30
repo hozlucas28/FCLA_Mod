@@ -52,7 +52,7 @@ _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
   _isNotControlledUnit = _player != _controlledUnit;
 
   if ((_isNotAlive) || (_isSwimming) || (_hasNotCompatibleMask) || (_hasNotCompatibleBackpack) || (_isBackpackOxygenDesactivated) || (_remainingBackpackOxygen <= 0)) exitWith {
-    [_player] spawn FCLA_Interactions_fnc_statementDesactivateOxygenCBRN;
+    if (_isBackpackOxygenDesactivated) then {[_player] spawn FCLA_Interactions_fnc_statementDesactivateOxygenCBRN;};
     [_handle] call CBA_fnc_removePerFrameHandler;
   };
   if ((((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) || (_inStairs) || (_inCurator) || (_inCameraMode) || (_isNotControlledUnit)) exitWith {_args set [1, CBA_missionTime];};

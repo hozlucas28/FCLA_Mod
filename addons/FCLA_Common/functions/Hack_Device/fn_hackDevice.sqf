@@ -95,7 +95,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
 
 
     //Contenido de los controles.
-    _savedInsignia = _caller getVariable ["FCLA_Insignia", FCLA_Default_Patche];
+    _savedInsignia = _caller getVariable ["FCLA_Insignia", FCLA_Default_Insignia];
     _hackingLaptopPatch = switch (toUpper _savedInsignia) do {
       case "FCLA_TAKANA": {["\FCLA_Common\data\Hacking_Laptop_Takana.paa", "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Takana.paa"]};
       case "FCLA_JAGUAR": {["\FCLA_Common\data\Hacking_Laptop_Jaguar.paa", "\FCLA_Objects\Electronics\data\Land_Hacking_Device_Black_F_Jaguar.paa"]};

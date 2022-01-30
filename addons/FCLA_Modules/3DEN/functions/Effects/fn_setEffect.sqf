@@ -41,7 +41,7 @@ switch (_selectedEffect) do {
   };
 
   default {
-    _jipID = ["FCLA_Spawn_Effect", [_module, _selectedEffect, _delayEffect]] call CBA_fnc_globalEventJIP;
+    _jipID = ["FCLA_Module_Spawn_Effect", [_module, _selectedEffect, _delayEffect]] call CBA_fnc_globalEventJIP;
     [_jipID, _module] call CBA_fnc_removeGlobalEventJIP;
   };
 }

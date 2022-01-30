@@ -8,7 +8,7 @@
 /* ----------------------------- PATEAR PUERTA ----------------------------- */
 
 [
-	["FCLA", "• General"], "FCLA_Kick_Door_Key",
+	"FCLA", "FCLA_Kick_Door_Key",
 	["Patear puerta", "Preciona 'Tecla asignada' para abrir una puerta que este cerrada."],
 	{
 		_player = call CBA_fnc_currentUnit;
@@ -23,7 +23,7 @@
   [DIK_F, [true, false, false]],
   false,
 	0,
-	false
+	true
 ] call CBA_fnc_addKeybind;
 
 
@@ -31,7 +31,7 @@
 /* -------------------------------- SILBAR --------------------------------- */
 
 [
-	["FCLA", "• General"], "FCLA_Hiss_Key",
+	"FCLA", "FCLA_Hiss_Key",
 	["Silbar", "Preciona 'Tecla asignada' para que tu personaje utilize el silbato. Si no posee uno, silbara."],
 	{
 		_player = call CBA_fnc_currentUnit;
@@ -44,7 +44,7 @@
   [DIK_T, [true, false, false]],
 	false,
 	0,
-	false
+	true
 ] call CBA_fnc_addKeybind;
 
 
@@ -52,7 +52,7 @@
 /* -------------------------- POSICIONES TÁCTICAS -------------------------- */
 
 [
-	["FCLA", "• General"], "FCLA_Tactical_Position_Up_Key",
+	"FCLA", "FCLA_Tactical_Position_Up_Key",
 	["Posición táctica (arriba)", "Preciona 'Tecla asignada' para adoptar la posición táctica con el arma arriba."],
 	{
 		_player = call CBA_fnc_currentUnit;
@@ -90,15 +90,15 @@
 		};
 	},
 	{},
-  [DIK_D, [true, false, true]],
+  [DIK_D, [false, false, true]],
 	false,
 	0,
-	false
+	true
 ] call CBA_fnc_addKeybind;
 
 
 [
-	["FCLA", "• General"], "FCLA_Tactical_Position_Down_Key",
+	"FCLA", "FCLA_Tactical_Position_Down_Key",
 	["Posición táctica (abajo)", "Preciona 'Tecla asignada' para adoptar la posición táctica con el arma abajo."],
 	{
 		_player = call CBA_fnc_currentUnit;
@@ -136,8 +136,8 @@
 		};
 	},
 	{},
-  [DIK_A, [true, false, true]],
+  [DIK_A, [false, false, true]],
 	false,
 	0,
-	false
+	true
 ] call CBA_fnc_addKeybind;

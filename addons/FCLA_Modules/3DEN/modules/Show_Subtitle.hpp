@@ -22,6 +22,7 @@ class FCLA_Module_Show_Subtitle: Module_F {
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;
   scope = 2;
+  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {
@@ -184,10 +185,4 @@ class FCLA_Module_Show_Subtitle: Module_F {
       "• Si sincronizas únicamente una entidad (objeto, unidad, vehículo, etc.) al módulo, esta se tomara como origen/centro del área. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."
     };
 	};
-};
-
-
-class FCLA_Module_Show_Subtitle_Empty: FCLA_Module_Show_Subtitle {
-  function = "";
-  scope = 1;
 };

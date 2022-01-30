@@ -36,5 +36,5 @@ if ((_emitter == "") || (_subtitle == "") || (_timeToHide <= 0)) exitWith {["FCL
 //Generar subtítulo.
 _emitterObject = if ((count _compatibleSynchronizedObjects) == 1) then {_compatibleSynchronizedObjects select 0;} else {_module;};
 if (_module != _emitterObject) then {_module attachTo [_emitterObject, [0, 0, 0]];};
-_jipID = ["FCLA_Show_Subtitle", [_module, _emitterObject, _emitter, _subtitle, _color, _timeToHide, _needShortRadio, _needLongRadio, _side, _moduleArea, _repeatable]] call CBA_fnc_globalEventJIP;
+_jipID = ["FCLA_Module_Show_Subtitle", [_module, _emitterObject, _emitter, _subtitle, _color, _timeToHide, _needShortRadio, _needLongRadio, _side, _moduleArea, _repeatable]] call CBA_fnc_globalEventJIP;
 [_jipID, _module] call CBA_fnc_removeGlobalEventJIP;

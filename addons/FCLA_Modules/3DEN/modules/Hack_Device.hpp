@@ -19,6 +19,7 @@ class FCLA_Module_Hack_Device: Module_F {
   isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
+  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {

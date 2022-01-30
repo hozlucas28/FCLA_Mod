@@ -118,16 +118,16 @@
    {
      (_this select 1) params ["_position", "_attachedObject"];
      (_this select 0) params ["_typeOfInjury", "_levelOfInjury", "_forceUnconsciousness", "_fractureRightArm", "_fractureLeftArm", "_fractureRightLeg", "_fractureLeftLeg"];
-     _fractureLeftArm = if (_fractureLeftArm == 0) then {true;} else {false;};
-     _fractureLeftLeg = if (_fractureLeftLeg == 0) then {true;} else {false;};
-     _fractureRightArm = if (_fractureRightArm == 0) then {true;} else {false;};
-     _fractureRightLeg = if (_fractureRightLeg == 0) then {true;} else {false;};
+     _fractureLeftArm = if (_fractureLeftArm == 0) then {1;} else {0;};
+     _fractureLeftLeg = if (_fractureLeftLeg == 0) then {1;} else {0;};
+     _fractureRightArm = if (_fractureRightArm == 0) then {1;} else {0;};
+     _fractureRightLeg = if (_fractureRightLeg == 0) then {1;} else {0;};
      _forceUnconsciousness = if (_forceUnconsciousness == 0) then {true;} else {false;};
 
-     ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_attachedObject, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true]], _attachedObject] call CBA_fnc_targetEvent;
-     _attachedObject setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
      [_attachedObject, _forceUnconsciousness] call ACE_Medical_fnc_setUnconscious;
-     ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_attachedObject]], _attachedObject] call CBA_fnc_targetEvent;
+     _attachedObject setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
+     ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_attachedObject, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true]], _attachedObject] call CBA_fnc_targetEvent;
+     ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_attachedObject]]] call CBA_fnc_globalEvent;
      ["LESIONES PROVOCADAS CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Medical_Cross.paa"] call ZEN_Custom_Modules_fnc_Register;

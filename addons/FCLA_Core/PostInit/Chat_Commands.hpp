@@ -71,17 +71,16 @@
 
   switch (_value) do {
     case "TRUE": {
-      ACE_Zeus_Zeus = objNull;
-      ["ACE_Zeus_createZeus", _player] call CBA_fnc_serverEvent;
-      [_player, _player getVariable ["FCLA_Insignia", FCLA_Default_Patche]] spawn FCLA_Interactions_fnc_statementInsignias;
+      ["ZEN_Common_createZeus", _player] call CBA_fnc_serverEvent;
+      [_player, _player getVariable ["FCLA_Insignia", FCLA_Default_Insignia]] spawn FCLA_Interactions_fnc_statementInsignias;
       [format ["Mod FCLA - %1 [%2] obtuvo Zeus a travez del comando de chat.", name _player, getPlayerUID _player]] call ACE_Common_fnc_serverLog;
       [{["FCLA_System_Chat", [format ["• Sistema: %1 obtuvo Zeus a travez del comando de chat.", [_this] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;}, _player, 0.1] call CBA_fnc_waitAndExecute;
     };
 
     case "FALSE": {
-      deleteVehicle ACE_Zeus_Zeus;
-      ACE_Zeus_Zeus = nil;
-      [_player, _player getVariable ["FCLA_Insignia", FCLA_Default_Patche]] spawn FCLA_Interactions_fnc_statementInsignias;
+      (findDisplay 312) closeDisplay 2;
+      deleteVehicle (getAssignedCuratorLogic _player);
+      [_player, _player getVariable ["FCLA_Insignia", FCLA_Default_Insignia]] spawn FCLA_Interactions_fnc_statementInsignias;
       [format ["Mod FCLA - %1 [%2] solto el Zeus a travez del comando de chat.", name _player, getPlayerUID _player]] call ACE_Common_fnc_serverLog;
       [{["FCLA_System_Chat", [format ["• Sistema: %1 solto el Zeus a travez del comando de chat.", [_this] call FCLA_Common_fnc_getCleanName]]] call CBA_fnc_globalEvent;}, _player, 0.1] call CBA_fnc_waitAndExecute;
     };

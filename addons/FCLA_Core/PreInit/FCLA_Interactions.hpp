@@ -8,7 +8,7 @@
 /* -------------------------------- GENERAL -------------------------------- */
 
 [
-	"FCLA_Default_Patche", "LIST",
+	"FCLA_Default_Insignia", "LIST",
 	["Insignia", "Determina el parche del pelotón que se te colocara al comienzo de la misión. ¡ESTA OPCIÓN FUNCIONA DE MANERA LOCAL!"],
 	["FCLA Interacciones", "• General"],
 	[

@@ -33,7 +33,7 @@ _parentPath = parseSimpleArray ([_parentPath, """", "'"] call CBA_fnc_replace);
 
 
 //Crear y asociar acción.
-["FCLA_ACE_Zeus_Action", [
+["FCLA_Module_ACE_Zeus_Action", [
  [_module, _name, _icon, _statement, _condition],
  [_parentPath]
 ]] call CBA_fnc_globalEventJIP;

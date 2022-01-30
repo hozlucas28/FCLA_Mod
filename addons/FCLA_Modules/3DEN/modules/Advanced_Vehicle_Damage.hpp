@@ -20,6 +20,7 @@ class FCLA_Module_Advanced_Vehicle_Damage: Module_F {
   isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
+  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {

@@ -10,7 +10,7 @@
 
 //Variables de referencia.
 params ["_unit", "_isSelf"];
-_savedInsignia = _unit getVariable ["FCLA_Insignia", FCLA_Default_Patche];
+_savedInsignia = _unit getVariable ["FCLA_Insignia", FCLA_Default_Insignia];
 
 
 

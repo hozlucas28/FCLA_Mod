@@ -19,6 +19,7 @@ class FCLA_Module_Auto_Hover: Module_F {
   isDisposable = 1;
 	isTriggerActivated = 0;
   scope = 2;
+  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {

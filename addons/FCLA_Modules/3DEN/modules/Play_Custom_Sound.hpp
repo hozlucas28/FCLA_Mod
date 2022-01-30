@@ -15,12 +15,13 @@ class FCLA_Module_Play_Custom_Sound: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Sound.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_playCustomSound3DEN";
-	isGlobal = 0; //1
+	isGlobal = 0;
   canSetArea = 1;
   isDisposable = 1;
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;
   scope = 2;
+  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {
@@ -62,4 +63,5 @@ class FCLA_Module_Play_Custom_Sound: Module_F {
 class FCLA_Module_Play_Custom_Sound_Empty: FCLA_Module_Play_Custom_Sound {
   function = "";
   scope = 1;
+  scopeCurator = 2;
 };

@@ -16,12 +16,13 @@ class FCLA_Module_Jammer: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Jammer.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_setJammer3DEN";
-	isGlobal = 0; //1
+	isGlobal = 0;
   canSetArea = 1;
   isDisposable = 1;
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;
   scope = 2;
+  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {
@@ -78,4 +79,5 @@ class FCLA_Module_Jammer: Module_F {
 class FCLA_Module_Jammer_Empty: FCLA_Module_Jammer {
   function = "";
   scope = 1;
+  scopeCurator = 2;
 };

@@ -8,7 +8,7 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-["FCLA_EMP_Visual_Effect", {
+["FCLA_Module_EMP_Visual_Effect", {
   _this spawn {
     params ["_logic", "_rad"];
     _player = call CBA_fnc_currentUnit;

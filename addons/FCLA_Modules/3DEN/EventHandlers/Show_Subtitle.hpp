@@ -8,7 +8,7 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-["FCLA_Show_Subtitle", {
+["FCLA_Module_Show_Subtitle", {
   if (isServer) exitWith {};
 
   [{CBA_missionTime > 0},

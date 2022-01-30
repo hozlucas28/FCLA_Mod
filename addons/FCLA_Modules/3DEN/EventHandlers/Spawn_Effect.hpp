@@ -8,7 +8,7 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-["FCLA_Spawn_Effect", {
+["FCLA_Module_Spawn_Effect", {
   params ["_logic", "_effect", "_delayEffect"];
   if (isServer) exitWith {};
 

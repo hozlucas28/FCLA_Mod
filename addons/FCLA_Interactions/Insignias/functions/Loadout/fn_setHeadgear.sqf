@@ -9,7 +9,7 @@
 ---------------------------------------------------------------------------- */
 
 //Variables de referencia.
-params ["_unit", ["_insignia", (_this select 0) getVariable ["FCLA_Insignia", FCLA_Default_Patche]]];
+params ["_unit", "_insignia"];
 _getPlatoon = [_insignia, (_insignia find "_") + 1, 100] call CBA_fnc_substring;
 _platoon = if ((_getPlatoon == "Unassigned") || (_getPlatoon == "Common")) then {"FCLA";} else {_getPlatoon;};
 _currentHeadgear = headgear _unit;

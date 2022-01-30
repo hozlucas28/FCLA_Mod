@@ -24,11 +24,11 @@ _unit setVariable ["BIS_fnc_setUnitInsignia_class", nil, true];
 [{
   if ([_this select 0] call FCLA_Common_fnc_isCurator) exitWith {[_this select 0, "Curator"] call BIS_fnc_setUnitInsignia;};
   [_this select 0, _this select 1] call BIS_fnc_setUnitInsignia;
-}, [_unit, _insignia], 0.1] call CBA_fnc_waitAndExecute;
+}, [_unit, _insignia], 0.2] call CBA_fnc_waitAndExecute;
 
 
 
 //Guardar insignia.
-_savedInsignia = _unit getVariable ["FCLA_Insignia", FCLA_Default_Patche];
+_savedInsignia = _unit getVariable ["FCLA_Insignia", FCLA_Default_Insignia];
 if (_savedInsignia == _insignia) exitWith {};
 _unit setVariable ["FCLA_Insignia", _insignia, true];

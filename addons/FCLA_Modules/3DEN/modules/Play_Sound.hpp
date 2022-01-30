@@ -15,10 +15,11 @@ class FCLA_Module_Play_Sound: Module_F {
   portrait = "\FCLA_Modules\3DEN\data\Sound.paa";
 	category = "FCLA_Modules";
 	function = "FCLA_Modules_fnc_playSound3DEN";
-	isGlobal = 0; //1
+	isGlobal = 0;
   isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
+  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {

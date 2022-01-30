@@ -22,6 +22,7 @@ class FCLA_Module_Switch_Lights: Module_F {
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;
   scope = 2;
+  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {
