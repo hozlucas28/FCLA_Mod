@@ -19,7 +19,6 @@ class FCLA_Module_Play_Sound: Module_F {
   isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
-  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {

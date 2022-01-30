@@ -10,7 +10,7 @@
 
 class FCLA_Module_Spawn_Effect: Module_F {
   author = "hozlucas28";
-	displayName = "Generar efecto";
+	displayName = "Generar efecto (BETA)";
   icon = "\FCLA_Modules\3DEN\data\Common.paa";
   portrait = "\FCLA_Modules\3DEN\data\Common.paa";
 	category = "FCLA_Modules";
@@ -19,7 +19,6 @@ class FCLA_Module_Spawn_Effect: Module_F {
   isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
-  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {
@@ -78,5 +77,4 @@ class FCLA_Module_Spawn_Effect: Module_F {
 class FCLA_Module_Spawn_Effect_Empty: FCLA_Module_Spawn_Effect {
   function = "";
   scope = 1;
-  scopeCurator = 2;
 };

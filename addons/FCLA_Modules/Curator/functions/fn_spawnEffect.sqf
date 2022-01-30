@@ -8,7 +8,7 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-["FCLA", "Generar efecto", {
+["FCLA", "Generar efecto (BETA)", {
   ["EFECTO",
 	 [
     ["COMBO", "Tipo de efecto",
@@ -49,7 +49,7 @@
        case "Fire": {"FUEGO";};
        case "Smoke": {"HUMO";};
        case "Sparks": {"CHISPAS";};
-       case "Wind_gust": {"RÁFAGA DE VIENTO";};
+       case "Wind_Gust": {"RÁFAGA DE VIENTO";};
        case "Fireflies": {"LUCIÉRNAGAS";};
      };
 
@@ -59,7 +59,7 @@
      [_module, [], true] call FCLA_Modules_fnc_setEffect3DEN;
 
      _curatorLogic = getAssignedCuratorLogic player;
-     _curatorLogic addCuratorEditableObjects [[_module], false];
+     ["ZEN_Common_addObjects", [[_module], _curatorLogic]] call CBA_fnc_serverEvent;
      ["EL EFECTO " + _effectName + " SE HA GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, ""] call ZEN_Custom_Modules_fnc_Register;

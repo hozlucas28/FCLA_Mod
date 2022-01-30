@@ -50,7 +50,7 @@
     [_module, [], true] call FCLA_Modules_fnc_setCBRNContaminatedZone3DEN;
 
     _curatorLogic = getAssignedCuratorLogic player;
-    _curatorLogic addCuratorEditableObjects [[_module], false];
+    ["ZEN_Common_addObjects", [[_module], _curatorLogic]] call CBA_fnc_serverEvent;
     ["ZONA CONTAMINADA GENERADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Contaminated_Zone.paa"] call ZEN_Custom_Modules_fnc_Register;

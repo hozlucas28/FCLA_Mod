@@ -51,7 +51,7 @@
        _jammerModule setVariable ['objectArea', [_rad, _rad, 0, false, _rad], true];
        [_jammerModule, [], true] call FCLA_Modules_fnc_setJammer3DEN;
        _curatorLogic = getAssignedCuratorLogic player;
-       _curatorLogic addCuratorEditableObjects [[_jammerModule], false];
+       ["ZEN_Common_addObjects", [[_jammerModule], _curatorLogic]] call CBA_fnc_serverEvent;
      };
      ["PULSO ELECTROMAGNÉTICO GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;

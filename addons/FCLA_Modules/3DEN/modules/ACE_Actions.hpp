@@ -24,7 +24,6 @@ class FCLA_Module_ACE_Class_Action: Module_F {
   isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
-  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {

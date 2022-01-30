@@ -10,7 +10,7 @@
 
 class FCLA_Module_Show_Subtitle: Module_F {
   author = "hozlucas28";
-	displayName = "Mostrar subtítulo";
+	displayName = "Mostrar subtítulo (BETA)";
   icon = "\FCLA_Modules\3DEN\data\Chat.paa";
   portrait = "\FCLA_Modules\3DEN\data\Chat.paa";
 	category = "FCLA_Modules";
@@ -22,7 +22,6 @@ class FCLA_Module_Show_Subtitle: Module_F {
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;
   scope = 2;
-  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {

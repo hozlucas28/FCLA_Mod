@@ -20,7 +20,6 @@ class FCLA_Module_EMP: Module_F {
   isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
-  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {
@@ -53,5 +52,4 @@ class FCLA_Module_EMP: Module_F {
 class FCLA_Module_EMP_Empty: FCLA_Module_EMP {
   function = "";
   scope = 1;
-  scopeCurator = 2;
 };

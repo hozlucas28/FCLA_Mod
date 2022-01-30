@@ -22,7 +22,6 @@ class FCLA_Module_CBRN_Contaminated_Zone: Module_F {
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;
   scope = 2;
-  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {
@@ -77,5 +76,4 @@ class FCLA_Module_CBRN_Contaminated_Zone: Module_F {
 class FCLA_Module_CBRN_Contaminated_Zone_Empty: FCLA_Module_CBRN_Contaminated_Zone {
   function = "";
   scope = 1;
-  scopeCurator = 2;
 };

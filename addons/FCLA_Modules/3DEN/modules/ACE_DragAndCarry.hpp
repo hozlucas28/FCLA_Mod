@@ -20,7 +20,6 @@ class FCLA_Module_Drag_And_Carry: Module_F {
   isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
-  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {

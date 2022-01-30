@@ -22,7 +22,6 @@ class FCLA_Module_Jammer: Module_F {
   canSetAreaHeight = 1;
 	isTriggerActivated = 1;
   scope = 2;
-  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {
@@ -79,5 +78,4 @@ class FCLA_Module_Jammer: Module_F {
 class FCLA_Module_Jammer_Empty: FCLA_Module_Jammer {
   function = "";
   scope = 1;
-  scopeCurator = 2;
 };

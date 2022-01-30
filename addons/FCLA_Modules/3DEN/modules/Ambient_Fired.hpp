@@ -19,7 +19,6 @@ class FCLA_Module_Ambient_Fired: Module_F {
   isDisposable = 1;
 	isTriggerActivated = 1;
   scope = 2;
-  scopeCurator = 1;
 
 
 	class Attributes: AttributesBase {
@@ -88,5 +87,4 @@ class FCLA_Module_Ambient_Fired: Module_F {
 class FCLA_Module_Ambient_Fired_Empty: FCLA_Module_Ambient_Fired {
   function = "";
   scope = 1;
-  scopeCurator = 2;
 };

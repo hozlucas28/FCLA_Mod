@@ -114,7 +114,7 @@
       [_module, [_attachedObject], true] call FCLA_Modules_fnc_setAmbientFired3DEN;
 
       _curatorLogic = getAssignedCuratorLogic player;
-      _curatorLogic addCuratorEditableObjects [[_module], false];
+      ["ZEN_Common_addObjects", [[_module], _curatorLogic]] call CBA_fnc_serverEvent;
       ["EL VEHÍCULO COMENZARA A REALIZAR DISPAROS AMBIENTALES"] call ZEN_Common_fnc_showMessage;
     }, {}, [_position, _attachedObject, _weaponSelected]] call ZEN_Dialog_fnc_Create;
   }, {}, [_position, _attachedObject, _vehicleName, _vehicleWeapons, _vehicleWeaponsNames]] call ZEN_Dialog_fnc_Create;
