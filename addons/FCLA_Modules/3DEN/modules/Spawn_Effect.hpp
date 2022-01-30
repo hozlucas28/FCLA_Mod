@@ -73,3 +73,10 @@ class FCLA_Module_Spawn_Effect: Module_F {
 		description[] =	{"Genera el efecto seleccionado en la posición del módulo."};
 	};
 };
+
+
+class FCLA_Module_Spawn_Effect_Empty: FCLA_Module_Spawn_Effect {
+  function = "";
+  scope = 1;
+  scopeCurator = 2;
+};

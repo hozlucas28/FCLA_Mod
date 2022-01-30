@@ -123,7 +123,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
       _hasShortRadio = if ((!isNull _emitter) && (_needShortRadio)) then {call TFAR_fnc_haveSWRadio;} else {true;};
       _hasLongRadio = if ((!isNull _emitter) && (_needLongRadio)) then {call TFAR_fnc_haveLRRadio;} else {true;};
       _isSelectedSide = if ((!isNull _emitter) && ((_selectedSide) isNotEqualTo "All")) then {(side _caller) == _selectedSide;} else {true;};
-      _notShowingSubtitles = !(localNamespace getVariable ["FCLA_Showing_Subtitles", false]);
+      _notShowingSubtitles = !(player getVariable ["FCLA_Subtitles", false]);
       _isCloseEnough = if (!isNull _emitter) then {
         if (_distanceToShow isEqualType 0) then {
           if (_distanceToShow <= 0) exitWith {true;};
@@ -140,7 +140,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
         waitUntil {_display = uiNamespace getVariable "BIS_dynamicText"; !(isNull _display)};
         _ctrl = _display displayCtrl 9999;
         _emitter setVariable ["FCLA_Subtitles_ctrl", _ctrl, true];
-        localNamespace setVariable ["FCLA_Showing_Subtitles", true];
+        player setVariable ["FCLA_Subtitles", true];
 
         _ctrlBackground = _display ctrlCreate ["RscText", 99999];
         _w = 0.4 * safeZoneW;
@@ -159,7 +159,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
         sleep (ceil _timeToHideEachLine);
         _ctrl ctrlSetFade 1;
         _ctrl ctrlCommit 0.5;
-        localNamespace setVariable ["FCLA_Showing_Subtitles", nil];
+        player setVariable ["FCLA_Subtitles", nil];
       } else {
         sleep (ceil _timeToHideEachLine);
       };
@@ -172,7 +172,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
   //Eliminar variables de tipo objeto/interfaz.
   _emitter setVariable ["FCLA_Hide_Subtitles", nil, true];
   _emitter setVariable ["FCLA_Subtitles_ctrl", nil, true];
-  localNamespace setVariable ["FCLA_Showing_Subtitles", nil];
+  player setVariable ["FCLA_Subtitles", nil];
 
 
   //Eliminar lógica y detener labios del emisor.

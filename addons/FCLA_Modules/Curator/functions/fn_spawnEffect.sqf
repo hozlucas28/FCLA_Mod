@@ -53,18 +53,11 @@
        case "Fireflies": {"LUCIÉRNAGAS";};
      };
 
-     private "_position";
-     private _moduleGroup = createGroup [sideLogic, true];
-     private _delay = round _delay;
-     private _selectedEffect = toUpper _selectedEffect;
-     "FCLA_Module_Spawn_Effect" createUnit [_position, _moduleGroup, "
-       this setPos _position;
-       this setVariable ['FCLA_Delay', _delay, true];
-       this setVariable ['FCLA_Effect', _selectedEffect, true];
-       this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-     "];
+     _module = createAgent ["FCLA_Module_Spawn_Effect_Empty", _position, [], 0, "CAN_COLLIDE"];
+     _module setVariable ["FCLA_Delay", _delay, true];
+     _module setVariable ["FCLA_Effect", _selectedEffect, true];
+     [_module, [], true] call FCLA_Modules_fnc_setEffect3DEN;
 
-     _module = nearestObject [_position, "FCLA_Module_Spawn_Effect"];
      _curatorLogic = getAssignedCuratorLogic player;
      _curatorLogic addCuratorEditableObjects [[_module], false];
      ["EL EFECTO " + _effectName + " SE HA GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
