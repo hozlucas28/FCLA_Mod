@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo para generar una señal de humo.
+ * Genera una señal de humo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

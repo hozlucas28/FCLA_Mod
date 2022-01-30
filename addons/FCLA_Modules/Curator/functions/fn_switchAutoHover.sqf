@@ -3,8 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo para activar/desactivar la propulsión automática que poseen
- * los helicópteros.
+ * Alterna la propulsión automática de los helicópteros.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

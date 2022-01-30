@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo para generar un mensaje a modo de subtítulo.
+ * Genera un mensaje a modo de subtítulo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo que modifica el equipamiento compatible para poder utilizar
- * las utilidades relacionadas al CBRN y poder acceder a las zonas contaminadas
+ * Modifica el equipamiento compatible para poder utilizar las utilidades
+ * relacionadas al CBRN y poder acceder a las zonas contaminadas
  * sin riesgo alguno.
  *
  * Public: [No]

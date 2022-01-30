@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo que permite activar/desactivar las turbulencias de la aeronave.
+ * Permite activar/desactivar las turbulencias de la aeronave.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo para alternar el acceso que tiene la unidad al modo cámara.
+ * Alterna el acceso que tiene la unidad al modo cámara.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

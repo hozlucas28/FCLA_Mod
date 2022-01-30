@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo para provocarle lesiones a la unidad.
+ * Provoca lesiones a la unidad.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

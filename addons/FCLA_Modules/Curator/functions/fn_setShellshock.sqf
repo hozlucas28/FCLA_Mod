@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo para provocar un efecto de conmoción en la unidad.
+ * Provoca un efecto de conmoción en la unidad.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

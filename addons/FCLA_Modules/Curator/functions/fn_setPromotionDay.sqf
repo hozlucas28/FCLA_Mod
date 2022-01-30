@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo para modificar el addon option: ¿Día de ascensos? - FCLA Interacciones.
+ * Determina que se trata de un día de ascensos.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

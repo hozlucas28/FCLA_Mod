@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo para modificar el alcance de las radios de onda corta y larga.
+ * Modifica el alcance de las radios de onda corta y larga.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

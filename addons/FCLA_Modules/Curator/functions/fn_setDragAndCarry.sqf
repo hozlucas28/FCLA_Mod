@@ -3,8 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo que modifica las propiedades del objeto para que pueda ser
- * arrastrado y/o portado.
+ * Modifica las propiedades del objeto para que pueda ser arrastrado y/o portado.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

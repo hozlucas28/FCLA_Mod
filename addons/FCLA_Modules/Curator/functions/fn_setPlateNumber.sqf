@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo que modifica la matrícula del vehículo.
+ * Modifica la matrícula del vehículo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

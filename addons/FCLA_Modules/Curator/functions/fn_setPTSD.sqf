@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo para provoca un trastorno por estrés postraumático en la unidad.
+ * Provoca un trastorno por estrés postraumático en la unidad.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

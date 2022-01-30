@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo para evita que el vehículo reciba un daño fatal, dejandolo con
- * un daño total sin provocar su destrucción.
+ * Evita que el vehículo reciba un daño fatal, dejandolo con un daño total
+ * sin provocar su destrucción.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

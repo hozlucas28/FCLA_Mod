@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo que modifica la identificación de la unidad.
+ * Modifica la identificación de la unidad.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

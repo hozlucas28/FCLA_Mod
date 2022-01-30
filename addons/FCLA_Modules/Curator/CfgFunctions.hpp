@@ -49,6 +49,11 @@ class Curator {
     postInit = 1;
   };
 
+  class spawnEffectCurator {
+    file = "\FCLA_Modules\Curator\functions\fn_spawnEffect.sqf";
+    postInit = 1;
+  };
+
   class setShellshockCurator {
     file = "\FCLA_Modules\Curator\functions\fn_setShellshock.sqf";
     postInit = 1;

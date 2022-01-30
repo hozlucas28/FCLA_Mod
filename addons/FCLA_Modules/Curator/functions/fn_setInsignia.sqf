@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo que permite colocarle una insignia a la unidad.
+ * Permite colocar una insignia a la unidad.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
