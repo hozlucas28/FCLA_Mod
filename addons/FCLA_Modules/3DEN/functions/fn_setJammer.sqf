@@ -99,7 +99,7 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
 
 //Acción para desactivar.
 if ((_module == _jammerSource) || (!_canBeDisabled)) exitWith {};
-[_jammerSource, "desactivar jammer", "\FCLA_Data\Hold_Actions\Desactivate_Jammer.paa", _needHackingDevice] call FCLA_Common_fnc_hackDevice;
+[_jammerSource, "desactivar jammer", "\FCLA_Data\Hold_Actions\Deactivate_Jammer.paa", _needHackingDevice] call FCLA_Common_fnc_hackDevice;
 
 
 //Notificar a los Zeus.
