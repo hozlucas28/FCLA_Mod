@@ -8,7 +8,7 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-class FCLA_Create_Injuries: Module_F {
+class FCLA_Module_Create_Injuries: Module_F {
   author = "hozlucas28";
   displayName = "Provocar lesiones (ACE)";
   icon = "\FCLA_Modules\3DEN\data\Medical_Cross.paa";
