@@ -20,9 +20,6 @@
         [{deleteVehicle _this;}, _module, _timeToHide + 1] call CBA_fnc_waitAndExecute;
         ["FCLA_Show_Subtitles", [_emitterObject, _line, _color, _timeToHide, _conditions]] call CBA_fnc_localEvent;
       }, [_module, _emitterObject, [[_emitter, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _side, -1]], 1] call CBA_fnc_waitAndExecute;
-
-      if (!DEBUG) exitWith {};
-      ["[FCLA] (modules): Módulo 'Show Subtitle' ejecutado."] call ACE_Common_fnc_serverLog;
     };
 
     _Condition = {
@@ -47,8 +44,5 @@
     _trigger setTriggerStatements [[_Condition] call ACE_Common_fnc_codeToString, [_StatementOnActivation] call ACE_Common_fnc_codeToString, [_StatementOnDeactivation] call ACE_Common_fnc_codeToString];
     _trigger setVariable ["FCLA_Subtitle_Attributes", [_emitterObject, [[_emitter, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _side, _moduleArea]], true];
     [{(!alive (_this select 1)) || (!alive (_this select 2))}, {{deleteVehicle _x;} forEach _this;}, [_module, _emitterObject, _trigger]] call CBA_fnc_waitUntilAndExecute;
-
-    if (!DEBUG) exitWith {};
-    ["[FCLA] (modules): Módulo 'Show Subtitle' ejecutado."] call ACE_Common_fnc_serverLog;
   }, _this] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;

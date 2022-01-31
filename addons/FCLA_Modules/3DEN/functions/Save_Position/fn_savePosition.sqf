@@ -34,9 +34,7 @@ if ((!_saveLoadoutState) && (!_saveVehicleState) && (!_savePosAndDirState)) exit
 //Al conectarse.
 addMissionEventHandler ["PlayerConnected", {
   params ["_eventHandlerID", "_playerUID", "_playerName", "_JIP", "_player", "_eventHandlerIDStr"];
-  ["[FCLA] (modules): Módulo 'Save Position' entro 1."] call ACE_Common_fnc_serverLog;
   _playersSavedPositionData = if (isNil "FCLA_Players_Saved_Position_Data") then {[];} else {FCLA_Players_Saved_Position_Data;};
-  //_playersSavedPositionData = missionNamespace getVariable ["FCLA_Players_Saved_Position_Data", []];
   _findedUID = _playersSavedPositionData find _playerUID;
   if ((!_JIP) || (_playersSavedPositionData isEqualTo []) || (_findedUID <= -1)) exitWith {};
   _playerData = (_playersSavedPositionData select (_findedUID + 1));
@@ -48,9 +46,7 @@ addMissionEventHandler ["PlayerConnected", {
 addMissionEventHandler ["HandleDisconnect", {
   params ["_player", "_eventHandlerID", "_playerUID", "_playerName"];
   _thisArgs params ["_savePosAndDirState", "_saveLoadoutState", "_saveVehicleState"];
-  ["[FCLA] (modules): Módulo 'Save Position' entro 2."] call ACE_Common_fnc_serverLog;
   _playersSavedPositionData = if (isNil "FCLA_Players_Saved_Position_Data") then {[];} else {FCLA_Players_Saved_Position_Data;};
-  //_playersSavedPositionData = missionNamespace getVariable ["FCLA_Players_Saved_Position_Data", []];
   _findedUID = _playersSavedPositionData find _playerUID;
 
   _vehicleToSave = if (_saveVehicleState) then {vehicle _player;};
@@ -61,14 +57,9 @@ addMissionEventHandler ["HandleDisconnect", {
     _playerData = _findedUID + 1;
     _playersSavedPositionData set [_playerData, [_posAndDirToSave, _loadoutToSave, _vehicleToSave]];
     ["FCLA_Players_Saved_Position_Data", _playersSavedPositionData] call CBA_fnc_publicVariable;
-    //missionNamespace setVariable ["FCLA_Players_Saved_Position_Data", _playersSavedPositionData];
   } else {
     _playersSavedPositionData pushBack _playerUID;
     _playersSavedPositionData pushBack [_posAndDirToSave, _loadoutToSave, _vehicleToSave];
     ["FCLA_Players_Saved_Position_Data", _playersSavedPositionData] call CBA_fnc_publicVariable;
-    //missionNamespace setVariable ["FCLA_Players_Saved_Position_Data", _playersSavedPositionData];
   };
 }, [_savePosAndDirState, _saveLoadoutState, _saveVehicleState]];
-
-
-["[FCLA] (modules): Módulo 'Save Position' ejecutado."] call ACE_Common_fnc_serverLog;

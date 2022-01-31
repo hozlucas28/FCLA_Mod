@@ -70,15 +70,22 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			player action ["WeaponOnBack", player];
 			cutText ["", "BLACK FADED", 3600, true, false];
 			player setVariable ["FCLA_Playing_Introduction", true, true];
-			[{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
-			["FCLA (log): ENTRO 1"] call ACE_Common_fnc_serverLog;
+
+			[{
+				[true] call ACE_Common_fnc_disableUserInput;
+				[player, true] call TFAR_fnc_forceSpectator;
+			}, [], 0.1] call CBA_fnc_waitAndExecute;
 
 			if ((FCLA_Introduction_Title == "") || (FCLA_Introduction_Subtitle == "")) exitWith {
 				_videoStatus = [FCLA_Introductory_Video] spawn BIS_fnc_playVideo;
 				waitUntil {scriptDone _videoStatus};
 				cutText ["", "BLACK IN", 3, true, false];
 				player setVariable ["FCLA_Playing_Introduction", nil, true];
-				[{[false] call ACE_Common_fnc_disableUserInput;}, [], 0.2] call CBA_fnc_waitAndExecute;
+
+				[{
+					[false] call ACE_Common_fnc_disableUserInput;
+					[player, false] call TFAR_fnc_forceSpectator;
+				}, [], 0.2] call CBA_fnc_waitAndExecute;
 
 				[{
 					"dynamicBlur" ppEffectEnable true;
@@ -90,7 +97,6 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			};
 
 			_videoStatus = [FCLA_Introductory_Video] spawn BIS_fnc_playVideo;
-			[format ["FCLA (log): %1", FCLA_Introductory_Video]] call ACE_Common_fnc_serverLog;
 			waitUntil {scriptDone _videoStatus};
 			playsound "FCLA_Introduction";
 
@@ -108,7 +114,11 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 
 			sleep 5;
 			cutText ["", "BLACK IN", 3, true, false];
-			[{[false] call ACE_Common_fnc_disableUserInput;}, [], 0.2] call CBA_fnc_waitAndExecute;
+
+			[{
+				[false] call ACE_Common_fnc_disableUserInput;
+				[player, false] call TFAR_fnc_forceSpectator;
+			}, [], 0.2] call CBA_fnc_waitAndExecute;
 
 			[{
 				"dynamicBlur" ppEffectEnable true;
@@ -130,15 +140,22 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			player action ["WeaponOnBack", player];
 			cutText ["", "BLACK FADED", 3600, true, false];
 			player setVariable ["FCLA_Playing_Introduction", true, true];
-			[{[true] call ACE_Common_fnc_disableUserInput;}, [], 0.1] call CBA_fnc_waitAndExecute;
-			["FCLA (log): ENTRO 2"] call ACE_Common_fnc_serverLog;
+
+			[{
+				[true] call ACE_Common_fnc_disableUserInput;
+				[player, true] call TFAR_fnc_forceSpectator;
+			}, [], 0.1] call CBA_fnc_waitAndExecute;
 
 			if ((_title == "") || (_subtitle == "")) exitWith {
 				_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
 				waitUntil {scriptDone _videoStatus};
 				cutText ["", "BLACK IN", 3, true, false];
 				player setVariable ["FCLA_Playing_Introduction", nil, true];
-				[{[false] call ACE_Common_fnc_disableUserInput;}, [], 0.2] call CBA_fnc_waitAndExecute;
+
+				[{
+					[false] call ACE_Common_fnc_disableUserInput;
+					[player, false] call TFAR_fnc_forceSpectator;
+				}, [], 0.2] call CBA_fnc_waitAndExecute;
 
 				[{
 					"dynamicBlur" ppEffectEnable true;
@@ -150,7 +167,6 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			};
 
 			_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
-			[format ["FCLA (log): %1", _introductoryVideo]] call ACE_Common_fnc_serverLog;
 			waitUntil {scriptDone _videoStatus};
 			playsound "FCLA_Introduction";
 
@@ -169,7 +185,11 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			sleep 5;
 			cutText ["", "BLACK IN", 3, true, false];
 			player setVariable ["FCLA_Playing_Introduction", nil, true];
-			[{[false] call ACE_Common_fnc_disableUserInput;}, [], 0.2] call CBA_fnc_waitAndExecute;
+
+			[{
+				[false] call ACE_Common_fnc_disableUserInput;
+				[player, false] call TFAR_fnc_forceSpectator;
+			}, [], 0.2] call CBA_fnc_waitAndExecute;
 
 			[{
 				"dynamicBlur" ppEffectEnable true;

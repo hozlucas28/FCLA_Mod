@@ -17,7 +17,4 @@
     case "FIREFLIES": {[_logic] spawn FCLA_Modules_fnc_spawnFireflies3DEN;};
     case "WIND_GUST": {[_logic, _delayEffect] spawn FCLA_Modules_fnc_spawnWindGust3DEN;};
   };
-
-  if (!DEBUG) exitWith {};
-  ["[FCLA] (modules): Módulo 'Spawn Effect' ejecutado."] call ACE_Common_fnc_serverLog;
 }] call CBA_fnc_addEventHandler;
