@@ -66,13 +66,6 @@ class FCLA_Show_ID {
   duration = 1;
 };
 
-class FCLA_Map_Unfolded {
-  name = "FCLA - Desplegar mapa";
-  sound[] = {"\FCLA_Interactions\sounds\Map_Unfolded.ogg", "db+5", 1};
-  titles[] = {0, ""};
-  duration = 3;
-};
-
 class FCLA_Switch_Smoke {
   name = "FCLA - Activar/Desactivar (señal de humo)";
   sound[] = {"\FCLA_Interactions\sounds\Switch_Smoke.ogg", "db+1", 1};
