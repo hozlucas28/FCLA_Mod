@@ -14,7 +14,7 @@ params ["_player"];
 
 
 //Verificar si ya se estaba consumiendo.
-_isConsuming = _player getVariable ["FCLA_NVG_Battery_Consume", false];
+_isConsuming = _player getVariable ["FCLA_NVG_Battery_Activated", false];
 if (_isConsuming) exitWith {};
 
 
@@ -47,5 +47,5 @@ _handle = [{
 
 
 //Definir variables de tipo objeto.
-_player setVariable ["FCLA_NVG_Battery_Consume", true, true];
+_player setVariable ["FCLA_NVG_Battery_Activated", true, true];
 _player setVariable ["FCLA_NVG_Battery_perFrameHandler_ID", _handle, true];

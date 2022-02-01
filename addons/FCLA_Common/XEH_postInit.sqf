@@ -6,7 +6,6 @@
 #include "\FCLA_Common\EventHandlers\PTSD.hpp"
 #include "\FCLA_Common\EventHandlers\Hint.hpp"
 #include "\FCLA_Common\EventHandlers\Shellshock.hpp"
-#include "\FCLA_Common\EventHandlers\Random_Lip.hpp"
 #include "\FCLA_Common\EventHandlers\Hint_Silent.hpp"
 #include "\FCLA_Common\EventHandlers\GUI_Message.hpp"
 #include "\FCLA_Common\EventHandlers\System_Chat.hpp"

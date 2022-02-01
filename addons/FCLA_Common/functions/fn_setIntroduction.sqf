@@ -72,6 +72,7 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			player setVariable ["FCLA_Playing_Introduction", true, true];
 
 			[{
+				[player, []] call ACE_Common_fnc_hideUnit;
 				[true] call ACE_Common_fnc_disableUserInput;
 				[player, true] call TFAR_fnc_forceSpectator;
 			}, [], 0.1] call CBA_fnc_waitAndExecute;
@@ -83,6 +84,7 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 				player setVariable ["FCLA_Playing_Introduction", nil, true];
 
 				[{
+					[player, []] call ACE_Common_fnc_unhideUnit;
 					[false] call ACE_Common_fnc_disableUserInput;
 					[player, false] call TFAR_fnc_forceSpectator;
 				}, [], 0.2] call CBA_fnc_waitAndExecute;
@@ -116,6 +118,7 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			cutText ["", "BLACK IN", 3, true, false];
 
 			[{
+				[player, []] call ACE_Common_fnc_unhideUnit;
 				[false] call ACE_Common_fnc_disableUserInput;
 				[player, false] call TFAR_fnc_forceSpectator;
 			}, [], 0.2] call CBA_fnc_waitAndExecute;
@@ -142,6 +145,7 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			player setVariable ["FCLA_Playing_Introduction", true, true];
 
 			[{
+				[player, []] call ACE_Common_fnc_hideUnit;
 				[true] call ACE_Common_fnc_disableUserInput;
 				[player, true] call TFAR_fnc_forceSpectator;
 			}, [], 0.1] call CBA_fnc_waitAndExecute;
@@ -153,6 +157,7 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 				player setVariable ["FCLA_Playing_Introduction", nil, true];
 
 				[{
+					[player, []] call ACE_Common_fnc_unhideUnit;
 					[false] call ACE_Common_fnc_disableUserInput;
 					[player, false] call TFAR_fnc_forceSpectator;
 				}, [], 0.2] call CBA_fnc_waitAndExecute;
@@ -187,6 +192,7 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			player setVariable ["FCLA_Playing_Introduction", nil, true];
 
 			[{
+				[player, []] call ACE_Common_fnc_unhideUnit;
 				[false] call ACE_Common_fnc_disableUserInput;
 				[player, false] call TFAR_fnc_forceSpectator;
 			}, [], 0.2] call CBA_fnc_waitAndExecute;

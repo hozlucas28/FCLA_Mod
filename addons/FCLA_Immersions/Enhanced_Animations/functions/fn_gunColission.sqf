@@ -36,7 +36,7 @@
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};
 
   _inertia = getNumber (ConfigFile >> "CfgWeapons" >> _currentWeapon >> "inertia");
-  _distance = 0.2 + (_inertia min 0.85); //0.505
+  _distance = 0.2 + (_inertia min 0.85);
 
   _playerEyePos = eyePos _player;
   _playerVectorDir = vectorDir _player;
