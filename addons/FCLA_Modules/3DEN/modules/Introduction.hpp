@@ -3,14 +3,14 @@
  * Author: hozlucas28
  *
  * Description:
- * Reproduce una introducción animada al comienzo del escenario.
+ * Reproduce una introduccion animada al comienzo del escenario.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
 class FCLA_Module_Introduction: Module_F {
   author = "hozlucas28";
-	displayName = "Introducción";
+	displayName = "Introduccion";
   icon = "\FCLA_Modules\3DEN\data\Tag.paa";
   portrait = "\FCLA_Modules\3DEN\data\Tag.paa";
 	category = "FCLA_Modules";
@@ -26,7 +26,7 @@ class FCLA_Module_Introduction: Module_F {
       tooltip = "";
       typeName = "STRING";
       property = "FCLA_Title";
-      displayName = "Título";
+      displayName = "Titulo";
       defaultValue = "''";
 		};
 
@@ -34,7 +34,7 @@ class FCLA_Module_Introduction: Module_F {
       tooltip = "";
       typeName = "STRING";
       property = "FCLA_Subtitle";
-      displayName = "Subtítulo";
+      displayName = "Subtitulo";
       defaultValue = "''";
 		};
 
@@ -47,7 +47,7 @@ class FCLA_Module_Introduction: Module_F {
 		};
 
     class FCLA_Show_On_Reconnect: Combo {
-      tooltip = "Determina que veran aquellos jugadores que han reproducido la introducción, pero tuvieron que reconectarse a la partida.";
+      tooltip = "Determina que veran aquellos jugadores que han reproducido la introduccion, pero tuvieron que reconectarse a la partida.";
       typeName = "STRING";
       property = "FCLA_Show_On_Reconnect";
       displayName = "Al reconectarse";
@@ -60,7 +60,7 @@ class FCLA_Module_Introduction: Module_F {
 				};
 
 				class Title_And_Subtitle {
-					name = "Reproducir título y subtítulo";
+					name = "Reproducir titulo y subtitulo";
 					value = "TITLE_AND_SUBTITLE";
 				};
 
@@ -80,9 +80,9 @@ class FCLA_Module_Introduction: Module_F {
 
 	class ModuleDescription: ModuleDescription {
 		description[] =	{
-      "Reproduce una introducción animada al comienzo del escenario.",
+      "Reproduce una introduccion animada al comienzo del escenario.",
       "",
-      "• Si el título y/o subtítulo no son definidos únicamente se mostrara el video introductorio, el cual es opcional."
+      "- Si el titulo y/o subtitulo no son definidos unicamente se mostrara el video introductorio, el cual es opcional."
     };
 	};
 };

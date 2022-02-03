@@ -3,27 +3,27 @@
  * Author: hozlucas28
  *
  * Description:
- * Evita que el vehículo reciba un daño fatal, dejandolo con un daño total sin
- * provocar su destrucción.
+ * Evita que el vehiculo reciba un dano fatal, dejandolo con un dano total sin
+ * provocar su destruccion.
  *
  * Arguments:
- *            0: Vehículo. <VEHICLE>
- *            1: ¿Destruir las armas de la tripulación?, opcional. <BOOL> (default: false)
- *            2: ¿Destruir los items de la tripulación?, opcional. <BOOL> (default: false)
+ *            0: Vehiculo. <VEHICLE>
+ *            1: ¿Destruir las armas de la tripulacion?, opcional. <BOOL> (default: false)
+ *            2: ¿Destruir los items de la tripulacion?, opcional. <BOOL> (default: false)
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Examples:
- *             //Las armas e items no se destruirán.
+ *             //Las armas e items no se destruiran.
  *             [vehicle player] call FCLA_Common_fnc_setAdvancedVehicleDamage;
  *
- *             //Las armas e items se destruirán.
+ *             //Las armas e items se destruiran.
  *             [vehicle player, true, true] call FCLA_Common_fnc_setAdvancedVehicleDamage;
  *
  * Note:
- * Si el addon option "Daño avanzado de vehículo" (mod ACE) esta activado,
- * esta función no se ejecutara.
+ * Si el addon option "Dano avanzado de vehiculo" (mod ACE) esta activado,
+ * esta funcion no se ejecutara.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -45,11 +45,11 @@ _EventHandlerID = [_vehicle, "Dammaged", {
   if (_damage < 0.9) exitWith {};
 
 
-  //Desactivar daño.
+  //Desactivar dano.
   _vehicle allowDamage false;
   [{!(isDamageAllowed _this)}, {_this setDamage 0.9;}, _vehicle] call CBA_fnc_waitUntilAndExecute;
 
-  //Obtener tripulación.
+  //Obtener tripulacion.
   _vehicleCrew = [_vehicle] call ACE_Common_fnc_getVehicleCrew;
   if (count _vehicleCrew == 0) exitWith {};
 

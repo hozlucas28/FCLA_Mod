@@ -4,21 +4,21 @@
  *
  * Description:
  * Verifica si la mira del arma, que tiene la unidad, cuenta con
- * visión nocturna/térmica.
+ * vision nocturna/termica.
  *
  * Arguments:
  *            0: Unidad que posee el arma. <UNIT>
  *            1: Arma que posee la unidad a verificar. <STRING>
- *            2: ¿Excluir visión térmica?, opcional. <BOOL> (default: false)
+ *            2: ¿Excluir vision termica?, opcional. <BOOL> (default: false)
  *
  * Return Value:
- * ¿La mira del arma cuenta con visión nocturna/térmica? <BOOL>
+ * ¿La mira del arma cuenta con vision nocturna/termica? <BOOL>
  *
  * Examples:
- *             //Visión térmica incluida.
+ *             //Vision termica incluida.
  *             [player, currentWeapon player] call FCLA_Common_fnc_checkSightVisionModes;
  *
- *             //Visión térmica excluida.
+ *             //Vision termica excluida.
  *             [player, currentWeapon player, true] call FCLA_Common_fnc_checkSightVisionModes;
  *
  * Note:
@@ -50,7 +50,7 @@ _opticsModesOfSight = (configFile >> "CfgWeapons" >> _weaponSight >> "ItemInfo" 
 _opticsModesOfLauncher = (configFile >> "CfgWeapons" >> _weapon >> "OpticsModes") call BIS_fnc_getCfgSubClasses;
 
 
-//Verificar si tiene visión nocturna/térmica.
+//Verificar si tiene vision nocturna/termica.
 switch (true) do {
 	case (("Rifle" in _baseWeapon) || ("Pistol" in _baseWeapon)): {
     {

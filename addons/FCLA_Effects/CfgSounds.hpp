@@ -270,7 +270,7 @@ class FCLA_Generic_Use_4 {
 };
 
 class FCLA_Vision_Mode_Changed {
-	name = "FCLA - Activar/Desactivar modo de visión";
+	name = "FCLA - Activar/Desactivar modo de vision";
 	sound[] = {"\FCLA_Effects\sounds\Vision_Mode_Changed.ogg", "db+8", 1};
 	titles[] = {};
 	duration = 2;

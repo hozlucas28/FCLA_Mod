@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                             VEHÍCULOS - "INVIERNO"                             |
+|                             VEHICULOS - "INVIERNO"                             |
 |********************************************************************************/
 
 
@@ -286,11 +286,11 @@ class Item_H_HelmetSpecB_Quetzal_Winter_v2: Headgear_Base_F {
 
 
 
-/* ------------------ CASCO DE COMBATE MEJORADO (MÉDICO) ------------------- */
+/* ------------------ CASCO DE COMBATE MEJORADO (MEDICO) ------------------- */
 
 class Item_H_HelmetSpecB_Medic_Winter_v2: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado [Médico] (invierno v2)";
+  displayName = "Casco de combate mejorado [Medico] (invierno v2)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";

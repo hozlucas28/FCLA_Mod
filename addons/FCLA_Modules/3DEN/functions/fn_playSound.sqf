@@ -24,7 +24,7 @@ _soundClass = _module getVariable ["FCLA_Sound", ""];
 _soundDuration = ceil (getNumber (configFile >> "CfgSFX" >> _soundClass >> "duration"));
 _compatibleSynchronizedObjects = _synchronizedObjects select {!(_x isKindOf "EmptyDetector")};
 _numberOfCompatibleSynchronizedObjects = count _compatibleSynchronizedObjects;
-if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {["FCLA_Module_Play_Sound", "• MÓDULO: REPRODUCIR SONIDO", "¡Error! El/Un módulo 'Reproducir sonido' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
+if ((_soundClass == "") || (_soundDuration <= 0)) exitWith {["FCLA_Module_Play_Sound", "- MODULO: REPRODUCIR SONIDO", "¡Error! El/Un modulo 'Reproducir sonido' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
 
 
 

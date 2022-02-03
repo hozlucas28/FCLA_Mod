@@ -3,14 +3,14 @@
  * Author: hozlucas28
  *
  * Description:
- * Modifica la matrícula de los vehículos sincronizados.
+ * Modifica la matricula de los vehiculos sincronizados.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
 class FCLA_Module_Plate_Number: Module_F {
   author = "hozlucas28";
-	displayName = "Modificar matrícula";
+	displayName = "Modificar matricula";
   icon = "\FCLA_Modules\3DEN\data\Vehicle.paa";
   portrait = "\FCLA_Modules\3DEN\data\Vehicle.paa";
 	category = "FCLA_Modules";
@@ -26,7 +26,7 @@ class FCLA_Module_Plate_Number: Module_F {
       tooltip = "";
       typeName = "STRING";
       property = "FCLA_New_Plate_Number";
-      displayName = "Matrícula";
+      displayName = "Matricula";
       defaultValue = "''";
 		};
 		class ModuleDescription: ModuleDescription {};
@@ -34,6 +34,6 @@ class FCLA_Module_Plate_Number: Module_F {
 
 	class ModuleDescription: ModuleDescription {
     sync[] = {"AnyVehicle", "EmptyDetector"};
-		description[] =	{"Modifica las matrículas de los vehículos sincronizados al módulo."};
+		description[] =	{"Modifica las matriculas de los vehiculos sincronizados al modulo."};
 	};
 };

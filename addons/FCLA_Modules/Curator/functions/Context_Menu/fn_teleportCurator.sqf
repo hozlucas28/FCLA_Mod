@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Teletransporta al Zeus. Esta función es utilizada por el menú contextual
+ * Teletransporta al Zeus. Esta funcion es utilizada por el menu contextual
  * correspondiente.
  *
  * Public: [No]

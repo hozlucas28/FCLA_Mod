@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                        VEHÍCULOS - "REDES DE CAMUFLAJE"                        |
+|                        VEHICULOS - "REDES DE CAMUFLAJE"                        |
 |********************************************************************************/
 
 class Item_FCLA_Camo_Net_Arid: Headgear_Base_F {

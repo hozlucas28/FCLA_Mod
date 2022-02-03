@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Desactiva el efecto del postprocesado que cambia el color de la visión nocturna.
+ * Desactiva el efecto del postprocesado que cambia el color de la vision nocturna.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

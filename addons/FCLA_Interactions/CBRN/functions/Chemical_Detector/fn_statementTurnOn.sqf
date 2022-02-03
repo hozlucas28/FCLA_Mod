@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Enciende el detector químico.
+ * Enciende el detector quimico.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Detiene el consumo de la batería de las gafas de visión nocturna.
+ * Detiene el consumo de la bateria de las gafas de vision nocturna.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

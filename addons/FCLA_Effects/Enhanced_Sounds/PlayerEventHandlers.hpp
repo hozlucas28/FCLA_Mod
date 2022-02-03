@@ -4,7 +4,7 @@
 |********************************************************************************/
 
 if (hasInterface) then {
-  //Reproduce un sonido cuando se cambia el modo de visión (nocturna/térmica).
+  //Reproduce un sonido cuando se cambia el modo de vision (nocturna/termica).
   ["visionMode", {
     params ["_unit", "_newVisionMode"];
     //_NVGBattery = _unit getVariable ["FCLA_NVG_Battery", FCLA_NVG_Initial_Battery];

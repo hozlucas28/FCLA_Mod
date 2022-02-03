@@ -3,20 +3,20 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo para colocar un jammer que bloquea/interfiere las señales de
- * comunicación de las radios de onda corta y larga, incluyendo vehículos.
+ * Crea un modulo para colocar un jammer que bloquea/interfiere las senales de
+ * comunicacion de las radios de onda corta y larga, incluyendo vehiculos.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
 ["FCLA", "Colocar jammer", {
   params ["_position", "_attachedObject"];
-  if ((isNull _attachedObject) || (_attachedObject in allUnits)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UN OBJETO"] call ZEN_Common_fnc_showMessage;};
+  if ((isNull _attachedObject) || (_attachedObject in allUnits)) exitWith {["ERROR! EL MODULO DEBE SER COLOCADO SOBRE UN OBJETO"] call ZEN_Common_fnc_showMessage;};
 
 
   ["JAMMER",
   [
-   ["EDIT", ["Identificador", "Nombre personalizado para poder reconocer al dispositivo, cuando se le informe a los Zeus que ha sido desactivado.\n• Si no se define un identificador no se informara a los Zeus."],
+   ["EDIT", ["Identificador", "Nombre personalizado para poder reconocer al dispositivo, cuando se le informe a los Zeus que ha sido desactivado.\n- Si no se define un identificador no se informara a los Zeus."],
     [
      "",
      nil,
@@ -24,7 +24,7 @@
     ],
     true
    ],
-   ["SLIDER", ["Radio", "Aquellas entidades comprendidas dentro del radio definido seran afectadas por el jammer, tomando como origen del radio la entidad donde se colocó el módulo.\n• Nota: si colocas -1 todo el mapa se vera afectado por el jammer."],
+   ["SLIDER", ["Radio", "Aquellas entidades comprendidas dentro del radio definido seran afectadas por el jammer, tomando como origen del radio la entidad donde se coloco el modulo.\n- Nota: si colocas -1 todo el mapa se vera afectado por el jammer."],
     [
      -1,
      5000,
@@ -33,7 +33,7 @@
     ],
     false
    ],
-   ["TOOLBOX", ["Desactivable", "Si se activa se podra desactivar el jammer a travez de una acción."],
+   ["TOOLBOX", ["Desactivable", "Si se activa se podra desactivar el jammer a travez de una accion."],
     [
      0,
      1,
@@ -43,7 +43,7 @@
     ],
     false
    ],
-   ["TOOLBOX", ["¿Afectar vehículos?", "Si se activa las radios de los vehículos tambien seran afectadas."],
+   ["TOOLBOX", ["Afectar vehiculos", "Si se activa las radios de los vehiculos tambien seran afectadas."],
     [
      0,
      1,
@@ -53,7 +53,7 @@
     ],
     false
    ],
-   ["TOOLBOX", ["¿Se necesita dispositivo?", "Si se activa se necesitara de un dispositivo de hackeo para realizar la acción que desactiva al jammer."],
+   ["TOOLBOX", ["Se necesita dispositivo", "Si se activa se necesitara de un dispositivo de hackeo para realizar la accion que desactiva al jammer."],
     [
      1,
      1,
@@ -83,6 +83,6 @@
 
     _curatorLogic = getAssignedCuratorLogic player;
     ["ZEN_Common_addObjects", [[_module], _curatorLogic]] call CBA_fnc_serverEvent;
-    ["JAMMER GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
+    ["JAMMER GENERADO CON EXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Jammer.paa"] call ZEN_Custom_Modules_fnc_Register;

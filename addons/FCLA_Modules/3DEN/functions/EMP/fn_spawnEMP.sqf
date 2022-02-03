@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera un pulso electromagnético.
+ * Genera un pulso electromagnetico.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -53,7 +53,7 @@ _this spawn {
   [_module, _rad, "Off", false] call FCLA_Common_fnc_switchLights;
 
 
-  //Dañar vehículos.
+  //Danar vehiculos.
   {
     _isNotHidden = !isObjectHidden _x;
     _isNotInvulnerable = isDamageAllowed _x;
@@ -205,7 +205,7 @@ _this spawn {
   } forEach _nearUnits;
 
 
-  //Eliminar módulo.
+  //Eliminar modulo.
   deleteVehicle _module;
 
 

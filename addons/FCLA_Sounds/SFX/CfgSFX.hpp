@@ -18,7 +18,7 @@ class FCLA_SFX_Flies {
 
 
 class FCLA_SFX_Night_Owl {
-	name = "FCLA - Búho";
+	name = "FCLA - Buho";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Nature\Night_Owl.ogg", 8, 1, 500, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -91,7 +91,7 @@ class FCLA_SFX_Arab_Marketplace {
 
 
 class FCLA_SFX_Riot {
-	name = "FCLA - Manifestación";
+	name = "FCLA - Manifestacion";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\People\Riot.ogg", 10, 1, 300, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -101,7 +101,7 @@ class FCLA_SFX_Riot {
 
 
 class FCLA_SFX_Africa_Crowd_v1 {
-	name = "FCLA - Multitud (África v1)";
+	name = "FCLA - Multitud (Africa v1)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\People\Africa_Crowd_v1.ogg", 10, 1, 150, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -111,7 +111,7 @@ class FCLA_SFX_Africa_Crowd_v1 {
 
 
 class FCLA_SFX_Africa_Crowd_v2 {
-	name = "FCLA - Multitud (África v2)";
+	name = "FCLA - Multitud (Africa v2)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\People\Africa_Crowd_v2.ogg", 10, 1, 150, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -121,7 +121,7 @@ class FCLA_SFX_Africa_Crowd_v2 {
 
 
 class FCLA_SFX_Africa_Crowd_v3 {
-	name = "FCLA - Multitud (África v3)";
+	name = "FCLA - Multitud (Africa v3)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\People\Africa_Crowd_v3.ogg", 15, 1, 150, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -131,7 +131,7 @@ class FCLA_SFX_Africa_Crowd_v3 {
 
 
 class FCLA_SFX_Africa_Crowd_v4 {
-	name = "FCLA - Multitud (África v4)";
+	name = "FCLA - Multitud (Africa v4)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\People\Africa_Crowd_v4.ogg", 15, 1, 150, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -141,7 +141,7 @@ class FCLA_SFX_Africa_Crowd_v4 {
 
 
 class FCLA_SFX_Africa_Crowd_v5 {
-	name = "FCLA - Multitud (África v5)";
+	name = "FCLA - Multitud (Africa v5)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\People\Africa_Crowd_v5.ogg", 15, 1, 150, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -151,7 +151,7 @@ class FCLA_SFX_Africa_Crowd_v5 {
 
 
 class FCLA_SFX_Arab_Crowd_Vehicles_v1 {
-	name = "FCLA - Multitud y vehículos (Arabia v1)";
+	name = "FCLA - Multitud y vehiculos (Arabia v1)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\People\Arab_Crowd_Vehicles_v1.ogg", 15, 1, 200, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -161,7 +161,7 @@ class FCLA_SFX_Arab_Crowd_Vehicles_v1 {
 
 
 class FCLA_SFX_Arab_Crowd_Vehicles_v2 {
-	name = "FCLA - Multitud y vehículos (Arabia v2)";
+	name = "FCLA - Multitud y vehiculos (Arabia v2)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\People\Arab_Crowd_Vehicles_v2.ogg", 15, 1, 200, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -171,7 +171,7 @@ class FCLA_SFX_Arab_Crowd_Vehicles_v2 {
 
 
 class FCLA_SFX_Arab_Crowd_Vehicles_v3 {
-	name = "FCLA - Multitud y vehículos (Arabia v3)";
+	name = "FCLA - Multitud y vehiculos (Arabia v3)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\People\Arab_Crowd_Vehicles_v3.ogg", 15, 1, 200, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -181,7 +181,7 @@ class FCLA_SFX_Arab_Crowd_Vehicles_v3 {
 
 
 class FCLA_SFX_Africa_Crowd_Vehicles_v1 {
-	name = "FCLA - Multitud y vehículos (África v1)";
+	name = "FCLA - Multitud y vehiculos (Africa v1)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\People\Africa_Crowd_Vehicles_v1.ogg", 15, 1, 200, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -191,7 +191,7 @@ class FCLA_SFX_Africa_Crowd_Vehicles_v1 {
 
 
 class FCLA_SFX_Africa_Crowd_Vehicles_v2 {
-	name = "FCLA - Multitud y vehículos (África v2)";
+	name = "FCLA - Multitud y vehiculos (Africa v2)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\People\Africa_Crowd_Vehicles_v2.ogg", 15, 1, 200, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -201,7 +201,7 @@ class FCLA_SFX_Africa_Crowd_Vehicles_v2 {
 
 
 class FCLA_SFX_Africa_Crowd_Vehicles_v3 {
-	name = "FCLA - Multitud y vehículos (África v3)";
+	name = "FCLA - Multitud y vehiculos (Africa v3)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\People\Africa_Crowd_Vehicles_v3.ogg", 15, 1, 200, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -211,7 +211,7 @@ class FCLA_SFX_Africa_Crowd_Vehicles_v3 {
 
 
 class FCLA_SFX_Africa_Crowd_Vehicles_v4 {
-	name = "FCLA - Multitud y vehículos (África v4)";
+	name = "FCLA - Multitud y vehiculos (Africa v4)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\People\Africa_Crowd_Vehicles_v4.ogg", 15, 1, 200, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -254,7 +254,7 @@ class FCLA_SFX_Alarm {
 
 
 class FCLA_SFX_Air_Alarm {
-	name = "FCLA - Alarma aérea";
+	name = "FCLA - Alarma aerea";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Alarms\Air_Alarm.ogg", 11, 1, 400, 1, 0, 0, 0};
 	sounds[] = {"sound"};
@@ -264,7 +264,7 @@ class FCLA_SFX_Air_Alarm {
 
 
 class FCLA_SFX_Air_Alarm_Far	{
-	name = "FCLA - Alarma aérea (distante)";
+	name = "FCLA - Alarma aerea (distante)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Alarms\Air_Alarm_Far.ogg", 11, 1, 1100, 1, 0, 0, 0};
 	sounds[] = {"sound"};
@@ -274,7 +274,7 @@ class FCLA_SFX_Air_Alarm_Far	{
 
 
 class FCLA_SFX_Artillery_Incoming_Alarm {
-	name = "FCLA - Artillería inminente (alarma)";
+	name = "FCLA - Artilleria inminente (alarma)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Alarms\Artillery_Incoming_Alarm.ogg", 8, 1, 400, 1, 0, 0, 0};
 	sounds[] = {"sound"};
@@ -284,7 +284,7 @@ class FCLA_SFX_Artillery_Incoming_Alarm {
 
 
 class FCLA_SFX_Biologic_Alarm {
-	name = "FCLA - Alarma biológica";
+	name = "FCLA - Alarma biologica";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Alarms\Biologic_Alarm.ogg", 8, 1, 400, 1, 0, 0, 0};
 	sounds[] = {"sound"};
@@ -304,10 +304,10 @@ class FCLA_SFX_Nuclear_Alarm {
 
 
 
-/* --------------------------- RADIOS/MEGÁFONOS ---------------------------- */
+/* --------------------------- RADIOS/MEGAFONOS ---------------------------- */
 
 class FCLA_SFX_Music_Radio {
-	name = "FCLA - Radio (música)";
+	name = "FCLA - Radio (musica)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Music_Radio.ogg", 20, 1, 50, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -317,7 +317,7 @@ class FCLA_SFX_Music_Radio {
 
 
 class FCLA_SFX_Arab_Music_Radio {
-	name = "FCLA - Radio (música árabe)";
+	name = "FCLA - Radio (musica arabe)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Arab_Music_Radio.ogg", 8, 1, 50, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -327,7 +327,7 @@ class FCLA_SFX_Arab_Music_Radio {
 
 
 class FCLA_SFX_Spanish_News_Radio {
-	name = "FCLA - Radio (noticias en español)";
+	name = "FCLA - Radio (noticias en espanol)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Spanish_News_Radio.ogg", 12, 1, 50, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -407,7 +407,7 @@ class FCLA_SFX_Insurgent_Military_Radio_v2 {
 
 
 class FCLA_SFX_Insurgent_Speech {
-	name = "FCLA - Discurso insurgente (megáfono)";
+	name = "FCLA - Discurso insurgente (megafono)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Insurgent_Speech.ogg", 12, 1, 150, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -417,7 +417,7 @@ class FCLA_SFX_Insurgent_Speech {
 
 
 class FCLA_SFX_Call_To_Prayer_Speech {
-	name = "FCLA - Llamado a la oración (megáfono)";
+	name = "FCLA - Llamado a la oracion (megafono)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Call_To_Prayer_Speech.ogg", 5, 1, 2000, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -437,7 +437,7 @@ class FCLA_SFX_Speaker_Curfew {
 
 
 class FCLA_SFX_Radio_Static {
-	name = "FCLA - Radio (estática)";
+	name = "FCLA - Radio (estatica)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Radio_Static.ogg", 8, 1, 50, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -447,7 +447,7 @@ class FCLA_SFX_Radio_Static {
 
 
 class FCLA_SFX_Radio_Morse_Code {
-	name = "FCLA - Radio (código morse)";
+	name = "FCLA - Radio (codigo morse)";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Radios\Radio_Morse_Code.ogg", 8, 1, 50, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -460,7 +460,7 @@ class FCLA_SFX_Radio_Morse_Code {
 /* --------------------------- CAMPO DE BATALLA ---------------------------- */
 
 class FCLA_SFX_Battlefield_Sniper_Suppression {
-	name = "FCLA - Supresión de francotirador";
+	name = "FCLA - Supresion de francotirador";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Battlefields\Sniper_Suppression.ogg", 15, 1, 20, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -562,7 +562,7 @@ class FCLA_SFX_IED_Ring {
 
 
 class FCLA_SFX_Attempt_Start_Vehicle {
-	name = "FCLA - Intento de encender vehículo";
+	name = "FCLA - Intento de encender vehiculo";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Others\Attempt_Start_Vehicle.ogg", 15, 1, 50, 1, 1, 1, 0};
 	sounds[] = {"sound"};
@@ -592,7 +592,7 @@ class FCLA_SFX_Barking_Dogs_v2 {
 
 
 class FCLA_SFX_Burning_Vehicle {
-	name = "FCLA - Vehículo en llamas";
+	name = "FCLA - Vehiculo en llamas";
 	empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	sound[] = {"\FCLA_Sounds\SFX\data\Others\Burning_Vehicle.ogg", 10, 1, 50, 1, 1, 1, 0};
 	sounds[] = {"sound"};

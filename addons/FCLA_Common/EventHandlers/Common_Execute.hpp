@@ -3,11 +3,11 @@
  * Author: hozlucas28
  *
  * Description:
- * Permite ejecutar cualquier función que sea enviada.
+ * Permite ejecutar cualquier funcion que sea enviada.
  *
  * Arguments:
- *            0: Función a ejecutar. <FUNCTION>
- *            1: Argumentos de la función enviada (argumento 0). <ARRAY>
+ *            0: Funcion a ejecutar. <FUNCTION>
+ *            1: Argumentos de la funcion enviada (argumento 0). <ARRAY>
  *
  * Example:
  * ["FCLA_Common_Execute", [FCLA_Common_fnc_setUnitTrait, [player, "Doctor"]], allPlayers] call CBA_fnc_targetEvent;

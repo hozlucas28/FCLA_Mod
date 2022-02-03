@@ -1,11 +1,11 @@
 
 /***************************************************************************|
-|                           VEHÍCULOS - "EFECTOS"                           |
+|                           VEHICULOS - "EFECTOS"                           |
 |***************************************************************************/
 
 
 
-/* ------------------------------ PARTÍCULA ------------------------------- */
+/* ------------------------------ PARTICULA ------------------------------- */
 
 class Particle_Base_F: Thing {
   icon = "iconObject_circle";
@@ -18,7 +18,7 @@ class Particle_Base_F: Thing {
 /* --------------------------------- HUMOS ---------------------------------- */
 
 class Small_Smoke: Particle_Base_F {
-  displayName = "Humo (pequeño)";
+  displayName = "Humo (pequeno)";
   editorCategory = "FCLA_Effects";
   editorSubcategory = "FCLA_Smoke";
   scope = 2;
@@ -81,7 +81,7 @@ class Big_Smoke: Particle_Base_F {
 /* --------------------------------- FUEGOS --------------------------------- */
 
 class Small_Fire: Particle_Base_F	{
-  displayName = "Fuego (pequeño)";
+  displayName = "Fuego (pequeno)";
   editorCategory = "FCLA_Effects";
   editorSubcategory = "FCLA_Fire";
   scope = 2;

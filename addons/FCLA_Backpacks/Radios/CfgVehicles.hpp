@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                              VEHÍCULOS - "RADIOS"                              |
+|                              VEHICULOS - "RADIOS"                              |
 |********************************************************************************/
 
 
@@ -192,7 +192,7 @@ class TF_rt1523g_Sage: TF_rt1523g {picture = "\FCLA_Backpacks\Radios\data\pictur
 
 
 
-/* ------------------------------- PEQUEÑAS -------------------------------- */
+/* ------------------------------- PEQUENAS -------------------------------- */
 
 class B_FCLA_TFAR_Small_rt1523g_Black: tf_rt1523g {
   author = "hozlucas28";
@@ -229,7 +229,7 @@ class B_FCLA_TFAR_Small_rt1523g_CTRG_Green: tf_rt1523g {
 
 class B_FCLA_TFAR_Small_rt1523g_CTRG_Arid: tf_rt1523g {
   author = "hozlucas28";
-  displayName = "RT-1523G (ASIP) - CTRG (árido)";
+  displayName = "RT-1523G (ASIP) - CTRG (arido)";
   hiddenSelectionsTextures[] = {"\FCLA_Backpacks\Radios\data\B_FCLA_TFAR_Small_rt1523g_CTRG_Arid.paa"};
   picture = "\FCLA_Backpacks\Radios\data\pictures\B_FCLA_TFAR_Small_rt1523g_CTRG_Arid.paa";
   scope = 2;
@@ -320,7 +320,7 @@ class B_FCLA_TFAR_Big_rt1523g_CTRG_Green: tf_rt1523g_big {
 
 class B_FCLA_TFAR_Big_rt1523g_CTRG_Arid: tf_rt1523g_big {
   author = "hozlucas28";
-  displayName = "RT-1523G (ASIP) - Grande CTRG (árido)";
+  displayName = "RT-1523G (ASIP) - Grande CTRG (arido)";
   hiddenSelectionsTextures[] = {"\FCLA_Backpacks\Radios\data\B_FCLA_TFAR_Big_rt1523g_CTRG_Arid.paa"};
   picture = "\FCLA_Backpacks\Radios\data\pictures\B_FCLA_TFAR_Big_rt1523g_CTRG_Arid.paa";
   scope = 2;

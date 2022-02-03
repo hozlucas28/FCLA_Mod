@@ -1,11 +1,11 @@
 
 /********************************************************************************|
-|                          VEHÍCULOS - "LINTERNA ROJA"                           |
+|                          VEHICULOS - "LINTERNA ROJA"                           |
 |********************************************************************************/
 
 class Item_FCLA_NVG_Battery: Item_Base_F {
   author = "hozlucas28";
-  displayName = "Batería NVG";
+  displayName = "Bateria NVG";
   vehicleClass = "Small_items";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_InventoryItems";

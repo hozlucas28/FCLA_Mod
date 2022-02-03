@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea una acción ACE 3D asociada a una entidad.
+ * Crea una accion ACE 3D asociada a una entidad.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

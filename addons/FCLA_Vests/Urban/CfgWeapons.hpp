@@ -814,16 +814,3 @@ class V_PlateCarrier2_Quetzal_Urban_v4: V_PlateCarrier2_FCLA_Urban_v1 {
   scopeArsenal = 2;
   scopeCurator = 2;
 };
-
-
-
-/* ----------------- CARTUCHERAS LIGERAS (PERSONALIZADAS) ------------------ */
-
-#include "\FCLA_Vests\Urban\customs\Byron.hpp"
-#include "\FCLA_Vests\Urban\customs\Mario.hpp"
-#include "\FCLA_Vests\Urban\customs\Legion.hpp"
-#include "\FCLA_Vests\Urban\customs\Sagara.hpp"
-#include "\FCLA_Vests\Urban\customs\HozLucas.hpp"
-#include "\FCLA_Vests\Urban\customs\Kovalsky.hpp"
-#include "\FCLA_Vests\Urban\customs\Naretick.hpp"
-#include "\FCLA_Vests\Urban\customs\Ghostkiller.hpp"

@@ -21,7 +21,7 @@ if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 //Verificar argumentos.
 _allLogics = allMissionObjects "Logic";
 _moreThanOne = ("FCLA_Module_Radio_Range" countType _allLogics) > 1;
-if (_moreThanOne) exitWith {["FCLA_Module_Radio_Range", "• MÓDULO: MODIFICAR ALCANCE (TFAR)", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Modificar alcance (TFAR)' han sido desactivados."] call FCLA_Common_fnc_errorMessage;};
+if (_moreThanOne) exitWith {["FCLA_Module_Radio_Range", "- MODULO: MODIFICAR ALCANCE (TFAR)", "¡Error! Solo puede haber un modulo de este tipo. Los modulos 'Modificar alcance (TFAR)' han sido desactivados."] call FCLA_Common_fnc_errorMessage;};
 
 
 
@@ -30,5 +30,5 @@ _multiplier = [_module getVariable ["FCLA_Multiplier", 1], 0] call BIS_fnc_cutDe
 ["FCLA_Change_Radio_Range", [allUnits + vehicles, _multiplier]] call CBA_fnc_globalEventJIP;
 
 
-//Eliminar módulo.
+//Eliminar modulo.
 deleteVehicle _module;

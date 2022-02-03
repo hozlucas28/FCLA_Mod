@@ -26,7 +26,7 @@ class FCLA_Unassigned {
 
 
 
-/* ------------------------------ PELOTÓNES -------------------------------- */
+/* ------------------------------ PELOTONES -------------------------------- */
 
 class FCLA_Takana {
 	author = "hozlucas28";
@@ -93,7 +93,7 @@ class FCLA_FES {
 
 class FCLA_Medic {
 	author = "hozlucas28";
-	displayName = "Médico";
+	displayName = "Medico";
 	texture = "\FCLA_Interactions\Insignias\data\Medic.paa";
 	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
 	textureVehicle = "";

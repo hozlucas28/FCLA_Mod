@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera un efecto que simula el trastorno por estrés postraumático en la
+ * Genera un efecto que simula el trastorno por estres postraumatico en la
  * unidad, enviada como argumento 0.
  *
  * Arguments:
@@ -14,7 +14,7 @@
  *            4: ¿Movimientos involuntarios?, opcional. <BOOL> (default: true)
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Example:
  *             //Opcional sin definir.
@@ -24,13 +24,13 @@
  *             [player, true, false, false, true] call FCLA_Common_fnc_setPTSD;
  *
  * Notes:
- * Se recomienda utilizar esta función a travez del evento
+ * Se recomienda utilizar esta funcion a travez del evento
  * personalizado "FCLA_Set_PTSD".
  *
- * Los síntomas (argumento 1 al 4) se haran notar cada 10 minutos,
- * 12 minutos ó 15 minutos, una vez llamada la función.
+ * Los sintomas (argumento 1 al 4) se haran notar cada 10 minutos,
+ * 12 minutos o 15 minutos, una vez llamada la funcion.
  *
- * Para eliminar este efecto de la unidad, asígnele la variable de tipo
+ * Para eliminar este efecto de la unidad, asignele la variable de tipo
  * objeto "FCLA_Disable_PTSD" con con el valor <true>.
  *
  * Public: [Yes]
@@ -70,14 +70,14 @@ _handle = [{
   //Pensamientos no deseados.
   if (_unwantedThoughts) then {
     _sentence = selectRandom [
-                              "¡¿Por que el?! porque no fui yo...",
-                              "¡¿Que hice mal?! murio por mi culpa!",
+                              "¡Por que el! porque no fui yo...",
+                              "¡Que hice mal! murio por mi culpa!",
                               "¡Tenia una familia! ya no me queda nada.",
                               "¡Mi esposa me abandono! mi mejor amigo ya no esta a mi lado...",
                               "¡Debi ser yo quien saliera primero! tenia una vida por delante...",
                               "¡Esto no es una guerra, es una masacre!",
-                              "Sufri todo esto... ¡¿Para enorgullecer a mi familia?!",
-                              "¿Que yo volvera a casa? ¡Un veterano más, una estadística!"
+                              "Sufri todo esto... ¡Para enorgullecer a mi familia!",
+                              "Quien volvera a casa... ¡Un veterano mas, una estadistica!"
                              ];
     ["[Sdo] Usted", _sentence] spawn BIS_fnc_showSubtitle;
   };

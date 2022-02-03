@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo que genera una zona contaminada.
+ * Crea un modulo que genera una zona contaminada.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -11,7 +11,7 @@
 ["FCLA", "Zona contaminada (CBRN)", {
   ["ZONA CONTAMINADA",
 	[
-   ["SLIDER", ["Radio", "Determina el radio que tendra la zona contaminada, tomando como origen del radio al módulo.\n• Nota: si colocas -1 todo el mapa se vera afectado."],
+   ["SLIDER", ["Radio", "Determina el radio que tendra la zona contaminada, tomando como origen del radio al modulo.\n- Nota: si colocas -1 todo el mapa se vera afectado."],
     [
      -1,
      5000,
@@ -29,10 +29,10 @@
       4
      ],
      [
-      ["1", "Se necesita máscara de oxígeno compatible."],
-      ["2", "Se necesita máscara y mochila con oxígeno compatibles."],
-      ["3", "Se necesita máscara, mochila con oxígeno y un traje NRBQ compatibles."],
-      ["4", "No hay equipamiento que brinde protección alguna."]
+      ["1", "Se necesita mascara de oxigeno compatible."],
+      ["2", "Se necesita mascara y mochila con oxigeno compatibles."],
+      ["3", "Se necesita mascara, mochila con oxigeno y un traje NRBQ compatibles."],
+      ["4", "No hay equipamiento que brinde proteccion alguna."]
      ],
      0
     ],
@@ -51,6 +51,6 @@
 
     _curatorLogic = getAssignedCuratorLogic player;
     ["ZEN_Common_addObjects", [[_module], _curatorLogic]] call CBA_fnc_serverEvent;
-    ["ZONA CONTAMINADA GENERADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
+    ["ZONA CONTAMINADA GENERADA CON EXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Contaminated_Zone.paa"] call ZEN_Custom_Modules_fnc_Register;

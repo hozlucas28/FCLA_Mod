@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Modifica la identificación de la unidad.
+ * Modifica la identificacion de la unidad.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -12,7 +12,7 @@
   params ["_position", "_attachedObject"];
   _IDCard = _attachedObject getVariable ["FCLA_ID", ["", "", ""]];
   if (!FCLA_ID_Card_Allowed) exitWith {["¡LAS IDENTIFICACIONES ESTAN DESACTIVADAS POR EL ADDON OPTION: FCLA INTERACCIONES!"] call ZEN_Common_fnc_showMessage;};
-  if ((isNull _attachedObject) || !(_attachedObject in allUnits)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UNA UNIDAD"] call ZEN_Common_fnc_showMessage;};
+  if ((isNull _attachedObject) || !(_attachedObject in allUnits)) exitWith {["ERROR! EL MODULO DEBE SER COLOCADO SOBRE UNA UNIDAD"] call ZEN_Common_fnc_showMessage;};
 
 
   _originalAge = if ((_IDCard select 1) != "") then {_IDCard select 1;} else {[19, 65, true] call FCLA_Common_fnc_getRandomNumber;};
@@ -24,7 +24,7 @@
   _isAdvancedEnginner = if ([_attachedObject, "Advanced Enginner"] call FCLA_Common_fnc_checkUnitTrait) then {0;} else {1;};
 
 
-  ["NUEVA IDENTIFICACIÓN",
+  ["NUEVA IDENTIFICACION",
 	[
 	 ["EDIT", "Nombre",
 	  [
@@ -34,7 +34,7 @@
 	  ],
     true
 	 ],
-   ["EDIT", "Años",
+   ["EDIT", "Anos",
 	  [
 	   _originalAge,
 	   nil,
@@ -50,7 +50,7 @@
 	  ],
     true
 	 ],
-   ["TOOLBOX", "Médico",
+   ["TOOLBOX", "Medico",
     [
      _isDoctor,
      1,
@@ -95,6 +95,6 @@
     if (_isEOD) then {_attachedObject setVariable ["ACE_isEOD", true, true];} else {_attachedObject setVariable ["ACE_isEOD", nil, true];};
     if (_isDoctor) then {_attachedObject setVariable ["ACE_Medical_medicClass", 2, true];} else {_attachedObject setVariable ["ACE_Medical_medicClass", nil, true];};
     if (_isAdvancedEnginner) then {_attachedObject setVariable ["ACE_isEngineer", 2, true];} else {_attachedObject setVariable ["ACE_isEngineer", nil, true];};
-    ["IDENTIFICACIÓN MODIFICADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
+    ["IDENTIFICACION MODIFICADA CON EXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\ID_Card.paa"] call ZEN_Custom_Modules_fnc_Register;

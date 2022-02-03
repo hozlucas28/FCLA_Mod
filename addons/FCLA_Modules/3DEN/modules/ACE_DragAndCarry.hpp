@@ -27,7 +27,7 @@ class FCLA_Module_Drag_And_Carry: Module_F {
       tooltip = "";
       typeName = "STRING";
       property = "FCLA_Can_Drag";
-      displayName = "¿Se puede arrastrar?";
+      displayName = "Se puede arrastrar";
       defaultValue = """TRUE""";
 
       class Values {
@@ -47,7 +47,7 @@ class FCLA_Module_Drag_And_Carry: Module_F {
       tooltip = "";
       typeName = "STRING";
       property = "FCLA_Can_Carry";
-      displayName = "¿Se puede portar?";
+      displayName = "Se puede portar";
       defaultValue = """TRUE""";
 
       class Values {
@@ -83,6 +83,6 @@ class FCLA_Module_Drag_And_Carry: Module_F {
 
 	class ModuleDescription: ModuleDescription {
     sync[] = {"AnyStaticObject", "EmptyDetector"};
-		description[] =	{"Modifica las propiedades de los objetos sincronizados al módulo para que estos puedan ser arrastrados y/o portados."};
+		description[] =	{"Modifica las propiedades de los objetos sincronizados al modulo para que estos puedan ser arrastrados y/o portados."};
 	};
 };

@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                      VEHÍCULOS - "ESCALERAS DE EDIFICIOS"                      |
+|                      VEHICULOS - "ESCALERAS DE EDIFICIOS"                      |
 |********************************************************************************/
 
 
@@ -10,7 +10,7 @@
 class Land_MultistoryBuilding_01_F: House_F {
   class UserActions {
     class Go_Stairs_Balcony_Up {
-      displayName = "Ir al balcón";
+      displayName = "Ir al balcon";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 34;
@@ -181,7 +181,7 @@ class Land_MultistoryBuilding_04_F: House_F {
 class Land_Shop_City_04_F: House_F {
   class UserActions {
     class Go_Stairs_Balcony_Up_1 {
-      displayName = "Ir al balcón";
+      displayName = "Ir al balcon";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 12;
@@ -264,7 +264,7 @@ class Land_Shop_City_04_F: House_F {
 class Land_Shop_City_05_F: House_F {
   class UserActions {
     class Go_Stairs_Balcony_Up_1 {
-      displayName = "Ir al balcón (derecho)";
+      displayName = "Ir al balcon (derecho)";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 21;
@@ -277,7 +277,7 @@ class Land_Shop_City_05_F: House_F {
     };
 
     class Go_Stairs_Balcony_Up_2 {
-      displayName = "Ir al balcón (inquierdo)";
+      displayName = "Ir al balcon (inquierdo)";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 21;
@@ -399,7 +399,7 @@ class Land_Shop_City_05_F: House_F {
 class Land_Hotel_02_F: House_F {
   class UserActions {
     class Go_Stairs_Balcony_Up_1 {
-      displayName = "Ir al balcón";
+      displayName = "Ir al balcon";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 10;
@@ -425,7 +425,7 @@ class Land_Hotel_02_F: House_F {
     };
 
     class Go_Stairs_Balcony_Up_2 {
-      displayName = "Ir al balcón";
+      displayName = "Ir al balcon";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 6;
@@ -451,7 +451,7 @@ class Land_Hotel_02_F: House_F {
     };
 
     class Go_Stairs_Balcony_Up_3 {
-      displayName = "Ir al balcón";
+      displayName = "Ir al balcon";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 10;
@@ -477,7 +477,7 @@ class Land_Hotel_02_F: House_F {
     };
 
     class Go_Stairs_Balcony_Up_4 {
-      displayName = "Ir al balcón";
+      displayName = "Ir al balcon";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 13;
@@ -568,7 +568,7 @@ class Land_Cathedral_01_F: House_F {
 class Land_OrlHot: House_F {
   class UserActions {
     class Go_Stairs_Balcony_Up_1 {
-      displayName = "Ir al balcón (delantero)";
+      displayName = "Ir al balcon (delantero)";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 7;
@@ -594,7 +594,7 @@ class Land_OrlHot: House_F {
     };
 
     class Go_Stairs_Balcony_Up_2 {
-      displayName = "Ir al balcón (atras)";
+      displayName = "Ir al balcon (atras)";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 7;
@@ -620,7 +620,7 @@ class Land_OrlHot: House_F {
     };
 
     class Go_Stairs_Balcony_Up_3 {
-      displayName = "Ir al balcón (atras)";
+      displayName = "Ir al balcon (atras)";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 9;
@@ -713,7 +713,7 @@ class Land_Mil_House_dam: House_F {
 class Land_A_MunicipalOffice: House_F {
   class UserActions {
     class Go_Stairs_Balcony_Up_1 {
-      displayName = "Ir al balcón (delantero)";
+      displayName = "Ir al balcon (delantero)";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 23;
@@ -1166,7 +1166,7 @@ class Land_Dum_istan3_hromada: House_F {
 class Land_Dum_mesto3_istan: House_F {
   class UserActions {
     class Go_Stairs_Balcony_Up_1 {
-      displayName = "Ir al balcón";
+      displayName = "Ir al balcon";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 8;
@@ -1179,7 +1179,7 @@ class Land_Dum_mesto3_istan: House_F {
     };
 
     class Go_Stairs_Balcony_Up_2 {
-      displayName = "Ir al balcón";
+      displayName = "Ir al balcon";
       displayNameDefault = "<img image='\FCLA_Immersions\Building_Stairs\data\Go_Up.paa' size='2' shadow='true'/>";
       priority = 3;
       radius = 8;

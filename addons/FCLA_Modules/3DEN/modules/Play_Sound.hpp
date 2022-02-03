@@ -36,7 +36,7 @@ class FCLA_Module_Play_Sound: Module_F {
 				};
 
         class Owl {
-					name = "FCLA - Búho";
+					name = "FCLA - Buho";
 					value = "FCLA_SFX_Night_Owl";
 				};
 
@@ -71,67 +71,67 @@ class FCLA_Module_Play_Sound: Module_F {
 				};
 
         class Riot {
-					name = "FCLA - Manifestación";
+					name = "FCLA - Manifestacion";
 					value = "FCLA_SFX_Riot";
 				};
 
         class Africa_Crowd_v1 {
-					name = "FCLA - Multitud (África v1)";
+					name = "FCLA - Multitud (Africa v1)";
 					value = "FCLA_SFX_Africa_Crowd_v1";
 				};
 
         class Africa_Crowd_v2 {
-					name = "FCLA - Multitud (África v2)";
+					name = "FCLA - Multitud (Africa v2)";
 					value = "FCLA_SFX_Africa_Crowd_v2";
 				};
 
         class Africa_Crowd_v3 {
-					name = "FCLA - Multitud (África v3)";
+					name = "FCLA - Multitud (Africa v3)";
 					value = "FCLA_SFX_Africa_Crowd_v3";
 				};
 
         class Africa_Crowd_v4 {
-					name = "FCLA - Multitud (África v4)";
+					name = "FCLA - Multitud (Africa v4)";
 					value = "FCLA_SFX_Africa_Crowd_v4";
 				};
 
         class Africa_Crowd_v5 {
-					name = "FCLA - Multitud (África v5)";
+					name = "FCLA - Multitud (Africa v5)";
 					value = "FCLA_SFX_Africa_Crowd_v5";
 				};
 
         class Arab_Crowd_Vehicles_v1 {
-					name = "FCLA - Multitud y vehículos (Arabia v1)";
+					name = "FCLA - Multitud y vehiculos (Arabia v1)";
 					value = "FCLA_SFX_Arab_Crowd_Vehicles_v1";
 				};
 
         class Arab_Crowd_Vehicles_v2 {
-					name = "FCLA - Multitud y vehículos (Arabia v2)";
+					name = "FCLA - Multitud y vehiculos (Arabia v2)";
 					value = "FCLA_SFX_Arab_Crowd_Vehicles_v2";
 				};
 
         class Arab_Crowd_Vehicles_v3 {
-					name = "FCLA - Multitud y vehículos (Arabia v3)";
+					name = "FCLA - Multitud y vehiculos (Arabia v3)";
 					value = "FCLA_SFX_Arab_Crowd_Vehicles_v3";
 				};
 
         class Africa_Crowd_Vehicles_v1 {
-					name = "FCLA - Multitud y vehículos (África v1)";
+					name = "FCLA - Multitud y vehiculos (Africa v1)";
 					value = "FCLA_SFX_Africa_Crowd_Vehicles_v1";
 				};
 
         class Africa_Crowd_Vehicles_v2 {
-					name = "FCLA - Multitud y vehículos (África v2)";
+					name = "FCLA - Multitud y vehiculos (Africa v2)";
 					value = "FCLA_SFX_Africa_Crowd_Vehicles_v2";
 				};
 
         class Africa_Crowd_Vehicles_v3 {
-					name = "FCLA - Multitud y vehículos (África v3)";
+					name = "FCLA - Multitud y vehiculos (Africa v3)";
 					value = "FCLA_SFX_Africa_Crowd_Vehicles_v3";
 				};
 
         class Africa_Crowd_Vehicles_v4 {
-					name = "FCLA - Multitud y vehículos (África v4)";
+					name = "FCLA - Multitud y vehiculos (Africa v4)";
 					value = "FCLA_SFX_Africa_Crowd_Vehicles_v4";
 				};
 
@@ -151,22 +151,22 @@ class FCLA_Module_Play_Sound: Module_F {
 				};
 
         class Air_Alarm {
-					name = "FCLA - Alarma aérea";
+					name = "FCLA - Alarma aerea";
 					value = "FCLA_SFX_Air_Alarm";
 				};
 
         class Air_Alarm_Far {
-					name = "FCLA - Alarma aérea (distante)";
+					name = "FCLA - Alarma aerea (distante)";
 					value = "FCLA_SFX_Air_Alarm_Far";
 				};
 
         class Artillery_Incoming_Alarm {
-					name = "FCLA - Artillería inminente (alarma)";
+					name = "FCLA - Artilleria inminente (alarma)";
 					value = "FCLA_SFX_Artillery_Incoming_Alarm";
 				};
 
         class Biologic_Alarm {
-					name = "FCLA - Alarma biológica";
+					name = "FCLA - Alarma biologica";
 					value = "FCLA_SFX_Biologic_Alarm";
 				};
 
@@ -176,17 +176,17 @@ class FCLA_Module_Play_Sound: Module_F {
 				};
 
         class Music_Radio {
-					name = "FCLA - Radio (música)";
+					name = "FCLA - Radio (musica)";
 					value = "FCLA_SFX_Music_Radio";
 				};
 
         class Arab_Music_Radio {
-					name = "FCLA - Radio (música árabe)";
+					name = "FCLA - Radio (musica arabe)";
 					value = "FCLA_SFX_Arab_Music_Radio";
 				};
 
         class Spanish_News_Radio {
-					name = "FCLA - Radio (noticias en español)";
+					name = "FCLA - Radio (noticias en espanol)";
 					value = "FCLA_SFX_Spanish_News_Radio";
 				};
 
@@ -226,12 +226,12 @@ class FCLA_Module_Play_Sound: Module_F {
 				};
 
         class Insurgent_Speech {
-					name = "FCLA - Discurso insurgente (megáfono)";
+					name = "FCLA - Discurso insurgente (megafono)";
 					value = "FCLA_SFX_Insurgent_Speech";
 				};
 
         class Call_To_Prayer_Speech {
-					name = "FCLA - Llamado a la oración (megáfono)";
+					name = "FCLA - Llamado a la oracion (megafono)";
 					value = "FCLA_SFX_Call_To_Prayer_Speech";
 				};
 
@@ -241,18 +241,18 @@ class FCLA_Module_Play_Sound: Module_F {
 				};
 
         class Radio_Static {
-					name = "FCLA - Radio (estática)";
+					name = "FCLA - Radio (estatica)";
 					value = "FCLA_SFX_Radio_Static";
 				};
 
         class Radio_Morse_Code {
-					name = "FCLA - Radio (código morse)";
+					name = "FCLA - Radio (codigo morse)";
 					value = "FCLA_SFX_Radio_Morse_Code";
 				};
 
 
         class Battlefield_Sniper_Suppression {
-					name = "FCLA - Supresión de francotirador";
+					name = "FCLA - Supresion de francotirador";
 					value = "FCLA_SFX_Battlefield_Sniper_Suppression";
 				};
 
@@ -312,7 +312,7 @@ class FCLA_Module_Play_Sound: Module_F {
 				};
 
         class Burning_Vehicle {
-					name = "FCLA - Vehículo en llamas";
+					name = "FCLA - Vehiculo en llamas";
 					value = "FCLA_SFX_Burning_Vehicle";
 				};
 
@@ -327,7 +327,7 @@ class FCLA_Module_Play_Sound: Module_F {
 				};
 
         class Attempt_Start_Vehicle {
-					name = "FCLA - Intento de encender vehículo";
+					name = "FCLA - Intento de encender vehiculo";
 					value = "FCLA_SFX_Attempt_Start_Vehicle";
 				};
 			};
@@ -337,7 +337,7 @@ class FCLA_Module_Play_Sound: Module_F {
       tooltip = "Si se activa el sonido se repetira una vez haya concluido.";
       typeName = "BOOL";
       property = "FCLA_Sound_On_Loop";
-      displayName = "¿Reproducir en bucle?";
+      displayName = "Reproducir en bucle";
       defaultValue = "false";
 		};
 		class ModuleDescription: ModuleDescription {};
@@ -348,7 +348,7 @@ class FCLA_Module_Play_Sound: Module_F {
 		description[] =	{
       "Reproduce de manera tridimensional el sonido seleccionado.",
       "",
-      "• Si el módulo esta sincronizado únicamente a una entidad (objeto, unidad, vehículo, etc.) esta sera tomada como origen del sonido. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."
+      "- Si el modulo esta sincronizado unicamente a una entidad (objeto, unidad, vehiculo, etc.) esta sera tomada como origen del sonido. Sin embargo si hay mas de una entidad sincronizada o ninguna, se tomara como origen al modulo."
     };
 	};
 };

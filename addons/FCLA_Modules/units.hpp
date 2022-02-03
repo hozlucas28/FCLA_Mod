@@ -13,6 +13,6 @@ units[] = {
   "FCLA_Module_Jammer", "FCLA_Module_Jammer_Empty", "FCLA_Module_Plate_Number",
   "FCLA_Module_Play_Custom_Sound", "FCLA_Module_Play_Custom_Sound_Empty", "FCLA_Module_Play_Sound",
   "FCLA_Module_Radio_Range", "FCLA_Module_Radio", "FCLA_Module_Save_Position",
-  "FCLA_Module_Show_Subtitle", "FCLA_Module_Smoke_Signal", "FCLA_Module_Spawn_Effect",
-  "FCLA_Module_Spawn_Effect_Empty", "FCLA_Module_Switch_Lights"
+  "FCLA_Module_Shooting_Range", "FCLA_Module_Show_Subtitle", "FCLA_Module_Smoke_Signal",
+  "FCLA_Module_Spawn_Effect", "FCLA_Module_Spawn_Effect_Empty", "FCLA_Module_Switch_Lights"
 };

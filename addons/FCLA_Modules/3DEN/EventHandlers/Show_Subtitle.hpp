@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera un mensaje a modo de subtítulo.
+ * Genera un mensaje a modo de subtitulo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

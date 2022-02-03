@@ -11,7 +11,7 @@ class FCLA_Deafness {
 };
 
 class FCLA_Radiation {
-  name = "FCLA - Radiación";
+  name = "FCLA - Radiacion";
   sound[] = {\FCLA_Modules\sounds\Radiation.ogg, "db+0.7", 1};
   titles[] = {0, ""};
   duration = 4;
@@ -67,49 +67,49 @@ class FCLA_Sparks_7 {
 };
 
 class FCLA_Wind_Gust_1 {
-  name = "FCLA - Ráfaga de viento (1)";
+  name = "FCLA - Rafaga de viento (1)";
   sound[] = {"\FCLA_Modules\sounds\Wind_Gust_1.ogg", "db+0.5", 1};
   titles[] = {0, ""};
   duration = 6;
 };
 
 class FCLA_Wind_Gust_2 {
-  name = "FCLA - Ráfaga de viento (2)";
+  name = "FCLA - Rafaga de viento (2)";
   sound[] = {"\FCLA_Modules\sounds\Wind_Gust_2.ogg", "db+0.5", 1};
   titles[] = {0, ""};
   duration = 8;
 };
 
 class FCLA_Wind_Gust_3 {
-  name = "FCLA - Ráfaga de viento (3)";
+  name = "FCLA - Rafaga de viento (3)";
   sound[] = {"\FCLA_Modules\sounds\Wind_Gust_3.ogg", "db+0.5", 1};
   titles[] = {0, ""};
   duration = 17;
 };
 
 class FCLA_Wind_Gust_4 {
-  name = "FCLA - Ráfaga de viento (4)";
+  name = "FCLA - Rafaga de viento (4)";
   sound[] = {"\FCLA_Modules\sounds\Wind_Gust_4.ogg", "db+0.5", 1};
   titles[] = {0, ""};
   duration = 18;
 };
 
 class FCLA_Wind_Gust_5 {
-  name = "FCLA - Ráfaga de viento (5)";
+  name = "FCLA - Rafaga de viento (5)";
   sound[] = {"\FCLA_Modules\sounds\Wind_Gust_5.ogg", "db+0.5", 1};
   titles[] = {0, ""};
   duration = 10;
 };
 
 class FCLA_Wind_Gust_6 {
-  name = "FCLA - Ráfaga de viento (6)";
+  name = "FCLA - Rafaga de viento (6)";
   sound[] = {"\FCLA_Modules\sounds\Wind_Gust_6.ogg", "db+0.5", 1};
   titles[] = {0, ""};
   duration = 6;
 };
 
 class FCLA_Wind_Gust_7 {
-  name = "FCLA - Ráfaga de viento (7)";
+  name = "FCLA - Rafaga de viento (7)";
   sound[] = {"\FCLA_Modules\sounds\Wind_Gust_7.ogg", "db+0.5", 1};
   titles[] = {0, ""};
   duration = 16;

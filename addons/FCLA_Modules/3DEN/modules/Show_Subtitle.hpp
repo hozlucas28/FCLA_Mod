@@ -3,14 +3,14 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera un mensaje a modo de subtítulo.
+ * Genera un mensaje a modo de subtitulo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
 class FCLA_Module_Show_Subtitle: Module_F {
   author = "hozlucas28";
-	displayName = "Mostrar subtítulo (BETA)";
+	displayName = "Mostrar subtitulo (BETA)";
   icon = "\FCLA_Modules\3DEN\data\Chat.paa";
   portrait = "\FCLA_Modules\3DEN\data\Chat.paa";
 	category = "FCLA_Modules";
@@ -34,10 +34,10 @@ class FCLA_Module_Show_Subtitle: Module_F {
 		};
 
     class FCLA_Subtitle: Edit {
-      tooltip = "Mensaje que se mostrara a modo de subtítulo.";
+      tooltip = "Mensaje que se mostrara a modo de subtitulo.";
       typeName = "STRING";
       property = "FCLA_Subtitle";
-      displayName = "Subtítulo";
+      displayName = "Subtitulo";
       defaultValue = "''";
 		};
 
@@ -110,26 +110,26 @@ class FCLA_Module_Show_Subtitle: Module_F {
 		};
 
     class FCLA_Repeatable: CheckBox {
-      tooltip = "Si se activa el mensaje se repetira cuando la unidad vuelva a estar dentro de los tamaños del módulo.\n• Si todos los tamaños son -1, el mensaje no se repetira.";
+      tooltip = "Si se activa el mensaje se repetira cuando la unidad vuelva a estar dentro de los tamanos del modulo.\n- Si todos los tamanos son -1, el mensaje no se repetira.";
       typeName = "BOOL";
       property = "FCLA_Repeatable";
-      displayName = "¿Repetible?";
+      displayName = "Repetible";
       defaultValue = "false";
 		};
 
     class FCLA_Need_Short_Radio: CheckBox {
-      tooltip = "Si se activa únicamente aquellas unidades que posean radio de onda corta podran ver los subtítulos.";
+      tooltip = "Si se activa unicamente aquellas unidades que posean radio de onda corta podran ver los subtitulos.";
       typeName = "BOOL";
       property = "FCLA_Need_Short_Radio";
-      displayName = "¿Necesita radio corta?";
+      displayName = "Necesita radio corta";
       defaultValue = "false";
 		};
 
     class FCLA_Need_Long_Radio: CheckBox {
-      tooltip = "Si se activa únicamente aquellas unidades que posean radio de onda larga podran ver los subtítulos.";
+      tooltip = "Si se activa unicamente aquellas unidades que posean radio de onda larga podran ver los subtitulos.";
       typeName = "BOOL";
       property = "FCLA_Need_Long_Radio";
-      displayName = "¿Necesita radio larga?";
+      displayName = "Necesita radio larga";
       defaultValue = "false";
 		};
 
@@ -178,10 +178,10 @@ class FCLA_Module_Show_Subtitle: Module_F {
 	class ModuleDescription: ModuleDescription {
     sync[] = {"AnyBrain", "AnyVehicle", "EmptyDetector", "AnyStaticObject"};
 		description[] =	{
-      "Genera un mensaje a modo de subtítulo.",
+      "Genera un mensaje a modo de subtitulo.",
       "",
-      "• Los tamaños del módulo determinan el área en el cual debe estar la unidad para ver el mensaje. Si todos son -1 se asumirá que la unidad esta dentro del área.",
-      "• Si sincronizas únicamente una entidad (objeto, unidad, vehículo, etc.) al módulo, esta se tomara como origen/centro del área. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."
+      "- Los tamanos del modulo determinan el área en el cual debe estar la unidad para ver el mensaje. Si todos son -1 se asumirá que la unidad esta dentro del área.",
+      "- Si sincronizas unicamente una entidad (objeto, unidad, vehiculo, etc.) al modulo, esta se tomara como origen/centro del área. Sin embargo si hay más de una entidad sincronizada o ninguna, se tomara como origen al modulo."
     };
 	};
 };

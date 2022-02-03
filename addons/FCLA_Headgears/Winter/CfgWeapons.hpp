@@ -186,11 +186,11 @@ class H_HelmetSpecB_Quetzal_Winter_v2: H_HelmetSpecB {
 
 
 
-/* ------------------ CASCO DE COMBATE MEJORADO (MÉDICO) ------------------- */
+/* ------------------ CASCO DE COMBATE MEJORADO (MEDICO) ------------------- */
 
 class H_HelmetSpecB_Medic_Winter_v2: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado [Médico] (invierno v2)";
+  displayName = "Casco de combate mejorado [Medico] (invierno v2)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Winter\data\H_HelmetSpecB_Medic_Winter_v2.paa"};
   picture = "\FCLA_Headgears\Winter\data\pictures\H_HelmetSpecB_Medic_Winter_v2.paa";

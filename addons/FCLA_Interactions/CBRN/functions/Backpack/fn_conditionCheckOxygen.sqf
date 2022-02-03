@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si se puede comprobar el oxígeno de la mochila.
+ * Verifica si se puede comprobar el oxigeno de la mochila.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

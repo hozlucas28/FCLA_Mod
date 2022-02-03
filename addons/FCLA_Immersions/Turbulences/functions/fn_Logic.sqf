@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera turbulencias en el avión/helicóptero.
+ * Genera turbulencias en el avion/helicoptero.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

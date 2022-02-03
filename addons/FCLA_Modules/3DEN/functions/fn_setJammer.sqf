@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera un jammer que bloquea/interfiere las señales de comunicación..
+ * Genera un jammer que bloquea/interfiere las senales de comunicacion..
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -30,7 +30,7 @@ _jammerMaxRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1]) <= 
 
 
 
-//Pegar módulo.
+//Pegar modulo.
 _findedEntity = if (_numberOfCompatibleSynchronizedObjects == 1) then {0;} else {-1;};
 _jammerSource = if (_findedEntity > -1) then {_compatibleSynchronizedObjects select _findedEntity;} else {_module;};
 if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];};
@@ -97,7 +97,7 @@ if (_jammerSource != _module) then {_module attachTo [_jammerSource, [0, 0, 0]];
 }, 0.5, [_module, _moduleArea, _jammerSource, _jammerMaxRad, (25 * _jammerMaxRad) / 100, _canBeDisabled, _affectVehicles]] call CBA_fnc_addPerFrameHandler;
 
 
-//Acción para desactivar.
+//Accion para desactivar.
 if ((_module == _jammerSource) || (!_canBeDisabled)) exitWith {};
 [_jammerSource, "desactivar jammer", "\FCLA_Data\Hold_Actions\Deactivate_Jammer.paa", _needHackingDevice] call FCLA_Common_fnc_hackDevice;
 
@@ -112,5 +112,5 @@ if (_jammerID == "") exitWith {};
     if (isNull _curatorUnit) exitWith {};
     _unitsWithCurator pushBack _curatorUnit;
   } forEach allCurators;
-  ["FCLA_GUI_Message", ["JAMMER DESACTIVADO", "El jammer '" + (_this select 0) + "' ha sido desactivado con éxito."], _unitsWithCurator] call CBA_fnc_targetEvent;
+  ["FCLA_GUI_Message", ["JAMMER DESACTIVADO", "El jammer '" + (_this select 0) + "' ha sido desactivado con exito."], _unitsWithCurator] call CBA_fnc_targetEvent;
 }, [_jammerID, _jammerSource]] call CBA_fnc_waitUntilAndExecute;

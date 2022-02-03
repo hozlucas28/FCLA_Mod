@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Oculta/Muestra al Zeus. Esta función es utilizada por el menú contextual
+ * Oculta/Muestra al Zeus. Esta funcion es utilizada por el menu contextual
  * correspondiente.
  *
  * Public: [No]
@@ -20,7 +20,7 @@ player setCaptive _state;
 player allowDamage !_state;
 ["ZEN_Common_hideObjectGlobal", [player, _state]] call CBA_fnc_serverEvent;
 
-//Ocultar águila.
+//Ocultar aguila.
 _curatorEagle = _curatorLogic getVariable ["bird", objNull];
 if (!isNull _curatorEagle) then {
   ["ZEN_Common_hideObjectGlobal", [_curatorEagle, _state]] call CBA_fnc_serverEvent;

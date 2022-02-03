@@ -26,7 +26,7 @@ class FCLA_Module_Create_Injuries: Module_F {
       tooltip = "";
       typeName = "STRING";
       property = "FCLA_Type_Of_Injury";
-      displayName = "Tipo de lesión";
+      displayName = "Tipo de lesion";
       defaultValue = """grenade""";
 
      class Values {
@@ -51,17 +51,17 @@ class FCLA_Module_Create_Injuries: Module_F {
        };
 
        class Collision {
-         name = "Colisión";
+         name = "Colision";
          value = "collision";
        };
 
        class Stab {
-         name = "Puñalada";
+         name = "Punalada";
          value = "stab";
        };
 
        class Punch {
-         name = "Puñetazo";
+         name = "Punetazo";
          value = "punch";
        };
 
@@ -91,14 +91,14 @@ class FCLA_Module_Create_Injuries: Module_F {
        };
 
        class Vehicle_Crash {
-         name = "Accidente de vehículo";
+         name = "Accidente de vehiculo";
          value = "vehiclecrash";
        };
      };
    };
 
    class FCLA_Level_Of_Injury: Edit {
-     tooltip = "Mientras más alto sea el nivel de lesiones, más heridas habra.\n• [5 - 10] = alta complejidad.\n• [2.5 - 5] = media complejidad.\n• [0 - 2.5] = baja complejidad.";
+     tooltip = "Mientras mas alto sea el nivel de lesiones, mas heridas habra.\n- [5 - 10] = alta complejidad.\n- [2.5 - 5] = media complejidad.\n- [0 - 2.5] = baja complejidad.";
      typeName = "NUMBER";
      property = "FCLA_Level_Of_Injury";
      displayName = "Nivel de lesiones";
@@ -109,7 +109,7 @@ class FCLA_Module_Create_Injuries: Module_F {
      tooltip = "Si se activa se forzara a la unidad a estar inconsciente sin importar la gravedad de sus heridas.";
      typeName = "BOOL";
      property = "FCLA_Force_Unconsciousness";
-     displayName = "¿Forzar inconsciencia?";
+     displayName = "Forzar inconsciencia";
      defaultValue = "false";
    };
 
@@ -117,7 +117,7 @@ class FCLA_Module_Create_Injuries: Module_F {
      tooltip = "";
      typeName = "BOOL";
      property = "FCLA_Fracture_Right_Arm";
-     displayName = "¿Fracturar brazo derecho?";
+     displayName = "Fracturar brazo derecho";
      defaultValue = "false";
    };
 
@@ -125,7 +125,7 @@ class FCLA_Module_Create_Injuries: Module_F {
      tooltip = "";
      typeName = "BOOL";
      property = "FCLA_Fracture_Left_Arm";
-     displayName = "¿Fracturar brazo izquierdo?";
+     displayName = "Fracturar brazo izquierdo";
      defaultValue = "false";
    };
 
@@ -133,7 +133,7 @@ class FCLA_Module_Create_Injuries: Module_F {
      tooltip = "";
      typeName = "BOOL";
      property = "FCLA_Fracture_Right_Leg";
-     displayName = "¿Fracturar pierna derecha?";
+     displayName = "Fracturar pierna derecha";
      defaultValue = "false";
    };
 
@@ -141,7 +141,7 @@ class FCLA_Module_Create_Injuries: Module_F {
      tooltip = "";
      typeName = "BOOL";
      property = "FCLA_Fracture_Left_Leg";
-     displayName = "¿Fracturar pierna izquierda?";
+     displayName = "Fracturar pierna izquierda";
      defaultValue = "false";
    };
    class ModuleDescription: ModuleDescription {};
@@ -149,6 +149,6 @@ class FCLA_Module_Create_Injuries: Module_F {
 
  class ModuleDescription: ModuleDescription {
    sync[] = {"AnyBrain", "EmptyDetector"};
-   description[] =	{"Permite provocarle lesiones a las unidades sincronizadas al módulo."};
+   description[] =	{"Permite provocarle lesiones a las unidades sincronizadas al modulo."};
  };
 };

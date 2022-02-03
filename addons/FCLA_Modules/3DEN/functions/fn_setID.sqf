@@ -26,11 +26,11 @@ _EODState = _module getVariable ["FCLA_EOD_State", false];
 _doctorState = _module getVariable ["FCLA_Doctor_State", false];
 _advancedEnginnerState = _module getVariable ["FCLA_Advanced_Enginner_State", false];
 _compatibleSynchronizedObjects = _synchronizedObjects select {_x in allUnits};
-if ((_newAge == "") || (_newName == "") || (_newPlaceOfBirth == "") || ((count _compatibleSynchronizedObjects) <= 0)) exitWith {["FCLA_Module_ID", "• MÓDULO: MODIFICAR ID", "¡Error! El/Un módulo 'Modificar ID' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
+if ((_newAge == "") || (_newName == "") || (_newPlaceOfBirth == "") || ((count _compatibleSynchronizedObjects) <= 0)) exitWith {["FCLA_Module_ID", "- MODULO: MODIFICAR ID", "¡Error! El/Un modulo 'Modificar ID' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
 
 
 
-//Modificar identificación.
+//Modificar identificacion.
 {
   _dogTag = [_x] call ACE_dogTags_fnc_getDogTagData;
   [_x, _newName] remoteExec ["setName", 0, true];
@@ -42,5 +42,5 @@ if ((_newAge == "") || (_newName == "") || (_newPlaceOfBirth == "") || ((count _
 } forEach _compatibleSynchronizedObjects;
 
 
-//Eliminar módulo.
+//Eliminar modulo.
 deleteVehicle _module;

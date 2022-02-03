@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo para reproducir un sonido personalizado de manera
+ * Crea un modulo para reproducir un sonido personalizado de manera
  * tridimensional.
  *
  * Public: [No]
@@ -20,7 +20,7 @@
 	  ],
     false
 	 ],
-   ["SLIDER", ["Radio", "Determina la distancia a la que se oirá el sonido."],
+   ["SLIDER", ["Radio", "Determina la distancia a la que se oira el sonido."],
     [
      100,
      5000,
@@ -43,6 +43,6 @@
 
     _curatorLogic = getAssignedCuratorLogic player;
     ["ZEN_Common_addObjects", [[_module], _curatorLogic]] call CBA_fnc_serverEvent;
-    ["SONIDO PERSONALIZADO GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
+    ["SONIDO PERSONALIZADO GENERADO CON EXITO"] call ZEN_Common_fnc_showMessage;
   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Sound.paa"] call ZEN_Custom_Modules_fnc_Register;

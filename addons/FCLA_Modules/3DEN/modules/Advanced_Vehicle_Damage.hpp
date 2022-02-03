@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Evita que los vehículos sincronizados reciban un daño fatal, dejandolos con
- * un daño total sin provocar su destrucción.
+ * Evita que los vehiculos sincronizados reciban un dano fatal, dejandolos con
+ * un dano total sin provocar su destruccion.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -27,7 +27,7 @@ class FCLA_Module_Advanced_Vehicle_Damage: Module_F {
       tooltip = "";
       typeName = "BOOL";
       property = "FCLA_Damage_Weapons";
-      displayName = "¿Destruir armas?";
+      displayName = "Destruir armas";
       defaultValue = "true";
 		};
 
@@ -35,7 +35,7 @@ class FCLA_Module_Advanced_Vehicle_Damage: Module_F {
       tooltip = "";
       typeName = "BOOL";
       property = "FCLA_Damage_Items";
-      displayName = "¿Destruir items?";
+      displayName = "Destruir items";
       defaultValue = "true";
 		};
 		class ModuleDescription: ModuleDescription {};
@@ -43,6 +43,6 @@ class FCLA_Module_Advanced_Vehicle_Damage: Module_F {
 
 	class ModuleDescription: ModuleDescription {
     sync[] = {"AnyVehicle", "EmptyDetector"};
-		description[] =	{"Evita que los vehículos sincronizados reciban un daño fatal, dejandolos con un daño total sin provocar su destrucción."};
+		description[] =	{"Evita que los vehiculos sincronizados reciban un dano fatal, dejandolos con un dano total sin provocar su destruccion."};
 	};
 };

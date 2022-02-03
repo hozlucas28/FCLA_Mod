@@ -7,12 +7,12 @@
  *
  * Arguments:
  *            0: Helipuerto donde se colocaran las luces. <OBJECT>
- *            1: Número de luces a colocar, opcional. <NUMBER> (default: 10)
+ *            1: Numero de luces a colocar, opcional. <NUMBER> (default: 10)
  *            2: Color de las luces, opcional. <STRING> (default: "Yellow")
  *                # Colores aceptados: "Yellow", "Red" y "Green".
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Examples:
  *             //Opcionales no definidos.

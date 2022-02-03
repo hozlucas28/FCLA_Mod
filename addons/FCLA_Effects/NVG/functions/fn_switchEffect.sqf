@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera un efecto de postprocesado para cambiar el color de la visión nocturna.
+ * Genera un efecto de postprocesado para cambiar el color de la vision nocturna.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

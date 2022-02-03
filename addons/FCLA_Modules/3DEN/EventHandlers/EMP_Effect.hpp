@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera un efecto visual simulando un pulso electromagnético.
+ * Genera un efecto visual simulando un pulso electromagnetico.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -23,7 +23,7 @@
     sleep 1;
     cutText ["", "WHITE OUT", 1];
     if (isDamageAllowed _player) then {[_player, 0.75] call ACE_Medical_fnc_adjustPainLevel;};
-    hint parseText "<t color='#FF0000'>Fuiste afectado por un PEM.<br/>Tus accesorios electrónicos se han destruido.</t>";
+    hint parseText "<t color='#FF0000'>Fuiste afectado por un PEM.<br/>Tus accesorios electronicos se han destruido.</t>";
     {playSound _x;} forEach ["FCLA_Radiation", "Earthquake_01"];
 
     sleep 0.1;

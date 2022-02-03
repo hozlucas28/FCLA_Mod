@@ -3,20 +3,20 @@
  * Author: hozlucas28
  *
  * Description:
- * Muestra el arbol genealógico de la entidad, enviada como argumento 0.
+ * Muestra el arbol genealogico de la entidad, enviada como argumento 0.
  *
  * Arguments:
  *            0: Classname de la entidad. <STRING>
  *            1: Tipo de Cfg donde se buscara a la entidad. <STRING>
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Example:
  * ["B_Soldier_F", "CfgVehicles"] call FCLA_Common_fnc_showParentTree;
  *
  * Note:
- * Si el classname de la entidad no existe ó si el tipo de Cfg es incorrecto
+ * Si el classname de la entidad no existe o si el tipo de Cfg es incorrecto
  * el valor retornado sera un "false".
  *
  * Public: [Yes]

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera un efecto que simula el trastorno por estrés postraumático en la
+ * Genera un efecto que simula el trastorno por estres postraumatico en la
  * unidad, enviada como argumento 0.
  *
  * Arguments:
@@ -21,10 +21,10 @@
  *             ["FCLA_PTSD", [player, true, false, false, true], player] call CBA_fnc_targetEvent;
  *
  * Notes:
- * Los síntomas (argumento 1 al 4) se haran notar cada 10 minutos,
- * 12 minutos ó 15 minutos, una vez llamada la función.
+ * Los sintomas (argumento 1 al 4) se haran notar cada 10 minutos,
+ * 12 minutos o 15 minutos, una vez llamada la funcion.
  *
- * Para eliminar este efecto de la unidad, asígnele la variable de tipo
+ * Para eliminar este efecto de la unidad, asignele la variable de tipo
  * objeto "FCLA_Disable_PTSD" con con el valor <true>.
  *
  * Public: [Yes]

@@ -28,6 +28,7 @@ class 3DEN {
   class switchAutoHover3DEN {file = "\FCLA_Modules\3DEN\functions\fn_switchAutoHover.sqf";};
   class changeRadioRange3DEN {file = "\FCLA_Modules\3DEN\functions\fn_changeRadioRange.sqf";};
   class spawnSmokeSignal3DEN {file = "\FCLA_Modules\3DEN\functions\fn_spawnSmokeSignal.sqf";};
+  class setShootingRange3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setShootingRange.sqf";};
   class setBuildingTraits3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setBuildingTraits.sqf";};
   class createACEZeusAction3DEN {file = "\FCLA_Modules\3DEN\functions\ACE_Actions\fn_zeusAction.sqf";};
   class setCBRNConfiguration3DEN {file = "\FCLA_Modules\3DEN\functions\CBRN\fn_setConfiguration.sqf";};

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Fuerza a los vehículos a disparar hacia el cielo.
+ * Fuerza a los vehiculos a disparar hacia el cielo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -23,7 +23,7 @@ class FCLA_Module_Ambient_Fired: Module_F {
 
 	class Attributes: AttributesBase {
     class FCLA_Weapon: Edit {
-      tooltip = "Classname del arma.\n• Si desea conocer los classnames de las armas que posee el vehículo utilize el script: weapons _vehicle;";
+      tooltip = "Classname del arma.\n- Si desea conocer los classnames de las armas que posee el vehiculo utilize el script: weapons _vehicle;";
       typeName = "STRING";
       property = "FCLA_Weapon";
       displayName = "Arma";
@@ -31,42 +31,42 @@ class FCLA_Module_Ambient_Fired: Module_F {
 		};
 
     class FCLA_Ammo: Edit {
-      tooltip = "Classname de la munición.\n• Si desea conocer los classnames de las municiones que posee el vehículo utilize el script: magazines _vehicle;";
+      tooltip = "Classname de la municion.\n- Si desea conocer los classnames de las municiones que posee el vehiculo utilize el script: magazines _vehicle;";
       typeName = "STRING";
       property = "FCLA_Ammo";
-      displayName = "Munición";
+      displayName = "Municion";
       defaultValue = "''";
 		};
 
     class FCLA_Minimum_Shots: Edit {
-      tooltip = "Cantidad mínima de disparos que se efectuaran.";
+      tooltip = "Cantidad minima de disparos que se efectuaran.";
       typeName = "NUMBER";
       property = "FCLA_Minimum_Shots";
-      displayName = "Mínimo de disparos";
+      displayName = "Minimo de disparos";
       defaultValue = 10;
 		};
 
     class FCLA_Maximum_Shots: Edit {
-      tooltip = "Cantidad máxima de disparos que se efectuaran.";
+      tooltip = "Cantidad maxima de disparos que se efectuaran.";
       typeName = "NUMBER";
       property = "FCLA_Maximum_Shots";
-      displayName = "Máximo de disparos";
+      displayName = "Maximo de disparos";
       defaultValue = 20;
 		};
 
     class FCLA_Minimum_Delay: Edit {
-      tooltip = "Tiempo mínimo (en segundos) para repetir disparos.";
+      tooltip = "Tiempo minimo (en segundos) para repetir disparos.";
       typeName = "NUMBER";
       property = "FCLA_Minimum_Delay";
-      displayName = "Tiempo mínimo";
+      displayName = "Tiempo minimo";
       defaultValue = 4;
 		};
 
     class FCLA_Maximum_Delay: Edit {
-      tooltip = "Tiempo máximo (en segundos) para repetir disparos.";
+      tooltip = "Tiempo maximo (en segundos) para repetir disparos.";
       typeName = "NUMBER";
       property = "FCLA_Maximum_Delay";
-      displayName = "Tiempo máximo";
+      displayName = "Tiempo maximo";
       defaultValue = 8;
 		};
 		class ModuleDescription: ModuleDescription {};
@@ -75,10 +75,10 @@ class FCLA_Module_Ambient_Fired: Module_F {
 	class ModuleDescription: ModuleDescription {
     sync[] = {"AnyVehicle", "EmptyDetector"};
 		description[] =	{
-      "Permite forzar los vehículos sincronizados al módulo a disparar hacia el cielo.",
+      "Permite forzar los vehiculos sincronizados al modulo a disparar hacia el cielo.",
       "",
-      "• El módulo solo puede estar sincronizado a un único vehículo.",
-      "• Si desea detener los disparos ambientales bastará con borrar el módulo correspondiente."
+      "- El modulo solo puede estar sincronizado a un unico vehiculo.",
+      "- Si desea detener los disparos ambientales bastara con borrar el modulo correspondiente."
     };
 	};
 };

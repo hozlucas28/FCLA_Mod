@@ -24,14 +24,14 @@
        "Humo",
        "Fuego",
        "Chispas",
-       "Luciérnagas",
-       "Ráfaga de viento"
+       "Luciernagas",
+       "Rafaga de viento"
       ],
       0
      ],
      false
     ],
-    ["SLIDER", ["Tiempo", "Segundos para que se repita el efecto.\n• Nota: solo funciona con las chispas y la ráfaga de viento."],
+    ["SLIDER", ["Tiempo", "Segundos para que se repita el efecto.\n- Nota: solo funciona con las chispas y la rafaga de viento."],
      [
       1,
       3600,
@@ -49,8 +49,8 @@
        case "Fire": {"FUEGO";};
        case "Smoke": {"HUMO";};
        case "Sparks": {"CHISPAS";};
-       case "Wind_Gust": {"RÁFAGA DE VIENTO";};
-       case "Fireflies": {"LUCIÉRNAGAS";};
+       case "Wind_Gust": {"RAFAGA DE VIENTO";};
+       case "Fireflies": {"LUCIERNAGAS";};
      };
 
      _module = createAgent ["FCLA_Module_Spawn_Effect_Empty", _position, [], 0, "CAN_COLLIDE"];
@@ -60,6 +60,6 @@
 
      _curatorLogic = getAssignedCuratorLogic player;
      ["ZEN_Common_addObjects", [[_module], _curatorLogic]] call CBA_fnc_serverEvent;
-     ["EL EFECTO " + _effectName + " SE HA GENERADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
+     ["EL EFECTO " + _effectName + " SE HA GENERADO CON EXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, ""] call ZEN_Custom_Modules_fnc_Register;

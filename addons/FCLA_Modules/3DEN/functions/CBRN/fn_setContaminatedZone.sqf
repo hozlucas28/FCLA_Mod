@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea áreas contaminadas.
+ * Crea areas contaminadas.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -22,11 +22,11 @@ if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 _moduleArea = _module getVariable ["objectArea", [0, 0, 0, false, -1]];
 _threatLevel = _module getVariable ["FCLA_Threat_Level", 0];
 _contaminationMaxRad = if ((selectMax [_moduleArea select 0, _moduleArea select 1]) <= 0) then {worldSize * 2;} else {selectMax [_moduleArea select 0, _moduleArea select 1];};
-if (_threatLevel <= 0) exitWith {["FCLA_Module_CBRN_Contaminated_Zone", "• MÓDULO: ZONA CONTAMINADA (CBRN)", "¡Error! El/Un módulo 'Área contaminada (CBRN)' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
+if (_threatLevel <= 0) exitWith {["FCLA_Module_CBRN_Contaminated_Zone", "- MODULO: ZONA CONTAMINADA (CBRN)", "¡Error! El/Un modulo 'Area contaminada (CBRN)' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
 
 
 
-//Crear área contaminada.
+//Crear area contaminada.
 [{
   _args params ["_module", "_moduleArea", "_contaminationMaxRad", "_quarterOfContaminationMaxRad", "_threatLevel"];
   _isNotAlive = !alive _module;

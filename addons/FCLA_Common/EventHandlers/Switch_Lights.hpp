@@ -3,10 +3,10 @@
  * Author: hozlucas28
  *
  * Description:
- * Enciende/Apaga las luces (lamparas y/o vehículos), enviadas como argumento 0.
+ * Enciende/Apaga las luces (lamparas y/o vehiculos), enviadas como argumento 0.
  *
  * Arguments:
- *            0: Lamparas y/o vehículos. <ARRAY OF OBJECTS>
+ *            0: Lamparas y/o vehiculos. <ARRAY OF OBJECTS>
  *            1: ¿Encender?. <BOOL>
  *
  * Example:
@@ -14,7 +14,7 @@
  * ["FCLA_Switch_Lights", [_lampsAndVehicles, false]] call CBA_fnc_globalEvent;
  *
  * Note:
- * Su estructura y método de operación se basa en la función "BIS_fnc_switchLamp" (función del juego vanilla).
+ * Su estructura y metodo de operacion se basa en la funcion "BIS_fnc_switchLamp" (funcion del juego vanilla).
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

@@ -594,7 +594,7 @@ class U_B_CombatUniform_Quetzal_Tropical_Vest: U_B_CombatUniform_mcam_vest {
 
 class U_B_HeliPilotCoveralls_FCLA: U_B_HeliPilotCoveralls {
   author = "hozlucas28";
-  displayName = "Mono de piloto de helicóptero [FCLA]";
+  displayName = "Mono de piloto de helicoptero [FCLA]";
   picture = "\FCLA_Uniforms\Vanilla\data\pictures\U_B_HeliPilotCoveralls_FCLA.paa";
   scope = 2;
   scopeArsenal = 2;
@@ -613,7 +613,7 @@ class U_B_HeliPilotCoveralls_FCLA: U_B_HeliPilotCoveralls {
 
 class U_B_HeliPilotCoveralls_Quetzal: U_B_HeliPilotCoveralls {
   author = "hozlucas28";
-  displayName = "Mono de piloto de helicóptero [Quetzal]";
+  displayName = "Mono de piloto de helicoptero [Quetzal]";
   picture = "\FCLA_Uniforms\Vanilla\data\pictures\U_B_HeliPilotCoveralls_Quetzal.paa";
   scope = 2;
   scopeArsenal = 2;

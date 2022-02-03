@@ -3,14 +3,14 @@
  * Author: hozlucas28
  *
  * Description:
- * Retorna información variada de la puerta enviada como argumento.
+ * Retorna informacion variada de la puerta enviada como argumento.
  *
  * Argument:
  *            0: Classname de la puerta. <ARRAY>
  *
  * Return Value:
- *               0: Classname de la animación de la puerta. <STRING>
- *               1: Variable de tipo objeto asignada a la puerta. Indica si la puerta esta cerrada ó no. <STRING>
+ *               0: Classname de la animacion de la puerta. <STRING>
+ *               1: Variable de tipo objeto asignada a la puerta. Indica si la puerta esta cerrada o no. <STRING>
  *
  * Example:
  * ["door_1"] call FCLA_Common_fnc_getDoorInfo;

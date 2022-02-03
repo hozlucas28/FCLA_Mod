@@ -12,7 +12,7 @@
  * ["FCLA_Hint_Silent", ["¡Hola mundo (sin sonido)!"], player] call CBA_fnc_targetEvent;
  *
  * Note:
- * Su estructura y método de operación se basa en el hintSilent (script del juego vanilla).
+ * Su estructura y metodo de operacion se basa en el hintSilent (script del juego vanilla).
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

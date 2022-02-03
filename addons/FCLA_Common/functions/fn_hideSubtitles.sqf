@@ -3,24 +3,24 @@
  * Author: hozlucas28
  *
  * Description:
- * Oculta los subtítulos del emisor, mostrados a travez de la función
+ * Oculta los subtitulos del emisor, mostrados a travez de la funcion
  * "FCLA_Common_fnc_showSubtitles".
  *
  * Argument:
- *            0: Emisor de los subtítulos. <UNIT|OBJECT>
+ *            0: Emisor de los subtitulos. <UNIT|OBJECT>
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Example:
  * [Civil_1] call FCLA_Common_fnc_hideSubtitles;
  *
  * Notes:
- * Se recomienda utilizar esta función a travez del evento
+ * Se recomienda utilizar esta funcion a travez del evento
  * personalizado "FCLA_Hide_Subtitles".
  *
- * Si no definiste al emisor en la función "FCLA_Common_fnc_showSubtitles",
- * no se podran ocultar los subtítulos, retornando un false.
+ * Si no definiste al emisor en la funcion "FCLA_Common_fnc_showSubtitles",
+ * no se podran ocultar los subtitulos, retornando un false.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -36,7 +36,7 @@ if ((isNull _emitter) || (isNil "_ctrl")) exitWith {false};
 
 
 
-//Ocultar subtítulos.
+//Ocultar subtitulos.
 _ctrl ctrlSetFade 1;
 _ctrl ctrlCommit 0.5;
 _emitter setVariable ["FCLA_Hide_Subtitles", true, true];

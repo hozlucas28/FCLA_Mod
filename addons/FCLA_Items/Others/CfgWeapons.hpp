@@ -10,7 +10,7 @@
 class FCLA_Handgun_License: CBA_MiscItem {
   author = "hozlucas28";
   displayName = "Licencia de arma (pistola)";
-  descriptionShort = "Licencia para la portación de arma de fuego";
+  descriptionShort = "Licencia para la portacion de arma de fuego";
   hiddenSelections[] = {"camo"};
   model = "\a3\Missions_F_Oldman\Props\Wallet_01_CSAT_F.p3d";
   picture = "\FCLA_Items\Others\data\pictures\Handgun_License.paa";
@@ -23,8 +23,8 @@ class FCLA_Handgun_License: CBA_MiscItem {
 
 class FCLA_Semi_Automatic_License: CBA_MiscItem {
   author = "hozlucas28";
-  displayName = "Licencia de arma (semiautomática)";
-  descriptionShort = "Licencia para la portación de arma de fuego";
+  displayName = "Licencia de arma (semiautomatica)";
+  descriptionShort = "Licencia para la portacion de arma de fuego";
   hiddenSelections[] = {"camo"};
   model = "\a3\Missions_F_Oldman\Props\Wallet_01_CSAT_F.p3d";
   picture = "\FCLA_Items\Others\data\pictures\Semi_Automatic_License.paa";
@@ -53,7 +53,7 @@ class FCLA_USA_Passport: CBA_MiscItem {
 
 class FCLA_British_Passport: CBA_MiscItem {
   author = "hozlucas28";
-  displayName = "Pasaporte (Gran Bretaña)";
+  displayName = "Pasaporte (Gran Bretana)";
   hiddenSelections[] = {"camo"};
   model = "\a3\Missions_F_Oldman\Props\Wallet_01_CSAT_F.p3d";
   picture = "\FCLA_Items\Others\data\pictures\British_Passport.paa";
@@ -79,7 +79,7 @@ class FCLA_Russia_Passport: CBA_MiscItem {
 
 class FCLA_Afghan_Passport: CBA_MiscItem {
   author = "hozlucas28";
-  displayName = "Pasaporte (Afganistán)";
+  displayName = "Pasaporte (Afganistan)";
   hiddenSelections[] = {"camo"};
   model = "\a3\Missions_F_Oldman\Props\Wallet_01_CSAT_F.p3d";
   picture = "\FCLA_Items\Others\data\pictures\Afghan_Passport.paa";
@@ -95,7 +95,7 @@ class FCLA_Afghan_Passport: CBA_MiscItem {
 
 class FCLA_Cocaine: CBA_MiscItem {
   author = "hozlucas28";
-  displayName = "Cocaína";
+  displayName = "Cocaina";
   model = "\FCLA_Items\Others\data\Cocaine\Cocaine.p3d";
   picture = "\FCLA_Items\Others\data\pictures\Cocaine.paa";
   scope = 2;
@@ -107,7 +107,7 @@ class FCLA_Cocaine: CBA_MiscItem {
 
 class FCLA_Cocaine_Brick: CBA_MiscItem {
   author = "hozlucas28";
-  displayName = "Ladrillo de cocaína";
+  displayName = "Ladrillo de cocaina";
   model = "\FCLA_Items\Others\data\Cocaine_Brick\Cocaine_Brick.p3d";
   picture = "\FCLA_Items\Others\data\pictures\Cocaine_Brick.paa";
   scope = 2;
@@ -130,7 +130,7 @@ class FCLA_Weed_Brick: CBA_MiscItem {
 
 
 
-/* ------------------------------- QUÍMICOS -------------------------------- */
+/* ------------------------------- QUIMICOS -------------------------------- */
 
 class FCLA_Fertilizer: CBA_MiscItem {
   author = "hozlucas28";
@@ -148,7 +148,7 @@ class FCLA_Fertilizer: CBA_MiscItem {
 
 class FCLA_Hydrogen_Peroxide: CBA_MiscItem {
   author = "hozlucas28";
-  displayName = "Peróxido de hidrógeno";
+  displayName = "Peroxido de hidrogeno";
   model = "\A3\Structures_F\items\food\bottleplastic_v1_f.p3d";
   picture = "\FCLA_Items\Others\data\pictures\Hydrogen_Peroxide.paa";
   scope = 2;
@@ -186,7 +186,7 @@ class FCLA_Money_Roll: CBA_MiscItem {
 
 
 
-/* ------------------------------ ELECTRÓNICA ------------------------------ */
+/* ------------------------------ ELECTRONICA ------------------------------ */
 
 class FCLA_Wire: CBA_MiscItem {
   author = "hozlucas28";
@@ -202,7 +202,7 @@ class FCLA_Wire: CBA_MiscItem {
 
 class FCLA_Portable_HDD: CBA_MiscItem {
   author = "hozlucas28";
-  displayName = "Disco duro (portátil)";
+  displayName = "Disco duro (portatil)";
   model = "\A3\weapons_F\ammo\mag_univ.p3d";
   picture = "\FCLA_Items\Others\data\pictures\Portable_HDD.paa";
   scope = 2;
@@ -214,7 +214,7 @@ class FCLA_Portable_HDD: CBA_MiscItem {
 
 class FCLA_Camera: CBA_MiscItem {
   author = "hozlucas28";
-  displayName = "Cámara";
+  displayName = "Camara";
   model = "\A3\Structures_F_Heli\Items\Electronics\Camera_01_F.p3d";
   picture = "\FCLA_Items\Others\data\pictures\Camera.paa";
   scope = 2;
@@ -226,7 +226,7 @@ class FCLA_Camera: CBA_MiscItem {
 
 class FCLA_Camcorder: CBA_MiscItem {
   author = "hozlucas28";
-  displayName = "Videocámara";
+  displayName = "Videocamara";
   model = "\A3\Structures_F\Items\Electronics\HandyCam_F.p3d";
   picture = "\FCLA_Items\Others\data\pictures\Camcorder.paa";
   scope = 2;
@@ -238,7 +238,7 @@ class FCLA_Camcorder: CBA_MiscItem {
 
 class FCLA_Laptop: CBA_MiscItem {
   author = "hozlucas28";
-  displayName = "Portátil";
+  displayName = "Portatil";
   model = "\A3\Structures_F\Items\Electronics\Laptop_F.p3d";
   picture = "\a3\Missions_F_Oldman\Props\data\Laptop_Closed_ca.paa";
   scope = 2;

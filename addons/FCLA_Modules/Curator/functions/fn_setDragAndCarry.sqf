@@ -10,7 +10,7 @@
 
 ["FCLA", "Modificar arrastre/portar (ACE)", {
   params ["_position", "_attachedObject"];
-  if ((isNull _attachedObject) || !(_attachedObject isKindOf "Thing")) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UN OBJETO COMPATIBLE"] call ZEN_Common_fnc_showMessage;};
+  if ((isNull _attachedObject) || !(_attachedObject isKindOf "Thing")) exitWith {["ERROR! EL MODULO DEBE SER COLOCADO SOBRE UN OBJETO COMPATIBLE"] call ZEN_Common_fnc_showMessage;};
 
 
   _objectName = getText (configFile >> "CfgVehicles" >> (typeOf _attachedObject) >> "displayName");
@@ -22,7 +22,7 @@
 
   [_objectName,
 	 [
-    ["TOOLBOX", "¿Se puede arrastrar?",
+    ["TOOLBOX", "Se puede arrastrar",
      [
       _originalDragState,
       1,
@@ -32,7 +32,7 @@
      ],
      true
     ],
-    ["TOOLBOX", "¿Se puede portar?",
+    ["TOOLBOX", "Se puede portar",
      [
       _originalCarryState,
       1,
@@ -87,6 +87,6 @@
       [configOf _attachedObject, "ACE_Dragging_carryDirection", [90, 0] select _isWiderThanLonger] call BIS_fnc_returnConfigEntry,
       _ignoreWeightCarry
      ]]] call CBA_fnc_globalEventJIP;
-     ["PROPIEDADES DE ARRASTRE/PORTAR MODIFICADAS CON ÉXITO"] call ZEN_Common_fnc_showMessage;
+     ["PROPIEDADES DE ARRASTRE/PORTAR MODIFICADAS CON EXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Edit_Object.paa"] call ZEN_Custom_Modules_fnc_Register;

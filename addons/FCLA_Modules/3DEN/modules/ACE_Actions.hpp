@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea tres módulos para agregar acciones ACE 3D asociadas a las entidades que
- * tengan un mismo classname, una entidad en específico ó a los Zeus.
+ * Crea tres modulos para agregar acciones ACE 3D asociadas a las entidades que
+ * tengan un mismo classname, una entidad en especifico o a los Zeus.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -15,7 +15,7 @@
 
 class FCLA_Module_ACE_Class_Action: Module_F {
   author = "hozlucas28";
-	displayName = "Crear acción (ACE - classname)";
+	displayName = "Crear accion (ACE - classname)";
   icon = "\FCLA_Modules\3DEN\data\ACE_Interaction.paa";
   portrait = "\FCLA_Modules\3DEN\data\ACE_Interaction.paa";
 	category = "FCLA_Modules";
@@ -28,7 +28,7 @@ class FCLA_Module_ACE_Class_Action: Module_F {
 
 	class Attributes: AttributesBase {
     class FCLA_Name: Edit {
-      tooltip = "Nombre que tendra la acción.";
+      tooltip = "Nombre que tendra la accion.";
       typeName = "STRING";
       property = "FCLA_Name";
       displayName = "Nombre";
@@ -36,7 +36,7 @@ class FCLA_Module_ACE_Class_Action: Module_F {
 		};
 
     class FCLA_Icon: Edit {
-      tooltip = "Icono de la acción, opcional.\n• Se recomienda que el tamaño sea de 32x32 en formato '.paa'.";
+      tooltip = "Icono de la accion, opcional.\n- Se recomienda que el tamano sea de 32x32 en formato '.paa'.";
       typeName = "STRING";
       property = "FCLA_Icon";
       displayName = "Icono";
@@ -44,15 +44,15 @@ class FCLA_Module_ACE_Class_Action: Module_F {
 		};
 
     class FCLA_Condition: Edit {
-      tooltip = "Condición/es que se deben cumplir para que la acción se muestre.\n• Variables reservadas:\n - _target = entidad asociada a la acción.\n - _player = unidad que ejecuta la acción.";
+      tooltip = "Condicion/es que se deben cumplir para que la accion se muestre.\n- Variables reservadas:\n - _target = entidad asociada a la accion.\n - _player = unidad que ejecuta la accion.";
       typeName = "STRING";
       property = "FCLA_Condition";
-      displayName = "Condición/es";
+      displayName = "Condicion/es";
       defaultValue = "''";
 		};
 
     class FCLA_Statement: Edit {
-      tooltip = "Código que se ejecutara al seleccionar la acción.\n• Variables reservadas:\n - _target = entidad asociada a la acción.\n - _player = unidad que ejecuta la acción.";
+      tooltip = "Codigo que se ejecutara al seleccionar la accion.\n- Variables reservadas:\n - _target = entidad asociada a la accion.\n - _player = unidad que ejecuta la accion.";
       typeName = "STRING";
       property = "FCLA_Statement";
       displayName = "Sentencia/s";
@@ -60,7 +60,7 @@ class FCLA_Module_ACE_Class_Action: Module_F {
 		};
 
     class FCLA_Associated_Classname: Edit {
-      tooltip = "Classname al que se le asociara la acción, opcional.\n• Si no se define ningún classname, se le asociara la acción a la entidad sincronizada solo si es la única sincronizada al módulo.";
+      tooltip = "Classname al que se le asociara la accion, opcional.\n- Si no se define ningun classname, se le asociara la accion a la entidad sincronizada solo si es la unica sincronizada al modulo.";
       typeName = "STRING";
       property = "FCLA_Associated_Classname";
       displayName = "Classname";
@@ -68,10 +68,10 @@ class FCLA_Module_ACE_Class_Action: Module_F {
 		};
 
     class FCLA_Type_Of_Action: Combo {
-      tooltip = "• Propia: solo la entidad asociada tiene acceso a la acción.\n• Externa: todas las entidades ajenas a la asociada tienen acceso a la acción.";
+      tooltip = "- Propia: solo la entidad asociada tiene acceso a la accion.\n- Externa: todas las entidades ajenas a la asociada tienen acceso a la accion.";
       typeName = "NUMBER";
       property = "FCLA_Type_Of_Action";
-      displayName = "Tipo de acción";
+      displayName = "Tipo de accion";
       defaultValue = 1;
 
 			class Values {
@@ -88,7 +88,7 @@ class FCLA_Module_ACE_Class_Action: Module_F {
 		};
 
     class FCLA_Parent_Path: Edit {
-      tooltip = "Determina en que acción padre se colocara la acción que queremos crear.\n• Por ejemplo:\n- Acción externa = ['ACE_MainActions']\n- Acción propia = ['ACE_SelfActions', 'ACE_Equipment']";
+      tooltip = "Determina en que accion padre se colocara la accion que queremos crear.\n- Por ejemplo:\n- Accion externa = ['ACE_MainActions']\n- Accion propia = ['ACE_SelfActions', 'ACE_Equipment']";
       typeName = "STRING";
       property = "FCLA_Parent_Path";
       displayName = "Padres";
@@ -100,8 +100,8 @@ class FCLA_Module_ACE_Class_Action: Module_F {
 	class ModuleDescription: ModuleDescription {
     sync[] = {"AnyBrain", "AnyVehicle", "EmptyDetector", "AnyStaticObject"};
 		description[] =	{
-      "Crea una acción ACE 3D asociada a las entidades que tengan el mismo classname.",
-      "• Más información: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"
+      "Crea una accion ACE 3D asociada a las entidades que tengan el mismo classname.",
+      "- Mas informacion: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"
     };
 	};
 };
@@ -112,7 +112,7 @@ class FCLA_Module_ACE_Class_Action: Module_F {
 
 class FCLA_Module_ACE_Object_Action: Module_F {
   author = "hozlucas28";
-	displayName = "Crear acción (ACE - objeto)";
+	displayName = "Crear accion (ACE - objeto)";
   icon = "\FCLA_Modules\3DEN\data\ACE_Interaction_Object.paa";
   portrait = "\FCLA_Modules\3DEN\data\ACE_Interaction_Object.paa";
 	category = "FCLA_Modules";
@@ -125,7 +125,7 @@ class FCLA_Module_ACE_Object_Action: Module_F {
 
 	class Attributes: AttributesBase {
     class FCLA_Name: Edit {
-      tooltip = "Nombre que tendra la acción.";
+      tooltip = "Nombre que tendra la accion.";
       typeName = "STRING";
       property = "FCLA_Name";
       displayName = "Nombre";
@@ -133,7 +133,7 @@ class FCLA_Module_ACE_Object_Action: Module_F {
 		};
 
     class FCLA_Icon: Edit {
-      tooltip = "Icono de la acción, opcional.\n• Se recomienda que el tamaño sea de 32x32 en formato '.paa'.";
+      tooltip = "Icono de la accion, opcional.\n- Se recomienda que el tamano sea de 32x32 en formato '.paa'.";
       typeName = "STRING";
       property = "FCLA_Icon";
       displayName = "Icono";
@@ -141,15 +141,15 @@ class FCLA_Module_ACE_Object_Action: Module_F {
 		};
 
     class FCLA_Condition: Edit {
-      tooltip = "Determina que condición/es deben cumplirse para que la acción se muestre.\n• Variables reservadas:\n - _target = entidad asociada a la acción.\n - _player = unidad que ejecuta la acción.";
+      tooltip = "Determina que condicion/es deben cumplirse para que la accion se muestre.\n- Variables reservadas:\n - _target = entidad asociada a la accion.\n - _player = unidad que ejecuta la accion.";
       typeName = "STRING";
       property = "FCLA_Condition";
-      displayName = "Condición/es";
+      displayName = "Condicion/es";
       defaultValue = "''";
 		};
 
     class FCLA_Statement: Edit {
-      tooltip = "Determina el código que se ejecutara al seleccionar la acción.\n• Variables reservadas:\n - _target = entidad asociada a la acción.\n - _player = unidad que ejecuta la acción.";
+      tooltip = "Determina el codigo que se ejecutara al seleccionar la accion.\n- Variables reservadas:\n - _target = entidad asociada a la accion.\n - _player = unidad que ejecuta la accion.";
       typeName = "STRING";
       property = "FCLA_Statement";
       displayName = "Sentencia/s";
@@ -157,7 +157,7 @@ class FCLA_Module_ACE_Object_Action: Module_F {
 		};
 
     class FCLA_Associated_Object: Edit {
-      tooltip = "Variable de la entidad a la que se le asociara la acción, opcional.\n• Si no se define ningúna variable, se le asociara la acción a la entidad sincronizada solo si es la única sincronizada al módulo.";
+      tooltip = "Variable de la entidad a la que se le asociara la accion, opcional.\n- Si no se define ninguna variable, se le asociara la accion a la entidad sincronizada solo si es la unica sincronizada al modulo.";
       typeName = "STRING";
       property = "FCLA_Associated_Object";
       displayName = "Variable";
@@ -165,10 +165,10 @@ class FCLA_Module_ACE_Object_Action: Module_F {
 		};
 
     class FCLA_Type_Of_Action: Combo {
-      tooltip = "• Propia: solo la entidad asociada tiene acceso a la acción.\n• Externa: todas las entidades ajenas a la asociada tienen acceso a la acción.";
+      tooltip = "- Propia: solo la entidad asociada tiene acceso a la accion.\n- Externa: todas las entidades ajenas a la asociada tienen acceso a la accion.";
       typeName = "NUMBER";
       property = "FCLA_Type_Of_Action";
-      displayName = "Tipo de acción";
+      displayName = "Tipo de accion";
       defaultValue = 1;
 
 			class Values {
@@ -185,7 +185,7 @@ class FCLA_Module_ACE_Object_Action: Module_F {
 		};
 
     class FCLA_Parent_Path: Edit {
-      tooltip = "Determina en que acción padre se colocara la acción que queremos crear.\n• Por ejemplo:\n- Acción externa = ['ACE_MainActions']\n- Acción propia = ['ACE_SelfActions', 'ACE_Equipment']";
+      tooltip = "Determina en que accion padre se colocara la accion que queremos crear.\n- Por ejemplo:\n- Accion externa = ['ACE_MainActions']\n- Accion propia = ['ACE_SelfActions', 'ACE_Equipment']";
       typeName = "STRING";
       property = "FCLA_Parent_Path";
       displayName = "Padres";
@@ -197,8 +197,8 @@ class FCLA_Module_ACE_Object_Action: Module_F {
 	class ModuleDescription: ModuleDescription {
     sync[] = {"AnyBrain", "AnyVehicle", "EmptyDetector", "AnyStaticObject"};
 		description[] =	{
-      "Crea una acción ACE 3D asociada a una entidad específica.",
-      "• Más información: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"
+      "Crea una accion ACE 3D asociada a una entidad especifica.",
+      "- Mas informacion: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"
     };
 	};
 };
@@ -209,7 +209,7 @@ class FCLA_Module_ACE_Object_Action: Module_F {
 
 class FCLA_Module_ACE_Zeus_Action: Module_F {
   author = "hozlucas28";
-	displayName = "Crear acción (ACE - Zeus)";
+	displayName = "Crear accion (ACE - Zeus)";
   icon = "\FCLA_Modules\3DEN\data\ACE_Interaction_Zeus.paa";
   portrait = "\FCLA_Modules\3DEN\data\ACE_Interaction_Zeus.paa";
 	category = "FCLA_Modules";
@@ -222,7 +222,7 @@ class FCLA_Module_ACE_Zeus_Action: Module_F {
 
 	class Attributes: AttributesBase {
     class FCLA_Name: Edit {
-      tooltip = "Nombre que tendra la acción.";
+      tooltip = "Nombre que tendra la accion.";
       typeName = "STRING";
       property = "FCLA_Name";
       displayName = "Nombre";
@@ -230,7 +230,7 @@ class FCLA_Module_ACE_Zeus_Action: Module_F {
 		};
 
     class FCLA_Icon: Edit {
-      tooltip = "Icono de la acción, opcional.\n• Se recomienda que el tamaño sea de 32x32 en formato '.paa'.";
+      tooltip = "Icono de la accion, opcional.\n- Se recomienda que el tamano sea de 32x32 en formato '.paa'.";
       typeName = "STRING";
       property = "FCLA_Icon";
       displayName = "Icono";
@@ -238,15 +238,15 @@ class FCLA_Module_ACE_Zeus_Action: Module_F {
 		};
 
     class FCLA_Condition: Edit {
-      tooltip = "Determina que condición/es deben cumplirse para que la acción se muestre.\n• Variables reservadas:\n - _target = entidad asociada a la acción.\n - _player = unidad que ejecuta la acción.";
+      tooltip = "Determina que condicion/es deben cumplirse para que la accion se muestre.\n- Variables reservadas:\n - _target = entidad asociada a la accion.\n - _player = unidad que ejecuta la accion.";
       typeName = "STRING";
       property = "FCLA_Condition";
-      displayName = "Condición/es";
+      displayName = "Condicion/es";
       defaultValue = "''";
 		};
 
     class FCLA_Statement: Edit {
-      tooltip = "Determina el código que se ejecutara al seleccionar la acción.\n• Variables reservadas:\n - _target = entidad asociada a la acción.\n - _player = unidad que ejecuta la acción.";
+      tooltip = "Determina el codigo que se ejecutara al seleccionar la accion.\n- Variables reservadas:\n - _target = entidad asociada a la accion.\n - _player = unidad que ejecuta la accion.";
       typeName = "STRING";
       property = "FCLA_Statement";
       displayName = "Sentencia/s";
@@ -254,7 +254,7 @@ class FCLA_Module_ACE_Zeus_Action: Module_F {
 		};
 
     class FCLA_Parent_Path: Edit {
-      tooltip = "Determina en que acción padre se colocara la acción que queremos crear.\n• Por ejemplo: ['ACE_ZeusActions']";
+      tooltip = "Determina en que accion padre se colocara la accion que queremos crear.\n- Por ejemplo: ['ACE_ZeusActions']";
       typeName = "STRING";
       property = "FCLA_Parent_Path";
       displayName = "Padres";
@@ -266,8 +266,8 @@ class FCLA_Module_ACE_Zeus_Action: Module_F {
 	class ModuleDescription: ModuleDescription {
     sync[] = {"EmptyDetector"};
 		description[] =	{
-      "Crea una acción ACE 3D asociada a los Zeus, disponible cuando se encuentran en la cámara del Zeus.",
-      "• Más información: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"
+      "Crea una accion ACE 3D asociada a los Zeus, disponible cuando se encuentran en la camara del Zeus.",
+      "- Mas informacion: <a href='https://ace3mod.com/wiki/framework/interactionMenu-framework.html'>https://ace3mod.com/wiki/framework/interactionMenu-framework.html</a>"
     };
 	};
 };

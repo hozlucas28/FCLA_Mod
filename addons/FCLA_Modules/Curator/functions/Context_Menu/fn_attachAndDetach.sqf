@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Pega/Despega al Zeus. Esta función es utilizada por el menú contextual
+ * Pega/Despega al Zeus. Esta funcion es utilizada por el menu contextual
  * correspondiente.
  *
  * Public: [No]

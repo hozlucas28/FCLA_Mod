@@ -3,17 +3,17 @@
  * Author: hozlucas28
  *
  * Description:
- * Fuerza al vehículo a disparar hacia el cielo.
+ * Fuerza al vehiculo a disparar hacia el cielo.
  *
  * Arguments:
- *            0: Vehículo que disparara. <VEHICLE>
+ *            0: Vehiculo que disparara. <VEHICLE>
  *            1: Torreta a disparar, opcional. <STRING> (default: torreta principal)
- *            2: Municion a disparar compatible con la torreta, opcional. <STRING> (default: munición principal)
- *            3: Cantidad mínima y máxima de disparos, opcional. <ARRAY OF NUMBERS> (default: [15, 30])
- *            4: Tiempo mínimo y máximo (en segundos) para repetir disparos, opcional. <ARRAY OF NUMBERS> (default: [5, 10])
+ *            2: Municion a disparar compatible con la torreta, opcional. <STRING> (default: municion principal)
+ *            3: Cantidad minima y maxima de disparos, opcional. <ARRAY OF NUMBERS> (default: [15, 30])
+ *            4: Tiempo minimo y maximo (en segundos) para repetir disparos, opcional. <ARRAY OF NUMBERS> (default: [5, 10])
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Examples:
  *             //Opcionales no definidos.
@@ -23,11 +23,11 @@
  *             [AA_2, (weapons AA_2) select 1, (magazines AA_2) select 1, [10, 20], [4, 8]] call FCLA_Common_fnc_setAmbientFired;
  *
  * Notes:
- * Script para obtener las torretas del vehículo: <weapons VEHICLE;>
- * Script para obtener las municiones del vehículo: <magazines VEHICLE;>
+ * Script para obtener las torretas del vehiculo: <weapons VEHICLE;>
+ * Script para obtener las municiones del vehiculo: <magazines VEHICLE;>
  *
  * Si desea detener el bucle de disparos asignele la variable de tipo
- * objeto "FCLA_Ambient_Fire" al vehículo, con el valor <false> ó <nil>.
+ * objeto "FCLA_Ambient_Fire" al vehiculo, con el valor <false> o <nil>.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

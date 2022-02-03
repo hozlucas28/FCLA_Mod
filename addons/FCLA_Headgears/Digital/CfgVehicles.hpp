@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                             VEHÍCULOS - "DIGITAL"                              |
+|                             VEHICULOS - "DIGITAL"                              |
 |********************************************************************************/
 
 
@@ -204,11 +204,11 @@ displayName = "Casco de combate mejorado [Quetzal] (digital)";
 
 
 
-/* ------------------ CASCO DE COMBATE MEJORADO (MÉDICO) ------------------- */
+/* ------------------ CASCO DE COMBATE MEJORADO (MEDICO) ------------------- */
 
 class Item_H_HelmetSpecB_Medic_Digital: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado [Médico] (digital)";
+  displayName = "Casco de combate mejorado [Medico] (digital)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";

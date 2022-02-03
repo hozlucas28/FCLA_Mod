@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera el efecto seleccionado en la posición del módulo.
+ * Genera el efecto seleccionado en la posicion del modulo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -46,7 +46,7 @@ class FCLA_Module_Spawn_Effect: Module_F {
 				};
 
 				class Fireflies {
-					name = "Luciérnagas";
+					name = "Luciernagas";
 					value = "fireflies";
 				};
 
@@ -58,7 +58,7 @@ class FCLA_Module_Spawn_Effect: Module_F {
     };
 
 		class FCLA_Delay: Edit {
-      tooltip = "Segundos para que se repita el efecto.\n• Solo funciona con las chispas y la ráfaga de viento.";
+      tooltip = "Segundos para que se repita el efecto.\n- Solo funciona con las chispas y la ráfaga de viento.";
       typeName = "NUMBER";
       property = "FCLA_Delay";
       displayName = "Tiempo";
@@ -69,7 +69,7 @@ class FCLA_Module_Spawn_Effect: Module_F {
 
 	class ModuleDescription: ModuleDescription {
     sync[] = {"EmptyDetector"};
-		description[] =	{"Genera el efecto seleccionado en la posición del módulo."};
+		description[] =	{"Genera el efecto seleccionado en la posicion del modulo."};
 	};
 };
 

@@ -4,7 +4,7 @@
 |********************************************************************************/
 
 if (hasInterface) then {
-  //Modifica el color de la visión nocturna.
+  //Modifica el color de la vision nocturna.
   ["visionMode", {
     params ["_unit", "_newVisionMode"];
     if ((!FCLA_Modify_Color_NVG) || (_newVisionMode != 1)) exitWith {[_unit, false] spawn FCLA_Effects_fnc_switchEffectNVG;};
@@ -12,7 +12,7 @@ if (hasInterface) then {
   }, false] call CBA_fnc_addPlayerEventHandler;
 
 
-  //Modifica el color de la visión nocturna.
+  //Modifica el color de la vision nocturna.
   ["featureCamera", {
     params ["_unit", "_newCameraMode"];
     _visionMode = currentVisionMode _unit;

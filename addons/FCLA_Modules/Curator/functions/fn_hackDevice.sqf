@@ -10,12 +10,12 @@
 
 ["FCLA", "Dispositivo hackeable", {
   params ["_position", "_attachedObject"];
-  if ((isNull _attachedObject) || (_attachedObject in allUnits)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UN OBJETO"] call ZEN_Common_fnc_showMessage;};
+  if ((isNull _attachedObject) || (_attachedObject in allUnits)) exitWith {["ERROR! EL MODULO DEBE SER COLOCADO SOBRE UN OBJETO"] call ZEN_Common_fnc_showMessage;};
 
 
   ["HACKEO DE DISPOSITIVO",
 	 [
-    ["EDIT", ["Identificador", "Nombre personalizado para poder reconocer al dispositivo, cuando se le informe a los Zeus que ha sido hackeado.\n• Si no se define un identificador no se informara a los Zeus."],
+    ["EDIT", ["Identificador", "Nombre personalizado para poder reconocer al dispositivo, cuando se le informe a los Zeus que ha sido hackeado.\n- Si no se define un identificador no se informara a los Zeus."],
      [
       "",
       nil,
@@ -23,7 +23,7 @@
      ],
      true
     ],
-    ["TOOLBOX", ["¿Se necesita un dispositivo?", "Si se activa se necesitara de un dispositivo de hackeo para realizar la acción."],
+    ["TOOLBOX", ["Se necesita un dispositivo", "Si se activa se necesitara de un dispositivo de hackeo para realizar la accion."],
      [
       0,
       1,
@@ -49,7 +49,7 @@
            if (isNull _curatorUnit) exitWith {};
            _unitsWithCurator pushBack _curatorUnit;
          } forEach allCurators;
-         ["FCLA_GUI_Message", ["DISPOSITIVO HACKEADO", "El dispositivo '" + (_this select 0) + "' ha sido hackeado con éxito."], _unitsWithCurator] call CBA_fnc_targetEvent;
+         ["FCLA_GUI_Message", ["DISPOSITIVO HACKEADO", "El dispositivo '" + (_this select 0) + "' ha sido hackeado con exito."], _unitsWithCurator] call CBA_fnc_targetEvent;
        }, [_identificableName, _attachedObject]] call CBA_fnc_waitUntilAndExecute;
      };
      ["EL OBJETO AHORA ES HACKEABLE"] call ZEN_Common_fnc_showMessage;

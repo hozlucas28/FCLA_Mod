@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si se puede encender el detector químico.
+ * Verifica si se puede encender el detector quimico.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

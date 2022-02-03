@@ -7,24 +7,24 @@
  * enviado como argumento 1.
  *
  * Argument:
- *            0: Centro del radio de búsqueda. <POSITION|UNIT|OBJECT|VEHICLE|GROUP|MARKER|LOCATION>
- *            1: Radio/Área de búsqueda. <NUMBER|ARRAY OF AREA>
- *            2: ¿Encender ó apagar?. <"Off"|"On">
- *            3: ¿Excluir vehículos?, opcional <BOOL> (default: true)
+ *            0: Centro del radio de busqueda. <POSITION|UNIT|OBJECT|VEHICLE|GROUP|MARKER|LOCATION>
+ *            1: Radio/Area de busqueda. <NUMBER|ARRAY OF AREA>
+ *            2: ¿Encender o apagar?. <"Off"|"On">
+ *            3: ¿Excluir vehiculos?, opcional <BOOL> (default: true)
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Example:
- *            //Apagar luces, vehículos excluidos.
+ *            //Apagar luces, vehiculos excluidos.
  *            [player, 500, "Off"] call FCLA_Common_fnc_switchLights;
  *
- *            //Encender luces, vehículos incluidos.
+ *            //Encender luces, vehiculos incluidos.
  *            [getPos player, [500, 500, 0, false, 250], "On", false] call FCLA_Common_fnc_switchLights;
  *
  * Note:
  * Si deseas encender/apagar todas las luces del mapa en el radio de
- * búsqueda (argumento 1) coloca un -1.
+ * busqueda (argumento 1) coloca un -1.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -55,7 +55,7 @@ _state = switch (_state) do {
 };
 
 
-//Obtener lamparas y vehículos.
+//Obtener lamparas y vehiculos.
 _lampsInRad = if (_rad isEqualType 0) then {
   if (_rad > 0) then {nearestObjects [_centerPos, ["Building"], _rad];} else {_allBuildings};
 } else {

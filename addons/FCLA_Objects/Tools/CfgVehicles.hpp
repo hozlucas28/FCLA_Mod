@@ -1,11 +1,11 @@
 
 /***************************************************************************|
-|                         VEHÍCULOS - "HERRAMIENTAS"                        |
+|                         VEHICULOS - "HERRAMIENTAS"                        |
 |***************************************************************************/
 
 class Land_OxygenTank_02_F: Land_GasTank_02_F {
   author = "hozlucas28";
-	displayName = "Depósito de oxígeno";
+	displayName = "Deposito de oxigeno";
 	editorPreview = "\FCLA_Objects\Tools\pictures\Land_OxygenTank_02_F.jpg";
   editorCategory = "EdCat_Things";
   editorSubcategory = "EdSubcat_Tools";

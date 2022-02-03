@@ -3,14 +3,14 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera una señal de humo.
+ * Genera una senal de humo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
 class FCLA_Module_Smoke_Signal: Module_F {
   author = "hozlucas28";
-	displayName = "Señal de humo";
+	displayName = "Senal de humo";
   icon = "\FCLA_Modules\3DEN\data\Smoke.paa";
   portrait = "\FCLA_Modules\3DEN\data\Smoke.paa";
 	category = "FCLA_Modules";
@@ -71,6 +71,6 @@ class FCLA_Module_Smoke_Signal: Module_F {
 
 	class ModuleDescription: ModuleDescription {
     sync[] = {"EmptyDetector"};
-		description[] =	{"Genera una señal de humo en la posición del módulo."};
+		description[] =	{"Genera una senal de humo en la posicion del modulo."};
 	};
 };

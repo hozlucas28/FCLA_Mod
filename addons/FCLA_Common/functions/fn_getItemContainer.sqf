@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica en que contenedor (uniforme, chaleco ó mochila) se encuentra el
+ * Verifica en que contenedor (uniforme, chaleco o mochila) se encuentra el
  * item, enviado como argumento 1.
  *
  * Arguments:

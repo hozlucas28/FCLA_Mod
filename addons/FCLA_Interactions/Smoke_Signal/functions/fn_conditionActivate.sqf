@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si se puede activar la señal de humo.
+ * Verifica si se puede activar la senal de humo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Evita que los vehículos reciban un daño fatal, dejandolos con
- * un daño total sin provocar su destrucción.
+ * Evita que los vehiculos reciban un dano fatal, dejandolos con
+ * un dano total sin provocar su destruccion.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -23,14 +23,14 @@ if ((is3DEN) || (isNull _module) || (_synchronizedObjects isEqualTo []) || (!_is
 _damageItemsState = _module getVariable ["FCLA_Damage_Items", false];
 _damageWeaponsState = _module getVariable ["FCLA_Damage_Weapons", false];
 _compatibleSynchronizedObjects = _synchronizedObjects select {_x in vehicles};
-if (ACE_Vehicle_Damage_Enabled) exitWith {["FCLA_Module_Advanced_Vehicle_Damage", "• MÓDULO: ASIGNAR DAV", "¡El addon option: Daño avanzado de vehículo (ACE), debe estar desactivado!"] call FCLA_Common_fnc_errorMessage;};
-if ((count _compatibleSynchronizedObjects) <= 0) exitWith {["FCLA_Module_Advanced_Vehicle_Damage", "• MÓDULO: ASIGNAR DAV", "¡Error! El/Un módulo 'Asignar DAV' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
+if (ACE_Vehicle_Damage_Enabled) exitWith {["FCLA_Module_Advanced_Vehicle_Damage", "- MODULO: ASIGNAR DAV", "¡El addon option: Dano avanzado de vehiculo (ACE), debe estar desactivado!"] call FCLA_Common_fnc_errorMessage;};
+if ((count _compatibleSynchronizedObjects) <= 0) exitWith {["FCLA_Module_Advanced_Vehicle_Damage", "- MODULO: ASIGNAR DAV", "¡Error! El/Un modulo 'Asignar DAV' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
 
 
 
-//Evitar daño fatal al vehículo.
+//Evitar dano fatal al vehiculo.
 {[_x, _damageWeaponsState, _damageItemsState] call FCLA_Common_fnc_setAdvancedVehicleDamage;} forEach _compatibleSynchronizedObjects;
 
 
-//Eliminar módulo.
+//Eliminar modulo.
 deleteVehicle _module;

@@ -1,9 +1,9 @@
 
 /********************************************************************************|
-|              CONTROLADORES DE PANTALLA - "PROPULSIÓN AUTOMÁTICA"               |
+|              CONTROLADORES DE PANTALLA - "PROPULSION AUTOMATICA"               |
 |********************************************************************************/
 
-//Activa/Desactiva la propulsión automática.
+//Activa/Desactiva la propulsion automatica.
 ["KeyDown", {
 	params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
 	_player = call CBA_fnc_currentUnit;

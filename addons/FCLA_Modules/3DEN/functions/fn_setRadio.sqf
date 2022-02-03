@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Modifica las radios de los vehículos.
+ * Modifica las radios de los vehiculos.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -22,16 +22,16 @@ if ((is3DEN) || (isNull _module) || (_synchronizedObjects isEqualTo []) || (!_is
 _hasRadio = _module getVariable ["FCLA_Has_Radio", false];
 _radioSideSelected = _module getVariable ["FCLA_Radio_Side", "west"];
 _compatibleSynchronizedObjects = _synchronizedObjects select {_x in vehicles};
-if ((count _compatibleSynchronizedObjects) <= 0) exitWith {["FCLA_Module_Radio", "• MÓDULO: MODIFICAR RADIO (TFAR)", "¡Error! El/Un módulo 'Modificar radio (TFAR)' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
+if ((count _compatibleSynchronizedObjects) <= 0) exitWith {["FCLA_Module_Radio", "- MODULO: MODIFICAR RADIO (TFAR)", "¡Error! El/Un modulo 'Modificar radio (TFAR)' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
 
 
 
-//Modificar identificación.
+//Modificar identificacion.
 {
   _x setVariable ["tf_hasRadio", _hasRadio, true];
   _x setVariable ["tf_side", _radioSideSelected, true];
 } forEach _compatibleSynchronizedObjects;
 
 
-//Eliminar módulo.
+//Eliminar modulo.
 deleteVehicle _module;

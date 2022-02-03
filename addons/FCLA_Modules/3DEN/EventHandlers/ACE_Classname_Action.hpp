@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea una acción ACE 3D asociada a un classname.
+ * Crea una accion ACE 3D asociada a un classname.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

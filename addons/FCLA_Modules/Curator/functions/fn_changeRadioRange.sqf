@@ -12,7 +12,7 @@
   _defaultValue = if (isNil "FCLA_TFAR_Multiplicator") then {1;} else {FCLA_TFAR_Multiplicator;};
   ["ALCANCE DE LAS RADIOS",
 	 [
-    ["SLIDER", ["Multiplicador", "Multiplica el alcance que tienen todas las radios de onda corta y larga, incluyendo vehículos.\n• Nota: el multiplicador de alcance, que trae por defecto el mod: Task Force Radio, es 1."],
+    ["SLIDER", ["Multiplicador", "Multiplica el alcance que tienen todas las radios de onda corta y larga, incluyendo vehiculos.\n- Nota: el multiplicador de alcance, que trae por defecto el mod: Task Force Radio, es 1."],
      [
       0,
       50,

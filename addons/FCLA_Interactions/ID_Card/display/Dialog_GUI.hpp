@@ -36,7 +36,7 @@ class FCLA_ID_Card_Dialog {
 		class header_date_of_birth: FCLA_ID_Card_Header_Text {
 			idc = 1003;
 			moving = 1;
-			text = "AÑOS:";
+			text = "ANOS:";
 			x = 0.48 * safezoneW + safezoneX;
 			y = 0.390043 * safezoneH + safezoneY;
 			w = 0.2699917 * safezoneW;
@@ -56,7 +56,7 @@ class FCLA_ID_Card_Dialog {
 		class header_date_of_expiry: FCLA_ID_Card_Header_Text {
 			idc = 1005;
 			moving = 1;
-			text = "FECHA DE EXPIRACIÓN:";
+			text = "FECHA DE EXPIRACION:";
 			x = 0.48 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
 			w = 0.2695625 * safezoneW;

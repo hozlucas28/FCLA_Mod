@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                               VEHÍCULOS - BLUFOR                               |
+|                               VEHICULOS - BLUFOR                               |
 |********************************************************************************/
 
 
@@ -68,7 +68,7 @@ class B_UGV_01_F: UGV_01_base_F {
 
 
 
-/* --------------------- UGV STOMPER (OTAN - PACÍFICO) --------------------- */
+/* --------------------- UGV STOMPER (OTAN - PACIFICO) --------------------- */
 
 class B_T_UGV_01_olive_F: UGV_01_base_F {
   class TextureSources {
@@ -147,7 +147,7 @@ class FCLA_B_Offroad_01_F: B_GEN_Offroad_01_gen_F {
   class TextureSources {
     class Arid {
       author = "hozlucas28";
-      displayName = "Árido";
+      displayName = "Arido";
       textures[] = {"\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_F_Arid.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_F_Arid.paa"};
     };
 
@@ -174,7 +174,7 @@ class FCLA_B_Offroad_01_covered_F: B_GEN_Offroad_01_covered_F {
   class TextureSources {
     class Arid {
       author = "hozlucas28";
-      displayName = "Árido";
+      displayName = "Arido";
       textures[] = {"\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_covered_F_Arid_1.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_covered_F_Arid_1.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_covered_F_Arid_2.paa"};
     };
 
@@ -201,7 +201,7 @@ class FCLA_B_Offroad_01_armed_F: B_G_Offroad_01_armed_F {
   class TextureSources {
     class Arid {
       author = "hozlucas28";
-      displayName = "Árido";
+      displayName = "Arido";
       textures[] = {"\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_armed_F_Arid.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_armed_F_Arid.paa"};
     };
 
@@ -228,7 +228,7 @@ class FCLA_B_Offroad_01_comms_F: B_GEN_Offroad_01_comms_F {
   class TextureSources {
     class Arid {
       author = "hozlucas28";
-      displayName = "Árido";
+      displayName = "Arido";
       textures[] = {"\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_comms_F_Arid_1.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_comms_F_Arid_1.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_comms_F_Arid_2.paa"};
     };
 
@@ -242,7 +242,7 @@ class FCLA_B_Offroad_01_comms_F: B_GEN_Offroad_01_comms_F {
 
 
 
-/* --------------------- TODOTERRENO (OTAN - PACÍFICO) --------------------- */
+/* --------------------- TODOTERRENO (OTAN - PACIFICO) --------------------- */
 
 class FCLA_B_T_Offroad_01_F: FCLA_B_Offroad_01_F {
   author = "hozlucas28";
@@ -257,7 +257,7 @@ class FCLA_B_T_Offroad_01_F: FCLA_B_Offroad_01_F {
   class TextureSources {
     class Arid {
       author = "hozlucas28";
-      displayName = "Árido";
+      displayName = "Arido";
       textures[] = {"\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_F_Arid.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_F_Arid.paa"};
     };
 
@@ -283,7 +283,7 @@ class FCLA_B_T_Offroad_01_covered_F: FCLA_B_Offroad_01_covered_F {
   class TextureSources {
     class Arid {
       author = "hozlucas28";
-      displayName = "Árido";
+      displayName = "Arido";
       textures[] = {"\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_covered_F_Arid_1.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_covered_F_Arid_1.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_covered_F_Arid_2.paa"};
     };
 
@@ -309,7 +309,7 @@ class FCLA_B_T_Offroad_01_armed_F: FCLA_B_Offroad_01_armed_F {
   class TextureSources {
     class Arid {
       author = "hozlucas28";
-      displayName = "Árido";
+      displayName = "Arido";
       textures[] = {"\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_armed_F_Arid.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_armed_F_Arid.paa"};
     };
 
@@ -335,7 +335,7 @@ class FCLA_B_T_Offroad_01_comms_F: FCLA_B_Offroad_01_comms_F {
   class TextureSources {
     class Arid {
       author = "hozlucas28";
-      displayName = "Árido";
+      displayName = "Arido";
       textures[] = {"\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_comms_F_Arid_1.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_comms_F_Arid_1.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Offroad_01_comms_F_Arid_2.paa"};
     };
 
@@ -471,7 +471,7 @@ class FCLA_B_Van_02_Transport_F: C_Van_02_transport_F {
   class TextureSources {
     class Arid {
       author = "hozlucas28";
-      displayName = "Árido";
+      displayName = "Arido";
       textures[] = {"\FCLA_Land\BLUFOR\data\FCLA_B_Van_02_Transport_F.paa", "\a3\soft_f_orange\van_02\data\van_wheel_co.paa", "\a3\soft_f_orange\van_02\data\van_glass_transport_ca.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Van_02_Transport_F.paa"};
     };
   };
@@ -491,7 +491,7 @@ class FCLA_B_Van_02_Vehicle_F: C_Van_02_vehicle_F {
   class TextureSources {
     class Arid {
       author = "hozlucas28";
-      displayName = "Árido";
+      displayName = "Arido";
       textures[] = {"\FCLA_Land\BLUFOR\data\FCLA_B_Van_02_Vehicle_F.paa", "\a3\soft_f_orange\van_02\data\van_wheel_co.paa", "\a3\soft_f_orange\van_02\data\van_glass_utility_ca.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Van_02_Vehicle_F.paa"};
     };
   };
@@ -511,7 +511,7 @@ class FCLA_B_Van_02_Service_F: C_Van_02_service_F {
   class TextureSources {
     class Arid {
       author = "hozlucas28";
-      displayName = "Árido";
+      displayName = "Arido";
       textures[] = {"\FCLA_Land\BLUFOR\data\FCLA_B_Van_02_Service_F.paa", "a3\soft_f_orange\van_02\data\van_wheel_dirty_co.paa", "a3\soft_f_orange\van_02\data\van_glass_civservice_ca.paa", "a3\soft_f_orange\van_02\data\van_body_civservice_co.paa"};
     };
   };
@@ -531,7 +531,7 @@ class FCLA_B_Van_02_Medevac_F: C_Van_02_medevac_F {
   class TextureSources {
     class Arid {
       author = "hozlucas28";
-      displayName = "Árido";
+      displayName = "Arido";
       textures[] = {"\FCLA_Land\BLUFOR\data\FCLA_B_Van_02_Medevac_F_1.paa", "\a3\soft_f_orange\van_02\data\van_wheel_co.paa", "\FCLA_Land\BLUFOR\data\FCLA_B_Van_02_Medevac_F_2.paa"};
     };
   };
@@ -539,7 +539,7 @@ class FCLA_B_Van_02_Medevac_F: C_Van_02_medevac_F {
 
 
 
-/* ----------------------- COCHES (OTAN - PACÍFICO) ------------------------ */
+/* ----------------------- COCHES (OTAN - PACIFICO) ------------------------ */
 
 class FCLA_B_T_Van_02_Transport_F: FCLA_B_Van_02_Transport_F {
   author = "hozlucas28";
@@ -664,7 +664,7 @@ class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
 
 
 
-/* ----------------------- NEMMERA (OTAN - PACÍFICO) ----------------------- */
+/* ----------------------- NEMMERA (OTAN - PACIFICO) ----------------------- */
 
 class B_T_APC_Tracked_01_CRV_F: B_APC_Tracked_01_CRV_F {
   class UserActions {

@@ -4,7 +4,7 @@
  *
  * Description:
  * Crea acciones contextuales para encender/apagar, subir/bajar el volumen y
- * equiparse el detector químico sin tener el DLC Contact.
+ * equiparse el detector quimico sin tener el DLC Contact.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

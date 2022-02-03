@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si se puede ver la identificación de la unidad.
+ * Verifica si se puede ver la identificacion de la unidad.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

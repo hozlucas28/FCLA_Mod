@@ -8,7 +8,7 @@
 /* ------------------------------ NATURALEZA ------------------------------- */
 
 class FCLA_Night_Owl {
-	name = "FCLA - Búho";
+	name = "FCLA - Buho";
 	sound[] = {"\FCLA_Sounds\sounds\Night_Owl.ogg", "db+15", 1};
 	titles[] = {};
   duration = 8;
@@ -60,7 +60,7 @@ class FCLA_Arab_Marketplace {
 
 
 class FCLA_Riot {
-	name = "FCLA - Manifestación";
+	name = "FCLA - Manifestacion";
 	sound[] = {"\FCLA_Sounds\sounds\Riot.ogg", "db+15", 1};
 	titles[] = {};
   duration = 90;
@@ -68,7 +68,7 @@ class FCLA_Riot {
 
 
 class FCLA_Africa_Crowd_v1 {
-	name = "FCLA - Multitud (África v1)";
+	name = "FCLA - Multitud (Africa v1)";
 	sound[] = {"\FCLA_Sounds\sounds\Africa_Crowd_v1.ogg", "db+10", 1};
 	titles[] = {};
   duration = 28;
@@ -76,7 +76,7 @@ class FCLA_Africa_Crowd_v1 {
 
 
 class FCLA_Africa_Crowd_v2 {
-	name = "FCLA - Multitud (África v2)";
+	name = "FCLA - Multitud (Africa v2)";
 	sound[] = {"\FCLA_Sounds\sounds\Africa_Crowd_v2.ogg", "db+10", 1};
 	titles[] = {};
   duration = 43;
@@ -84,7 +84,7 @@ class FCLA_Africa_Crowd_v2 {
 
 
 class FCLA_Africa_Crowd_v3 {
-	name = "FCLA - Multitud (África v3)";
+	name = "FCLA - Multitud (Africa v3)";
 	sound[] = {"\FCLA_Sounds\sounds\Africa_Crowd_v3.ogg", "db+15", 1};
 	titles[] = {};
   duration = 38;
@@ -92,7 +92,7 @@ class FCLA_Africa_Crowd_v3 {
 
 
 class FCLA_Africa_Crowd_v4 {
-	name = "FCLA - Multitud (África v4)";
+	name = "FCLA - Multitud (Africa v4)";
 	sound[] = {"\FCLA_Sounds\sounds\Africa_Crowd_v4.ogg", "db+15", 1};
 	titles[] = {};
   duration = 43;
@@ -100,7 +100,7 @@ class FCLA_Africa_Crowd_v4 {
 
 
 class FCLA_Africa_Crowd_v5 {
-	name = "FCLA - Multitud (África v5)";
+	name = "FCLA - Multitud (Africa v5)";
 	sound[] = {"\FCLA_Sounds\sounds\Africa_Crowd_v5.ogg", "db+15", 1};
 	titles[] = {};
   duration = 62;
@@ -108,7 +108,7 @@ class FCLA_Africa_Crowd_v5 {
 
 
 class FCLA_Arab_Crowd_Vehicles_v1 {
-	name = "FCLA - Multitud y vehículos (Arabia v1)";
+	name = "FCLA - Multitud y vehiculos (Arabia v1)";
 	sound[] = {"\FCLA_Sounds\sounds\Arab_Crowd_Vehicles_v1.ogg", "db+15", 1};
 	titles[] = {};
   duration = 29;
@@ -116,7 +116,7 @@ class FCLA_Arab_Crowd_Vehicles_v1 {
 
 
 class FCLA_Arab_Crowd_Vehicles_v2 {
-	name = "FCLA - Multitud y vehículos (Arabia v2)";
+	name = "FCLA - Multitud y vehiculos (Arabia v2)";
 	sound[] = {"\FCLA_Sounds\sounds\Arab_Crowd_Vehicles_v2.ogg", "db+15", 1};
 	titles[] = {};
   duration = 129;
@@ -124,7 +124,7 @@ class FCLA_Arab_Crowd_Vehicles_v2 {
 
 
 class FCLA_Arab_Crowd_Vehicles_v3 {
-	name = "FCLA - Multitud y vehículos (Arabia v3)";
+	name = "FCLA - Multitud y vehiculos (Arabia v3)";
 	sound[] = {"\FCLA_Sounds\sounds\Arab_Crowd_Vehicles_v3.ogg", "db+15", 1};
 	titles[] = {};
   duration = 81;
@@ -132,7 +132,7 @@ class FCLA_Arab_Crowd_Vehicles_v3 {
 
 
 class FCLA_Africa_Crowd_Vehicles_v1 {
-	name = "FCLA - Multitud y vehículos (África v1)";
+	name = "FCLA - Multitud y vehiculos (Africa v1)";
 	sound[] = {"\FCLA_Sounds\sounds\Africa_Crowd_Vehicles_v1.ogg", "db+15", 1};
 	titles[] = {};
   duration = 65;
@@ -140,7 +140,7 @@ class FCLA_Africa_Crowd_Vehicles_v1 {
 
 
 class FCLA_Africa_Crowd_Vehicles_v2 {
-	name = "FCLA - Multitud y vehículos (África v2)";
+	name = "FCLA - Multitud y vehiculos (Africa v2)";
 	sound[] = {"\FCLA_Sounds\sounds\Africa_Crowd_Vehicles_v2.ogg", "db+15", 1};
 	titles[] = {};
   duration = 97;
@@ -148,7 +148,7 @@ class FCLA_Africa_Crowd_Vehicles_v2 {
 
 
 class FCLA_Africa_Crowd_Vehicles_v3 {
-	name = "FCLA - Multitud y vehículos (África v3)";
+	name = "FCLA - Multitud y vehiculos (Africa v3)";
 	sound[] = {"\FCLA_Sounds\sounds\Africa_Crowd_Vehicles_v3.ogg", "db+15", 1};
 	titles[] = {};
   duration = 109;
@@ -156,7 +156,7 @@ class FCLA_Africa_Crowd_Vehicles_v3 {
 
 
 class FCLA_Africa_Crowd_Vehicles_v4 {
-	name = "FCLA - Multitud y vehículos (África v4)";
+	name = "FCLA - Multitud y vehiculos (Africa v4)";
 	sound[] = {"\FCLA_Sounds\sounds\Africa_Crowd_Vehicles_v4.ogg", "db+15", 1};
 	titles[] = {};
   duration = 129;
@@ -191,7 +191,7 @@ class FCLA_Submarine_Alarm {
 
 
 class FCLA_Helicopter_Damage_System_Alert {
-  name = "FCLA - Alerta de daños (helicóptero)";
+  name = "FCLA - Alerta de danos (helicoptero)";
   sound[] = {"\FCLA_Sounds\sounds\Helicopter_Damage_System_Alert.ogg", "db+5", 1};
   titles[] = {};
   duration = 30;
@@ -207,7 +207,7 @@ class FCLA_Speaker_Curfew {
 
 
 class FCLA_Aerial_Alarm {
-  name = "FCLA - Alarma aérea";
+  name = "FCLA - Alarma aerea";
   sound[] = {"\FCLA_Sounds\sounds\Aerial_Alarm.ogg", "db+5", 1};
   titles[] = {};
   duration = 61;
@@ -215,7 +215,7 @@ class FCLA_Aerial_Alarm {
 
 
 class FCLA_Artillery_Incoming_Alarm {
-  name = "FCLA - Artillería inminente (alarma)";
+  name = "FCLA - Artilleria inminente (alarma)";
   sound[] = {"\FCLA_Sounds\sounds\Artillery_Incoming_Alarm.ogg", "db+5", 1};
   titles[] = {0, ""};
   duration = 7;
@@ -223,7 +223,7 @@ class FCLA_Artillery_Incoming_Alarm {
 
 
 class FCLA_Biologic_Alarm {
-  name = "FCLA - Alarma biológica";
+  name = "FCLA - Alarma biologica";
   sound[] = {"\FCLA_Sounds\sounds\Biologic_Alarm.ogg", "db+5", 1};
   titles[] = {};
   duration = 8;
@@ -239,10 +239,10 @@ class FCLA_Nuclear_Alarm {
 
 
 
-/* --------------------------- RADIOS/MEGÁFONOS ---------------------------- */
+/* --------------------------- RADIOS/MEGAFONOS ---------------------------- */
 
 class FCLA_Music_Radio {
-	name = "FCLA - Radio (música)";
+	name = "FCLA - Radio (musica)";
 	sound[] = {"\FCLA_Sounds\sounds\Music_Radio.ogg", "db+30", 1};
 	titles[] = {};
   duration = 78;
@@ -250,7 +250,7 @@ class FCLA_Music_Radio {
 
 
 class FCLA_Arab_Music_Radio {
-	name = "FCLA - Radio (música árabe)";
+	name = "FCLA - Radio (musica arabe)";
 	sound[] = {"\FCLA_Sounds\sounds\Arab_Music_Radio.ogg", "db+15", 1};
 	titles[] = {};
   duration = 114;
@@ -258,7 +258,7 @@ class FCLA_Arab_Music_Radio {
 
 
 class FCLA_Spanish_News_Radio {
-  name = "FCLA - Radio (noticias en español)";
+  name = "FCLA - Radio (noticias en espanol)";
   sound[] = {"\FCLA_Sounds\sounds\Spanish_News_Radio.ogg", "db+5", 1};
   titles[] = {};
   duration = 77;
@@ -322,7 +322,7 @@ class FCLA_Insurgent_Military_Radio_v2 {
 
 
 class FCLA_Insurgent_Speech {
-	name = "FCLA - Discurso insurgente (megáfono)";
+	name = "FCLA - Discurso insurgente (megafono)";
 	sound[] = {"\FCLA_Sounds\sounds\Insurgent_Speech.ogg", "db+15", 1};
 	titles[] = {};
   duration = 129;
@@ -330,7 +330,7 @@ class FCLA_Insurgent_Speech {
 
 
 class FCLA_Call_To_Prayer_Speech {
-	name = "FCLA - Llamado a la oración (megáfono)";
+	name = "FCLA - Llamado a la oracion (megafono)";
 	sound[] = {"\FCLA_Sounds\sounds\Call_To_Prayer_Speech.ogg", "db+15", 1};
 	titles[] = {};
   duration = 152;
@@ -338,7 +338,7 @@ class FCLA_Call_To_Prayer_Speech {
 
 
 class FCLA_Radio_Static {
-	name = "FCLA - Radio (estática)";
+	name = "FCLA - Radio (estatica)";
 	sound[] = {"\FCLA_Sounds\sounds\Radio_Static.ogg", "db+15", 1};
 	titles[] = {};
   duration = 113;
@@ -346,7 +346,7 @@ class FCLA_Radio_Static {
 
 
 class FCLA_Radio_Morse_Code {
-	name = "FCLA - Radio (código morse)";
+	name = "FCLA - Radio (codigo morse)";
 	sound[] = {"\FCLA_Sounds\sounds\Radio_Morse_Code.ogg", "db+15", 1};
 	titles[] = {};
   duration = 23;
@@ -402,7 +402,7 @@ class FCLA_IED_Ring {
 
 
 class FCLA_Attempt_Start_Vehicle {
-	name = "FCLA - Intento de encender vehículo";
+	name = "FCLA - Intento de encender vehiculo";
 	sound[] = {"\FCLA_Sounds\sounds\Attempt_Start_Vehicle.ogg", "db+15", 1};
 	titles[] = {};
   duration = 171;
@@ -418,7 +418,7 @@ class FCLA_Submarine_Sonar {
 
 
 class FCLA_Alien_Egg {
-  name = "FCLA - Huevo alienígena";
+  name = "FCLA - Huevo alienigena";
   sound[] = {"\FCLA_Sounds\sounds\Alien_Egg.ogg", "db+5", 1};
   titles[] = {};
   duration = 5;
@@ -442,7 +442,7 @@ class FCLA_Mothership_Honk {
 
 
 class FCLA_Alien_Spaceship {
-  name = "FCLA - Nave alienígena";
+  name = "FCLA - Nave alienigena";
   sound[] = {"\FCLA_Sounds\sounds\Alien_Spaceship.ogg", "db+5", 1};
   titles[] = {};
   duration = 35;
@@ -474,7 +474,7 @@ class FCLA_Generator_v3 {
 
 
 class FCLA_Spaceship_Breaking_in_Atmosphere {
-	name = "FCLA - Nave alienígena arribando (atmósfera)";
+	name = "FCLA - Nave alienigena arribando (atmosfera)";
 	sound[] = {"\FCLA_Sounds\sounds\Spaceship_Breaking_in_Atmosphere.ogg", "db+20", 1};
 	titles[] = {};
   duration = 9;

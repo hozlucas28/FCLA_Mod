@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Muestra la identificación propia.
+ * Muestra la identificacion propia.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -16,13 +16,13 @@ _isKATModLoaded = ["KAT_Circulation"] call ACE_Common_fnc_isModLoaded;
 
 
 
-//Mostrar identificación.
+//Mostrar identificacion.
 playsound "FCLA_Show_ID";
 createDialog "FCLA_ID_Card_Dialog";
 [_player, "Gear", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 
 
-//Asignar información.
+//Asignar informacion.
 switch ((_IDCard select 0) == "") do {
 	case true: {
 		_name = [_player] call FCLA_Common_fnc_getCleanName;
@@ -45,7 +45,7 @@ switch ((_IDCard select 0) == "") do {
 };
 
 
-//Mostrar características.
+//Mostrar caracteristicas.
 [_player, _player] spawn FCLA_Interactions_fnc_showTraitsID;
 
 

@@ -3,20 +3,20 @@
  * Author: hozlucas28
  *
  * Description:
- * Reproduce una animación en la unidad, enviada como argumento 0.
+ * Reproduce una animacion en la unidad, enviada como argumento 0.
  * Evita conflictos con el mod.
  *
  * Arguments:
- *            0: Unidad que realizara la animación. <UNIT>
- *            1: Classname de la animación a reproducir. <STRING>
- *            2: Tipo de reproducción de la animación.
+ *            0: Unidad que realizara la animacion. <UNIT>
+ *            1: Classname de la animacion a reproducir. <STRING>
+ *            2: Tipo de reproduccion de la animacion.
  *                # Reproducciones aceptadas: "playAction", "playActionNow",
  *                                            "PlayMove", "PlayMoveNow" y "SwitchMove".
  *
  *            3: ¿Ignorar llamados anteriores?, opcional. <BOOL> (default: false)
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Example:
  *             //Opcional sin definir.
@@ -26,9 +26,9 @@
  *             [player, "FCLA_Tactical_Position_Down", "playActionNow", true] call FCLA_Common_fnc_playAnimation;
  *
  * Note:
- * La función le asigna el valor <true> a la variable de tipo
+ * La funcion le asigna el valor <true> a la variable de tipo
  * objeto "FCLA_Playing_Animation" asociada a la unidad que reproduce la
- * animación, para asi evitar que un llamado a la función interrumpa al anterior.
+ * animacion, para asi evitar que un llamado a la funcion interrumpa al anterior.
  * Si se le asigna el valor <true> al argumento 3 esto sera ignorado.
  *
  * Public: [Yes]
@@ -53,7 +53,7 @@ if ((isNull _unit) || !(_typeOfReproduction in _acceptedTypesOfReproduction) || 
 
 
 
-//Reproducir animación.
+//Reproducir animacion.
 _unit setVariable ["FCLA_Playing_Animation", true, true];
 switch (_typeOfReproduction) do {
   case "PLAYACTION": {[_unit, _animation] call ACE_Common_fnc_doGesture;};
@@ -64,7 +64,7 @@ switch (_typeOfReproduction) do {
 };
 
 
-//Eliminar variable al terminar animación.
+//Eliminar variable al terminar animacion.
 if ((_typeOfReproduction == "playAction") || (_typeOfReproduction == "playActionNow")) then {
   [{(gestureState (_this select 0)) != (_this select 1);}, {
     (_this select 0) setVariable ["FCLA_Playing_Animation", nil, true];

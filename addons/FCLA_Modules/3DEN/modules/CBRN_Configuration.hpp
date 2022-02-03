@@ -12,7 +12,7 @@
 
 class FCLA_Module_CBRN_Configuration: Module_F {
   author = "hozlucas28";
-	displayName = "Configuración (CBRN)";
+	displayName = "Configuracion (CBRN)";
   icon = "\FCLA_Modules\3DEN\data\CBRN.paa";
   portrait = "\FCLA_Modules\3DEN\data\CBRN.paa";
 	category = "FCLA_Modules";
@@ -33,18 +33,18 @@ class FCLA_Module_CBRN_Configuration: Module_F {
 		};
 
     class FCLA_Chemical_Detectors: Edit {
-      tooltip = "Classnames de los detectores químicos compatibles.\n• Deben poder colocarse en el slot del reloj (inventario).";
+      tooltip = "Classnames de los detectores quimicos compatibles.\n- Deben poder colocarse en el slot del reloj (inventario).";
       typeName = "STRING";
       property = "FCLA_Chemical_Detectors";
-      displayName = "Detectores químicos";
+      displayName = "Detectores quimicos";
       defaultValue = "['ChemicalDetector_01_watch_F', 'tf_microdagr']";
 		};
 
     class FCLA_Oxygen_Masks: Edit {
-      tooltip = "Classnames de las máscaras compatibles para poder acceder a las zonas contaminadas con nivel de amenaza 1, 2 y 3.";
+      tooltip = "Classnames de las mascaras compatibles para poder acceder a las zonas contaminadas con nivel de amenaza 1, 2 y 3.";
       typeName = "STRING";
       property = "FCLA_Oxygen_Masks";
-      displayName = "Máscaras de oxígeno";
+      displayName = "Mascaras de oxigeno";
       defaultValue = "['G_AirPurifyingRespirator_01_F', 'G_AirPurifyingRespirator_01_nofilter_F', 'G_AirPurifyingRespirator_02_sand_F', 'G_AirPurifyingRespirator_02_black_F', 'G_AirPurifyingRespirator_02_olive_F', 'G_RegulatorMask_F']";
 		};
 
@@ -52,7 +52,7 @@ class FCLA_Module_CBRN_Configuration: Module_F {
       tooltip = "Classnames de las mochilas compatibles para poder acceder a las zonas contaminadas con nivel de amenaza 2 y 3.";
       typeName = "STRING";
       property = "FCLA_Backpacks_With_Oxygen";
-      displayName = "Mochilas con oxígeno";
+      displayName = "Mochilas con oxigeno";
       defaultValue = "['B_CombinationUnitRespirator_01_F', 'B_SCBA_01_F']";
 		};
 		class ModuleDescription: ModuleDescription {};

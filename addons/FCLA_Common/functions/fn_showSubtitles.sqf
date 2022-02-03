@@ -3,14 +3,14 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera una serie de mensajes a modo de subtítulos, según los argumentos enviados.
+ * Genera una serie de mensajes a modo de subtitulos, segun los argumentos enviados.
  *
  * Arguments:
- *            0: Emisor de los mensajes/subtítulos. <UNIT|OBJECT>
+ *            0: Emisor de los mensajes/subtitulos. <UNIT|OBJECT>
  *
- *            1: Línea/s (subtítulo/s) que se quiere/n mostrar. <ARRAY OF LINE/S>
- *                - Primera línea con el nombre del emisor y subtítulo a mostrar. <ARRAY OF STRINGS>
- *                - Segunda línea con el nombre del emisor y subtítulo a mostrar. <ARRAY OF STRINGS>
+ *            1: Linea/s (subtitulo/s) que se quiere/n mostrar. <ARRAY OF LINE/S>
+ *                - Primera linea con el nombre del emisor y subtitulo a mostrar. <ARRAY OF STRINGS>
+ *                - Segunda linea con el nombre del emisor y subtitulo a mostrar. <ARRAY OF STRINGS>
  *                ...
  *
  *            2: Color para el nombre del emisor. <STRING>
@@ -18,16 +18,16 @@
  *                                     "Direct", "System", "Blufor",
  *                                     "Opfor", "Independant" y "Civilian".
  *
- *            3: Tiempo (en segundos) para ocultar cada línea, una vez mostrada. <NUMBER>
+ *            3: Tiempo (en segundos) para ocultar cada linea, una vez mostrada. <NUMBER>
  *
- *            4: Condiciones para mostrar los subtítulos, opcional. <ARRAY>
+ *            4: Condiciones para mostrar los subtitulos, opcional. <ARRAY>
  *                - ¿Se necesita tener una radio de onda corta? <BOOL> (default: false)
  *                - ¿Se necesita tener una radio de onda larga? <BOOL> (default: false)
  *                - Determina a que bando esta dirigido el mensaje. <"All"|"Blufor"|"Opfor"|"Independant"|"Civilian"> (default: "All")
- *                - Distancia máxima con el emisor ó área para mostrar el mensaje. <NUMBER|ARRAY OF AREA> (default: -1)
+ *                - Distancia maxima con el emisor o area para mostrar el mensaje. <NUMBER|ARRAY OF AREA> (default: -1)
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Examples:
  *            //Genera un mensaje, sin emisor definido y no impone condiciones.
@@ -41,7 +41,7 @@
  *            [Civil_1, [_line1, _line2, _line3], "Civilian", 5, [false, true, "All", [150, 150, 0, false, 75]]] call FCLA_Common_fnc_showSubtitles;
  *
  * Notes:
- * Se recomienda utilizar esta función a travez del evento
+ * Se recomienda utilizar esta funcion a travez del evento
  * personalizado "FCLA_Show_Subtitles".
  *
  * Si no sea desea definir un emisor asignele el valor <objNull>, como se
@@ -50,7 +50,7 @@
  * Para que se verifiquen las condiciones el emisor debera estar definido, sino
  * estas seran ignoradas y se les asignara el valor que tienen por defecto.
  *
- * Si la distancia máxima con el emisor es -1, no se tomara en cuenta.
+ * Si la distancia maxima con el emisor es -1, no se tomara en cuenta.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -110,7 +110,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
   };
 
 
-  //Mostrar/Ocultar subtítulos.
+  //Mostrar/Ocultar subtitulos.
   for "_i" from 0 to (count _lines) - 1 do {
     if (_emitter getVariable ["FCLA_Hide_Subtitles", false]) exitWith {};
     _handle = [_emitter, _lines, _emitterColor, _timeToHideEachLine, _needShortRadio, _needLongRadio, _selectedSide, _distanceToShow, _i] spawn {
@@ -175,7 +175,7 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
   player setVariable ["FCLA_Subtitles", nil];
 
 
-  //Eliminar lógica y detener labios del emisor.
+  //Eliminar logica y detener labios del emisor.
   if ((typeOf _emitter) == "VirtualAISquad") then {deleteVehicle _emitter;};
   if (_emitter in allUnits) then {_emitter setRandomLip false;};
 };

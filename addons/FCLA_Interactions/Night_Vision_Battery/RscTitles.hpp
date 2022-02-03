@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                  TÍTULOS - "BATERÍA PARA LA VISIÓN NOCTURNA"                   |
+|                  TITULOS - "BATERIA PARA LA VISION NOCTURNA"                   |
 |********************************************************************************/
 
 class FCLA_NVG_Battery_Base {

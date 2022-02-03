@@ -9,8 +9,8 @@
 
 [
 	"FCLA_Mission_Type", "LIST",
-	["Misión", "Determina el tipo de misión, para asi inicializar automaticamente funciones/scripts según sea el tipo seleccionado. Algunas funciones/scripts solo\nfuncionaran si el tipo de misión seleccionado es el adecuado."],
-	["FCLA Desarrollo", "• General"],
+	["Mision", "Determina el tipo de mision, para asi inicializar automaticamente funciones/scripts segun sea el tipo seleccionado. Algunas funciones/scripts solo\nfuncionaran si el tipo de mision seleccionado es el adecuado."],
+	["FCLA Desarrollo", "[ x ] General"],
 	[
 	 ["Not_assigned", "Oficial", "Training"],
 	 ["Sin asignar", "Oficial", "Entrenamiento"], 0
@@ -23,30 +23,30 @@
 
 [
 	"FCLA_TS_Channel_Name", "EDITBOX",
-	["Canal de TeamSpeak", "Nombre del canal de TeamSpeak que se usara durante la misión."],
-	["FCLA Desarrollo", "• General"],
+	["Canal de TeamSpeak", "Nombre del canal de TeamSpeak que se usara durante la mision."],
+	["FCLA Desarrollo", "[ x ] General"],
 	"Servidor Oficial",
 	GLOBAL,
-	{tf_radio_channel_name = _this;},
+	{["TF_Radio_Channel_Name", _this] call CBA_fnc_publicVariable;},
 	true
 ] call CBA_fnc_addSetting;
 
 
 [
 	"FCLA_TS_Channel_Password", "EDITBOX",
-	["Contraseña del canal", "Contraseña del canal de TeamSpeak que se usara durante la misión."],
-	["FCLA Desarrollo", "• General"],
+	["Contrasena del canal", "Contrasena del canal de TeamSpeak que se usara durante la mision."],
+	["FCLA Desarrollo", "[ x ] General"],
 	"12345",
 	GLOBAL,
-	{radio_channel_password = _this;},
+	{["Radio_Channel_Password", _this] call CBA_fnc_publicVariable;},
 	true
 ] call CBA_fnc_addSetting;
 
 
 [
 	"FCLA_Donations_Message", "CHECKBOX",
-	["¿Mensaje de donaciones?", "Al activar se generara un mensaje en forma de recordatorio sobre las donaciones al servidor, el cual se repetira según el tiempo indicado debajo."],
-	["FCLA Desarrollo", "• General"],
+	["Mensaje de donaciones", "Al activar se generara un mensaje en forma de recordatorio sobre las donaciones al servidor, el cual se repetira segun el tiempo indicado debajo."],
+	["FCLA Desarrollo", "[ x ] General"],
 	true,
 	GLOBAL,
 	{},
@@ -57,7 +57,7 @@
 [
 	"FCLA_Donations_Message_Delay", "SLIDER",
 	["Delay (mensaje de donaciones)", "Tiempo en minutos para que vuelva a aparecer el mensaje."],
-	["FCLA Desarrollo", "• General"],
+	["FCLA Desarrollo", "[ x ] General"],
 	[15, 90, 45, 0],
 	GLOBAL,
 	{},

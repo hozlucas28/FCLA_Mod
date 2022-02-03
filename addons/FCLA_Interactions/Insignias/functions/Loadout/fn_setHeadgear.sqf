@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Coloca la boina ó el casco con la insignia a la unidad.
+ * Coloca la boina o el casco con la insignia a la unidad.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -31,7 +31,7 @@ _helicopterPilotHelmets = ["H_PilotHelmetHeli_B", "H_PilotHelmetHeli_B_Quetzal"]
 _helicopterCrewHelmets = ["H_CrewHelmetHeli_B", "H_CrewHelmetHeli_B_Quetzal"];
 
 
-//Obtener boina ó casco con insignia.
+//Obtener boina o casco con insignia.
 _headgearWithInsignia = switch (true) do {
 	case (_currentHeadgear in _blackBerets): {"H_Beret_" + _platoon + "_Black";};
 	case (_currentHeadgear in _blueBerets): {"H_Beret_" + _platoon + "_Blue";};

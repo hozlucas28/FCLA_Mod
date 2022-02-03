@@ -1,6 +1,6 @@
 
 /***************************************************************************|
-|                          VEHÍCULOS - "GRAFITIS"                           |
+|                          VEHICULOS - "GRAFITIS"                           |
 |***************************************************************************/
 
 
@@ -53,7 +53,7 @@ class Custom_UserTexture1m_F: UserTexture1m_F {
         };
 
         class Texture_3 {
-        	name = "FCLA (pequeña)";
+        	name = "FCLA (pequena)";
         	value = "\FCLA_Objects\Graffitis\data\UserTexture1m_F_FCLA_Small.paa";
         };
 
@@ -68,7 +68,7 @@ class Custom_UserTexture1m_F: UserTexture1m_F {
         };
 
         class Texture_6 {
-        	name = "Anti - FCLA (pequeña)";
+        	name = "Anti - FCLA (pequena)";
         	value = "\FCLA_Objects\Graffitis\data\UserTexture1m_F_Anti_FCLA_Small.paa";
         };
 
@@ -83,7 +83,7 @@ class Custom_UserTexture1m_F: UserTexture1m_F {
         };
 
         class Texture_9 {
-        	name = "Takana (pequeña)";
+        	name = "Takana (pequena)";
         	value = "\FCLA_Objects\Graffitis\data\UserTexture1m_F_Takana_Small.paa";
         };
 
@@ -98,7 +98,7 @@ class Custom_UserTexture1m_F: UserTexture1m_F {
         };
 
         class Texture_12 {
-        	name = "Jaguar (pequeña)";
+        	name = "Jaguar (pequena)";
         	value = "\FCLA_Objects\Graffitis\data\UserTexture1m_F_Jaguar_Small.paa";
         };
 
@@ -113,7 +113,7 @@ class Custom_UserTexture1m_F: UserTexture1m_F {
         };
 
         class Texture_15 {
-        	name = "Condor (pequeña)";
+        	name = "Condor (pequena)";
         	value = "\FCLA_Objects\Graffitis\data\UserTexture1m_F_Condor_Small.paa";
         };
 
@@ -128,7 +128,7 @@ class Custom_UserTexture1m_F: UserTexture1m_F {
         };
 
         class Texture_18 {
-        	name = "Salamandra (pequeña)";
+        	name = "Salamandra (pequena)";
         	value = "\FCLA_Objects\Graffitis\data\UserTexture1m_F_Salamandra_Small.paa";
         };
 
@@ -143,7 +143,7 @@ class Custom_UserTexture1m_F: UserTexture1m_F {
         };
 
         class Texture_21 {
-        	name = "Anaconda (pequeña)";
+        	name = "Anaconda (pequena)";
         	value = "\FCLA_Objects\Graffitis\data\UserTexture1m_F_Anaconda_Small.paa";
         };
 
@@ -158,7 +158,7 @@ class Custom_UserTexture1m_F: UserTexture1m_F {
         };
 
         class Texture_24 {
-        	name = "Quetzal (pequeña)";
+        	name = "Quetzal (pequena)";
         	value = "\FCLA_Objects\Graffitis\data\UserTexture1m_F_Quetzal_Small.paa";
         };
 			};

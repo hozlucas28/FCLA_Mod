@@ -19,7 +19,7 @@
  *                - ¿Quetzal? <BOOL> (default: true)
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Examples:
  *             //Se aplicaran todos los equipamientos.

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si se puede recargar la batería de las gafas de visión nocturna.
+ * Verifica si se puede recargar la bateria de las gafas de vision nocturna.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

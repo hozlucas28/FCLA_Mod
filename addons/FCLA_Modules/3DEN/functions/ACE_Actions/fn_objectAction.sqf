@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea una acción ACE 3D para una entidad específica.
+ * Crea una accion ACE 3D para una entidad especifica.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -28,7 +28,7 @@ _typeOfAction = _module getVariable ["FCLA_Type_Of_Action", -1];
 _associatedObject = _module getVariable ["FCLA_Associated_Object", ""];
 _compatibleSynchronizedObjects = _synchronizedObjects select {!(_x isKindOf "EmptyDetector")};
 _numberOfCompatibleSynchronizedObjects = count _compatibleSynchronizedObjects;
-if ((_name == "") || (_condition == "") || (_statement == "") || (_typeOfAction <= -1) || ((_associatedObject == "") && (_numberOfCompatibleSynchronizedObjects <= 0))) exitWith {["FCLA_Module_ACE_Object_Action", "• MÓDULO: CREAR ACCIÓN (ACE - OBJETO)", "¡Error! El/Un módulo 'Crear acción (ACE - objeto)' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
+if ((_name == "") || (_condition == "") || (_statement == "") || (_typeOfAction <= -1) || ((_associatedObject == "") && (_numberOfCompatibleSynchronizedObjects <= 0))) exitWith {["FCLA_Module_ACE_Object_Action", "- MODULO: CREAR ACCION (ACE - OBJETO)", "¡Error! El/Un modulo 'Crear accion (ACE - objeto)' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
 
 
 
@@ -38,12 +38,12 @@ _findedEntity = if (_associatedObject == "") then {0;} else {-1;};
 _associatedObject = if ((_findedEntity > -1) && (_numberOfCompatibleSynchronizedObjects == 1)) then {_compatibleSynchronizedObjects select _findedEntity;} else {call compile format ["%1", _associatedObject];};
 
 
-//Crear y asociar acción.
+//Crear y asociar accion.
 ["FCLA_Module_ACE_Object_Action", [
  [_module, _name, _icon, _statement, _condition],
  [_associatedObject, _typeOfAction, _parentPath]
 ]] call CBA_fnc_globalEventJIP;
 
 
-//Eliminar módulo.
+//Eliminar modulo.
 deleteVehicle _module;

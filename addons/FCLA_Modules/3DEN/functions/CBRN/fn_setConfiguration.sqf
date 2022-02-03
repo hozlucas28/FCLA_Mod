@@ -27,8 +27,8 @@ _compatibleOxygenMasks = _module getVariable ["FCLA_Oxygen_Masks", []];
 _compatibleNRBQUniforms = _module getVariable ["FCLA_NRBQ_Uniforms", []];
 _compatibleChemicalDetectors = _module getVariable ["FCLA_Chemical_Detectors", []];
 _compatibleBackpacksWithOxygen = _module getVariable ["FCLA_Backpacks_With_Oxygen", []];
-if (_moreThanOne) exitWith {["FCLA_Module_CBRN_Configuration", "• MÓDULO: CONFIGURACIÓN (CBRN)", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Configuración (CBRN)' han sido desactivados."] call FCLA_Common_fnc_errorMessage;};
-if ((_compatibleOxygenMasks isEqualTo []) && (_compatibleNRBQUniforms isEqualTo []) && (_compatibleChemicalDetectors isEqualTo []) && (_compatibleBackpacksWithOxygen isEqualTo [])) exitWith {["FCLA_Module_CBRN_Configuration", "• MÓDULO: CONFIGURACIÓN (CBRN)", "¡Error! El/Un módulo 'Configuración (CBRN)' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
+if (_moreThanOne) exitWith {["FCLA_Module_CBRN_Configuration", "- MODULO: CONFIGURACION (CBRN)", "¡Error! Solo puede haber un modulo de este tipo. Los modulos 'Configuracion (CBRN)' han sido desactivados."] call FCLA_Common_fnc_errorMessage;};
+if ((_compatibleOxygenMasks isEqualTo []) && (_compatibleNRBQUniforms isEqualTo []) && (_compatibleChemicalDetectors isEqualTo []) && (_compatibleBackpacksWithOxygen isEqualTo [])) exitWith {["FCLA_Module_CBRN_Configuration", "- MODULO: CONFIGURACION (CBRN)", "¡Error! El/Un modulo 'Configuracion (CBRN)' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
 
 
 
@@ -39,7 +39,7 @@ _compatibleChemicalDetectors = parseSimpleArray ([_compatibleChemicalDetectors, 
 _compatibleBackpacksWithOxygen = parseSimpleArray ([_compatibleBackpacksWithOxygen, """", "'"] call CBA_fnc_replace);
 
 
-//Establecer configuración.
+//Establecer configuracion.
 [{CBA_missionTime > 0}, {
   ["FCLA_CBRN_Compatible_Oxygen_Masks", _this select 1] call CBA_fnc_publicVariable;
   ["FCLA_CBRN_Compatible_NRBQ_Uniforms", _this select 2] call CBA_fnc_publicVariable;

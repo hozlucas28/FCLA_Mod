@@ -33,10 +33,10 @@ class FCLA_Module_Play_Custom_Sound: Module_F {
 		};
 
     class FCLA_Sound_On_Loop: CheckBox {
-      tooltip = "Si se activa el sonido se repetira una vez haya concluido.\n• Se necesita que la duración del sonido este definida dentro de la configuración del mismo.";
+      tooltip = "Si se activa el sonido se repetira una vez haya concluido.\n- Se necesita que la duracion del sonido este definida dentro de la configuracion del mismo.";
       typeName = "BOOL";
       property = "FCLA_Sound_On_Loop";
-      displayName = "¿Reproducir en bucle?";
+      displayName = "Reproducir en bucle";
       defaultValue = "false";
 		};
 		class ModuleDescription: ModuleDescription {};
@@ -51,9 +51,9 @@ class FCLA_Module_Play_Custom_Sound: Module_F {
 		description[] =	{
       "Reproduce de manera tridimensional el sonido personalizado.",
       "",
-      "• El tamaño de la zona define a que distancia se comenzará a oir el sonido, mientras más cerca se este del centro más fuerte se oirá.",
-      "• Se recomienda que los tamaños de la zona coincidan, si no se cumple se elegirá el que tenga mayor valor.",
-      "• Si el módulo esta sincronizado únicamente a una entidad (objeto, unidad, vehículo, etc.) esta sera tomada como origen del sonido. Sin embargo si hay más de una entidad sincronizada ó ninguna, se tomara como origen al módulo."
+      "- El tamano de la zona define a que distancia se comenzara a oir el sonido, mientras mas cerca se este del centro mas fuerte se oira.",
+      "- Se recomienda que los tamanos de la zona coincidan, si no se cumple se elegira el que tenga mayor valor.",
+      "- Si el modulo esta sincronizado unicamente a una entidad (objeto, unidad, vehiculo, etc.) esta sera tomada como origen del sonido. Sin embargo si hay mas de una entidad sincronizada o ninguna, se tomara como origen al modulo."
     };
 	};
 };

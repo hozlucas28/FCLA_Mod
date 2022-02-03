@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea una acción contextual para poder equiparse la máscara (respirador)
+ * Crea una accion contextual para poder equiparse la mascara (respirador)
  * sin tener el DLC Contact.
  *
  * Public: [No]

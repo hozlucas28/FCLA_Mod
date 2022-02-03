@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea una acción ACE 3D asociada a los Zeus.
+ * Crea una accion ACE 3D asociada a los Zeus.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

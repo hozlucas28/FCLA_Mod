@@ -1,12 +1,12 @@
 
 /********************************************************************************|
-|                   ARMAS - "BATERÍA PARA LA VISIÓN NOCTURNA"                    |
+|                   ARMAS - "BATERIA PARA LA VISION NOCTURNA"                    |
 |********************************************************************************/
 
 class FCLA_NVG_Battery: CBA_MiscItem {
   author = "hozlucas28";
-  displayName = "Batería NVG";
-  descriptionShort = "Pilas para las gafas de visión nocturna";
+  displayName = "Bateria NVG";
+  descriptionShort = "Pilas para las gafas de vision nocturna";
   model = "\A3\weapons_F\ammo\mag_univ.p3d";
   picture = "\A3\Weapons_F\Data\UI\M_battery_CA.paa";
   scope = 2;

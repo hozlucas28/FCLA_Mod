@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Desarma la antena satélital.
+ * Desarma la antena satelital.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -13,7 +13,7 @@ params ["_target", "_player"];
 
 
 
-//Animación inicial.
+//Animacion inicial.
 [_player, "ainvpknlmstpslaywrfldnon_medic", "SwitchMove"] call FCLA_Common_fnc_playAnimation;
 
 

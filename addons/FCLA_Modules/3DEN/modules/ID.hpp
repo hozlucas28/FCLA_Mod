@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Modifica la identificación de las unidades sincronizadas.
+ * Modifica la identificacion de las unidades sincronizadas.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -34,7 +34,7 @@ class FCLA_Module_Set_ID: Module_F {
       tooltip = "";
       typeName = "STRING";
       property = "FCLA_New_Age";
-      displayName = "Años";
+      displayName = "Anos";
       defaultValue = "''";
 		};
 
@@ -50,7 +50,7 @@ class FCLA_Module_Set_ID: Module_F {
       tooltip = "";
       typeName = "BOOL";
       property = "FCLA_Doctor_State";
-      displayName = "¿Es médico?";
+      displayName = "Es medico";
       defaultValue = "false";
 		};
 
@@ -58,7 +58,7 @@ class FCLA_Module_Set_ID: Module_F {
       tooltip = "";
       typeName = "BOOL";
       property = "FCLA_Advanced_Enginner_State";
-      displayName = "¿Es ingeniero?";
+      displayName = "Es ingeniero";
       defaultValue = "false";
 		};
 
@@ -66,7 +66,7 @@ class FCLA_Module_Set_ID: Module_F {
       tooltip = "";
       typeName = "BOOL";
       property = "FCLA_EOD_State";
-      displayName = "¿Es EOD?";
+      displayName = "Es EOD";
       defaultValue = "false";
 		};
 		class ModuleDescription: ModuleDescription {};
@@ -74,6 +74,6 @@ class FCLA_Module_Set_ID: Module_F {
 
 	class ModuleDescription: ModuleDescription {
     sync[] = {"AnyBrain", "EmptyDetector"};
-		description[] =	{"Modifica las identificaciones de las unidades sincronizadas al módulo."};
+		description[] =	{"Modifica las identificaciones de las unidades sincronizadas al modulo."};
 	};
 };

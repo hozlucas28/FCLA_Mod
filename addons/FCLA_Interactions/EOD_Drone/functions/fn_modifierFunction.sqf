@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Modifica la acción propia.
+ * Modifica la accion propia.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

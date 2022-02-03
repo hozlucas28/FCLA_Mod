@@ -1,11 +1,11 @@
 
 /***************************************************************************|
-|                         VEHÍCULOS - "ELECTRÓNICA"                         |
+|                         VEHICULOS - "ELECTRONICA"                         |
 |***************************************************************************/
 
 
 
-/* --------------------------- ANTENA SATÉLITAL ---------------------------- */
+/* --------------------------- ANTENA SATELITAL ---------------------------- */
 
 class Satellite_Antenna_RF_3080: ThingX {
   author = "hozlucas28";
@@ -96,12 +96,12 @@ class Land_Custom_PCSet_01_screen_F: Land_PCSet_01_screen_F	{
         };
 
         class Texture_6 {
-        	name = "Torreta autónoma (activada)";
+        	name = "Torreta autonoma (activada)";
         	value = "\a3\missions_f_oldman\data\img\screens\csatntbturretsonline_co.paa";
         };
 
         class Texture_7 {
-        	name = "Torreta autónoma (desactivada)";
+        	name = "Torreta autonoma (desactivada)";
         	value = "\a3\missions_f_oldman\data\img\screens\csatntbturretsoffline_co.paa";
         };
 			};
@@ -175,11 +175,11 @@ class Land_Hacking_Device_Black_F: Land_Laptop_03_black_F	{
 
 
 
-/* ------------------------------- PORTÁTIL -------------------------------- */
+/* ------------------------------- PORTATIL -------------------------------- */
 
 class Land_Custom_Laptop_unfolded_F: Land_Laptop_unfolded_F {
   author = "hozlucas28";
-	displayName = "Ordenador portátil (abierto, personalizado)";
+	displayName = "Ordenador portatil (abierto, personalizado)";
 	editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_unfolded_F.jpg";
   hiddenSelections[] = {"camo"};
 	hiddenSelectionsTextures[] = {"\a3\missions_f_oldman\data\img\screens\syndiaktlaptopdesktop_co.paa"};
@@ -249,11 +249,11 @@ class Land_Custom_Laptop_unfolded_F: Land_Laptop_unfolded_F {
 
 
 
-/* ------------------------ PORTÁTILES RESISTENTES ------------------------- */
+/* ------------------------ PORTATILES RESISTENTES ------------------------- */
 
 class Land_Custom_Laptop_03_black_F: Land_Laptop_03_black_F	{
   author = "hozlucas28";
-	displayName = "Portátil resistente (negro, personalizado)";
+	displayName = "Portatil resistente (negro, personalizado)";
 	editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_03_black_F.jpg";
   hiddenSelections[] = {"Camo_1", "Screen_1"};
 	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_black_CO.paa", "\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa"};
@@ -283,7 +283,7 @@ class Land_Custom_Laptop_03_black_F: Land_Laptop_03_black_F	{
         };
 
         class Texture_3 {
-        	name = "Menú principal";
+        	name = "Menu principal";
         	value = "\a3\missions_f_oldman\data\img\screens\millerntbscreen01_co.paa";
         };
 
@@ -324,7 +324,7 @@ class Land_Custom_Laptop_03_black_F: Land_Laptop_03_black_F	{
 
 class Land_Custom_Laptop_03_olive_F: Land_Laptop_03_olive_F	{
   author = "hozlucas28";
-	displayName = "Portátil resistente (oliva, personalizado)";
+	displayName = "Portatil resistente (oliva, personalizado)";
 	editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_03_olive_F.jpg";
   hiddenSelections[] = {"Camo_1", "Screen_1"};
 	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_olive_CO.paa", "\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa"};
@@ -354,7 +354,7 @@ class Land_Custom_Laptop_03_olive_F: Land_Laptop_03_olive_F	{
         };
 
         class Texture_3 {
-        	name = "Menú principal";
+        	name = "Menu principal";
         	value = "\a3\missions_f_oldman\data\img\screens\millerntbscreen01_co.paa";
         };
 
@@ -395,7 +395,7 @@ class Land_Custom_Laptop_03_olive_F: Land_Laptop_03_olive_F	{
 
 class Land_Custom_Laptop_03_sand_F: Land_Laptop_03_sand_F	{
   author = "hozlucas28";
-	displayName = "Portátil resistente (arena, personalizado)";
+	displayName = "Portatil resistente (arena, personalizado)";
 	editorPreview = "\FCLA_Objects\Electronics\data\pictures\Land_Custom_Laptop_03_sand_F.jpg";
   hiddenSelections[] = {"Camo_1", "Screen_1"};
 	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_sand_CO.paa", "\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_co.paa"};
@@ -425,7 +425,7 @@ class Land_Custom_Laptop_03_sand_F: Land_Laptop_03_sand_F	{
         };
 
         class Texture_3 {
-        	name = "Menú principal";
+        	name = "Menu principal";
         	value = "\a3\missions_f_oldman\data\img\screens\millerntbscreen01_co.paa";
         };
 
@@ -499,7 +499,7 @@ class Land_Custom_TripodScreen_01_large_black_F: Land_TripodScreen_01_large_blac
         };
 
         class Texture_3 {
-        	name = "Menú principal";
+        	name = "Menu principal";
         	value = "\a3\missions_f_oldman\data\img\screens\millerntbscreen01_co.paa";
         };
 
@@ -570,7 +570,7 @@ class Land_Custom_TripodScreen_01_large_F: Land_TripodScreen_01_large_F	{
         };
 
         class Texture_3 {
-        	name = "Menú principal";
+        	name = "Menu principal";
         	value = "\a3\missions_f_oldman\data\img\screens\millerntbscreen01_co.paa";
         };
 
@@ -641,7 +641,7 @@ class Land_Custom_TripodScreen_01_large_sand_F: Land_TripodScreen_01_large_sand_
         };
 
         class Texture_3 {
-        	name = "Menú principal";
+        	name = "Menu principal";
         	value = "\a3\missions_f_oldman\data\img\screens\millerntbscreen01_co.paa";
         };
 

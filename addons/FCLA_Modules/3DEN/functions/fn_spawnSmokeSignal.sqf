@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera una señal de humo en la posición del módulo.
+ * Genera una senal de humo en la posicion del modulo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -33,6 +33,6 @@ _smokeColor = switch (_smokeColor) do {
 
 
 
-//Generar señal de humo.
+//Generar senal de humo.
 _jipID = ["FCLA_Smoke_Signal", [_module, _modulePos, _smokeColor]] call CBA_fnc_globalEventJIP;
 [_jipID, _module] call CBA_fnc_removeGlobalEventJIP;

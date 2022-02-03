@@ -12,7 +12,7 @@
  * ["FCLA_Hint", ["¡Hola mundo (con sonido)!"], player] call CBA_fnc_targetEvent;
  *
  * Note:
- * Su estructura y método de operación se basa en el hint (script del juego vanilla).
+ * Su estructura y metodo de operacion se basa en el hint (script del juego vanilla).
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si se puede activar el oxígeno de la mochila.
+ * Verifica si se puede activar el oxigeno de la mochila.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

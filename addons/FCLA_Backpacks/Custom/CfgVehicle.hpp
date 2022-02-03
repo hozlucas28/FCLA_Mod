@@ -1,11 +1,11 @@
 
 /********************************************************************************|
-|                          VEHÍCULOS - "PERSONALIZADAS"                          |
+|                          VEHICULOS - "PERSONALIZADAS"                          |
 |********************************************************************************/
 
 
 
-/* -------------------- PARACAÍ­DAS DIRIGIBLE (AVANZADO) -------------------- */
+/* -------------------- PARACAI­DAS DIRIGIBLE (AVANZADO) -------------------- */
 
 class B_Advanced_Parachute: B_Parachute {
   author = "hozlucas28";

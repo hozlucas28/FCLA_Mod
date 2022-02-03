@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                             VEHÍCULOS - "VANILLA"                              |
+|                             VEHICULOS - "VANILLA"                              |
 |********************************************************************************/
 
 
@@ -1017,11 +1017,11 @@ class Item_H_HelmetSpecB_Quetzal_Tropical: Headgear_Base_F {
 
 
 
-/* ------------------ CASCO DE COMBATE MEJORADO (MÉDICO) ------------------- */
+/* ------------------ CASCO DE COMBATE MEJORADO (MEDICO) ------------------- */
 
 class Item_H_HelmetSpecB_Medic: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado [Médico]";
+  displayName = "Casco de combate mejorado [Medico]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -1040,7 +1040,7 @@ class Item_H_HelmetSpecB_Medic: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Medic_Snake: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado [Médico] (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Medico] (piel de serpiente)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -1059,7 +1059,7 @@ class Item_H_HelmetSpecB_Medic_Snake: Headgear_Base_F {
 
 class Item_H_HelmetSpecB_Medic_Tropical: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado [Médico] (tropical)";
+  displayName = "Casco de combate mejorado [Medico] (tropical)";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -1077,11 +1077,11 @@ class Item_H_HelmetSpecB_Medic_Tropical: Headgear_Base_F {
 
 
 
-/* -------------------- CASCO DE PILOTO DE HELICÓPTERO --------------------- */
+/* -------------------- CASCO DE PILOTO DE HELICOPTERO --------------------- */
 
 class Item_H_PilotHelmetHeli_B_Quetzal: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de piloto de helicóptero [Quetzal] [OTAN]";
+  displayName = "Casco de piloto de helicoptero [Quetzal] [OTAN]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";
@@ -1099,11 +1099,11 @@ class Item_H_PilotHelmetHeli_B_Quetzal: Headgear_Base_F {
 
 
 
-/* ------------------ CASCO DE TRIPULACIÓN DE HELICÓPTERO ------------------ */
+/* ------------------ CASCO DE TRIPULACION DE HELICOPTERO ------------------ */
 
 class Item_H_CrewHelmetHeli_B_Quetzal: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de tripulación de helicóptero [Quetzal] [OTAN]";
+  displayName = "Casco de tripulacion de helicoptero [Quetzal] [OTAN]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";

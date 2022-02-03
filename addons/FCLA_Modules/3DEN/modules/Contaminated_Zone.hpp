@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea áreas contaminadas.
+ * Crea areas contaminadas.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -26,7 +26,7 @@ class FCLA_Module_CBRN_Contaminated_Zone: Module_F {
 
 	class Attributes: AttributesBase {
     class FCLA_Threat_Level: Combo {
-      tooltip = "• Nivel 1: se necesita máscara de oxígeno compatible.\n• Nivel 2: se necesita máscara y mochila con oxígeno compatibles.\n• Nivel 3: se necesita máscara, mochila con oxígeno y un traje NRBQ compatibles.\n• Nivel 4: no hay equipamiento que brinde protección alguna.";
+      tooltip = "- Nivel 1: se necesita mascara de oxigeno compatible.\n- Nivel 2: se necesita mascara y mochila con oxigeno compatibles.\n- Nivel 3: se necesita mascara, mochila con oxigeno y un traje NRBQ compatibles.\n- Nivel 4: no hay equipamiento que brinde proteccion alguna.";
       typeName = "NUMBER";
       property = "FCLA_Threat_Level";
       displayName = "Nivel de amenaza";
@@ -65,9 +65,9 @@ class FCLA_Module_CBRN_Contaminated_Zone: Module_F {
 	class ModuleDescription: ModuleDescription {
     sync[] = {"EmptyDetector"};
 		description[] =	{
-      "Crea áreas contaminadas donde se tendra que utilizar un equipamiento correcto, que puede ser definido por el módulo: 'Configuración CBRN'.",
+      "Crea areas contaminadas donde se tendra que utilizar un equipamiento correcto, que puede ser definido por el modulo: 'Configuracion CBRN'.",
       "",
-      "• Si colocas -1, en los tamaños de la zona, todo el mapa se vera afectado."
+      "- Si colocas -1, en los tamanos de la zona, todo el mapa se vera afectado."
     };
 	};
 };

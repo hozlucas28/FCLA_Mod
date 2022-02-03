@@ -11,26 +11,26 @@
  *             1: ¿Tiene el mapa abierto?
  *             2: ¿Esta subiendo las escaleras de un edificio?
  *             3: ¿Esta utilizando el Zeus?
- *             4: ¿Esta en un vehículo?
+ *             4: ¿Esta en un vehiculo?
  *             5: ¿Esta muerto?
  *             6: ¿Esta arrastrando un objeto?
  *             7: ¿Esta moviendo un objeto?
  *             8: ¿Esta nadando?
- *             9: ¿Esta utilizando el modo cámara?
+ *             9: ¿Esta utilizando el modo camara?
  *             10: ¿Esta arrestado?
  *             11: ¿Esta inconsiente?
  *             12: ¿Se esta riendiendo?
- *             13: ¿Esta viendo un ID (identificación)?
+ *             13: ¿Esta viendo un ID (identificacion)?
  *             14: ¿Esta apoyando el arma?
  *             15: ¿Tiene el inventario abierto?
- *             16: ¿Esta recargando ó manipulando un arma?
- *             17: ¿Esta abierto el menú médico?
+ *             16: ¿Esta recargando o manipulando un arma?
+ *             17: ¿Esta abierto el menu medico?
  *             18: ¿Esta pegado a un objeto?
  *
  * Arguments:
  *            0: Unidad a verificar. <UNIT>
  *            1: Condiciones a excluir, opcional. <ARRAY OF NUMBER/S> (default: [])
- *                # Numeros aceptados: 0 al 18 incluídos (guiarse con el comentario "Conditions").
+ *                # Numeros aceptados: 0 al 18 incluidos (guiarse con el comentario "Conditions").
  *
  * Return Value:
  * ¿Cumple con las condiciones? <BOOL>

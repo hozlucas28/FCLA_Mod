@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Teletransporta a la posición ó vehículo, le asigna una dirección
- * y equipa a la unidad, según los argumentos enviados.
+ * Teletransporta a la posicion o vehiculo, le asigna una direccion
+ * y equipa a la unidad, segun los argumentos enviados.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

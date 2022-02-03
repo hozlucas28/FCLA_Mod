@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Modifica las radios de los vehículos sincronizados.
+ * Modifica las radios de los vehiculos sincronizados.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -23,10 +23,10 @@ class FCLA_Module_Radio: Module_F {
 
 	class Attributes: AttributesBase {
     class FCLA_Has_Radio: CheckBox {
-      tooltip = "Si se activa se le colocara una radio al vehículo.";
+      tooltip = "Si se activa se le colocara una radio al vehiculo.";
       typeName = "BOOL";
       property = "FCLA_Has_Radio";
-      displayName = "¿Tiene radio?";
+      displayName = "Tiene radio";
       defaultValue = "true";
 		};
 
@@ -59,6 +59,6 @@ class FCLA_Module_Radio: Module_F {
 
 	class ModuleDescription: ModuleDescription {
     sync[] = {"AnyVehicle", "EmptyDetector"};
-		description[] =	{"Añade/Modifica las radios de los vehículos sincronizados al módulo."};
+		description[] =	{"Anade/Modifica las radios de los vehiculos sincronizados al modulo."};
 	};
 };

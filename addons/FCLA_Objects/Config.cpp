@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                             CONFIGURACIÓN GENERAL                              |
+|                             CONFIGURACION GENERAL                              |
 |********************************************************************************/
 
 class CfgPatches {
@@ -33,7 +33,7 @@ class CfgFunctions {
 
 
 /********************************************************************************|
-|                              EDITOR - CATEGORÍAS                               |
+|                              EDITOR - CATEGORIAS                               |
 |********************************************************************************/
 
 class CfgEditorCategories {
@@ -43,13 +43,13 @@ class CfgEditorCategories {
 
 
 /********************************************************************************|
-|                             EDITOR - SUBCATEGORÍAS                             |
+|                             EDITOR - SUBCATEGORIAS                             |
 |********************************************************************************/
 
 class CfgEditorSubcategories {
 	class FCLA_Fire {displayName = "Fuego";};
 	class FCLA_Smoke {displayName = "Humo";};
-	class FCLA_Props {displayName = "Utilería";};
+	class FCLA_Props {displayName = "Utileria";};
 	class FCLA_Laboratory {displayName = "Laboratorio";};
 };
 
@@ -68,7 +68,7 @@ class CfgLights {
 
 
 /********************************************************************************|
-|                                    VEHÍCULOS                                   |
+|                                    VEHICULOS                                   |
 |********************************************************************************/
 
 class CfgVehicles {

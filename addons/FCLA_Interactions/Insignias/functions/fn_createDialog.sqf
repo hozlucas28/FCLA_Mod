@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea dos diálogos (propio e externo), según sea el caso, para elegir la insignia.
+ * Crea dos dialogos (propio e externo), segun sea el caso, para elegir la insignia.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -42,7 +42,7 @@ if (_isSelf) exitWith {
         ["Salamandra", "", "\FCLA_interactions\Insignias\data\pictures\Salamandra.paa"],
         ["Anaconda", "", "\FCLA_interactions\Insignias\data\pictures\Anaconda.paa"],
         ["Quetzal", "", "\FCLA_interactions\Insignias\data\pictures\Quetzal.paa"],
-        ["Médico", "", "\FCLA_interactions\Insignias\data\pictures\Medic.paa"]
+        ["Medico", "", "\FCLA_interactions\Insignias\data\pictures\Medic.paa"]
        ],
        _defaultValue
       ]

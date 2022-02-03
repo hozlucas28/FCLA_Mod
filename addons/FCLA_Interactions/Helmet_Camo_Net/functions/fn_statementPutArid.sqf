@@ -23,7 +23,7 @@ _aridSnakeskinHelmetsWithoutCamoNet = [
 
 
 
-//Animación inicial.
+//Animacion inicial.
 [_player, "ainvpknlmstpslaywrfldnon_medic", "SwitchMove"] call FCLA_Common_fnc_playAnimation;
 
 

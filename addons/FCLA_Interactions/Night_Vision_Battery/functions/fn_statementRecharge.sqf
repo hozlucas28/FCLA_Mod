@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Recarga la batería de las gafas de visión nocturna.
+ * Recarga la bateria de las gafas de vision nocturna.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -13,7 +13,7 @@ params ["_player"];
 
 
 
-//Animación inicial.
+//Animacion inicial.
 [_player, "ainvpknlmstpslaywrfldnon_medic", "SwitchMove"] call FCLA_Common_fnc_playAnimation;
 
 
@@ -45,4 +45,4 @@ _Condition = {
   [_player] call FCLA_Interactions_fnc_conditionRechargeNVB;
 };
 
-[5, _player, _statementOnFinish, _statementOnFailure, "Recargando batería...", _Condition] call ACE_Common_fnc_progressBar;
+[5, _player, _statementOnFinish, _statementOnFailure, "Recargando bateria...", _Condition] call ACE_Common_fnc_progressBar;

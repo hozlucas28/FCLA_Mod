@@ -9,7 +9,7 @@
 
 class V_EOD_FCLA: V_EOD_olive_F {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [FCLA]";
+  displayName = "Chaleco de desactivacionn de explosivos [FCLA]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_FCLA.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_FCLA.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
@@ -29,7 +29,7 @@ class V_EOD_FCLA: V_EOD_olive_F {
 
 class V_EOD_Takana: V_EOD_FCLA {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [Takana]";
+  displayName = "Chaleco de desactivacionn de explosivos [Takana]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_Takana.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_Takana.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
@@ -41,7 +41,7 @@ class V_EOD_Takana: V_EOD_FCLA {
 
 class V_EOD_Jaguar: V_EOD_FCLA {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [Jaguar]";
+  displayName = "Chaleco de desactivacionn de explosivos [Jaguar]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_Jaguar.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_Jaguar.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
@@ -53,7 +53,7 @@ class V_EOD_Jaguar: V_EOD_FCLA {
 
 class V_EOD_Condor: V_EOD_FCLA {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [Condor]";
+  displayName = "Chaleco de desactivacionn de explosivos [Condor]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_Condor.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_Condor.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
@@ -65,7 +65,7 @@ class V_EOD_Condor: V_EOD_FCLA {
 
 class V_EOD_Salamandra: V_EOD_FCLA {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [Salamandra]";
+  displayName = "Chaleco de desactivacionn de explosivos [Salamandra]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_Salamandra.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_Salamandra.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
@@ -77,7 +77,7 @@ class V_EOD_Salamandra: V_EOD_FCLA {
 
 class V_EOD_Anaconda: V_EOD_FCLA {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [Anaconda]";
+  displayName = "Chaleco de desactivacionn de explosivos [Anaconda]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_Anaconda.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_Anaconda.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
@@ -89,7 +89,7 @@ class V_EOD_Anaconda: V_EOD_FCLA {
 
 class V_EOD_Quetzal: V_EOD_FCLA {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [Quetzal]";
+  displayName = "Chaleco de desactivacionn de explosivos [Quetzal]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_Quetzal.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_Quetzal.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
@@ -1430,16 +1430,3 @@ class V_PlateCarrierSpec_Quetzal_Tropical: V_PlateCarrierSpec_FCLA_Tropical {
   scopeArsenal = 2;
   scopeCurator = 2;
 };
-
-
-
-/* ----------------- CARTUCHERAS LIGERAS (PERSONALIZADAS) ------------------ */
-
-#include "\FCLA_Vests\Vanilla\customs\Byron.hpp"
-#include "\FCLA_Vests\Vanilla\customs\Mario.hpp"
-#include "\FCLA_Vests\Vanilla\customs\Legion.hpp"
-#include "\FCLA_Vests\Vanilla\customs\Sagara.hpp"
-#include "\FCLA_Vests\Vanilla\customs\HozLucas.hpp"
-#include "\FCLA_Vests\Vanilla\customs\Kovalsky.hpp"
-#include "\FCLA_Vests\Vanilla\customs\Naretick.hpp"
-#include "\FCLA_Vests\Vanilla\customs\Ghostkiller.hpp"

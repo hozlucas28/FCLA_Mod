@@ -12,7 +12,7 @@
   params ["_position", "_attachedObject"];
   _savedInsignia = _attachedObject getVariable ["FCLA_Insignia", FCLA_Default_Insignia];
   _setInsigniaDisableByEditor = _attachedObject getVariable ['FCLA_Disable_Insignias', false];
-  if ((isNull _attachedObject) || !(_attachedObject in allUnits)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UNA UNIDAD"] call ZEN_Common_fnc_showMessage;};
+  if ((isNull _attachedObject) || !(_attachedObject in allUnits)) exitWith {["ERROR! EL MODULO DEBE SER COLOCADO SOBRE UNA UNIDAD"] call ZEN_Common_fnc_showMessage;};
   if ((_setInsigniaDisableByEditor)) exitWith {["¡EL EDITOR A DESACTIVADO EL CAMBIO DE INSIGNIA EN ESTA UNIDAD!"] call ZEN_Common_fnc_showMessage;};
 
 
@@ -69,7 +69,7 @@
         ["Salamandra", "", "\FCLA_interactions\Insignias\data\pictures\Salamandra.paa"],
         ["Anaconda", "", "\FCLA_interactions\Insignias\data\pictures\Anaconda.paa"],
         ["Quetzal", "", "\FCLA_interactions\Insignias\data\pictures\Quetzal.paa"],
-        ["Médico", "", "\FCLA_interactions\Insignias\data\pictures\Medic.paa"],
+        ["Medico", "", "\FCLA_interactions\Insignias\data\pictures\Medic.paa"],
         ["CBI", "", "\FCLA_interactions\Insignias\data\pictures\CBI.paa"],
         ["CAI", "", "\FCLA_interactions\Insignias\data\pictures\CAI.paa"],
         ["CPR", "", "\FCLA_interactions\Insignias\data\pictures\CPR.paa"],
@@ -102,10 +102,10 @@
 
     if ([_attachedObject, true] call ACE_common_fnc_isPlayer) then {
       [_attachedObject, _newInsignia] spawn FCLA_Interactions_fnc_statementInsignias;
-      ["INSIGNIA COLOCADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
+      ["INSIGNIA COLOCADA CON EXITO"] call ZEN_Common_fnc_showMessage;
     } else {
       [_attachedObject, _newInsignia] spawn FCLA_Interactions_fnc_statementInsignias;
-      ["INSIGNIA COLOCADA CON ÉXITO"] call ZEN_Common_fnc_showMessage;
+      ["INSIGNIA COLOCADA CON EXITO"] call ZEN_Common_fnc_showMessage;
     };
   }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Insignia_Management.paa"] call ZEN_Custom_Modules_fnc_Register;

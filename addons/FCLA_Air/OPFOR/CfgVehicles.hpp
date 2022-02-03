@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                               VEHÍCULOS - OPFOR                                |
+|                               VEHICULOS - OPFOR                                |
 |********************************************************************************/
 
 
@@ -20,7 +20,7 @@ class FCLA_O_Spetsnaz_UAV_04_CAS_F: O_T_UAV_04_CAS_F {
 
 
 
-/* -------------------------- HELICÓPTEROS (CSAT) -------------------------- */
+/* -------------------------- HELICOPTEROS (CSAT) -------------------------- */
 
 class O_Heli_Attack_02_dynamicLoadout_F: Heli_Attack_02_dynamicLoadout_base_F {
   class UserActions {
@@ -68,7 +68,7 @@ class O_Heli_Attack_02_dynamicLoadout_F: Heli_Attack_02_dynamicLoadout_base_F {
 
 
 
-/* ------------------------ HELICÓPTEROS (SPETSNAZ) ------------------------ */
+/* ------------------------ HELICOPTEROS (SPETSNAZ) ------------------------ */
 
 class FCLA_O_Spetsnaz_Heli_Light_02_unarmed_F: O_Heli_Light_02_unarmed_F {
   author = "hozlucas28";
@@ -487,7 +487,7 @@ class O_CSAT_VTOL_02_infantry_dynamicLoadout_F: O_T_VTOL_02_infantry_dynamicLoad
 
     class Hex {
       author = "hozlucas28";
-      displayName = "Hex";
+      displayName = "HEX";
       factions[] = {};
       textures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_bhex_CO.paa"};
     };
@@ -559,7 +559,7 @@ class O_CSAT_VTOL_02_vehicle_dynamicLoadout_F: O_T_VTOL_02_vehicle_dynamicLoadou
 
     class Hex {
       author = "hozlucas28";
-      displayName = "Hex";
+      displayName = "HEX";
       factions[] = {};
       textures[] = {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_bhex_CO.paa", "\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_bhex_CO.paa"};
     };

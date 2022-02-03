@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera un "waitUntilAndExecute" para detener la animación de transmisión
+ * Genera un "waitUntilAndExecute" para detener la animacion de transmision
  * por radio, si se cumplen las condiciones planteadas.
  *
  * Public: [No]

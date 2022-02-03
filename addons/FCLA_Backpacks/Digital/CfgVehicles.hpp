@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                             VEHÍCULOS - "DIGITAL"                              |
+|                             VEHICULOS - "DIGITAL"                              |
 |********************************************************************************/
 
 
@@ -19,11 +19,11 @@ class B_Kitbag_Digital: B_Kitbag_cbr {
 
 
 
-/* ---------------------------- PETATE (MÉDICO) ---------------------------- */
+/* ---------------------------- PETATE (MEDICO) ---------------------------- */
 
 class B_Kitbag_Medic_Digital: B_Kitbag_cbr {
   author = "hozlucas28";
-  displayName = "Petate [Médico] (digital)";
+  displayName = "Petate [Medico] (digital)";
   hiddenSelectionsTextures[] = {"\FCLA_Backpacks\Digital\data\B_Kitbag_Medic_Digital.paa"};
   picture = "\FCLA_Backpacks\Digital\data\pictures\B_Kitbag_Medic_Digital.paa";
   scope = 2;

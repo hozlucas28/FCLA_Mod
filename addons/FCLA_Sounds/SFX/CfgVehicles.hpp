@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                               VEHÍCULOS - "SFX"                                |
+|                               VEHICULOS - "SFX"                                |
 |********************************************************************************/
 
 
@@ -20,7 +20,7 @@ class FCLA_SFX_Flies: Sound {
 class FCLA_SFX_Night_Owl: Sound {
 	_generalMacro = "FCLA_SFX_Night_Owl";
 	author = "hozlucas28";
-	displayName = "FCLA - Búho";
+	displayName = "FCLA - Buho";
 	sound = "FCLA_SFX_Night_Owl";
 	scope = 2;
   scopeCurator = 2;
@@ -93,7 +93,7 @@ class FCLA_SFX_Arab_Marketplace: Sound {
 class FCLA_SFX_Riot: Sound {
 	_generalMacro = "FCLA_SFX_Riot";
 	author = "hozlucas28";
-	displayName = "FCLA - Manifestación";
+	displayName = "FCLA - Manifestacion";
 	sound = "FCLA_SFX_Riot";
 	scope = 2;
   scopeCurator = 2;
@@ -103,7 +103,7 @@ class FCLA_SFX_Riot: Sound {
 class FCLA_SFX_Africa_Crowd_v1: Sound {
 	_generalMacro = "FCLA_SFX_Africa_Crowd_v1";
 	author = "hozlucas28";
-	displayName = "FCLA - Multitud (África v1)";
+	displayName = "FCLA - Multitud (Africa v1)";
 	sound = "FCLA_SFX_Africa_Crowd_v1";
 	scope = 2;
   scopeCurator = 2;
@@ -113,7 +113,7 @@ class FCLA_SFX_Africa_Crowd_v1: Sound {
 class FCLA_SFX_Africa_Crowd_v2: Sound {
 	_generalMacro = "FCLA_SFX_Africa_Crowd_v2";
 	author = "hozlucas28";
-	displayName = "FCLA - Multitud (África v2)";
+	displayName = "FCLA - Multitud (Africa v2)";
 	sound = "FCLA_SFX_Africa_Crowd_v2";
 	scope = 2;
   scopeCurator = 2;
@@ -123,7 +123,7 @@ class FCLA_SFX_Africa_Crowd_v2: Sound {
 class FCLA_SFX_Africa_Crowd_v3: Sound {
 	_generalMacro = "FCLA_SFX_Africa_Crowd_v3";
 	author = "hozlucas28";
-	displayName = "FCLA - Multitud (África v3)";
+	displayName = "FCLA - Multitud (Africa v3)";
 	sound = "FCLA_SFX_Africa_Crowd_v3";
 	scope = 2;
   scopeCurator = 2;
@@ -133,7 +133,7 @@ class FCLA_SFX_Africa_Crowd_v3: Sound {
 class FCLA_SFX_Africa_Crowd_v4: Sound {
 	_generalMacro = "FCLA_SFX_Africa_Crowd_v4";
 	author = "hozlucas28";
-	displayName = "FCLA - Multitud (África v4)";
+	displayName = "FCLA - Multitud (Africa v4)";
 	sound = "FCLA_SFX_Africa_Crowd_v4";
 	scope = 2;
   scopeCurator = 2;
@@ -143,7 +143,7 @@ class FCLA_SFX_Africa_Crowd_v4: Sound {
 class FCLA_SFX_Africa_Crowd_v5: Sound {
 	_generalMacro = "FCLA_SFX_Africa_Crowd_v5";
 	author = "hozlucas28";
-	displayName = "FCLA - Multitud (África v5)";
+	displayName = "FCLA - Multitud (Africa v5)";
 	sound = "FCLA_SFX_Africa_Crowd_v5";
 	scope = 2;
   scopeCurator = 2;
@@ -153,7 +153,7 @@ class FCLA_SFX_Africa_Crowd_v5: Sound {
 class FCLA_SFX_Arab_Crowd_Vehicles_v1: Sound {
 	_generalMacro = "FCLA_SFX_Arab_Crowd_Vehicles_v1";
 	author = "hozlucas28";
-	displayName = "FCLA - Multitud y vehículos (Arabia v1)";
+	displayName = "FCLA - Multitud y vehiculos (Arabia v1)";
 	sound = "FCLA_SFX_Arab_Crowd_Vehicles_v1";
 	scope = 2;
   scopeCurator = 2;
@@ -163,7 +163,7 @@ class FCLA_SFX_Arab_Crowd_Vehicles_v1: Sound {
 class FCLA_SFX_Arab_Crowd_Vehicles_v2: Sound {
 	_generalMacro = "FCLA_SFX_Arab_Crowd_Vehicles_v2";
 	author = "hozlucas28";
-	displayName = "FCLA - Multitud y vehículos (Arabia v2)";
+	displayName = "FCLA - Multitud y vehiculos (Arabia v2)";
 	sound = "FCLA_SFX_Arab_Crowd_Vehicles_v2";
 	scope = 2;
   scopeCurator = 2;
@@ -173,7 +173,7 @@ class FCLA_SFX_Arab_Crowd_Vehicles_v2: Sound {
 class FCLA_SFX_Arab_Crowd_Vehicles_v3: Sound {
 	_generalMacro = "FCLA_SFX_Arab_Crowd_Vehicles_v3";
 	author = "hozlucas28";
-	displayName = "FCLA - Multitud y vehículos (Arabia v3)";
+	displayName = "FCLA - Multitud y vehiculos (Arabia v3)";
 	sound = "FCLA_SFX_Arab_Crowd_Vehicles_v3";
 	scope = 2;
   scopeCurator = 2;
@@ -183,7 +183,7 @@ class FCLA_SFX_Arab_Crowd_Vehicles_v3: Sound {
 class FCLA_SFX_Africa_Crowd_Vehicles_v1: Sound {
 	_generalMacro = "FCLA_SFX_Africa_Crowd_Vehicles_v1";
 	author = "hozlucas28";
-	displayName = "FCLA - Multitud y vehículos (África v1)";
+	displayName = "FCLA - Multitud y vehiculos (Africa v1)";
 	sound = "FCLA_SFX_Africa_Crowd_Vehicles_v1";
 	scope = 2;
   scopeCurator = 2;
@@ -193,7 +193,7 @@ class FCLA_SFX_Africa_Crowd_Vehicles_v1: Sound {
 class FCLA_SFX_Africa_Crowd_Vehicles_v2: Sound {
 	_generalMacro = "FCLA_SFX_Africa_Crowd_Vehicles_v2";
 	author = "hozlucas28";
-	displayName = "FCLA - Multitud y vehículos (África v2)";
+	displayName = "FCLA - Multitud y vehiculos (Africa v2)";
 	sound = "FCLA_SFX_Africa_Crowd_Vehicles_v2";
 	scope = 2;
   scopeCurator = 2;
@@ -203,7 +203,7 @@ class FCLA_SFX_Africa_Crowd_Vehicles_v2: Sound {
 class FCLA_SFX_Africa_Crowd_Vehicles_v3: Sound {
 	_generalMacro = "FCLA_SFX_Africa_Crowd_Vehicles_v3";
 	author = "hozlucas28";
-	displayName = "FCLA - Multitud y vehículos (África v3)";
+	displayName = "FCLA - Multitud y vehiculos (Africa v3)";
 	sound = "FCLA_SFX_Africa_Crowd_Vehicles_v3";
 	scope = 2;
   scopeCurator = 2;
@@ -213,7 +213,7 @@ class FCLA_SFX_Africa_Crowd_Vehicles_v3: Sound {
 class FCLA_SFX_Africa_Crowd_Vehicles_v4: Sound {
 	_generalMacro = "FCLA_SFX_Africa_Crowd_Vehicles_v4";
 	author = "hozlucas28";
-	displayName = "FCLA - Multitud y vehículos (África v4)";
+	displayName = "FCLA - Multitud y vehiculos (Africa v4)";
 	sound = "FCLA_SFX_Africa_Crowd_Vehicles_v4";
 	scope = 2;
   scopeCurator = 2;
@@ -256,7 +256,7 @@ class FCLA_SFX_Alarm: Sound {
 class FCLA_SFX_Air_Alarm: Sound {
 	_generalMacro = "FCLA_SFX_Air_Alarm";
 	author = "hozlucas28";
-	displayName = "FCLA - Alarma aérea";
+	displayName = "FCLA - Alarma aerea";
 	sound = "FCLA_SFX_Air_Alarm";
 	scope = 2;
   scopeCurator = 2;
@@ -266,7 +266,7 @@ class FCLA_SFX_Air_Alarm: Sound {
 class FCLA_SFX_Air_Alarm_Far: Sound {
 	_generalMacro = "FCLA_SFX_Air_Alarm_Far";
 	author = "hozlucas28";
-	displayName = "FCLA - Alarma aérea (distante)";
+	displayName = "FCLA - Alarma aerea (distante)";
 	sound = "FCLA_SFX_Air_Alarm_Far";
 	scope = 2;
   scopeCurator = 2;
@@ -276,7 +276,7 @@ class FCLA_SFX_Air_Alarm_Far: Sound {
 class FCLA_SFX_Artillery_Incoming_Alarm: Sound {
 	_generalMacro = "FCLA_SFX_Artillery_Incoming_Alarm";
 	author = "hozlucas28";
-	displayName = "FCLA - Artillería inminente (alarma)";
+	displayName = "FCLA - Artilleria inminente (alarma)";
 	sound = "FCLA_SFX_Artillery_Incoming_Alarm";
 	scope = 2;
   scopeCurator = 2;
@@ -286,7 +286,7 @@ class FCLA_SFX_Artillery_Incoming_Alarm: Sound {
 class FCLA_SFX_Biologic_Alarm: Sound {
 	_generalMacro = "FCLA_SFX_Biologic_Alarm";
 	author = "hozlucas28";
-	displayName = "FCLA - Alarma biológica";
+	displayName = "FCLA - Alarma biologica";
 	sound = "FCLA_SFX_Biologic_Alarm";
 	scope = 2;
   scopeCurator = 2;
@@ -304,12 +304,12 @@ class FCLA_SFX_Nuclear_Alarm: Sound {
 
 
 
-/* --------------------------- RADIOS/MEGÁFONOS ---------------------------- */
+/* --------------------------- RADIOS/MEGAFONOS ---------------------------- */
 
 class FCLA_SFX_Music_Radio: Sound {
 	_generalMacro = "FCLA_SFX_Music_Radio";
 	author = "hozlucas28";
-	displayName = "FCLA - Radio (música)";
+	displayName = "FCLA - Radio (musica)";
 	sound = "FCLA_SFX_Music_Radio";
 	scope = 2;
   scopeCurator = 2;
@@ -319,7 +319,7 @@ class FCLA_SFX_Music_Radio: Sound {
 class FCLA_SFX_Arab_Music_Radio: Sound {
 	_generalMacro = "FCLA_SFX_Arab_Music_Radio";
 	author = "hozlucas28";
-	displayName = "FCLA - Radio (música árabe)";
+	displayName = "FCLA - Radio (musica arabe)";
 	sound = "FCLA_SFX_Arab_Music_Radio";
 	scope = 2;
   scopeCurator = 2;
@@ -329,7 +329,7 @@ class FCLA_SFX_Arab_Music_Radio: Sound {
 class FCLA_SFX_Spanish_News_Radio: Sound {
 	_generalMacro = "FCLA_SFX_Spanish_News_Radio";
 	author = "hozlucas28";
-	displayName = "FCLA - Radio (noticias en español)";
+	displayName = "FCLA - Radio (noticias en espanol)";
 	sound = "FCLA_SFX_Spanish_News_Radio";
 	scope = 2;
   scopeCurator = 2;
@@ -409,7 +409,7 @@ class FCLA_SFX_Insurgent_Military_Radio_v2: Sound {
 class FCLA_SFX_Insurgent_Speech: Sound {
 	_generalMacro = "FCLA_SFX_Insurgent_Speech";
 	author = "hozlucas28";
-	displayName = "FCLA - Discurso insurgente (megáfono)";
+	displayName = "FCLA - Discurso insurgente (megafono)";
 	sound = "FCLA_SFX_Insurgent_Speech";
 	scope = 2;
   scopeCurator = 2;
@@ -419,7 +419,7 @@ class FCLA_SFX_Insurgent_Speech: Sound {
 class FCLA_SFX_Call_To_Prayer_Speech: Sound {
 	_generalMacro = "FCLA_SFX_Call_To_Prayer_Speech";
 	author = "hozlucas28";
-	displayName = "FCLA - Llamado a la oración (megáfono)";
+	displayName = "FCLA - Llamado a la oracion (megafono)";
 	sound = "FCLA_SFX_Call_To_Prayer_Speech";
 	scope = 2;
   scopeCurator = 2;
@@ -439,7 +439,7 @@ class FCLA_SFX_Speaker_Curfew: Sound {
 class FCLA_SFX_Radio_Static: Sound {
 	_generalMacro = "FCLA_SFX_Radio_Static";
 	author = "hozlucas28";
-	displayName = "FCLA - Radio (estática)";
+	displayName = "FCLA - Radio (estatica)";
 	sound = "FCLA_SFX_Radio_Static";
 	scope = 2;
   scopeCurator = 2;
@@ -449,7 +449,7 @@ class FCLA_SFX_Radio_Static: Sound {
 class FCLA_SFX_Radio_Morse_Code: Sound {
 	_generalMacro = "FCLA_SFX_Radio_Morse_Code";
 	author = "hozlucas28";
-	displayName = "FCLA - Radio (código morse)";
+	displayName = "FCLA - Radio (codigo morse)";
 	sound = "FCLA_SFX_Radio_Morse_Code";
 	scope = 2;
   scopeCurator = 2;
@@ -462,7 +462,7 @@ class FCLA_SFX_Radio_Morse_Code: Sound {
 class FCLA_SFX_Battlefield_Sniper_Suppression: Sound {
 	_generalMacro = "FCLA_SFX_Battlefield_Sniper_Suppression";
 	author = "hozlucas28";
-	displayName = "FCLA - Supresión de francotirador";
+	displayName = "FCLA - Supresion de francotirador";
 	sound = "FCLA_SFX_Battlefield_Sniper_Suppression";
 	scope = 2;
   scopeCurator = 2;
@@ -585,7 +585,7 @@ class FCLA_SFX_Generator_v3: Sound {
 class FCLA_SFX_Burning_Vehicle: Sound {
 	_generalMacro = "FCLA_SFX_Burning_Vehicle";
 	author = "hozlucas28";
-	displayName = "FCLA - Vehículo en llamas";
+	displayName = "FCLA - Vehiculo en llamas";
 	sound = "FCLA_SFX_Burning_Vehicle";
 	scope = 2;
   scopeCurator = 2;
@@ -615,7 +615,7 @@ class FCLA_SFX_Barking_Dogs_v2: Sound {
 class FCLA_SFX_Attempt_Start_Vehicle: Sound {
 	_generalMacro = "FCLA_SFX_Attempt_Start_Vehicle";
 	author = "hozlucas28";
-	displayName = "FCLA - Intento de encender vehículo";
+	displayName = "FCLA - Intento de encender vehiculo";
 	sound = "FCLA_SFX_Attempt_Start_Vehicle";
 	scope = 2;
   scopeCurator = 2;

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Enciende/Apaga todas las luces dentro del tamaño de la zona.
+ * Enciende/Apaga todas las luces dentro del tamano de la zona.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -49,7 +49,7 @@ class FCLA_Module_Switch_Lights: Module_F {
       tooltip = "";
       typeName = "BOOL";
       property = "FCLA_Exclude_Vehicles";
-      displayName = "¿Excluir vehículos?";
+      displayName = "Excluir vehiculos";
       defaultValue = "false";
 		};
 		class ModuleDescription: ModuleDescription {};
@@ -63,10 +63,10 @@ class FCLA_Module_Switch_Lights: Module_F {
 	class ModuleDescription: ModuleDescription {
     sync[] = {"AnyStaticObject", "EmptyDetector"};
 		description[] =	{
-      "Enciende/Apaga aquellas luces comprendidas dentro del 'Tamaño', determinado por el módulo.",
+      "Enciende/Apaga aquellas luces comprendidas dentro del 'Tamano', determinado por el modulo.",
       "",
-      "• Si colocas -1, en los tamaños de la zona, todas las luces del mapa seran afectadas.",
-      "• Si sincronizas únicamente un interruptor de transferencia al módulo, este servira para encender/apagar aquellas luces comprendidas dentro del 'Tamaño'. Sin embargo si hay más de una entidad sincronizada ó ninguna, las luces se encenderan/apagaran sin interacción alguna."
+      "- Si colocas -1, en los tamanos de la zona, todas las luces del mapa seran afectadas.",
+      "- Si sincronizas unicamente un interruptor de transferencia al modulo, este servira para encender/apagar aquellas luces comprendidas dentro del 'Tamano'. Sin embargo si hay más de una entidad sincronizada o ninguna, las luces se encenderan/apagaran sin interaccion alguna."
     };
 	};
 };

@@ -3,24 +3,24 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera un efecto de conmoción en la unidad, enviada como argumento.
+ * Genera un efecto de conmocion en la unidad, enviada como argumento.
  *
  * Argument:
  *            0: Unidad a la que se le aplicara el efecto. <UNIT>
- *            1: ¿Provocar caída de la unidad?, opcional. <BOOL> (default: true)
+ *            1: ¿Provocar caida de la unidad?, opcional. <BOOL> (default: true)
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Example:
- *             //La unidad se caerá.
+ *             //La unidad se caera.
  *             [player] call FCLA_Common_fnc_Shellshock;
  *
- *             //La unidad no se caerá.
+ *             //La unidad no se caera.
  *             [player, false] call FCLA_Common_fnc_Shellshock;
  *
  * Note:
- * Se recomienda utilizar esta función a travez del evento
+ * Se recomienda utilizar esta funcion a travez del evento
  * personalizado "FCLA_Shellshock".
  *
  * Public: [Yes]

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Muestra/Oculta la manguera que tiene la mochila de oxígeno.
+ * Muestra/Oculta la manguera que tiene la mochila de oxigeno.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

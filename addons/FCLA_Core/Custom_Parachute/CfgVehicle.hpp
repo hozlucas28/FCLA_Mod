@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                     VEHÍCULOS - "PARACAÍDAS PERSONALIZADO"                     |
+|                     VEHICULOS - "PARACAIDAS PERSONALIZADO"                     |
 |********************************************************************************/
 
 class ParachuteBase: Helicopter {

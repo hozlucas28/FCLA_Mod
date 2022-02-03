@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                        VEHÍCULOS - "DESTELLO DE LUCES"                         |
+|                        VEHICULOS - "DESTELLO DE LUCES"                         |
 |********************************************************************************/
 
 eyeFlare = "\FCLA_Effects\Lights_Flare\data\Eye_Flare.paa";

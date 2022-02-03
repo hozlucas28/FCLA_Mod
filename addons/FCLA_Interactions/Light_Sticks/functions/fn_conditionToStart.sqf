@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si se puede reproducir la animación de los palillos de luz.
+ * Verifica si se puede reproducir la animacion de los palillos de luz.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

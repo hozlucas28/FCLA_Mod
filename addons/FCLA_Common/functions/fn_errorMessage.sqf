@@ -7,11 +7,11 @@
  *
  * Arguments:
  *            0: ID. <STRING>
- *            1: Título. <STRING>
+ *            1: Titulo. <STRING>
  *            2: Texto. <STRING>
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Example:
  * ["FCLA_Example", "Mensaje", "Esto es un ejemplo de un mensaje de error."] call FCLA_Common_fnc_errorMessage;

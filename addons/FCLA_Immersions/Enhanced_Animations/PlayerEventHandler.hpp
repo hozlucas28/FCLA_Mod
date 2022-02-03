@@ -3,7 +3,7 @@
 |         CONTROLADORES DE EVENTOS (JUGADORES) - "ANIMACIONES MEJORADAS"         |
 |********************************************************************************/
 
-//Reproduce una animación al activar/desactivar la visión nocturna/térmica.
+//Reproduce una animacion al activar/desactivar la vision nocturna/termica.
 if (hasInterface) then {
   ["visionMode", {
     params ["_unit"];

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera el efecto de la señal de humo al dispararse un proyectil compatible.
+ * Genera el efecto de la senal de humo al dispararse un proyectil compatible.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

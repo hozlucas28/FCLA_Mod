@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Determina que se trata de un día de ascensos.
+ * Determina que se trata de un dia de ascensos.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -17,7 +17,7 @@
 
   ["ASCENSOS",
 	 [
-    ["TOOLBOX", ["¿Día de ascensos?", "Al activarse:\n• Los loadouts seran remplazados por un uniforme formal.\n• Se podran utilizar las acciones relacionadas con los ascensos.\n• Los jugadores que entren, luego de haberse activado, vestiran un uniforme formal."],
+    ["TOOLBOX", ["Dia de ascensos", "Al activarse:\n- Los loadouts seran remplazados por un uniforme formal.\n- Se podran utilizar las acciones relacionadas con los ascensos.\n- Los jugadores que entren, luego de haberse activado, vestiran un uniforme formal."],
      [
       _defaultValue,
       1,
@@ -34,7 +34,7 @@
      _isPromotionDay = if (_isPromotionDay == 0) then {true;} else {false;};
 
      ["FCLA_isPromotionDay", _isPromotionDay] call CBA_fnc_publicVariable;
-     _text = if (_isPromotionDay) then {"DÍA DE ASCENSOS ACTIVADO";} else {"DÍA DE ASCENSOS DESACTIVADO";};
+     _text = if (_isPromotionDay) then {"DIA DE ASCENSOS ACTIVADO";} else {"DIA DE ASCENSOS DESACTIVADO";};
      [_text] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Elegant_Person.paa"] call ZEN_Custom_Modules_fnc_Register;

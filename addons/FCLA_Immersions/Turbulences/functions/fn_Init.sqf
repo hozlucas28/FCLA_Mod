@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Realiza los preparativos para llamar a la función que aplica turbulencias
- * en el avión/helicóptero.
+ * Realiza los preparativos para llamar a la funcion que aplica turbulencias
+ * en el avion/helicoptero.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

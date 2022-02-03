@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                 FUNCIONES - "BATERÍA PARA LA VISIÓN NOCTURNA"                  |
+|                 FUNCIONES - "BATERIA PARA LA VISION NOCTURNA"                  |
 |********************************************************************************/
 
 class Night_Vision_Battery {

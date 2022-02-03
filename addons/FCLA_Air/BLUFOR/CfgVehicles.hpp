@@ -1,11 +1,11 @@
 
 /********************************************************************************|
-|                               VEHÍCULOS - BLUFOR                               |
+|                               VEHICULOS - BLUFOR                               |
 |********************************************************************************/
 
 
 
-/* -------------------------- HELICÓPTEROS (OTAN) -------------------------- */
+/* -------------------------- HELICOPTEROS (OTAN) -------------------------- */
 
 class B_Heli_Transport_01_F: Heli_Transport_01_base_F {
   class UserActions {
@@ -30,7 +30,7 @@ class B_Heli_Transport_01_F: Heli_Transport_01_base_F {
       position = "door_R";
       condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_R', 1]";
-      displayName = "Abrir puerta derech";
+      displayName = "Abrir puerta derecha";
       userActionID = 51;
     };
 
@@ -74,7 +74,7 @@ class B_Heli_Transport_01_F: Heli_Transport_01_base_F {
 
 class B_Heli_Transport_Medvac_01_F: B_Heli_Transport_01_F {
   author = "hozlucas28";
-  displayName = "UH-80 Ghost Hawk (médico)";
+  displayName = "UH-80 Ghost Hawk (medico)";
   editorPreview = "\FCLA_Air\BLUFOR\data\pictures\B_Heli_Transport_Medvac_01_F.jpg";
   hiddenSelections[] = {"camo1","camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Air\BLUFOR\data\B_Heli_Transport_Medvac_01_F.paa", "\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_CO.paa"};
@@ -84,7 +84,7 @@ class B_Heli_Transport_Medvac_01_F: B_Heli_Transport_01_F {
   class TextureSources {
     class Black_Medvac {
       author = "hozlucas28";
-      displayName = "Negro (médico)";
+      displayName = "Negro (medico)";
       textures[] = {"\FCLA_Air\BLUFOR\data\B_Heli_Transport_Medvac_01_F.paa", "\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_CO.paa"};
     };
   };
@@ -123,8 +123,8 @@ class B_Heli_Transport_03_F: Heli_Transport_03_base_F {
     class Right_Door_Open: Ramp_Open {
       condition = "(this doorPhase 'Door_R_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_R_source', 1]";
-      displayName = "Abrir puerta derech";
-      textToolTip = "Abrir puerta derech";
+      displayName = "Abrir puerta derecha";
+      textToolTip = "Abrir puerta derecha";
     };
 
     class Right_Door_Close: Ramp_Close {
@@ -206,8 +206,8 @@ class B_Heli_Transport_03_unarmed_F: Heli_Transport_03_unarmed_base_F {
     class Right_Door_Open: Ramp_Open {
       condition = "(this doorPhase 'Door_R_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
       statement = "this animateDoor ['Door_R_source', 1]";
-      displayName = "Abrir puerta derech";
-      textToolTip = "Abrir puerta derech";
+      displayName = "Abrir puerta derecha";
+      textToolTip = "Abrir puerta derecha";
     };
 
     class Right_Door_Close: Ramp_Close {
@@ -258,7 +258,7 @@ class B_Heli_Transport_03_unarmed_F: Heli_Transport_03_unarmed_base_F {
 
 
 
-/* -------------------------- HELICÓPTEROS (CTRG) -------------------------- */
+/* -------------------------- HELICOPTEROS (CTRG) -------------------------- */
 
 class B_CTRG_Heli_Transport_01_Sand_F: Heli_Transport_01_base_F {
   class UserActions {
@@ -283,7 +283,7 @@ class B_CTRG_Heli_Transport_01_Sand_F: Heli_Transport_01_base_F {
       position = "door_R";
       condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_R', 1]";
-      displayName = "Abrir puerta derech";
+      displayName = "Abrir puerta derecha";
       userActionID = 51;
     };
 
@@ -328,7 +328,7 @@ class B_CTRG_Heli_Transport_01_tropic_F: Heli_Transport_01_base_F {
       position = "door_R";
       condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
       statement = "this animateDoor ['door_R', 1]";
-      displayName = "Abrir puerta derech";
+      displayName = "Abrir puerta derecha";
       userActionID = 51;
     };
 
@@ -351,7 +351,7 @@ class B_CTRG_Heli_Transport_01_tropic_F: Heli_Transport_01_base_F {
 
 
 
-/* ----------------------- AVIONES (OTAN - PACÍFICO) ----------------------- */
+/* ----------------------- AVIONES (OTAN - PACIFICO) ----------------------- */
 
 class B_T_VTOL_01_vehicle_F: VTOL_01_vehicle_base_F {
   class UserActions {

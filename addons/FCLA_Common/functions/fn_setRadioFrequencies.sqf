@@ -3,20 +3,20 @@
  * Author: hozlucas28
  *
  * Description:
- * Establece automáticamente las frecuencias de las radios de onda corta y larga,
+ * Establece automaticamente las frecuencias de las radios de onda corta y larga,
  * que se utilizan en la comunidad de FCLA.
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Example:
  * call FCLA_Common_fnc_setRadioFrequencies;
  *
  * Notes:
- * Se recomienda utilizar esta función a travez del evento
+ * Se recomienda utilizar esta funcion a travez del evento
  * personalizado "FCLA_Radio_Frequencies".
  *
- * Las frecuencias se estableceran en el cliente que ejecuto la función.
+ * Las frecuencias se estableceran en el cliente que ejecuto la funcion.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

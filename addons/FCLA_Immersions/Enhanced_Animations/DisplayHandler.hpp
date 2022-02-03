@@ -3,7 +3,7 @@
 |              CONTROLADORES DE PANTALLA - "ANIMACIONES MEJORADAS"               |
 |********************************************************************************/
 
-//Cancela la posición táctica.
+//Cancela la posicion tactica.
 ["MouseButtonDown", {
   _player = call CBA_fnc_currentUnit;
   _tacticalPositionValues = _player getVariable ["FCLA_Tactical_Position", [false, false]];

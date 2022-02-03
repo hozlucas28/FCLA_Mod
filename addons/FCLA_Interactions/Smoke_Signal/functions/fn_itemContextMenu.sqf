@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea una acción contextual que cambia el tiempo para la detonación del
- * proyectil de la señal de humo.
+ * Crea una accion contextual que cambia el tiempo para la detonacion del
+ * proyectil de la senal de humo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

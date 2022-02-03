@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Alterna las luces en la posición y radio indicados.
+ * Alterna las luces en la posicion y radio indicados.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -21,7 +21,7 @@
      ],
      false
     ],
-    ["TOOLBOX", "Excluir vehículos",
+    ["TOOLBOX", "Excluir vehiculos",
      [
       1,
       1,
@@ -31,7 +31,7 @@
      ],
      false
     ],
-    ["SLIDER", ["Radio", "Aquellas luces comprendidas dentro del radio definido se veran afectadas, tomando como origen del radio la posición donde se colocó el módulo.\n• Nota: si colocas -1 todas las luces del mapa seran afectadas."],
+    ["SLIDER", ["Radio", "Aquellas luces comprendidas dentro del radio definido se veran afectadas, tomando como origen del radio la posicion donde se coloco el modulo.\n- Nota: si colocas -1 todas las luces del mapa seran afectadas."],
      [
       -1,
       5000,

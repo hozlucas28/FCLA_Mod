@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Enciende/Apaga todas las luces dentro del tamaño de la zona, determinado
- * por el módulo.
+ * Enciende/Apaga todas las luces dentro del tamano de la zona, determinado
+ * por el modulo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -124,5 +124,5 @@ if (_transferSwitch != _module) then {
 };
 
 
-//Eliminar módulo.
+//Eliminar modulo.
 deleteVehicle _module;

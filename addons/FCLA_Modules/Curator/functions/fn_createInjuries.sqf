@@ -12,14 +12,14 @@
   params ["_position", "_attachedObject"];
   _isHidden = isObjectHidden _attachedObject;
   _isInvulnerable = !(isDamageAllowed _attachedObject);
-  if ((isNull _attachedObject) || !(_attachedObject in allUnits)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UNA UNIDAD"] call ZEN_Common_fnc_showMessage;};
+  if ((isNull _attachedObject) || !(_attachedObject in allUnits)) exitWith {["ERROR! EL MODULO DEBE SER COLOCADO SOBRE UNA UNIDAD"] call ZEN_Common_fnc_showMessage;};
   if (_isHidden) exitWith {["ERROR! LA UNIDAD NO DEBE ESTAR OCULTA"] call ZEN_Common_fnc_showMessage;};
-  if (_isInvulnerable) exitWith {["ERROR! LA UNIDAD DEBE TENER EL DAÑO ACTIVADO"] call ZEN_Common_fnc_showMessage;};
+  if (_isInvulnerable) exitWith {["ERROR! LA UNIDAD DEBE TENER EL DANO ACTIVADO"] call ZEN_Common_fnc_showMessage;};
 
 
   ["LESIONES",
 	 [
-    ["COMBO", "Tipo de lesión",
+    ["COMBO", "Tipo de lesion",
      [
       [
        "falling",
@@ -41,21 +41,21 @@
        "Ahogo",
        "Disparo",
        "Granada",
-       "Colisión",
-       "Puñalada",
-       "Puñetazo",
+       "Colision",
+       "Punalada",
+       "Punetazo",
        "Quemadura",
        "Explosivo",
        "Proyectil",
        "Onda de choque",
        "Quemadura de cuerda",
-       "Accidente de vehículo"
+       "Accidente de vehiculo"
       ],
       0
      ],
      false
     ],
-    ["SLIDER", ["Nivel de lesiones", "Mientras más alto sea el nivel de lesiones, más heridas habra.\n• [5 - 10] = alta complejidad.\n• [2.5 - 5] = media complejidad.\n• [0 - 2.5] = baja complejidad."],
+    ["SLIDER", ["Nivel de lesiones", "Mientras mas alto sea el nivel de lesiones, mas heridas habra.\n- [5 - 10] = alta complejidad.\n- [2.5 - 5] = media complejidad.\n- [0 - 2.5] = baja complejidad."],
      [
       0,
       10,
@@ -64,7 +64,7 @@
      ],
      false
     ],
-    ["TOOLBOX", ["¿Forzar inconsciencia?", "Si se activa se forzara a la unidad a estar inconsciente sin importar la gravedad de sus heridas"],
+    ["TOOLBOX", ["Forzar inconsciencia", "Si se activa se forzara a la unidad a estar inconsciente sin importar la gravedad de sus heridas"],
      [
       1,
       1,
@@ -74,7 +74,7 @@
      ],
      false
     ],
-    ["TOOLBOX", "¿Fracturar brazo derecho?",
+    ["TOOLBOX", "Fracturar brazo derecho",
      [
       1,
       1,
@@ -84,7 +84,7 @@
      ],
      false
     ],
-    ["TOOLBOX", "¿Fracturar brazo izquierdo?",
+    ["TOOLBOX", "Fracturar brazo izquierdo",
      [
       1,
       1,
@@ -94,7 +94,7 @@
      ],
      false
     ],
-    ["TOOLBOX", "¿Fracturar pierna derecha?",
+    ["TOOLBOX", "Fracturar pierna derecha",
      [
       1,
       1,
@@ -104,7 +104,7 @@
      ],
      false
     ],
-    ["TOOLBOX", "¿Fracturar pierna izquierda?",
+    ["TOOLBOX", "Fracturar pierna izquierda",
      [
       1,
       1,
@@ -128,6 +128,6 @@
      _attachedObject setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
      ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_attachedObject, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true]], _attachedObject] call CBA_fnc_targetEvent;
      ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_attachedObject]]] call CBA_fnc_globalEvent;
-     ["LESIONES PROVOCADAS CON ÉXITO"] call ZEN_Common_fnc_showMessage;
+     ["LESIONES PROVOCADAS CON EXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Medical_Cross.paa"] call ZEN_Custom_Modules_fnc_Register;

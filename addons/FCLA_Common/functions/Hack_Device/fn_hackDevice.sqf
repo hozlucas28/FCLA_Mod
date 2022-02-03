@@ -3,23 +3,23 @@
  * Author: hozlucas28
  *
  * Description:
- * Agrega una acción al dispositivo, enviado como argumento 0, para hacekearlo.
+ * Agrega una accion al dispositivo, enviado como argumento 0, para hacekearlo.
  *
  * Arguments:
- *            0: Dispositivo al que se le asociara la acción. <OBJECT|VEHICLE>
- *            1: Título de la acción, opcional. <STRING> (default: "hackear dispositivo")
- *            2: Imagen de la acción, opcional. <STRING> (default: "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa")
+ *            0: Dispositivo al que se le asociara la accion. <OBJECT|VEHICLE>
+ *            1: Titulo de la accion, opcional. <STRING> (default: "hackear dispositivo")
+ *            2: Imagen de la accion, opcional. <STRING> (default: "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa")
  *            3: ¿Se necesita un dispositivo de hackeo?, opcional. <BOOL> (default: true)
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Examples:
  *             //Opcionales no definidos.
  *            [Laptop_1] call FCLA_Common_fnc_hackDevice;
  *
  *             //Opcionales definidos.
- *            [Laptop_1, "Título personalizado", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_requestleadership_ca.paa", false] call FCLA_Common_fnc_hackDevice;
+ *            [Laptop_1, "Titulo personalizado", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_requestleadership_ca.paa", false] call FCLA_Common_fnc_hackDevice;
  *
  * Notes:
  * Cuando el dispositivo esta siendo hackeado se le asigna la
@@ -43,7 +43,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
 
 
 
-//Crear acción.
+//Crear accion.
 [
 	_device,
 	_title,
@@ -70,7 +70,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     _ctrlEndingVideo = _display ctrlCreate ["RscVideo", -1];
 
 
-    //Posición de los controles.
+    //Posicion de los controles.
     _ctrlWritingBox ctrlSetPosition [0.29375 * safezoneW + safezoneX, 0.753 * safezoneH + safezoneY, 0.4125 * safezoneW, 0.022 * safezoneH];
     _ctrlFakeBox ctrlSetPosition [0.29375 * safezoneW + safezoneX, 0.753 * safezoneH + safezoneY, 0.4125 * safezoneW, 0.022 * safezoneH];
     _ctrlBoxToWrite ctrlSetPosition [0.29375 * safezoneW + safezoneX, 0.753 * safezoneH + safezoneY, 0.4125 * safezoneW, 0.022 * safezoneH];
@@ -169,7 +169,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     }, [_target, _caller, _arguments, _display]] call CBA_fnc_waitUntilAndExecute;
 
 
-    //Colocar código a medida que se teclea.
+    //Colocar codigo a medida que se teclea.
     _linesOnDisplay = [];
     _numberOfLinesDisplayed = 0;
     _linesOfCode = (loadFile "\FCLA_Common\functions\Hack_Device\codes\Hacking_Lines.txt") splitString "@";
@@ -195,7 +195,7 @@ if ((isNull _device) || (_title == "")) exitWith {false};
     };
 
 
-    //Reproducir video de finalización si el hackeo se completo.
+    //Reproducir video de finalizacion si el hackeo se completo.
     if (_numberOfLinesDisplayed >= _numberOfLines) then {
       _ctrlBoxToWrite ctrlShow false;
       _ctrlHackingLines ctrlShow false;

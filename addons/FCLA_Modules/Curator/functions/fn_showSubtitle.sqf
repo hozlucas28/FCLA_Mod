@@ -3,13 +3,13 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera un mensaje a modo de subtítulo.
+ * Genera un mensaje a modo de subtitulo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-["FCLA", "Mostrar subtítulo (BETA)", {
-  ["SUBTÍTULO",
+["FCLA", "Mostrar subtitulo (BETA)", {
+  ["SUBTITULO",
 	 [
     ["EDIT", ["Emisor", "Nombre del emisor"],
      [
@@ -19,7 +19,7 @@
      ],
      false
     ],
-    ["EDIT", ["Subtítulo", "Mensaje que se mostrara a modo de subtítulo"],
+    ["EDIT", ["Subtitulo", "Mensaje que se mostrara a modo de subtitulo"],
      [
       "",
       nil,
@@ -58,7 +58,7 @@
      ],
      false
     ],
-    ["SLIDER", ["Radio / Distancia", "Aquellas unidades comprendidas dentro del radio definido podrán ver el mensaje, tomando como origen del radio la posición donde se colocó el módulo.\n• Nota: si colocas -1 la distancia no importara."],
+    ["SLIDER", ["Radio / Distancia", "Aquellas unidades comprendidas dentro del radio definido podran ver el mensaje, tomando como origen del radio la posicion donde se coloco el modulo.\n- Nota: si colocas -1 la distancia no importara."],
      [
       -1,
       5000,
@@ -67,7 +67,7 @@
      ],
      false
     ],
-    ["TOOLBOX", ["¿Necesita radio corta?", "Si se activa únicamente aquellas unidades que posean radio de onda corta podran ver los subtítulos"],
+    ["TOOLBOX", ["Necesita radio corta", "Si se activa unicamente aquellas unidades que posean radio de onda corta podran ver los subtitulos"],
      [
       1,
       1,
@@ -77,7 +77,7 @@
      ],
      false
     ],
-    ["TOOLBOX", ["¿Necesita radio larga?", "Si se activa únicamente aquellas unidades que posean radio de onda larga podran ver los subtítulos"],
+    ["TOOLBOX", ["Necesita radio larga", "Si se activa unicamente aquellas unidades que posean radio de onda larga podran ver los subtitulos"],
      [
       1,
       1,
@@ -120,6 +120,6 @@
      _needShortRadio = if (_needShortRadio == 0) then {true;} else {false;};
 
      ["FCLA_Show_Subtitles", [_attachedObject, [[_emitterName, _subtitle]], _color, _timeToHide, [_needShortRadio, _needLongRadio, _selectedSide, _distanceToShow]]] call CBA_fnc_globalEvent;
-     ["SUBTÍTULO MOSTRADO CON ÉXITO"] call ZEN_Common_fnc_showMessage;
+     ["SUBTITULO MOSTRADO CON EXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Chat.paa"] call ZEN_Custom_Modules_fnc_Register;

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera luciérnagas.
+ * Genera luciernagas.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

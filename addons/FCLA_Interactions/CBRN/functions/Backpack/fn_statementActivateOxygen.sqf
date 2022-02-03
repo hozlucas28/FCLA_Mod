@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Activa el oxígeno de la mochila.
+ * Activa el oxigeno de la mochila.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -14,7 +14,7 @@ _backpackContainer = backpackContainer _player;
 
 
 
-//Verificar si tiene oxígeno.
+//Verificar si tiene oxigeno.
 if ((_backpackContainer getVariable ["FCLA_Backpack_Oxygen", FCLA_CBRN_Initial_Backpack_Oxygen]) <= 0) exitWith {
   _text = ["||||||||||", "#808080"] call ACE_Common_fnc_stringToColoredText;
   _picture = getText (configFile >> "CfgVehicles" >> (backpack _player) >> "picture");
@@ -27,10 +27,10 @@ if ((_backpackContainer getVariable ["FCLA_Backpack_Oxygen", FCLA_CBRN_Initial_B
 [_player, true] spawn FCLA_Interactions_fnc_showHoseCBRN;
 _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
 [_player, "FCLA_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;
-[_player, "quick_view", "%1 activo el suministro de oxígeno", [name _player]] call ACE_Medical_Treatment_fnc_addToLog;
+[_player, "quick_view", "%1 activo el suministro de oxigeno", [name _player]] call ACE_Medical_Treatment_fnc_addToLog;
 
 
-//Comenzar consumo oxígeno.
+//Comenzar consumo oxigeno.
 [{
   _args params ["_player", "_lastTimeUpdated"];
   _controlledUnit = call CBA_fnc_currentUnit;

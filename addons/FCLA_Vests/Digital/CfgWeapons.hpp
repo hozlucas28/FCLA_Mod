@@ -238,16 +238,3 @@ class V_PlateCarrier2_Quetzal_Digital: V_PlateCarrier2_FCLA_Digital {
   scopeArsenal = 2;
   scopeCurator = 2;
 };
-
-
-
-/* ----------------- CARTUCHERAS LIGERAS (PERSONALIZADAS) ------------------ */
-
-#include "\FCLA_Vests\Digital\customs\Byron.hpp"
-#include "\FCLA_Vests\Digital\customs\Mario.hpp"
-#include "\FCLA_Vests\Digital\customs\Legion.hpp"
-#include "\FCLA_Vests\Digital\customs\Sagara.hpp"
-#include "\FCLA_Vests\Digital\customs\HozLucas.hpp"
-#include "\FCLA_Vests\Digital\customs\Kovalsky.hpp"
-#include "\FCLA_Vests\Digital\customs\Naretick.hpp"
-#include "\FCLA_Vests\Digital\customs\Ghostkiller.hpp"

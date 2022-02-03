@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera el efecto seleccionado en la posición del módulo.
+ * Genera el efecto seleccionado en la posicion del modulo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -22,7 +22,7 @@ if ((is3DEN) || (isNull _module) || (!_isActivated)) exitWith {};
 _modulePos = getPos _module;
 _delayEffect = ceil (_module getVariable ["FCLA_Delay", 0]);
 _selectedEffect = toUpper (_module getVariable ["FCLA_Effect", "sparks"]);
-if ((_selectedEffect in ["SPARKS", "WIND_GUST"]) && (_delayEffect <= 0)) exitWith {["FCLA_Module_Spawn_Effect", "• MÓDULO: GENERAR EFECTO", "¡Error! El/Un módulo 'Generar efecto' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
+if ((_selectedEffect in ["SPARKS", "WIND_GUST"]) && (_delayEffect <= 0)) exitWith {["FCLA_Module_Spawn_Effect", "- MODULO: GENERAR EFECTO", "¡Error! El/Un modulo 'Generar efecto' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
 
 
 

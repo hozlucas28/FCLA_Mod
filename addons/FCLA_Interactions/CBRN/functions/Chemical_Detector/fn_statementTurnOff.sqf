@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Apaga el detector químico.
+ * Apaga el detector quimico.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

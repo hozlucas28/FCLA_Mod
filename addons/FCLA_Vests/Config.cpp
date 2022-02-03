@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                             CONFIGURACIÓN GENERAL                              |
+|                             CONFIGURACION GENERAL                              |
 |********************************************************************************/
 
 class CfgPatches {
@@ -32,7 +32,7 @@ class CfgFunctions {
 
 
 /********************************************************************************|
-|                                   VEHÍCULOS                                    |
+|                                   VEHICULOS                                    |
 |********************************************************************************/
 
 class CfgVehicles {
@@ -70,7 +70,6 @@ class CfgWeapons {
 	class V_PlateCarrier2_rgr: V_PlateCarrier1_rgr {};
 	class V_PlateCarrierSpec_rgr: Vest_NoCamo_Base {};
 	class V_PlateCarrier_Kerry: V_PlateCarrier1_rgr {};
-	class V_PlateCarrier2_rgr_noflag_F: V_PlateCarrier2_rgr {};
 	class V_EOD_olive_F: V_EOD_base_F {};
 
 	#include "\FCLA_Vests\Digital\CfgWeapons.hpp"

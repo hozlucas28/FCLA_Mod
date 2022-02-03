@@ -9,12 +9,12 @@
  * Arguments:
  *            0: Origen del sonido. <UNIT|OBJECT|VEHICLE>
  *            1: Classname del sonido que se quiere reproducir. <STRING>
- *            2: Tiempo en segundos que dura el sonido a reproducir, opcional. <NUMBER> (default: duración definida en su classname)
- *            3: Máxima distancia en la que se escuchara el sonido, opcional. <NUMBER> (default: 100)
+ *            2: Tiempo en segundos que dura el sonido a reproducir, opcional. <NUMBER> (default: duracion definida en su classname)
+ *            3: Maxima distancia en la que se escuchara el sonido, opcional. <NUMBER> (default: 100)
  *            4: ¿Borrar origen del sonido cuando se termina de reproducir?, opcional. <BOOL> (default: false)
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Examples:
  *             //Opcionales no definidos.
@@ -24,9 +24,9 @@
  *             [Unidad_1, "FCLA_Hiss_2", 1, 50, true] call FCLA_Common_fnc_globalSay3D;
  *
  * Note:
- * La función le asigna el valor <true> a la variable de tipo
+ * La funcion le asigna el valor <true> a la variable de tipo
  * objeto "FCLA_Playing_Sound" asociada a la unidad/objeto origen
- * del sonido, para asi evitar un bucle de reproducción.
+ * del sonido, para asi evitar un bucle de reproduccion.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

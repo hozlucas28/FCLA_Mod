@@ -3,21 +3,21 @@
  * Author: hozlucas28
  *
  * Description:
- * Retorna un número al azar comprendido entre un intervalo.
+ * Retorna un numero al azar comprendido entre un intervalo.
  *
  * Arguments:
- *            0: Número mínimo (entero). <NUMBER>
- *            1: Número máximo (entero). <NUMBER>
- *            2: ¿Retornar el número como un "STRING"?, opcional. <BOOL> (default: false)
+ *            0: Numero minimo (entero). <NUMBER>
+ *            1: Numero maximo (entero). <NUMBER>
+ *            2: ¿Retornar el numero como un "STRING"?, opcional. <BOOL> (default: false)
  *
  * Return Value:
- * Número al azar comprendido entre el mínimo y el máximo. <NUMBER|STRING>
+ * Numero al azar comprendido entre el minimo y el maximo. <NUMBER|STRING>
  *
  * Examples:
- *             //Retornar número como <NUMBER>.
+ *             //Retornar numero como <NUMBER>.
  *             [0, 10] call FCLA_Common_fnc_getRandomNumber;
  *
- *             //Retornar número como <STRING>.
+ *             //Retornar numero como <STRING>.
  *             [0, 10, true] call FCLA_Common_fnc_getRandomNumber;
  *
  * Public: [Yes]
@@ -37,7 +37,7 @@ _array = [];
 for "_i" from (ceil _minimum) to (ceil _maximum) do {_array pushBack _i;};
 
 
-//Seleccionar número al azar.
+//Seleccionar numero al azar.
 _return = selectRandom _array;
 switch (_returnAsString) do {
 	case true: {[_return] call ACE_Common_fnc_numberToString};

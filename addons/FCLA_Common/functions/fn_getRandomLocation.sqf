@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Retorna un poblado, ciudad ó capital al azar del mapa.
+ * Retorna un poblado, ciudad o capital al azar del mapa.
  *
  * Arguments:
  *            0: ¿Excluir pueblos?, opcional. <BOOL> (default: false)

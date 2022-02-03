@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Muestra un dialogo que permite buscar armas, chalecos, uniformes, etc. según
- * el desplegable de búsqueda (izquierdo/derecho) del arsenal.
+ * Muestra un dialogo que permite buscar armas, chalecos, uniformes, etc. segun
+ * el desplegable de busqueda (izquierdo/derecho) del arsenal.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

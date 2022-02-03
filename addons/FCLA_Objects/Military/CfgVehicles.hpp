@@ -1,15 +1,15 @@
 
 /***************************************************************************|
-|                          VEHÍCULOS - "MILITARES"                          |
+|                          VEHICULOS - "MILITARES"                          |
 |***************************************************************************/
 
 
 
-/* --------------------------- CAJAS DE MUNICIÓN --------------------------- */
+/* --------------------------- CAJAS DE MUNICION --------------------------- */
 
 class Land_Proxy_UsBasicAmmoBoxBig_F: Items_base_F {
   author = "hozlucas28";
-  displayName = "Caja de munición (grande)";
+  displayName = "Caja de municion (grande)";
   editorPreview = "\FCLA_Objects\Military\pictures\Land_Proxy_UsBasicAmmoBoxBig_F.jpg";
   icon = "iconObject_2x1";
   model = "\a3\weapons_f\ammoboxes\proxy_usbasicammoboxbig.p3d";
@@ -32,7 +32,7 @@ class Land_Proxy_UsBasicAmmoBoxBig_F: Items_base_F {
 
 class Land_Proxy_UsBasicAmmoBoxSmall_F: Land_Proxy_UsBasicAmmoBoxBig_F {
   author = "hozlucas28";
-  displayName = "Caja de munición (pequeña)";
+  displayName = "Caja de municion (pequena)";
   editorPreview = "\FCLA_Objects\Military\pictures\Land_Proxy_UsBasicAmmoBoxSmall_F.jpg";
   model = "\a3\weapons_f\ammoboxes\proxy_usbasicammoboxsmall.p3d";
   editorCategory = "EdCat_Things";
@@ -340,11 +340,11 @@ class Land_pg32v_rocket_item_F: Land_mini_frag_F {
 
 
 
-/* ----------------------- PROYECTILES DE VEHÍCULOS ------------------------ */
+/* ----------------------- PROYECTILES DE VEHICULOS ------------------------ */
 
 class Land_pylonpod_12x_rocket_dar_f: Items_base_F {
 	author = "hozlucas28";
-	displayName = "Cápsula de cohetes (DAR / DAGR)";
+	displayName = "Capsula de cohetes (DAR / DAGR)";
 	editorPreview = "\FCLA_Objects\Military\pictures\Land_pylonpod_12x_rocket_dar_f.jpg";
 	icon = "iconObject_2x1";
 	model = "\a3\weapons_f\dynamicloadout\pylonpod_12x_rocket_dar_f.p3d";
@@ -366,7 +366,7 @@ class Land_pylonpod_12x_rocket_dar_f: Items_base_F {
 
 class Land_Rocket_Pod_02_F: Land_pylonpod_12x_rocket_dar_f	{
 	author = "hozlucas28";
-	displayName = "Cápsula de cohetes (Shrieker)";
+	displayName = "Capsula de cohetes (Shrieker)";
 	editorPreview = "\FCLA_Objects\Military\pictures\Land_Rocket_Pod_02_F.jpg";
 	model = "\a3\weapons_f_epc\ammo\rocket_pod_02_f.p3d";
 	editorCategory = "EdCat_Things";
@@ -543,7 +543,7 @@ class Land_Missile_SAM_04_fly_F: Land_pylonpod_12x_rocket_dar_f {
 
 class Land_pylonpod_rocket_skyfire_f: Items_base_F {
 	author = "hozlucas28";
-	displayName = "Cápsula de cohetes (Skyfire)";
+	displayName = "Capsula de cohetes (Skyfire)";
 	editorPreview = "\FCLA_Objects\Military\pictures\Land_pylonpod_rocket_skyfire_f.jpg";
   icon = "iconObject_2x1";
 	model = "\a3\weapons_f\dynamicloadout\pylonpod_rocket_skyfire_f.p3d";
@@ -567,7 +567,7 @@ class Land_pylonpod_rocket_skyfire_f: Items_base_F {
 			property = "Number_Of_Rockets";
 			validate = "NUMBER";
 			expression = "_this animate ['rocketa1', 19 min (0 max _value), true];";
-			displayName = "Número de misiles";
+			displayName = "Numero de misiles";
 			defaultValue = 0;
 		};
 
@@ -575,7 +575,7 @@ class Land_pylonpod_rocket_skyfire_f: Items_base_F {
 			control = "Checkbox";
 			property = "Random_Number_Of_Rockets";
 			expression = "if (_value) then {_this animate ['rocketa1', [1, 19] call FCLA_Common_fnc_getRandomNumber, true];};";
-			displayName = "Número de misiles (aleatorio)";
+			displayName = "Numero de misiles (aleatorio)";
 			defaultValue = 0;
 		};
 	};
@@ -596,7 +596,7 @@ class Land_BombCluster_03_F: Land_pylonpod_12x_rocket_dar_f {
 
 class Land_Rocket_Pod_01_F: Land_pylonpod_12x_rocket_dar_f {
 	author = "hozlucas28";
-	displayName = "Cápsula de cohetes (Tratnyr)";
+	displayName = "Capsula de cohetes (Tratnyr)";
 	editorPreview = "\FCLA_Objects\Military\pictures\Land_Rocket_Pod_01_F.jpg";
 	model = "\a3\weapons_f_epc\ammo\rocket_pod_01_f.p3d";
 	editorCategory = "EdCat_Things";
@@ -692,7 +692,7 @@ class Land_Missile_AGM_02_F: Land_pylonpod_12x_rocket_dar_f {
 
 class Land_Bomb_06_F: Land_pylonpod_12x_rocket_dar_f {
 	author = "hozlucas28";
-	displayName = "Bomba de diámetro pequeño";
+	displayName = "Bomba de diametro pequeno";
 	editorPreview = "\FCLA_Objects\Military\pictures\Land_Bomb_06_F.jpg";
 	model = "\a3\weapons_f_sams\ammo\bomb_06_f.p3d";
 	editorCategory = "EdCat_Things";
@@ -704,7 +704,7 @@ class Land_Bomb_06_F: Land_pylonpod_12x_rocket_dar_f {
 
 class Land_Bomb_06_fly_F: Land_pylonpod_12x_rocket_dar_f {
 	author = "hozlucas28";
-	displayName = "Bomba de diámetro pequeño (desplegada)";
+	displayName = "Bomba de diametro pequeno (desplegada)";
 	editorPreview = "\FCLA_Objects\Military\pictures\Land_Bomb_06_fly_F.jpg";
 	model = "\a3\weapons_f_sams\ammo\bomb_06_f_fly.p3d";
 	editorCategory = "EdCat_Things";

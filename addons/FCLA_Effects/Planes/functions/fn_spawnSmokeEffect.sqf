@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera dos efectos de partículas, los cuales dependeran del tipo de
+ * Genera dos efectos de particulas, los cuales dependeran del tipo de
  * superficie enviado.
  *
  * Public: [No]

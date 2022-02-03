@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si el cliente, del entorno de ejecución, es propietario
+ * Verifica si el cliente, del entorno de ejecucion, es propietario
  * del dlc enviado como argumento.
  *
  * Argument:

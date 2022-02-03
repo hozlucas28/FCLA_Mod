@@ -1,6 +1,6 @@
 
 /***************************************************************************|
-|                         VEHÍCULOS - "MISCELÁNEOS"                         |
+|                         VEHICULOS - "MISCELANEOS"                         |
 |***************************************************************************/
 
 
@@ -56,7 +56,7 @@ class Land_Heli_Transport_04_bench_proxy_F: Items_base_F {
 
 class Custom_Land_WallSign_01_Chalkboard_F: Land_WallSign_01_chalkboard_F {
   author = "hozlucas28";
-  displayName = "Señal de pared (pizarra, personalizada)";
+  displayName = "Senal de pared (pizarra, personalizada)";
   editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_WallSign_01_Chalkboard_F.jpg";
 	hiddenselections[] = {"camo1", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_WallSign_01_Chalkboard_F_Rules.paa", "\FCLA_Objects\Miscellaneous\data\Land_WallSign_01_Chalkboard_F_Rules.paa"};
@@ -90,7 +90,7 @@ class Custom_Land_WallSign_01_Chalkboard_F: Land_WallSign_01_chalkboard_F {
         };
 
         class Texture_2 {
-        	name = "Guía médica";
+        	name = "Guia medica";
         	value = "\FCLA_Objects\Miscellaneous\data\Land_WallSign_01_Chalkboard_F_Medical_Guide.paa";
         };
 
@@ -109,7 +109,7 @@ class Custom_Land_WallSign_01_Chalkboard_F: Land_WallSign_01_chalkboard_F {
 
 class Custom_Land_InfoStand_V1_F: Land_InfoStand_V1_F {
   author = "hozlucas28";
-  displayName = "Stand de información (2 patas, personalizado)";
+  displayName = "Stand de informacion (2 patas, personalizado)";
   editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_InfoStand_V1_F.jpg";
 	hiddenSelections[] = {"camo", "camo_background"};
   hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa", "a3\structures_f\civ\infoboards\data\infostands_ca.paa"};
@@ -144,7 +144,7 @@ class Custom_Land_InfoStand_V1_F: Land_InfoStand_V1_F {
 
 class Custom_Land_InfoStand_V2_F: Land_InfoStand_V2_F {
   author = "hozlucas28";
-  displayName = "Stand de información (1 pata, personalizado)";
+  displayName = "Stand de informacion (1 pata, personalizado)";
   editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_InfoStand_V2_F.jpg";
 	hiddenSelections[] = {"camo", "camo_background"};
   hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa", "a3\structures_f\civ\infoboards\data\infostands_ca.paa"};
@@ -252,11 +252,11 @@ class Land_Box_Science_F: ThingX {
 
 
 
-/* --------------------------- ESTACIÓN DE RADAR --------------------------- */
+/* --------------------------- ESTACION DE RADAR --------------------------- */
 
 class Radar_Electronics: Items_base_F	{
   author = "hozlucas28";
-  displayName = "Estación de radar (electrónica)";
+  displayName = "Estacion de radar (electronica)";
   editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Electronics.jpg";
   icon = "iconObject_1x2";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_electronics.p3d";
@@ -279,7 +279,7 @@ class Radar_Electronics: Items_base_F	{
 
 class Radar_Panel: radar_electronics {
   author = "hozlucas28";
-  displayName = "Estación de radar (cuerpo)";
+  displayName = "Estacion de radar (cuerpo)";
   editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Panel.jpg";
   icon = "iconObject_5x2";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_panel.p3d";
@@ -302,7 +302,7 @@ class Radar_Panel: radar_electronics {
 
 class Radar_Panel_Flat: radar_electronics {
   author = "hozlucas28";
-  displayName = "Estación de radar (cuerpo, liso)";
+  displayName = "Estacion de radar (cuerpo, liso)";
   editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Panel_Flat.jpg";
   icon = "iconObject_5x2";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_panel_flat.p3d";
@@ -325,7 +325,7 @@ class Radar_Panel_Flat: radar_electronics {
 
 class Radar_Rack: radar_electronics {
   author = "hozlucas28";
-  displayName = "Estación de radar (estante)";
+  displayName = "Estacion de radar (estante)";
   editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Rack.jpg";
   icon = "iconObject_1x4";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_rack.p3d";
@@ -348,7 +348,7 @@ class Radar_Rack: radar_electronics {
 
 class Radar_Rack_Quad: radar_electronics {
   author = "hozlucas28";
-  displayName = "Estación de radar (estante, cuádruple)";
+  displayName = "Estacion de radar (estante, cuadruple)";
   editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Radar_Rack_Quad.jpg";
   icon = "iconObject_10x1";
   model = "\a3\structures_f_enoch\furniture\radar_equipment\radar_rack_quad.p3d";

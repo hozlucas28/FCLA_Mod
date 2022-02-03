@@ -3,9 +3,9 @@
  * Author: hozlucas28
  *
  * Description:
- * Guarda la ubicación/dirección/equipamiento/vehículo de los jugadores cuando
- * se desconectan. Una vez que se reconectan se los teletransporta a la posición
- * ó vehículo donde sufrieron la desconexión.
+ * Guarda la ubicacion/direccion/equipamiento/vehiculo de los jugadores cuando
+ * se desconectan. Una vez que se reconectan se los teletransporta a la posicion
+ * o vehiculo donde sufrieron la desconexion.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -26,8 +26,8 @@ _moreThanOne = ("FCLA_Module_Save_Position" countType _allLogics) > 1;
 _saveLoadoutState = _module getVariable ["FCLA_Save_Loadout", false];
 _saveVehicleState = _module getVariable ["FCLA_Save_Vehicle", false];
 _savePosAndDirState = _module getVariable ["FCLA_Save_PosAndDir", false];
-if (_moreThanOne) exitWith {["FCLA_Module_Save_Position", "• MÓDULO: GUARDAR ULTIMA UBICACIÓN", "¡Error! Solo puede haber un módulo de este tipo. Los módulos 'Guardar ultima ubicación' han sido desactivados."] call FCLA_Common_fnc_errorMessage;};
-if ((!_saveLoadoutState) && (!_saveVehicleState) && (!_savePosAndDirState)) exitWith {["FCLA_Module_Save_Position", "• MÓDULO: GUARDAR ULTIMA UBICACIÓN", "¡Error! El módulo 'Guardar ultima ubicación' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
+if (_moreThanOne) exitWith {["FCLA_Module_Save_Position", "- MODULO: GUARDAR ULTIMA UBICACION", "¡Error! Solo puede haber un modulo de este tipo. Los modulos 'Guardar ultima ubicacion' han sido desactivados."] call FCLA_Common_fnc_errorMessage;};
+if ((!_saveLoadoutState) && (!_saveVehicleState) && (!_savePosAndDirState)) exitWith {["FCLA_Module_Save_Position", "- MODULO: GUARDAR ULTIMA UBICACION", "¡Error! El modulo 'Guardar ultima ubicacion' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
 
 
 

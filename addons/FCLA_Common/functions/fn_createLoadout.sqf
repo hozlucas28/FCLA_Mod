@@ -3,32 +3,32 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera una acción para aplicar el equipamiento a la unidad que la ejecute.
+ * Genera una accion para aplicar el equipamiento a la unidad que la ejecute.
  *
  * Arguments:
- *            0: Entidad a la que se le asociara la acción. <UNIT|OBJECT|VEHICLE>
- *            1: Título de la acción. <STRING>
+ *            0: Entidad a la que se le asociara la accion. <UNIT|OBJECT|VEHICLE>
+ *            1: Titulo de la accion. <STRING>
  *
  *            2: Equipamiento. <CODE>
  *                # Variables reservadas:
- *                    - _target --> entidad asociada a la acción.
- *                    - _caller --> unidad que ejecuta la acción.
- *                    - _actionId --> ID de la acción.
+ *                    - _target --> entidad asociada a la accion.
+ *                    - _caller --> unidad que ejecuta la accion.
+ *                    - _actionId --> ID de la accion.
  *
- *            3: Asignar características, opcional. <ARRAY OF BOOLS>
+ *            3: Asignar caracteristicas, opcional. <ARRAY OF BOOLS>
  *                - Doctor. <BOOL> (default: false)
  *                - Ingeniero avanzado. <BOOL> (default: false)
  *                - Especialista en explosivos. <BOOL> (default: false)
  *
  *            4: ¿Setear frecuencias de las radios?, opcional. <BOOL> (default: true)
  *
- *            5: Condiciones para mostrar la acción, opcional. <STRING> (default: "")
+ *            5: Condiciones para mostrar la accion, opcional. <STRING> (default: "")
  *                # Variables reservadas:
- *                    - _target --> entidad asociada a la acción.
- *                    - _this --> unidad que ejecuta la acción.
+ *                    - _target --> entidad asociada a la accion.
+ *                    - _this --> unidad que ejecuta la accion.
  *
  * Return Value:
- * ID del <addAction> utilizado en la función. <NUMBER>
+ * ID del <addAction> utilizado en la funcion. <NUMBER>
  *
  * Full Example:
  *            [player, "Equiparse traje ghillie", {
@@ -36,7 +36,7 @@
  *            }, [true, true, false], true, "true"] call FCLA_Common_fnc_createLoadout;
  *
  * Note:
- * Si devuelve un -1, entonces la función no se ha ejecutado con éxito.
+ * Si devuelve un -1, entonces la funcion no se ha ejecutado con exito.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
@@ -61,7 +61,7 @@ if ((isNull _entity) || (_title == "") || (_loadout isEqualType objNull) || !(_t
 
 
 
-//Convertir las variables reservadas, el equipamiento, las características y el seteo de frecuencias en strings.
+//Convertir las variables reservadas, el equipamiento, las caracteristicas y el seteo de frecuencias en strings.
 _params = [{params ["_target", "_caller", "_actionId", "_arguments"];}] call ACE_Common_fnc_codeToString;
 _loadout = [_loadout] call ACE_Common_fnc_codeToString;
 _isDoctor = [{if (_arguments select 0) then {[_caller, "Doctor"] call FCLA_Common_fnc_setUnitTrait;};}] call ACE_Common_fnc_codeToString;
@@ -70,5 +70,5 @@ _isEOD = [{if (_arguments select 2) then {[_caller, "EOD"] call FCLA_Common_fnc_
 _setRadioFrequencies = [{if (_arguments select 3) then {["FCLA_Radio_Frequencies", []] call CBA_fnc_localEvent;};}] call ACE_Common_fnc_codeToString;
 
 
-//Crear acción.
-_entity addAction [_title, compile (_params + _loadout + _isDoctor + _isAdvancedEnginner + _isEOD + _setRadioFrequencies), [_setDoctor, _setAdvancedEnginner, _setEOD, _setFrequencies], 1.5, false, true, "", _conditions, 2.5, false, "", ""];
+//Crear accion.
+_entity addAction [_title, compile (_params + _loadout + _isDoctor + _isAdvancedEnginner + _isEOD + _setRadioFrequencies), [_setDoctor, _setAdvancedEnginner, _setEOD, _setFrequencies], 1.5, true, true, "", _conditions, 2.5, false, "", ""];

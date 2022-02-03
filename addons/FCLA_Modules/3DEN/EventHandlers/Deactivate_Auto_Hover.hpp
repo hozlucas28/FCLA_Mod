@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Desactiva la propulsión automática del helicóptero.
+ * Desactiva la propulsion automatica del helicoptero.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

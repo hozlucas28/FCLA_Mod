@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                             VEHÍCULOS - "VANILLA"                              |
+|                             VEHICULOS - "VANILLA"                              |
 |********************************************************************************/
 
 
@@ -9,7 +9,7 @@
 
 class Item_V_EOD_FCLA: Vest_Base_F {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [FCLA]";
+  displayName = "Chaleco de desactivacionn de explosivos [FCLA]";
   vehicleClass = "ItemsVests";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Vests";
@@ -28,7 +28,7 @@ class Item_V_EOD_FCLA: Vest_Base_F {
 
 class Item_V_EOD_Takana: Vest_Base_F {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [Takana]";
+  displayName = "Chaleco de desactivacionn de explosivos [Takana]";
   vehicleClass = "ItemsVests";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Vests";
@@ -47,7 +47,7 @@ class Item_V_EOD_Takana: Vest_Base_F {
 
 class Item_V_EOD_Jaguar: Vest_Base_F {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [Jaguar]";
+  displayName = "Chaleco de desactivacionn de explosivos [Jaguar]";
   vehicleClass = "ItemsVests";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Vests";
@@ -66,7 +66,7 @@ class Item_V_EOD_Jaguar: Vest_Base_F {
 
 class Item_V_EOD_Condor: Vest_Base_F {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [Condor]";
+  displayName = "Chaleco de desactivacionn de explosivos [Condor]";
   vehicleClass = "ItemsVests";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Vests";
@@ -85,7 +85,7 @@ class Item_V_EOD_Condor: Vest_Base_F {
 
 class Item_V_EOD_Salamandra: Vest_Base_F {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [Salamandra]";
+  displayName = "Chaleco de desactivacionn de explosivos [Salamandra]";
   vehicleClass = "ItemsVests";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Vests";
@@ -104,7 +104,7 @@ class Item_V_EOD_Salamandra: Vest_Base_F {
 
 class Item_V_EOD_Anaconda: Vest_Base_F {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [Anaconda]";
+  displayName = "Chaleco de desactivacionn de explosivos [Anaconda]";
   vehicleClass = "ItemsVests";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Vests";
@@ -123,7 +123,7 @@ class Item_V_EOD_Anaconda: Vest_Base_F {
 
 class Item_V_EOD_Quetzal: Vest_Base_F {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivaciónn de explosivos [Quetzal]";
+  displayName = "Chaleco de desactivacionn de explosivos [Quetzal]";
   vehicleClass = "ItemsVests";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Vests";

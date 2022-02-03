@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Obliga a la unidad a realizar la animación 'Radio en mano'.
+ * Obliga a la unidad a realizar la animacion 'Radio en mano'.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Modifica la antena satélital (RF 3080) para que sea funcional.
+ * Modifica la antena satelital (RF 3080) para que sea funcional.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

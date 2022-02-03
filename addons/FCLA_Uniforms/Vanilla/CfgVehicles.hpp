@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                             VEHÍCULOS - "VANILLA"                              |
+|                             VEHICULOS - "VANILLA"                              |
 |********************************************************************************/
 
 
@@ -444,7 +444,7 @@ class Item_U_B_CombatUniform_Quetzal_Tropical_Vest: B_Soldier_lite_F {
 
 class Item_U_B_HeliPilotCoveralls_FCLA: B_Helipilot_F {
   author = "hozlucas28";
-  displayName = "Mono de piloto de helicóptero [FCLA]";
+  displayName = "Mono de piloto de helicoptero [FCLA]";
   hiddenSelections[] = {"Camo", "Insignia"};
   hiddenSelectionsTextures[] = {"\FCLA_Uniforms\Vanilla\data\U_B_HeliPilotCoveralls_FCLA.paa"};
   uniformClass = "Item_U_B_HeliPilotCoveralls_FCLA";
@@ -458,7 +458,7 @@ class Item_U_B_HeliPilotCoveralls_FCLA: B_Helipilot_F {
 
 class Item_U_B_HeliPilotCoveralls_Quetzal: B_Helipilot_F {
   author = "hozlucas28";
-  displayName = "Mono de piloto de helicóptero [Quetzal]";
+  displayName = "Mono de piloto de helicoptero [Quetzal]";
   hiddenSelections[] = {"Camo", "Insignia"};
   hiddenSelectionsTextures[] = {"\FCLA_Uniforms\Vanilla\data\U_B_HeliPilotCoveralls_Quetzal.paa"};
   uniformClass = "Item_U_B_HeliPilotCoveralls_Quetzal";

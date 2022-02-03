@@ -4,17 +4,17 @@
  *
  * Description:
  * Modifica el alcance de las radios de onda corta y larga, en las unidades y/o
- * vehículos enviados (argumento 0).
+ * vehiculos enviados (argumento 0).
  *
  * Arguments:
- *            0: Unidades/Vehículos a los que se le modificaran el alcance. <ARRAY OF UNITS/VEHICLES>
+ *            0: Unidades/Vehiculos a los que se le modificaran el alcance. <ARRAY OF UNITS/VEHICLES>
  *            1: Multiplicador de alcance. <NUMBER>
  *
  * Example:
  *             //Modificar alcance de una unidad.
  *             ["FCLA_Change_Radio_Range", [[player], 2], player] call CBA_fnc_targetEvent;
  *
- *             //Modificar alcance de multiples unidades y vehículos.
+ *             //Modificar alcance de multiples unidades y vehiculos.
  *             ["FCLA_Change_Radio_Range", [[Unidad_1, Unidad_2, Auto_1, Auto_2], 2], [Unidad_1, Unidad_2, Auto_1, Auto_2]] call CBA_fnc_targetEvent;
  *
  * Note:

@@ -4,7 +4,7 @@
  *
  * Description:
  * Verifica si la puerta que esta mirando el cliente, del entorno
- * de ejecución, esta cerrada.
+ * de ejecucion, esta cerrada.
  *
  * Return Value:
  * ¿Esta cerrada? <BOOL>
@@ -13,7 +13,7 @@
  * call FCLA_Common_fnc_isDoorLocked;
  *
  * Note:
- * Si la distancia entre el cliente y la puerta es mayor a 3 metros ó si no se
+ * Si la distancia entre el cliente y la puerta es mayor a 3 metros o si no se
  * encuentra frente a una puerta se devolvera un "false".
  *
  * Public: [Yes]

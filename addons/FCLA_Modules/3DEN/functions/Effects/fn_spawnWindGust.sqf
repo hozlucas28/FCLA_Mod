@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera una ráfaga de viento.
+ * Genera una rafaga de viento.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

@@ -133,11 +133,11 @@ class H_HelmetSpecB_Quetzal_Digital: H_HelmetSpecB {
 
 
 
-/* ----------------- CASCOS DE COMBATE MEJORADOS (MÉDICO) ------------------ */
+/* ----------------- CASCOS DE COMBATE MEJORADOS (MEDICO) ------------------ */
 
 class H_HelmetSpecB_Medic_Digital: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado [Médico] (digital)";
+  displayName = "Casco de combate mejorado [Medico] (digital)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Digital\data\H_HelmetSpecB_Medic_Digital.paa"};
   picture = "\FCLA_Headgears\Digital\data\pictures\H_HelmetSpecB_Medic_Digital.paa";

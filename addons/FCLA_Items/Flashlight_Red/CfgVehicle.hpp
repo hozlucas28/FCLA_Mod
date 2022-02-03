@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                 VEHÍCULOS - "BATERÍA PARA LA VISIÓN NOCTURNA"                  |
+|                 VEHICULOS - "BATERIA PARA LA VISION NOCTURNA"                  |
 |********************************************************************************/
 
 class Item_FCLA_Flashlight_Red: Item_Base_F {

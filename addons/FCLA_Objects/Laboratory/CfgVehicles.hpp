@@ -1,6 +1,6 @@
 
 /***************************************************************************|
-|                         VEHÍCULOS - "HERRAMIENTAS"                        |
+|                         VEHICULOS - "HERRAMIENTAS"                        |
 |***************************************************************************/
 
 class Dropper: lab_Items_base_F {
@@ -93,7 +93,7 @@ class Volume_Beaker: lab_Items_base_F	{
 
 class Cylinder_Beaker: lab_Items_base_F {
   author = "hozlucas28";
-  displayName = "Probeta (cilíndrica)";
+  displayName = "Probeta (cilindrica)";
   icon = "iconObject_1x4";
   model = "\a3\structures_f_enoch\furniture\school_equipment\lab_cylinder_beaker.p3d";
   editorPreview = "\FCLA_Objects\Laboratory\pictures\Cylinder_Beaker.jpg";

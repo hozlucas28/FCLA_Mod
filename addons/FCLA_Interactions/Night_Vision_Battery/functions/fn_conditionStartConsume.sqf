@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si se debe consumir la batería de las gafas de visión nocturna.
+ * Verifica si se debe consumir la bateria de las gafas de vision nocturna.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -34,7 +34,7 @@ _inCompatibleVehicle = !(_typeOfVehicle in _incompatibleVehicles);
 _notInVehicleTypesExcluded = !(_typeOfVehicle isKindOf "Wheeled_APC_F") && !(_typeOfVehicle isKindOf "Tank") && !(_typeOfVehicle isKindOf "Air");
 
 
-//Verificar si es tripulante ó ocupa un asiento importante.
+//Verificar si es tripulante o ocupa un asiento importante.
 _vehicleRole = [_player] call CBA_fnc_vehicleRole;
 _inCargo = (_vehicleRole == "") || (_vehicleRole == "cargo") || (_vehicleRole == "turret");
 _inImportantSeat = (_vehicleRole == "driver") || (_vehicleRole == "gunner") || (_vehicleRole == "commander");

@@ -3,14 +3,14 @@
 * Author: hozlucas28
 *
 * Description:
-* Genera una serie de mensajes a modo de subtítulos, según los argumentos enviados.
+* Genera una serie de mensajes a modo de subtitulos, segun los argumentos enviados.
 *
 * Arguments:
-*            0: Emisor de los mensajes/subtítulos. <UNIT|OBJECT>
+*            0: Emisor de los mensajes/subtitulos. <UNIT|OBJECT>
 *
-*            1: Línea/s (subtítulo/s) que se quiere/n mostrar. <ARRAY OF LINE/S>
-*                - Primera línea con el nombre del emisor y subtítulo a mostrar. <ARRAY OF STRINGS>
-*                - Segunda línea con el nombre del emisor y subtítulo a mostrar. <ARRAY OF STRINGS>
+*            1: Linea/s (subtitulo/s) que se quiere/n mostrar. <ARRAY OF LINE/S>
+*                - Primera linea con el nombre del emisor y subtitulo a mostrar. <ARRAY OF STRINGS>
+*                - Segunda linea con el nombre del emisor y subtitulo a mostrar. <ARRAY OF STRINGS>
 *                ...
 *
 *            2: Color para el nombre del emisor. <STRING>
@@ -18,13 +18,13 @@
 *                                     "Direct", "System", "Blufor",
 *                                     "Opfor", "Independant" y "Civilian".
 *
-*            3: Tiempo (en segundos) para ocultar cada línea, una vez mostrada. <NUMBER>
+*            3: Tiempo (en segundos) para ocultar cada linea, una vez mostrada. <NUMBER>
 *
-*            4: Condiciones para mostrar los subtítulos, opcional. <ARRAY>
+*            4: Condiciones para mostrar los subtitulos, opcional. <ARRAY>
 *                - ¿Se necesita tener una radio de onda corta? <BOOL> (default: false)
 *                - ¿Se necesita tener una radio de onda larga? <BOOL> (default: false)
 *                - Determina a que bando esta dirigido el mensaje. <"All"|"Blufor"|"Opfor"|"Independant"|"Civilian"> (default: "All")
-*                - Distancia máxima con el emisor ó área para mostrar el mensaje. <NUMBER|ARRAY OF AREA> (default: -1)
+*                - Distancia maxima con el emisor o area para mostrar el mensaje. <NUMBER|ARRAY OF AREA> (default: -1)
 *
 * Examples:
 *            //Genera un mensaje, sin emisor definido y no impone condiciones.
@@ -44,7 +44,7 @@
 * Para que se verifiquen las condiciones el emisor debera estar definido, sino
 * estas seran ignoradas y se les asignara el valor que tienen por defecto.
 *
-* Si la distancia máxima con el emisor es -1, no se tomara en cuenta.
+* Si la distancia maxima con el emisor es -1, no se tomara en cuenta.
 *
 * Public: [Yes]
 ---------------------------------------------------------------------------- */

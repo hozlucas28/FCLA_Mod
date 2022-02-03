@@ -3,14 +3,14 @@
  * Author: hozlucas28
  *
  * Description:
- * Activa/Desactiva la propulsión automática que poseen los helicópteros.
+ * Activa/Desactiva la propulsion automatica que poseen los helicopteros.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
 class FCLA_Module_Auto_Hover: Module_F {
   author = "hozlucas28";
-	displayName = "Propulsión automática";
+	displayName = "Propulsion automatica";
   icon = "\FCLA_Modules\3DEN\data\Auto_Hover.paa";
   portrait = "\FCLA_Modules\3DEN\data\Auto_Hover.paa";
 	category = "FCLA_Modules";
@@ -26,7 +26,7 @@ class FCLA_Module_Auto_Hover: Module_F {
       tooltip = "";
       typeName = "STRING";
       property = "FCLA_Auto_Hover";
-      displayName = "Propulsión automática";
+      displayName = "Propulsion automatica";
       defaultValue = """Activated""";
 
      class Values {
@@ -46,6 +46,6 @@ class FCLA_Module_Auto_Hover: Module_F {
 
 	class ModuleDescription: ModuleDescription {
     sync[] = {"EmptyDetector"};
-		description[] =	{"Activa/Desactiva la propulsión automática que poseen los helicópteros."};
+		description[] =	{"Activa/Desactiva la propulsion automatica que poseen los helicopteros."};
 	};
 };

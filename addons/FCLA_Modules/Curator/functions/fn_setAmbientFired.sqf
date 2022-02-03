@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un módulo que fuerza al vehículo a disparar hacia el cielo.
+ * Crea un modulo que fuerza al vehiculo a disparar hacia el cielo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -12,7 +12,7 @@
   params ["_position", "_attachedObject"];
   _hasNotWeapons = (count (weapons _attachedObject)) <= 0;
   _hasNotMagazines = (count (magazines _attachedObject)) <= 0;
-  if ((isNull _attachedObject) || !(_attachedObject in vehicles) || (_hasNotWeapons) || (_hasNotMagazines)) exitWith {["ERROR! EL MÓDULO DEBE SER COLOCADO SOBRE UN VEHÍCULO COMPATIBLE"] call ZEN_Common_fnc_showMessage;};
+  if ((isNull _attachedObject) || !(_attachedObject in vehicles) || (_hasNotWeapons) || (_hasNotMagazines)) exitWith {["ERROR! EL MODULO DEBE SER COLOCADO SOBRE UN VEHICULO COMPATIBLE"] call ZEN_Common_fnc_showMessage;};
 
 
   _vehicleName = getText (configFile >> "CfgVehicles" >> (typeOf _attachedObject) >> "displayName");
@@ -50,7 +50,7 @@
 
     [_vehicleName,
   	[
-     ["COMBO", "Seleccionar munición",
+     ["COMBO", "Seleccionar municion",
       [
        _compatibleMagazines,
        _vehicleMagazinesNames,
@@ -58,7 +58,7 @@
       ],
       true
      ],
-     ["SLIDER", ["Mínimo de disparos", "Cantidad mínima de disparos que se efectuaran"],
+     ["SLIDER", ["Minimo de disparos", "Cantidad minima de disparos que se efectuaran"],
       [
        1,
        100,
@@ -67,7 +67,7 @@
       ],
       true
      ],
-     ["SLIDER", ["Máximo de disparos", "Cantidad máxima de disparos que se efectuaran"],
+     ["SLIDER", ["Maximo de disparos", "Cantidad maxima de disparos que se efectuaran"],
       [
        1,
        100,
@@ -76,7 +76,7 @@
       ],
       true
      ],
-     ["SLIDER", ["Tiempo mínimo", "Tiempo mínimo (en segundos) para repetir disparos"],
+     ["SLIDER", ["Tiempo minimo", "Tiempo minimo (en segundos) para repetir disparos"],
       [
        1,
        300,
@@ -85,7 +85,7 @@
       ],
       true
      ],
-     ["SLIDER", ["Tiempo máximo", "Tiempo máximo (en segundos) para repetir disparos"],
+     ["SLIDER", ["Tiempo maximo", "Tiempo maximo (en segundos) para repetir disparos"],
       [
        1,
        300,
@@ -115,7 +115,7 @@
 
       _curatorLogic = getAssignedCuratorLogic player;
       ["ZEN_Common_addObjects", [[_module], _curatorLogic]] call CBA_fnc_serverEvent;
-      ["EL VEHÍCULO COMENZARA A REALIZAR DISPAROS AMBIENTALES"] call ZEN_Common_fnc_showMessage;
+      ["EL VEHICULO COMENZARA A REALIZAR DISPAROS AMBIENTALES"] call ZEN_Common_fnc_showMessage;
     }, {}, [_position, _attachedObject, _weaponSelected]] call ZEN_Dialog_fnc_Create;
   }, {}, [_position, _attachedObject, _vehicleName, _vehicleWeapons, _vehicleWeaponsNames]] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Tracers.paa"] call ZEN_Custom_Modules_fnc_Register;

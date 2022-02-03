@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si se puede ver el número de matrícula del vehículo.
+ * Verifica si se puede ver el numero de matricula del vehiculo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

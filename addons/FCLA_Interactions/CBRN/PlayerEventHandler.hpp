@@ -3,7 +3,7 @@
 |                 CONTROLADORES DE EVENTOS (JUGADORES) - "CBRN"                  |
 |********************************************************************************/
 
-//Desactiva el detector químico.
+//Desactiva el detector quimico.
 if (hasInterface) then {
   ["loadout", {
     params ["_unit", "_newUnitLoadout", "_oldUnitLoadout"];

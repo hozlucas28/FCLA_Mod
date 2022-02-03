@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea una acción ACE 3D (externa) para desarmar la antena satélital.
+ * Crea una accion ACE 3D (externa) para desarmar la antena satelital.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

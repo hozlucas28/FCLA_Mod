@@ -4,7 +4,7 @@
  *
  * Description:
  * Modifica el alcance de todas las radios de onda corta y larga,
- * incluyendo vehículos.
+ * incluyendo vehiculos.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -24,7 +24,7 @@ class FCLA_Module_Radio_Range: Module_F {
 
 	class Attributes: AttributesBase {
 		class FCLA_Multiplier: Edit {
-      tooltip = "Determina por cuanto se multiplicará el alcance que tienen las radios de onda corta y larga.";
+      tooltip = "Determina por cuanto se multiplicara el alcance que tienen las radios de onda corta y larga.";
       typeName = "NUMBER";
       property = "FCLA_Multiplier";
       displayName = "Multiplicador";
@@ -35,6 +35,6 @@ class FCLA_Module_Radio_Range: Module_F {
 
 	class ModuleDescription: ModuleDescription {
     sync[] = {"EmptyDetector"};
-		description[] =	{"Multiplica el alcance que tienen todas las radios de onda corta y larga, incluyendo vehículos."};
+		description[] =	{"Multiplica el alcance que tienen todas las radios de onda corta y larga, incluyendo vehiculos."};
 	};
 };

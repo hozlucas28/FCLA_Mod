@@ -3,16 +3,16 @@
  * Author: hozlucas28
  *
  * Description:
- * Permite guardar la ubicación/dirección/equipamiento/vehículo de los jugadores
+ * Permite guardar la ubicacion/direccion/equipamiento/vehiculo de los jugadores
  * cuando se desconectan. Una vez que se reconectan se los teletransporta a la
- * posición ó vehículo donde sufrieron la desconexión.
+ * posicion o vehiculo donde sufrieron la desconexion.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
 class FCLA_Module_Save_Position: Module_F {
   author = "hozlucas28";
-	displayName = "Guardar ultima ubicación";
+	displayName = "Guardar ultima ubicacion";
   icon = "\FCLA_Modules\3DEN\data\Save.paa";
   portrait = "\FCLA_Modules\3DEN\data\Save.paa";
 	category = "FCLA_Modules";
@@ -25,10 +25,10 @@ class FCLA_Module_Save_Position: Module_F {
 
 	class Attributes: AttributesBase {
     class FCLA_Save_PosAndDir: CheckBox {
-      tooltip = "Si se activa se guardara la ultima ubicación y dirección del jugador.";
+      tooltip = "Si se activa se guardara la ultima ubicacion y direccion del jugador.";
       typeName = "BOOL";
       property = "FCLA_Save_PosAndDir";
-      displayName = "¿Guardar posición y dirección?";
+      displayName = "Guardar posicion y direccion";
       defaultValue = "true";
 		};
 
@@ -36,21 +36,21 @@ class FCLA_Module_Save_Position: Module_F {
       tooltip = "Si se activa se guardara el loadout que tenia el jugador.";
       typeName = "BOOL";
       property = "FCLA_Save_Loadout";
-      displayName = "¿Guardar equipamiento?";
+      displayName = "Guardar equipamiento";
       defaultValue = "true";
 		};
 
     class FCLA_Save_Vehicle: CheckBox {
-      tooltip = "Si se activa se guardara el vehículo que el jugador estaba utilizando, para asi al momento de reconectarse este sea teletransportado al mismo.";
+      tooltip = "Si se activa se guardara el vehiculo que el jugador estaba utilizando, para asi al momento de reconectarse este sea teletransportado al mismo.";
       typeName = "BOOL";
       property = "FCLA_Save_Vehicle";
-      displayName = "¿Guardar vehículo?";
+      displayName = "Guardar vehiculo";
       defaultValue = "true";
 		};
 		class ModuleDescription: ModuleDescription {};
 	};
 
 	class ModuleDescription: ModuleDescription {
-		description[] =	{"Permite guardar la ubicación/dirección/equipamiento/vehículo de los jugadores cuando se desconectan. Una vez que se reconectan se los teletransportara a la posición ó vehículo donde sufrieron la desconexión, según los atributos que se hayan activado."};
+		description[] =	{"Permite guardar la ubicacion/direccion/equipamiento/vehiculo de los jugadores cuando se desconectan. Una vez que se reconectan se los teletransportara a la posicion o vehiculo donde sufrieron la desconexion, segun los atributos que se hayan activado."};
 	};
 };

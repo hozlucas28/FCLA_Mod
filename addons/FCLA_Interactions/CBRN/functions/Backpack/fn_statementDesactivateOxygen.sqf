@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Desactiva el oxígeno de la mochila.
+ * Desactiva el oxigeno de la mochila.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -16,10 +16,10 @@ _remainingBackpackOxygen = _backpackContainer getVariable ["FCLA_Backpack_Oxygen
 
 
 
-//Si la mochila se quedo sin oxígeno.
+//Si la mochila se quedo sin oxigeno.
 if (_remainingBackpackOxygen <= 0) exitWith {
   _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", nil, true];
-  [_player, "quick_view", "%1 se quedo sin suministro de oxígeno", [name _player]] call ACE_Medical_Treatment_fnc_addToLog;
+  [_player, "quick_view", "%1 se quedo sin suministro de oxigeno", [name _player]] call ACE_Medical_Treatment_fnc_addToLog;
 };
 
 
@@ -28,6 +28,6 @@ if (_remainingBackpackOxygen <= 0) exitWith {
 [_player, "FCLA_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 
 
-//Detener consumo de oxígeno.
+//Detener consumo de oxigeno.
 _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", nil, true];
-[_player, "quick_view", "%1 desactivo el suministro de oxígeno", [name _player]] call ACE_Medical_Treatment_fnc_addToLog;
+[_player, "quick_view", "%1 desactivo el suministro de oxigeno", [name _player]] call ACE_Medical_Treatment_fnc_addToLog;

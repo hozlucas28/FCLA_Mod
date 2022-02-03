@@ -9,7 +9,7 @@
 
 class H_PilotHelmetFighter_Advanced: H_PilotHelmetFighter_B {
   author = "hozlucas28";
-  displayName = "Casco de piloto de helicóptero [OTAN]";
+  displayName = "Casco de piloto de helicoptero [OTAN]";
   hiddenSelections[] = {};
   hiddenSelectionsTextures[] = {};
   picture = "\FCLA_Headgears\Custom\data\pictures\H_PilotHelmetFighter_Advanced.paa";

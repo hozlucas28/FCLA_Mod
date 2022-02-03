@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si se puede ver la identificación propia.
+ * Verifica si se puede ver la identificacion propia.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

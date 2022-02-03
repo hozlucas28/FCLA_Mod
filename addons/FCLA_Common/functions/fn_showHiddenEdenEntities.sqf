@@ -4,16 +4,16 @@
  *
  * Description:
  * Muestra las entidades del Eden editor, que fueron ocultadas por
- * la función 'FCLA_Common_fnc_hideEdenEntities', dentro del radio
+ * la funcion 'FCLA_Common_fnc_hideEdenEntities', dentro del radio
  * enviado como argumento 1.
  *
  * Arguments:
- *            0: Centro del radio de búsqueda. <POSITION|UNIT|OBJECT|VEHICLE|GROUP|MARKER|LOCATION>
- *            1: Radio de búsqueda. <NUMBER>
+ *            0: Centro del radio de busqueda. <POSITION|UNIT|OBJECT|VEHICLE|GROUP|MARKER|LOCATION>
+ *            1: Radio de busqueda. <NUMBER>
  *            2: ¿Excluir IA?, opcional. <BOOL> (default: false)
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Examples:
  *             //IA no excluida.
@@ -50,7 +50,7 @@ _entitiesToShow = switch (_excludeAI) do {
   _isHiddenEntity = _x getVariable ["FCLA_Hidden", false];
 
 	if ((_ShowUnit) && (_isHiddenEntity)) then {
-    [_x, []] call ace_common_fnc_unhideUnit;
+    [_x, []] call ACE_Common_fnc_unhideUnit;
   	_x setVariable ["FCLA_Hidden", nil, true];
   };
 } forEach _entitiesToShow;

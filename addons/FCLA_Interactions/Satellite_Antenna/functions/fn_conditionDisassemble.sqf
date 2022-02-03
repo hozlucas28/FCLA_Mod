@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Verifica si se puede desarmar la antena satélital.
+ * Verifica si se puede desarmar la antena satelital.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

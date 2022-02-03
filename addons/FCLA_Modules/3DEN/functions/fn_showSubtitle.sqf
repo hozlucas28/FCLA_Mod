@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Genera un mensaje a modo de subtítulo.
+ * Genera un mensaje a modo de subtitulo.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -29,11 +29,11 @@ _repeatable = _module getVariable ["FCLA_Repeatable", false];
 _needLongRadio = _module getVariable ["FCLA_Need_Long_Radio", false];
 _needShortRadio = _module getVariable ["FCLA_Need_Short_Radio", false];
 _compatibleSynchronizedObjects = _synchronizedObjects select {!(_x isKindOf "EmptyDetector")};
-if ((_emitter == "") || (_subtitle == "") || (_timeToHide <= 0)) exitWith {["FCLA_Module_Show_Subtitle", "• MÓDULO: MOSTRAR SUBTÍTULO", "¡Error! El/Un módulo 'Mostrar subtítulo' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
+if ((_emitter == "") || (_subtitle == "") || (_timeToHide <= 0)) exitWith {["FCLA_Module_Show_Subtitle", "- MODULO: MOSTRAR SUBTITULO", "¡Error! El/Un modulo 'Mostrar subtitulo' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
 
 
 
-//Generar subtítulo.
+//Generar subtitulo.
 _emitterObject = if ((count _compatibleSynchronizedObjects) == 1) then {_compatibleSynchronizedObjects select 0;} else {_module;};
 if (_module != _emitterObject) then {_module attachTo [_emitterObject, [0, 0, 0]];};
 _jipID = ["FCLA_Module_Show_Subtitle", [_module, _emitterObject, _emitter, _subtitle, _color, _timeToHide, _needShortRadio, _needLongRadio, _side, _moduleArea, _repeatable]] call CBA_fnc_globalEventJIP;

@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Consume la batería de las gafas de visión nocturna.
+ * Consume la bateria de las gafas de vision nocturna.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

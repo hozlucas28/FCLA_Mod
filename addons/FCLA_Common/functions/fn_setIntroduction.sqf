@@ -3,30 +3,30 @@
  * Author: hozlucas28
  *
  * Description:
- * Reproduce una introducción animada al comienzo del escenario.
+ * Reproduce una introduccion animada al comienzo del escenario.
  *
  * Arguments:
- *            0: Título, opcional. <STRING> (default: "")
- *            1: Subtítulo, opcional. <STRING> (default: "")
+ *            0: Titulo, opcional. <STRING> (default: "")
+ *            1: Subtitulo, opcional. <STRING> (default: "")
  *            2: Video introductorio, opcional. <STRING> (default: "")
  *            3: Determina que veran aquellos jugadores que han reproducido la
- *               introducción, pero tuvieron que reconectarse a la partida, opcional. <STRING> (default: "None")
+ *               introduccion, pero tuvieron que reconectarse a la partida, opcional. <STRING> (default: "None")
  *						    # Decisiones posibles: "None", "Title_and_subtitle", "Video" y "All".
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Example:
  *             //Sin video introductorio.
- *             ["Mi título", "subtítulo"] call FCLA_Common_fnc_setIntroduction;
+ *             ["Mi titulo", "subtitulo"] call FCLA_Common_fnc_setIntroduction;
  *
- *             //Con video introductorio y al reconectarse se mostrara únicamente el título y subtítulo.
- *             ["Mi título", "subtítulo", "\FCLA_Data\Videos\Community_Presentation_1.ogv", "Title_and_subtitle"] call FCLA_Common_fnc_setIntroduction;
+ *             //Con video introductorio y al reconectarse se mostrara unicamente el titulo y subtitulo.
+ *             ["Mi titulo", "subtitulo", "\FCLA_Data\Videos\Community_Presentation_1.ogv", "Title_and_subtitle"] call FCLA_Common_fnc_setIntroduction;
  *
  * Notes:
- * Si los argumentos 0 y/o 1 son <""> únicamente se mostrara el video introductorio.
+ * Si los argumentos 0 y/o 1 son <""> unicamente se mostrara el video introductorio.
  *
- * Cuando la introducción comienza se le asigna al jugador la variable de tipo
+ * Cuando la introduccion comienza se le asigna al jugador la variable de tipo
  * objeto "FCLA_Playing_Introduction" con el valor <true>, una vez que finaliza
  * esta variable es borrada pasando a tener el valor <nil>.
  *
@@ -52,14 +52,14 @@ if (((_title == "") && (_subtitle == "") && (_introductoryVideo == "")) || !(_sh
 
 
 
-//Guardar argumentos en variables asociados a la misión.
+//Guardar argumentos en variables asociados a la mision.
 if (isNil "FCLA_Show_On_Reconnect") then {["FCLA_Show_On_Reconnect", _showOnReconnect] call CBA_fnc_publicVariable;} else {FCLA_Show_On_Reconnect;};
 if (isNil "FCLA_Introductory_Video") then {["FCLA_Introductory_Video", _introductoryVideo] call CBA_fnc_publicVariable;} else {FCLA_Introductory_Video;};
 if (isNil "FCLA_Introduction_Title") then {["FCLA_Introduction_Title", _title] call CBA_fnc_publicVariable;} else {FCLA_Introduction_Title;};
 if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _subtitle] call CBA_fnc_publicVariable;} else {FCLA_Introduction_Subtitle;};
 
 
-//Reproducir introducción.
+//Reproducir introduccion.
 ["CBA_loadingScreenDone", {
 	[] Spawn {
 		_playerUID = getPlayerUID player;

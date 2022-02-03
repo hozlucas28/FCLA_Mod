@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Teletransporta a la unidad a la azotea/techo ó planta baja del edificio,
- * según sea el caso.
+ * Teletransporta a la unidad a la azotea/techo o planta baja del edificio,
+ * segun sea el caso.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -15,7 +15,7 @@ _this spawn {
   _unit setVariable ["FCLA_inStairs", true, true];
 
 
-  //Reproducir animación y mostrar mensaje.
+  //Reproducir animacion y mostrar mensaje.
   playSound "FCLA_Open_Door";
   [_state] spawn FCLA_Immersions_fnc_showMessageBS;
   [_unit, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
@@ -46,7 +46,7 @@ _this spawn {
   _unit setVariable ["FCLA_inStairs", nil, true];
 
 
-  //Fix animación.
+  //Fix animacion.
   if ((gestureState _unit) in ["fcla_tactical_position_up_v1", "fcla_tactical_position_up_v2", "fcla_tactical_position_chest"]) then {
     _unit setVariable ["FCLA_Tactical_Position", [false, false], true];
     [_unit, "FCLA_Tactical_Position_Stop", "playActionNow"] call FCLA_Common_fnc_playAnimation;

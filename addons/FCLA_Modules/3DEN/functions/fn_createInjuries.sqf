@@ -27,7 +27,7 @@ _fractureRightArm = if (_module getVariable ["FCLA_Fracture_Right_Arm", false]) 
 _fractureRightLeg = if (_module getVariable ["FCLA_Fracture_Right_Leg", false]) then {1;} else {0;};
 _forceUnconsciousness = _module getVariable ["FCLA_Force_Unconsciousness", false];
 _compatibleSynchronizedObjects = _synchronizedObjects select {_x in allUnits};
-if ((_typeOfInjury == "") || (_levelOfInjury <= 0) || ((count _compatibleSynchronizedObjects) <= 0)) exitWith {["FCLA_Module_Create_Injuries", "• MÓDULO: PROVOCAR LESIONES (ACE)", "¡Error! El/Un módulo 'Provocar lesiones (ACE)' no se pudo inicializar con éxito."] call FCLA_Common_fnc_errorMessage;};
+if ((_typeOfInjury == "") || (_levelOfInjury <= 0) || ((count _compatibleSynchronizedObjects) <= 0)) exitWith {["FCLA_Module_Create_Injuries", "- MODULO: PROVOCAR LESIONES (ACE)", "¡Error! El/Un modulo 'Provocar lesiones (ACE)' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
 
 
 
@@ -42,5 +42,5 @@ if ((_typeOfInjury == "") || (_levelOfInjury <= 0) || ((count _compatibleSynchro
 } forEach _compatibleSynchronizedObjects;
 
 
-//Eliminar módulo.
+//Eliminar modulo.
 deleteVehicle _module;

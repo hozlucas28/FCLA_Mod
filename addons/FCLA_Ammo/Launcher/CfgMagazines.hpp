@@ -124,8 +124,8 @@ class FCLA_MRAWS_Smoke_Orange_469_F: MRAWS_HE_F {
 
 class FCLA_MRAWS_Smoke_Purple_469_F: MRAWS_HE_F {
 	author = "hozlucas28";
-	displayName = "Proyectil MAAWS SMOKE 469 (Púrpura)";
-	descriptionShort = "Tipo: cohete MAAWS SMOKE 469 (Púrpura)<br/>Proyectiles: 1<br/>Se usa en: MAAWS";
+	displayName = "Proyectil MAAWS SMOKE 469 (Purpura)";
+	descriptionShort = "Tipo: cohete MAAWS SMOKE 469 (Purpura)<br/>Proyectiles: 1<br/>Se usa en: MAAWS";
 	model = "\a3\Weapons_F_Tank\Launchers\MRAWS\rocket_MRAWS_HE_F_item.p3d";
 	picture = "\FCLA_Ammo\Launcher\pictures\FCLA_MRAWS_Smoke_Purple_469_F.paa";
 	ammo = "FCLA_R_MRAAWS_Smoke_Purple_469_F";

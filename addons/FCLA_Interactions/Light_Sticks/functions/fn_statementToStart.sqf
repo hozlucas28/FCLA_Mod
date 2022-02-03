@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Reproduce la animación de los palillos de luz.
+ * Reproduce la animacion de los palillos de luz.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -13,7 +13,7 @@ params ["_player", "_animation"];
 
 
 
-//Definir argumentos del subtítulo.
+//Definir argumentos del subtitulo.
 _line = switch (toUpper _animation) do {
 	case "ACTS_JETSMARSHALLINGENGINESON_IN": {["[Sdo] Usted", "Enciende los motores!"];};
 	case "ACTS_JETSMARSHALLINGENGINESOFF_IN": {["[Sdo] Usted", "Apaga los motores!"];};
@@ -36,6 +36,6 @@ _color = switch (side _player) do {
 if (("" in _line) || (_color == "")) exitWith {};
 
 
-//Mostrar subtítulo y reproducir animación.
+//Mostrar subtitulo y reproducir animacion.
 [_player, _animation, 'SwitchMove', true] spawn FCLA_Common_fnc_playAnimation;
 ["FCLA_Show_Subtitles", [_player, [_line], _color, 3], _player] call CBA_fnc_targetEvent;

@@ -1,6 +1,6 @@
 
 /***************************************************************************|
-|                           VEHÍCULOS - "UTILERÍA"                          |
+|                           VEHICULOS - "UTILERIA"                          |
 |***************************************************************************/
 
 
@@ -21,7 +21,7 @@ class RainDrops: Helper_Base_F {
 
 class Small_Bullet_Holes: UserTexture1m_F	{
   author = "hozlucas28";
-  displayName = "Agujeros de bala (pequeños)";
+  displayName = "Agujeros de bala (pequenos)";
   editorPreview = "\FCLA_Objects\Props\pictures\Small_Bullet_Holes.jpg";
   hiddenSelectionsTextures[] = {"\A3\structures_f_enoch\military\Training\Data\targets_A_CO.paa"};
   hiddenSelectionsMaterials[] = {"\A3\structures_f_enoch\military\Training\Data\targets.rvmat"};
@@ -127,7 +127,7 @@ class Huge_Bullet_Holes_v2: Huge_Bullet_Holes_v1 {
 
 class Land_shell_tracer_green_F: Helper_Base_F {
   author = "hozlucas28";
-  displayName = "Trazadora (vehículo, verde)";
+  displayName = "Trazadora (vehiculo, verde)";
   icon = "iconObject_10x1";
   model = "\a3\weapons_f\data\bullettracer\shell_tracer_green.p3d";
   editorPreview = "\FCLA_Objects\Props\pictures\Land_shell_tracer_green_F.jpg";
@@ -150,7 +150,7 @@ class Land_shell_tracer_green_F: Helper_Base_F {
 
 class Land_shell_tracer_white_F: Land_shell_tracer_green_F {
   author = "hozlucas28";
-  displayName = "Trazadora (vehículo, blanca)";
+  displayName = "Trazadora (vehiculo, blanca)";
   model = "\a3\weapons_f\data\bullettracer\shell_tracer_white.p3d";
   editorPreview = "\FCLA_Objects\Props\pictures\Land_shell_tracer_white_F.jpg";
   editorCategory = "EdCat_Things";
@@ -162,7 +162,7 @@ class Land_shell_tracer_white_F: Land_shell_tracer_green_F {
 
 class Land_shell_tracer_red_F: Land_shell_tracer_green_F {
   author = "hozlucas28";
-  displayName = "Trazadora (vehículo, roja)";
+  displayName = "Trazadora (vehiculo, roja)";
   model = "\a3\weapons_f\data\bullettracer\shell_tracer_red.p3d";
   editorPreview = "\FCLA_Objects\Props\pictures\Land_shell_tracer_red_F.jpg";
   editorCategory = "EdCat_Things";
@@ -174,7 +174,7 @@ class Land_shell_tracer_red_F: Land_shell_tracer_green_F {
 
 class Land_shell_tracer_yellow_F: Land_shell_tracer_green_F {
   author = "hozlucas28";
-  displayName = "Trazadora (vehículo, amarilla)";
+  displayName = "Trazadora (vehiculo, amarilla)";
   model = "\a3\weapons_f\data\bullettracer\shell_tracer_yellow.p3d";
   editorPreview = "\FCLA_Objects\Props\pictures\Land_shell_tracer_yellow_F.jpg";
   editorCategory = "EdCat_Things";
@@ -186,7 +186,7 @@ class Land_shell_tracer_yellow_F: Land_shell_tracer_green_F {
 
 class Land_tracer_white_F: Land_shell_tracer_green_F {
   author = "hozlucas28";
-  displayName = "Trazadora (infantería, blanca)";
+  displayName = "Trazadora (infanteria, blanca)";
   model = "\a3\weapons_f\data\bullettracer\tracer_white.p3d";
   editorPreview = "\FCLA_Objects\Props\pictures\Land_tracer_white_F.jpg";
   editorCategory = "EdCat_Things";
@@ -198,7 +198,7 @@ class Land_tracer_white_F: Land_shell_tracer_green_F {
 
 class Land_tracer_red_F: Land_shell_tracer_green_F {
   author = "hozlucas28";
-  displayName = "Trazadora (infantería, roja)";
+  displayName = "Trazadora (infanteria, roja)";
   model = "\a3\weapons_f\data\bullettracer\tracer_red.p3d";
   editorPreview = "\FCLA_Objects\Props\pictures\Land_tracer_red_F.jpg";
   editorCategory = "EdCat_Things";
@@ -210,7 +210,7 @@ class Land_tracer_red_F: Land_shell_tracer_green_F {
 
 class Land_tracer_green_F: Land_shell_tracer_green_F {
   author = "hozlucas28";
-  displayName = "Trazadora (infantería, verde)";
+  displayName = "Trazadora (infanteria, verde)";
   model = "\a3\weapons_f\data\bullettracer\tracer_green.p3d";
   editorPreview = "\FCLA_Objects\Props\pictures\Land_tracer_green_F.jpg";
   editorCategory = "EdCat_Things";
@@ -222,7 +222,7 @@ class Land_tracer_green_F: Land_shell_tracer_green_F {
 
 class Land_tracer_yellow_F: Land_shell_tracer_green_F {
   author = "hozlucas28";
-  displayName = "Trazadora (infantería, amarilla)";
+  displayName = "Trazadora (infanteria, amarilla)";
   model = "\a3\weapons_f\data\bullettracer\tracer_yellow.p3d";
   editorPreview = "\FCLA_Objects\Props\pictures\Land_tracer_yellow_F.jpg";
   editorCategory = "EdCat_Things";
@@ -306,10 +306,10 @@ class Christmas_Tree: Strategic {
 
 
 
-/* ------------------------------ RELÁMPAGOS ------------------------------- */
+/* ------------------------------ RELAMPAGOS ------------------------------- */
 
 class Lightning1_F: NonStrategic {
-  displayName = "Relámpago (ramificado)";
+  displayName = "Relampago (ramificado)";
   icon = "iconObject_1x1";
   editorPreview = "\FCLA_Objects\Props\pictures\Lightning1_F.jpg";
   editorCategory = "EdCat_Things";
@@ -320,7 +320,7 @@ class Lightning1_F: NonStrategic {
 
 
 class Lightning2_F: Lightning1_F {
-  displayName = "Relámpago (simple)";
+  displayName = "Relampago (simple)";
   icon = "iconObject_1x1";
   editorPreview = "\FCLA_Objects\Props\pictures\Lightning2_F.jpg";
   editorCategory = "EdCat_Things";

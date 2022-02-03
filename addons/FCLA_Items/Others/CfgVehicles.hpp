@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                              VEHÍCULOS - "OTROS"                               |
+|                              VEHICULOS - "OTROS"                               |
 |********************************************************************************/
 
 
@@ -28,7 +28,7 @@ class Item_FCLA_Handgun_License: Item_Base_F {
 
 class Item_FCLA_Semi_Automatic_License: Item_Base_F {
   author = "hozlucas28";
-  displayName = "Licencia de arma (semiautomática)";
+  displayName = "Licencia de arma (semiautomatica)";
   vehicleClass = "Small_items";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_InventoryItems";
@@ -69,7 +69,7 @@ class Item_FCLA_USA_Passport: Item_Base_F {
 
 class Item_FCLA_British_Passport: Item_Base_F {
   author = "hozlucas28";
-  displayName = "Pasaporte (Gran Bretaña)";
+  displayName = "Pasaporte (Gran Bretana)";
   vehicleClass = "Small_items";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_InventoryItems";
@@ -107,7 +107,7 @@ class Item_FCLA_Russia_Passport: Item_Base_F {
 
 class Item_FCLA_Afghan_Passport: Item_Base_F {
   author = "hozlucas28";
-  displayName = "Pasaporte (Afganistán)";
+  displayName = "Pasaporte (Afganistan)";
   vehicleClass = "Small_items";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_InventoryItems";
@@ -129,7 +129,7 @@ class Item_FCLA_Afghan_Passport: Item_Base_F {
 
 class Item_FCLA_Cocaine: Item_Base_F {
   author = "hozlucas28";
-  displayName = "Cocaína";
+  displayName = "Cocaina";
   vehicleClass = "Small_items";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_InventoryItems";
@@ -148,7 +148,7 @@ class Item_FCLA_Cocaine: Item_Base_F {
 
 class Item_FCLA_Cocaine_Brick: Item_Base_F {
   author = "hozlucas28";
-  displayName = "Ladrillo de cocaína";
+  displayName = "Ladrillo de cocaina";
   vehicleClass = "Small_items";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_InventoryItems";
@@ -185,7 +185,7 @@ class Item_FCLA_Weed_Brick: Item_Base_F {
 
 
 
-/* ------------------------------- QUÍMICOS -------------------------------- */
+/* ------------------------------- QUIMICOS -------------------------------- */
 
 class Item_FCLA_Fertilizer: Item_Base_F {
   author = "hozlucas28";
@@ -208,7 +208,7 @@ class Item_FCLA_Fertilizer: Item_Base_F {
 
 class Item_FCLA_Hydrogen_Peroxide: Item_Base_F {
   author = "hozlucas28";
-  displayName = "Peróxido de hidrógeno";
+  displayName = "Peroxido de hidrogeno";
   vehicleClass = "Small_items";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_InventoryItems";
@@ -267,7 +267,7 @@ class Item_FCLA_Money_Roll: Item_Base_F {
 
 
 
-/* ------------------------------ ELECTRÓNICA ------------------------------ */
+/* ------------------------------ ELECTRONICA ------------------------------ */
 
 class Item_FCLA_Wire: Item_Base_F {
   author = "hozlucas28";
@@ -290,7 +290,7 @@ class Item_FCLA_Wire: Item_Base_F {
 
 class Item_FCLA_Portable_HDD: Item_Base_F {
   author = "hozlucas28";
-  displayName = "Disco duro (portátil)";
+  displayName = "Disco duro (portatil)";
   vehicleClass = "Small_items";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_InventoryItems";
@@ -309,7 +309,7 @@ class Item_FCLA_Portable_HDD: Item_Base_F {
 
 class Item_FCLA_Camera: Item_Base_F {
   author = "hozlucas28";
-  displayName = "Cámara";
+  displayName = "Camara";
   vehicleClass = "Small_items";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_InventoryItems";
@@ -328,7 +328,7 @@ class Item_FCLA_Camera: Item_Base_F {
 
 class Item_FCLA_Camcorder: Item_Base_F {
   author = "hozlucas28";
-  displayName = "Videocámara";
+  displayName = "Videocamara";
   vehicleClass = "Small_items";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_InventoryItems";
@@ -347,7 +347,7 @@ class Item_FCLA_Camcorder: Item_Base_F {
 
 class Item_FCLA_Laptop: Item_Base_F {
   author = "hozlucas28";
-  displayName = "Portátil";
+  displayName = "Portatil";
   vehicleClass = "Small_items";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_InventoryItems";

@@ -19,7 +19,7 @@
  *                - ¿Quetzal? <BOOL> (default: true)
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Examples:
  *             //Se aplicaran todos los equipamientos.
@@ -29,7 +29,7 @@
  *             [Loadouts_1, "Arid", [true, false, false, false, false]] call FCLA_Loadouts_fnc_setRHSUSAF;
  *
  * Note:
- * El mod RHSUSAF debera estar cargado para que la función se ejecute con éxito.
+ * El mod RHSUSAF debera estar cargado para que la funcion se ejecute con exito.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

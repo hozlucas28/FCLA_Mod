@@ -49,11 +49,11 @@
 
 
 
-/* -------------------------- POSICIONES TÁCTICAS -------------------------- */
+/* -------------------------- POSICIONES TACTICAS -------------------------- */
 
 [
 	"FCLA", "FCLA_Tactical_Position_Up_Key",
-	["Posición táctica (arriba)", "Preciona 'Tecla asignada' para adoptar la posición táctica con el arma arriba."],
+	["Posicion tactica (arriba)", "Preciona 'Tecla asignada' para adoptar la posicion tactica con el arma arriba."],
 	{
 		_player = call CBA_fnc_currentUnit;
 		_currentWeapon = currentWeapon _player;
@@ -99,7 +99,7 @@
 
 [
 	"FCLA", "FCLA_Tactical_Position_Down_Key",
-	["Posición táctica (abajo)", "Preciona 'Tecla asignada' para adoptar la posición táctica con el arma abajo."],
+	["Posicion tactica (abajo)", "Preciona 'Tecla asignada' para adoptar la posicion tactica con el arma abajo."],
 	{
 		_player = call CBA_fnc_currentUnit;
 		_currentWeapon = currentWeapon _player;

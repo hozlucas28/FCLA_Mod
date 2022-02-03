@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                          VEHÍCULOS - "PERSONALIZADAS"                          |
+|                          VEHICULOS - "PERSONALIZADAS"                          |
 |********************************************************************************/
 
 
@@ -9,7 +9,7 @@
 
 class Item_H_PilotHelmetFighter_Advanced: Headgear_Base_F {
   author = "hozlucas28";
-  displayName = "Casco de piloto de helicóptero [OTAN]";
+  displayName = "Casco de piloto de helicoptero [OTAN]";
   vehicleClass = "ItemsHeadgear";
   editorCategory = "EdCat_Equipment";
   editorSubcategory = "EdSubcat_Helmets";

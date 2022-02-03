@@ -7,12 +7,12 @@
  * los jugadores, que se encuentran dentro del radio enviado como argumento 1.
  *
  * Arguments:
- *            0: Centro del radio de búsqueda. <POSITION|UNIT|OBJECT|VEHICLE|GROUP|MARKER|LOCATION>
- *            1: Radio de búsqueda. <NUMBER>
+ *            0: Centro del radio de busqueda. <POSITION|UNIT|OBJECT|VEHICLE|GROUP|MARKER|LOCATION>
+ *            1: Radio de busqueda. <NUMBER>
  *            2: ¿Excluir IA?, opcional. <BOOL> (default: false)
  *
  * Return Value:
- * ¿Se ha ejecutado con exito la función? <BOOL>
+ * ¿Se ha ejecutado con exito la funcion? <BOOL>
  *
  * Examples:
  *             //IA no excluida.
@@ -22,7 +22,7 @@
  *             [getPos player, 150, true] call FCLA_Common_fnc_hideEdenEntities;
  *
  * Note:
- * Si se quiere excluir una entidad específica asígnele la variable de tipo
+ * Si se quiere excluir una entidad especifica asignele la variable de tipo
  * objeto "FCLA_Exclude_Concealment" con el valor <true>.
  *
  * Public: [Yes]

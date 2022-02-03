@@ -650,11 +650,11 @@ class H_HelmetSpecB_Quetzal_Tropical: H_HelmetSpecB {
 
 
 
-/* ------------------ CASCO DE COMBATE MEJORADO (MÉDICO) ------------------- */
+/* ------------------ CASCO DE COMBATE MEJORADO (MEDICO) ------------------- */
 
 class H_HelmetSpecB_Medic: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado [Médico]";
+  displayName = "Casco de combate mejorado [Medico]";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Medic.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Medic.paa";
@@ -666,7 +666,7 @@ class H_HelmetSpecB_Medic: H_HelmetSpecB {
 
 class H_HelmetSpecB_Medic_Snake: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado [Médico] (piel de serpiente)";
+  displayName = "Casco de combate mejorado [Medico] (piel de serpiente)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Medic_Snake.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Medic_Snake.paa";
@@ -678,7 +678,7 @@ class H_HelmetSpecB_Medic_Snake: H_HelmetSpecB {
 
 class H_HelmetSpecB_Medic_Tropical: H_HelmetSpecB {
   author = "hozlucas28";
-  displayName = "Casco de combate mejorado [Médico] (tropical)";
+  displayName = "Casco de combate mejorado [Medico] (tropical)";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_HelmetSpecB_Medic_Tropical.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_HelmetSpecB_Medic_Tropical.paa";
@@ -689,11 +689,11 @@ class H_HelmetSpecB_Medic_Tropical: H_HelmetSpecB {
 
 
 
-/* -------------------- CASCO DE PILOTO DE HELICÓPTERO --------------------- */
+/* -------------------- CASCO DE PILOTO DE HELICOPTERO --------------------- */
 
 class H_PilotHelmetHeli_B_Quetzal: H_PilotHelmetHeli_B {
   author = "hozlucas28";
-  displayName = "Casco de piloto de helicóptero [Quetzal] [OTAN]";
+  displayName = "Casco de piloto de helicoptero [Quetzal] [OTAN]";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_PilotHelmetHeli_B_Quetzal.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_PilotHelmetHeli_B_Quetzal.paa";
@@ -704,11 +704,11 @@ class H_PilotHelmetHeli_B_Quetzal: H_PilotHelmetHeli_B {
 
 
 
-/* ------------------ CASCO DE TRIPULACIÓN DE HELICÓPTERO ------------------ */
+/* ------------------ CASCO DE TRIPULACION DE HELICOPTERO ------------------ */
 
 class H_CrewHelmetHeli_B_Quetzal: H_CrewHelmetHeli_B {
   author = "hozlucas28";
-  displayName = "Casco de tripulación de helicóptero [Quetzal] [OTAN]";
+  displayName = "Casco de tripulacion de helicoptero [Quetzal] [OTAN]";
   hiddenSelections[] = {"camo"};
   hiddenSelectionsTextures[] = {"\FCLA_Headgears\Vanilla\data\H_CrewHelmetHeli_B_Quetzal.paa"};
   picture = "\FCLA_Headgears\Vanilla\data\pictures\H_CrewHelmetHeli_B_Quetzal.paa";

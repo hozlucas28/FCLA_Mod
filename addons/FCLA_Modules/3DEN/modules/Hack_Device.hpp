@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Permite hackear los dispositivos sincronizados a travez de una acción.
+ * Permite hackear los dispositivos sincronizados a travez de una accion.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -23,7 +23,7 @@ class FCLA_Module_Hack_Device: Module_F {
 
 	class Attributes: AttributesBase {
     class FCLA_Device_ID: Edit {
-      tooltip = "Nombre personalizado para poder reconocer al dispositivo, cuando se le informe a los Zeus que ha sido hackeado.\n• Si no se define un identificador no se informara a los Zeus.";
+      tooltip = "Nombre personalizado para poder reconocer al dispositivo, cuando se le informe a los Zeus que ha sido hackeado.\n- Si no se define un identificador no se informara a los Zeus.";
       typeName = "STRING";
       property = "FCLA_Device_ID";
       displayName = "Identificador";
@@ -31,10 +31,10 @@ class FCLA_Module_Hack_Device: Module_F {
 		};
 
     class FCLA_Need_Hacking_Device: CheckBox {
-      tooltip = "Si se activa se necesitara de un dispositivo de hackeo para realizar la acción.";
+      tooltip = "Si se activa se necesitara de un dispositivo de hackeo para realizar la accion.";
       typeName = "BOOL";
       property = "FCLA_Need_Hacking_Device";
-      displayName = "¿Se necesita dispositivo?";
+      displayName = "Se necesita dispositivo";
       defaultValue = "true";
 		};
 		class ModuleDescription: ModuleDescription {};
@@ -43,10 +43,10 @@ class FCLA_Module_Hack_Device: Module_F {
 	class ModuleDescription: ModuleDescription {
     sync[] = {"AnyVehicle", "EmptyDetector", "AnyStaticObject"};
 		description[] =	{
-      "Permite hackear el dispositivo sincronizado a travez de una acción.",
+      "Permite hackear el dispositivo sincronizado a travez de una accion.",
       "",
-      "• El módulo debe estar sincronizado únicamente a un objeto.",
-      "• Una vez que el dispositivo es hackeado se le asociara la variable de tipo objeto 'FCLA_Hacked' con el valor 'true'."
+      "- El modulo debe estar sincronizado unicamente a un objeto.",
+      "- Una vez que el dispositivo es hackeado se le asociara la variable de tipo objeto 'FCLA_Hacked' con el valor 'true'."
     };
 	};
 };

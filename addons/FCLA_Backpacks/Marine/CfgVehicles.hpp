@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                              VEHÍCULOS - "MARINA"                              |
+|                              VEHICULOS - "MARINA"                              |
 |********************************************************************************/
 
 
@@ -19,11 +19,11 @@ class B_AssaultPack_Marine: B_AssaultPack_cbr {
 
 
 
-/* ---------------------- MOCHILA DE ASALTO (MÉDICO) ----------------------- */
+/* ---------------------- MOCHILA DE ASALTO (MEDICO) ----------------------- */
 
 class B_AssaultPack_Medic_Marine: B_AssaultPack_cbr {
   author = "hozlucas28";
-  displayName = "Mochila de asalto [Médico] (marina)";
+  displayName = "Mochila de asalto [Medico] (marina)";
   hiddenSelectionsTextures[] = {"\FCLA_Backpacks\Marine\data\B_AssaultPack_Medic_Marine.paa"};
   picture = "\FCLA_Backpacks\Marine\data\pictures\B_AssaultPack_Medic_Marine.paa";
   scope = 2;

@@ -1,6 +1,6 @@
 
 /********************************************************************************|
-|                 ACCIONES DEL EQUIPAMIENTO - "ANTENA SATÉLITAL"                 |
+|                 ACCIONES DEL EQUIPAMIENTO - "ANTENA SATELITAL"                 |
 |********************************************************************************/
 
 class FCLA_Assemble_Satellite_Antenna {

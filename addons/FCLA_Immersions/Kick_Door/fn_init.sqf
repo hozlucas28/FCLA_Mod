@@ -4,8 +4,8 @@
  *
  * Description:
  * Permite abrir una puerta cerrada a patadas, si el addon
- * option '¿Permitir patadas?' es activado, y el porcentaje de
- * éxito de la misma es definida en 'Probabilidad de éxito (patadas)'.
+ * option 'Permitir patadas' es activado, y el porcentaje de
+ * exito de la misma es definida en 'Probabilidad de exito (patadas)'.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
