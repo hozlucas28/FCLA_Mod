@@ -9,7 +9,7 @@
 ---------------------------------------------------------------------------- */
 
 ["FCLA_Module_Deactivate_Auto_Hover", {
-  if (isServer) exitWith {};
+  if (isDedicated) exitWith {};
 
   _player = call CBA_fnc_currentUnit;
   _currentVehicle = vehicle _player;

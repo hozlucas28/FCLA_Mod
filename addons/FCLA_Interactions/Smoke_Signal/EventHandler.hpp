@@ -5,7 +5,7 @@
 
 ["FCLA_Smoke_Signal", {
   params ["_logic", "_logicPos", "_smokeColor"];
-  if (isServer) exitWith {};
+  if (isDedicated) exitWith {};
 
   _lightObj = "#lightpoint" createVehicleLocal _logicPos;
   _lightObj setPos _logicPos;

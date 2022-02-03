@@ -9,7 +9,7 @@
 ---------------------------------------------------------------------------- */
 
 ["FCLA_Module_Show_Subtitle", {
-  if (isServer) exitWith {};
+  if (isDedicated) exitWith {};
 
   [{CBA_missionTime > 0},
   {

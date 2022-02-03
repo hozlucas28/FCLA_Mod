@@ -10,7 +10,7 @@
 
 ["FCLA_Module_Spawn_Effect", {
   params ["_logic", "_effect", "_delayEffect"];
-  if (isServer) exitWith {};
+  if (isDedicated) exitWith {};
 
   switch (_effect) do {
     case "SPARKS": {[_logic, _delayEffect] spawn FCLA_Modules_fnc_spawnSparks3DEN;};

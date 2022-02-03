@@ -114,6 +114,11 @@ class Curator {
     postInit = 1;
   };
 
+  class spawnAquaticAnimalsCurator {
+    file = "\FCLA_Modules\Curator\functions\fn_spawnAquaticAnimals.sqf";
+    postInit = 1;
+  };
+
   class setCBRNConfigurationCurator {
     file = "\FCLA_Modules\Curator\functions\fn_setCBRNConfiguration.sqf";
     postInit = 1;
