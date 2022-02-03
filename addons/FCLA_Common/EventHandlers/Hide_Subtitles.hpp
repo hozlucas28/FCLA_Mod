@@ -14,7 +14,7 @@
  *
  * Note:
  * Si no definiste al emisor en la funcion "FCLA_Common_fnc_showSubtitles" o en
- * el evento personalizado "FCLA_Subtitles", no se podran ocultar los subtitulos.
+ * el evento personalizado "FCLA_Show_Subtitles", no se podran ocultar los subtitulos. 
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

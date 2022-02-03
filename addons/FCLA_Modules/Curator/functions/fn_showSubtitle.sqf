@@ -8,7 +8,7 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-["FCLA", "Mostrar subtitulo (BETA)", {
+["FCLA", "Mostrar subtitulo", {
   ["SUBTITULO",
 	 [
     ["EDIT", ["Emisor", "Nombre del emisor"],

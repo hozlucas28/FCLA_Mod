@@ -47,9 +47,6 @@
  * Si no sea desea definir un emisor asignele el valor <objNull>, como se
  * observa en el primer ejemplo.
  *
- * Para que se verifiquen las condiciones el emisor debera estar definido, sino
- * estas seran ignoradas y se les asignara el valor que tienen por defecto.
- *
  * Si la distancia maxima con el emisor es -1, no se tomara en cuenta.
  *
  * Public: [Yes]
@@ -82,17 +79,18 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
   params ["_emitter", "_lines", "_emitterColor", "_timeToHideEachLine", "_needShortRadio", "_needLongRadio", "_selectedSide", "_distanceToShow"];
 
   //Mover labios del emisor.
+  _emitter setVariable ["FCLA_Emitter", true, true];
   if (_emitter in allUnits) then {_emitter setRandomLip true;};
 
 
   //Convertir color al formato HTML.
   _emitterColor = switch (_emitterColor) do {
-    case "SIDE": {"#00ccff"};
-    case "VEHICLE": {"#fbd40b"};
-    case "COMMAND": {"#e5e760"};
-    case "GROUP": {"#beee7e"};
-    case "DIRECT": {"#fffffb"};
-    case "SYSTEM": {"#8a8a88"};
+    case "SIDE": {"#00ccff";};
+    case "VEHICLE": {"#fbd40b";};
+    case "COMMAND": {"#e5e760";};
+    case "GROUP": {"#beee7e";};
+    case "DIRECT": {"#fffffb";};
+    case "SYSTEM": {"#8a8a88";};
     case "BLUFOR": {([West, false] call BIS_fnc_sideColor) call BIS_fnc_colorRGBtoHTML;};
     case "OPFOR": {([East, false] call BIS_fnc_sideColor) call BIS_fnc_colorRGBtoHTML;};
     case "INDEPENDANT": {([Independent, false] call BIS_fnc_sideColor) call BIS_fnc_colorRGBtoHTML;};
@@ -102,64 +100,40 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
 
   //Convertir bando seleccionado al formato correcto.
   _selectedSide = switch (_selectedSide) do {
-    case "BLUFOR": {WEST};
-    case "OPFOR": {EAST};
-    case "INDEPENDANT": {GUER};
-    case "CIVILIAN": {CIV};
-    default {"All"};
+    case "BLUFOR": {"WEST";};
+    case "OPFOR": {"EAST";};
+    case "INDEPENDANT": {"GUER";};
+    case "CIVILIAN": {"CIV";};
+    default {"All";};
   };
 
 
   //Mostrar/Ocultar subtitulos.
   for "_i" from 0 to (count _lines) - 1 do {
-    if (_emitter getVariable ["FCLA_Hide_Subtitles", false]) exitWith {};
+    if (_emitter getVariable ["FCLA_Hide_Subtitles", false]) exitWith {["", -1, -1, 0, 0, 0, 9999] spawn BIS_fnc_dynamicText;};
     _handle = [_emitter, _lines, _emitterColor, _timeToHideEachLine, _needShortRadio, _needLongRadio, _selectedSide, _distanceToShow, _i] spawn {
       params ["_emitter", "_lines", "_emitterColor", "_timeToHideEachLine", "_needShortRadio", "_needLongRadio", "_selectedSide", "_distanceToShow", "_i"];
-      disableSerialization;
       _caller = call CBA_fnc_currentUnit;
       _currentLine = _lines select _i;
       _emitterName = _currentLine select 0;
       _emitterText = _currentLine select 1;
-      _hasShortRadio = if ((!isNull _emitter) && (_needShortRadio)) then {call TFAR_fnc_haveSWRadio;} else {true;};
-      _hasLongRadio = if ((!isNull _emitter) && (_needLongRadio)) then {call TFAR_fnc_haveLRRadio;} else {true;};
-      _isSelectedSide = if ((!isNull _emitter) && ((_selectedSide) isNotEqualTo "All")) then {(side _caller) == _selectedSide;} else {true;};
-      _notShowingSubtitles = !(player getVariable ["FCLA_Subtitles", false]);
-      _isCloseEnough = if (!isNull _emitter) then {
-        if (_distanceToShow isEqualType 0) then {
-          if (_distanceToShow <= 0) exitWith {true;};
-          _emitter distance _caller <= _distanceToShow;
-        } else {
-          if (({_x <= 0} count [_distanceToShow select 0, _distanceToShow select 1, _distanceToShow select 4]) >= 3) exitWith {true;};
-          _caller inArea [_emitter, _distanceToShow select 0, _distanceToShow select 1, _distanceToShow select 2, _distanceToShow select 3, _distanceToShow select 4];
-        };
-      } else {true;};
+      _hasShortRadio = if (_needShortRadio) then {call TFAR_fnc_haveSWRadio;} else {true;};
+      _hasLongRadio = if (_needLongRadio) then {call TFAR_fnc_haveLRRadio;} else {true;};
+      _isSelectedSide = if (_selectedSide isNotEqualTo "All") then {(str (side _caller)) == _selectedSide;} else {true;};
+      _isCloseEnough = if (_distanceToShow isEqualType 0) then {
+        if (_distanceToShow <= 0) exitWith {true;};
+        _emitter distance _caller <= _distanceToShow;
+      } else {
+        if (({_x <= 0} count [_distanceToShow select 0, _distanceToShow select 1, _distanceToShow select 4]) >= 3) exitWith {true;};
+        _caller inArea [_emitter, _distanceToShow select 0, _distanceToShow select 1, _distanceToShow select 2, _distanceToShow select 3, _distanceToShow select 4];
+      };
 
-      if ((_hasShortRadio) && (_hasLongRadio) && (_isSelectedSide) && (_isCloseEnough) && (_notShowingSubtitles)) then {
-        private "_display";
-        titleRsc ["RscDynamicText", "PLAIN"];
-        waitUntil {_display = uiNamespace getVariable "BIS_dynamicText"; !(isNull _display)};
-        _ctrl = _display displayCtrl 9999;
-        _emitter setVariable ["FCLA_Subtitles_ctrl", _ctrl, true];
-        player setVariable ["FCLA_Subtitles", true];
-
-        _ctrlBackground = _display ctrlCreate ["RscText", 99999];
+      if ((_hasShortRadio) && (_hasLongRadio) && (_isSelectedSide) && (_isCloseEnough)) then {
         _w = 0.4 * safeZoneW;
         _x = safeZoneX + ((0.5 * safeZoneW) - (_w / 2));
         _y = safeZoneY + (0.73 * safeZoneH);
-        _h = safeZoneH;
-        _ctrl ctrlSetPosition [_x, _y, _w, _h];
-        _ctrl ctrlSetFade 1;
-        _ctrl ctrlCommit 0;
-
-        _emitterText = parseText format ["<t align='center' shadow='2' size='0.52'><t color='%3'>%1: </t><t color='#d0d0d0'>%2</t></t>", _emitterName, _emitterText, _emitterColor];
-        _ctrl ctrlSetStructuredText _emitterText;
-        _ctrl ctrlSetFade 0;
-        _ctrl ctrlCommit 0.5;
-
+        [format ["<t align='center' color='%3' shadow='2' size='0.52'>%1: </t><t align='center' color='#d0d0d0' shadow='2' size='0.52'>%2</t>", _emitterName, _emitterText, _emitterColor], _x, _y, ceil _timeToHideEachLine, 0.5, 0, 9999] spawn BIS_fnc_dynamicText;
         sleep (ceil _timeToHideEachLine);
-        _ctrl ctrlSetFade 1;
-        _ctrl ctrlCommit 0.5;
-        player setVariable ["FCLA_Subtitles", nil];
       } else {
         sleep (ceil _timeToHideEachLine);
       };
@@ -169,14 +143,9 @@ if ((_lines isEqualTo [[]]) || !(_emitterColor in _compatibleEmitterColors) || (
   };
 
 
-  //Eliminar variables de tipo objeto/interfaz.
+  //Detener labios del emisor.
+  _emitter setVariable ["FCLA_Emitter", nil, true];
   _emitter setVariable ["FCLA_Hide_Subtitles", nil, true];
-  _emitter setVariable ["FCLA_Subtitles_ctrl", nil, true];
-  player setVariable ["FCLA_Subtitles", nil];
-
-
-  //Eliminar logica y detener labios del emisor.
-  if ((typeOf _emitter) == "VirtualAISquad") then {deleteVehicle _emitter;};
   if (_emitter in allUnits) then {_emitter setRandomLip false;};
 };
 true

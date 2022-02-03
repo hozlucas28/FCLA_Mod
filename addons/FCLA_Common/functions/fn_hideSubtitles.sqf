@@ -31,13 +31,11 @@ params [["_emitter", objNull, [objNull, teamMemberNull], 0]];
 
 
 //Verificar argumento.
-_ctrl = _emitter getVariable "FCLA_Subtitles_ctrl";
-if ((isNull _emitter) || (isNil "_ctrl")) exitWith {false};
+_isNotAnEmitter = !(_emitter getVariable ["FCLA_Emitter", false]);
+if ((isNull _emitter) || (_isNotAnEmitter)) exitWith {false};
 
 
 
 //Ocultar subtitulos.
-_ctrl ctrlSetFade 1;
-_ctrl ctrlCommit 0.5;
 _emitter setVariable ["FCLA_Hide_Subtitles", true, true];
 true

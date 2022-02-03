@@ -10,7 +10,7 @@
 
 class FCLA_Module_Spawn_Effect: Module_F {
   author = "hozlucas28";
-	displayName = "Generar efecto (BETA)";
+	displayName = "Generar efecto";
   icon = "\FCLA_Modules\3DEN\data\Common.paa";
   portrait = "\FCLA_Modules\3DEN\data\Common.paa";
 	category = "FCLA_Modules";

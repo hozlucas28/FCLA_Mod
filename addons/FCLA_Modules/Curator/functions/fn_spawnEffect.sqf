@@ -8,7 +8,7 @@
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-["FCLA", "Generar efecto (BETA)", {
+["FCLA", "Generar efecto", {
   ["EFECTO",
 	 [
     ["COMBO", "Tipo de efecto",
