@@ -46,6 +46,7 @@
     case "FCLA_FES": {26;};
     case "FCLA_CPH": {27;};
     case "FCLA_CPA": {28;};
+    case "FCLA_CDM": {29;};
     default {0;};
   };
 
@@ -58,7 +59,7 @@
         "FCLA_Unassigned", "FCLA_Common", "FCLA_Takana", "FCLA_Jaguar", "FCLA_Condor", "FCLA_Salamandra", "FCLA_Anaconda",
         "FCLA_Quetzal", "FCLA_Medic", "FCLA_CBI", "FCLA_CAI", "FCLA_CPR", "FCLA_CPM", "FCLA_CAL", "FCLA_CFA", "FCLA_CMC",
         "FCLA_CFG", "FCLA_CEE", "FCLA_CIM", "FCLA_CTC", "FCLA_COR", "FCLA_CTS", "FCLA_CFT", "FCLA_OPVNT", "FCLA_PARA",
-        "FCLA_CBC", "FCLA_FES", "FCLA_CPH", "FCLA_CPA"
+        "FCLA_CBC", "FCLA_FES", "FCLA_CPH", "FCLA_CPA", "FCLA_CDM"
        ],
        [
         ["Sin asignar", "", "\FCLA_interactions\Insignias\data\pictures\Unassigned.paa"],
@@ -89,7 +90,8 @@
         ["CBC", "", "\FCLA_interactions\Insignias\data\pictures\CBC.paa"],
         ["FES", "", "\FCLA_interactions\Insignias\data\pictures\FES.paa"],
         ["CPH", "", "\FCLA_interactions\Insignias\data\pictures\CPH.paa"],
-        ["CPA", "", "\FCLA_interactions\Insignias\data\pictures\CPA.paa"]
+        ["CPA", "", "\FCLA_interactions\Insignias\data\pictures\CPA.paa"],
+        ["CDM", "", "\FCLA_interactions\Insignias\data\pictures\CDM.paa"]
        ],
        _originalInsignia
       ],

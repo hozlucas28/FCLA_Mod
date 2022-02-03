@@ -272,3 +272,12 @@ class FCLA_CPA {
 	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
 	textureVehicle = "";
 };
+
+
+class FCLA_CDM {
+	author = "hozlucas28";
+	displayName = "CDM";
+	texture = "\FCLA_Interactions\Insignias\data\CDM.paa";
+	material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
+	textureVehicle = "";
+};

@@ -79,6 +79,7 @@ _defaultValue = switch (toUpper _savedInsignia) do {
   case "FCLA_FES": {17;};
   case "FCLA_CPH": {18;};
   case "FCLA_CPA": {19;};
+  case "FCLA_CDM": {20;};
   default {0;};
 };
 
@@ -91,7 +92,7 @@ _defaultValue = switch (toUpper _savedInsignia) do {
       "FCLA_CBI", "FCLA_CAI", "FCLA_CPR", "FCLA_CPM", "FCLA_CAL", "FCLA_CFA",
       "FCLA_CMC", "FCLA_CFG", "FCLA_CEE", "FCLA_CIM", "FCLA_CTC", "FCLA_COR",
       "FCLA_CTS", "FCLA_CFT", "FCLA_OPVNT", "FCLA_PARA", "FCLA_CBC", "FCLA_FES",
-      "FCLA_CPH", "FCLA_CPA"
+      "FCLA_CPH", "FCLA_CPA", "CDM"
      ],
      [
       ["CBI", "", "\FCLA_interactions\Insignias\data\pictures\CBI.paa"],
@@ -113,7 +114,8 @@ _defaultValue = switch (toUpper _savedInsignia) do {
       ["CBC", "", "\FCLA_interactions\Insignias\data\pictures\CBC.paa"],
       ["FES", "", "\FCLA_interactions\Insignias\data\pictures\FES.paa"],
       ["CPH", "", "\FCLA_interactions\Insignias\data\pictures\CPH.paa"],
-      ["CPA", "", "\FCLA_interactions\Insignias\data\pictures\CPA.paa"]
+      ["CPA", "", "\FCLA_interactions\Insignias\data\pictures\CPA.paa"],
+      ["CDM", "", "\FCLA_interactions\Insignias\data\pictures\CDM.paa"]
      ],
      _defaultValue
     ]
