@@ -111,7 +111,7 @@
 	"FCLA_Aircraft_Turbulence", "CHECKBOX",
 	["Activar", "Al activar las aeronaves sufriran turbulencias, aun usando el auto-hover. ¡SI SE QUIERE DESACTIVAR SE DEBERA SALIR DE LA AERONAVE UNA VEZ EFECTUADO EL CAMBIO PARA QUE SE APLIQUE!"],
 	["FCLA Inmersiones", "Turbulencias"],
-	true,
+	false,
 	GLOBAL,
 	{},
 	false

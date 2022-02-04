@@ -6,13 +6,22 @@
 class CfgPatches {
 	class FCLA_Development {
 		units[] = {};
-		requiredAddons[] = {"FCLA_Core"};
+		requiredAddons[] = {"3DEN", "A3_Data_F_Sams_loadOrder", "FCLA_Core"};
 		author = "hozlucas28";
 		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
 		requiredVersion = 2.0;
 	};
 };
+
+
+
+/********************************************************************************|
+|                                  INCLUSIONES                                   |
+|********************************************************************************/
+
+class ctrlMenuStrip;
+#include "\FCLA_Development\3DEN\Display.hpp"
 
 
 

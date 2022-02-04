@@ -1,4 +1,4 @@
 FCLA Missions
 ===============
 
-Addon with common missions.
+Addon with common mission files.

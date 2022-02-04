@@ -6,7 +6,7 @@
 class CfgPatches {
 	class FCLA_Effects {
 		units[] = {};
-		requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_beta", "FCLA_Core"};
+		requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Beta", "FCLA_Core"};
 		author = "hozlucas28";
 		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";

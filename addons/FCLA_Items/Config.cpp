@@ -8,7 +8,7 @@ class CfgPatches {
 		#include "\FCLA_Items\ammo.hpp"
 		#include "\FCLA_Items\units.hpp"
 		#include "\FCLA_Items\weapons.hpp"
-		requiredAddons[] = {"A3_characters_F", "A3_Data_F", "ACE_Explosives"};
+		requiredAddons[] = {"A3_Characters_F", "A3_Data_F", "ACE_Explosives"};
 		author = "hozlucas28";
 		version = "2.0";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
