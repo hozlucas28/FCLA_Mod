@@ -49,7 +49,7 @@
 [
 	"FCLA_Radio_Animations", "CHECKBOX",
 	["Activar", "Si se activa al transmitir por radio se realizara una animacion."],
-	["FCLA Inmersiones", "Radios"],
+	["FCLA Inmersiones", "Radios (animaciones)"],
 	true,
 	GLOBAL,
 	{},
@@ -60,7 +60,7 @@
 [
 	"FCLA_Hand_Radio_Animation", "CHECKBOX",
 	["Radio en mano", "Al activar si se transmite por radio de onda larga o no se posee un auricular/chaleco con radio, se realizara\nuna animacion en donde la unidad tendra una radio en mano."],
-	["FCLA Inmersiones", "Radios"],
+	["FCLA Inmersiones", "Radios (animaciones)"],
 	true,
 	GLOBAL,
 	{},
@@ -71,7 +71,7 @@
 [
 	"FCLA_Radio_Animation_Preference", "LIST",
 	["Animacion de preferencia", "Determina la animacion que se eligira si se tiene casco/anteojo y chaleco compatibles (definidos en 'Auriculares' y 'Chalecos con radio'). ¡ESTA OPCION FUNCIONA DE MANERA LOCAL!"],
-	["FCLA Inmersiones", "Radios"],
+	["FCLA Inmersiones", "Radios (animaciones)"],
 	[
 	 ["_vest", "_headset"],
 	 ["Chaleco", "Auricular"], 0
@@ -85,7 +85,7 @@
 [
 	"FCLA_Radio_Animations_Headgears_Headsets", "EDITBOX",
 	["Auriculares", "Determina los classnames de cascos/anteojos para asi hacer uso de la animacion 'Auricular' al momento de transmitir.\nColoca '[headgear player, goggles player]' para permitir todos los tipos de cascos y anteojos."],
-	["FCLA Inmersiones", "Radios"],
+	["FCLA Inmersiones", "Radios (animaciones)"],
 	#include "\FCLA_Core\PreInit\includes\Headgears_and_Headsets.hpp",
 	GLOBAL,
 	{FCLA_Radio_Animations_Headgears_Headsets = parseSimpleArray ([_this, """", "'"] call CBA_fnc_replace);},
@@ -96,7 +96,7 @@
 [
 	"FCLA_Radio_Animations_Vests", "EDITBOX",
 	["Chalecos con radio", "Determina los classnames de chalecos para asi hacer uso de la animacion 'Chaleco' al momento de transmitir.\nColoca '[vest player]' para permitir todos los tipos de chalecos."],
-	["FCLA Inmersiones", "Radios"],
+	["FCLA Inmersiones", "Radios (animaciones)"],
 	#include "\FCLA_Core\PreInit\includes\Vests_with_Radios.hpp",
 	GLOBAL,
 	{FCLA_Radio_Animations_Vests = parseSimpleArray ([_this, """", "'"] call CBA_fnc_replace);},
