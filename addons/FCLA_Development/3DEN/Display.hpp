@@ -9,7 +9,7 @@ class Display3DEN {
       class Items {
 				class FCLA_Mod {
 					text = "FCLA Mod";
-					items[] += {"FCLA_Wix", "FCLA_Data", "FCLA_Sounds", "FCLA_Variables", "FCLA_Public_Events", "FCLA_Public_Functions", "Separator", "FCLA_Mod_Pack"};
+					items[] += {"FCLA_Wix", "FCLA_Data", "FCLA_Sounds", "FCLA_Variables", "FCLA_Public_Functions", "FCLA_Custom_Events", "Separator", "FCLA_Mod_Pack"};
 				};
 
 				class FCLA_Mod_Pack {
@@ -44,8 +44,8 @@ class Display3DEN {
 					weblink = "https://github.com/hozlucas28/FCLA_Mod/wiki/Variables";
 				};
 
-				class FCLA_Public_Events: FCLA_Mod_Pack {
-					text = "Eventos publicos";
+				class FCLA_Custom_Events: FCLA_Mod_Pack {
+					text = "Eventos personalizados";
 					picture = "\a3\3DEN\Data\Controls\ctrlMenu\link_ca.paa";
 					weblink = "https://github.com/hozlucas28/FCLA_Mod/wiki/Eventos-Personalizados";
 				};
