@@ -9,7 +9,7 @@
 
 class Flag_China_v1: Flag_White_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v1, China]";
+	displayName = "Bandera [v1, China]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_China_v1.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -25,7 +25,7 @@ class Flag_China_v1: Flag_White_F {
 
 class Flag_Russia_v1: Flag_White_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v1, Rusia]";
+	displayName = "Bandera [v1, Rusia]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Quetzal_v1.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -41,7 +41,7 @@ class Flag_Russia_v1: Flag_White_F {
 
 class Flag_China_v2: Flag_AAF_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v2, China]";
+	displayName = "Bandera [v2, China]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_China_v2.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -57,7 +57,7 @@ class Flag_China_v2: Flag_AAF_F {
 
 class Flag_Russia_v2: Flag_AAF_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v2, Rusia]";
+	displayName = "Bandera [v2, Rusia]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Quetzal_v2.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -76,7 +76,7 @@ class Flag_Russia_v2: Flag_AAF_F {
 
 class Flag_FCLA_v1: Flag_White_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v1, FCLA]";
+	displayName = "Bandera [v1, FCLA]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_FCLA_v1.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -92,7 +92,7 @@ class Flag_FCLA_v1: Flag_White_F {
 
 class Flag_Anti_FCLA_v1: Flag_White_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v1, Anti - FCLA]";
+	displayName = "Bandera [v1, Anti - FCLA]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Anti_FCLA_v1.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -115,12 +115,12 @@ class Flag_Anti_FCLA_v1: Flag_White_F {
 
     	class values {
         class Texture_1 {
-        	name = "N° 1";
+        	name = "Numero 1";
         	value = "\FCLA_Objects\Flags\data\Flag_Anti_FCLA_1.paa";
         };
 
         class Texture_2 {
-        	name = "N° 2";
+        	name = "Numero 2";
         	value = "\FCLA_Objects\Flags\data\Flag_Anti_FCLA_2.paa";
         };
 			};
@@ -131,7 +131,7 @@ class Flag_Anti_FCLA_v1: Flag_White_F {
 
 class Flag_Takana_v1: Flag_White_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v1, Takana]";
+	displayName = "Bandera [v1, Takana]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Takana_v1.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -147,7 +147,7 @@ class Flag_Takana_v1: Flag_White_F {
 
 class Flag_Jaguar_v1: Flag_White_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v1, Jaguar]";
+	displayName = "Bandera [v1, Jaguar]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Jaguar_v1.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -163,7 +163,7 @@ class Flag_Jaguar_v1: Flag_White_F {
 
 class Flag_Condor_v1: Flag_White_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v1, Condor]";
+	displayName = "Bandera [v1, Condor]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Condor_v1.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -179,7 +179,7 @@ class Flag_Condor_v1: Flag_White_F {
 
 class Flag_Salamandra_v1: Flag_White_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v1, Salamandra]";
+	displayName = "Bandera [v1, Salamandra]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Salamandra_v1.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -195,7 +195,7 @@ class Flag_Salamandra_v1: Flag_White_F {
 
 class Flag_Anaconda_v1: Flag_White_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v1, Anaconda]";
+	displayName = "Bandera [v1, Anaconda]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Anaconda_v1.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -211,7 +211,7 @@ class Flag_Anaconda_v1: Flag_White_F {
 
 class Flag_Quetzal_v1: Flag_White_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v1, Quetzal]";
+	displayName = "Bandera [v1, Quetzal]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Quetzal_v1.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -227,7 +227,7 @@ class Flag_Quetzal_v1: Flag_White_F {
 
 class Flag_FCLA_v2: Flag_AAF_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v2, FCLA]";
+	displayName = "Bandera [v2, FCLA]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_FCLA_v2.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -243,7 +243,7 @@ class Flag_FCLA_v2: Flag_AAF_F {
 
 class Flag_Anti_FCLA_v2: Flag_AAF_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v2, Anti - FCLA]";
+	displayName = "Bandera [v2, Anti - FCLA]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Anti_FCLA_v2.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -266,12 +266,12 @@ class Flag_Anti_FCLA_v2: Flag_AAF_F {
 
     	class values {
         class Texture_1 {
-        	name = "N° 1";
+        	name = "Numero 1";
         	value = "\FCLA_Objects\Flags\data\Flag_Anti_FCLA_1.paa";
         };
 
         class Texture_2 {
-        	name = "N° 2";
+        	name = "Numero 2";
         	value = "\FCLA_Objects\Flags\data\Flag_Anti_FCLA_2.paa";
         };
 			};
@@ -282,7 +282,7 @@ class Flag_Anti_FCLA_v2: Flag_AAF_F {
 
 class Flag_Takana_v2: Flag_AAF_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v2, Takana]";
+	displayName = "Bandera [v2, Takana]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Takana_v2.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -298,7 +298,7 @@ class Flag_Takana_v2: Flag_AAF_F {
 
 class Flag_Jaguar_v2: Flag_AAF_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v2, Jaguar]";
+	displayName = "Bandera [v2, Jaguar]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Jaguar_v2.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -314,7 +314,7 @@ class Flag_Jaguar_v2: Flag_AAF_F {
 
 class Flag_Condor_v2: Flag_AAF_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v2, Condor]";
+	displayName = "Bandera [v2, Condor]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Condor_v2.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -330,7 +330,7 @@ class Flag_Condor_v2: Flag_AAF_F {
 
 class Flag_Salamandra_v2: Flag_AAF_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v2, Salamandra]";
+	displayName = "Bandera [v2, Salamandra]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Salamandra_v2.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -346,7 +346,7 @@ class Flag_Salamandra_v2: Flag_AAF_F {
 
 class Flag_Anaconda_v2: Flag_AAF_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v2, Anaconda]";
+	displayName = "Bandera [v2, Anaconda]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Anaconda_v2.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";
@@ -362,7 +362,7 @@ class Flag_Anaconda_v2: Flag_AAF_F {
 
 class Flag_Quetzal_v2: Flag_AAF_F {
 	author = "hozlucas28";
-	displayName = "Estandarte [v2, Quetzal]";
+	displayName = "Bandera [v2, Quetzal]";
 	editorPreview = "\FCLA_Objects\Flags\data\pictures\Flag_Quetzal_v2.jpg";
   hiddenSelections[] = {"Camo_1"};
 	editorCategory = "EdCat_Signs";

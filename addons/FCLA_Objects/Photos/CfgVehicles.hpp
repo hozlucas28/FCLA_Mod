@@ -41,77 +41,77 @@ class Custom_Land_Photos_V1_F: Land_Photos_V1_F {
 
     	class values {
         class Texture_1 {
-        	name = "N° 1";
+        	name = "Numero 1";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_1.paa";
         };
 
         class Texture_2 {
-        	name = "N° 2";
+        	name = "Numero 2";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_2.paa";
         };
 
         class Texture_3 {
-        	name = "N° 3";
+        	name = "Numero 3";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_3.paa";
         };
 
         class Texture_4 {
-        	name = "N° 4";
+        	name = "Numero 4";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_4.paa";
         };
 
         class Texture_5 {
-        	name = "N° 5";
+        	name = "Numero 5";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_5.paa";
         };
 
         class Texture_6 {
-        	name = "N° 6";
+        	name = "Numero 6";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_6.paa";
         };
 
         class Texture_7 {
-        	name = "N° 7";
+        	name = "Numero 7";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_7.paa";
         };
 
         class Texture_8 {
-        	name = "N° 8";
+        	name = "Numero 8";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_8.paa";
         };
 
         class Texture_9 {
-        	name = "N° 9";
+        	name = "Numero 9";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_9.paa";
         };
 
         class Texture_10 {
-        	name = "N° 10";
+        	name = "Numero 10";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_10.paa";
         };
 
         class Texture_11 {
-        	name = "N° 11";
+        	name = "Numero 11";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_11.paa";
         };
 
         class Texture_12 {
-        	name = "N° 12";
+        	name = "Numero 12";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_12.paa";
         };
 
         class Texture_13 {
-        	name = "N° 13";
+        	name = "Numero 13";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_13.paa";
         };
 
         class Texture_14 {
-        	name = "N° 14";
+        	name = "Numero 14";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_14.paa";
         };
 
         class Texture_15 {
-        	name = "N° 15";
+        	name = "Numero 15";
         	value = "\FCLA_Objects\Photos\data\Custom_Land_Photos_V1_F_Meme_15.paa";
         };
 			};

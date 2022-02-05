@@ -75,12 +75,12 @@ class Banner_01_Anti_FCLA: Banner_01_base_F {
 
     	class values {
         class Texture_1 {
-        	name = "N° 1";
+        	name = "Numero 1";
         	value = "\FCLA_Objects\Banners\data\Banner_01_Anti_FCLA_1.paa";
         };
 
         class Texture_2 {
-        	name = "N° 2";
+        	name = "Numero 2";
         	value = "\FCLA_Objects\Banners\data\Banner_01_Anti_FCLA_2.paa";
         };
 			};

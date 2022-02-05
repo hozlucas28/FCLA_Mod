@@ -3,12 +3,12 @@
 |                                  DEFINICIONES                                  |
 |********************************************************************************/
 
+#define TRUE true
+#define FALSE false
+
 
 
 /* ------------------------- CONFIGURACIÓN GENERAL ------------------------- */
-
-#define TRUE 1
-#define FALSE 0
 
 #ifdef MISSION_NAME
     #define SCENARIO_NAME MISSION_NAME
@@ -16,28 +16,9 @@
     #define SCENARIO_NAME "TÍTULO SIN DEFINIR"
 #endif
 
-#ifdef PROFILE_GLASSES
-    #define ALLOW_PROFILE_GLASSES PROFILE_GLASSES
-#else
-    #define ALLOW_PROFILE_GLASSES FALSE
-#endif
-
-#define TRUE 1
-#define FALSE 2
-#define BASED_ON_PLAYER_OPTIONS 0
-
-#ifdef FORCE_ADVANCED_FLIGHT
-    #define FORCE_ROTOR_LIB_SIMULATION FORCE_ADVANCED_FLIGHT
-#else
-    #define FORCE_ROTOR_LIB_SIMULATION BASED_ON_PLAYER_OPTIONS
-#endif
-
 
 
 /* ------------------------- INICIALIZACIÓN LOCAL -------------------------- */
-
-#define TRUE true
-#define FALSE false
 
 #ifdef UNLIMITED_LIVES
     #define HAS_UNLIMITED_LIVES UNLIMITED_LIVES
