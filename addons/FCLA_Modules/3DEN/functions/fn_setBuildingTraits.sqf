@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Asigna rasgos ACE a la construccion.
+ * Asigna multiples rasgos a una construccion.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -19,10 +19,12 @@ if (((_mode != "init") && (_mode != "dragged3DEN") && (_mode != "attributesChang
 
 
 
-//Argumentos
+//Argumentos.
 _notifyBuilding = _module getVariable ["FCLA_Notify_Building", false];
+_disableKickDoor = _module getVariable ["FCLA_Disable_Kick_Door", false];
 _isRepairFacility = _module getVariable ["FCLA_isRepair_Facility", false];
 _isMedicalFacility = _module getVariable ["FCLA_isMedical_Facility", false];
+_disableStairsActions = _module getVariable ["FCLA_Disable_Stairs_Actions", false];
 
 
 
@@ -32,8 +34,10 @@ switch (_mode) do {
     _building = nearestObject [_module, "Building"];
     _nearesTerrainObjects = nearestTerrainObjects [_module, [], 50];
     if (((_module distance _building) > 10) || !(_building in _nearesTerrainObjects)) exitWith {["FCLA_Module_Building_Traits", "- MODULO: ASIGNAR RASGOS (ACE)", "¡Error! El/Un modulo 'Asignar rasgos' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
-    _building setVariable ["ACE_isRepairFacility", true, true];
-    _building setVariable ["ACE_Medical_isMedicalFacility", true, true];
+    _building setVariable ["ACE_isRepairFacility", _isRepairFacility, true];
+    _building setVariable ["FCLA_Disable_Kick_Door", _disableKickDoor, true];
+    _building setVariable ["ACE_Medical_isMedicalFacility", _isMedicalFacility, true];
+    _building setVariable ["FCLA_Disable_Stairs_Actions", _disableStairsActions, true];
     deleteVehicle _module;
   };
 

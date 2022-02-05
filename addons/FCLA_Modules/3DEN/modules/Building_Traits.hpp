@@ -3,14 +3,14 @@
  * Author: hozlucas28
  *
  * Description:
- * Asigna rasgos ACE a la construccion.
+ * Asigna multiples rasgos a una construccion.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
 class FCLA_Module_Building_Traits: Module_F {
   author = "hozlucas28";
-	displayName = "Asignar rasgos (ACE)";
+	displayName = "Asignar rasgos";
   icon = "\FCLA_Modules\3DEN\data\Building.paa";
   portrait = "\FCLA_Modules\3DEN\data\Building.paa";
 	category = "FCLA_Modules";
@@ -31,8 +31,24 @@ class FCLA_Module_Building_Traits: Module_F {
       defaultValue = "false";
     };
 
+    class FCLA_Disable_Kick_Door: CheckBox {
+      tooltip = "Evita que las puertas de la construccion puedan ser pateadas.";
+      typeName = "BOOL";
+      property = "FCLA_Disable_Kick_Door";
+      displayName = "Desactivar patadas";
+      defaultValue = "false";
+    };
+
+    class FCLA_Disable_Stairs_Actions: CheckBox {
+      tooltip = "Inhabilita las acciones que te permiten subir por las escaleras de la construccion.";
+      typeName = "BOOL";
+      property = "FCLA_Disable_Stairs_Actions";
+      displayName = "Desactivar escaleras";
+      defaultValue = "false";
+    };
+
     class FCLA_isMedical_Facility: CheckBox {
-      tooltip = "";
+      tooltip = "Convierte la construccion en un centro medico.";
       typeName = "BOOL";
       property = "FCLA_isMedical_Facility";
       displayName = "Es centro medico";
@@ -40,7 +56,7 @@ class FCLA_Module_Building_Traits: Module_F {
     };
 
     class FCLA_isRepair_Facility: CheckBox {
-      tooltip = "";
+      tooltip = "Convierte la construccion en una instalacion de reparacion.";
       typeName = "BOOL";
       property = "FCLA_isRepair_Facility";
       displayName = "Es una instalacion de reparacion";
@@ -51,6 +67,6 @@ class FCLA_Module_Building_Traits: Module_F {
 
 	class ModuleDescription: ModuleDescription {
     sync[] = {"EmptyDetector"};
-		description[] =	{"Permite asignar los rasgos centro medico y/o instalacion de reparacion a una construccion del mapa, es decir, una construccion que no fue colocada por el editor."};
+		description[] =	{"Permite asignar multiples rasgos a una construccion del mapa, es decir, una construccion que no fue colocada por el editor."};
 	};
 };
