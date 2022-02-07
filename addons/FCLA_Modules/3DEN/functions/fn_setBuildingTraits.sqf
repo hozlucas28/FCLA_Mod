@@ -33,7 +33,7 @@ switch (_mode) do {
   case "init": {
     _building = nearestObject [_module, "Building"];
     _nearesTerrainObjects = nearestTerrainObjects [_module, [], 50];
-    if (((_module distance _building) > 10) || !(_building in _nearesTerrainObjects)) exitWith {["FCLA_Module_Building_Traits", "- MODULO: ASIGNAR RASGOS (ACE)", "¡Error! El/Un modulo 'Asignar rasgos' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
+    if ((_module distance _building) > 10) exitWith {["FCLA_Module_Building_Traits", "- MODULO: ASIGNAR RASGOS (ACE)", "¡Error! El/Un modulo 'Asignar rasgos' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
     _building setVariable ["ACE_isRepairFacility", _isRepairFacility, true];
     _building setVariable ["FCLA_Disable_Kick_Door", _disableKickDoor, true];
     _building setVariable ["ACE_Medical_isMedicalFacility", _isMedicalFacility, true];
@@ -53,7 +53,7 @@ switch (_mode) do {
     _nearesTerrainObjects = nearestTerrainObjects [_module, [], 50];
     _module setVariable ["FCLA_isDragged", nil, true];
 
-    if ((_oldSelectedBuilding == _building) || ((_module distance _building) > 10) || !(_building in _nearesTerrainObjects)) exitWith {};
+    if ((_oldSelectedBuilding == _building) || (_module distance _building) > 10) exitWith {};
     _module set3DENAttribute ["position", _buildingPos];
     _module setVariable ["FCLA_Old_Building", _building, true];
     if (_notifyBuilding) then {systemChat format ["- Construccion seleccionada: %1.", (getText (configFile >> "CfgVehicles" >> (typeOf _building) >> "displayName"))];};

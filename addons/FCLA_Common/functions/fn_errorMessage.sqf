@@ -34,7 +34,7 @@ params [
 
 //Verificar argumentos.
 _inMultiplayer = serverName != "";
-_reportedErrors = if (isNil "FCLA_Reported_Errors") then {["FCLA_Reported_Errors", []] call CBA_fnc_publicVariable;} else {FCLA_Reported_Errors;};
+_reportedErrors = if (isNil "FCLA_Reported_Errors") then {[];} else {FCLA_Reported_Errors;};
 if ((_ID == "") || (_header == "") || (_text == "") || (_inMultiplayer) || (_ID in _reportedErrors)) exitWith {false};
 
 
