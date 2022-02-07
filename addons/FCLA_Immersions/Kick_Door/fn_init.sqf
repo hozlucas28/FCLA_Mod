@@ -43,12 +43,20 @@ _this spawn {
     _soundSource attachTo [_building];
 
     if (!(call FCLA_Common_fnc_isDoorLocked) || (_successRate <= FCLA_Kick_Door_Success_Rate)) then {
+      _stamina = (-10 / ACE_Advanced_Fatigue_performanceFactor) / 100;
       _selectDoor = format ["%1_rot", ((_intersects select 0) select 0)];
+      ACE_Advanced_Fatigue_anReserve = ACE_Advanced_Fatigue_anReserve + (2300 * _stamina);
+      ACE_Advanced_Fatigue_anFatigue = ((ACE_Advanced_Fatigue_anFatigue - (_stamina * 0.8)) min 0.8) max ACE_Advanced_Fatigue_anFatigue;
+
       enableCamShake true;
       addCamShake [5, 1.5, 100];
       _building animate [_selectDoor, 1, 8];
       [_soundSource, "FCLA_Smash_Door", 1, 50, true] call FCLA_Common_fnc_globalSay3D;
     } else {
+      _stamina = (-5 / ACE_Advanced_Fatigue_performanceFactor) / 100;
+      ACE_Advanced_Fatigue_anReserve = ACE_Advanced_Fatigue_anReserve + (2300 * _stamina);
+      ACE_Advanced_Fatigue_anFatigue = ((ACE_Advanced_Fatigue_anFatigue - (_stamina * 0.8)) min 0.8) max ACE_Advanced_Fatigue_anFatigue;
+
       enableCamShake true;
       addCamShake [2.5, 1, 100];
       [_soundSource, "FCLA_Kick_Door", 1, 50, true] call FCLA_Common_fnc_globalSay3D;

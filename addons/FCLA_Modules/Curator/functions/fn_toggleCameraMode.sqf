@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Alterna el acceso que tiene la unidad al modo cámara.
+ * Alterna el acceso que tiene la unidad al modo camara.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
@@ -12,7 +12,7 @@
 if (!isMultiplayer) exitWith {};
 
 
-["FCLA", "Alternar modo cámara", {
+["FCLA", "Alternar modo camara", {
   params ["_position", "_attachedObject"];
   _hasNotAccess = !(_attachedObject getVariable ["FCLA_Camera_Mode_Allowed", false]);
   if ((isNull _attachedObject) || !(_attachedObject in allUnits)) exitWith {["ERROR! EL MODULO DEBE SER COLOCADO SOBRE UNA UNIDAD"] call ZEN_Common_fnc_showMessage;};

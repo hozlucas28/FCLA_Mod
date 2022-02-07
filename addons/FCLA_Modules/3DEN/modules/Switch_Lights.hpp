@@ -66,7 +66,7 @@ class FCLA_Module_Switch_Lights: Module_F {
       "Enciende/Apaga aquellas luces comprendidas dentro del 'Tamano', determinado por el modulo.",
       "",
       "- Si colocas -1, en los tamanos de la zona, todas las luces del mapa seran afectadas.",
-      "- Si sincronizas unicamente un interruptor de transferencia al modulo, este servira para encender/apagar aquellas luces comprendidas dentro del 'Tamano'. Sin embargo si hay más de una entidad sincronizada o ninguna, las luces se encenderan/apagaran sin interaccion alguna."
+      "- Si sincronizas unicamente un interruptor de transferencia al modulo, este servira para encender/apagar aquellas luces comprendidas dentro del 'Tamano'. Sin embargo si hay mas de una entidad sincronizada o ninguna, las luces se encenderan/apagaran sin interaccion alguna."
     };
 	};
 };

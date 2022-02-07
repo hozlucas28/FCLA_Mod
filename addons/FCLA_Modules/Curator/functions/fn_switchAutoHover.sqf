@@ -3,12 +3,12 @@
  * Author: hozlucas28
  *
  * Description:
- * Alterna la propulsion automática de los helicopteros.
+ * Alterna la propulsion automatica de los helicopteros.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
 
-["FCLA", "Alternar propulsion automática", {
+["FCLA", "Alternar propulsion automatica", {
   _defaultValue = if (isNil "FCLA_Auto_Hover") then {0;} else {
     if (FCLA_Auto_Hover == "Activated") then {0;} else {1;};
   };
@@ -16,7 +16,7 @@
 
   ["ASCENSOS",
 	 [
-    ["TOOLBOX", ["Propulsion automática", "Al desactivarse la propulsion automática (Auto Hover) que poseen los helicopteros no se podra usar."],
+    ["TOOLBOX", ["Propulsion automatica", "Al desactivarse la propulsion automatica (Auto Hover) que poseen los helicopteros no se podra usar."],
      [
       _defaultValue,
       1,

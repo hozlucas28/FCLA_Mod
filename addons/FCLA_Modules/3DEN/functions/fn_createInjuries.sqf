@@ -34,6 +34,7 @@ if ((_typeOfInjury == "") || (_levelOfInjury <= 0) || ((count _compatibleSynchro
 //Provocar lesiones.
 {
   if (!(isObjectHidden _x) && (isDamageAllowed _x)) then {
+    _x setVariable ["ACE_Medical_AI_lastFired", 9999999, true];
     [_x, _forceUnconsciousness] call ACE_Medical_fnc_setUnconscious;
     _x setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
     ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_x, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true]], _x] call CBA_fnc_targetEvent;

@@ -180,8 +180,8 @@ class FCLA_Module_Show_Subtitle: Module_F {
 		description[] =	{
       "Genera un mensaje a modo de subtitulo.",
       "",
-      "- Los tamanos del modulo determinan el área en el cual debe estar la unidad para ver el mensaje. Si todos son -1 se asumirá que la unidad esta dentro del área.",
-      "- Si sincronizas unicamente una entidad (objeto, unidad, vehiculo, etc.) al modulo, esta se tomara como origen/centro del área. Sin embargo si hay más de una entidad sincronizada o ninguna, se tomara como origen al modulo."
+      "- Los tamanos del modulo determinan el area en el cual debe estar la unidad para ver el mensaje. Si todos son -1 se asumira que la unidad esta dentro del area.",
+      "- Si sincronizas unicamente una entidad (objeto, unidad, vehiculo, etc.) al modulo, esta se tomara como origen/centro del area. Sin embargo si hay mas de una entidad sincronizada o ninguna, se tomara como origen al modulo."
     };
 	};
 };

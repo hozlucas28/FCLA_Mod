@@ -51,14 +51,14 @@ class FCLA_Module_Spawn_Effect: Module_F {
 				};
 
 				class Wind_Gust {
-					name = "Ráfaga de viento";
+					name = "Rafaga de viento";
 					value = "wind_gust";
 				};
 			};
     };
 
 		class FCLA_Delay: Edit {
-      tooltip = "Segundos para que se repita el efecto.\n- Solo funciona con las chispas y la ráfaga de viento.";
+      tooltip = "Segundos para que se repita el efecto.\n- Solo funciona con las chispas y la rafaga de viento.";
       typeName = "NUMBER";
       property = "FCLA_Delay";
       displayName = "Tiempo";

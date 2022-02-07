@@ -38,7 +38,7 @@ class FCLA_Module_Shooting_Range: Module_F {
 		description[] =	{
       "Modifica los objetivos que se encuentran dentro del campo de tiro para que sean funcionales.",
       "",
-      "- Necesitaras sincronizar un controlador para que el mismo tenga efecto, por ejemplo un portátil."
+      "- Necesitaras sincronizar un controlador para que el mismo tenga efecto, por ejemplo un portatil."
     };
 	};
 };

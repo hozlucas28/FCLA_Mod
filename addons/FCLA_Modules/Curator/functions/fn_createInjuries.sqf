@@ -124,6 +124,7 @@
      _fractureRightLeg = if (_fractureRightLeg == 0) then {1;} else {0;};
      _forceUnconsciousness = if (_forceUnconsciousness == 0) then {true;} else {false;};
 
+     _attachedObject setVariable ["ACE_Medical_AI_lastFired", 9999999, true];
      [_attachedObject, _forceUnconsciousness] call ACE_Medical_fnc_setUnconscious;
      _attachedObject setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
      ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_attachedObject, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true]], _attachedObject] call CBA_fnc_targetEvent;

@@ -65,7 +65,7 @@ if ((isNull _entity) || (_title == "") || (_loadout isEqualType objNull) || !(_t
 _isEOD = [{if (_arguments select 2) then {[_caller, "EOD"] call FCLA_Common_fnc_setUnitTrait;};}] call ACE_Common_fnc_codeToString;
 _params = [{params ["_target", "_caller", "_actionId", "_arguments"];}] call ACE_Common_fnc_codeToString;
 _loadout = [_loadout] call ACE_Common_fnc_codeToString;
-_isDoctor = [{if (_arguments select 0) then {[_caller, "Doctor"] call FCLA_Common_fnc_setUnitTrait;};}] call ACE_Common_fnc_codeToString;
+_isDoctor = [{if (_arguments select 0) then {[_caller, "FCLA_Medic"] spawn FCLA_Interactions_fnc_statementInsignias; [_caller, "Doctor"] call FCLA_Common_fnc_setUnitTrait;};}] call ACE_Common_fnc_codeToString;
 _isAdvancedEnginner = [{if (_arguments select 1) then {[_caller, "Advanced Enginner"] call FCLA_Common_fnc_setUnitTrait;};}] call ACE_Common_fnc_codeToString;
 _setRadioFrequencies = [{if (_arguments select 3) then {["FCLA_Radio_Frequencies", []] call CBA_fnc_localEvent;};}] call ACE_Common_fnc_codeToString;
 _interactionAnimation = [{[_caller, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;}] call ACE_Common_fnc_codeToString;

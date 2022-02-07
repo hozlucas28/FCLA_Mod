@@ -35,6 +35,7 @@ class FCLA_Common_Functions {
   class setHelipadLights {file = "\FCLA_Common\functions\fn_setHelipadLights.sqf";};
   class getRandomLocation {file = "\FCLA_Common\functions\fn_getRandomLocation.sqf";};
   class severalConditions {file = "\FCLA_Common\functions\fn_severalConditions.sqf";};
+  class equipFormalUniform {file = "\FCLA_Common\functions\fn_equipFormalUniform.sqf";};
   class setRadioFrequencies {file = "\FCLA_Common\functions\fn_setRadioFrequencies.sqf";};
   class checkSightVisionModes {file = "\FCLA_Common\functions\fn_checkSightVisionModes.sqf";};
   class showHiddenEdenEntities {file = "\FCLA_Common\functions\fn_showHiddenEdenEntities.sqf";};
