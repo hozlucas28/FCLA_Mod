@@ -215,14 +215,14 @@ class FCLA_Goggles_Unequipped {
 
 class FCLA_Armor_Equipped {
 	name = "FCLA - Equiparse chaleco";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Armor_On.wav", "db+10", 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Armor_Equipped.wav", "db+10", 1};
 	titles[] = {0, ""};
 	duration = 1;
 };
 
 class FCLA_Armor_Unequipped {
 	name = "FCLA - Desequiparse chaleco";
-	sound[] = {"\FCLA_Effects\sounds\inventory\Armor_Off.wav", "db+10", 1};
+	sound[] = {"\FCLA_Effects\sounds\inventory\Armor_Unequipped.wav", "db+10", 1};
 	titles[] = {0, ""};
 	duration = 1;
 };

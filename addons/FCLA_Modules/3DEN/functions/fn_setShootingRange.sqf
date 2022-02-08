@@ -51,6 +51,7 @@ _controller addAction ["<t size='1.35' color='#58D68D'>Reiniciar Objetivos</t>",
   params ["_target", "_caller", "_actionId", "_arguments"];
   {_x animate ["Terc", 0];} forEach _arguments;
   _line = ["[Sistema]", "Objetivos reiniciados con éxito."];
+  [_target, "FD_Course_Active_F", 1, 100, false] call FCLA_Common_fnc_globalSay3D;
   [objNull, [_line], "System", 3, [false, false, "All", -1]] call FCLA_Common_fnc_showSubtitles;
 }, _targetsInArea, 1.5, true, true, "", "true", 2.5, false, "", ""];
 

@@ -189,18 +189,20 @@ _this spawn {
       };
 
       if (_hasBinocularsVisionModes) then {[_x, _unitBinocular] call CBA_fnc_removeWeapon;};
-      if (_unitNVG != "FCLA_Light_Sticks") then {_x unassignItem _unitNVG; _x removeItems _unitNVG;};
+      if (_unitNVG != "FCLA_Light_Sticks") then {
+        _x unassignItem _unitNVG;
+        for "_i" from 1 to 10 do {_x removeItem _unitNVG;};
+      };
 
       _x removeHandgunItem _handgunWeaponPointer;
       _x removePrimaryWeaponItem _primaryWeaponPointer;
       _x removeSecondaryWeaponItem _launcherPointer;
-      _x removeItems "FCLA_RF_3080";
       _x unassignItem _itemInGPSSlot;
-      _x removeItems _itemInGPSSlot;
       _x unassignItem _itemInClockSlot;
-      _x removeItems _itemInClockSlot;
-      _x unassignItem _itemInClockSlot;
-      _x removeItems _itemInClockSlot;
+
+      for "_i" from 1 to 10 do {_x removeItem "FCLA_RF_3080";};
+      for "_i" from 1 to 10 do {_x removeItem _itemInGPSSlot;};
+      for "_i" from 1 to 10 do {_x removeItem _itemInClockSlot;};
     };
   } forEach _nearUnits;
 

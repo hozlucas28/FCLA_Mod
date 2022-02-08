@@ -10,7 +10,7 @@
 
 //Variable de referencia.
 params ["_unit"];
-if (!FCLA_Inventory_Sounds) exitWith {};
+if ((!FCLA_Inventory_Sounds) || (!isNull findDisplay 312)) exitWith {};
 
 
 _currentBackpack = backpack _unit;
