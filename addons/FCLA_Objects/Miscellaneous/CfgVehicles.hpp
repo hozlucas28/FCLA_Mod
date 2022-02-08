@@ -109,7 +109,7 @@ class Custom_Land_WallSign_01_Chalkboard_F: Land_WallSign_01_chalkboard_F {
 
 class Custom_Land_InfoStand_V1_F: Land_InfoStand_V1_F {
   author = "hozlucas28";
-  displayName = "Stand de informacion (2 patas, personalizado)";
+  displayName = "Stand de informacion (1 pata, personalizado)";
   editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_InfoStand_V1_F.jpg";
 	hiddenSelections[] = {"camo", "camo_background"};
   hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa", "a3\structures_f\civ\infoboards\data\infostands_ca.paa"};
@@ -144,7 +144,7 @@ class Custom_Land_InfoStand_V1_F: Land_InfoStand_V1_F {
 
 class Custom_Land_InfoStand_V2_F: Land_InfoStand_V2_F {
   author = "hozlucas28";
-  displayName = "Stand de informacion (1 pata, personalizado)";
+  displayName = "Stand de informacion (2 patas, personalizado)";
   editorPreview = "\FCLA_Objects\Miscellaneous\data\pictures\Custom_Land_InfoStand_V2_F.jpg";
 	hiddenSelections[] = {"camo", "camo_background"};
   hiddenSelectionsTextures[] = {"\FCLA_Objects\Miscellaneous\data\Land_InfoStand_F_FCLA.paa", "a3\structures_f\civ\infoboards\data\infostands_ca.paa"};

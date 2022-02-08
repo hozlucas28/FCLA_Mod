@@ -47,18 +47,20 @@ _controller = _compatibleSynchronizedObjects select 0;
 _controller allowDamage false;
 if (_controller isKindOf "Land_Laptop_unfolded_F") then {_controller setObjectTextureGlobal [0, "\a3\missions_f_bootcamp\data\img\laptop\electronics_screens_laptop_targeterror_co.paa"];};
 
-_controller addAction ["<t size='1.2' color='#58D68D'>Resetear Blancos</t>", {
+_controller addAction ["<t size='1.35' color='#58D68D'>Reiniciar Objetivos</t>", {
   params ["_target", "_caller", "_actionId", "_arguments"];
   {_x animate ["Terc", 0];} forEach _arguments;
-}, _targetsInArea, 1.5, true, true, "", "", 2.5, false, "", ""];
+  _line = ["[Sistema]", "Objetivos reiniciados con éxito."];
+  [objNull, [_line], "System", 3, [false, false, "All", -1]] call FCLA_Common_fnc_showSubtitles;
+}, _targetsInArea, 1.5, true, true, "", "true", 2.5, false, "", ""];
 
-_controller addAction ["<t size='1.2' color='#D4D658'>Comiencen (sonido)</t>", {
+_controller addAction ["<t size='1.35' color='#D4D658'>Comiencen (sonido)</t>", {
   params ["_target", "_caller", "_actionId", "_arguments"];
   _soundObj = createSoundSource ["FCLA_SFX_Shooting_Range_Alarm", getPos _target, [], 0];
   _soundClass = getText (configFile >> "CfgVehicles" >> "FCLA_SFX_Shooting_Range_Alarm" >> "sound");
   _soundDuration = getNumber (configFile >> "CfgSFX" >> _soundClass >> "duration");
   [{deleteVehicle _this}, _soundObj, _soundDuration] call CBA_fnc_waitAndExecute;
-}, [], 1.5, true, true, "", "", 2.5, false, "", ""];
+}, [], 1.5, true, true, "", "true", 2.5, false, "", ""];
 
 
 //Eliminar modulo.

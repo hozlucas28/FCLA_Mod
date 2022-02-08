@@ -15,9 +15,9 @@
   if ((isNull _attachedObject) || !(_attachedObject in vehicles) || (_hasNotWeapons) || (_hasNotMagazines)) exitWith {["ERROR! EL MODULO DEBE SER COLOCADO SOBRE UN VEHICULO COMPATIBLE"] call ZEN_Common_fnc_showMessage;};
 
 
-  _vehicleName = getText (configFile >> "CfgVehicles" >> (typeOf _attachedObject) >> "displayName");
-  _vehicleWeaponsNames = [];
+  _vehicleName = toUpper (getText (configFile >> "CfgVehicles" >> (typeOf _attachedObject) >> "displayName"));
   _vehicleWeapons = weapons _attachedObject;
+  _vehicleWeaponsNames = [];
   {
     _weaponsName = getText (configFile >> "CfgWeapons" >> _x >> "displayName");
     _vehicleWeaponsNames pushBack _weaponsName;

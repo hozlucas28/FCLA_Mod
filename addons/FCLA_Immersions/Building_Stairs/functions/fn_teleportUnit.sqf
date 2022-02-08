@@ -39,7 +39,6 @@ _this spawn {
   detach _unit;
   _unit allowDamage true;
   _unit setCaptive false;
-  cutText ["", "BLACK IN"];
   playSound "FCLA_Close_Door";
   [_unit, []] call ACE_Common_fnc_unhideUnit;
   [false] call ACE_Common_fnc_disableUserInput;
