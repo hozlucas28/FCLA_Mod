@@ -29,4 +29,4 @@ if (_serverName in ["", "SERVIDOR OFICIAL FCLA"]) exitWith {};
       [parseText "<t font='PuristaBold' align='center' size='1.5' color='#58D68D'>| Comunidad FCLA |</t><br/><t font='PuristaMedium' align='center' size='0.997'>Te invitamos a formar parte de nuestra comunidad, ingresa a nuestra pagina oficial en Wix para mas informacion.<br/>Gracias por leer.</t>", [1.10288, 1.20894, 0.6, 1], nil, 28, [2, 2], 0] spawn BIS_fnc_textTiles;
     }, 60] call CBA_fnc_addPerFrameHandler;
   }] call CBA_fnc_waitUntilAndExecute;
-}, [], 2] call CBA_fnc_waitAndExecute;
+}, [], 5] call CBA_fnc_waitAndExecute;

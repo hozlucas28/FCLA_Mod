@@ -68,7 +68,7 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 
 		if (_findedUID <= -1) then {
 			player action ["WeaponOnBack", player];
-			cutText ["", "BLACK FADED", 3600, true, false];
+			"FCLA_Introduction" cutText ["", "BLACK FADED", 3600, true, false];
 			player setVariable ["FCLA_Playing_Introduction", true, true];
 
 			[{
@@ -80,7 +80,7 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			if ((FCLA_Introduction_Title == "") || (FCLA_Introduction_Subtitle == "")) exitWith {
 				_videoStatus = [FCLA_Introductory_Video] spawn BIS_fnc_playVideo;
 				waitUntil {scriptDone _videoStatus};
-				cutText ["", "BLACK IN", 3, true, false];
+				"FCLA_Introduction" cutText ["", "BLACK IN", 3, true, false];
 				player setVariable ["FCLA_Playing_Introduction", nil, true];
 
 				[{
@@ -115,7 +115,7 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			]] spawn BIS_fnc_typeText;
 
 			sleep 5;
-			cutText ["", "BLACK IN", 3, true, false];
+			"FCLA_Introduction" cutText ["", "BLACK IN", 3, true, false];
 
 			[{
 				[player, []] call ACE_Common_fnc_unhideUnit;
@@ -141,7 +141,7 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			if (FCLA_Show_On_Reconnect == "NONE") exitWith {};
 
 			player action ["WeaponOnBack", player];
-			cutText ["", "BLACK FADED", 3600, true, false];
+			"FCLA_Introduction" cutText ["", "BLACK FADED", 3600, true, false];
 			player setVariable ["FCLA_Playing_Introduction", true, true];
 
 			[{
@@ -153,7 +153,7 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			if ((_title == "") || (_subtitle == "")) exitWith {
 				_videoStatus = [_introductoryVideo] spawn BIS_fnc_playVideo;
 				waitUntil {scriptDone _videoStatus};
-				cutText ["", "BLACK IN", 3, true, false];
+				"FCLA_Introduction" cutText ["", "BLACK IN", 3, true, false];
 				player setVariable ["FCLA_Playing_Introduction", nil, true];
 
 				[{
@@ -188,7 +188,7 @@ if (isNil "FCLA_Introduction_Subtitle") then {["FCLA_Introduction_Subtitle", _su
 			]] spawn BIS_fnc_typeText;
 
 			sleep 5;
-			cutText ["", "BLACK IN", 3, true, false];
+			"FCLA_Introduction" cutText ["", "BLACK IN", 3, true, false];
 			player setVariable ["FCLA_Playing_Introduction", nil, true];
 
 			[{

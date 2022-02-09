@@ -21,7 +21,7 @@
     if (!(_player inArea [_logic, _rad, _rad, 0, false, _rad])) exitWith {};
 
     sleep 1;
-    cutText ["", "WHITE OUT", 1];
+    "FCLA_EMP" utText ["", "WHITE OUT", 1];
     if (isDamageAllowed _player) then {[_player, 0.75] call ACE_Medical_fnc_adjustPainLevel;};
     hint parseText "<t color='#FF0000'>Fuiste afectado por un PEM.<br/>Tus accesorios electronicos se han destruido.</t>";
     {playSound _x;} forEach ["FCLA_Radiation", "Earthquake_01"];
