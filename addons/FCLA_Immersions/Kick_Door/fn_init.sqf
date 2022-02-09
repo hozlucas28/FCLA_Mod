@@ -19,7 +19,7 @@ _this spawn {
   _handgunWeapon = handgunWeapon _this;
   _secondaryWeapon = secondaryWeapon _this;
   _disableByEditor = _building getVariable ["FCLA_Disable_Kick_Door", false];
-  _beginPos = ASLtoATL eyepos _this;
+  _beginPos = eyepos _this;
   _endPos = _beginPos vectorAdd (eyeDirection _this vectorMultiply 1.5);
   if ((_currentWeapon == "") || (_currentWeapon == _secondaryWeapon) || (_disableByEditor)) exitWith {};
 
@@ -44,13 +44,15 @@ _this spawn {
 
     if (!(call FCLA_Common_fnc_isDoorLocked) || (_successRate <= FCLA_Kick_Door_Success_Rate)) then {
       _stamina = (-10 / ACE_Advanced_Fatigue_performanceFactor) / 100;
-      _selectDoor = format ["%1_rot", ((_intersects select 0) select 0)];
+      //_selectDoor = format ["%1_rot", ((_intersects select 0) select 0)];
       ACE_Advanced_Fatigue_anReserve = ACE_Advanced_Fatigue_anReserve + (2300 * _stamina);
       ACE_Advanced_Fatigue_anFatigue = ((ACE_Advanced_Fatigue_anFatigue - (_stamina * 0.8)) min 0.8) max ACE_Advanced_Fatigue_anFatigue;
 
       enableCamShake true;
       addCamShake [5, 1.5, 100];
-      _building animate [_selectDoor, 1, 8];
+      //_building animate [_selectDoor, 1, 8];
+      _building animate [(_intersects select 0) select 0, 1, 8];
+      _building animate [format ["%1_rot", (_intersects select 0) select 0], 1, 8];
       [_soundSource, "FCLA_Smash_Door", 1, 50, true] call FCLA_Common_fnc_globalSay3D;
     } else {
       _stamina = (-5 / ACE_Advanced_Fatigue_performanceFactor) / 100;
