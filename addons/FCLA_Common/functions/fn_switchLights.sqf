@@ -42,30 +42,39 @@ params [
 //Verificar argumento.
 _state = toUpper _state;
 _centerPos = [_center] call CBA_fnc_getPos;
-_allVehicles = nearestObjects [_centerPos, ["LandVehicle", "Air", "Ship"], worldSize];
-_allBuildings = nearestObjects [_centerPos, ["Building"], worldSize];
 if ((_state != "OFF") && (_state != "ON")) exitWith {false};
 
 
 
 //Convertir estado al formato correcto.
 _state = switch (_state) do {
-  case "OFF": {false};
-  case "ON": {true};
+  case "OFF": {false;};
+  case "ON": {true;};
 };
 
 
 //Obtener lamparas y vehiculos.
 _lampsInRad = if (_rad isEqualType 0) then {
-  if (_rad > 0) then {nearestObjects [_centerPos, ["Building"], _rad];} else {_allBuildings};
+  if (_rad > 0) then {nearestObjects [_centerPos, ["Building"], _rad];} else {nearestObjects [_centerPos, ["Building"], worldSize];};
 } else {
+  _allBuildings = nearestObjects [_centerPos, ["Building"], worldSize];
   _allBuildings select {_x inArea [_center, _rad select 0, _rad select 1, _rad select 2, _rad select 3, _rad select 4]};
 };
 
-_vehiclesInRad = if (_rad isEqualType 0) then {
-  if (_rad > 0) then {nearestObjects [_centerPos, ["LandVehicle", "Air", "Ship"], _rad];} else {_allVehicles};
+_vehiclesInRad = if (!_excludeVehicles) then {
+  if (_rad isEqualType 0) then {
+    if (_rad > 0) then {vehicles select {(_centerPos distance _x) <= _rad};} else {vehicles};
+  } else {
+    vehicles select {_x inArea [_center, _rad select 0, _rad select 1, _rad select 2, _rad select 3, _rad select 4]};
+  };
+};
+
+
+//Encender/Apagar luces.
+if (!_excludeVehicles) then {
+  ["FCLA_Switch_Lights", [_lampsInRad + _vehiclesInRad, _state]] call CBA_fnc_globalEventJIP;
 } else {
-  _allVehicles select {_x inArea [_center, _rad select 0, _rad select 1, _rad select 2, _rad select 3, _rad select 4]};
+  ["FCLA_Switch_Lights", [_lampsInRad, _state]] call CBA_fnc_globalEventJIP;
 };
 
 
@@ -78,9 +87,4 @@ if (!_excludeVehicles) then {
   } forEach _vehiclesInRad;
   if (_state) then {{_x enableAI "LIGHTS";} forEach _crews;} else {{_x disableAI "LIGHTS";} forEach _crews;};
 };
-
-
-//Encender/Apagar luces.
-_lightsToSwitch = if (!_excludeVehicles) then {_lampsInRad + _vehiclesInRad;} else {_lampsInRad;};
-["FCLA_Switch_Lights", [_lightsToSwitch, _state]] call CBA_fnc_globalEventJIP;
 true
