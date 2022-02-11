@@ -9,8 +9,8 @@
 
 class FCLA_MRAWS_White_Flare_545_F: MRAWS_HE_F {
 	author = "hozlucas28";
-	displayName = "Proyectil MAAWS ILLUM 545 (Blanco)";
-	descriptionShort = "Tipo: cohete MAAWS ILLUM 545 (Blanco)<br/>Proyectiles: 1<br/>Se usa en: MAAWS";
+	displayName = "Proyectil MAAWS ILLUM 545 (Blanca)";
+	descriptionShort = "Tipo: cohete MAAWS ILLUM 545 (Blanca)<br/>Proyectiles: 1<br/>Se usa en: MAAWS";
 	model = "\a3\Weapons_F_Tank\Launchers\MRAWS\rocket_MRAWS_HE_F_item.p3d";
 	picture = "\FCLA_Ammo\Launcher\pictures\FCLA_MRAWS_White_Flare_545_F.paa";
 	ammo = "FCLA_R_MRAAWS_White_Flare_545_F";
@@ -37,8 +37,8 @@ class FCLA_MRAWS_Green_Flare_545_F: MRAWS_HE_F {
 
 class FCLA_MRAWS_Red_Flare_545_F: MRAWS_HE_F {
 	author = "hozlucas28";
-	displayName = "Proyectil MAAWS ILLUM 545 (Rojo)";
-	descriptionShort = "Tipo: cohete MAAWS ILLUM 545 (Rojo)<br/>Proyectiles: 1<br/>Se usa en: MAAWS";
+	displayName = "Proyectil MAAWS ILLUM 545 (Roja)";
+	descriptionShort = "Tipo: cohete MAAWS ILLUM 545 (Roja)<br/>Proyectiles: 1<br/>Se usa en: MAAWS";
 	model = "\a3\Weapons_F_Tank\Launchers\MRAWS\rocket_MRAWS_HE_F_item.p3d";
 	picture = "\FCLA_Ammo\Launcher\pictures\FCLA_MRAWS_Red_Flare_545_F.paa";
 	ammo = "FCLA_R_MRAAWS_Red_Flare_545_F";
@@ -51,8 +51,8 @@ class FCLA_MRAWS_Red_Flare_545_F: MRAWS_HE_F {
 
 class FCLA_MRAWS_Yellow_Flare_545_F: MRAWS_HE_F {
 	author = "hozlucas28";
-	displayName = "Proyectil MAAWS ILLUM 545 (Amarillo)";
-	descriptionShort = "Tipo: cohete MAAWS ILLUM 545 (Amarillo)<br/>Proyectiles: 1<br/>Se usa en: MAAWS";
+	displayName = "Proyectil MAAWS ILLUM 545 (Amarilla)";
+	descriptionShort = "Tipo: cohete MAAWS ILLUM 545 (Amarilla)<br/>Proyectiles: 1<br/>Se usa en: MAAWS";
 	model = "\a3\Weapons_F_Tank\Launchers\MRAWS\rocket_MRAWS_HE_F_item.p3d";
 	picture = "\FCLA_Ammo\Launcher\pictures\FCLA_MRAWS_Yellow_Flare_545_F.paa";
 	ammo = "FCLA_R_MRAAWS_Yellow_Flare_545_F";
