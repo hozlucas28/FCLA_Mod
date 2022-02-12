@@ -14,7 +14,7 @@ if (hasInterface) then {
     if ((!FCLA_visionMode_Sounds) || (_hasNotNVGBattery) || (_severalConditions) || (_visionModeDesactivated)) exitWith {};
 
     if (isNull objectParent _unit) then {
-      [_unit, "FCLA_Vision_Mode_Changed", 2, 200] call FCLA_Effects_fnc_globalSayES;
+      [_unit, "FCLA_Vision_Mode_Changed", 200] call FCLA_Effects_fnc_globalSayES;
     } else {
       playSound "FCLA_Vision_Mode_Changed";
     };

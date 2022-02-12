@@ -28,5 +28,5 @@ if ((_isExplosive) && (_isPlayer)) then {
 if (_currentHeadgear == "") exitWith {};
 if ((FCLA_Helmet_Hit_Sounds) && (_helmetProtection >= 2)) then {
   _randomSound = selectRandom ["FCLA_Impact_Helmet_1", "FCLA_Impact_Helmet_2", "FCLA_Impact_Helmet_3"];
-  [_target, _randomSound, nil, 500] call FCLA_Effects_fnc_globalSayES;
+  [_target, _randomSound, 500] call FCLA_Effects_fnc_globalSayES;
 };

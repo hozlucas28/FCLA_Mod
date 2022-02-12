@@ -103,42 +103,6 @@ class CfgVehicles {
 |                            CONTROLADORES DE EVENTOS                            |
 |********************************************************************************/
 
-class Extended_Put_EventHandlers {
-	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_putES;};";
-	};
-};
-
-class Extended_Take_EventHandlers {
-	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_takeES;};";
-	};
-};
-
-class Extended_Engine_EventHandlers {
-	class Plane {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_enginePlanes;};";
-	};
-};
-
-class Extended_Killed_Eventhandlers {
-	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_killedES;};";
-	};
-};
-
-class Extended_HitPart_EventHandlers {
-	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_hitPartES;};";
-	};
-};
-
-class Extended_Respawn_Eventhandlers {
-	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_respawnNVG;};";
-	};
-};
-
 class Extended_PreInit_EventHandlers {
 	class FCLA_Effects {
 		init = "call FCLA_Effects_fnc_XEHPreInit;";
@@ -148,17 +112,5 @@ class Extended_PreInit_EventHandlers {
 class Extended_PostInit_EventHandlers {
 	class FCLA_Effects {
 		init = "call FCLA_Effects_fnc_XEHPostInit;";
-	};
-};
-
-class Extended_InventoryClosed_EventHandlers {
-	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryClosedES;};";
-	};
-};
-
-class Extended_InventoryOpened_EventHandlers {
-	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Effects_fnc_inventoryOpenedES;};";
 	};
 };
