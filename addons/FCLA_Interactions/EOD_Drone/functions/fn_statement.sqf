@@ -18,7 +18,7 @@ _statementOnFinish = {
   (_this select 0) params ["_target"];
   _vehicle = vehicle _target;
   _headRealPosition = _vehicle modelToWorld (_vehicle selectionPosition "arm3");
-  _allMines = (nearestObjects [_headRealPosition, [], 5]) select {_x in allMines};
+  _allMines = (nearestObjects [_headRealPosition, [], 5, true]) select {_x in allMines};
   _areNotNearMines = (count _allMines) <= 0;
   if (_areNotNearMines) exitWith {};
 

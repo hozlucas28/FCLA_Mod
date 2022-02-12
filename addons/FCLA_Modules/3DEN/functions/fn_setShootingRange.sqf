@@ -21,7 +21,7 @@ if ((is3DEN) || (isNull _module) || (_synchronizedObjects isEqualTo []) || (!_is
 //Verificar argumento.
 _modulePos = getPos _module;
 _moduleArea = _module getVariable ["objectArea", [0, 0, 0, false, -1]];
-_nearTargets = nearestObjects [_modulePos, ["TargetBase", "Target_Swivel_01_base_F"], selectMax [_moduleArea select 0, _moduleArea select 1]];
+_nearTargets = nearestObjects [_modulePos, ["TargetBase", "Target_Swivel_01_base_F"], selectMax [_moduleArea select 0, _moduleArea select 1], true];
 _targetsInArea = _nearTargets select {_x inArea [_module, _moduleArea select 0, _moduleArea select 1, _moduleArea select 2, _moduleArea select 3, _moduleArea select 4]};
 _compatibleSynchronizedObjects = _synchronizedObjects select {_x isKindOf "Thing"};
 if ((count _compatibleSynchronizedObjects) != 1) exitWith {["FCLA_Module_Shooting_Range", "- MODULO: CAMPO DE TIRO", "¡Error! El/Un modulo 'Campo de tiro' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};

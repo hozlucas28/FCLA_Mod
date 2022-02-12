@@ -12,7 +12,7 @@
 params ["_target", "_player"];
 _vehicle = vehicle _target;
 _headRealPosition = _vehicle modelToWorld (_vehicle selectionPosition "arm3");
-_allMines = (nearestObjects [_headRealPosition, [], 5]) select {_x in allMines};
+_allMines = (nearestObjects [_headRealPosition, [], 5, true]) select {_x in allMines};
 _areNotNearMines = (count _allMines) <= 0;
 if (_areNotNearMines) exitWith {false};
 _nearestMine = _allMines select 0;

@@ -18,7 +18,7 @@ class Land_MultistoryBuilding_01_F: House_F {
       showWindow = 1;
       onlyForPlayer = 1;
       shortcut = "";
-      condition = "!(this getVariable ['FCLA_Disable_Stairs_Actions', false]) && !((call CBA_fnc_currentUnit) getVariable ['FCLA_inStairs', false]) && (isNull objectParent (call CBA_fnc_currentUnit)) && (((this modelToWorld [-17.4587, -17.6226, -21.0173]) distance (getPosATL (call CBA_fnc_currentUnit))) <= 2);"; 
+      condition = "!(this getVariable ['FCLA_Disable_Stairs_Actions', false]) && !((call CBA_fnc_currentUnit) getVariable ['FCLA_inStairs', false]) && (isNull objectParent (call CBA_fnc_currentUnit)) && (((this modelToWorld [-17.4587, -17.6226, -21.0173]) distance (getPosATL (call CBA_fnc_currentUnit))) <= 2);";
       statement = "[call CBA_fnc_currentUnit, this, this modelToWorld [-12.3358, -17.6931, -14.6502], (getDir this)+90, 'Up'] spawn FCLA_Immersions_fnc_teleportUnitBS;";
     };
 
@@ -311,7 +311,7 @@ class Land_Shop_City_05_F: House_F {
       showWindow = 1;
       onlyForPlayer = 1;
       shortcut = "";
-      condition = "!(this getVariable ['FCLA_Disable_Stairs_Actions', false]) && !((call CBA_fnc_currentUnit) getVariable ['FCLA_inStairs', false]) && (isNull objectParent (call CBA_fnc_currentUnit)) &&  (([this modelToWorld [-5.20329, 15.4759, -3.70688]) distance (getPosATL (call CBA_fnc_currentUnit))) <= 2);";
+      condition = "!(this getVariable ['FCLA_Disable_Stairs_Actions', false]) && !((call CBA_fnc_currentUnit) getVariable ['FCLA_inStairs', false]) && (isNull objectParent (call CBA_fnc_currentUnit)) && (((this modelToWorld [-5.20329, 15.4759, -3.70688]) distance (getPosATL (call CBA_fnc_currentUnit))) <= 2);";
       statement = "[call CBA_fnc_currentUnit, this, this modelToWorld [-9.18351, 15.0192, -7.47618], (getDir this)+180, 'Down'] spawn FCLA_Immersions_fnc_teleportUnitBS;";
     };
 

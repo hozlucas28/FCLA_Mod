@@ -55,7 +55,7 @@
     _arr = (lineIntersectsWith [_playerEyePos, _endPos, _player, objNull, true]);
     _pass = true;
     _obstacle = "";
-    _nearestFoliage = nearestTerrainObjects [_player, ["bush"], 7];
+    _nearestFoliage = nearestTerrainObjects [_player, ["Tree", "Small tree", "Bush"], 5, true, true];
     if (count _arr > 0) then {
       _obstacle = _arr select 0;
       if (_obstacle in _nearestFoliage) then {_pass = false;};

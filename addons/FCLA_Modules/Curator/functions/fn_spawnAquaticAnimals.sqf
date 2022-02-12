@@ -18,11 +18,11 @@ if (_isTHASharksModNotLoaded) exitWith {};
    ["COMBO", "Seleccionar animal",
     [
      [
-      "BlueTangFish",
-      "BlueTangSchool",
       "ButterflyFish",
       "Napoleonwrasse_small",
+      "BlueTangFish",
       "Napoleonwrasse",
+      "BlueTangSchool",
       "HammerheadShark",
       "HammerheadShark3",
       "GreatWhiteShark",

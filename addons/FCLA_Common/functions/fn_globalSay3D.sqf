@@ -59,7 +59,7 @@ _source setVariable ["FCLA_Playing_Sound", true, true];
 //Detener sonido.
 [{
   params ["_source", "_soundObj"];
-  _areNotAlive = (!alive _source) || (!alive _soundObj);
+  _areNotAlive = (!alive _source) || (isNull _soundObj);
   _isSoundFinished = !(_source getVariable ["FCLA_Playing_Sound", false]);
   (_areNotAlive) || (_isSoundFinished);
 }, {

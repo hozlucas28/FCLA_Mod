@@ -31,13 +31,12 @@ _disableStairsActions = _module getVariable ["FCLA_Disable_Stairs_Actions", fals
 //Asignar rasgos.
 switch (_mode) do {
   case "init": {
-    _building = nearestObject [_module, "Building"];
-    _nearesTerrainObjects = nearestTerrainObjects [_module, [], 50];
-    if ((_module distance _building) > 10) exitWith {["FCLA_Module_Building_Traits", "- MODULO: ASIGNAR RASGOS (ACE)", "¡Error! El/Un modulo 'Asignar rasgos' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
-    _building setVariable ["ACE_isRepairFacility", _isRepairFacility, true];
-    _building setVariable ["FCLA_Disable_Kick_Door", _disableKickDoor, true];
-    _building setVariable ["ACE_Medical_isMedicalFacility", _isMedicalFacility, true];
-    _building setVariable ["FCLA_Disable_Stairs_Actions", _disableStairsActions, true];
+    _nearestBuilding = nearestObject [_module, "Building"];
+    if ((_module distance _nearestBuilding) > 10) exitWith {["FCLA_Module_Building_Traits", "- MODULO: ASIGNAR RASGOS (ACE)", "¡Error! El/Un modulo 'Asignar rasgos' no se pudo inicializar con exito."] call FCLA_Common_fnc_errorMessage;};
+    _nearestBuilding setVariable ["ACE_isRepairFacility", _isRepairFacility, true];
+    _nearestBuilding setVariable ["FCLA_Disable_Kick_Door", _disableKickDoor, true];
+    _nearestBuilding setVariable ["ACE_Medical_isMedicalFacility", _isMedicalFacility, true];
+    _nearestBuilding setVariable ["FCLA_Disable_Stairs_Actions", _disableStairsActions, true];
     deleteVehicle _module;
   };
 
@@ -47,22 +46,21 @@ switch (_mode) do {
   };
 
   case "attributesChanged3DEN": {
-    _building = nearestObject [_module, "Building"];
-    _buildingPos = getPos _building;
+    _nearestBuilding = nearestObject [_module, "Building"];
+    _nearestBuildingPos = getPos _nearestBuilding;
     _oldSelectedBuilding = _module getVariable ["FCLA_Old_Building", objNull];
-    _nearesTerrainObjects = nearestTerrainObjects [_module, [], 50];
     _module setVariable ["FCLA_isDragged", nil, true];
 
-    if ((_oldSelectedBuilding == _building) || (_module distance _building) > 10) exitWith {};
-    _module set3DENAttribute ["position", _buildingPos];
-    _module setVariable ["FCLA_Old_Building", _building, true];
-    if (_notifyBuilding) then {systemChat format ["- Construccion seleccionada: %1.", (getText (configFile >> "CfgVehicles" >> (typeOf _building) >> "displayName"))];};
+    if ((_oldSelectedBuilding == _nearestBuilding) || (_module distance _nearestBuilding) > 10) exitWith {};
+    _module set3DENAttribute ["position", _nearestBuildingPos];
+    _module setVariable ["FCLA_Old_Building", _nearestBuilding, true];
+    if (_notifyBuilding) then {systemChat format ["- Construccion seleccionada: %1.", (getText (configFile >> "CfgVehicles" >> (typeOf _nearestBuilding) >> "displayName"))];};
 
-    [_module, _building, _buildingPos] spawn {
-      params ["_module", "_building", "_buildingPos"];
-      while {(_module getVariable ["FCLA_Old_Building", objNull]) == _building} do {
+    [_module, _nearestBuilding, _nearestBuildingPos] spawn {
+      params ["_module", "_nearestBuilding", "_nearestBuildingPos"];
+      while {(_module getVariable ["FCLA_Old_Building", objNull]) == _nearestBuilding} do {
         _isNotDraggingModule = !(_module getVariable ["FCLA_isDragged", false]);
-        if (_isNotDraggingModule) then {_module set3DENAttribute ["position", _buildingPos];};
+        if (_isNotDraggingModule) then {_module set3DENAttribute ["position", _nearestBuildingPos];};
         sleep 0.1;
       };
     };

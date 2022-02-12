@@ -27,9 +27,14 @@ class FCLA_Module_Create_Injuries: Module_F {
       typeName = "STRING";
       property = "FCLA_Type_Of_Injury";
       displayName = "Tipo de lesion";
-      defaultValue = """grenade""";
+      defaultValue = """none""";
 
      class Values {
+       class None {
+         name = "Ninguna";
+         value = "none";
+       };
+
        class Falling {
          name = "Caida";
          value = "falling";
@@ -110,6 +115,46 @@ class FCLA_Module_Create_Injuries: Module_F {
      typeName = "BOOL";
      property = "FCLA_Force_Unconsciousness";
      displayName = "Forzar inconsciencia";
+     defaultValue = "false";
+   };
+
+   class FCLA_Pneumothorax: CheckBox {
+     tooltip = "";
+     typeName = "BOOL";
+     property = "FCLA_Pneumothorax";
+     displayName = "Neumotorax";
+     defaultValue = "false";
+   };
+
+   class FCLA_Airway_Occluded: CheckBox {
+     tooltip = "";
+     typeName = "BOOL";
+     property = "FCLA_Airway_Occluded";
+     displayName = "Via aerea ocluida";
+     defaultValue = "false";
+   };
+
+   class FCLA_Hemopneumothorax: CheckBox {
+     tooltip = "";
+     typeName = "BOOL";
+     property = "FCLA_Hemopneumothorax";
+     displayName = "Hemoneumotorax";
+     defaultValue = "false";
+   };
+
+   class FCLA_Tension_Pneumothorax: CheckBox {
+     tooltip = "";
+     typeName = "BOOL";
+     property = "FCLA_Tension_Pneumothorax";
+     displayName = "Tension neumotoraxica";
+     defaultValue = "false";
+   };
+
+   class FCLA_Airway_Obstruction: CheckBox {
+     tooltip = "";
+     typeName = "BOOL";
+     property = "FCLA_Airway_Obstruction";
+     displayName = "Obstrucción de la via aerea";
      defaultValue = "false";
    };
 

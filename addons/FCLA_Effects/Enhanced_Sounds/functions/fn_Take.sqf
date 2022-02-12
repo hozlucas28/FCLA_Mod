@@ -10,7 +10,7 @@
 
 //Variables de referencia.
 params ["_unit", "_container", "_item"];
-if ((!FCLA_Inventory_Sounds) || (!isNull findDisplay 312)) exitWith {};
+if ((!FCLA_Inventory_Sounds) || (_unit != player) || (!isNull findDisplay 312)) exitWith {};
 
 
 
