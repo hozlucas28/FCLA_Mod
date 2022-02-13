@@ -9,7 +9,7 @@
 
 class V_EOD_FCLA: V_EOD_olive_F {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivacionn de explosivos [FCLA]";
+  displayName = "Chaleco de desactivacion de explosivos [FCLA]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_FCLA.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_FCLA.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
@@ -29,7 +29,7 @@ class V_EOD_FCLA: V_EOD_olive_F {
 
 class V_EOD_Takana: V_EOD_FCLA {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivacionn de explosivos [Takana]";
+  displayName = "Chaleco de desactivacion de explosivos [Takana]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_Takana.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_Takana.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
@@ -41,7 +41,7 @@ class V_EOD_Takana: V_EOD_FCLA {
 
 class V_EOD_Jaguar: V_EOD_FCLA {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivacionn de explosivos [Jaguar]";
+  displayName = "Chaleco de desactivacion de explosivos [Jaguar]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_Jaguar.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_Jaguar.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
@@ -53,7 +53,7 @@ class V_EOD_Jaguar: V_EOD_FCLA {
 
 class V_EOD_Condor: V_EOD_FCLA {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivacionn de explosivos [Condor]";
+  displayName = "Chaleco de desactivacion de explosivos [Condor]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_Condor.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_Condor.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
@@ -65,7 +65,7 @@ class V_EOD_Condor: V_EOD_FCLA {
 
 class V_EOD_Salamandra: V_EOD_FCLA {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivacionn de explosivos [Salamandra]";
+  displayName = "Chaleco de desactivacion de explosivos [Salamandra]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_Salamandra.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_Salamandra.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
@@ -77,7 +77,7 @@ class V_EOD_Salamandra: V_EOD_FCLA {
 
 class V_EOD_Anaconda: V_EOD_FCLA {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivacionn de explosivos [Anaconda]";
+  displayName = "Chaleco de desactivacion de explosivos [Anaconda]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_Anaconda.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_Anaconda.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
@@ -89,7 +89,7 @@ class V_EOD_Anaconda: V_EOD_FCLA {
 
 class V_EOD_Quetzal: V_EOD_FCLA {
   author = "hozlucas28";
-  displayName = "Chaleco de desactivacionn de explosivos [Quetzal]";
+  displayName = "Chaleco de desactivacion de explosivos [Quetzal]";
   picture = "\FCLA_Vests\Vanilla\data\pictures\V_EOD_Quetzal.paa";
   hiddenSelections[] = {"camo", "camo2"};
   hiddenSelectionsTextures[] = {"\FCLA_Vests\Vanilla\data\V_EOD_Quetzal.paa", "\a3\characters_f_orange\vests\data\v_eod_protection_olive_co.paa"};
