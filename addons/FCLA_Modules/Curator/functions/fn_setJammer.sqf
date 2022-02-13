@@ -3,8 +3,8 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un modulo para colocar un jammer que bloquea/interfiere las senales de
- * comunicacion de las radios de onda corta y larga, incluyendo vehiculos.
+ * Coloca un jammer que bloquea/interfiere las senales de comunicacion de las
+ * radios de onda corta y larga, incluyendo vehiculos.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

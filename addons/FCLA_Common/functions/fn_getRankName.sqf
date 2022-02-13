@@ -15,7 +15,8 @@
  * [player] call FCLA_Common_fnc_getRankName;
  *
  * Note:
- * El rango retornado es el que le corresponde dentro del juego.
+ * El rango retornado es el que le corresponde dentro del juego. El mismo
+ * es devuelto en mayúsculas.
  *
  * Public: [Yes]
 ---------------------------------------------------------------------------- */

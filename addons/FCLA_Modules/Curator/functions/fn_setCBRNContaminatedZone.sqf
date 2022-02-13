@@ -3,7 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un modulo que genera una zona contaminada.
+ * Genera una zona contaminada.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */

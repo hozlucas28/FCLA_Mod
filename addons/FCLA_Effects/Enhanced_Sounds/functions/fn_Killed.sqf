@@ -25,13 +25,13 @@ _this spawn {
   if (!(alive _vehicle) && ((_vehicle isKindOf "Tank") || (_vehicle isKindOf "Wheeled_APC_F") || (_vehicle isKindOf "Helicopter") || (_vehicle isKindOf "Plane"))) exitWith {
     sleep (2 + random 2);
     _randomSound = selectRandom ["FCLA_Burn_Inside_1", "FCLA_Burn_Inside_2", "FCLA_Burn_Inside_3", "FCLA_Burn_Inside_4", "FCLA_Burn_Inside_5", "FCLA_Burn_Inside_6", "FCLA_Burn_Inside_7", "FCLA_Burn_Inside_8", "FCLA_Burn_Inside_9", "FCLA_Burn_Inside_10"];
-    [_vehicle, _randomSound, 1250] call FCLA_Effects_fnc_globalSayES;
+    [_vehicle, _randomSound, 500] call FCLA_Effects_fnc_globalSayES;
 
     for "_i" from 1 to 2 do {
       _randomTime = if (_i == 1) then {0.2 + random 1.7} else {0.2 + random 1};;
       sleep _randomTime;
       _randomSound = selectRandom ["FCLA_Inside_Hit_1", "FCLA_Inside_Hit_2", "FCLA_Inside_Hit_3", "FCLA_Inside_Hit_4"];
-      [_vehicle, _randomSound, 1250] call FCLA_Effects_fnc_globalSayES;
+      [_vehicle, _randomSound, 500] call FCLA_Effects_fnc_globalSayES;
     };
   };
 

@@ -40,7 +40,7 @@ if (_rad <= 0) exitWith {false};
 
 //Determina las entidades a ocultar.
 _centerPos = [_center] call CBA_fnc_getPos;
-_nearEntities = ((nearestObjects [_centerPos, [], _rad, true]) - (nearestTerrainObjects [_centerPos, [], _rad, false, fase])) - allPlayers;
+_nearEntities = ((nearestObjects [_centerPos, [], _rad, true]) - (nearestTerrainObjects [_centerPos, [], _rad, false, false])) - allPlayers;
 _entitiesToHide = switch (_excludeAI) do {
 	case true: {_nearEntities - allUnits;};
 	case false: {_nearEntities;};

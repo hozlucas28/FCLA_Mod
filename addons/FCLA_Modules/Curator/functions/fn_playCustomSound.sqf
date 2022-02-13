@@ -3,8 +3,7 @@
  * Author: hozlucas28
  *
  * Description:
- * Crea un modulo para reproducir un sonido personalizado de manera
- * tridimensional.
+ * Reproduce un sonido personalizado de manera tridimensional.
  *
  * Public: [No]
 ---------------------------------------------------------------------------- */
