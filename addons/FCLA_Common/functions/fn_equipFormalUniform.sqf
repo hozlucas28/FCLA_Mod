@@ -52,7 +52,6 @@ _selectedUniform = switch (true) do {
 //Equipar.
 removeVest _unit;
 removeUniform _unit;
-removeGoggles _unit;
 removeAllItems _unit;
 removeBackpack _unit;
 removeHeadgear _unit;
