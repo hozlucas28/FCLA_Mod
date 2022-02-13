@@ -7,9 +7,9 @@
 
 /* ---------------------- CASCO DE PILOTO (AVANZADO) ----------------------- */
 
-class H_PilotHelmetFighter_Advanced: H_PilotHelmetFighter_B {
+class H_PilotHelmetFighter_Advanced: H_PilotHelmetHeli_B {
   author = "hozlucas28";
-  displayName = "Casco de piloto de helicoptero [OTAN]";
+  displayName = "Casco de piloto de helicoptero (avanzado) [FCLA] [OTAN]";
   hiddenSelections[] = {};
   hiddenSelectionsTextures[] = {};
   picture = "\FCLA_Headgears\Custom\data\pictures\H_PilotHelmetFighter_Advanced.paa";
