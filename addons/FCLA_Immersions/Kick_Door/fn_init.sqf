@@ -17,11 +17,11 @@ _this spawn {
   _currentWeapon = currentWeapon _this;
   _primaryWeapon = primaryWeapon _this;
   _handgunWeapon = handgunWeapon _this;
-  _secondaryWeapon = secondaryWeapon _this;
   _disableByEditor = _building getVariable ["FCLA_Disable_Kick_Door", false];
+  _isNotKindOfBuilding = !(_building isKindOf "Building");
   _beginPos = if (surfaceIsWater _pos) then {eyepos _this;} else {ASLtoATL eyepos _this;};
   _endPos = _beginPos vectorAdd (eyeDirection _this vectorMultiply 1.5);
-  if ((_currentWeapon == "") || (_currentWeapon == _secondaryWeapon) || (_disableByEditor)) exitWith {};
+  if ((_disableByEditor) || (_isNotKindOfBuilding) || !(_currentWeapon in [_primaryWeapon, _handgunWeapon])) exitWith {};
 
 
   private "_intersects";
@@ -31,7 +31,8 @@ _this spawn {
   } forEach ["VIEW", "GEOM", "FIRE"];
 
 
-  if (count (_intersects select 0) > 0) then {
+  _isNotOpen = ((_building animationPhase (format ["%1_rot", (_intersects select 0) select 0])) <= 0) && ((_building animationPhase ([(_intersects select 0) select 0, "door", "door_"] call CBA_fnc_replace)) <= 0);
+  if ((_isNotOpen) && (count (_intersects select 0) > 0)) then {
     switch (_currentWeapon) do {
     	case _primaryWeapon: {[_this, "FCLA_Animation_Kick_Door_Rifle", "SwitchMove"] call FCLA_Common_fnc_playAnimation;};
     	case _handgunWeapon: {[_this, "FCLA_Animation_Kick_Door_Pistol", "SwitchMove"] call FCLA_Common_fnc_playAnimation;};

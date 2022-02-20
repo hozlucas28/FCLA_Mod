@@ -22,28 +22,6 @@
 
 
 [
-	"FCLA_TS_Channel_Name", "EDITBOX",
-	["Canal de TeamSpeak", "Nombre del canal de TeamSpeak que se usara durante la mision."],
-	["FCLA Desarrollo", "[ x ] General"],
-	"Servidor Oficial",
-	GLOBAL,
-	{["TF_Radio_Channel_Name", _this] call CBA_fnc_publicVariable;},
-	true
-] call CBA_fnc_addSetting;
-
-
-[
-	"FCLA_TS_Channel_Password", "EDITBOX",
-	["Contrasena del canal", "Contrasena del canal de TeamSpeak que se usara durante la mision."],
-	["FCLA Desarrollo", "[ x ] General"],
-	"12345",
-	GLOBAL,
-	{["Radio_Channel_Password", _this] call CBA_fnc_publicVariable;},
-	true
-] call CBA_fnc_addSetting;
-
-
-[
 	"FCLA_Donations_Message", "CHECKBOX",
 	["Mensaje de donaciones", "Al activar se generara un mensaje en forma de recordatorio sobre las donaciones al servidor, el cual se repetira segun el tiempo indicado debajo."],
 	["FCLA Desarrollo", "[ x ] General"],
