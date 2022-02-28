@@ -20,7 +20,6 @@
 #include "\FCLA_Modules\3DEN\modules\Save_Position.hpp"
 #include "\FCLA_Modules\3DEN\modules\Show_Subtitle.hpp"
 #include "\FCLA_Modules\3DEN\modules\Switch_Lights.hpp"
-#include "\FCLA_Modules\3DEN\modules\Shooting_Range.hpp"
 #include "\FCLA_Modules\3DEN\modules\Building_Traits.hpp"
 #include "\FCLA_Modules\3DEN\modules\Play_Custom_Sound.hpp"
 #include "\FCLA_Modules\3DEN\modules\ACE_DragAndCarry.hpp"
