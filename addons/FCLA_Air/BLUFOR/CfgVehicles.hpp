@@ -12,8 +12,8 @@ class B_Heli_Transport_01_F: Heli_Transport_01_base_F {
     class DoorL1_Open {
       shortcut = "";
       position = "door_L";
-      condition = "(this doorPhase 'door_L' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_L', 1]";
+      condition = "(this doorPhase 'door_L' < 0.5) && (alive this) && (player in this)";
+      statement = "this animateDoor ['door_L', 1];";
       displayName = "Abrir puerta izquierda";
       displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
       radius = 2.5;
@@ -28,8 +28,8 @@ class B_Heli_Transport_01_F: Heli_Transport_01_base_F {
 
     class DoorR1_Open: DoorL1_Open {
       position = "door_R";
-      condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_R', 1]";
+      condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && (player in this)";
+      statement = "this animateDoor ['door_R', 1];";
       displayName = "Abrir puerta derecha";
       userActionID = 51;
     };
@@ -37,14 +37,14 @@ class B_Heli_Transport_01_F: Heli_Transport_01_base_F {
     class DoorL1_Close: DoorL1_Open {
       userActionID = 53;
       displayName = "Cerrar puerta izquierda";
-      condition = "(this doorPhase 'door_L' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_L', 0]";
+      condition = "(this doorPhase 'door_L' > 0.5) && (alive this) && (player in this)";
+      statement = "this animateDoor ['door_L', 0];";
     };
 
     class DoorR1_Close: DoorL1_Close {
       position = "door_R";
-      condition = "(this doorPhase 'door_R' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_R', 0]";
+      condition = "(this doorPhase 'door_R' > 0.5) && (alive this) && (player in this)";
+      statement = "this animateDoor ['door_R', 0];";
       displayName = "Cerrar puerta derecha";
       userActionID = 54;
     };
@@ -97,8 +97,8 @@ class B_Heli_Transport_03_F: Heli_Transport_03_base_F {
     class Ramp_Open {
       position = "";
       shortcut = "";
-      condition = "(this doorPhase 'Door_rear_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
-      statement = "this animateDoor ['Door_rear_source', 1]";
+      condition = "(this doorPhase 'Door_rear_source' < 0.5) && (alive this) && {(player in [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
+      statement = "this animateDoor ['Door_rear_source', 1];";
       displayName = "Abrir rampa";
       textToolTip = "Abrir rampa";
       displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
@@ -113,37 +113,37 @@ class B_Heli_Transport_03_F: Heli_Transport_03_base_F {
     };
 
     class Ramp_Close: Ramp_Open {
-      condition = "(this doorPhase 'Door_rear_source' > 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
-      statement = "this animateDoor ['Door_rear_source', 0]";
+      condition = "(this doorPhase 'Door_rear_source' > 0.5) && (alive this) && {(player in [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
+      statement = "this animateDoor ['Door_rear_source', 0];";
       displayName = "Cerrar rampa";
       textToolTip = "Cerrar rampa";
       userActionID = 61;
     };
 
     class Right_Door_Open: Ramp_Open {
-      condition = "(this doorPhase 'Door_R_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
-      statement = "this animateDoor ['Door_R_source', 1]";
+      condition = "(this doorPhase 'Door_R_source' < 0.5) && (alive this) && {(player in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
+      statement = "this animateDoor ['Door_R_source', 1];";
       displayName = "Abrir puerta derecha";
       textToolTip = "Abrir puerta derecha";
     };
 
     class Right_Door_Close: Ramp_Close {
-      condition = "(this doorPhase 'Door_R_source' > 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
-      statement = "this animateDoor ['Door_R_source', 0]";
+      condition = "(this doorPhase 'Door_R_source' > 0.5) && (alive this) && {(player in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
+      statement = "this animateDoor ['Door_R_source', 0];";
       displayName = "Cerrar puerta derecha";
       textToolTip = "Cerrar puerta derecha";
     };
 
     class Left_Door_Open: Ramp_Open {
-      condition = "(this doorPhase 'Door_L_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
-      statement = "this animateDoor ['Door_L_source', 1]";
+      condition = "(this doorPhase 'Door_L_source' < 0.5) && (alive this) && {(player in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
+      statement = "this animateDoor ['Door_L_source', 1];";
       displayName = "Abrir puerta izquierda";
       textToolTip = "Abrir puerta izquierda";
     };
 
     class Left_Door_Close: Ramp_Close {
-      condition = "(this doorPhase 'Door_L_source' > 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
-      statement = "this animateDoor ['Door_L_source', 0]";
+      condition = "(this doorPhase 'Door_L_source' > 0.5) && (alive this) && {(player in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
+      statement = "this animateDoor ['Door_L_source', 0];";
       displayName = "Cerrar puerta izquierda";
       textToolTip = "Cerrar puerta izquierda";
     };
@@ -180,8 +180,8 @@ class B_Heli_Transport_03_unarmed_F: Heli_Transport_03_unarmed_base_F {
     class Ramp_Open {
       position = "";
       shortcut = "";
-      condition = "(this doorPhase 'Door_rear_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
-      statement = "this animateDoor ['Door_rear_source', 1]";
+      condition = "(this doorPhase 'Door_rear_source' < 0.5) && (alive this) && {(player in [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
+      statement = "this animateDoor ['Door_rear_source', 1];";
       displayName = "Abrir rampa";
       textToolTip = "Abrir rampa";
       displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
@@ -196,37 +196,37 @@ class B_Heli_Transport_03_unarmed_F: Heli_Transport_03_unarmed_base_F {
     };
 
     class Ramp_Close: Ramp_Open {
-      condition = "(this doorPhase 'Door_rear_source' > 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
-      statement = "this animateDoor ['Door_rear_source', 0]";
+      condition = "(this doorPhase 'Door_rear_source' > 0.5) && (alive this) && {(player in [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
+      statement = "this animateDoor ['Door_rear_source', 0];";
       displayName = "Cerrar rampa";
       textToolTip = "Cerrar rampa";
       userActionID = 61;
     };
 
     class Right_Door_Open: Ramp_Open {
-      condition = "(this doorPhase 'Door_R_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
-      statement = "this animateDoor ['Door_R_source', 1]";
+      condition = "(this doorPhase 'Door_R_source' < 0.5) && (alive this) && {(player in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
+      statement = "this animateDoor ['Door_R_source', 1];";
       displayName = "Abrir puerta derecha";
       textToolTip = "Abrir puerta derecha";
     };
 
     class Right_Door_Close: Ramp_Close {
-      condition = "(this doorPhase 'Door_R_source' > 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
-      statement = "this animateDoor ['Door_R_source', 0]";
+      condition = "(this doorPhase 'Door_R_source' > 0.5) && (alive this) && {(player in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
+      statement = "this animateDoor ['Door_R_source', 0];";
       displayName = "Cerrar puerta derecha";
       textToolTip = "Cerrar puerta derecha";
     };
 
     class Left_Door_Open: Ramp_Open {
-      condition = "(this doorPhase 'Door_L_source' < 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
-      statement = "this animateDoor ['Door_L_source', 1]";
+      condition = "(this doorPhase 'Door_L_source' < 0.5) && (alive this) && {(player in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
+      statement = "this animateDoor ['Door_L_source', 1];";
       displayName = "Abrir puerta izquierda";
       textToolTip = "Abrir puerta izquierda";
     };
 
     class Left_Door_Close: Ramp_Close {
-      condition = "(this doorPhase 'Door_L_source' > 0.5) && (alive this) && {((call CBA_fnc_currentUnit) in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
-      statement = "this animateDoor ['Door_L_source', 0]";
+      condition = "(this doorPhase 'Door_L_source' > 0.5) && (alive this) && {(player in [driver this, this turretUnit [0], this turretUnit [1], this turretUnit [2]])} && {((this getVariable ['bis_disabled_Ramp',0]) isEqualTo 0)}";
+      statement = "this animateDoor ['Door_L_source', 0];";
       displayName = "Cerrar puerta izquierda";
       textToolTip = "Cerrar puerta izquierda";
     };
@@ -265,8 +265,8 @@ class B_CTRG_Heli_Transport_01_Sand_F: Heli_Transport_01_base_F {
     class DoorL1_Open {
       position = "door_L";
       shortcut = "";
-      condition = "(this doorPhase 'door_L' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_L', 1]";
+      condition = "(this doorPhase 'door_L' < 0.5) && (alive this) && (player in this)";
+      statement = "this animateDoor ['door_L', 1];";
       displayName = "Abrir puerta izquierda";
       displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
       radius = 2.5;
@@ -281,23 +281,23 @@ class B_CTRG_Heli_Transport_01_Sand_F: Heli_Transport_01_base_F {
 
     class DoorR1_Open: DoorL1_Open {
       position = "door_R";
-      condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_R', 1]";
+      condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && (player in this)";
+      statement = "this animateDoor ['door_R', 1];";
       displayName = "Abrir puerta derecha";
       userActionID = 51;
     };
 
     class DoorL1_Close: DoorL1_Open {
-      condition = "(this doorPhase 'door_L' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_L', 0]";
+      condition = "(this doorPhase 'door_L' > 0.5) && (alive this) && (player in this)";
+      statement = "this animateDoor ['door_L', 0];";
       displayName = "Cerrar puerta izquierda";
       userActionID = 53;
     };
 
     class DoorR1_Close: DoorL1_Close {
       position = "door_R";
-      condition = "(this doorPhase 'door_R' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_R', 0]";
+      condition = "(this doorPhase 'door_R' > 0.5) && (alive this) && (player in this)";
+      statement = "this animateDoor ['door_R', 0];";
       displayName = "Cerrar puerta derecha";
       userActionID = 54;
     };
@@ -310,8 +310,8 @@ class B_CTRG_Heli_Transport_01_tropic_F: Heli_Transport_01_base_F {
     class DoorL1_Open {
       position = "door_L";
       shortcut = "";
-      condition = "(this doorPhase 'door_L' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_L', 1]";
+      condition = "(this doorPhase 'door_L' < 0.5) && (alive this) && (player in this)";
+      statement = "this animateDoor ['door_L', 1];";
       displayName = "Abrir puerta izquierda";
       displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
       radius = 2.5;
@@ -326,23 +326,23 @@ class B_CTRG_Heli_Transport_01_tropic_F: Heli_Transport_01_base_F {
 
     class DoorR1_Open: DoorL1_Open {
       position = "door_R";
-      condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_R', 1]";
+      condition = "(this doorPhase 'door_R' < 0.5) && (alive this) && (player in this)";
+      statement = "this animateDoor ['door_R', 1];";
       displayName = "Abrir puerta derecha";
       userActionID = 51;
     };
 
     class DoorL1_Close: DoorL1_Open {
-      condition = "(this doorPhase 'door_L' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_L', 0]";
+      condition = "(this doorPhase 'door_L' > 0.5) && (alive this) && (player in this)";
+      statement = "this animateDoor ['door_L', 0];";
       displayName = "Cerrar puerta izquierda";
       userActionID = 53;
     };
 
     class DoorR1_Close: DoorL1_Close {
       position = "door_R";
-      condition = "(this doorPhase 'door_R' > 0.5) && (alive this) && ((call CBA_fnc_currentUnit) in this)";
-      statement = "this animateDoor ['door_R', 0]";
+      condition = "(this doorPhase 'door_R' > 0.5) && (alive this) && (player in this)";
+      statement = "this animateDoor ['door_R', 0];";
       displayName = "Cerrar puerta derecha";
       userActionID = 54;
     };
@@ -358,8 +358,8 @@ class B_T_VTOL_01_vehicle_F: VTOL_01_vehicle_base_F {
     class Ramp_Open {
       position = "";
       shortcut = "";
-      condition = "(this doorPhase ""Door_1_source"" < 0.5) && (alive this) && ({(call CBA_fnc_currentUnit) == _x} count [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]] > 0) && ((this getVariable ['bis_disabled_Ramp',0]) != 1)";
-      statement = "this animateDoor ['Door_1_source', 1]";
+      condition = "(this doorPhase ""Door_1_source"" < 0.5) && (alive this) && ({player == _x} count [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]] > 0) && ((this getVariable ['bis_disabled_Ramp',0]) != 1)";
+      statement = "this animateDoor ['Door_1_source', 1];";
       displayName = "Abrir rampa";
       textToolTip = "Abrir rampa";
       displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
@@ -376,8 +376,8 @@ class B_T_VTOL_01_vehicle_F: VTOL_01_vehicle_base_F {
     class Ramp_Close {
       position = "";
       shortcut = "";
-      condition = "(this doorPhase ""Door_1_source"" > 0.5) && (alive this) && ({(call CBA_fnc_currentUnit) == _x} count [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]] > 0) && ((this getVariable ['bis_disabled_Ramp',0]) != 1)";
-      statement = "this animateDoor ['Door_1_source', 0]";
+      condition = "(this doorPhase ""Door_1_source"" > 0.5) && (alive this) && ({player == _x} count [driver this, this turretUnit [0], this turretUnit [3], this turretUnit [4]] > 0) && ((this getVariable ['bis_disabled_Ramp',0]) != 1)";
+      statement = "this animateDoor ['Door_1_source', 0];";
       displayName = "Cerrar rampa";
       textToolTip = "Cerrar rampa";
       displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
