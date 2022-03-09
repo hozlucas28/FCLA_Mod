@@ -10,9 +10,9 @@ class CfgPatches {
 		#include "\FCLA_Items\weapons.hpp"
 		requiredAddons[] = {"A3_Characters_F", "A3_Data_F", "ACE_Explosives"};
 		author = "hozlucas28";
-		version = "2.0";
+		version = "2.08";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
-		requiredVersion = 2.0;
+		requiredVersion = 2.08;
 	};
 };
 

@@ -8,9 +8,9 @@ class CfgPatches {
 		units[] = {};
 		requiredAddons[] = {"A3_Air_F", "A3_Air_F_Beta", "A3_Weapons_F_ammoBoxes", "A3_Air_F_Beta_Parachute_01", "A3_Data_F"};
 		author = "hozlucas28";
-		version = "2.0";
+		version = "2.08";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
-		requiredVersion = 2.0;
+		requiredVersion = 2.08;
 	};
 };
 

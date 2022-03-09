@@ -8,9 +8,9 @@ class CfgPatches {
 		units[] = {};
 		requiredAddons[] = {"3DEN", "A3_Data_F_Sams_loadOrder", "FCLA_Core"};
 		author = "hozlucas28";
-		version = "2.0";
+		version = "2.08";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
-		requiredVersion = 2.0;
+		requiredVersion = 2.08;
 	};
 };
 

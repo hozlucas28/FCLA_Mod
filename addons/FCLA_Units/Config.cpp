@@ -7,10 +7,10 @@ class CfgPatches {
 	class FCLA_Units {
 		#include "\FCLA_Units\units.hpp"
 		requiredAddons[] = {};
-		version = "2.0";
+		version = "2.08";
 		author = "hozlucas28";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
-		requiredVersion = 2.0;
+		requiredVersion = 2.08;
 	};
 };
 

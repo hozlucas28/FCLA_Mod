@@ -8,9 +8,9 @@ class CfgPatches {
 		units[] = {};
 		requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Beta", "FCLA_Core"};
 		author = "hozlucas28";
-		version = "2.0";
+		version = "2.08";
 		authorUrl = "https://steamcommunity.com/profiles/76561198137876583/";
-		requiredVersion = 2.0;
+		requiredVersion = 2.08;
 	};
 };
 
