@@ -8,5 +8,5 @@
 #include "\FCLA_Interactions\Smoke_Signal\EventHandler.hpp"
 #include "\FCLA_Interactions\Blindfold\PlayerEventHandler.hpp"
 #include "\FCLA_Interactions\Insignias\PlayerEventHandler.hpp"
-//#include "\FCLA_Interactions\Night_Vision_Battery\PlayerEventHandlers.hpp"
+#include "\FCLA_Interactions\Night_Vision_Battery\PlayerEventHandlers.hpp"
 true

@@ -46,7 +46,7 @@ class CfgFunctions {
 		#include "\FCLA_Interactions\Smoke_Signal\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Helmet_Camo_Net\CfgFunctions.hpp"
 		#include "\FCLA_Interactions\Satellite_Antenna\CfgFunctions.hpp"
-		//#include "\FCLA_Interactions\Night_Vision_Battery\CfgFunctions.hpp"
+		#include "\FCLA_Interactions\Night_Vision_Battery\CfgFunctions.hpp"
 	};
 };
 
@@ -67,7 +67,7 @@ class CfgSounds {
 |********************************************************************************/
 
 class RscTitles {
-  //#include "\FCLA_Interactions\Night_Vision_Battery\RscTitles.hpp"
+  #include "\FCLA_Interactions\Night_Vision_Battery\RscTitles.hpp"
 };
 
 
@@ -114,7 +114,7 @@ class CfgVehicles {
 				#include "\FCLA_Interactions\Smoke_Signal\ACE_Equipment.hpp"
 				#include "\FCLA_Interactions\Helmet_Camo_Net\ACE_Equipment.hpp"
 				#include "\FCLA_Interactions\Satellite_Antenna\ACE_Equipment.hpp"
-				//#include "\FCLA_Interactions\Night_Vision_Battery\ACE_Equipment.hpp"
+				#include "\FCLA_Interactions\Night_Vision_Battery\ACE_Equipment.hpp"
 	    };
 
 			class ACE_TeamManagement {

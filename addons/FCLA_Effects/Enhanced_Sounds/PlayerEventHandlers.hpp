@@ -7,8 +7,8 @@ if (hasInterface) then {
   //Reproduce un sonido cuando se cambia el modo de vision (nocturna/termica).
   ["visionMode", {
     params ["_unit", "_newVisionMode"];
-    //_NVGBattery = _unit getVariable ["FCLA_NVG_Battery", FCLA_NVG_Initial_Battery];
-    _hasNotNVGBattery = false; //if (FCLA_NVG_Require_Battery) then {_NVGBattery <= 0;} else {false;};
+    _NVGBattery = _unit getVariable ["FCLA_NVG_Battery", FCLA_NVG_Initial_Battery];
+    _hasNotNVGBattery = if (FCLA_NVG_Require_Battery) then {_NVGBattery <= 0;} else {false;};
     _severalConditions = [_unit, [4, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16]] call FCLA_Common_fnc_severalConditions;
     _visionModeDesactivated = _newVisionMode == 0;
     if ((!FCLA_visionMode_Sounds) || (_hasNotNVGBattery) || (_severalConditions) || (_visionModeDesactivated)) exitWith {};

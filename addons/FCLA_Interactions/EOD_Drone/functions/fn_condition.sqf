@@ -11,6 +11,7 @@
 //Variables de referencia.
 params ["_target", "_player"];
 _vehicle = vehicle _target;
+_currentUAVTurret = getConnectedUAVUnit _player;
 _headRealPosition = _vehicle modelToWorld (_vehicle selectionPosition "arm3");
 _allMines = (nearestObjects [_headRealPosition, [], 5, true]) select {_x in allMines};
 _areNotNearMines = (count _allMines) <= 0;
@@ -19,7 +20,8 @@ _nearestMine = _allMines select 0;
 
 
 _areAlive = (alive _target) && (alive _player) && (alive _vehicle);
+_inGunnerTurret = _currentUAVTurret == (gunner _target);
 _isAllowedDefuse = [_nearestMine] call ACE_Explosives_fnc_isAllowedDefuse;
 _isTouchingGround = isTouchingGround _vehicle;
 _inEnoughDistance = (_nearestMine distance _headRealPosition) <= 0.75;
-(_areAlive) && (_isAllowedDefuse) && (_isTouchingGround) && (_inEnoughDistance)
+(_areAlive) && (_inGunnerTurret) && (_isAllowedDefuse) && (_isTouchingGround) && (_inEnoughDistance)
