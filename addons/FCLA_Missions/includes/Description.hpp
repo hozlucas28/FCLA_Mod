@@ -7,31 +7,10 @@
 
 
 
-/* ------------------------- NOMBRE DEL ESCENARIO -------------------------- */
+/* -------------------------------- GENERAL -------------------------------- */
 
 OnLoadName = SCENARIO_NAME;
 briefingName = SCENARIO_NAME;
-
-
-
-/* ----------------------------- EQUIPAMIENTO ------------------------------ */
-
-allowSubordinatesTakeWeapons = 1;
-
-
-
-/* -------------------------------- RESPAWN -------------------------------- */
-
-respawn = 3;
-reviveDelay = 120;
-respawnOnStart = -1;
-
-
-
-/* ------------------------------- SEGURIDAD ------------------------------- */
-
-allowFunctionsLog = 0;
-allowFunctionsRecompile = 1;
 
 enableDebugConsole[] = {
   "76561198304995327", //Ghostkiller.
@@ -47,9 +26,7 @@ enableDebugConsole[] = {
 
 
 
-/* ------------------------------ MISCELANEOS ------------------------------ */
+/* -------------------------------- RESPAWN -------------------------------- */
 
-saving = 0;
-debriefing = 1;
-disabledAI = 1;
-scriptedPlayer = 1;
+respawn = 3;
+respawnOnStart = -1;
