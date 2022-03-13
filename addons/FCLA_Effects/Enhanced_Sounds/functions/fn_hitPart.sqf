@@ -16,7 +16,7 @@ _isExplosive = (_ammo select 3) == 1;
 _areNearPlayers = [_target, 20, 1, false] call FCLA_Common_fnc_nearPlayer;
 _currentHeadgear = headgear _target;
 _helmetProtection = (configfile >> "CfgWeapons" >> _currentHeadgear >> "ItemInfo" >> "HitpointsProtectionInfo" >> "Head" >> "armor") call BIS_fnc_getCfgData;
-if ((_selection select 0 != "head") || (!_areNearPlayers)) exitWith {};
+if ((_selection select 0 != "head") || (!_areNearPlayers) || (isNil "_helmetProtection")) exitWith {};
 
 
 
