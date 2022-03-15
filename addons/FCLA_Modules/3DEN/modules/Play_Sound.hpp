@@ -10,7 +10,7 @@
 
 class FCLA_Module_Play_Sound: Module_F {
   author = "hozlucas28";
-	displayName = "Reproducir sonido";
+	displayName = "Reproducir sonido [BETA]";
   icon = "\FCLA_Modules\3DEN\data\Sound.paa";
   portrait = "\FCLA_Modules\3DEN\data\Sound.paa";
 	category = "FCLA_Modules";

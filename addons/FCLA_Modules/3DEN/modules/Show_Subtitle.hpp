@@ -10,7 +10,7 @@
 
 class FCLA_Module_Show_Subtitle: Module_F {
   author = "hozlucas28";
-	displayName = "Mostrar subtitulo";
+	displayName = "Mostrar subtitulo [BETA]";
   icon = "\FCLA_Modules\3DEN\data\Chat.paa";
   portrait = "\FCLA_Modules\3DEN\data\Chat.paa";
 	category = "FCLA_Modules";
