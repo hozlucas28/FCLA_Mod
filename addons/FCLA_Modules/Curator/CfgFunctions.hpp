@@ -69,11 +69,6 @@ class Curator {
     postInit = 1;
   };
 
-  class playCustomSoundCurator {
-    file = "\FCLA_Modules\Curator\functions\fn_playCustomSound.sqf";
-    postInit = 1;
-  };
-
   class switchAutoHoverCurator {
     file = "\FCLA_Modules\Curator\functions\fn_switchAutoHover.sqf";
     postInit = 1;

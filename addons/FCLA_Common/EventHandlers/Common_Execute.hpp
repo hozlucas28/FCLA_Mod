@@ -17,5 +17,5 @@
 
 ["FCLA_Common_Execute", {
   params ["_function", "_arguments"];
-  _arguments call _function;
+  _arguments spawn _function;
 }] call CBA_fnc_addEventHandler;

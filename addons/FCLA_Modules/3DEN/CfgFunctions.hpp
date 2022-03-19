@@ -9,7 +9,6 @@ class 3DEN {
   class spawnEMP3DEN {file = "\FCLA_Modules\3DEN\functions\EMP\fn_spawnEMP.sqf";};
   class setRadio3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setRadio.sqf";};
   class setEffect3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_setEffect.sqf";};
-  class playSound3DEN {file = "\FCLA_Modules\3DEN\functions\fn_playSound.sqf";};
   class setJammer3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setJammer.sqf";};
   class hackDevice3DEN {file = "\FCLA_Modules\3DEN\functions\fn_hackDevice.sqf";};
   class spawnSparks3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_spawnSparks.sqf";};
@@ -21,7 +20,6 @@ class 3DEN {
   class spawnFireflies3DEN {file = "\FCLA_Modules\3DEN\functions\Effects\fn_spawnFireflies.sqf";};
   class createInjuries3DEN {file = "\FCLA_Modules\3DEN\functions\fn_createInjuries.sqf";};
   class setPlateNumber3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setPlateNumber.sqf";};
-  class playCustomSound3DEN {file = "\FCLA_Modules\3DEN\functions\fn_playCustomSound.sqf";};
   class setAmbientFired3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setAmbientFired.sqf";};
   class setDragAndCarry3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setDragAndCarry.sqf";};
   class setIntroduction3DEN {file = "\FCLA_Modules\3DEN\functions\fn_setIntroduction.sqf";};
