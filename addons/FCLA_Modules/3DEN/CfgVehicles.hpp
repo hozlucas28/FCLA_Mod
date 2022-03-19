@@ -19,7 +19,6 @@
 #include "\FCLA_Modules\3DEN\modules\Save_Position.hpp"
 #include "\FCLA_Modules\3DEN\modules\Show_Subtitle.hpp"
 #include "\FCLA_Modules\3DEN\modules\Switch_Lights.hpp"
-#include "\FCLA_Modules\3DEN\modules\Building_Traits.hpp"
 #include "\FCLA_Modules\3DEN\modules\ACE_DragAndCarry.hpp"
 #include "\FCLA_Modules\3DEN\modules\Contaminated_Zone.hpp"
 #include "\FCLA_Modules\3DEN\modules\CBRN_Configuration.hpp"
