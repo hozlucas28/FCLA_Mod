@@ -176,3 +176,58 @@
 	{},
 	false
 ] call CBA_fnc_addSetting;
+
+
+[
+	"FCLA_Alekmosq_UID", "EDITBOX",
+	["Alekmosq", "Si no sabes que es esto, no lo modifiques."],
+	["FCLA Desarrollo", "UIDs"],
+	"76561198825814903",
+	GLOBAL,
+	{},
+	false
+] call CBA_fnc_addSetting;
+
+
+[
+	"FCLA_Tenji_UID", "EDITBOX",
+	["Tenji", "Si no sabes que es esto, no lo modifiques."],
+	["FCLA Desarrollo", "UIDs"],
+	"76561198878959248",
+	GLOBAL,
+	{},
+	false
+] call CBA_fnc_addSetting;
+
+
+[
+	"FCLA_Reni_UID", "EDITBOX",
+	["Reni", "Si no sabes que es esto, no lo modifiques."],
+	["FCLA Desarrollo", "UIDs"],
+	"76561198142799204",
+	GLOBAL,
+	{},
+	false
+] call CBA_fnc_addSetting;
+
+
+[
+	"FCLA_Dalthon_UID", "EDITBOX",
+	["Dalthon", "Si no sabes que es esto, no lo modifiques."],
+	["FCLA Desarrollo", "UIDs"],
+	"76561198254519790",
+	GLOBAL,
+	{},
+	false
+] call CBA_fnc_addSetting;
+
+
+[
+	"FCLA_Sniki_UID", "EDITBOX",
+	["Sniki", "Si no sabes que es esto, no lo modifiques."],
+	["FCLA Desarrollo", "UIDs"],
+	"76561199110542157",
+	GLOBAL,
+	{},
+	false
+] call CBA_fnc_addSetting;

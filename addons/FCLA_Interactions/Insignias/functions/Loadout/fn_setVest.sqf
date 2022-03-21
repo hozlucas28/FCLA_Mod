@@ -242,16 +242,21 @@ _vestWithInsignia = switch (true) do {
 
 
 //Obtener chaleco personalizado.
-_customVestWithInsignia = switch (_playerUID) do {
-	case "76561198178496662": {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Byron"];;};
-	case "76561198304995327": {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Ghostkiller"];;};
-	case "76561198137876583": {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_hozLucas"];;};
-	case "76561198010584812": {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Kovalsky"];;};
-	case "76561197982853635": {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Legion"];;};
-	case "76561198153898683": {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Lorflord"];;};
-	case "76561198260536786": {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Mario"];;};
-	case "76561198059595506": {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Naretick"];;};
-	case "76561198173170422": {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Sagara"];;};
+_customVestWithInsignia = switch () do {
+  //case (_playerUID == FCLA_Reni_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Reni"];;};
+	case (_playerUID == FCLA_Byron_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Byron"];;};
+	case (_playerUID == FCLA_Mario_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Mario"];;};
+  //case (_playerUID == FCLA_Tenji_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Tenji"];;};
+  //case (_playerUID == FCLA_Sniki_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Sniki"];;};
+  case (_playerUID == FCLA_Legion_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Legion"];;};
+  case (_playerUID == FCLA_Sagara_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Sagara"];;};
+  //case (_playerUID == FCLA_Dalthon_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Dalthon"];;};
+  case (_playerUID == FCLA_Kovalsky_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Kovalsky"];;};
+  case (_playerUID == FCLA_Lorflord_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Lorflord"];;};
+	case (_playerUID == FCLA_Naretick_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Naretick"];;};
+  //case (_playerUID == FCLA_Alekmosq_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Alekmosq"];;};
+  case (_playerUID == FCLA_hozlucas28_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_hozLucas"];;};
+  case (_playerUID == FCLA_Ghostkiller_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Ghostkiller"];;};
 	default {_vestWithInsignia;};
 };
 
