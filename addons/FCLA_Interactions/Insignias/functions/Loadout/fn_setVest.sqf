@@ -242,7 +242,7 @@ _vestWithInsignia = switch (true) do {
 
 
 //Obtener chaleco personalizado.
-_customVestWithInsignia = switch () do {
+_customVestWithInsignia = switch (true) do {
   //case (_playerUID == FCLA_Reni_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Reni"];;};
 	case (_playerUID == FCLA_Byron_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Byron"];;};
 	case (_playerUID == FCLA_Mario_UID): {_vestWithInsignia insert [(_vestWithInsignia find _platoon) + _numberOfPlatoonLetters, "_Mario"];;};
