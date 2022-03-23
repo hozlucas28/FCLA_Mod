@@ -12,4 +12,6 @@
  * Public: [Yes]
 ---------------------------------------------------------------------------- */
 
-["FCLA_Radio_Frequencies", {call FCLA_Common_fnc_setRadioFrequencies;}] call CBA_fnc_addEventHandler;
+["FCLA_Radio_Frequencies", {
+  call FCLA_Common_fnc_setRadioFrequencies;
+}] call CBA_fnc_addEventHandler;

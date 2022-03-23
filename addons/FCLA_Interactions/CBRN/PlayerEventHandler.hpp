@@ -11,6 +11,6 @@ if (hasInterface) then {
     _isChemicalDetectorDesactivated = !(_unit getVariable ["FCLA_Chemical_Detector_Activated", false]);
     _haveCompatibleChemicalDetector = ({[_unit, _x] call BIS_fnc_hasItem} count _compatibleChemicalDetectors) >= 1;
     if ((_isChemicalDetectorDesactivated) || (_haveCompatibleChemicalDetector)) exitWith {};
-    [_unit] spawn FCLA_Interactions_fnc_statementTurnOffChemicalDetectorCBRN;
+    [_unit] call FCLA_Interactions_fnc_statementTurnOffChemicalDetectorCBRN;
   }, false] call CBA_fnc_addPlayerEventHandler;
 };

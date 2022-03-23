@@ -103,10 +103,10 @@
     (_this select 1) params ["_position", "_attachedObject"];
 
     if ([_attachedObject, true] call ACE_common_fnc_isPlayer) then {
-      [_attachedObject, _newInsignia] spawn FCLA_Interactions_fnc_statementInsignias;
+      [_attachedObject, _newInsignia] call FCLA_Interactions_fnc_statementInsignias;
       ["INSIGNIA COLOCADA CON EXITO"] call ZEN_Common_fnc_showMessage;
     } else {
-      [_attachedObject, _newInsignia] spawn FCLA_Interactions_fnc_statementInsignias;
+      [_attachedObject, _newInsignia] call FCLA_Interactions_fnc_statementInsignias;
       ["INSIGNIA COLOCADA CON EXITO"] call ZEN_Common_fnc_showMessage;
     };
   }, {}, _this] call ZEN_Dialog_fnc_Create;

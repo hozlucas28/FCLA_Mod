@@ -7,8 +7,8 @@ if (hasInterface) then {
   //Modifica el color de la vision nocturna.
   ["visionMode", {
     params ["_unit", "_newVisionMode"];
-    if ((!FCLA_Modify_Color_NVG) || (_newVisionMode != 1)) exitWith {[_unit, false] spawn FCLA_Effects_fnc_switchEffectNVG;};
-    [_unit, true] spawn FCLA_Effects_fnc_switchEffectNVG;
+    if ((!FCLA_Modify_Color_NVG) || (_newVisionMode != 1)) exitWith {[_unit, false] call FCLA_Effects_fnc_switchEffectNVG;};
+    [_unit, true] call FCLA_Effects_fnc_switchEffectNVG;
   }, false] call CBA_fnc_addPlayerEventHandler;
 
 
@@ -16,7 +16,7 @@ if (hasInterface) then {
   ["featureCamera", {
     params ["_unit", "_newCameraMode"];
     _visionMode = currentVisionMode _unit;
-    if ((!FCLA_Modify_Color_NVG) || (_newCameraMode != "")) exitWith {[_unit, false] spawn FCLA_Effects_fnc_switchEffectNVG;};
-    if (_visionMode == 1) then {[_unit, true] spawn FCLA_Effects_fnc_switchEffectNVG;};
+    if ((!FCLA_Modify_Color_NVG) || (_newCameraMode != "")) exitWith {[_unit, false] call FCLA_Effects_fnc_switchEffectNVG;};
+    if (_visionMode == 1) then {[_unit, true] call FCLA_Effects_fnc_switchEffectNVG;};
   }, false] call CBA_fnc_addPlayerEventHandler;
 };

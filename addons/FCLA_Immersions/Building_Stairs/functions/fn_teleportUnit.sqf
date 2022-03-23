@@ -17,7 +17,7 @@ _this spawn {
 
   //Reproducir animacion y mostrar mensaje.
   playSound "FCLA_Open_Door";
-  [_state] spawn FCLA_Immersions_fnc_showMessageBS;
+  _handle = [_state] spawn FCLA_Immersions_fnc_showMessageBS;
   [_unit, "putDown", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 
 
@@ -35,7 +35,7 @@ _this spawn {
 
 
   //Mostrar unidad.
-  sleep 12;
+  waitUntil {scriptDone _handle};
   detach _unit;
   _unit allowDamage true;
   _unit setCaptive false;

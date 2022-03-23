@@ -16,7 +16,7 @@ params ["_hoveredEntity"];
 
 //Pegar/Despegar.
 if (isNull attachedTo player) then {
-  [true] spawn FCLA_Modules_fnc_hideCurator;
+  [true] call FCLA_Modules_fnc_hideCurator;
   player attachTo [_hoveredEntity, [0, 0, 0]];
 } else {
   detach player;

@@ -23,7 +23,7 @@ _player setVariable ["FCLA_Chemical_Detector_Activated", true, true];
   _isDesactivated = !(_player getVariable ["FCLA_Chemical_Detector_Activated", false]);
   _isNotCompatible = !(_item in _compatibleChemicalDetectors);
   if ((_isSwimming) || (_isNotAlive) || (_isDesactivated) || (_isNotCompatible)) exitWith {
-    [_player] spawn FCLA_Interactions_fnc_statementTurnOffChemicalDetectorCBRN;
+    [_player] call FCLA_Interactions_fnc_statementTurnOffChemicalDetectorCBRN;
     [_handle] call CBA_fnc_removePerFrameHandler;
   };
   if (((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) exitWith {};

@@ -47,7 +47,7 @@ if ((count _compatibleSynchronizedObjects) <= 0) exitWith {["FCLA_Module_Drag_An
    [configOf _x, "ACE_Dragging_dragPosition", _offset] call BIS_fnc_returnConfigEntry,
    [configOf _x, "ACE_Dragging_dragDirection", [0, 90] select _isWiderThanLonger] call BIS_fnc_returnConfigEntry,
    _ignoreWeightDrag
-  ]]] call CBA_fnc_globalEventJIP;
+  ], false]] call CBA_fnc_globalEventJIP;
 
   ["FCLA_Common_Execute", [ACE_Dragging_fnc_setCarryable, [
    _x,
@@ -55,7 +55,7 @@ if ((count _compatibleSynchronizedObjects) <= 0) exitWith {["FCLA_Module_Drag_An
    [configOf _x, "ACE_Dragging_carryPosition", _offset] call BIS_fnc_returnConfigEntry,
    [configOf _x, "ACE_Dragging_carryDirection", [90, 0] select _isWiderThanLonger] call BIS_fnc_returnConfigEntry,
    _ignoreWeightCarry
-  ]]] call CBA_fnc_globalEventJIP;
+  ], false]] call CBA_fnc_globalEventJIP;
 } forEach _compatibleSynchronizedObjects;
 
 

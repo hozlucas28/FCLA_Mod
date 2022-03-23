@@ -186,7 +186,7 @@
      _attachedObject setVariable ["KAT_airWay_Obstruction", _airwayObstruction, true];
      _attachedObject setVariable ["KAT_medical_airwayOccluded", _airwayOccluded, true];
      _attachedObject setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
-     if (_typeOfInjury != "none") then {["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_attachedObject, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true]], _attachedObject] call CBA_fnc_targetEvent;};
+     if (_typeOfInjury != "none") then {["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_attachedObject, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true], false], _attachedObject] call CBA_fnc_targetEvent;};
 
      if (_pneumothorax) then {
        [_attachedObject, 0.5] call Ace_Medical_Status_fnc_adjustPainLevel;
@@ -206,7 +206,7 @@
        _attachedObject setVariable ["KAT_Medical_Tensionpneumothorax", _tensionPneumothorax, true];
      };
 
-     ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_attachedObject]]] call CBA_fnc_globalEvent;
+     ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_attachedObject], false]] call CBA_fnc_globalEvent;
      ["LESIONES PROVOCADAS CON EXITO"] call ZEN_Common_fnc_showMessage;
    }, {}, _this] call ZEN_Dialog_fnc_Create;
 }, "\FCLA_Modules\Curator\data\Medical_Cross.paa"] call ZEN_Custom_Modules_fnc_Register;

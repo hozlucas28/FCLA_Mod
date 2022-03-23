@@ -16,7 +16,7 @@
 	 ["Sin asignar", "FCLA", "Takana", "Jaguar", "Condor", "Salamandra", "Anaconda", "Quetzal"], 0
 	],
 	LOCAL,
-	{[player, _this] spawn FCLA_Interactions_fnc_statementInsignias;},
+	{[player, _this] call FCLA_Interactions_fnc_statementInsignias;},
 	false
 ] call CBA_fnc_addSetting;
 

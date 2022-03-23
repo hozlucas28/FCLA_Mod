@@ -24,7 +24,7 @@ if ((_backpackContainer getVariable ["FCLA_Backpack_Oxygen", FCLA_CBRN_Initial_B
 
 
 //Colocar manguera.
-[_player, true] spawn FCLA_Interactions_fnc_showHoseCBRN;
+[_player, true] call FCLA_Interactions_fnc_showHoseCBRN;
 _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
 [_player, "FCLA_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 [_player, "quick_view", "%1 activo el suministro de oxigeno", [name _player]] call ACE_Medical_Treatment_fnc_addToLog;
@@ -52,7 +52,7 @@ _backpackContainer setVariable ["FCLA_Backpack_Oxygen_Activated", true, true];
   _isNotControlledUnit = _player != _controlledUnit;
 
   if ((_isNotAlive) || (_isSwimming) || (_hasNotCompatibleMask) || (_hasNotCompatibleBackpack) || (_isBackpackOxygenDesactivated) || (_remainingBackpackOxygen <= 0)) exitWith {
-    if (_isBackpackOxygenDesactivated) then {[_player] spawn FCLA_Interactions_fnc_statementDesactivateOxygenCBRN;};
+    if (_isBackpackOxygenDesactivated) then {[_player] call FCLA_Interactions_fnc_statementDesactivateOxygenCBRN;};
     [_handle] call CBA_fnc_removePerFrameHandler;
   };
   if ((((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) || (_inStairs) || (_inCurator) || (_inCameraMode) || (_isNotControlledUnit)) exitWith {_args set [1, CBA_missionTime];};

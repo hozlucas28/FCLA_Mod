@@ -26,25 +26,25 @@
 
     switch (true) do {
     	case ((!_usingBackpackRadio) && (_isHeadsetCompatible) && (_isChestCompatible)): {
-        _unit spawn FCLA_Immersions_fnc_waitUntilTFAR;
+        _unit call FCLA_Immersions_fnc_waitUntilTFAR;
         _animation = if (FCLA_Radio_Animation_Preference == "_headset") then {"FCLA_Animation_TFAR_onEar";} else {"FCLA_Animation_TFAR_onVest";};
         [_unit, _animation] call ACE_Common_fnc_doGesture;
       };
 
     	case ((!_usingBackpackRadio) && (_isHeadsetCompatible)): {
-        _unit spawn FCLA_Immersions_fnc_waitUntilTFAR;
+        _unit call FCLA_Immersions_fnc_waitUntilTFAR;
         [_unit, "FCLA_Animation_TFAR_onEar"] call ACE_Common_fnc_doGesture;
       };
 
       case ((!_usingBackpackRadio) && (_isChestCompatible)): {
-        _unit spawn FCLA_Immersions_fnc_waitUntilTFAR;
+        _unit call FCLA_Immersions_fnc_waitUntilTFAR;
         [_unit, "FCLA_Animation_TFAR_onVest"] call ACE_Common_fnc_doGesture;
       };
 
     	default {
         if ((_isHidden) || (_inVehicle)) exitWith {};
-        if (FCLA_Hand_Radio_Animation) exitWith {[_unit, _currentRadio] spawn FCLA_Immersions_fnc_radioOnHandTFAR;};
-        _unit spawn FCLA_Immersions_fnc_waitUntilTFAR;
+        if (FCLA_Hand_Radio_Animation) exitWith {[_unit, _currentRadio] call FCLA_Immersions_fnc_radioOnHandTFAR;};
+        _unit call FCLA_Immersions_fnc_waitUntilTFAR;
         [_unit, "FCLA_Animation_TFAR_onEar"] call ACE_Common_fnc_doGesture;
       };
     };

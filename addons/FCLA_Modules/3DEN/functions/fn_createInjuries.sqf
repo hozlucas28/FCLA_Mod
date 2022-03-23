@@ -44,7 +44,7 @@ if ((_typeOfInjury == "") || (_levelOfInjury <= 0) || ((count _compatibleSynchro
     _x setVariable ["KAT_airWay_Obstruction", _airwayObstruction, true];
     _x setVariable ["KAT_medical_airwayOccluded", _airwayOccluded, true];
     _x setVariable ["ACE_Medical_Fractures", [0, 0, _fractureLeftArm, _fractureRightArm, _fractureLeftLeg, _fractureRightLeg], true];
-    if (_typeOfInjury != "none") then {["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_x, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true]], _x] call CBA_fnc_targetEvent;};
+    if (_typeOfInjury != "none") then {["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_x, _levelOfInjury, selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], _typeOfInjury, objNull, [], true], false], _x] call CBA_fnc_targetEvent;};
 
     if (_pneumothorax) then {
       [_x, 0.5] call Ace_Medical_Status_fnc_adjustPainLevel;
@@ -64,7 +64,7 @@ if ((_typeOfInjury == "") || (_levelOfInjury <= 0) || ((count _compatibleSynchro
       _x setVariable ["KAT_Medical_Tensionpneumothorax", _tensionPneumothorax, true];
     };
 
-    ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_x]]] call CBA_fnc_globalEvent;
+    ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_x], false]] call CBA_fnc_globalEvent;
   };
 } forEach _compatibleSynchronizedObjects;
 

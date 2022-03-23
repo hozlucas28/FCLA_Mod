@@ -15,7 +15,7 @@ _Condition = {
 
 _Statement = {
   params ["_target", "_player"];
-  [_target, _player] spawn FCLA_Interactions_fnc_statementDisassembleSA;
+  [_target, _player] call FCLA_Interactions_fnc_statementDisassembleSA;
 };
 
 _Action = ["FCLA_Disassemble_Satellite_Antenna", "Desarmar", "\FCLA_Data\ACE_Actions\Disassemble_Antenna.paa", _Statement, _Condition] call ACE_Interact_Menu_fnc_createAction;

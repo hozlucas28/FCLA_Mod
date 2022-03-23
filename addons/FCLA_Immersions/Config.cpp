@@ -132,12 +132,6 @@ class CfgWeapons {
 |                            CONTROLADORES DE EVENTOS                            |
 |********************************************************************************/
 
-class Extended_Killed_Eventhandlers {
-	class Air {
-		init = "_this spawn FCLA_Immersions_fnc_killedNABEH;";
-	};
-};
-
 class Extended_PreInit_EventHandlers {
 	class FCLA_Immersions {
 		init = "call FCLA_Immersions_fnc_XEHPreInit;";

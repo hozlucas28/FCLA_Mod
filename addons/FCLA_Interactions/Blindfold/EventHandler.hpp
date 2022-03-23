@@ -10,5 +10,5 @@
   _currentGoggles = goggles _unit;
 	_compatibleBandages = ["G_Blindfold_01_black_F", "G_Blindfold_01_white_F"];
   if ((_state) || !(_currentGoggles in _compatibleBandages) || (_savedGoggles == "")) exitWith {};
-  [_unit, _unit] spawn FCLA_Interactions_fnc_statementOffBlindfold;
+  [_unit, _unit] call FCLA_Interactions_fnc_statementOffBlindfold;
 }] call CBA_fnc_addEventHandler;

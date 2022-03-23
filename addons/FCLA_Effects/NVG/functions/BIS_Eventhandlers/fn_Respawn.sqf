@@ -13,4 +13,4 @@ params ["_unit", "_corpse"];
 
 
 
-{[_x, false] spawn FCLA_Effects_fnc_switchEffectNVG;} forEach [_unit, _corpse];
+{[_x, false] call FCLA_Effects_fnc_switchEffectNVG;} forEach [_unit, _corpse];

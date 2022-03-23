@@ -72,8 +72,8 @@ if (_threatLevel <= 0) exitWith {["FCLA_Module_CBRN_Contaminated_Zone", "- MODUL
     _levelOfInjury = (linearConversion [_contaminationMaxRad, _quarterOfContaminationMaxRad, _x distance _module, 0, _threatLevel * 4, true]) / 25;
     if ((_isNotHidden) && (_isVulnerable) && (_hasNotRequiredEquipment) && (_levelOfInjury > 0)) then {
       [_player, _levelOfInjury] call ACE_Medical_fnc_adjustPainLevel;
-      ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_x, _levelOfInjury, "Body", selectRandom ["burn", "unknown"], objNull, [], true]], _x] call CBA_fnc_targetEvent;
-      ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_x]], _x] call CBA_fnc_targetEvent;
+      ["FCLA_Common_Execute", [ACE_Medical_fnc_addDamageToUnit, [_x, _levelOfInjury, "Body", selectRandom ["burn", "unknown"], objNull, [], true], false], _x] call CBA_fnc_targetEvent;
+      ["FCLA_Common_Execute", [ACE_Medical_Engine_fnc_updateDamageEffects, [_x], false], _x] call CBA_fnc_targetEvent;
       if (!(_x in _playersAffected)) then {_playersAffected pushBack _x;};
     };
   } forEach _playersInArea;

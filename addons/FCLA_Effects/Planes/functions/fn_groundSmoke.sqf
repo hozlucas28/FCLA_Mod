@@ -21,7 +21,7 @@ _groundHeight = _posATL select 2;
 //Tierra.
 if ((_groundHeight >= 0) && (_groundHeight <= 50)) then {
 	if ((surfaceIsWater _pos) || (surfaceType _surfacePos == "#GdtConcrete") || (surfaceType _surfacePos == "#GdtStratisConcrete") || (surfaceType _surfacePos == "#GdtBeach") || (surfaceType _surfacePos == "#GdtSeabed")) exitWith {};
-	[_plane, "Dust", _surfacePos, _velocity, _speed] spawn FCLA_Effects_fnc_spawnSmokeEffectPlanes;
+	[_plane, "Dust", _surfacePos, _velocity, _speed] call FCLA_Effects_fnc_spawnSmokeEffectPlanes;
 };
 
 
@@ -29,9 +29,9 @@ if ((_groundHeight >= 0) && (_groundHeight <= 50)) then {
 if ((_seaHeight >= 0) && (_seaHeight <= 50)) then {
 	_surfaceWaterPos = [((_posASLW select 0) + (_engineOne select 0)), ((_posASLW select 1) + (_engineOne select 1)), 0];
 	if (surfaceIsWater _surfaceWaterPos) then {
-		[_plane, "Water", _surfacePos, _velocity, _speed] spawn FCLA_Effects_fnc_spawnSmokeEffectPlanes;
+		[_plane, "Water", _surfacePos, _velocity, _speed] call FCLA_Effects_fnc_spawnSmokeEffectPlanes;
 	} else {
 		if ((surfaceType _surfacePos != "#GdtBeach") || (surfaceIsWater _pos)) exitWith {};
-		[_plane, "Dust", _surfacePos, _velocity, _speed] spawn FCLA_Effects_fnc_spawnSmokeEffectPlanes;
+		[_plane, "Dust", _surfacePos, _velocity, _speed] call FCLA_Effects_fnc_spawnSmokeEffectPlanes;
 	};
 };

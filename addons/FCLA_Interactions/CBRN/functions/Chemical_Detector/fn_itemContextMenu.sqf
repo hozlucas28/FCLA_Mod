@@ -25,7 +25,7 @@ _conditionToShow = {
 
 _Statement = {
   params ["_player", "_container", "_item"];
-  [_player, _item] spawn FCLA_Interactions_fnc_statementTurnOnChemicalDetectorCBRN;
+  [_player, _item] call FCLA_Interactions_fnc_statementTurnOnChemicalDetectorCBRN;
 };
 
 ["##Watch", "ASSIGNED_ITEM", "Encender", [], "\FCLA_Interactions\CBRN\data\Switch.paa", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;
@@ -45,7 +45,7 @@ _conditionToShow = {
 
 _Statement = {
   params ["_player", "_container"];
-  [_player] spawn FCLA_Interactions_fnc_statementTurnOffChemicalDetectorCBRN;
+  [_player] call FCLA_Interactions_fnc_statementTurnOffChemicalDetectorCBRN;
 };
 
 ["##Watch", "ASSIGNED_ITEM", "Apagar", [], "\FCLA_Interactions\CBRN\data\Switch.paa", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;

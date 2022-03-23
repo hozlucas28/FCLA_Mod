@@ -38,7 +38,7 @@ _surfaceArea = (2 * pi * (_maxHeight / 2) * _maxLength + 2 * pi * (_maxHeight / 
 		_disableByEditor = _vehicle getVariable ["FCLA_Disable_Aircraft_Turbulences", false];
 		_isTurbulenceReady = _vehicle getVariable ["FCLA_Turbulence_Ready", true];
 		if ((!FCLA_Aircraft_Turbulence) || (driver _vehicle != _currentUnit) || !(_isTurbulenceReady) || (_disableByEditor)) exitWith {};
-		[_vehicle, _dimensions, _surfaceArea, _maxSpeed] spawn FCLA_Immersions_fnc_logicTurbulences;
+		[_vehicle, _dimensions, _surfaceArea, _maxSpeed] call FCLA_Immersions_fnc_logicTurbulences;
 	} else {
 		_vehicle setVariable ["FCLA_Turbulence_Ready", nil, true];
 		_vehicle setVariable ["FCLA_Turbulence_Old_Force", nil, true];

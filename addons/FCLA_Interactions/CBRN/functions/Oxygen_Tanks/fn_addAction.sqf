@@ -15,7 +15,7 @@ _Condition = {
 
 _Statement = {
   params ["_target", "_player"];
-  [_target, _player] spawn FCLA_Interactions_fnc_statementRechargeOxygenCBRN;
+  [_target, _player] call FCLA_Interactions_fnc_statementRechargeOxygenCBRN;
 };
 
 _Action = ["FCLA_Recharge_Oxygen", "Recargar oxigeno", "\FCLA_Data\ACE_Actions\Oxygen_Tank.paa", _Statement, _Condition] call ACE_Interact_Menu_fnc_createAction;

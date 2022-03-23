@@ -165,13 +165,13 @@ class CfgVehicles {
 
 class Extended_Killed_Eventhandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Interactions_fnc_killedCBRNEH;};";
+		init = "if (!is3DEN) then {_this call FCLA_Interactions_fnc_killedCBRNEH;};";
 	};
 };
 
 class Extended_Respawn_Eventhandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Interactions_fnc_respawnBlindfoldEH; _this spawn FCLA_Interactions_fnc_respawnCBRNEH;};";
+		init = "if (!is3DEN) then {_this call FCLA_Interactions_fnc_respawnBlindfoldEH; _this call FCLA_Interactions_fnc_respawnCBRNEH;};";
 	};
 };
 
@@ -189,6 +189,6 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_FiredBIS_Eventhandlers {
 	class CAManBase {
-		init = "if (!is3DEN) then {_this spawn FCLA_Interactions_fnc_firedSSEH;};";
+		init = "if (!is3DEN) then {_this call FCLA_Interactions_fnc_firedSSEH;};";
 	};
 };

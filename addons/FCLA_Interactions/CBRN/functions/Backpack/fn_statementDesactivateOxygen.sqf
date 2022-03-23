@@ -24,7 +24,7 @@ if (_remainingBackpackOxygen <= 0) exitWith {
 
 
 //Quitar manguera.
-[_player, false] spawn FCLA_Interactions_fnc_showHoseCBRN;
+[_player, false] call FCLA_Interactions_fnc_showHoseCBRN;
 [_player, "FCLA_Night_Vision_Switch", "playActionNow"] call FCLA_Common_fnc_playAnimation;
 
 

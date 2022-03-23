@@ -20,7 +20,7 @@ _conditionToShow = {
 
 _Statement = {
   params ["_player", "_container", "_item"];
-  [_player, _item] spawn FCLA_Interactions_fnc_statementCheckOxygenCBRN;
+  [_player, _item] call FCLA_Interactions_fnc_statementCheckOxygenCBRN;
 };
 
 ["##Backpack", "CLOTHES", "Comprobar oxigeno", [], "\FCLA_Interactions\CBRN\data\O2.paa", [_conditionToEnable, _conditionToShow], _Statement, false, []] call CBA_fnc_addItemContextMenuOption;

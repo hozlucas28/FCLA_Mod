@@ -24,7 +24,7 @@ _handle = [{
   _isOnMap = visibleMap;
   _inStairs = _player getVariable ["FCLA_inStairs", false];
   _isUnconscious = _player getVariable ["ACE_isUnconscious", false];
-  if ((!FCLA_NVG_Require_Battery) || (!alive _player)) exitWith {[_player] spawn FCLA_Interactions_fnc_statementStopConsumeNVB;};
+  if ((!FCLA_NVG_Require_Battery) || (!alive _player)) exitWith {[_player] call FCLA_Interactions_fnc_statementStopConsumeNVB;};
   if ((((isGamePaused) || (!isGameFocused)) && !(isMultiplayer)) || (_isOnMap) || (_inStairs) || (_isUnconscious)) exitWith {setAperture 0; "FCLA_NVG_Battery_Overlay" cutRsc ["RscTitleDisplayEmpty", "PLAIN", -1, false];};
 
   _battery = _player getVariable ["FCLA_NVG_Battery", FCLA_NVG_Initial_Battery];

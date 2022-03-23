@@ -45,7 +45,7 @@ switch ((_IDCard select 0) == "") do {
 
 
 //Mostrar caracteristicas.
-[_target, _player] spawn FCLA_Interactions_fnc_showTraitsID;
+[_target, _player] call FCLA_Interactions_fnc_showTraitsID;
 
 
 //Forzar cierre.

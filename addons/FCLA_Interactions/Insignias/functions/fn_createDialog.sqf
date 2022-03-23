@@ -50,7 +50,7 @@ if (_isSelf) exitWith {
     ],
   {
     (_this select 0) params ["_newInsignia"];
-    [_this select 1, _newInsignia] spawn FCLA_Interactions_fnc_statementInsignias;
+    [_this select 1, _newInsignia] call FCLA_Interactions_fnc_statementInsignias;
   }, {}, _unit] call ZEN_Dialog_fnc_Create;
 };
 
@@ -123,5 +123,5 @@ _defaultValue = switch (toUpper _savedInsignia) do {
   ],
 {
   (_this select 0) params ["_newInsignia"];
-  [_this select 1, _newInsignia] spawn FCLA_Interactions_fnc_statementInsignias;
+  [_this select 1, _newInsignia] call FCLA_Interactions_fnc_statementInsignias;
 }, {}, _unit] call ZEN_Dialog_fnc_Create;

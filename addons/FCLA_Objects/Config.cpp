@@ -202,7 +202,7 @@ class Extended_PreInit_EventHandlers {
 
 class Extended_InitPost_EventHandlers {
 	class Satellite_Antenna_RF_3080 {
-		init = "[_this select 0] spawn FCLA_Objects_fnc_initSatelliteAntenna;";
+		init = "[_this select 0] call FCLA_Objects_fnc_initSatelliteAntenna;";
 	};
 
 	class Custom_Leaflet_05_F {
